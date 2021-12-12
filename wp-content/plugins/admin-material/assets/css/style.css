@@ -1,0 +1,389 @@
+.box {
+	position: relative;
+	border: 1px solid var(--border-color, #e5e5e5);
+	background: var(--body-highlight-background, #fff);
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04); 
+}
+.box a:focus {
+	box-shadow: none; 
+}
+.box h3 {
+	padding: 1em;
+	margin: 0;
+	cursor: pointer; 
+}
+.box h4 {
+	position: relative;
+	font-size: 13px;
+	padding: 14px 32px 14px 14px;
+	margin: 0;
+	line-height: 1;
+	background: var(--body-highlight-background, #fff);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+.box h4:after {
+	color: #a0a5aa;
+	font: 400 20px/1 dashicons;
+	content: "\f140";
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -10px; 
+}
+.box h4.active:after {
+	content: "\f142"; 
+}
+.box h4 .pull-right {
+	font-weight: 100; 
+}
+.box h4 .at-menu-title{
+	display: block;
+	padding-left: 26px;
+}
+.box h4 > i {
+	font-size: 20px;
+	line-height: 42px;
+	color: #a0a5aa;
+	margin-right: 10px;
+	float: left;
+	margin: -15px 0 -14px -15px;
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	cursor: pointer; 
+}
+.box h4.separator:before {
+	content: '';
+	position: absolute;
+	left: 10px;
+	right: 40px;
+	top: 50%;
+	margin-top: -2px;
+	border-bottom: 4px solid #eee; 
+}
+.box h4.sm {
+	font-size: 12px;
+	padding: 10px 30px 10px 10px;
+}
+.box h4.sm:after {
+	right: 8px; 
+}
+.box .box-body {
+	padding: 0 1em; 
+}
+.box .b-t {
+	border-top: 1px solid var(--border-color, #e5e5e5);
+}
+.box .b-b {
+	border-bottom: 1px solid var(--border-color, #e5e5e5); 
+}
+.box [class*="dashicons-"] {
+	font-family: dashicons;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
+}
+.box h4 [class*="dashicons-glyphicon-"] {
+	line-height: 38px; 
+}
+
+.box-placeholder {
+	border-style: dashed;
+	border-color: #999;
+	border-width: 2px;
+	background: transparent;
+	min-height: 39px; 
+}
+.box .box-placeholder {
+	min-height: 30px; 
+}
+
+.bg {
+	background-color: var(--body-highlight-background, #fafafa); 
+}
+
+.bg-white {
+	background-color: #fff; 
+}
+
+.button-block {
+	display: block;
+	width: 100%; 
+}
+
+.box .button-secondary{
+	vertical-align: baseline;
+}
+
+.button-lg {
+	padding: 4px 20px !important;
+	height: auto !important; 
+}
+
+.text-sm {
+	color: #777;
+	font-size: 12px !important; 
+}
+
+.no-m-t {
+	margin-top: 0; 
+}
+
+.m-b {
+	margin-bottom: 10px; 
+}
+
+.text-muted {
+	color: #ccc; 
+}
+
+.text-l-t {
+	text-decoration: line-through; 
+}
+
+.pull-right {
+	float: right; 
+}
+
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: " "; 
+}
+
+.clearfix:after {
+	clear: both; 
+}
+
+.hide,
+.box-body.hide {
+	display: none; 
+}
+
+.show,
+.box-body.show {
+	display: inherit !important; 
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000; 
+}
+
+.dropdown.open {
+	display: block; 
+}
+.admin-menus {
+	position: relative; 
+}
+.admin-menus h4 {
+	font-weight: normal; 
+}
+.admin-menus h4:hover {
+	cursor: move; 
+}
+.iconlist {
+	padding: 10px 0;
+	font-size: 20px; 
+}
+.iconlist > div {
+	float: left;
+	width: 20px;
+	height: 20px;
+	line-height: 1;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	padding: 5px;
+	overflow: hidden;
+	color: #a0a5aa; 
+}
+.iconlist > div:hover, .iconlist > div:focus, .iconlist > div.active {
+	color: #19be96; 
+}
+.iconlist#tab-glyphicons {
+	font-size: 18px; 
+}
+
+.color-picker p {
+	position: relative;
+	margin-bottom: 1.25em; 
+}
+.color-picker .wp-picker-container {
+	position: absolute;
+	top: -2px;
+	right: 0;
+	z-index: 1; 
+}
+.color-picker .wp-picker-container .wp-color-result-text{
+	border-radius: inherit;
+}
+.color-picker .wp-picker-container.wp-picker-active {
+	z-index: 2; 
+}
+
+.color-selector {
+	display: table;
+	width: 100%;
+	padding: 20px 0; 
+}
+.color-selector div {
+	display: table-cell;
+	text-align: center; 
+}
+
+.ui-check {
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer; 
+}
+.ui-check input {
+	opacity: 0;
+	position: absolute;
+	z-index: -1; 
+}
+.ui-check input:checked + i:before {
+  left: 5px;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: #0cc2aa; 
+}
+.ui-check input:checked + span .active {
+  display: inherit; 
+}
+.ui-check input[type="radio"] + i,
+.ui-check input[type="radio"] + i:before {
+  border-radius: 50%;
+}
+.ui-check input[disabled] + i,
+fieldset[disabled] .ui-check input + i {
+  border-color: rgba(134, 143, 152, 0.2); 
+}
+.ui-check input[disabled] + i:before,
+fieldset[disabled] .ui-check input + i:before {
+  background-color: rgba(134, 143, 152, 0.2); 
+}
+.ui-check > i {
+	width: 16px;
+	height: 16px;
+	line-height: 1;
+	box-shadow: 0 0 1px rgba(120, 130, 140, 0.35);
+	margin-left: -20px;
+	margin-top: -2px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 4px;
+	background-clip: padding-box;
+	position: relative; 
+}
+.ui-check > i:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  background-color: transparent; 
+}
+.ui-check > span {
+	margin-left: -20px; 
+}
+.ui-check > span .active {
+  display: none; 
+}
+.ui-check.ui-check-color input:checked + i:before {
+    background-color: #fff; 
+}
+
+.ui-check-md input:checked + i:before {
+  left: 6px;
+  top: 6px; 
+}
+
+.ui-check-md > i {
+  width: 18px;
+  height: 18px; 
+}
+
+.ui-check-lg input:checked + i:before {
+  width: 12px;
+  height: 12px;
+  left: 9px;
+  top: 9px; 
+}
+
+.ui-check-lg > i {
+  width: 30px;
+  height: 30px; 
+}
+
+
+@media screen and (min-width: 992px) {
+  .row {
+    margin-left: -15px;
+    margin-right: -15px; 
+  }
+
+  .col {
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; 
+  }
+
+  .rtl .col {
+    float: right; 
+  }
+
+  .col-2 {
+    width: 16.66%; 
+  }
+
+  .col-3 {
+    width: 25%; 
+  }
+
+  .col-4 {
+    width: 33.33%; 
+  }
+
+  .col-5 {
+    width: 41.66%; 
+  }
+
+  .col-6 {
+    width: 50%; 
+  }
+
+  .col-7 {
+    width: 58.33%; 
+  }
+
+  .col-8 {
+    width: 66.66%; 
+  }
+
+  .col-9 {
+    width: 75%; 
+  }
+
+  .col-10 {
+    width: 83.33%; 
+  } 
+
+  .admin-theme-option{
+  	margin-top: 75px;
+  }
+ }

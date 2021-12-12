@@ -1,0 +1,19 @@
+:root{
+	--text-color: #222;
+	--base-color: #fff;
+	--icon-color: #888;
+	--link: #2196f3;
+	--highlight-color: var(--theme-orange);
+
+	--button-color: #f44336;
+	--button-text-color: #fff;
+
+	--menu-highlight-background: #f1f1f1;
+	--menu-highlight-text: var(--highlight-color);
+	--menu-highlight-icon: var(--highlight-color);
+	--menu-submenu-focus-text: var(--highlight-color);
+
+	--bar-menu-background: var(--highlight-color);
+	--bar-menu-text: rgba(255, 255, 255, 0.85);
+	--bar-menu-icon: rgba(255, 255, 255, 0.85);
+}

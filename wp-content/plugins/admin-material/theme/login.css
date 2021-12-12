@@ -1,0 +1,218 @@
+body{
+	margin: 0;
+	height: auto;
+	min-height: 100vh;
+	background-color: #f3f6f9;
+	background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+body.login div#login h1 {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+body.login div#login h1 a{
+	margin: 0 auto;
+	height: 80px;
+	background-size: contain;
+}
+
+.login form{
+	background-color: transparent;
+	box-shadow: none;
+	margin-top: 0;
+	padding: 0 0 20px 0;
+	border: none;
+	overflow: visible;
+}
+.login form .submit .button{
+	width: 100%;
+	padding: 6px 10px !important;
+	height: auto !important;
+	line-height: 28px !important;
+	font-size: 16px;
+}
+
+.login form > p,
+.login form > div{
+	position: relative;
+	margin: 4px 0;
+}
+.login form > p label,
+.login form > div label{
+	padding: 12px 10px 8px 10px;
+	display: block;
+	color: #888;
+	background-color: #fff;
+	border-radius: 4px;
+	min-height: 24px;
+}
+.login form .wp-pwd,
+.login form .input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 0;
+	padding: 7px 10px;
+	height: 44px;
+	background: transparent;
+	border-width: 0;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+.login form .input:focus,
+.login form .input:active,
+.login form .input.active,
+.login form .input.has-value{
+	background: #fff !important;
+	z-index: 1;
+}
+
+.login form .forgetmenot,
+.login form .submit{
+	float: none;
+	padding: 10px 0;
+}
+.login form .forgetmenot label,
+.login form .submit label{
+	color: #888;
+	display: inline;
+	background-color: transparent;
+}
+
+#login{
+	background-size: cover;
+    background-position: center center;
+	width: auto;
+	padding: 5% 0 1% 0;
+}
+#login_error, 
+.message{
+	color: #444;
+	border-radius: 0;
+	margin-left: -4px;
+	box-shadow: none;
+	padding: 12px 24px;
+}
+#nav{
+	text-align: center;
+	color: transparent;
+}
+#nav a{
+	padding: 6px 10px;
+	border-radius: 3px;
+}
+#nav a + a{
+	margin-left: -6px;
+}
+
+.login-subtitle{
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 1rem;
+}
+.login-subtitle:empty{
+	display: none;
+}
+
+.login-form-title{
+	margin-bottom: 20px;
+}
+
+.login-footer{
+	margin: 30px 10px 10px 10px;
+	text-align: center;
+	font-size: 12px;
+	opacity: 0.6;
+}
+
+#login-form{
+	color: #222;
+	padding: 1% 4%;
+	margin: 0 auto;
+}
+#login-form p.submit{
+	margin: 0;
+}
+
+#backtoblog{
+	display: none;
+}
+
+#lostpasswordform p.submit{
+	margin-top: 20px;
+}
+
+@media screen and (min-width: 783px) {
+	#login-form{
+		max-width: 320px;
+	}
+}
+
+#loginform{
+	position: relative !important;
+}
+
+.wp-social-login-widget ~ p.submit{
+	padding-bottom: 65px;
+}
+
+.wp-social-login-widget{
+	border-top: 1px solid #f0f0f0;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	text-align: center;
+	padding-top: 5px;
+	width: 100%;
+}
+
+.wp-social-login-connect-with{
+	color: #999;
+	display: inline-block;
+	background-color: #fff;
+	position: relative;
+	top: -14px;
+	padding: 0 5px;
+}
+
+.wp-social-login-provider-list{
+	padding: 0;
+}
+
+.wp-social-login-provider{
+	border-radius: 20px;
+	padding: 6px 12px;
+	display: inline-block;
+	color: #fff !important;
+	background-color: #999;
+}
+.wp-social-login-provider:before{
+	font-family: "dashicons";
+	content: '';
+	font-size: 18px;
+	vertical-align: -4px;
+	margin-right: 4px;
+}
+.wp-social-login-provider-google{
+	background-color: #db4437;
+}
+.wp-social-login-provider-google:before{
+	content: "\f18b";
+}
+.wp-social-login-provider-twitter{
+	background-color: #55acee;
+}
+.wp-social-login-provider-twitter:before{
+	content: "\f301";
+}
+.wp-social-login-provider-facebook{
+	background-color: #3b5998;
+}
+.wp-social-login-provider-facebook:before{
+	content: "\f305";
+}

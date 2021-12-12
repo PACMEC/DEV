@@ -1,0 +1,74 @@
+:root{
+	/* assign default value to all undefined variables*/
+	--bar-height: 50px;
+	--menu-width: 200px;
+	--menu-fold-width: 64px;
+	--menu-height: 36px;
+	--menu-fold-height: 48px;
+	--menu-h-height: 40px;
+	--menu-h-fold-height: 40px;
+	--menu-icon-width: 48px;
+
+	/* core variables*/
+
+	--text-color: #fff;
+	--base-color: #202020;
+	--icon-color: rgba(255,255,255,0.5);
+	--highlight-color: #0074a2;
+	--notification-color: #d54e21;
+
+	/* global*/
+
+	--body-background: #f1f1f1;
+
+	--link: #0074a2;
+	--link-focus: var(--link);
+
+	--button-color: var(--highlight-color);
+	--button-text-color: var(--text-color);
+	--form-checked: var(--highlight-color);
+
+
+	/* admin menu */
+
+	--menu-text: var(--text-color);
+	--menu-icon: var(--icon-color);
+	--menu-background: var(--base-color);
+
+	--menu-highlight-text: var(--text-color);
+	--menu-highlight-icon: var(--text-color);
+	--menu-highlight-background: var(--highlight-color);
+
+	--menu-current-text: var(--menu-highlight-text);
+	--menu-current-icon: var(--menu-highlight-icon);
+	--menu-current-background: var(--menu-highlight-background);
+
+	--menu-submenu-text: var(--menu-text);
+	--menu-submenu-background: var(--menu-background);
+	--menu-submenu-background-alt: var(--menu-background);
+
+	--menu-submenu-focus-text: var(--highlight-color);
+	--menu-submenu-current-text: var(--highlight-color);
+
+	--menu-bubble-text: var(--text-color);
+	--menu-bubble-background: var(--notification-color);
+	--menu-bubble-current-text: var(--text-color);
+	--menu-bubble-current-background: var(--menu-submenu-background);
+
+	--menu-collapse-text: var(--menu-icon);
+	--menu-collapse-icon: var(--menu-icon);
+	--menu-collapse-focus-text: var(--text-color);
+	--menu-collapse-focus-icon: var(--menu-highlight-icon);
+
+	/* admin bar */
+	--bar-menu-text: #666;
+	--bar-menu-icon: #999;
+	--bar-menu-background: #fff;
+
+	--bar-menu-submenu-background: var(--bar-menu-background);
+
+	--adminbar-avatar-frame: var(--bar-menu-background);
+	--adminbar-input-background: var(--bar-menu-background);
+
+	--menu-customizer-text: var(--text-color);
+}
