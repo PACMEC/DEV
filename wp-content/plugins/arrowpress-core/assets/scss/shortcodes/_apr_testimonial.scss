@@ -1,0 +1,342 @@
+.testimonial-container {
+	.text-center{
+		figure{
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+	.ratings{
+	  height: 16px;
+	  margin: 0;
+	  position: relative;
+	  margin-top: 23px;
+		&.two_star{
+			&:before{
+				content: "\f005 \f005";
+			}
+		}
+		&.three_star{
+			&:before{
+				content: "\f005 \f005 \f005";
+			}
+		}
+		&.four_star{
+			&:before{
+				content: "\f005 \f005 \f005 \f005";
+			}
+		}
+		&.five_star{
+			&:before{
+				content: "\f005 \f005 \f005 \f005 \f005";
+			}
+		}
+		&:before{
+			left: 50%;
+			position: absolute;
+			-webkit-transform: translateX($translateX);
+			-moz-transform: translateX($translateX);
+			-ms-transform: translateX($translateX);
+			-o-transform: translateX($translateX);
+			transform: translateX($translateX);
+			content: "\f005";
+			letter-spacing: 8px;
+			font-size: 12px;
+			color: #ebd169;
+			font-family: FontAwesome;
+		}
+	}
+	.item_testimonial4{
+		background: #fff;
+		padding: side-values(60px 0 43px);
+		.img-tes {
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+		}
+		.item-desc{
+			padding: side-values(35px 0 6px);
+			line-height: 30px;
+			font-size: 16px;
+			width: 84%;
+		}
+		&.no_display_star{
+			.item-desc{
+				padding-top: 62px;
+				padding-bottom: 54px;
+			}
+			img.img-tes{
+				box-shadow: 0 0 25px 5px rgba(0,0,0,0.1);
+			}
+		}
+	}
+	.item_testimonial2{
+		padding: 0;
+		.caption_testimonial{
+			figure{
+				padding-top:10px;
+				padding-bottom: 12px;
+				img{
+					width: 125px;
+					height: 125px;
+					position: relative;
+					border-radius: 50%;
+				}
+			}
+		}
+		.item-desc{
+			padding-bottom: 0;
+   	 		margin-bottom: 0;
+   	 		color: #333333;
+   	 		position: relative;
+   	 		margin-top: 12px;
+   	 		&:before{
+				font-size: 30px;
+				content: "\f10e";
+				font-family: FontAwesome;
+				position: absolute;
+				color: #e5e5e5;
+				top: -9px;
+				#{$left}: 50%;
+				@include transform(translateX(-50%));
+				z-index: -1;
+			}
+		}
+		.tes_info{
+			h6{
+				color: #282828;
+				font-size: 16px;
+			}
+		}
+	}	
+	.item_testimonial3{
+		max-width: 745px;
+		margin: 0 auto;
+		figure{
+			> img{
+				border-radius: 50%;
+			}
+			&:after{
+				content: "";
+				width: 1px;
+				height: 30px;
+				background: #000;
+				display: block;
+				margin: 20px auto;
+			}
+		}
+		.caption_testimonial .item-desc{
+			font-size: 20px;
+			color: #000;
+			padding-top: 2px;
+		}
+		.caption_testimonial .tes_name h4{
+			font-size: 12px;
+			padding-top: 16px;
+			&:after{
+				content: "";
+				width: 1px;
+				height: 30px;
+				background: #000;
+				display: block;
+				margin: 30px auto;
+			}		
+		}
+	}	
+}
+.item-desc {
+	font-size: 18px;
+	line-height: 34px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 770px;
+	padding: 41px 0 54px;
+	max-width: 770px;
+}
+//testimonial
+.img-tes{
+	width:100px;
+	height:100px;
+	position:relative;
+	border-radius:50%;
+}
+.item_testimonial{
+	.item-desc{
+		line-height: 26px;
+	    color: #fff;
+	    font-size: 18px;
+	    max-width: 100%;
+	    font-weight: 300;
+		padding: 33px 20px 13px;
+	    font-weight: 300;
+	    margin-top: 19px;
+	    margin-bottom: 0 !important;
+	    position: relative;
+		&:before, &:after {
+		    content: "\201C";
+		    font-size: 72px;
+		    position: absolute;		
+		}
+		&:before{
+		    top: 14px;
+		    left:20px;
+		}
+		&:after{
+		    bottom: -15px;
+		    right: 22px;
+		    content: "\201D";
+		}
+	}
+	.tes_info{
+	    margin-top: 0;
+		h6{
+			letter-spacing: 0;
+			color: #fff;
+			font-weight: bold;
+			text-transform: none;
+		}
+		.tes_job{
+			color:#fff;
+			margin-#{$left}: 0;
+			font-size: 12px;
+			display: block;
+			margin-top: -3px;
+			font-style: italic;
+			font-weight: 300;
+		}
+	}
+	.caption_testimonial {
+		figure{
+			position: relative;
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			margin:side-values(0 auto);
+			&:before{
+				content: "";
+				height: 100%;
+				width: 100%;
+				position:absolute;
+				top:2px;
+				#{$left}:2px;
+				border-radius: 50%;
+				background: #5a609e;
+			}
+		}
+	}
+}	
+.item_testimonial2{
+	.item-desc{
+		position:relative;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight:normal;
+		color: #333;
+		padding:side-values(0 15px 19px);
+	}
+	.tes_info {
+		margin-bottom: 11px;
+		margin-top: 12px;
+		h6{
+			font-weight: bold;
+			text-transform:capitalize;
+			color: #fff;
+			font-size:14px;
+			letter-spacing: 0;
+			font-family: $font-default;
+		}
+	}
+}
+.item_testimonial5 {
+	.img-tes{
+		height: 125px;
+		width: 125px;
+		z-index: 2;
+	}
+	.caption_testimonial{
+		margin-top: -57px;
+		padding-top: 57px;
+		position: relative;
+		padding-bottom: 90px;	
+		background: $primary_color;
+		margin-bottom: 22px;
+		&:before {
+			font-family: FontAwesome;
+			content: "\f10e";
+			position: absolute;
+			#{$right}: 55px;
+			font-size: 23px;
+			color: rgba(255,255,255,0.2);
+			top: 47px;
+		}
+		&:after {
+			font-family: FontAwesome;
+			content: "\f10d";
+			position: absolute;
+			#{$left}: 55px;
+			font-size: 23px;
+			color: rgba(255,255,255,0.2);
+			top: 47px;
+		}
+	}
+	.tes_info{
+		margin-top:15px;
+		.tes_name{
+			letter-spacing: 0;
+			position:relative;
+			color:$primary_color;
+			text-transform: capitalize;
+			font-size: 16px;
+		}
+	}
+	.item-desc{
+		line-height: 24px;
+		padding: 22px 0 11px;
+		font-size: 14px;
+		max-width: 90%;
+	}
+}
+
+.custom{  
+	.item_testimonial5 {
+		padding-bottom: 44px;
+		.caption_testimonial{
+			margin-top: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			background: none;
+			margin-bottom: 0;
+			&:before, &:after{
+				content: none;
+			}
+		}
+		figure img{
+			margin-top: -60px;
+		}	
+		.item-desc{
+			padding-bottom: 0;
+		}
+		.tes_info {
+			margin-top: 9px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.testimonial-container .item_testimonial4 {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+	.custom .item_testimonial5 {
+		margin-top: 100px;
+	}
+	.vc_col-sm-4:first-child{
+		.custom .item_testimonial5 {
+			margin-top: 0;
+		}
+	}
+}
+@media (max-width: 480px){
+	.item-desc {
+		width: 100%;
+	}
+}

@@ -1,0 +1,21 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+$rtl: 1;
+$dir: rtl !default;
+$font-default: 'Poppins';
+$font-default2: 'Comfortaa';
+$primary_color: #d5a853;
+$highlight_color: #13264a;
+@import "shortcodes/directional";
+@import "shortcodes/apr_heading";
+@import "shortcodes/apr_icon_box";
+@import "shortcodes/apr_instagram";
+@import "shortcodes/apr_product";
+@import "shortcodes/apr_testimonial";
+@import "shortcodes/apr_service";
+@import "shortcodes/apr_banner";
+@import "shortcodes/apr_search";
+@import "shortcodes/apr_portfolio";
+@import "shortcodes/apr_member";
+@import "shortcodes/apr_slider_wrap";

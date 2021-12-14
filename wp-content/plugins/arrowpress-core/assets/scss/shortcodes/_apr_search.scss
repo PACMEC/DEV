@@ -1,0 +1,13 @@
+.widget-container{
+	background: none !important;
+}
+//Blog
+.blog-container.widget_post_blog{
+	> ul{
+		padding-#{$left}: 0;
+    	margin: 0;
+    	a{
+    		text-decoration: none;
+    	}
+	}
+}

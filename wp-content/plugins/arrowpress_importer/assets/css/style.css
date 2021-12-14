@@ -1,0 +1,12 @@
+.ocdi__title, .about-description, .ocdi__import-mode-switch{
+	display: none;
+}
+.ocdi hr {
+    margin: 30px 0 20px;
+}
+@media (min-width: 1120px){
+	.ocdi__gl-item {
+	    width: calc(25% - 30px) !important;
+	    margin: 0 30px 30px 0;
+	}	
+}

@@ -1,0 +1,2845 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-21 06:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: lib/apr-post-type.php:21 lib/apr-post-type.php:21
+#: shortcodes/arrowpress_static_block.php:28
+#: shortcodes/arrowpress_static_block.php:36
+msgid "Static Block"
+msgstr ""
+
+#: lib/apr-post-type.php:45
+msgid "Gallery"
+msgstr ""
+
+#: lib/apr-post-type.php:45
+msgid "Galleries"
+msgstr ""
+
+#: lib/apr-post-type.php:59
+msgid "Gallery Category"
+msgstr ""
+
+#: lib/apr-post-type.php:59
+msgid "Gallery Categories"
+msgstr ""
+
+#: lib/apr-post-type.php:79 lib/apr-post-type.php:79
+msgid "Member"
+msgstr ""
+
+#: lib/apr-post-type.php:93
+msgid "Member Category"
+msgstr ""
+
+#: lib/apr-post-type.php:93
+msgid "Member Categories"
+msgstr ""
+
+#: lib/apr-post-type.php:113 lib/apr-post-type.php:113
+msgid "Service"
+msgstr ""
+
+#: lib/apr-post-type.php:127
+msgid "Service Category"
+msgstr ""
+
+#: lib/apr-post-type.php:127
+msgid "Service Categories"
+msgstr ""
+
+#: lib/apr-post-type.php:144 lib/apr-post-type.php:165
+msgid "Settings"
+msgstr ""
+
+#: lib/apr-post-type.php:152
+msgid "Active Category Filter"
+msgstr ""
+
+#: lib/apr-post-type.php:153
+msgid "Active category filter"
+msgstr ""
+
+#: lib/apr-post-type.php:172
+msgid "Font Icon"
+msgstr ""
+
+#: lib/apr-post-type.php:173
+msgid "Enter class font icon"
+msgstr ""
+
+#: lib/apr-post-type.php:247
+msgid "Add New"
+msgstr ""
+
+#: lib/apr-post-type.php:248 lib/apr-post-type.php:270
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: lib/apr-post-type.php:249
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: lib/apr-post-type.php:250
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: lib/apr-post-type.php:251
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: lib/apr-post-type.php:252 lib/apr-post-type.php:264
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: lib/apr-post-type.php:253
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: lib/apr-post-type.php:254
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: lib/apr-post-type.php:265
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: lib/apr-post-type.php:266
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: lib/apr-post-type.php:267
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: lib/apr-post-type.php:268
+msgid "Edit %"
+msgstr ""
+
+#: lib/apr-post-type.php:269
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: lib/apr-post-type.php:271
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: lib/categories_image.php:41 lib/categories_image.php:59
+#: lib/categories_image.php:199 shortcodes/arrowpress_banner.php:38
+#: shortcodes/arrowpress_event_item.php:42
+#: shortcodes/arrowpress_heading.php:193 shortcodes/arrowpress_member.php:39
+#: shortcodes/arrowpress_services.php:38
+#: shortcodes/arrowpress_testimonial.php:56
+#: shortcodes/arrowpress_testimonial.php:85
+msgid "Image"
+msgstr ""
+
+#: lib/categories_image.php:44 lib/categories_image.php:61
+#: lib/categories_image.php:181
+msgid "Upload/Add image"
+msgstr ""
+
+#: lib/categories_image.php:62 lib/categories_image.php:182
+msgid "Remove image"
+msgstr ""
+
+#: lib/categories_image.php:209
+msgid "Thumbnail"
+msgstr ""
+
+#: lib/categories_image.php:229 lib/categories_image.php:236
+msgid "Categories Images settings"
+msgstr ""
+
+#: lib/categories_image.php:229 lib/categories_image.php:267
+msgid "Categories Images"
+msgstr ""
+
+#: lib/categories_image.php:237
+msgid "Excluded Taxonomies"
+msgstr ""
+
+#: lib/categories_image.php:242
+msgid ""
+"Please select the taxonomies you want to exclude it from Categories Images "
+"plugin"
+msgstr ""
+
+#: lib/categories_image.php:262
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: lib/coming-soon.php:48
+msgid "Coming Soon"
+msgstr ""
+
+#: lib/functions.php:109
+msgid "Select font family"
+msgstr ""
+
+#: lib/functions.php:110
+msgid "Select font styling"
+msgstr ""
+
+#: lib/functions.php:320 shortcodes/arrowpress_heading.php:478
+#: shortcodes/arrowpress_heading.php:609
+msgid "None"
+msgstr ""
+
+#: lib/functions.php:321 shortcodes/arrowpress_banner.php:56
+#: shortcodes/arrowpress_heading.php:89 shortcodes/arrowpress_heading.php:103
+#: shortcodes/arrowpress_icon_box.php:277
+#: shortcodes/arrowpress_portfolio.php:130
+#: shortcodes/arrowpress_services.php:68
+#: shortcodes/arrowpress_testimonial.php:120
+msgid "Left"
+msgstr ""
+
+#: lib/functions.php:322 shortcodes/arrowpress_banner.php:57
+#: shortcodes/arrowpress_heading.php:90 shortcodes/arrowpress_heading.php:104
+#: shortcodes/arrowpress_icon_box.php:279
+#: shortcodes/arrowpress_portfolio.php:131
+#: shortcodes/arrowpress_services.php:69
+#: shortcodes/arrowpress_testimonial.php:121
+msgid "Right"
+msgstr ""
+
+#: lib/functions.php:323 shortcodes/arrowpress_banner.php:55
+#: shortcodes/arrowpress_heading.php:88 shortcodes/arrowpress_heading.php:105
+#: shortcodes/arrowpress_icon_box.php:278
+#: shortcodes/arrowpress_portfolio.php:129
+#: shortcodes/arrowpress_services.php:67
+#: shortcodes/arrowpress_testimonial.php:119
+msgid "Center"
+msgstr ""
+
+#: lib/functions.php:324
+msgid "Justify"
+msgstr ""
+
+#: lib/functions.php:330 shortcodes/arrowpress_portfolio.php:32
+msgid "Grid"
+msgstr ""
+
+#: lib/functions.php:331
+msgid "List"
+msgstr ""
+
+#: lib/functions.php:332
+msgid "Slider"
+msgstr ""
+
+#: lib/functions.php:351 shortcodes/arrowpress_banner.php:142
+#: shortcodes/arrowpress_heading.php:798 shortcodes/arrowpress_icon_box.php:403
+msgid "Animation Type"
+msgstr ""
+
+#: lib/functions.php:359 shortcodes/arrowpress_event_item.php:58
+msgid "Date"
+msgstr ""
+
+#: lib/functions.php:360
+msgid "ID"
+msgstr ""
+
+#: lib/functions.php:361
+msgid "Author"
+msgstr ""
+
+#: lib/functions.php:362 shortcodes/arrowpress_event_item.php:53
+#: shortcodes/arrowpress_instagram_feed.php:42
+#: shortcodes/arrowpress_instagram_feed.php:52
+#: shortcodes/arrowpress_services.php:49
+msgid "Title"
+msgstr ""
+
+#: lib/functions.php:363
+msgid "Modified"
+msgstr ""
+
+#: lib/functions.php:364
+msgid "Random"
+msgstr ""
+
+#: lib/functions.php:365
+msgid "Comment count"
+msgstr ""
+
+#: lib/functions.php:366
+msgid "Menu order"
+msgstr ""
+
+#: lib/functions.php:373
+msgid "Descending"
+msgstr ""
+
+#: lib/functions.php:374
+msgid "Ascending"
+msgstr ""
+
+#: lib/functions.php:380 shortcodes/arrowpress_heading.php:801
+msgid "bounce"
+msgstr ""
+
+#: lib/functions.php:381 shortcodes/arrowpress_heading.php:802
+msgid "flash"
+msgstr ""
+
+#: lib/functions.php:382 shortcodes/arrowpress_heading.php:803
+msgid "pulse"
+msgstr ""
+
+#: lib/functions.php:383 shortcodes/arrowpress_heading.php:804
+msgid "rubberBand"
+msgstr ""
+
+#: lib/functions.php:384 shortcodes/arrowpress_heading.php:805
+msgid "shake"
+msgstr ""
+
+#: lib/functions.php:385 shortcodes/arrowpress_heading.php:806
+msgid "swing"
+msgstr ""
+
+#: lib/functions.php:386 shortcodes/arrowpress_heading.php:807
+msgid "tada"
+msgstr ""
+
+#: lib/functions.php:387 shortcodes/arrowpress_heading.php:808
+msgid "wobble"
+msgstr ""
+
+#: lib/functions.php:388 shortcodes/arrowpress_heading.php:809
+msgid "jello"
+msgstr ""
+
+#: lib/functions.php:389 shortcodes/arrowpress_heading.php:810
+msgid "bounceIn"
+msgstr ""
+
+#: lib/functions.php:390 shortcodes/arrowpress_heading.php:811
+msgid "bounceInDown"
+msgstr ""
+
+#: lib/functions.php:391 shortcodes/arrowpress_heading.php:812
+msgid "bounceInLeft"
+msgstr ""
+
+#: lib/functions.php:392 shortcodes/arrowpress_heading.php:813
+msgid "bounceInRight"
+msgstr ""
+
+#: lib/functions.php:393 shortcodes/arrowpress_heading.php:814
+msgid "bounceInUp"
+msgstr ""
+
+#: lib/functions.php:394 shortcodes/arrowpress_heading.php:815
+msgid "bounceOut"
+msgstr ""
+
+#: lib/functions.php:395 shortcodes/arrowpress_heading.php:816
+msgid "bounceOutDown"
+msgstr ""
+
+#: lib/functions.php:396 shortcodes/arrowpress_heading.php:817
+msgid "bounceOutLeft"
+msgstr ""
+
+#: lib/functions.php:397 shortcodes/arrowpress_heading.php:818
+msgid "bounceOutRight"
+msgstr ""
+
+#: lib/functions.php:398 shortcodes/arrowpress_heading.php:819
+msgid "bounceOutUp"
+msgstr ""
+
+#: lib/functions.php:399 shortcodes/arrowpress_heading.php:820
+msgid "fadeIn"
+msgstr ""
+
+#: lib/functions.php:400 shortcodes/arrowpress_heading.php:821
+msgid "fadeInDown"
+msgstr ""
+
+#: lib/functions.php:401 shortcodes/arrowpress_heading.php:822
+msgid "fadeInDownBig"
+msgstr ""
+
+#: lib/functions.php:402 shortcodes/arrowpress_heading.php:823
+msgid "fadeInLeft"
+msgstr ""
+
+#: lib/functions.php:403 shortcodes/arrowpress_heading.php:824
+msgid "fadeInLeftBig"
+msgstr ""
+
+#: lib/functions.php:404 shortcodes/arrowpress_heading.php:825
+msgid "fadeInRight"
+msgstr ""
+
+#: lib/functions.php:405 shortcodes/arrowpress_heading.php:826
+msgid "fadeInUp"
+msgstr ""
+
+#: lib/functions.php:406 shortcodes/arrowpress_heading.php:827
+msgid "fadeInUpBig"
+msgstr ""
+
+#: lib/functions.php:407 shortcodes/arrowpress_heading.php:828
+msgid "fadeOut"
+msgstr ""
+
+#: lib/functions.php:408 shortcodes/arrowpress_heading.php:829
+msgid "fadeOutDown"
+msgstr ""
+
+#: lib/functions.php:409 shortcodes/arrowpress_heading.php:830
+msgid "fadeOutDownBig"
+msgstr ""
+
+#: lib/functions.php:410 shortcodes/arrowpress_heading.php:831
+msgid "fadeOutLeft"
+msgstr ""
+
+#: lib/functions.php:411 shortcodes/arrowpress_heading.php:832
+msgid "fadeOutLeftBig"
+msgstr ""
+
+#: lib/functions.php:412 shortcodes/arrowpress_heading.php:833
+msgid "fadeOutRight"
+msgstr ""
+
+#: lib/functions.php:413 shortcodes/arrowpress_heading.php:834
+msgid "fadeOutUp"
+msgstr ""
+
+#: lib/functions.php:414 shortcodes/arrowpress_heading.php:835
+msgid "fadeOutUpBig"
+msgstr ""
+
+#: lib/functions.php:415 shortcodes/arrowpress_heading.php:836
+msgid "flip"
+msgstr ""
+
+#: lib/functions.php:416 shortcodes/arrowpress_heading.php:837
+msgid "flipInX"
+msgstr ""
+
+#: lib/functions.php:417 shortcodes/arrowpress_heading.php:838
+msgid "flipInY"
+msgstr ""
+
+#: lib/functions.php:418 shortcodes/arrowpress_heading.php:839
+msgid "flipOutX"
+msgstr ""
+
+#: lib/functions.php:419 shortcodes/arrowpress_heading.php:840
+msgid "flipOutY"
+msgstr ""
+
+#: lib/functions.php:420 shortcodes/arrowpress_heading.php:841
+msgid "lightSpeedIn"
+msgstr ""
+
+#: lib/functions.php:421 shortcodes/arrowpress_heading.php:842
+msgid "lightSpeedOut"
+msgstr ""
+
+#: lib/functions.php:422 shortcodes/arrowpress_heading.php:843
+msgid "rotateIn"
+msgstr ""
+
+#: lib/functions.php:423 shortcodes/arrowpress_heading.php:844
+msgid "rotateInDownLeft"
+msgstr ""
+
+#: lib/functions.php:424 shortcodes/arrowpress_heading.php:845
+msgid "rotateInDownRight"
+msgstr ""
+
+#: lib/functions.php:425 shortcodes/arrowpress_heading.php:846
+msgid "rotateInUpLeft"
+msgstr ""
+
+#: lib/functions.php:426 shortcodes/arrowpress_heading.php:847
+msgid "rotateInUpRight"
+msgstr ""
+
+#: lib/functions.php:427 shortcodes/arrowpress_heading.php:848
+msgid "rotateOut"
+msgstr ""
+
+#: lib/functions.php:428 shortcodes/arrowpress_heading.php:849
+msgid "rotateOutDownLeft"
+msgstr ""
+
+#: lib/functions.php:429 shortcodes/arrowpress_heading.php:850
+msgid "rotateOutDownRight"
+msgstr ""
+
+#: lib/functions.php:430 shortcodes/arrowpress_heading.php:851
+msgid "rotateOutUpLeft"
+msgstr ""
+
+#: lib/functions.php:431 shortcodes/arrowpress_heading.php:852
+msgid "rotateOutUpRight"
+msgstr ""
+
+#: lib/functions.php:432 shortcodes/arrowpress_heading.php:853
+msgid "slideInUp"
+msgstr ""
+
+#: lib/functions.php:433 shortcodes/arrowpress_heading.php:854
+msgid "slideInDown"
+msgstr ""
+
+#: lib/functions.php:434 shortcodes/arrowpress_heading.php:855
+msgid "slideInLeft"
+msgstr ""
+
+#: lib/functions.php:435 shortcodes/arrowpress_heading.php:856
+msgid "slideInRight"
+msgstr ""
+
+#: lib/functions.php:436 shortcodes/arrowpress_heading.php:857
+msgid "slideOutUp"
+msgstr ""
+
+#: lib/functions.php:437 shortcodes/arrowpress_heading.php:858
+msgid "zoomIn"
+msgstr ""
+
+#: lib/functions.php:438
+msgid "zoomInDown"
+msgstr ""
+
+#: lib/functions.php:439
+msgid "zoomInLeft"
+msgstr ""
+
+#: lib/functions.php:440 shortcodes/arrowpress_heading.php:859
+msgid "zoomInRight"
+msgstr ""
+
+#: lib/functions.php:441 shortcodes/arrowpress_heading.php:860
+msgid "zoomInUp"
+msgstr ""
+
+#: lib/functions.php:442 shortcodes/arrowpress_heading.php:861
+msgid "zoomOut"
+msgstr ""
+
+#: lib/functions.php:443 shortcodes/arrowpress_heading.php:862
+msgid "zoomOutDown"
+msgstr ""
+
+#: lib/functions.php:444 shortcodes/arrowpress_heading.php:863
+msgid "zoomOutLeft"
+msgstr ""
+
+#: lib/functions.php:445 shortcodes/arrowpress_heading.php:864
+msgid "zoomOutRight"
+msgstr ""
+
+#: lib/functions.php:446 shortcodes/arrowpress_heading.php:865
+msgid "zoomOutUp"
+msgstr ""
+
+#: lib/functions.php:447 shortcodes/arrowpress_heading.php:866
+msgid "hinge"
+msgstr ""
+
+#: lib/functions.php:448 shortcodes/arrowpress_heading.php:867
+msgid "rollIn"
+msgstr ""
+
+#: lib/functions.php:449 shortcodes/arrowpress_heading.php:868
+msgid "rollOut"
+msgstr ""
+
+#: lib/functions.php:719
+msgid "Animation Duration"
+msgstr ""
+
+#: lib/functions.php:721 lib/functions.php:731
+msgid "numerical value (unit: milliseconds)"
+msgstr ""
+
+#: lib/functions.php:729 shortcodes/arrowpress_banner.php:155
+#: shortcodes/arrowpress_heading.php:876 shortcodes/arrowpress_icon_box.php:416
+msgid "Animation Delay"
+msgstr ""
+
+#: lib/functions.php:739
+msgid "Extra class name"
+msgstr ""
+
+#: lib/functions.php:741
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: lib/functions.php:782
+msgid "Attention Seekers"
+msgstr ""
+
+#: lib/functions.php:791
+msgid "Bouncing Entrances"
+msgstr ""
+
+#: lib/functions.php:800
+msgid "Bouncing Exits"
+msgstr ""
+
+#: lib/functions.php:809
+msgid "Fading Entrances"
+msgstr ""
+
+#: lib/functions.php:818
+msgid "Fading Exits"
+msgstr ""
+
+#: lib/functions.php:827
+msgid "Flippers"
+msgstr ""
+
+#: lib/functions.php:836
+msgid "Lightspeed"
+msgstr ""
+
+#: lib/functions.php:845
+msgid "Rotating Entrances"
+msgstr ""
+
+#: lib/functions.php:854
+msgid "Rotating Exits"
+msgstr ""
+
+#: lib/functions.php:863
+msgid "Sliding Entrances"
+msgstr ""
+
+#: lib/functions.php:872
+msgid "Sliding Exit"
+msgstr ""
+
+#: lib/functions.php:881
+msgid "Specials"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:19
+msgid "Banner"
+msgstr ""
+
+#. Author of the plugin
+#: shortcodes/arrowpress_banner.php:21 shortcodes/arrowpress_blog.php:21
+#: shortcodes/arrowpress_blog_cate.php:22
+#: shortcodes/arrowpress_container.php:20
+#: shortcodes/arrowpress_event_item.php:21 shortcodes/arrowpress_heading.php:20
+#: shortcodes/arrowpress_icon_box.php:21
+#: shortcodes/arrowpress_instagram_feed.php:20
+#: shortcodes/arrowpress_member.php:21
+#: shortcodes/arrowpress_mining_calculator.php:36
+#: shortcodes/arrowpress_portfolio.php:22 shortcodes/arrowpress_services.php:20
+#: shortcodes/arrowpress_static_block.php:30
+#: shortcodes/arrowpress_testimonial.php:22
+#: woo_shortcodes/arrowpress_product.php:22
+#: woo_shortcodes/arrowpress_product_cate.php:22
+msgid "ArrowPress"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:27 shortcodes/arrowpress_blog.php:27
+#: shortcodes/arrowpress_event_list.php:32
+#: shortcodes/arrowpress_icon_box.php:27
+#: shortcodes/arrowpress_instagram_feed.php:26
+#: shortcodes/arrowpress_member.php:27 shortcodes/arrowpress_portfolio.php:28
+#: shortcodes/arrowpress_services.php:26
+#: shortcodes/arrowpress_slider_wrap.php:29
+#: shortcodes/arrowpress_testimonial.php:28
+#: woo_shortcodes/arrowpress_product.php:28
+msgid "Layout"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:31
+msgid "Banner type 1"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:32
+msgid "Banner type 2"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:41 shortcodes/arrowpress_event_item.php:45
+#: shortcodes/arrowpress_event_list.php:46 shortcodes/arrowpress_member.php:42
+#: shortcodes/arrowpress_services.php:41
+#: shortcodes/arrowpress_slider_wrap.php:104
+#: shortcodes/arrowpress_testimonial.php:59
+msgid "Upload image."
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:45 shortcodes/arrowpress_icon_box.php:253
+#: shortcodes/arrowpress_portfolio.php:58
+msgid "Big Title"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:51 shortcodes/arrowpress_icon_box.php:273
+#: shortcodes/arrowpress_services.php:63
+msgid "Text Align"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:59 shortcodes/arrowpress_heading.php:92
+#: shortcodes/arrowpress_icon_box.php:281 shortcodes/arrowpress_services.php:71
+msgid "Select heading align."
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:63 shortcodes/arrowpress_banner.php:75
+#: shortcodes/arrowpress_icon_box.php:285 shortcodes/arrowpress_member.php:83
+#: shortcodes/arrowpress_member.php:183 shortcodes/arrowpress_services.php:103
+msgid "Link"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:65 shortcodes/arrowpress_member.php:85
+msgid "lnr lnr-arrow-right"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:66 shortcodes/arrowpress_member.php:86
+msgid ""
+"Add icon class you want here. You can find a lot of icons in these links <a "
+"target=\"_blank\" href=\"http://fontawesome.io/icons/\">Awesome icon</a> or "
+"<a target=\"_blank\" href=\"https://linearicons.com/\">Linearicons </a>, <a "
+"target=\"_blank\" href=\"http://themes-pixeden.com/font-demos/7-stroke/\">Pe "
+"stroke icon7 </a>"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:81
+msgid "Input height box"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:83 shortcodes/arrowpress_banner.php:90
+#: shortcodes/arrowpress_banner.php:98 shortcodes/arrowpress_banner.php:104
+#: shortcodes/arrowpress_banner.php:110 shortcodes/arrowpress_banner.php:116
+#: shortcodes/arrowpress_banner.php:123 shortcodes/arrowpress_banner.php:129
+#: shortcodes/arrowpress_icon_box.php:340
+#: shortcodes/arrowpress_icon_box.php:346
+#: shortcodes/arrowpress_icon_box.php:352
+#: shortcodes/arrowpress_icon_box.php:358
+#: shortcodes/arrowpress_icon_box.php:364
+#: shortcodes/arrowpress_icon_box.php:384
+#: shortcodes/arrowpress_icon_box.php:390
+#: shortcodes/arrowpress_instagram_feed.php:167
+#: shortcodes/arrowpress_instagram_feed.php:178
+#: shortcodes/arrowpress_instagram_feed.php:189
+#: shortcodes/arrowpress_member.php:53 shortcodes/arrowpress_member.php:64
+#: shortcodes/arrowpress_member.php:190 shortcodes/arrowpress_member.php:196
+#: shortcodes/arrowpress_member.php:202 shortcodes/arrowpress_member.php:208
+#: shortcodes/arrowpress_member.php:214 shortcodes/arrowpress_member.php:220
+#: shortcodes/arrowpress_portfolio.php:177
+#: shortcodes/arrowpress_testimonial.php:168
+#: shortcodes/arrowpress_testimonial.php:175
+#: shortcodes/arrowpress_testimonial.php:182
+#: shortcodes/arrowpress_testimonial.php:189
+#: woo_shortcodes/arrowpress_product.php:278
+#: woo_shortcodes/arrowpress_product.php:288
+#: woo_shortcodes/arrowpress_product.php:299
+#: woo_shortcodes/arrowpress_product.php:318
+msgid "Skin"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:84 shortcodes/arrowpress_banner.php:117
+#: shortcodes/arrowpress_blog.php:208 shortcodes/arrowpress_blog.php:269
+#: shortcodes/arrowpress_blog.php:372 shortcodes/arrowpress_container.php:45
+#: shortcodes/arrowpress_heading.php:146 shortcodes/arrowpress_heading.php:157
+#: shortcodes/arrowpress_heading.php:167 shortcodes/arrowpress_heading.php:178
+#: shortcodes/arrowpress_heading.php:189 shortcodes/arrowpress_heading.php:490
+#: shortcodes/arrowpress_heading.php:628 shortcodes/arrowpress_heading.php:680
+#: shortcodes/arrowpress_heading.php:716 shortcodes/arrowpress_heading.php:726
+#: shortcodes/arrowpress_heading.php:736 shortcodes/arrowpress_heading.php:746
+#: shortcodes/arrowpress_heading.php:756
+#: shortcodes/arrowpress_portfolio.php:170
+msgid "px"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:88
+#: shortcodes/arrowpress_instagram_feed.php:186
+#: shortcodes/arrowpress_services.php:122
+msgid "Background Color"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:94
+msgid "Enable Default Overlay"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:97 shortcodes/arrowpress_banner.php:137
+#: shortcodes/arrowpress_blog.php:80 shortcodes/arrowpress_blog.php:157
+#: shortcodes/arrowpress_blog.php:169 shortcodes/arrowpress_blog.php:180
+#: shortcodes/arrowpress_blog.php:236 shortcodes/arrowpress_blog.php:313
+#: shortcodes/arrowpress_container.php:51 shortcodes/arrowpress_heading.php:118
+#: shortcodes/arrowpress_heading.php:451 shortcodes/arrowpress_heading.php:583
+#: shortcodes/arrowpress_heading.php:763 shortcodes/arrowpress_heading.php:770
+#: shortcodes/arrowpress_heading.php:777 shortcodes/arrowpress_heading.php:784
+#: shortcodes/arrowpress_heading.php:793 shortcodes/arrowpress_icon_box.php:293
+#: shortcodes/arrowpress_icon_box.php:398
+#: shortcodes/arrowpress_instagram_feed.php:156
+#: shortcodes/arrowpress_portfolio.php:121
+#: shortcodes/arrowpress_portfolio.php:144
+#: shortcodes/arrowpress_portfolio.php:151
+#: shortcodes/arrowpress_slider_wrap.php:90
+#: shortcodes/arrowpress_slider_wrap.php:97
+#: shortcodes/arrowpress_slider_wrap.php:115
+#: shortcodes/arrowpress_slider_wrap.php:122
+#: shortcodes/arrowpress_testimonial.php:143
+#: woo_shortcodes/arrowpress_product.php:123
+#: woo_shortcodes/arrowpress_product.php:131
+#: woo_shortcodes/arrowpress_product.php:138
+#: woo_shortcodes/arrowpress_product.php:169
+#: woo_shortcodes/arrowpress_product.php:176
+#: woo_shortcodes/arrowpress_product.php:183
+#: woo_shortcodes/arrowpress_product.php:190
+#: woo_shortcodes/arrowpress_product.php:197
+#: woo_shortcodes/arrowpress_product.php:204
+msgid "Yes"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:102
+msgid "Background Color on Hover"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:108 shortcodes/arrowpress_icon_box.php:338
+#: shortcodes/arrowpress_instagram_feed.php:164
+#: shortcodes/arrowpress_services.php:108
+msgid "Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:114
+msgid "Title Font Size"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:121
+msgid "Small title and description Color"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:127 shortcodes/arrowpress_icon_box.php:344
+#: shortcodes/arrowpress_member.php:212
+msgid "Text color"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:134 shortcodes/arrowpress_icon_box.php:395
+msgid "Enable Animation"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:145 shortcodes/arrowpress_heading.php:870
+#: shortcodes/arrowpress_icon_box.php:406
+msgid "Select Animation Style."
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:156 shortcodes/arrowpress_heading.php:877
+#: shortcodes/arrowpress_icon_box.php:417
+msgid "Enter Animation Delay."
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:167 shortcodes/arrowpress_blog.php:424
+#: shortcodes/arrowpress_heading.php:887 shortcodes/arrowpress_icon_box.php:428
+msgid "CSS box"
+msgstr ""
+
+#: shortcodes/arrowpress_banner.php:169 shortcodes/arrowpress_blog.php:426
+#: shortcodes/arrowpress_heading.php:889 shortcodes/arrowpress_icon_box.php:430
+msgid "Design Options"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:19
+msgid "Blog"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:31
+msgid "Grid Style 1"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:32
+msgid "Grid Style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:33
+msgid "Grid Style 3"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:34
+msgid "Grid Style 4"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:35
+msgid "Grid Style 5"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:36
+msgid "Grid Style 6"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:37
+msgid "List Style 1"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:38
+msgid "List Style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:39
+msgid "Packery style 1"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:40
+msgid "Packery style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:41
+msgid "Packery style 3"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:42
+msgid "Small List"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:48
+msgid "Posts Count"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:56
+msgid " Number of words in post description to display"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:66
+msgid " String to show after trimmed description"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:76
+msgid "Remove Sticky Post"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:85 shortcodes/arrowpress_event_list.php:54
+#: shortcodes/arrowpress_instagram_feed.php:87
+#: shortcodes/arrowpress_slider_wrap.php:39
+msgid "Number Column on Desktop Large (> 1200px)"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:89 shortcodes/arrowpress_blog.php:106
+#: shortcodes/arrowpress_blog.php:123 shortcodes/arrowpress_blog.php:140
+#: shortcodes/arrowpress_event_list.php:61
+#: shortcodes/arrowpress_event_list.php:80
+#: shortcodes/arrowpress_event_list.php:99
+#: shortcodes/arrowpress_event_list.php:118
+#: shortcodes/arrowpress_instagram_feed.php:75
+#: shortcodes/arrowpress_instagram_feed.php:93
+#: shortcodes/arrowpress_instagram_feed.php:109
+#: shortcodes/arrowpress_instagram_feed.php:125
+#: shortcodes/arrowpress_instagram_feed.php:141
+#: shortcodes/arrowpress_slider_wrap.php:43
+#: shortcodes/arrowpress_slider_wrap.php:55
+#: shortcodes/arrowpress_slider_wrap.php:67
+#: shortcodes/arrowpress_slider_wrap.php:79
+#: woo_shortcodes/arrowpress_product.php:212
+#: woo_shortcodes/arrowpress_product.php:229
+#: woo_shortcodes/arrowpress_product.php:246
+#: woo_shortcodes/arrowpress_product.php:263
+msgid "4"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:90 shortcodes/arrowpress_blog.php:107
+#: shortcodes/arrowpress_blog.php:124 shortcodes/arrowpress_blog.php:141
+#: shortcodes/arrowpress_event_list.php:62
+#: shortcodes/arrowpress_event_list.php:81
+#: shortcodes/arrowpress_event_list.php:100
+#: shortcodes/arrowpress_event_list.php:119
+#: shortcodes/arrowpress_instagram_feed.php:76
+#: shortcodes/arrowpress_instagram_feed.php:94
+#: shortcodes/arrowpress_instagram_feed.php:110
+#: shortcodes/arrowpress_instagram_feed.php:126
+#: shortcodes/arrowpress_instagram_feed.php:142
+#: shortcodes/arrowpress_slider_wrap.php:44
+#: shortcodes/arrowpress_slider_wrap.php:56
+#: shortcodes/arrowpress_slider_wrap.php:68
+#: shortcodes/arrowpress_slider_wrap.php:80
+#: woo_shortcodes/arrowpress_product.php:213
+#: woo_shortcodes/arrowpress_product.php:230
+#: woo_shortcodes/arrowpress_product.php:247
+#: woo_shortcodes/arrowpress_product.php:264
+msgid "3"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:91 shortcodes/arrowpress_blog.php:108
+#: shortcodes/arrowpress_blog.php:125 shortcodes/arrowpress_blog.php:142
+#: shortcodes/arrowpress_event_list.php:63
+#: shortcodes/arrowpress_event_list.php:82
+#: shortcodes/arrowpress_event_list.php:101
+#: shortcodes/arrowpress_event_list.php:120
+#: shortcodes/arrowpress_instagram_feed.php:77
+#: shortcodes/arrowpress_instagram_feed.php:95
+#: shortcodes/arrowpress_instagram_feed.php:111
+#: shortcodes/arrowpress_instagram_feed.php:127
+#: shortcodes/arrowpress_instagram_feed.php:143
+#: shortcodes/arrowpress_slider_wrap.php:45
+#: shortcodes/arrowpress_slider_wrap.php:57
+#: shortcodes/arrowpress_slider_wrap.php:69
+#: shortcodes/arrowpress_slider_wrap.php:81
+#: woo_shortcodes/arrowpress_product.php:214
+#: woo_shortcodes/arrowpress_product.php:231
+#: woo_shortcodes/arrowpress_product.php:248
+#: woo_shortcodes/arrowpress_product.php:265
+msgid "2"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:92 shortcodes/arrowpress_blog.php:109
+#: shortcodes/arrowpress_blog.php:126 shortcodes/arrowpress_blog.php:143
+#: shortcodes/arrowpress_event_list.php:64
+#: shortcodes/arrowpress_event_list.php:83
+#: shortcodes/arrowpress_event_list.php:102
+#: shortcodes/arrowpress_event_list.php:121
+#: shortcodes/arrowpress_instagram_feed.php:78
+#: shortcodes/arrowpress_instagram_feed.php:96
+#: shortcodes/arrowpress_instagram_feed.php:112
+#: shortcodes/arrowpress_instagram_feed.php:128
+#: shortcodes/arrowpress_instagram_feed.php:144
+#: shortcodes/arrowpress_slider_wrap.php:46
+#: shortcodes/arrowpress_slider_wrap.php:58
+#: shortcodes/arrowpress_slider_wrap.php:70
+#: shortcodes/arrowpress_slider_wrap.php:82 templates/arrowpress_blog.php:418
+#: templates/arrowpress_blog.php:742 woo_shortcodes/arrowpress_product.php:215
+#: woo_shortcodes/arrowpress_product.php:232
+#: woo_shortcodes/arrowpress_product.php:249
+#: woo_shortcodes/arrowpress_product.php:266
+msgid "1"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:102 shortcodes/arrowpress_event_list.php:73
+#: shortcodes/arrowpress_instagram_feed.php:105
+#: shortcodes/arrowpress_slider_wrap.php:51
+msgid "Number Column on Desktop"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:153 shortcodes/arrowpress_portfolio.php:140
+msgid "Show Space"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:167 shortcodes/arrowpress_portfolio.php:149
+msgid "Show load more"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:178 woo_shortcodes/arrowpress_product.php:166
+msgid "Show view more"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:184
+msgid "View more text"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:193
+msgid "View more link"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:194
+msgid "By default, the link will be blog archive page."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:205
+msgid "Button Top Space"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:213
+msgid "Blog title settings"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:215 shortcodes/arrowpress_blog.php:222
+#: shortcodes/arrowpress_blog.php:229 shortcodes/arrowpress_blog.php:238
+#: shortcodes/arrowpress_blog.php:254 shortcodes/arrowpress_blog.php:261
+#: shortcodes/arrowpress_blog.php:270 shortcodes/arrowpress_blog.php:277
+#: shortcodes/arrowpress_blog.php:289 shortcodes/arrowpress_blog.php:301
+#: shortcodes/arrowpress_blog.php:315 shortcodes/arrowpress_blog.php:332
+#: shortcodes/arrowpress_blog.php:339 shortcodes/arrowpress_blog.php:351
+#: shortcodes/arrowpress_blog.php:363 shortcodes/arrowpress_blog.php:373
+#: shortcodes/arrowpress_icon_box.php:295
+#: shortcodes/arrowpress_icon_box.php:312
+#: shortcodes/arrowpress_icon_box.php:319
+#: shortcodes/arrowpress_icon_box.php:326
+#: shortcodes/arrowpress_icon_box.php:334
+#: shortcodes/arrowpress_testimonial.php:145
+#: shortcodes/arrowpress_testimonial.php:161
+msgid "Typography"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:220
+msgid "Blog title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:227
+msgid "Blog title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:234 shortcodes/arrowpress_blog.php:311
+#: shortcodes/arrowpress_heading.php:449 shortcodes/arrowpress_heading.php:581
+#: shortcodes/arrowpress_icon_box.php:291
+#: shortcodes/arrowpress_testimonial.php:141
+msgid "Use custom font family?"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:237 shortcodes/arrowpress_blog.php:314
+#: shortcodes/arrowpress_heading.php:452 shortcodes/arrowpress_heading.php:584
+#: shortcodes/arrowpress_icon_box.php:294
+#: shortcodes/arrowpress_testimonial.php:144
+msgid "Use custom font family."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:246
+msgid "Select blog title font family."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:247
+msgid "Select blog title font styling."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:258
+msgid "Blog Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:260
+#: shortcodes/arrowpress_instagram_feed.php:166
+#: shortcodes/arrowpress_instagram_feed.php:177
+#: shortcodes/arrowpress_instagram_feed.php:188
+msgid "Select color."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:266
+msgid "Blog title top space"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:275
+msgid "Blog description settings"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:287
+msgid "Blog description font size"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:299
+msgid "Blog description line height"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:324
+msgid "Select blog description font family."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:325
+msgid "Select blog description font styling."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:336
+msgid "Blog description Color"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:338
+msgid "Select blog description color."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:348
+msgid "Blog info Color"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:350
+msgid "Select blog info color such as blog date."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:361
+msgid "Blog info background color"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:368
+msgid "Blog info side space"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:379 shortcodes/arrowpress_blog_cate.php:67
+msgid "Display"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:383 shortcodes/arrowpress_blog_cate.php:71
+msgid "Recent"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:384 shortcodes/arrowpress_blog_cate.php:72
+msgid "Featured"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:385 shortcodes/arrowpress_blog_cate.php:73
+msgid "Most Viewed"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:392 shortcodes/arrowpress_blog_cate.php:80
+#: woo_shortcodes/arrowpress_product.php:106
+msgid "Order by"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:395
+#, php-format
+msgid "Select how to sort retrieved products_category. More at %s."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:400 shortcodes/arrowpress_blog_cate.php:88
+#: shortcodes/arrowpress_portfolio.php:94
+#: woo_shortcodes/arrowpress_product.php:113
+msgid "Order way"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:403 shortcodes/arrowpress_blog_cate.php:91
+#: shortcodes/arrowpress_portfolio.php:97
+#: woo_shortcodes/arrowpress_product.php:116
+#, php-format
+msgid "Designates the ascending or descending order. More at %s."
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:408
+msgid "Category IDs"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:409
+msgid "Comma separated list of category ids"
+msgstr ""
+
+#: shortcodes/arrowpress_blog.php:416
+msgid "Slug Name Category"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:20
+msgid "Blog Category"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:28
+msgid "Number of blog to show"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:37
+msgid "Items On Desktop Large"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:45
+msgid "Items On Desktop"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:53
+msgid "Items On Mobile"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:61
+msgid "Items On Mobile Small"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:83
+#, php-format
+msgid "Select how to sort retrieved category. More at %s."
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:97
+#: shortcodes/arrowpress_event_item.php:78
+#: shortcodes/arrowpress_event_list.php:131
+#: shortcodes/arrowpress_member.php:225
+#: shortcodes/arrowpress_slider_wrap.php:285
+#: shortcodes/arrowpress_testimonial.php:198
+#: woo_shortcodes/arrowpress_product_cate.php:61
+msgid "Css"
+msgstr ""
+
+#: shortcodes/arrowpress_blog_cate.php:99
+#: shortcodes/arrowpress_event_item.php:80
+#: shortcodes/arrowpress_event_list.php:133
+#: shortcodes/arrowpress_member.php:227
+#: shortcodes/arrowpress_slider_wrap.php:287
+#: shortcodes/arrowpress_testimonial.php:200
+#: woo_shortcodes/arrowpress_product_cate.php:63
+msgid "Design Option"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:18
+msgid "Container"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:29
+msgid "Container Type"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:33
+msgid "Default Container"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:34
+msgid "Container Fluid"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:35
+msgid "Vertical heading container"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:41
+msgid "Set max width"
+msgstr ""
+
+#: shortcodes/arrowpress_container.php:49 shortcodes/arrowpress_heading.php:790
+msgid "Item delay"
+msgstr ""
+
+#: shortcodes/arrowpress_event_item.php:19
+msgid " Event Item"
+msgstr ""
+
+#: shortcodes/arrowpress_event_item.php:31
+msgid "Layout Item"
+msgstr ""
+
+#: shortcodes/arrowpress_event_item.php:35
+#: shortcodes/arrowpress_event_list.php:36
+msgid "Timeline Horizontal"
+msgstr ""
+
+#: shortcodes/arrowpress_event_item.php:36
+#: shortcodes/arrowpress_event_list.php:37
+msgid "Timeline Vertical"
+msgstr ""
+
+#: shortcodes/arrowpress_event_item.php:72
+msgid "Event Link"
+msgstr ""
+
+#: shortcodes/arrowpress_event_list.php:43
+msgid "Add TimeLine Background Image"
+msgstr ""
+
+#: shortcodes/arrowpress_event_list.php:58
+#: shortcodes/arrowpress_event_list.php:77
+#: shortcodes/arrowpress_event_list.php:96
+#: shortcodes/arrowpress_event_list.php:115
+msgid "7"
+msgstr ""
+
+#: shortcodes/arrowpress_event_list.php:59
+#: shortcodes/arrowpress_event_list.php:78
+#: shortcodes/arrowpress_event_list.php:97
+#: shortcodes/arrowpress_event_list.php:116
+#: shortcodes/arrowpress_instagram_feed.php:73
+#: shortcodes/arrowpress_instagram_feed.php:91
+msgid "6"
+msgstr ""
+
+#: shortcodes/arrowpress_event_list.php:60
+#: shortcodes/arrowpress_event_list.php:79
+#: shortcodes/arrowpress_event_list.php:98
+#: shortcodes/arrowpress_event_list.php:117
+#: shortcodes/arrowpress_instagram_feed.php:74
+#: shortcodes/arrowpress_instagram_feed.php:92
+msgid "5"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:18
+msgid "Heading"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:26
+msgid "Headding style"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:29
+msgid "Heading Style 1"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:30
+msgid "Heading Style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:31
+msgid "Heading Style 3"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:32
+msgid "Heading Style 4 (vertical heading)"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:33
+msgid "Heading Style 5"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:34
+msgid "Heading Style 6"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:36
+msgid "Select heading style."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:41
+msgid "Small Heading Title"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:53
+msgid "Big Heading Title"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:60
+msgid "Description Title"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:70
+msgid "Tag heading"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:73
+msgid "Select tag heading"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:74
+msgid "H1"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:75
+msgid "H2"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:76
+msgid "H3"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:77
+msgid "H4"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:78
+msgid "H5"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:79
+msgid "H6"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:81
+msgid "Select tag heading."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:85
+msgid "Headding Align"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:100
+msgid "Headding Position"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:108
+msgid "Select heading position."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:116 shortcodes/arrowpress_heading.php:119
+msgid "Disable heading vertical rotation"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:127
+msgid "Separator"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:130
+msgid "No separator"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:131
+msgid "Line"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:132 shortcodes/arrowpress_heading.php:218
+#: shortcodes/arrowpress_heading.php:230 shortcodes/arrowpress_heading.php:250
+#: shortcodes/arrowpress_heading.php:259 shortcodes/arrowpress_heading.php:267
+#: shortcodes/arrowpress_heading.php:280 shortcodes/arrowpress_heading.php:284
+#: shortcodes/arrowpress_heading.php:296 shortcodes/arrowpress_heading.php:301
+#: shortcodes/arrowpress_heading.php:312 shortcodes/arrowpress_heading.php:316
+#: shortcodes/arrowpress_heading.php:328 shortcodes/arrowpress_heading.php:332
+#: shortcodes/arrowpress_heading.php:344 shortcodes/arrowpress_heading.php:348
+#: shortcodes/arrowpress_heading.php:360 shortcodes/arrowpress_heading.php:364
+#: shortcodes/arrowpress_heading.php:376 shortcodes/arrowpress_heading.php:387
+#: shortcodes/arrowpress_heading.php:394 shortcodes/arrowpress_icon_box.php:46
+#: shortcodes/arrowpress_icon_box.php:63 shortcodes/arrowpress_icon_box.php:84
+#: shortcodes/arrowpress_icon_box.php:88 shortcodes/arrowpress_icon_box.php:101
+#: shortcodes/arrowpress_icon_box.php:105
+#: shortcodes/arrowpress_icon_box.php:118
+#: shortcodes/arrowpress_icon_box.php:122
+#: shortcodes/arrowpress_icon_box.php:134
+#: shortcodes/arrowpress_icon_box.php:139
+#: shortcodes/arrowpress_icon_box.php:150
+#: shortcodes/arrowpress_icon_box.php:154
+#: shortcodes/arrowpress_icon_box.php:166
+#: shortcodes/arrowpress_icon_box.php:170
+#: shortcodes/arrowpress_icon_box.php:182
+#: shortcodes/arrowpress_icon_box.php:186
+#: shortcodes/arrowpress_icon_box.php:198
+#: shortcodes/arrowpress_icon_box.php:202
+#: shortcodes/arrowpress_icon_box.php:214
+#: shortcodes/arrowpress_icon_box.php:223
+#: shortcodes/arrowpress_icon_box.php:239
+#: shortcodes/arrowpress_icon_box.php:249
+#: shortcodes/arrowpress_icon_box.php:370
+#: shortcodes/arrowpress_icon_box.php:378
+#: shortcodes/arrowpress_instagram_feed.php:210
+#: shortcodes/arrowpress_instagram_feed.php:231
+#: shortcodes/arrowpress_instagram_feed.php:235
+#: shortcodes/arrowpress_instagram_feed.php:248
+#: shortcodes/arrowpress_instagram_feed.php:252
+#: shortcodes/arrowpress_instagram_feed.php:265
+#: shortcodes/arrowpress_instagram_feed.php:269
+#: shortcodes/arrowpress_instagram_feed.php:281
+#: shortcodes/arrowpress_instagram_feed.php:286
+#: shortcodes/arrowpress_instagram_feed.php:297
+#: shortcodes/arrowpress_instagram_feed.php:301
+#: shortcodes/arrowpress_instagram_feed.php:313
+#: shortcodes/arrowpress_instagram_feed.php:317
+#: shortcodes/arrowpress_instagram_feed.php:329
+#: shortcodes/arrowpress_instagram_feed.php:333
+#: shortcodes/arrowpress_instagram_feed.php:345
+#: shortcodes/arrowpress_instagram_feed.php:349
+#: shortcodes/arrowpress_instagram_feed.php:361
+#: shortcodes/arrowpress_instagram_feed.php:373
+#: shortcodes/arrowpress_instagram_feed.php:383
+#: shortcodes/arrowpress_instagram_feed.php:389
+msgid "Icon"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:133
+msgid "2 Lines"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:135
+msgid "Select Separator."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:140
+msgid "Line Width"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:151
+msgid "Line Height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:161
+msgid "Second Line Width"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:172
+msgid "Second Line Height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:183
+msgid "Border Radius Width"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:196
+msgid "Upload an image to display above title."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:200
+msgid "Background image"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:202
+msgid "Upload an image for heading background image"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:207 shortcodes/arrowpress_icon_box.php:39
+#: shortcodes/arrowpress_instagram_feed.php:199
+msgid "Icon type"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:211 shortcodes/arrowpress_icon_box.php:43
+#: shortcodes/arrowpress_instagram_feed.php:203
+msgid "Image Icon"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:212 shortcodes/arrowpress_heading.php:234
+#: shortcodes/arrowpress_icon_box.php:44 shortcodes/arrowpress_icon_box.php:67
+#: shortcodes/arrowpress_instagram_feed.php:204
+#: shortcodes/arrowpress_instagram_feed.php:214
+msgid "Icon library"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:222
+msgid "Image icon"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:229
+msgid "Upload an image icon."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:237 shortcodes/arrowpress_icon_box.php:69
+#: shortcodes/arrowpress_instagram_feed.php:216
+msgid "Font Awesome"
+msgstr ""
+
+#. esc_html__('Font Bonfire', 'arrowpress-core') => 'aprfont',
+#. esc_html__('Font arrowpress', 'arrowpress-core') => 'aprfont',
+#: shortcodes/arrowpress_heading.php:239 shortcodes/arrowpress_icon_box.php:71
+#: shortcodes/arrowpress_instagram_feed.php:218
+msgid "Open Iconic"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:240 shortcodes/arrowpress_icon_box.php:73
+#: shortcodes/arrowpress_instagram_feed.php:220
+msgid "Stroke Icons 7"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:241 shortcodes/arrowpress_icon_box.php:72
+#: shortcodes/arrowpress_instagram_feed.php:219
+msgid "Typicons"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:242 shortcodes/arrowpress_icon_box.php:75
+#: shortcodes/arrowpress_instagram_feed.php:222
+msgid "Entypo"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:243 shortcodes/arrowpress_icon_box.php:76
+#: shortcodes/arrowpress_instagram_feed.php:223
+msgid "Linecons"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:249 shortcodes/arrowpress_icon_box.php:83
+#: shortcodes/arrowpress_instagram_feed.php:230
+msgid "Select icon library."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:279 shortcodes/arrowpress_heading.php:295
+#: shortcodes/arrowpress_heading.php:311 shortcodes/arrowpress_heading.php:327
+#: shortcodes/arrowpress_heading.php:343 shortcodes/arrowpress_heading.php:359
+#: shortcodes/arrowpress_heading.php:375 shortcodes/arrowpress_icon_box.php:100
+#: shortcodes/arrowpress_icon_box.php:117
+#: shortcodes/arrowpress_icon_box.php:133
+#: shortcodes/arrowpress_icon_box.php:149
+#: shortcodes/arrowpress_icon_box.php:165
+#: shortcodes/arrowpress_icon_box.php:181
+#: shortcodes/arrowpress_icon_box.php:197
+#: shortcodes/arrowpress_icon_box.php:213
+#: shortcodes/arrowpress_instagram_feed.php:247
+#: shortcodes/arrowpress_instagram_feed.php:264
+#: shortcodes/arrowpress_instagram_feed.php:280
+#: shortcodes/arrowpress_instagram_feed.php:296
+#: shortcodes/arrowpress_instagram_feed.php:312
+#: shortcodes/arrowpress_instagram_feed.php:328
+#: shortcodes/arrowpress_instagram_feed.php:344
+#: shortcodes/arrowpress_instagram_feed.php:360
+msgid "Select icon from library."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:381 shortcodes/arrowpress_icon_box.php:243
+#: shortcodes/arrowpress_instagram_feed.php:377
+msgid "Icon font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:391
+msgid "Icon Color"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:393
+msgid "Icon color."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:402
+msgid "Big Title settings"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:409 shortcodes/arrowpress_icon_box.php:316
+msgid "Big Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:417
+msgid "[Tablet] Big Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:425
+msgid "[Tablet Portrait] Big Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:433
+msgid "[Mobile landscape] Big Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:441
+msgid "[Mobile] Big Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:462 shortcodes/arrowpress_icon_box.php:304
+msgid "Select big heading font family."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:463 shortcodes/arrowpress_icon_box.php:305
+msgid "Select big heading font styling."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:474
+msgid "Big title text transform"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:477 shortcodes/arrowpress_heading.php:608
+#: shortcodes/arrowpress_icon_box.php:54
+msgid "Default"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:479 shortcodes/arrowpress_heading.php:610
+msgid "Uppercase"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:480 shortcodes/arrowpress_heading.php:611
+msgid "Capitalize"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:487
+msgid "Big title letter spacing"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:495
+msgid "Big Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:503
+msgid "[Tablet] Big Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:511
+msgid "[Tablet Portrait] Big Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:519
+msgid "[Mobile landscape] Big Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:527
+msgid "[Mobile] Big Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:535
+msgid "Small Title settings"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:542
+msgid "Small Title font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:593
+#: shortcodes/arrowpress_testimonial.php:153
+msgid "Select small heading font family."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:594
+#: shortcodes/arrowpress_testimonial.php:154
+msgid "Select small heading font styling."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:605
+msgid "Small title text transform"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:617
+msgid "Small Title line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:625
+msgid "Small title letter spacing"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:633
+msgid "Description settings"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:640
+#: shortcodes/arrowpress_testimonial.php:127
+msgid "Description font size"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:647
+msgid "Description font weight"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:653
+#: shortcodes/arrowpress_testimonial.php:134
+msgid "Description line height"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:660
+msgid "Description container width"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:669
+msgid "Color options"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:671 shortcodes/arrowpress_heading.php:679
+#: shortcodes/arrowpress_heading.php:687 shortcodes/arrowpress_heading.php:694
+#: shortcodes/arrowpress_heading.php:700 shortcodes/arrowpress_heading.php:706
+#: shortcodes/arrowpress_heading.php:717 shortcodes/arrowpress_heading.php:727
+#: shortcodes/arrowpress_heading.php:737 shortcodes/arrowpress_heading.php:747
+#: shortcodes/arrowpress_heading.php:757 shortcodes/arrowpress_heading.php:764
+#: shortcodes/arrowpress_heading.php:771 shortcodes/arrowpress_heading.php:778
+#: shortcodes/arrowpress_heading.php:785
+msgid "Styles"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:676
+msgid "Big Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:678 shortcodes/arrowpress_heading.php:686
+msgid "Select heading color."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:684
+msgid "Small Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:691 shortcodes/arrowpress_services.php:115
+#: shortcodes/arrowpress_testimonial.php:165
+msgid "Description Color"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:693 shortcodes/arrowpress_services.php:117
+#: shortcodes/arrowpress_services.php:145
+msgid "Select description color."
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:698
+msgid "Line separator Color"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:704
+msgid "Space options"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:712
+msgid "Heading bottom space"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:722
+msgid "Big title top space"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:752
+msgid "Space Top of line separator"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:761
+msgid "Hide in tablet landscape"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:768
+msgid "Hide in tablet portrait"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:775
+msgid "Hide in mobile landscape"
+msgstr ""
+
+#: shortcodes/arrowpress_heading.php:782
+msgid "Hide in mobile portrait"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:19
+msgid "Icon Box"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:31
+msgid "Icon box 1"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:32
+msgid "Icon box 2"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:33
+msgid "Icon box 3"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:50
+msgid "Icon Style"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:55
+#: woo_shortcodes/arrowpress_product.php:47
+msgid "Style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:56
+#: woo_shortcodes/arrowpress_product.php:48
+msgid "Style 3"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:57
+msgid "Style 4"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:70
+msgid "Font CryptoCio"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:74
+#: shortcodes/arrowpress_instagram_feed.php:221
+msgid "Themify Icons"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:231
+#: shortcodes/arrowpress_instagram_feed.php:365
+msgid "Image logo"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:234
+#: shortcodes/arrowpress_instagram_feed.php:368
+msgid "Upload image logo."
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:259 shortcodes/arrowpress_member.php:174
+#: shortcodes/arrowpress_services.php:54
+msgid "Description"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:264
+msgid "Number"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:324
+msgid "Title margin top"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:331
+msgid "Title margin bottom"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:350
+#: shortcodes/arrowpress_instagram_feed.php:387
+msgid "Icon color"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:356
+msgid "Icon Background"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:362
+msgid "Icon Border Color"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:368
+msgid "Icon Box Width"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:375
+msgid "Icon Box Height"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:382
+msgid "[Hover] Box Container Background"
+msgstr ""
+
+#: shortcodes/arrowpress_icon_box.php:388
+msgid "[Hover] Text color"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:18
+msgid "Instagram Feed"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:31
+msgid "Instagram Slider 1"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:32
+msgid "Instagram Slider 2"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:33
+msgid "Instagram Slider 3"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:34
+msgid "Instagram Slider 4"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:35
+msgid "Instagram Masonry"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:36
+msgid "Instagram Grid"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:37
+msgid "Instagram Packery"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:62
+#: woo_shortcodes/arrowpress_product.php:73
+msgid "Per page"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:65
+msgid "This field  determines how many blogs to show on the page"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:69
+msgid "Number Column on Desktop Large (> 1365px)"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:121
+msgid "Number Column on Tablets"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:137
+msgid "Number Column on Mobile"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:153
+#: shortcodes/arrowpress_slider_wrap.php:87
+msgid "Auto Play"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:175
+msgid "Border Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:393
+msgid "Image Background"
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:396
+#: shortcodes/arrowpress_instagram_feed.php:407
+msgid "Upload image background."
+msgstr ""
+
+#: shortcodes/arrowpress_instagram_feed.php:404
+msgid "Second image background"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:19
+msgid " Member"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:31 shortcodes/arrowpress_services.php:31
+#: shortcodes/arrowpress_testimonial.php:32
+msgid "Layout 1"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:32 shortcodes/arrowpress_services.php:32
+#: shortcodes/arrowpress_testimonial.php:33
+msgid "Layout 2"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:33 shortcodes/arrowpress_services.php:33
+#: shortcodes/arrowpress_testimonial.php:34
+msgid "Layout 3"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:34 shortcodes/arrowpress_testimonial.php:35
+msgid "Layout 4"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:46
+msgid "Background color for member info"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:57
+msgid "Overlay Background color"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:68
+msgid "Last Name"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:74
+msgid "Category"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:99 lib/widgets/apr_contact_info.php:74
+msgid "Address"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:109
+msgid "Article Title"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:118
+#: shortcodes/arrowpress_testimonial.php:74
+msgid "Job"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:188
+#: shortcodes/arrowpress_testimonial.php:179
+msgid "Name Color"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:194
+msgid "Name Hover Color"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:200
+msgid "Category member color"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:206
+msgid "Job color"
+msgstr ""
+
+#: shortcodes/arrowpress_member.php:218
+msgid "Tittle Color"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:18
+msgid "Bitcoin"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:19
+msgid "Ethereum"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:20
+msgid "Litecoin"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:21
+msgid "Dash"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:22
+msgid "Monero"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:23
+msgid "Bitcoin Gold"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:24
+msgid "Ethereum Classic"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:25
+msgid "Siacoin"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:26
+msgid "Bytecoin"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:27
+msgid "Bitconnect Coin"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:28
+msgid "Zcash"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:29
+msgid "Doge"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:30
+msgid "Komodo"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:31
+msgid "Pascal"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:34
+msgid "Mining Calculator"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:42
+msgid "Coin Select"
+msgstr ""
+
+#: shortcodes/arrowpress_mining_calculator.php:50
+msgid "Select active coin calculator"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:20
+msgid "Portfolio"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:33
+msgid "Packery 1"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:34
+msgid "Packery 2"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:35
+msgid "Packery 3"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:36
+msgid "Packery 4"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:37
+msgid "Packery 5"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:38
+msgid "Masonry 1 "
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:39
+msgid "Masonry 2"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:45
+#: shortcodes/arrowpress_testimonial.php:42
+msgid "Style"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:49
+msgid "Layout Style 1"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:50
+#: shortcodes/arrowpress_testimonial.php:47
+msgid "Layout Style 2"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:51
+msgid "Layout Style 3"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:52
+msgid "Layout Style 4"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:53
+msgid "Layout Style 5"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:69
+msgid "Small Title"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:80
+msgid "Number of portfolio to show"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:87
+msgid "Category ID"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:88
+msgid "Enter ID of category."
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:102
+msgid "Portfolio Columns"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:106
+msgid "2 Columns"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:107
+msgid "3 Columns"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:108
+msgid "4 Columns"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:118
+msgid "Display filter"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:125
+msgid " Filter Align"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:155
+msgid "Load More Style"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:159
+#: shortcodes/arrowpress_services.php:90
+msgid "Button Primary"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:160
+#: shortcodes/arrowpress_services.php:91
+msgid "Button Highlight"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:166
+msgid "Space Top Button"
+msgstr ""
+
+#: shortcodes/arrowpress_portfolio.php:175
+#: woo_shortcodes/arrowpress_product.php:276
+msgid "Filter Color"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:18
+msgid "Services"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:75
+msgid "Button Text"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:77 templates/arrowpress_portfolio.php:182
+msgid "Find out more"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:85
+msgid "Button Style"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:89
+msgid "Button Default"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:92
+msgid "Button White"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:93
+msgid "Button Black"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:94
+msgid "Button Circle"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:110
+#: shortcodes/arrowpress_services.php:138
+msgid "Select title color."
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:124
+msgid "Select background color content."
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:129
+msgid "[Hover] Background Color"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:131
+msgid "Select background color on hover."
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:136
+msgid "[Hover] Title Color"
+msgstr ""
+
+#: shortcodes/arrowpress_services.php:143
+msgid "[Hover] Description Color"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:33
+msgid "Slick Default"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:34
+msgid "Slick Layout 2"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:94
+msgid "Dots Navigation"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:101
+msgid "Add thumbnail images"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:112
+msgid "Navigation Arrows"
+msgstr ""
+
+#: shortcodes/arrowpress_slider_wrap.php:119
+msgid "Show slide number"
+msgstr ""
+
+#: shortcodes/arrowpress_static_block.php:17
+msgid "Choose a block to display"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:20
+msgid " Testimonial"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:36
+msgid "Layout 5"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:46
+msgid "Layout Default"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:68
+msgid "Name"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:88
+msgid "Upload image signature."
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:96
+msgid "Ratings"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:100
+msgid "Hide stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:101
+msgid "5 stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:102
+msgid "4 stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:103
+msgid "3 stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:104
+msgid "2 stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:105
+msgid "1 stars"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:108
+msgid "Select ratings"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:116
+msgid "Testimonial Align"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:123
+msgid "Select testiomonial align."
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:172
+msgid "Job Color"
+msgstr ""
+
+#: shortcodes/arrowpress_testimonial.php:186
+msgid "Text Background Color"
+msgstr ""
+
+#. Base ID
+#: social-widget/functions.php:21 social-widget/functions.php:22
+msgid "Arrowpress Instagram Feed"
+msgstr ""
+
+#: social-widget/functions.php:143
+msgid "Access token is not valid."
+msgstr ""
+
+#: social-widget/functions.php:609
+msgid "Instagram Plugin error: Plugin not fully configured"
+msgstr ""
+
+#: templates/arrowpress_blog.php:37
+msgid "Go to blog"
+msgstr ""
+
+#: templates/arrowpress_blog.php:396
+msgid "Posted by"
+msgstr ""
+
+#: templates/arrowpress_blog.php:402
+msgid "0 comment"
+msgstr ""
+
+#: templates/arrowpress_blog.php:402
+msgid "1 comment"
+msgstr ""
+
+#: templates/arrowpress_blog.php:402
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: templates/arrowpress_blog.php:409 templates/arrowpress_blog.php:583
+#: templates/arrowpress_blog.php:651 templates/arrowpress_blog.php:733
+msgid "</span></a>"
+msgstr ""
+
+#: templates/arrowpress_blog.php:418 templates/arrowpress_blog.php:742
+msgid "0"
+msgstr ""
+
+#: templates/arrowpress_blog.php:418 templates/arrowpress_blog.php:742
+msgid "%"
+msgstr ""
+
+#: templates/arrowpress_blog.php:421
+msgid "Tags:"
+msgstr ""
+
+#: templates/arrowpress_blog.php:435 templates/arrowpress_blog.php:520
+#: templates/arrowpress_blog.php:594 templates/arrowpress_blog.php:814
+msgid "Pages:"
+msgstr ""
+
+#: templates/arrowpress_blog.php:439 templates/arrowpress_blog.php:524
+#: templates/arrowpress_blog.php:598 templates/arrowpress_blog.php:818
+msgid "Page"
+msgstr ""
+
+#: templates/arrowpress_blog.php:452
+msgid "by"
+msgstr ""
+
+#: templates/arrowpress_blog.php:459 templates/arrowpress_blog.php:532
+#: templates/arrowpress_blog.php:606
+msgid "Read more"
+msgstr ""
+
+#: templates/arrowpress_blog.php:794
+msgid "0 Comment"
+msgstr ""
+
+#: templates/arrowpress_blog.php:794
+msgid "1 Comment"
+msgstr ""
+
+#: templates/arrowpress_blog.php:794
+msgid "% Comments"
+msgstr ""
+
+#: templates/arrowpress_blog.php:842
+msgid "Load more"
+msgstr ""
+
+#: templates/arrowpress_blog_cate.php:46
+msgid "("
+msgstr ""
+
+#: templates/arrowpress_blog_cate.php:46
+msgid "post)"
+msgstr ""
+
+#: templates/arrowpress_portfolio.php:150
+#: woo_templates/arrowpress_product.php:174
+msgid "All"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:20
+msgid "Product"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:32
+msgid "Product Grid"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:33
+msgid "Product Grid Slide"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:34
+msgid "Product List"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:35
+msgid "Product List Slide"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:36
+msgid "Product Packery"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:42
+msgid "Product Style"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:46
+msgid "Style 1"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:58
+msgid "Product type"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:62
+msgid "Recent Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:63
+msgid "Featured Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:64
+msgid "Best-Selling Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:65
+msgid "Top Rated Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:66
+msgid "Sale Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:67
+msgid "Related Products"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:76
+msgid ""
+"The \"per_page\" shortcode determines how many products to show on the page"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:91
+msgid "Columns"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:109
+#, php-format
+msgid "Select how to sort retrieved products. More at %s."
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:120
+msgid "Show spacing"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:128
+msgid "Show filter"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:135
+msgid "Show button all filter"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:146
+msgid "ID Category Parent"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:157
+msgid "ID excluded categories"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:173
+msgid "Show Compare"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:180
+msgid "Show Wishlist"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:187
+msgid "Show Quick View"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:194
+msgid "Show Link"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:201
+msgid "Show Price"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:221
+#: woo_shortcodes/arrowpress_product.php:238
+#: woo_shortcodes/arrowpress_product.php:255
+#: woo_shortcodes/arrowpress_product.php:272
+msgid "Responsive Slide"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:286
+msgid "Filter font size"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:297
+msgid "Filter Border Color"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:307
+msgid "Filter Border Styles"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:311
+msgid "Dotted"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:312
+msgid "Dashed"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:313
+msgid "Solid"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:314
+msgid "Double"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:315
+msgid "Groove"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:316
+msgid "Ridge"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product.php:326
+msgid "Button Link"
+msgstr ""
+
+#: woo_shortcodes/arrowpress_product_cate.php:20
+msgid "Product Category"
+msgstr ""
+
+#: woo_templates/arrowpress_product.php:204
+msgid "View our store"
+msgstr ""
+
+#: woo_templates/arrowpress_product_cate.php:97
+msgid "View all products"
+msgstr ""
+
+#: lib/widgets/apr_contact_info.php:68 lib/widgets/apr_social.php:93
+msgid "Widget Title"
+msgstr ""
+
+#: lib/widgets/apr_contact_info.php:79
+msgid "Phone Number"
+msgstr ""
+
+#: lib/widgets/apr_contact_info.php:83
+msgid "Email"
+msgstr ""
+
+#: lib/widgets/apr_recent_comments.php:28
+msgid "Your site&#8217;s most recent comments."
+msgstr ""
+
+#: lib/widgets/apr_recent_comments.php:31
+#: lib/widgets/apr_recent_comments.php:77
+msgid "Recent Comments"
+msgstr ""
+
+#. comments widget: 1: comment author, 2: post link
+#: lib/widgets/apr_recent_comments.php:115
+#, php-format
+msgctxt "widgets"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: lib/widgets/apr_recent_comments.php:158
+#: lib/widgets/apr_recent_gallery.php:105 lib/widgets/apr_recent_posts.php:125
+msgid "Title:"
+msgstr ""
+
+#: lib/widgets/apr_recent_comments.php:161
+msgid "Number of comments to show:"
+msgstr ""
+
+#: lib/widgets/apr_recent_gallery.php:5
+msgid "Your site&#8217;s most recent Gallery."
+msgstr ""
+
+#: lib/widgets/apr_recent_gallery.php:6
+msgid "Apr Recent Gallery"
+msgstr ""
+
+#: lib/widgets/apr_recent_gallery.php:60
+msgid "gallery"
+msgstr ""
+
+#: lib/widgets/apr_recent_gallery.php:108 lib/widgets/apr_recent_posts.php:128
+msgid "Number of posts to show:"
+msgstr ""
+
+#: lib/widgets/apr_recent_gallery.php:112 lib/widgets/apr_recent_posts.php:132
+msgid "Display post date?"
+msgstr ""
+
+#: lib/widgets/apr_recent_posts.php:12
+msgid "Recent Posts"
+msgstr ""
+
+#: lib/widgets/apr_social.php:99
+msgid "Facebook"
+msgstr ""
+
+#: lib/widgets/apr_social.php:104
+msgid "Twitter"
+msgstr ""
+
+#: lib/widgets/apr_social.php:108
+msgid "Instagram"
+msgstr ""
+
+#: lib/widgets/apr_social.php:112
+msgid "Pinterest"
+msgstr ""
+
+#: lib/widgets/apr_social.php:116
+msgid "Google Plus"
+msgstr ""
+
+#: lib/widgets/apr_social.php:120
+msgid "Linkedin"
+msgstr ""
+
+#: lib/widgets/apr_social.php:124
+msgid "Youtube"
+msgstr ""
+
+#: lib/woocommerce/class-wc-widget-price-filter.php:123
+msgid "Filter"
+msgstr ""
+
+#. Base ID
+#: social-widget/facebook/arrowpress-likebox-facebook.php:9
+msgid "Arrowpress Facebook Like Box"
+msgstr ""
+
+#: social-widget/facebook/arrowpress-likebox-facebook.php:10
+msgid "This Widget show the Facebook"
+msgstr ""
+
+#. Base ID
+#: social-widget/twitter/widget.php:11
+msgid "Arrowpress Latest Tweet"
+msgstr ""
+
+#: social-widget/twitter/widget.php:12
+msgid "This Widget show the Latest Tweets"
+msgstr ""
+
+#: social-widget/twitter/widget.php:47
+msgid "Latest Twitter"
+msgstr ""
+
+#. Name of the plugin
+msgid "ArrowPress Core"
+msgstr ""
+
+#. Description of the plugin
+msgid "Core for ArrowPress Theme."
+msgstr ""

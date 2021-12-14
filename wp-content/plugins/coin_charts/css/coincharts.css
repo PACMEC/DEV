@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+div.coin-chart {
+    padding: 1px !important;
+    margin: 0;
+    min-width: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+div.coin-chart > div.coin-chart-buttons {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 0 3px 0 !important;
+    padding: 0 !important;
+}
+
+div.coin-chart > div.coin-chart-buttons > div.coin-button {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important;
+    margin: 1px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    cursor: pointer !important;
+    align-items: center !important;
+    outline: none !important;
+    user-select: none !important;
+    white-space: nowrap;
+    padding: 0 !important;
+    border-radius: 2px !important;
+}
+
+div.coin-chart > div.coin-chart-buttons > div.coin-button > span {
+    font-size: 14px !important;
+    padding: 10px 4px !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26) !important;
+    text-align: center !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+
+div.coin-chart > div.coin-chart-plot {
+    min-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 75vh;
+}
+
+@-webkit-keyframes coin-chart-spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes coin-chart-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

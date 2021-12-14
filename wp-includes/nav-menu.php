@@ -776,16 +776,19 @@ function wp_setup_nav_menu_item( $menu_item ) {
 				$menu_item->url = get_permalink( $menu_item->object_id );
 
 				$original_object = get_post( $menu_item->object_id );
-				/** This filter is documented in wp-includes/post-template.php */
-				$original_title = apply_filters( 'the_title', $original_object->post_title, $original_object->ID );
+				if($original_object == null){
+					$menu_item->title = '';
+				} else {
+					/** This filter is documented in wp-includes/post-template.php */
+					$original_title = apply_filters( 'the_title', $original_object->post_title, $original_object->ID );
 
-				if ( '' === $original_title ) {
-					/* translators: %d: ID of a post */
-					$original_title = sprintf( __( '#%d (no title)' ), $original_object->ID );
+					if ( '' === $original_title ) {
+						/* translators: %d: ID of a post */
+						$original_title = sprintf( __( '#%d (no title)' ), $original_object->ID );
+					}
+
+					$menu_item->title = '' == $menu_item->post_title ? $original_title : $menu_item->post_title;
 				}
-
-				$menu_item->title = '' == $menu_item->post_title ? $original_title : $menu_item->post_title;
-
 			} elseif ( 'post_type_archive' == $menu_item->type ) {
 				$object =  get_post_type_object( $menu_item->object );
 				if ( $object ) {

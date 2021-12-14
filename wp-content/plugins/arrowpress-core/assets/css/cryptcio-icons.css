@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'FontCryptoCio';
+  src:  url('fonts/FontCryptoCio.eot?uml3dc');
+  src:  url('fonts/FontCryptoCio.eot?uml3dc#iefix') format('embedded-opentype'),
+    url('fonts/FontCryptoCio.ttf?uml3dc') format('truetype'),
+    url('fonts/FontCryptoCio.woff?uml3dc') format('woff'),
+    url('fonts/FontCryptoCio.svg?uml3dc#FontCryptoCio') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="crt-"], [class*=" crt-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FontCryptoCio' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.crt-1:before {
+  content: "\e900";
+}
+.crt-2:before {
+  content: "\e901";
+}
+.crt-3:before {
+  content: "\e902";
+}
+.crt-4:before {
+  content: "\e903";
+}
+.crt-5:before {
+  content: "\e904";
+}
+.crt-6:before {
+  content: "\e905";
+}
+.crt-7:before {
+  content: "\e906";
+}
+.crt-8:before {
+  content: "\e907";
+}
+.crt-9:before {
+  content: "\e908";
+}
+.crt-10:before {
+  content: "\e909";
+}
+.crt-11:before {
+  content: "\e90a";
+}

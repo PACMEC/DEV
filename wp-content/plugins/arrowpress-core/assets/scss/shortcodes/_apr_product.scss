@@ -1,0 +1,43 @@
+.shop_attributes th {
+  font-weight: 500;
+}
+.no-spacing{
+	margin: side-values(0 -15px);
+	.woocommerce div.product-grid div.product {
+	  	margin-bottom: 0;
+	  	padding: side-values(0);
+	}
+}
+.filter-cate {
+  text-align: $right;
+}
+.apr_hide_compare{
+	.compare_product{
+		display: none !important;
+	}
+}
+.apr_hide_wishlish{
+	.wishlist-btn{
+		display: none !important;
+	}
+}
+.apr_hide_quickview{
+	.quick-view{
+		display: none !important;
+	}
+}
+.apr_hide_link{
+	.prd_permalink{
+		display: none !important;
+	}
+}
+.apr_hide_price{
+	.price{
+		display: none !important;
+	}
+}
+.apr_show_link{
+	.prd_permalink{
+		display: inline-block !important;
+	}	
+}

@@ -1,0 +1,9 @@
+#cc-update-table-body .button {
+    width: 150px;
+}
+
+#cc-setup-panel ul, #cc-help-panel ul, #cc-usage-panel ul {
+    list-style: disc !important;
+    margin-left: 20px !important;
+}
+
