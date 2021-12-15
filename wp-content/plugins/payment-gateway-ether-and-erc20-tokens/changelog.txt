@@ -1,0 +1,392 @@
+== Changelog ==
+
+= 4.8.14 =
+
+* The [sync](https://explorer.syncoin.io/) blockchain support updated
+
+= 4.8.13 =
+
+* settings were mixed from two gateway objects
+
+= 4.8.12 =
+
+* Namespace issue fix
+
+= 4.8.11 =
+
+* WooCommerce 5.5.0 `action-scheduler` [fix](https://github.com/woocommerce/action-scheduler/issues/730#issuecomment-880586544)
+
+= 4.8.10 =
+
+* `Payment failed. Try to adjust gas setting` error fix
+* `Non-successful payment notification received. Order updated to failed` error fix
+
+= 4.8.9 =
+
+* 'Minimum gas price, Gwei' setting is added to overcome BSC gas price fluctuations and underpriced transaction errors
+
+= 4.8.8 =
+
+* rounding errors that lead to payments marked as failed fix
+
+= 4.8.7 =
+
+* rounding errors that lead to payments marked as failed fix
+
+= 4.8.6 =
+
+* `%%` format fix in `sprintf`
+
+= 4.8.5 =
+
+* Generic rest url
+* Libraries versions update
+* `woocommerce/action-scheduler` [fix](https://github.com/woocommerce/action-scheduler/issues/724#issuecomment-869037051)
+
+= 4.8.4 =
+
+* coinmarketcap and cryptocompare metadata update
+
+= 4.8.3 =
+
+* Typo fix
+
+= 4.8.2 =
+
+* Binance Smart Chain support for non-BIZ license
+
+= 4.8.1 =
+
+* Settings to change ETH -> BNB for better Binance Smart Chain support
+* Display the `order recieved URL` instead of the payment sum in an email
+
+= 4.8.0 =
+
+* Binance Smart Chain support
+
+= 4.7.1 =
+
+* `sync` private blockchain support is updated
+
+= 4.7.0 =
+
+* The `Order expire timeout` setting is added.
+
+= 4.6.1 =
+
+* Payment method description text alignment fixed. It was displayed in one line on some themes.
+
+= 4.6.0 =
+
+* `UniswapV2` rate sorce added for `Token/WETH` pairs
+
+= 4.5.0 =
+
+* `sync` private blockchain support is added
+
+= 4.4.3 =
+
+* Enable freemius affiliate
+
+= 4.4.2 =
+
+* Fix for custom `Ethereum Node JSON-RPC Endpoint` setting usage
+
+= 4.4.1 =
+
+* The minimum 400000 gas limit value enforcement is removed
+
+= 4.4.0 =
+
+* `Payment Complete Order Status` setting is added. The status to apply for order after payment is complete.
+* Transaction link is shown on the top of the order edit page
+
+= 4.3.8 =
+
+* ERC20 tokens decimal setting works correctly now
+* Fix for `Call to undefined function GuzzleHttp\Psr7\get_message_body_summary()` error: all external libs code is wrapped with an unique namespace to prevent conflicts
+* Libraries are updated to latest versions
+* JS build system is updated to webpack5
+
+= 4.3.7 =
+
+* Token digits after a decimal point fixed
+
+= 4.3.6 =
+
+* [Coinmarketcap.com](https://coinmarketcap.com) currencies list update
+
+= 4.3.5 =
+
+* `prospress/action-scheduler` -> `woocommerce/action-scheduler` fix
+
+= 4.3.4 =
+
+* freemius.com version update
+
+= 4.3.3 =
+
+* `web3.utils.toBN` fix for big values
+* `requires 64 bit` activation check is added
+
+= 4.3.2 =
+
+* Trust Wallet download button text fix
+
+= 4.3.1 =
+
+* [Cryptocompare.com](https://www.cryptocompare.com/) currencies list update
+* USDT Ethereum token meta info is added to the [coinmarketcap.com](https://coinmarketcap.com) rate source
+
+= 4.3.0 =
+
+* MetaMask mobile wallet dapp browser deep linking support is added
+
+= 4.2.8 =
+
+* [WPJobster](https://wpjobster.com/) addon compatibility.
+* `Gas Price` setting is removed.
+
+= 4.1.0 =
+
+* German(Deutsche) locale is added
+
+= 4.0.1 =
+
+* Coinmarketcap.com and Cryptocompare.com rate sources currency pairs metadata is updated.
+
+= 4.0.0 =
+
+* New Gateway smart contract is implemented. It is a reduced previous one with unused in current frontend implementation functions removed. The most notable change is that Ether and tokens are sent to seller's address directly without the second withdraw step.
+
+= 3.2.2 =
+
+* fix token icon display on checkout page
+
+= 3.2.1 =
+
+* fix withdraw in some corner cases
+
+= 3.2.0 =
+
+* Second payment method is added
+* fix Ethereum Wallet payment problem
+
+= 3.1.1 =
+
+* Prepare for use with the Gateway Wrapper plugin
+
+= 3.1.0 =
+
+* Spanish and Chinese locales are added
+
+= 3.0.4 =
+
+* Freemius.com menu fix
+
+= 3.0.3 =
+
+* Force minimum gas limit to 400000
+
+= 3.0.2 =
+
+* Show Ethereum Wallet payment option only if PRO plan is active for it.
+* Support more browsers in a browserslist build
+
+= 3.0.1 =
+
+* Bug fix release
+
+= 3.0.0 =
+
+* `Ethereum Node JSON-RPC Endpoint` amd `Ethereum Node Websocket Endpoint` admin settings are added to allow your own Ethereum or Ethereum fork node usage.
+* New Gateway smart contract to allow one-step payment for ERC777 and ERC223
+* Funds are collected on the Gateway smart contract address. Seller can withdraw funds from the admin settings page
+* Complete UI rewrite
+* Digits after a decimal point display count setting is added for Ether and tokens
+* Fix copy buttons problem on mobile
+* Set gas price dynamically
+* Dynamic token prices from https://www.livecoin.net, https://coinmarketcap.com, https://coinbase.com, https://cryptocompare.com, https://kanga.exchange
+* Markup per token
+* Visual editor for tokens configuration on admin page
+* The [Cryptocurrency Product for WooCommerce](https://wordpress.org/plugins/cryptocurrency-product-for-woocommerce/) integration is added to show token product icons on the WooCommerce Checkout page.
+* FIX: If MM is not logged in, wizard allows to switch to payment without deposit made
+* Add Ether or token symbol after the Amount number
+* If not enough funds on wallet, show a link to the product page where to buy it
+* Make Wallet and MetaMask buttons same color and size
+* Make the Deposit with Ethereum Wallet button non-active and grey if there are not enough balance
+* Print user wallet chosen token and Ether balances
+* Renaming the "Next" button to "Deposit with MetaMask"
+
+= 2.6.6 =
+
+* infura.io, geth, non-logged MetaMask [fix](https://github.com/INFURA/infura/issues/189#issuecomment-535937835)
+
+= 2.6.5 =
+
+* Trust Wallet deep linking upgrade for mobile
+
+= 2.6.4 =
+
+* fix checkout page reloads when payed with Ethereum Wallet plugin
+* The [WooCommerce Deposits](https://woocommerce.com/products/woocommerce-deposits/?aff=9181&cid=2167410) and other similar plugins support is added
+
+= 2.6.3 =
+
+* Update dependencies part 2
+
+= 2.6.2 =
+
+* Update dependencies
+* Set gas price dynamically from the web3
+
+= 2.6.1 =
+
+* Fix for the [Infura Dashboard Transition Update](https://blog.infura.io/infura-dashboard-transition-update-c670945a922a)
+
+= 2.6.0 =
+
+* Provides a link to install [MetaMask](https://metamask.io/) on desktop and deep link to install [Trust Wallet](https://trustwallet.com/) on mobile
+
+= 2.5.8 =
+
+* Fix errors when other gateways are used simultaneously
+
+= 2.5.7 =
+
+* Fix the `window.ethereum` detection issue if MM is not installed but DOM elements with `id="ethereum"` are present on a page
+
+= 2.5.6 =
+
+* Custom WooCommerce currency based stores support
+* Better Byzantium fork tx state handling
+
+= 2.5.5 =
+
+* myCRED [Point Based Stores](https://codex.mycred.me/chapter-iii/gateway/woocommerce/point-based-stores/) support
+
+= 2.5.4 =
+
+* QR Code "Dropdown Option" for mobile instead of showing QR on mobile by default
+
+= 2.5.3 =
+
+* Fix eth rate issue
+
+= 2.5.2 =
+
+* Check for gmp & mbstring before plugin activate
+* Safe settings access to load without errors first time before settings are saved
+
+= 2.5.1 =
+
+* https://min-api.cryptocompare.com/ API Key support
+
+= 2.5.0 =
+
+* Token rate can be specified in the store's base currency code, like `TSX:0x6Fe928d427b0E339DB6FF1c7a852dc31b651bD3a:1USD`
+
+= 2.4.0 =
+
+* Integration with the [Ethereum Wallet](https://wordpress.org/plugins/ethereum-wallet/) plugin is provided
+
+= 2.3.7 =
+
+* Fix token payment problem
+
+= 2.3.6 =
+
+* [EIP 1102](https://eips.ethereum.org/EIPS/eip-1102) compatibility fix
+
+= 2.3.5 =
+
+* EIP-1102 compatibility (https://bit.ly/2QQHXvF)
+
+= 2.3.4 =
+
+* `prospress/action-scheduler` library upgrade
+* Upgrade web3.js to the latest stable release v0.20.6
+
+= 2.3.3 =
+
+* Fix QR-codes for black backgrounds
+* Show/hide Amount field for Ether payment if advanced fields are hidden/shown
+* Show the Amount field as a simple text to distinguish it from the Value field to enhance user's experience
+
+= 2.3.2 =
+
+* Cancel process order task if order is cancelled or removed
+* `epg-payment-received.php does not exist` error fix
+
+= 2.3.1 =
+
+* Order would be confirmed even if user closed the payment page before transaction was confirmed
+* Copy buttons fix if clicked on icon
+
+= 2.3.0 =
+
+* `Mark ERC20 token price up by %` option is added. To help cover currency fluctuations the plugin can automatically mark up converted rates for you. These are applied as percentage markup, so a 1 ERC20 Token value with a 1.00% markup will be presented to the customer as 1.01 Token.
+* email content fix
+
+= 2.2.2 =
+
+* `Disallow customer to pay with Ether` option is added. It is useful to accept only some token.
+
+= 2.2.1 =
+
+* Workaround for cryptocompare.com extraParams bug
+
+= 2.2.0 =
+
+* QR codes for Value/Address/Data fields
+
+= 2.1.0 =
+
+* Show/Hide Value/Address/Data fields by the Advanced link button click
+* Set initial Gas price value for MetaMask from the admin page
+* Prevent page close if transaction still in progress
+* Bootstrap version is updated from v3 to v4
+* Namespaced bootstrap4 is used to prevent any theme conflicts: [bootstrap-namespaced](https://github.com/jonasjancarik/bootstrap-namespaced)
+
+= 2.0.4 =
+
+* Fix bootstrap4 issue for theme `electro`
+
+= 2.0.3 =
+
+* Hide currency select box if only Ether is used
+* Register bootstrap only if it is not registered yet to not break theme using bootstrap4
+* Fix deprecated warnings
+
+= 2.0.2 =
+
+* Tokens with decimals below 18 support is improved
+
+= 2.0.1 =
+
+* Documentation improvements
+
+= 2.0.0 =
+
+* The Ether payment is a simple one-step process now!
+* Admin settings simplified
+
+= 1.0.4 =
+
+* Compatibility issues fixed for other plugins using web3 object
+
+= 1.0.3 =
+
+* email l10n improvements
+
+= 1.0.2 =
+
+* Unlock MetaMask account warning is displayed if MetaMask is already installed but not logged in.
+
+= 1.0.1 =
+
+* email l10n improvements
+
+= 1.0.0 =
+
+* Initial public release

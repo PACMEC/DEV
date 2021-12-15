@@ -1,0 +1,598 @@
+@font-face {
+  font-family: 'cw-coinfont';
+  src:
+	url('cw-coinfont/cw-coinfont.ttf?y6iu4v') format('truetype'),
+	url('cw-coinfont/cw-coinfont.woff?y6iu4v') format('woff'),
+	url('cw-coinfont/cw-coinfont.svg?y6iu4v#cw-coinfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="cw-coin-"], [class*=" cw-coin-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cw-coinfont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cw-coin-blk .path1:before {
+  content: "\e900";
+  color: rgb(24, 24, 24);
+}
+.cw-coin-blk .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-dai .path1:before {
+  content: "\e918";
+  color: rgb(182, 137, 0);
+}
+.cw-coin-dai .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-eth .path1:before {
+  content: "\e91a";
+  color: rgb(98, 126, 234);
+}
+.cw-coin-eth .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.6020;
+}
+.cw-coin-eth .path3:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-eth .path4:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.6020;
+}
+.cw-coin-eth .path5:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-eth .path6:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.2;
+}
+.cw-coin-eth .path7:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.6020;
+}
+.cw-coin-dash .path1:before {
+  content: "\e921";
+  color: rgb(0, 140, 231);
+}
+.cw-coin-dash .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-dash .path3:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-doge .path1:before {
+  content: "\e924";
+  color: rgb(195, 166, 52);
+}
+.cw-coin-doge .path2:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-ltc .path1:before {
+  content: "\e926";
+  color: rgb(191, 187, 187);
+}
+.cw-coin-ltc .path2:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-usdt .path1:before {
+  content: "\e928";
+  color: rgb(38, 161, 123);
+}
+.cw-coin-usdt .path2:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-usdc .path1:before {
+  content: "\e92a";
+  color: rgb(39, 117, 201);
+}
+.cw-coin-usdc .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-vtc .path1:before {
+  content: "\e92c";
+  color: rgb(4, 134, 87);
+}
+.cw-coin-vtc .path2:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-xmr .path1:before {
+  content: "\e92e";
+  color: rgb(255, 102, 0);
+}
+.cw-coin-xmr .path2:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-bch .path1:before {
+  content: "\e930";
+  color: rgb(141, 195, 81);
+}
+.cw-coin-bch .path2:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-btc .path1:before {
+  content: "\e932";
+  color: rgb(247, 147, 26);
+}
+.cw-coin-btc .path2:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-blk-black:before {
+  content: "\e934";
+}
+.cw-coin-eth-black .path1:before {
+  content: "\e935";
+  color: rgb(0, 0, 0);
+}
+.cw-coin-eth-black .path2:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+  opacity: 0.298;
+}
+.cw-coin-eth-black .path3:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+  opacity: 0.8010;
+}
+.cw-coin-eth-black .path4:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+  opacity: 0.298;
+}
+.cw-coin-usdc-black:before {
+  content: "\e939";
+}
+.cw-coin-usdt-black:before {
+  content: "\e93a";
+}
+.cw-coin-dai-black:before {
+  content: "\e93b";
+}
+.cw-coin-vtc-black:before {
+  content: "\e93c";
+}
+.cw-coin-xmr-black:before {
+  content: "\e93d";
+}
+.cw-coin-dash-black:before {
+  content: "\e93e";
+}
+.cw-coin-bch-black:before {
+  content: "\e93f";
+}
+.cw-coin-doge-black:before {
+  content: "\e940";
+}
+.cw-coin-ltc-black:before {
+  content: "\e941";
+}
+.cw-coin-btc-black:before {
+  content: "\e942";
+}
+.cw-coin-blk-white:before {
+  content: "\e943";
+  color: #fff;
+}
+.cw-coin-dai-white:before {
+  content: "\e944";
+  color: #fff;
+}
+.cw-coin-eth-white .path1:before {
+  content: "\e945";
+  color: rgb(255, 255, 255);
+}
+.cw-coin-eth-white .path2:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.cw-coin-eth-white .path3:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+.cw-coin-eth-white .path4:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.cw-coin-eth-white .path5:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.796;
+}
+.cw-coin-eth-white .path6:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.cw-coin-vtc-white:before {
+  content: "\e94b";
+  color: #fff;
+}
+.cw-coin-usdt-white:before {
+  content: "\e94c";
+  color: #fff;
+}
+.cw-coin-usdc-white:before {
+  content: "\e94d";
+  color: #fff;
+}
+.cw-coin-xmr-white:before {
+  content: "\e94e";
+  color: #fff;
+}
+.cw-coin-bch-white:before {
+  content: "\e94f";
+  color: #fff;
+}
+.cw-coin-dash-white:before {
+  content: "\e950";
+  color: #fff;
+}
+.cw-coin-doge-white:before {
+  content: "\e951";
+  color: #fff;
+}
+.cw-coin-ltc-white:before {
+  content: "\e952";
+  color: #fff;
+}
+.cw-coin-btc-white:before {
+  content: "\e953";
+  color: #fff;
+}
+.cw-coin-metamask-fox .path1:before {
+  content: "\e954";
+  color: rgb(226, 118, 27);
+}
+.cw-coin-metamask-fox .path2:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path3:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path4:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path5:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path6:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path7:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path8:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(228, 118, 27);
+}
+.cw-coin-metamask-fox .path9:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(215, 193, 179);
+}
+.cw-coin-metamask-fox .path10:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(215, 193, 179);
+}
+.cw-coin-metamask-fox .path11:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(35, 52, 71);
+}
+.cw-coin-metamask-fox .path12:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: rgb(35, 52, 71);
+}
+.cw-coin-metamask-fox .path13:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(205, 97, 22);
+}
+.cw-coin-metamask-fox .path14:before {
+  content: "\e961";
+  margin-left: -1em;
+  color: rgb(205, 97, 22);
+}
+.cw-coin-metamask-fox .path15:before {
+  content: "\e962";
+  margin-left: -1em;
+  color: rgb(205, 97, 22);
+}
+.cw-coin-metamask-fox .path16:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(205, 97, 22);
+}
+.cw-coin-metamask-fox .path17:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(228, 117, 31);
+}
+.cw-coin-metamask-fox .path18:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(228, 117, 31);
+}
+.cw-coin-metamask-fox .path19:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: rgb(228, 117, 31);
+}
+.cw-coin-metamask-fox .path20:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(228, 117, 31);
+}
+.cw-coin-metamask-fox .path21:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(246, 133, 27);
+}
+.cw-coin-metamask-fox .path22:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(246, 133, 27);
+}
+.cw-coin-metamask-fox .path23:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(192, 173, 158);
+}
+.cw-coin-metamask-fox .path24:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(22, 22, 22);
+}
+.cw-coin-metamask-fox .path25:before {
+  content: "\e96c";
+  margin-left: -1em;
+  color: rgb(118, 61, 22);
+}
+.cw-coin-metamask-fox .path26:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(118, 61, 22);
+}
+.cw-coin-metamask-fox .path27:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: rgb(246, 133, 27);
+}
+.cw-coin-metamask-fox .path28:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: rgb(246, 133, 27);
+}
+.cw-coin-metamask-fox .path29:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(246, 133, 27);
+}
+.cw-coin-cryptowoo .path1:before {
+	content: "\e901";
+	color: rgb(76, 151, 202);
+}
+.cw-coin-cryptowoo .path2:before {
+	content: "\e902";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path3:before {
+	content: "\e903";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path4:before {
+	content: "\e904";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path5:before {
+	content: "\e905";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path6:before {
+	content: "\e906";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path7:before {
+	content: "\e907";
+	margin-left: -6.06640625em;
+	color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo .path8:before {
+	content: "\e908";
+	margin-left: -6.06640625em;
+	color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo .path9:before {
+	content: "\e909";
+	margin-left: -6.06640625em;
+	color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo .path10:before {
+	content: "\e90a";
+	margin-left: -6.06640625em;
+	color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-black .path1:before {
+  content: "\e901";
+  color: rgb(76, 151, 202);
+}
+.cw-coin-cryptowoo-black .path2:before {
+  content: "\e902";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path3:before {
+  content: "\e903";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path4:before {
+  content: "\e904";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path5:before {
+  content: "\e905";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path6:before {
+  content: "\e906";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path7:before {
+  content: "\e907";
+  margin-left: -6.06640625em;
+  color: rgb(92, 92, 92);
+}
+.cw-coin-cryptowoo-black .path8:before {
+  content: "\e908";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-black .path9:before {
+  content: "\e909";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-black .path10:before {
+  content: "\e90a";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path1:before {
+  content: "\e90b";
+  color: rgb(76, 151, 202);
+}
+.cw-coin-cryptowoo-white .path2:before {
+  content: "\e90c";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path3:before {
+  content: "\e90d";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path4:before {
+  content: "\e90e";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path5:before {
+  content: "\e90f";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path6:before {
+  content: "\e910";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path7:before {
+  content: "\e911";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path8:before {
+  content: "\e912";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path9:before {
+  content: "\e913";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-cryptowoo-white .path10:before {
+  content: "\e914";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.cw-coin-trezor-lock:before {
+  content: "\e915";
+}
+.cw-coin-trezor-logo:before {
+  content: "\e916";
+}

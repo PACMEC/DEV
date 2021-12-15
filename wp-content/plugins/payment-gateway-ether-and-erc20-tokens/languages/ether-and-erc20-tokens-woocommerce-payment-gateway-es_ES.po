@@ -1,0 +1,1081 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ether-and-erc20-tokens-woocommerce-payment-gateway\n"
+"POT-Creation-Date: 2021-06-17 18:59+0700\n"
+"PO-Revision-Date: 2021-06-17 18:59+0700\n"
+"Last-Translator: \n"
+"Language-Team: ethereumicoio\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: solidity\n"
+"X-Poedit-SearchPathExcluded-3: build\n"
+"X-Poedit-SearchPathExcluded-4: build-admin\n"
+"X-Poedit-SearchPathExcluded-5: img\n"
+"X-Poedit-SearchPathExcluded-6: css\n"
+"X-Poedit-SearchPathExcluded-7: scoped-php-build\n"
+"X-Poedit-SearchPathExcluded-8: vendor-bin\n"
+"X-Poedit-SearchPathExcluded-9: src/wpjobster*\n"
+
+#: ether-and-erc20-tokens-woocommerce-payment-gateway.php:190
+msgid "Settings"
+msgstr "Configuración"
+
+#: src/gateway.php:44 src/gateway.php:870 src/gateway.php:1329
+#: src/gateway.php:2676
+#, php-format
+msgid "Pay with %1$s or %2$s token"
+msgstr "Pagar con token %1$s o %2$s"
+
+#: src/gateway.php:49
+#, php-format
+msgid ""
+"Pay with %1$s or %2$s token provides customers a way to pay with MetaMask or "
+"any other %3$s wallet."
+msgstr ""
+"El pago con los token %1$s o %2$s ofrece a los clientes una forma de pagar "
+"con MetaMask o cualquier otro wallet de %3$s."
+
+#: src/gateway.php:67 src/gateway.php:432 src/gateway.php:865
+#: src/gateway.php:1324 src/gateway.php:2194 src/gateway.php:2671
+#, php-format
+msgid "Pay with %1$s"
+msgstr "Pagar con %1$s"
+
+#: src/gateway.php:215 src/gateway.php:431 src/gateway.php:2538
+#: src/main.php:291
+msgid "Fixed"
+msgstr "Fijo"
+
+#: src/gateway.php:400
+msgid "Withdraw"
+msgstr "Retirar"
+
+#: src/gateway.php:401 src/gateway.php:2266
+msgid "Payment failed. Try to adjust gas setting"
+msgstr "El pago falló. Intenta ajustar la configuración de GAS"
+
+#: src/gateway.php:402 src/gateway.php:2288
+msgid "Trust Wallet"
+msgstr "Trust Wallet"
+
+#: src/gateway.php:403 src/gateway.php:2289
+msgid ""
+"Trust Wallet is a Secure Multi Coin Wallet for Android and iOS. It is the "
+"official cryptocurrency wallet of Binance."
+msgstr ""
+"Trust Wallet es un wallet seguro para multiples criptomonedas que se puede "
+"usar en Android y iOS. Esel wallet de criptomonedas oficial de Binance."
+
+#: src/gateway.php:404 src/gateway.php:2290
+msgid "MetaMask"
+msgstr "MetaMask"
+
+#: src/gateway.php:405 src/gateway.php:2292
+#, php-format
+msgid ""
+"MetaMask is a bridge that allows you to visit the distributed web of "
+"tomorrow in your browser today. It allows you to run %1$s dApps right in "
+"your browser without running a full %1$s node."
+msgstr ""
+"Metamask es un puente que le permite visitar la red distribuido demañana en "
+"su navegador de hoy. Le permite ejecutar apps de %1$s directamente en su "
+"navegador sin ejecutar un nodo completo de %1$s."
+
+#: src/gateway.php:408 src/gateway.php:2296
+#, php-format
+msgid "%1$s Wallet"
+msgstr "%1$s Wallet"
+
+#: src/gateway.php:411 src/gateway.php:2300
+#, php-format
+msgid "Use %1$s Wallet generated for you on this site upon registration"
+msgstr "Use el %1$s Wallet generado para Usted en este sitio a registrarte"
+
+#: src/gateway.php:415
+#, php-format
+msgid "The wallet connected should be the same as the \"%1$s\" setting value."
+msgstr ""
+"El wallet conectado debe ser el mismo que el valor de configuración de \"%1$s"
+"\"."
+
+#: src/gateway.php:416 src/gateway.php:908
+#, php-format
+msgid "Your %1$s address"
+msgstr "Su dirección %1$s"
+
+#: src/gateway.php:420
+msgid "Symbol"
+msgstr "Divisa"
+
+#: src/gateway.php:421 src/gateway.php:494 src/gateway.php:515
+#: src/gateway.php:2260 src/gateway.php:2283
+msgid "Address"
+msgstr "Dirección"
+
+#: src/gateway.php:422
+msgid "Rate Source"
+msgstr "Fuente de Índice"
+
+#: src/gateway.php:423
+msgid "Rate"
+msgstr "Índice"
+
+#: src/gateway.php:424 src/gateway.php:525 src/gateway.php:2308
+msgid "Currency"
+msgstr "Divisa"
+
+#: src/gateway.php:425
+msgid "Markup, %"
+msgstr "Margen, %"
+
+#: src/gateway.php:426
+msgid "Decimals"
+msgstr "Decimales"
+
+#: src/gateway.php:427 src/gateway.php:428
+msgid "Remove"
+msgstr "Quitar"
+
+#: src/gateway.php:429
+msgid "Add Token"
+msgstr "Agregar Token"
+
+#: src/gateway.php:430
+msgid "Do you really want to remove this token?"
+msgstr "¿Realmente quiere eliminar este token?"
+
+#: src/gateway.php:434 src/gateway.php:2196
+#, php-format
+msgid "Purchase %1$s tokens"
+msgstr "Comprar token %1$s"
+
+#: src/gateway.php:435 src/gateway.php:2197
+#, php-format
+msgid "Purchase %1$s"
+msgstr "Comprar token %1$s"
+
+#: src/gateway.php:436 src/gateway.php:2198
+msgid "Deposit with MetaMask"
+msgstr "Depositar por MetaMask"
+
+#: src/gateway.php:437 src/gateway.php:2200
+#, php-format
+msgid "Deposit with %1$s Wallet"
+msgstr "Depositar con %1$s Wallet"
+
+#: src/gateway.php:440 src/gateway.php:2203
+msgid "Pay with MetaMask"
+msgstr "Pagar con MetaMask"
+
+#: src/gateway.php:441 src/gateway.php:2204
+msgid "Download MetaMask"
+msgstr "Descargar MetaMask"
+
+#: src/gateway.php:442 src/gateway.php:2205
+msgid "Open / Install MetaMask Wallet"
+msgstr "Abrir / Instalar MetaMask Wallet"
+
+#: src/gateway.php:443 src/gateway.php:2206
+msgid "Open / Install Trust Wallet"
+msgstr "Abrir / Instalar Trust Wallet"
+
+#: src/gateway.php:444 src/gateway.php:2207
+msgid "Unlock your account please."
+msgstr "Desbloquea tu cuenta, por favor."
+
+#: src/gateway.php:445 src/gateway.php:2209
+#, php-format
+msgid "Pay with %1$s Wallet"
+msgstr "Pagar con %1$s Wallet"
+
+#: src/gateway.php:448 src/gateway.php:2212
+#, php-format
+msgid "Failed to pay %1$s"
+msgstr "Falló el pago de %1$s"
+
+#: src/gateway.php:449 src/gateway.php:2213
+#, php-format
+msgid "Pay %1$s succeeded"
+msgstr "Pago de %1$s exitoso"
+
+#: src/gateway.php:450 src/gateway.php:2214
+#, php-format
+msgid "Failed to deposit %1$s"
+msgstr "Falló el depósito de %1$s"
+
+#: src/gateway.php:451 src/gateway.php:2215
+#, php-format
+msgid "Deposit %1$s succeeded"
+msgstr "Depósito de %1$s exitoso"
+
+#: src/gateway.php:452 src/gateway.php:2216
+#, php-format
+msgid "Failed to pay %1$s token"
+msgstr "Falló el pago de token %1$s"
+
+#: src/gateway.php:455 src/gateway.php:2219
+#, php-format
+msgid "Failed to pay %1$s token: insufficient balance"
+msgstr "Falló el pago de token %1$s:  saldo no suficiente"
+
+#: src/gateway.php:458 src/gateway.php:2222
+#, php-format
+msgid "Pay %1$s token succeeded"
+msgstr "Pago de token %1$s exitoso"
+
+#: src/gateway.php:461 src/gateway.php:2225
+#, php-format
+msgid "Failed to pay %1$s - rejected"
+msgstr "Falló el pago de %1$s - rechazado"
+
+#: src/gateway.php:464 src/gateway.php:2228
+#, php-format
+msgid "Failed to pay %1$s token - rejected"
+msgstr "Falló el pago de token %1$s - rechazado"
+
+#: src/gateway.php:467 src/gateway.php:2231
+#, php-format
+msgid "Failed to deposit %1$s token"
+msgstr "Falló el depósito de token %1$s"
+
+#: src/gateway.php:470 src/gateway.php:2234
+#, php-format
+msgid "Failed to deposit %1$s token: insufficient balance"
+msgstr "Falló el depósito de token %1$s: saldo no suficiente"
+
+#: src/gateway.php:473 src/gateway.php:2237
+#, php-format
+msgid "Deposit %1$s token succeeded"
+msgstr "Depósito de token %1$s exitoso"
+
+#: src/gateway.php:476 src/gateway.php:2240
+#, php-format
+msgid "Failed to deposit %1$s - rejected"
+msgstr "Falló el depósito de %1$s - rechazado"
+
+#: src/gateway.php:479 src/gateway.php:2243
+#, php-format
+msgid "Failed to deposit %1$s token - rejected"
+msgstr "Falló el depósito de token %1$s - rechazado"
+
+#: src/gateway.php:482 src/gateway.php:511 src/gateway.php:2246
+#: src/gateway.php:2279
+msgid "Copied to clipboard"
+msgstr "Copiado al Portapapeles"
+
+#: src/gateway.php:483 src/gateway.php:2248
+#, php-format
+msgid "You have rejected the store to %1$s Wallet connect request"
+msgstr "Has rechazado la solicitud de conectar la tienda al %1$s Wallet"
+
+#: src/gateway.php:486 src/gateway.php:2251
+msgid "Payment succeeded!"
+msgstr "¡Pago exitoso!"
+
+#: src/gateway.php:487 src/gateway.php:2252
+msgid "Payment succeeded! Reload page if it was not auto reloaded."
+msgstr "¡Pago exitoso! Recarga la página si no se recargó automaticamente."
+
+#: src/gateway.php:488 src/gateway.php:2253
+msgid "Payment status: not complete."
+msgstr "Estado de pago: no cumplido."
+
+#: src/gateway.php:489 src/gateway.php:2254
+msgid "Network mismatch. Choose another network or ask site administrator."
+msgstr ""
+"Desajuste de red. Elige otra red o consultar con el administrador del sitio."
+
+#: src/gateway.php:490 src/gateway.php:2255
+#, php-format
+msgid ""
+"Network mismatch. Chosen network is %1$s, but this site is configured for "
+"%2$s. Choose another network or ask site administrator"
+msgstr ""
+"Desajuste de red. Red escogida es %1$s, pero este sitio está configurado "
+"para  %2$s. Elige otra red o consultar con el administrador del sitio"
+
+#: src/gateway.php:491 src/gateway.php:2257
+#, php-format
+msgid "To use the QR-code feature input your %1$s account address please"
+msgstr ""
+"Para usar la función de código QR, elige la dirección de tu cuenta de %1$s "
+"por favor"
+
+#: src/gateway.php:495 src/gateway.php:517 src/gateway.php:520
+#: src/gateway.php:2261 src/gateway.php:2285 src/gateway.php:2303
+msgid "QR-code"
+msgstr "Código QR"
+
+#: src/gateway.php:496 src/gateway.php:2262
+msgid "Enter account address"
+msgstr "Ingrese la dirección de cuenta"
+
+#: src/gateway.php:497 src/gateway.php:504 src/gateway.php:2263
+#: src/gateway.php:2271
+msgid "OK"
+msgstr "OK"
+
+#: src/gateway.php:498 src/gateway.php:2264
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/gateway.php:499 src/gateway.php:528 src/gateway.php:2265
+#: src/gateway.php:2311
+msgid "Account"
+msgstr "Cuenta"
+
+#: src/gateway.php:500 src/gateway.php:2267
+msgid "Pay"
+msgstr "Pagar"
+
+#: src/gateway.php:501 src/gateway.php:2268
+msgid "Deposit"
+msgstr "Depositar"
+
+#: src/gateway.php:502 src/gateway.php:2269
+msgid "Error"
+msgstr "Error"
+
+#: src/gateway.php:503 src/gateway.php:2270
+msgid "Alert"
+msgstr "Alerta"
+
+#: src/gateway.php:505 src/gateway.php:524 src/gateway.php:2272
+#: src/gateway.php:2307
+msgid "N/A"
+msgstr "N/A"
+
+#: src/gateway.php:506 src/gateway.php:2274
+#, php-format
+msgid "%1$s Payment"
+msgstr "Pago de %1$s"
+
+#: src/gateway.php:509 src/gateway.php:2277
+msgid "Token Deposit"
+msgstr "Depósito de Token"
+
+#: src/gateway.php:510 src/gateway.php:2278
+msgid "Token Payment"
+msgstr "Pago con Token"
+
+#: src/gateway.php:512 src/gateway.php:2280
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: src/gateway.php:513 src/gateway.php:2281
+msgid "Open to see advanced controls"
+msgstr "Abrir para ver controles avanzados"
+
+#: src/gateway.php:514 src/gateway.php:2282
+msgid "Payment Step"
+msgstr "Etapa de Pago"
+
+#: src/gateway.php:516 src/gateway.php:2284
+msgid "Copy to clipboard"
+msgstr "Copiar a Portapapeles"
+
+#: src/gateway.php:518 src/gateway.php:2286
+msgid "Value"
+msgstr "Valor"
+
+#: src/gateway.php:519 src/gateway.php:2287
+msgid "Data"
+msgstr "Datos"
+
+#: src/gateway.php:521 src/gateway.php:2304
+msgid ""
+"QR-code is a read-only mode. You can copy values or scan QR-codes for the To "
+"address, Value and Data fields to make a payment with your favorite mobile "
+"wallet."
+msgstr ""
+"El código QR es un modo de solo lectura. Puedes copiar valores o escanear "
+"códigos QR para los campos de direccion, valor y datos para hacer un pago "
+"con tu wallet móvil preferido."
+
+#: src/gateway.php:522 src/gateway.php:2305
+#, php-format
+msgid "Payment succeeded! Tx %s"
+msgstr "¡Pago exitoso! Tx %s"
+
+#: src/gateway.php:523 src/gateway.php:2306
+msgid "Balance"
+msgstr "Saldo"
+
+#: src/gateway.php:526 src/gateway.php:2309
+msgid "Choose currency to pay with"
+msgstr "Elije divisa para el pago"
+
+#: src/gateway.php:527 src/gateway.php:2310 src/main.php:528
+msgid "Amount"
+msgstr "Monto"
+
+#: src/gateway.php:529 src/gateway.php:2312
+msgid "Connect"
+msgstr "Conectar"
+
+#: src/gateway.php:530 src/gateway.php:2313
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: src/gateway.php:531 src/gateway.php:2314
+msgid "Scan QR-code"
+msgstr "Escanear código QR"
+
+#: src/gateway.php:532 src/gateway.php:2315
+msgid "Confirmations"
+msgstr "Confirmaciones"
+
+#: src/gateway.php:533 src/gateway.php:2316
+#, php-format
+msgid "Tx confirmations %s"
+msgstr "Tx confirmaciones %s"
+
+#: src/gateway.php:748
+#, php-format
+msgid "Payment in %1$s will be due."
+msgstr "Se deberá un pago en %1$s."
+
+#: src/gateway.php:758 src/gateway.php:771
+#, php-format
+msgid "Payment in %1$s or an equivalent in supported %2$s tokens will be due."
+msgstr "Se deberá un pago en %1$s o un equivalente en token %2$s compatibles."
+
+#: src/gateway.php:766
+#, php-format
+msgid "Payment in %1$s or an equivalent in %2$s tokens will be due."
+msgstr "Se deberá un pago en %1$s o un equivalente en token %2$s."
+
+#: src/gateway.php:779 src/gateway.php:788
+#, php-format
+msgid "Payment in a supported %1$s tokens will be due."
+msgstr "Se deberá un pago en token %1$s compatibles."
+
+#: src/gateway.php:786
+#, php-format
+msgid "Payment in %s tokens will be due."
+msgstr "Se deberá un pago en token %s."
+
+#: src/gateway.php:851
+msgid "Enable / disable"
+msgstr "Habilitar / deshabilitar"
+
+#: src/gateway.php:853
+#, php-format
+msgid "Enable payment with %1$s or %2$s tokens"
+msgstr "Habilitar pago con token %1$s o %2$s"
+
+#: src/gateway.php:877
+msgid "Basic settings"
+msgstr "Configuración básica"
+
+#: src/gateway.php:882
+msgid "Enable debug mode"
+msgstr "Habilitar modo de debug"
+
+#: src/gateway.php:883
+msgid "Enable only if you are diagnosing problems."
+msgstr "Habilítelo solo si está diagnosticando problemas."
+
+#: src/gateway.php:885
+#, php-format
+msgid "Log interactions inside <code>%s</code>"
+msgstr "Registrar interacciones adentro de <code>%s</code>"
+
+#: src/gateway.php:889
+msgid "Title"
+msgstr "Título"
+
+#: src/gateway.php:891
+msgid ""
+"This controls the name of the payment option that the user sees during "
+"checkout."
+msgstr ""
+"Esto ontrola el nombre de opción de pago que el usuario ve en el momento de "
+"pago."
+
+#: src/gateway.php:903 src/main.php:524
+msgid "Payment details"
+msgstr "Detalles del pago"
+
+#: src/gateway.php:912
+#, php-format
+msgid ""
+"The %2$s address payment should be sent to. Make sure to use one address per "
+"one online store. Do not use one address for two or more stores! Also, make "
+"sure to use a %1$s tokens compatible wallet if you are planning to accept it!"
+msgstr ""
+"La dirección de %2$s adonde enviar el pago. Asegúrese de usar una "
+"direcciónpara cada tienda en linea. ¡No use la misma dirección para dos o "
+"más tiendas! ¡También, si planea aceptar token %1$s, asegúrese de usar un "
+"wallet compatible!"
+
+#: src/gateway.php:919
+#, php-format
+msgid "Supported %1$s tokens list"
+msgstr "Lista de token %1$s compatibles"
+
+#: src/gateway.php:923
+msgid "Provide a list of tokens you want to support."
+msgstr "Proporcione una lista de tokens que quieres aceptar."
+
+#: src/gateway.php:928
+#, php-format
+msgid "Disable %1$s"
+msgstr "Deshabilitar %1$s"
+
+#: src/gateway.php:932
+#, php-format
+msgid "Disallow customer to pay with %1$s"
+msgstr "Prohibir que el cliente pague con %1$s"
+
+#: src/gateway.php:936
+msgid ""
+"This option is useful to accept only some token. It is an advanced option. "
+"Use with care."
+msgstr ""
+"Esta opción es útil para aceptar solo ciertos tokens. Es una opción "
+"avanzado. Use con cuidado."
+
+#: src/gateway.php:941
+#, php-format
+msgid "%1$s decimals"
+msgstr "Decimales para %1$s"
+
+#: src/gateway.php:945
+#, php-format
+msgid ""
+"Number of digits after a decimal point for %1$s display. 5 is used by "
+"default."
+msgstr ""
+"Número de dígitos después del punto decimal para la visualización de %1$s. "
+"Por defecto, se usa 5."
+
+#: src/gateway.php:959
+msgid "Mark %1$s price up by %"
+msgstr "Margen en % para agregar al precio en %1$s"
+
+#: src/gateway.php:962
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1ETH "
+"value with a 1.00% markup will be presented to the customer as 1.01ETH."
+msgstr ""
+"Para ayudar a cubrir los cambios en divisas, el sistema puede aumentar "
+"automaticamente para usted los índices convertidos . Aplicará un margen por "
+"porcentaje, es decir que un valor de 1ETH con margen de 1.00% se presenta al "
+"cliente como 1.01ETH."
+
+#: src/gateway.php:973
+msgid "Mark %1$s token price up by %"
+msgstr "Margen en % para agregar al precio en token %1$s"
+
+#: src/gateway.php:976
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1 %1$s "
+"Token value with a 1.00% markup will be presented to the customer as 1.01 "
+"Token."
+msgstr ""
+"Para ayudar a cubrir los cambios en divisas, el sistema puede aumentar "
+"automaticamente para usted los índices convertidos. Aplicará un margen por "
+"porcentaje, es decir que un valor de 1 token %1$s con margen de 1.00% se "
+"presenta al cliente como 1.01 token."
+
+#: src/gateway.php:992
+msgid "Blockchain settings"
+msgstr "Configuración Blockchain"
+
+#: src/gateway.php:997
+msgid "Blockchain"
+msgstr "Blockchain"
+
+#: src/gateway.php:999
+msgid ""
+"<p>The blockchain used: mainnet, ropsten, rinkeby, bsctest, bsc. Use mainnet "
+"or bsc in production, and ropsten, rinkeby or bsctest in test mode.</p>"
+msgstr ""
+"<p>Blockchain usado: mainnet, ropsten, rinkeby, bsctest, bsc . Use mainnet o "
+"bsc en producción, y ropsten, rinkeby o bsctest en modo de prueba.</p>"
+
+#: src/gateway.php:1003
+msgid "Gas limit"
+msgstr "Límite GAS"
+
+#: src/gateway.php:1005
+msgid "The gas limit for transaction."
+msgstr "Límite GAS para la transacción."
+
+#: src/gateway.php:1015
+msgid "Confirmations number"
+msgstr "Número de confirmación"
+
+#: src/gateway.php:1018
+#, php-format
+msgid ""
+"Number of blocks to wait before confirm order as payed successfully. The "
+"recommended safe value is 12. There are no reason to set it to a higher "
+"value for %1$s blockchain. You can set it to a lower value like 2 to "
+"increase usability."
+msgstr ""
+"Número de bloques para esperar antes de confirmar que el ordén fue pagado "
+"exitosamente. El valor recomendado y seguro es 12. No hay porque poner el "
+"ajuste en un valor más alto para %1$s blockchain. Puede ajustarlo en un "
+"valor más bajo, por ejemplo 2, para mejorar la usabilidad."
+
+#: src/gateway.php:1028
+#, php-format
+msgid ""
+"%1$sUpgrade to the BIZ plan%2$s to support your private or any other EVM-"
+"compatible blockchain!"
+msgstr ""
+"¡%1$sActualiza al plan BIZ%2$s para respaldar tu cadena de bloques privada o "
+"cualquier otra compatible con EVM!"
+
+#: src/gateway.php:1036
+msgid "Advanced Blockchain settings"
+msgstr "Configuración avanzada de Blockchain"
+
+#: src/gateway.php:1038
+msgid "These settings should be considered as advanced. Use with care!"
+msgstr ""
+"Esta opción es útil para aceptar solo ciertos tokens. Es una opción "
+"avanzado. ¡Use con cuidado!"
+
+#: src/gateway.php:1042 src/gateway.php:1047 src/gateway.php:1067
+#: src/gateway.php:1080 src/gateway.php:1093 src/gateway.php:1105
+#: src/gateway.php:1117 src/gateway.php:1129 src/gateway.php:1165
+#, php-format
+msgid "%1$s Node JSON-RPC Endpoint"
+msgstr "%1$s Node JSON-RPC Endpoint"
+
+#: src/gateway.php:1051
+#, php-format
+msgid ""
+"The %2$s Node JSON-RPC Endpoint URI. This is an advanced setting. Use with "
+"care. This setting supercedes the \"%1$s\" setting."
+msgstr ""
+"%2$s Node JSON-RPC Endpoint URI. Es una configuración avanzada. Use con "
+"cuidado. Este ajuste reemplaza el ajuste \"%1$s\"."
+
+#: src/gateway.php:1052 src/gateway.php:1065 src/gateway.php:1156
+msgid "Infura.io API Key"
+msgstr "Infura.io API Key"
+
+#: src/gateway.php:1059
+#, php-format
+msgid "%1$s Node Websocket Endpoint"
+msgstr "%1$s Node Websocket Endpoint"
+
+#: src/gateway.php:1064
+#, php-format
+msgid ""
+"The %3$s Node Websocket Endpoint URI. This is an advanced setting. Use with "
+"care. This setting supercedes the \"%1$s\" setting. MUST be set if the \"%2$s"
+"\" setting is set"
+msgstr ""
+"%3$s Node Websocket Endpoint URI. Es una configuración avanzada. Use con "
+"cuidado. Este ajuste reemplaza el ajuste \"%1$s\". Es necesario configurarlo "
+"si el ajuste \"%2$s\" está configurado"
+
+#: src/gateway.php:1075
+msgid "Transaction explorer URL"
+msgstr "Transaction explorer URL"
+
+#: src/gateway.php:1078
+#, php-format
+msgid ""
+"The %2$s transaction explorer URL template. It should contain %%s pattern to "
+"insert tx hash to. This is an advanced setting most commonly used with the "
+"\"%1$s\" setting. Use with care."
+msgstr ""
+"%2$s transaction explorer planilla de URL. Debe contener el patron %%s para "
+"insertar el tx hash. Es un ajuste avanzando normalmente usado con el ajuste "
+"de \"%1$s\". Use con cuidado\"."
+
+#: src/gateway.php:1088
+msgid "Base crypto currency"
+msgstr "Moneda criptográfica base"
+
+#: src/gateway.php:1091
+#, php-format
+msgid ""
+"The base crypto currency ticker for the blockchain configured, like ETH for "
+"Ethereum or BNB for Binance Smart Chain. This is an advanced setting most "
+"commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"El ticker de moneda criptográfica base para la cadena de bloques "
+"configurada, como ETH para Ethereum o BNB para Binance Smart Chain. Es un "
+"ajuste avanzando normalmente usado con el ajuste de \"%1$s\". Use con cuidado"
+"\"."
+
+#: src/gateway.php:1100
+msgid "Base crypto currency name"
+msgstr "Nombre de la moneda criptográfica base"
+
+#: src/gateway.php:1103
+#, php-format
+msgid ""
+"The base crypto currency ticker name for the blockchain configured, like "
+"Ether for Ethereum or BNB for Binance Smart Chain. This is an advanced "
+"setting most commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"El nombre de ticker de moneda criptográfica base para la cadena de bloques "
+"configurada, como Ether para Ethereum o BNB para Binance Smart Chain. Es un "
+"ajuste avanzando normalmente usado con el ajuste de \"%1$s\". Use con cuidado"
+"\"."
+
+#: src/gateway.php:1112
+msgid "Token standard name"
+msgstr "Nombre estándar del token"
+
+#: src/gateway.php:1115
+#, php-format
+msgid ""
+"The crypto currency token standard name for the blockchain configured, like "
+"ERC20 for Ethereum or BEP20 for Binance Smart Chain. This is an advanced "
+"setting most commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"El nombre estándar del token de moneda criptográfica para la cadena de "
+"bloques configurada, como ERC20 para Ethereum o BEP20 para Binance Smart "
+"Chain. Es un ajuste avanzando normalmente usado con el ajuste de \"%1$s\". "
+"Use con cuidado\"."
+
+#: src/gateway.php:1124
+msgid "Blockchain display name"
+msgstr "Configuración Blockchain"
+
+#: src/gateway.php:1127
+#, php-format
+msgid ""
+"The display name for the blockchain configured, like Ethereum or Binance "
+"Smart Chain. This is an advanced setting most commonly used with the \"%1$s"
+"\" setting. Use with care."
+msgstr ""
+"El nombre para mostrar de la cadena de bloques configurada, como Ethereum o "
+"Binance Smart Chain. Es un ajuste avanzando normalmente usado con el ajuste "
+"de \"%1$s\". Use con cuidado\"."
+
+#: src/gateway.php:1139
+msgid "API credentials"
+msgstr "Credenciales API"
+
+#: src/gateway.php:1144
+msgid "Cryptocompare API Key"
+msgstr "Cryptocompare API Key"
+
+#: src/gateway.php:1147 src/gateway.php:1175
+#, php-format
+msgid ""
+"<p>The API key for the %1$s. You need to register on this site to obtain it."
+"</p>"
+msgstr ""
+"<p>La API key para el %1$s. Hay que registrarse en este sitio para obtenerlo."
+"</p>"
+
+#: src/gateway.php:1159
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to register on this site to obtain it. "
+"Use this guide please: %2$s."
+msgstr ""
+"La API key para el %1$s. Hay que registrarse en este sitio para obtenerlo."
+"Use este guía, por favor: %2$s."
+
+#: src/gateway.php:1163
+#, php-format
+msgid "Note that this setting is ignored if the \"%1$s\" setting is set"
+msgstr "Tome nota, este ajuste se ignorará si \"%1$s\" está configurado"
+
+#: src/gateway.php:1172
+msgid "Coinmarketcap.com API Key"
+msgstr "Coinmarketcap.com API Key"
+
+#: src/gateway.php:1187
+msgid "Advanced settings"
+msgstr "Configuración avanzada"
+
+#: src/gateway.php:1192
+msgid "Yes / No"
+msgstr "Sí / No"
+
+#: src/gateway.php:1193
+msgid "Custom WooCommerce currency"
+msgstr "Divisa personalizada para WooCommerce"
+
+#: src/gateway.php:1195
+msgid "Check if custom WooCommerce currency is used in this store"
+msgstr "Marcar si esta tienda usa una divisa personalizada para WooCommerce"
+
+#: src/gateway.php:1199
+msgid "Order Status"
+msgstr "Estado de la orden"
+
+#: src/gateway.php:1200
+msgid "Payment Complete Order Status"
+msgstr "Pago completo Estado del pedido"
+
+#: src/gateway.php:1202
+msgid "The status to apply for order after payment is complete"
+msgstr "El estado para solicitar el pedido después de que se complete el pago"
+
+#: src/gateway.php:1207
+msgid "Order expire timeout, seconds"
+msgstr "El pedido expira el tiempo de espera, segundos"
+
+#: src/gateway.php:1209
+msgid ""
+"The number of seconds to wait for a payment confirmation before expiring the "
+"order. 24 hours is the default."
+msgstr ""
+"La cantidad de segundos para esperar una confirmación de pago antes de que "
+"caduque el pedido. 24 horas es el valor predeterminado."
+
+#: src/gateway.php:1231
+msgid "Need help to configure this plugin?"
+msgstr "Necesita ayuda para configurar este plugin?"
+
+#: src/gateway.php:1234 src/gateway.php:1247
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr "Puede %1$s¡contractarme!%2$s"
+
+#: src/gateway.php:1242
+#, php-format
+msgid "Need help to develop a %1$s token for your ICO?"
+msgstr "¿Necesita ayuda para desarrollar un token %1$s para tu ICO?"
+
+#: src/gateway.php:1255
+#, php-format
+msgid "Want to sell your %1$s ICO token from your ICO site?"
+msgstr "¿Quiere vender sus token %1$s desde su sitio ICO?"
+
+#: src/gateway.php:1260
+#, php-format
+msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
+msgstr "¡Instale el plugin %1$sEthereumICO para Wordpress%2$s!"
+
+#: src/gateway.php:1268
+#, php-format
+msgid "Want to sell %1$s token for fiat and/or Bitcoin?"
+msgstr "¿Quiere vender token %1$s para fiat y/o Bitcoin?"
+
+#: src/gateway.php:1273
+#, php-format
+msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
+msgstr "Instale plugin %1$sCryptocurrency Product for WooCommerce%2$s!"
+
+#: src/gateway.php:1282
+#, php-format
+msgid "Want to create %1$s wallets on your Wordpress site?"
+msgstr "¿Quiere crear wallets para %1$s en su sitio Wordpress?"
+
+#: src/gateway.php:1287
+#, php-format
+msgid "Install the %1$sWordPress Ethereum Wallet plugin%2$s!"
+msgstr "¡Instale el plugin %1$sWordPress Ethereum Wallet%2$s!"
+
+#: src/gateway.php:1304
+#, php-format
+msgid "You must provide an %1$s address before enabling the gateway"
+msgstr ""
+"Debes proporcionar una dirección %1$s antes de habilitar la puerta de enlace"
+
+#: src/gateway.php:1337
+#, php-format
+msgid ""
+"Your customers will be given instructions about where, and how much to pay. "
+"Your orders will be marked as on-hold when they are placed. And as complete "
+"when payment is recieved. You can update your orders on the <a href=\"%s"
+"\">WooCommerce Orders</a> page."
+msgstr ""
+"Sus clientes recibirán instrucciones sobre donde y cuanto hay que pagar. Sus "
+"pedidos serán marcados como en espera cuando están pedidos. Y como cumplido "
+"cuando se recibe el pago. Puede actualizar sus órdenes en la página <a href="
+"\"%s\">WooCommerce Orders</a>."
+
+#: src/gateway.php:1441
+#, php-format
+msgid "Order submitted, and payment with %s requested."
+msgstr "Pedido enviado, y pago de %s solicitado."
+
+#: src/gateway.php:1471 src/gateway.php:1478 src/gateway.php:1484
+#, php-format
+msgid "Order value calculated as %f %s"
+msgstr "Valor de pedido calculado en %f %s"
+
+#: src/gateway.php:1490
+msgid "Awaiting payment."
+msgstr "Esperando pago."
+
+#: src/gateway.php:1554 src/gateway.php:1769
+#, php-format
+msgid "Order do not need payment, tx check stopped: %s"
+msgstr "Pedido no requiere pago, tx cheque detenido: %s"
+
+#: src/gateway.php:1567 src/gateway.php:1783
+#, php-format
+msgid "Order expired.  Order updated to failed: %s"
+msgstr "Pedido caducado. Orden actualizado como fallido: %s"
+
+#: src/gateway.php:1602 src/gateway.php:1823
+#, php-format
+msgid "No payment found for order: %s"
+msgstr "No se encuentra pago para pedido: %s"
+
+#: src/gateway.php:1641 src/gateway.php:1864
+#, php-format
+msgid ""
+"PaymentInfo recieved for order_id=%s. %s: %s. eth_value=%s, eth_value_wei=%s"
+msgstr ""
+"Info de pago recibido para order_id=%s. %s: %s. eth_value=%s, eth_value_wei="
+"%s"
+
+#: src/gateway.php:1672 src/gateway.php:1897 src/gateway.php:1900
+msgid "Successful payment notification received. Order updated to pending."
+msgstr ""
+"Notificación de pago exitoso recibida. Pedido actualizado como pendiente."
+
+#: src/gateway.php:1715 src/gateway.php:1906
+#, php-format
+msgid ""
+"Non-successful payment notification received. Order updated to failed: %s"
+msgstr ""
+"Notificación de pago no exitoso recibida. Pedido actualizado como fallido: %s"
+
+#: src/gateway.php:1787 src/gateway.php:1789
+msgid "Order was expired."
+msgstr "Pedido caducado."
+
+#: src/gateway.php:1910
+msgid "Non-successful payment notification received. Order updated to failed."
+msgstr ""
+"Notificación de pago no exitoso recibida. Pedido actualizado como fallido."
+
+#: src/gateway.php:1912
+msgid "Non-successful payment notification."
+msgstr "Notificación de pago no exitoso."
+
+#: src/gateway.php:2588
+#, php-format
+msgid "call contract %s method %s for market %s for order %s"
+msgstr "llama al contrato %s method %s para mercado %s para pedido %s"
+
+#: src/main.php:258 src/main.php:263 src/main.php:351
+msgid "Unknown network name in configuration settings"
+msgstr "Nombre de red desconocido en ajustes de configuración"
+
+#: src/main.php:442
+#, php-format
+msgid "Sent to blockchain. Transaction hash %1$s."
+msgstr "Enviado a blockchain. Hash de transacción %1$s."
+
+#: src/main.php:529
+msgid "Payment page"
+msgstr "Etapa de Pago"
+
+#: src/paymentreceivedemail.php:26
+msgid "ETH/ERC20 payment completed"
+msgstr "Pago ETH/ERC20 cumplido"
+
+#: src/paymentreceivedemail.php:27
+msgid "Notification that payment by ETH/ERC20 has been received."
+msgstr "Notificación recibida de pago por ETH/ERC20."
+
+#: src/paymentreceivedemail.php:28 src/paymentreceivedemail.php:29
+msgid "Payment received"
+msgstr "Pago recibido"
+
+#: src/paymentreceivedemail.php:47
+#, php-format
+msgid "%1$s/%2$s payment completed"
+msgstr "Pago %1$s/%2$s cumplido"
+
+#: src/paymentreceivedemail.php:51
+#, php-format
+msgid "Notification that payment by %1$s/%2$s has been received."
+msgstr "Notificación recibida de pago por %1$s/%2$s."
+
+#: src/paymentreceivedemail.php:143
+msgid "Enable/Disable"
+msgstr "Habilitar/Deshabilitar"
+
+#: src/paymentreceivedemail.php:145
+msgid "Enable this email notification"
+msgstr "Habilitar esta notificación de email"
+
+#: src/paymentreceivedemail.php:149
+msgid "Subject"
+msgstr "Asunto"
+
+#: src/paymentreceivedemail.php:151
+#, php-format
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr ""
+"Esto controla la entrada de asunto de email. Déjelo en blanco para usar el "
+"asunto predeterminado: <code>%s</code>."
+
+#: src/paymentreceivedemail.php:156
+msgid "Email Heading"
+msgstr "Encabezado de email"
+
+#: src/paymentreceivedemail.php:158
+#, php-format
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+"Esto controla el encabezado principal adentro de la notificación por email. "
+"Déjelo en blanco para usar el título predeterminado: <code>%s</code>."
+
+#: src/paymentreceivedemail.php:163
+msgid "Email type"
+msgstr "Tipo de email"
+
+#: src/paymentreceivedemail.php:165
+msgid "Choose which format of email to send."
+msgstr "Elija cual formato de email quiere enviar."
+
+#: src/paymentreceivedemail.php:169
+msgid "Plain text"
+msgstr "Texto"
+
+#: src/paymentreceivedemail.php:170
+msgid "HTML"
+msgstr "HTML"
+
+#: src/paymentreceivedemail.php:171
+msgid "Multipart"
+msgstr "Multipart"
+
+#: templates/emails/epg-payment-received.php:15
+#, php-format
+msgid "Payment received for order %d"
+msgstr "Pago recibido para pedido %d"
+
+#: templates/emails/epg-payment-received.php:17
+#: templates/emails/plain/epg-payment-received.php:16
+msgid ""
+"Congratulations. We've received payment for your order. We've included your "
+"details below as a reminder of your order."
+msgstr ""
+"¡Enhorabuena! Hemos recibido el pago para su pedido. Incluimos los detalles "
+"por abajo como recordatorio de tu pedido."
+
+#: templates/emails/plain/epg-payment-received.php:14
+#, php-format
+msgid "Payment received for order %d."
+msgstr "Pago recibido para orden %d."
+
+#~ msgid "Failed to deposit %$1s"
+#~ msgstr "Falló el depósito de %1$s"

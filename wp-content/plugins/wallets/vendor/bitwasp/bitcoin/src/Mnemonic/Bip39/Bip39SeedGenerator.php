@@ -1,0 +1,37 @@
+<?php
+
+declare (strict_types=1);
+namespace Ethereumico\EthereumWallet\Dependencies\BitWasp\Bitcoin\Mnemonic\Bip39;
+
+use Ethereumico\EthereumWallet\Dependencies\BitWasp\Bitcoin\Crypto\Hash;
+use Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\Buffer;
+use Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\BufferInterface;
+class Bip39SeedGenerator
+{
+    /**
+     * @param string $string
+     * @return BufferInterface
+     * @throws \Exception
+     */
+    private function normalize(string $string) : \Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\BufferInterface
+    {
+        if (!\class_exists('Normalizer')) {
+            if (\mb_detect_encoding($string) === 'UTF-8') {
+                throw new \Exception('UTF-8 passphrase is not supported without the PECL intl extension installed.');
+            } else {
+                return new \Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\Buffer($string);
+            }
+        }
+        return new \Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\Buffer(\Normalizer::normalize($string, \Normalizer::FORM_KD));
+    }
+    /**
+     * @param string $mnemonic
+     * @param string $passphrase
+     * @return \BitWasp\Buffertools\BufferInterface
+     * @throws \Exception
+     */
+    public function getSeed(string $mnemonic, string $passphrase = '') : \Ethereumico\EthereumWallet\Dependencies\BitWasp\Buffertools\BufferInterface
+    {
+        return \Ethereumico\EthereumWallet\Dependencies\BitWasp\Bitcoin\Crypto\Hash::pbkdf2('sha512', $this->normalize($mnemonic), $this->normalize("mnemonic{$passphrase}"), 2048, 64);
+    }
+}

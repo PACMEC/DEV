@@ -1,0 +1,1081 @@
+# Copyright (C) 2018 PW WooCommerce Gift Cards
+# This file is distributed under the same license as the PW WooCommerce Gift Cards package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PW WooCommerce Gift Cards\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/free\n"
+"POT-Creation-Date: 2021-06-24 16:52:41+00:00\n"
+"PO-Revision-Date: 2021-06-24 13:00-0400\n"
+"Last-Translator: Ella Ellad2 <info@ellad2.com>\n"
+"Language-Team: Pimwick, LLC\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: admin/pw-gift-cards-admin.php:34 admin/pw-gift-cards-admin.php:180
+#: admin/pw-gift-cards-admin.php:191 admin/pw-gift-cards-admin.php:203
+#: admin/pw-gift-cards-admin.php:204 admin/pw-gift-cards-admin.php:212
+#: admin/pw-gift-cards-admin.php:213 admin/pw-gift-cards-admin.php:347
+msgid "PW Gift Cards"
+msgstr "PW Gift Cards"
+
+#: admin/pw-gift-cards-admin.php:40
+msgid "Auto Complete Orders"
+msgstr "Pedidos automáticos completos"
+
+#: admin/pw-gift-cards-admin.php:41
+msgid ""
+"When an order only contains gift cards, automatically mark the order as "
+"Complete to send the gift cards immediately."
+msgstr ""
+"Cando un pedido só contén Tarxetas Agasallo, marque automaticamente o pedido "
+"como completo para enviar as tarxetas de agasallo inmediatamente."
+
+#: admin/pw-gift-cards-admin.php:47
+msgid "Send When Order Received"
+msgstr "Enviar ao recibir o pedido"
+
+#: admin/pw-gift-cards-admin.php:48
+msgid ""
+"By default we wait until the order status is Complete before generating and "
+"emailing the gift card. Check this box to send the gift card immediately "
+"when the order is received. Scheduled gift cards will still be sent on the "
+"scheduled date. Default: Unchecked"
+msgstr ""
+"Por defecto esperamos ata que o estado do pedido estea Completo antes de "
+"xerar e enviar por correo electrónico a Tarxeta Agasallo. Marque este cadro "
+"para enviar a Tarxeta Agasallo inmediatamente despois de recibires o pedido. "
+"As Tarxetas Agasallo programadas enviaranse na data programada. Por defecto: "
+"Non verificado"
+
+#: admin/pw-gift-cards-admin.php:54
+msgid "Buy Gift Cards with Gift Cards"
+msgstr "Mercar Tarxetas Agasallo con Tarxetas Agasallo"
+
+#: admin/pw-gift-cards-admin.php:55
+msgid ""
+"Allow customers to purchase gift cards using another gift card. Disable this "
+"to prevent customers from extending the date on expiring gift cards. "
+"Default: Checked."
+msgstr ""
+"Permita que os clientes merquen Tarxetas Agasallo usando outra Tarxeta "
+"Agasallo. DesHabilite isto para evitar que os clientes amplíen a data de "
+"vencemento das Tarxetas Agasallo. Por defecto: Marcado."
+
+#: admin/pw-gift-cards-admin.php:61
+msgid "Use the WooCommerce Transactional Email System"
+msgstr "Utilice o sistema de correo electrónico transaccional de WooCommerce"
+
+#: admin/pw-gift-cards-admin.php:62
+msgid ""
+"Enabled by default. If you are not receiving your gift card emails, try "
+"disabling this setting."
+msgstr ""
+"Activada de forma predeterminada. Se non está a recibir os correos "
+"electrónicos da súa Tarxeta Agasallo, intente deshabilitar esta "
+"configuración."
+
+#: admin/pw-gift-cards-admin.php:68
+msgid "Apply fix for missing fields"
+msgstr "Aplicar corrección para campos perdidos"
+
+#: admin/pw-gift-cards-admin.php:69
+msgid ""
+"If you do not see the To / From / Message fields on your gift card product "
+"page, try checking this box and reloading. Some themes have out of date "
+"WooCommerce template files and need to be patched to work with the Gift Card "
+"product."
+msgstr ""
+"Se no ve os campos A/Desde/Mensaxe na páxina do produto da súa Tarxeta "
+"Agasallo, intente revisar este cadro e volver a cargar. Algúns temas teñen "
+"ficheiros de padrón WooCommerce obsoletos e precisan ser parcheados para "
+"traballar co produto da Tarxeta Agasallo."
+
+#: admin/pw-gift-cards-admin.php:75
+msgid "Format Prices"
+msgstr "Formato de prezos"
+
+#: admin/pw-gift-cards-admin.php:76
+msgid ""
+"For fixed gift card amounts, format the price with the system currency "
+"symbol. This is enabled by default. If you are having trouble with currency "
+"switchers, disable this setting. Note: You must remove and re-add your fixed "
+"gift card amounts if you change this setting."
+msgstr ""
+"Para importes fixos de Tarxetas Agasallo, formatee o prezo co símbolo de "
+"moeda do sistema. Esta opción está activada de forma predeterminada. Se ten "
+"problemas cos conmutadores de divisas, desactive esta opción. Nota: Debe "
+"eliminar e volver agregar as cantidadees fixas da súa Tarxeta Agasallo se "
+"cambia esta configuración."
+
+#: admin/pw-gift-cards-admin.php:82
+msgid "Redeem Location - Cart"
+msgstr "Posición de Trocar - Carriño"
+
+#: admin/pw-gift-cards-admin.php:83
+msgid "Specifies where the \"Apply Gift Card\" box appears on the Cart page."
+msgstr ""
+"Especifica onde aparece o cadro “Usar Tarxeta Agasallo\" na páxina Carriño."
+
+#: admin/pw-gift-cards-admin.php:91
+msgid "Above the \"Proceed to Checkout\" button."
+msgstr "Por riba do botón \"proceder á retirada\"."
+
+#: admin/pw-gift-cards-admin.php:92 admin/pw-gift-cards-admin.php:107
+msgid "Below the \"Apply Coupon\" area."
+msgstr "Debaixo da área de \"aplicar cupón\"."
+
+#: admin/pw-gift-cards-admin.php:93 admin/pw-gift-cards-admin.php:108
+msgid "Do not display gift card field."
+msgstr "Non amose o campo da Tarxeta Agasallo."
+
+#: admin/pw-gift-cards-admin.php:97
+msgid "Redeem Location - Checkout"
+msgstr "Posición de Trocar - Realizar Pedido"
+
+#: admin/pw-gift-cards-admin.php:98
+msgid ""
+"Specifies where the \"Apply Gift Card\" box appears on the Checkout page."
+msgstr ""
+"Especifica onde aparece o cadro “Usar Tarxeta Agasallo\" na páxina Realizar "
+"pedido."
+
+#: admin/pw-gift-cards-admin.php:106
+msgid "Below the \"Payment Methods\" area."
+msgstr "Por debaixo da área de \"métodos de pago\"."
+
+#: admin/pw-gift-cards-admin.php:152
+msgid "Configuration error detected by"
+msgstr "Erro de configuración detectado por"
+
+#: admin/pw-gift-cards-admin.php:153
+msgid ""
+"Your PayPal payment gateway is incorrectly configured. You should not have "
+"both IPN and PDT enabled. The \"IPN Email Notifications\" setting is enabled "
+"and there is also a \"PayPal Identity Token\" (PDT) value set. PayPal is "
+"reaching back to your site twice to confirm the payment. This causes things "
+"to happen twice including email notifications, stock reduction, and gift "
+"card generation. Go to WooCommerce -> Settings -> Payments -> PayPal and "
+"either clear the value from the \"PayPal Identity Token\" field or disable "
+"the \"IPN Email Notifications\" setting."
+msgstr ""
+"A súa pasarela de pago de PayPal non está configurada correctamente. Non "
+"debe ter habilitadas tanto a IPN coma a PDT. A opción \"Notificacións de "
+"correo electrónico de IPN\" está activada e tamén hai un conxunto de valores "
+"de \"Identificador de PayPal\" (PDT). PayPal volve ao seu sitio dúas veces "
+"para confirmar o pago. Isto fai que as cousas sucedan dúas veces, incluíndo "
+"notificacións por correo electrónico, redución de existencias e xeración de "
+"Tarxetas Agasallo. Vaia a WooCommerce -> Configuración -> Pagos -> PayPal e "
+"borre o valor do campo \"PayPal Identity Token\" ou desactive a opción \"IPN "
+"Email Notifications\"."
+
+#: admin/pw-gift-cards-admin.php:154
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: admin/pw-gift-cards-admin.php:181 admin/pw-gift-cards-admin.php:192
+msgid "Pimwick Plugins"
+msgstr "Pimwick Plugins"
+
+#: admin/pw-gift-cards-admin.php:240
+msgid "Note: Be sure to save changes before sending a preview email."
+msgstr ""
+"Nota: Asegúrese de gardar os cambios antes de enviar un correo electrónico "
+"de vista previa."
+
+#: admin/pw-gift-cards-admin.php:241
+msgid "Recipient email address?"
+msgstr "Dirección de correo electrónico do destinatario?"
+
+#: admin/pw-gift-cards-admin.php:268
+msgid "Wait"
+msgstr "Agarde"
+
+#: admin/pw-gift-cards-admin.php:269
+msgid "Add"
+msgstr "Engadir"
+
+#: admin/pw-gift-cards-admin.php:270
+msgid "Remove"
+msgstr "Eliminar"
+
+#: admin/pw-gift-cards-admin.php:271
+#: includes/class-wc-product-pw-gift-card.php:60
+msgid "Amount must be greater than zero."
+msgstr "A cantidadee debe ser maior ca cero."
+
+#: admin/pw-gift-cards-admin.php:272
+msgid "Amount must be greater than minimum amount."
+msgstr "A cantidade debe ser maior cá cantidade mínima."
+
+#: admin/pw-gift-cards-admin.php:273
+msgid "Amount must be less than maximum amount."
+msgstr "A cantidade debe ser menor cá cantidade máxima."
+
+#: admin/pw-gift-cards-admin.php:274
+msgid "Error"
+msgstr "Erro"
+
+#: admin/pw-gift-cards-admin.php:293 admin/pw-gift-cards-admin.php:546
+#: pw-gift-cards.php:130
+msgid "Gift Card"
+msgstr "Tarxeta Agasallo"
+
+#: admin/pw-gift-cards-admin.php:392
+msgid "Could not locate product id %s"
+msgstr "Non se puido localizar o identificador de produto %s"
+
+#: admin/pw-gift-cards-admin.php:416
+msgid "Could not locate product using product_id "
+msgstr "Non se puido localizar o produto usando product_id "
+
+#: admin/pw-gift-cards-admin.php:530
+msgid "Settings saved."
+msgstr "Axustes gardados."
+
+#: admin/pw-gift-cards-admin.php:610 admin/pw-gift-cards-admin.php:624
+msgid "Gift card not found."
+msgstr "Non se atopou a Tarxeta Agasallo."
+
+#: admin/pw-gift-cards-admin.php:645
+msgid "Design saved."
+msgstr "Deseño gardado."
+
+#: admin/pw-gift-cards-admin.php:655
+msgid "Preview email system"
+msgstr "Previsualizar sistema de correo electrónico"
+
+#: admin/pw-gift-cards-admin.php:656 admin/ui/sections/designer-panel.php:53
+msgid "Recipient Name"
+msgstr "Nome do destinatario"
+
+#: admin/pw-gift-cards-admin.php:657 admin/ui/sections/designer-panel.php:55
+msgid "Gift card message to the recipient from the sender."
+msgstr "Mensaxe da Tarxeta Agasallo ao destinatario desde o remitente."
+
+#: admin/pw-gift-cards-admin.php:662
+msgid "Email sent."
+msgstr "Correo enviado."
+
+#: admin/ui/footer.php:30
+msgid "Need help? Email %s"
+msgstr "Necesita axuda? Email %s"
+
+#: admin/ui/footer.php:32
+msgid ""
+"Please consider <%s>leaving a review on WordPress.org</a>. This really helps "
+"us out!"
+msgstr ""
+"Por favor considere <%s>deixando un informe en WordPress.org</a>. ¡ Isto "
+"realmente nos axuda!"
+
+#: admin/ui/initial-setup.php:12
+msgid "Step 1: Create a \"%s\" product to start selling Gift Cards."
+msgstr ""
+"Paso 1: Crea un \"%s\" produto para empezar a vender Tarxetas Agasallo."
+
+#: admin/ui/initial-setup.php:16
+msgid "Create the Gift Card product"
+msgstr "Crear o produto da Tarxeta Agasallo"
+
+#: admin/ui/initial-setup.php:24
+msgid "Success!"
+msgstr "Correcto!"
+
+#: admin/ui/initial-setup.php:25
+msgid ""
+"The Gift Card product has been created. Click on the Products menu in the "
+"left to edit it."
+msgstr ""
+"Creouse o produto da Tarxeta Agasallo. Faga clic no menú produtos da "
+"esquerda para o editar."
+
+#: admin/ui/initial-setup.php:30
+msgid "Step 2: Let your customers check their gift card balances."
+msgstr ""
+"Paso 2: Deixe que os seus clientes comproben seu saldo na Tarxeta Agasallo."
+
+#: admin/ui/initial-setup.php:32
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create a Check Balance page for your customers."
+msgstr ""
+"Actualice a <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> para crear unha páxina de consulta de saldo por parte dos seus clientes."
+
+#: admin/ui/order-gift-card-total.php:36
+msgid "PW Gift Card"
+msgstr "PW Gift Card"
+
+#: admin/ui/product-data-panel-cards.php:35
+msgid "Gift card amounts"
+msgstr "Cantidades das Tarxetas Agasallo"
+
+#: admin/ui/product-data-panel-cards.php:39
+msgid ""
+"The available denominations that can be purchased. For example: %1$s25.00, "
+"%1$s50.00, %1$s100.00"
+msgstr ""
+"As denominacións dispoñibles que se poden mercar. Por exemplo: %1$s25.00, "
+"%1$s50.00, %1$s100.00"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid "PW WooCommerce Gift Cards Pro"
+msgstr "PW WooCommerce Gift Cards Pro"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid " includes these great additional features:"
+msgstr " inclúe estas grandes características adicionais:"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid "Multiple Designs"
+msgstr "Múltiples deseños"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid ""
+"Create as many custom email designs as you would like. Happy birthday, "
+"congratulations, happy holidays, and more!"
+msgstr ""
+"Cree tantos deseños de correo electrónico personalizados coma desexe. Feliz "
+"aniversario, felicitacións, felices festas e máis!"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid "Custom Amounts"
+msgstr "Importes personalizados"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid ""
+"Allow customers to specify the amount. You can set a minimum and a maximum "
+"amount."
+msgstr ""
+"Permitir que os clientes especifiquen a cantidade. Pode establecer unha "
+"cantidade mínima e máxima."
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid "Delivery Date"
+msgstr "Data de entrega"
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid ""
+"Customers can choose when the gift card should be delivered to the recipient."
+msgstr ""
+"Os clientes poden elixir cando a Tarxeta Agasallo debe ser entregada ao "
+"destinatario."
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid "Physical Gift Cards"
+msgstr "Tarxetas Agasallo físicas"
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid ""
+"Sell physical gift cards to your customers without requiring a recipient "
+"email address."
+msgstr ""
+"Venda Tarxetas Agasallo físicas aos seus clientes sen requirir unha "
+"dirección de correo electrónico para o destinatario."
+
+#: admin/ui/product-data-panel-cards.php:66 admin/ui/section-buttons.php:19
+msgid "Create Gift Cards"
+msgstr "Crear Tarxetas Agasallo"
+
+#: admin/ui/product-data-panel-cards.php:66
+msgid ""
+"Enter the quantity, amount, and expiration date to easily generate gift "
+"cards."
+msgstr ""
+"Introduza a cantidade, prezo e data de vencemento para xerar facilmente "
+"Tarxetas Agasallo."
+
+#: admin/ui/product-data-panel-cards.php:67 admin/ui/section-buttons.php:23
+msgid "Import Card Numbers"
+msgstr "Importar números de Tarxeta"
+
+#: admin/ui/product-data-panel-cards.php:67
+msgid ""
+"Have physical cards or numbers from another system? Import them in one click!"
+msgstr ""
+"Ten Tarxetas ou números físicos doutro sistema? Impórteas cun solo clic!"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "Default Amount"
+msgstr "Cantidade predeterminada"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "choose an amount that will be pre-selected when purchasing a gift card."
+msgstr ""
+"elixa unha cantidade que se preseleccionará ao mercar unha Tarxeta Agasallo."
+
+#: admin/ui/product-data-panel-cards.php:69 admin/ui/section-buttons.php:11
+msgid "Balances"
+msgstr "Saldos"
+
+#: admin/ui/product-data-panel-cards.php:69
+msgid "A shortcode to let customers check their gift card balances."
+msgstr ""
+"Un código para permitir aos clientes comprobar os seus saldos de Tarxetas "
+"Agasallo."
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Expiration Dates"
+msgstr "Datas de caducidade"
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Automatically set an expiration date based on the purchase date."
+msgstr ""
+"Establece automaticamente unha data de caducidade baseada na data de compra."
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Balance Adjustments"
+msgstr "Axustes do balance"
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Perform balance adjustments in the admin area."
+msgstr "Realice axustes de balance na área admin."
+
+#: admin/ui/section-buttons.php:15
+msgid "Email Designer"
+msgstr "Deseñador de Email"
+
+#: admin/ui/section-buttons.php:27
+msgid "Settings"
+msgstr "Configuración"
+
+#: admin/ui/sections/activity-records.php:26
+msgid "Date"
+msgstr "Data"
+
+#: admin/ui/sections/activity-records.php:27
+msgid "Action"
+msgstr "Acción"
+
+#: admin/ui/sections/activity-records.php:28
+msgid "User"
+msgstr "Usuario"
+
+#: admin/ui/sections/activity-records.php:29
+msgid "Note"
+msgstr "Nota"
+
+#: admin/ui/sections/activity-records.php:30 pw-gift-cards.php:131
+#: templates/woocommerce/emails/customer-pw-gift-card.php:156
+msgid "Amount"
+msgstr "Cantidade"
+
+#: admin/ui/sections/activity-records.php:31
+#: admin/ui/sections/search-results.php:33
+msgid "Balance"
+msgstr "Saldo"
+
+#: admin/ui/sections/activity-records.php:53
+msgid "Guest"
+msgstr "Convidado"
+
+#: admin/ui/sections/balance-summary.php:32
+msgid "Active gift cards"
+msgstr "Tarxetas Agasallo Activas"
+
+#: admin/ui/sections/balance-summary.php:36
+msgid "Outstanding balances"
+msgstr "Saldos pendientes"
+
+#: admin/ui/sections/balances.php:32
+msgid "Gift card number or recipient email (leave blank for all)"
+msgstr ""
+"Número de Tarxeta Agasallo ou correo electrónico do destinatario (deixar en "
+"branco para todos)"
+
+#: admin/ui/sections/balances.php:33
+msgid "Search"
+msgstr "Procurar"
+
+#: admin/ui/sections/create.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create gift cards from the admin area."
+msgstr ""
+"Actualice a <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> para crear Tarxetas Agasallo da área de administración."
+
+#: admin/ui/sections/designer-panel.php:12
+msgid "Gift card color"
+msgstr "Cor da Tarxeta Agasallo"
+
+#: admin/ui/sections/designer-panel.php:13
+msgid "Redeem button color"
+msgstr "Trocar a cor do botón"
+
+#: admin/ui/sections/designer-panel.php:14
+msgid "Redeem button text color"
+msgstr "Trocar a cor do texto do botón"
+
+#: admin/ui/sections/designer-panel.php:18
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to change even more settings such image, gift card title, additional "
+"colors, and more!"
+msgstr ""
+"Actualiza a <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> para cambiar aínda máis a configuración, como a imaxe, o título da "
+"tarxeta regalo, cores adicionais e moito máis!"
+
+#: admin/ui/sections/designer-panel.php:25
+msgid "Save design"
+msgstr "Gardar deseño"
+
+#: admin/ui/sections/designer-panel.php:36
+msgid "Custom template file detected!"
+msgstr "Detectouse un Ficheiro con padrón personalizado!"
+
+#: admin/ui/sections/designer-panel.php:39
+msgid ""
+"It appears as though you already have a custom email template file, your "
+"changes in the Designer may not appear when you actually send the email. "
+"Click the Send Preview Email button to confirm."
+msgstr ""
+"Semella que xa hai un ficheiro de padrón personalizado de correo "
+"electrónico, é posible que os seus cambios no Deseñador non aparezan cando "
+"envíe o correo electrónico. Faga clic no botón \"Enviar vista previa de "
+"correo electrónico\" para confirmar."
+
+#: admin/ui/sections/designer-panel.php:44
+msgid "Preview"
+msgstr "Vista previa"
+
+#: admin/ui/sections/designer-panel.php:47
+msgid "Send a preview email"
+msgstr "Enviar un correo electrónico con vista previa"
+
+#: admin/ui/sections/designer-panel.php:54
+msgid "The Purchasing Customer"
+msgstr "O cliente comprador"
+
+#: admin/ui/sections/import.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to import existing gift card numbers."
+msgstr ""
+"Actualice a <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> para importar números de Tarxetas Agasallo existentes."
+
+#: admin/ui/sections/search-results.php:25
+msgid "No results"
+msgstr "Non hai resultados"
+
+#: admin/ui/sections/search-results.php:26
+msgid "There are no gift cards found matching your search terms."
+msgstr ""
+"Non se atoparon Tarxetas Agasallo que coincidan cos seus termos de busca."
+
+#: admin/ui/sections/search-results.php:32
+msgid "Card Number"
+msgstr "Número da Tarxeta"
+
+#: admin/ui/sections/search-results.php:34
+msgid "Expiration Date"
+msgstr "Data de expiración"
+
+#: admin/ui/sections/search-results.php:44
+msgid "Card has been deleted."
+msgstr "A Tarxeta foi borrada."
+
+#: admin/ui/sections/search-results.php:56
+msgid "View activity"
+msgstr "Ver actividade"
+
+#: admin/ui/sections/search-results.php:58
+msgid "Delete"
+msgstr "Eliminar"
+
+#: admin/ui/sections/search-results.php:61
+msgid "Restore"
+msgstr "Restaurar"
+
+#: admin/ui/sections/search-results.php:84
+msgid "Are you sure you want to delete this gift card?"
+msgstr "Desexa eliminar esta Tarxeta Agasallo?"
+
+#: admin/ui/sections/settings.php:35
+msgid "Save Settings"
+msgstr "Gardar configuración"
+
+#: includes/class-pw-gift-card-activity.php:90
+msgid "Could not find activity record %d."
+msgstr "Non se puido atopar o rexistro de actividade %d."
+
+#: includes/class-pw-gift-card-activity.php:102
+msgid "Invalid action value: "
+msgstr "Valor de acción non válido: "
+
+#: includes/class-pw-gift-card.php:70
+msgid "Card number does not exist."
+msgstr "O número de Tarxeta non existe."
+
+#: includes/class-pw-gift-card.php:73
+msgid "Enter a card number."
+msgstr "Introduza un número de Tarxeta."
+
+#: includes/class-pw-gift-card.php:119
+#: templates/woocommerce/cart/cart-pw-gift-card.php:52
+#: templates/woocommerce/checkout/pw-gift-cards.php:54
+msgid "Expired"
+msgstr "Expirado"
+
+#: includes/class-pw-gift-card.php:122
+msgid "None"
+msgstr "Ningún"
+
+#: includes/class-pw-gift-card.php:212
+msgid "Amount added should be greater than zero."
+msgstr "A cantidade engadida debe ser superior a cero."
+
+#: includes/class-pw-gift-card.php:225
+msgid "Amount deducted should be less than zero."
+msgstr "A cantidade deducida debe ser inferior a cero."
+
+#: includes/class-pw-gift-card.php:234
+msgid "Unable to adjust balance, card is not active."
+msgstr "Non se pode axustar o saldo, a Tarxeta non está activa."
+
+#: includes/class-pw-gift-card.php:298
+msgid "Card Number cannot be empty."
+msgstr "El número de Tarxeta non pode ficar baleiro."
+
+#: includes/class-pw-gift-card.php:330
+msgid "Failed to generate a unique random card number after %d attempts. %s"
+msgstr "Non se puido xerar o número único despois de %d intentos. %s"
+
+#: includes/class-pw-gift-card.php:402
+msgid "Property %s does not exist on %s"
+msgstr "A propiedade %s non existe en %s"
+
+#: includes/class-wc-product-pw-gift-card.php:73
+msgid "Amount already exists: "
+msgstr "O importe xa existe: "
+
+#: includes/class-wc-product-pw-gift-card.php:86
+msgid "Could not create variation."
+msgstr "Non se puido crear a variación."
+
+#: includes/class-wc-product-pw-gift-card.php:107
+msgid "Could not locate variation using variation_id "
+msgstr "Non se puido localizar a variación usando variation_id "
+
+#: includes/class-wc-product-pw-gift-card.php:278
+msgid "Select amount"
+msgstr "Selecciona a cantidade"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:31
+msgid "PW Gift Card Email"
+msgstr "PW Gift Card Email"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:32
+msgid "This email is sent to the recipients of a gift card."
+msgstr ""
+"Este correo electrónico envíase a os destinatarios da Tarxeta Agasallo."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:34
+msgid "You were given a gift card"
+msgstr "Recibiu unha Tarxeta Agasallo"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:35
+msgid "{sender} sent you a gift card"
+msgstr "{sender} te enviouche unha Tarxeta Agasallo"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:319
+msgid "Enable/Disable"
+msgstr "Activar/Desactivar"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:321
+msgid "Enable this email notification"
+msgstr "Activar este aviso por correo electrónico"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:325
+msgid "Subject"
+msgstr "Asunto"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:327
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr ""
+"Isto controla a liña do asunto do correo electrónico. Déixao en branco para "
+"usar o asunto por defecto: <code>%s</code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:332
+msgid "Email Heading"
+msgstr "Encabezado do correo electrónico"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:334
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+"Isto controla a cabeceira principal do aviso por correo electrónico. Déixao "
+"en branco para usar a cabeceira por defecto: <code>%s</code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:339
+msgid "Email type"
+msgstr "Tipo de correo electrónico"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:341
+msgid "Choose which format of email to send."
+msgstr "Elixe o formato no que se enviarán os emails."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:345
+msgid "Plain text"
+msgstr "Texto sin formato"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:346
+msgid "HTML"
+msgstr "HTML"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:347
+msgid "Multipart"
+msgstr "Multipart"
+
+#: includes/pw-gift-cards-purchasing.php:88
+msgid "Choose an amount"
+msgstr "Elixe a cantidade"
+
+#: includes/pw-gift-cards-purchasing.php:281
+msgid "Order %s purchased by %s %s"
+msgstr "Pedido %s mercado por %s %s"
+
+#: includes/pw-gift-cards-purchasing.php:304
+msgid "Unable to retrieve variation "
+msgstr "Imposible recuperar a variación "
+
+#: includes/pw-gift-cards-purchasing.php:401
+msgid " (inactive)"
+msgstr " (inactivo)"
+
+#: includes/pw-gift-cards-purchasing.php:426
+msgid "Generated and emailed after the order is marked Complete."
+msgstr ""
+"Xerado e enviado por correo electrónico despois de que o pedido se marca "
+"como completo."
+
+#: includes/pw-gift-cards-redeeming.php:352
+msgid "Gift card %s:"
+msgid_plural "Gift cards %s:"
+msgstr[0] "Tarxeta Agasallo %s:"
+msgstr[1] "Tarxeta Agasallo %s:"
+
+#: includes/pw-gift-cards-redeeming.php:424
+msgid "Shipping via %s"
+msgstr "Envío vía %s"
+
+#: includes/pw-gift-cards-redeeming.php:489
+#: includes/pw-gift-cards-redeeming.php:542
+#: includes/pw-gift-cards-redeeming.php:611 pw-gift-cards.php:185
+msgid "This gift card has a zero balance."
+msgstr "Esta Tarxeta Agasallo no ten saldo."
+
+#: includes/pw-gift-cards-redeeming.php:492
+#: includes/pw-gift-cards-redeeming.php:614 pw-gift-cards.php:188
+msgid "Gift card applied."
+msgstr "Tarxeta Agasallo aplicada."
+
+#: includes/pw-gift-cards-redeeming.php:507
+msgid "Gift card removed."
+msgstr "Tarxeta Agasallo quitada."
+
+#: includes/pw-gift-cards-redeeming.php:538
+msgid "Gift cards cannot be used to purchase other gift cards."
+msgstr ""
+"As Tarxetas Agasallo no se poden usar para mercar outras Tarxetas Agasallo."
+
+#: includes/pw-gift-cards-redeeming.php:545
+msgid "Card is inactive."
+msgstr "A Tarxeta está inactiva."
+
+#: includes/pw-gift-cards-redeeming.php:616
+msgid "Error: %s"
+msgstr "Erro: %s"
+
+#: pw-gift-cards.php:129
+msgid "Gift Card Amount"
+msgstr "Valor da Tarxeta Agasallo"
+
+#: pw-gift-cards.php:132
+msgid "To"
+msgstr "Para"
+
+#: pw-gift-cards.php:133
+#: templates/woocommerce/emails/customer-pw-gift-card.php:129
+msgid "From"
+msgstr "De"
+
+#: pw-gift-cards.php:134
+msgid "Message"
+msgstr "Mensaxe"
+
+#: pw-gift-cards.php:205
+msgid "Required"
+msgstr "Requirido"
+
+#: pw-gift-cards.php:206
+msgid "Minimum amount is %s"
+msgstr "A cantidade mínima es %s"
+
+#: pw-gift-cards.php:207
+msgid "Maximum amount is %s"
+msgstr "A cantidade máxima es %s"
+
+#: pw-gift-cards.php:208
+msgid ""
+"The \"To\" field should only contain email addresses. The following "
+"recipients do not look like valid email addresses:"
+msgstr ""
+"O campo \"Para\" só debe conter direccións de correo electrónico. Seguintes "
+"destinatarios no foron recoñecidos coma direccións de correo electrónico "
+"válidas:"
+
+#: pw-gift-cards.php:333
+msgid "%s requires WooCommerce version %s or later."
+msgstr "%s require a versión WooCommerce %s ou posterior."
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:39
+msgid "Gift Card:"
+msgstr "Tarxeta Agasallo:"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:40
+#: templates/woocommerce/cart/apply-gift-card.php:52
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:39
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:34
+msgid "Gift card number"
+msgstr "Número da Tarxeta Agasallo"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+msgid "Apply gift card"
+msgstr "Aplicar a Tarxeta Agasallo"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/cart/apply-gift-card.php:53
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Please wait..."
+msgstr "Por favor agarda..."
+
+#: templates/woocommerce/cart/apply-gift-card.php:50
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:32
+msgid "Have a gift card?"
+msgstr "Ten unha Tarxeta Agasallo?"
+
+#: templates/woocommerce/cart/apply-gift-card.php:53
+msgid "Apply"
+msgstr "Aplicar"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:43
+#: templates/woocommerce/checkout/pw-gift-cards.php:45
+msgid "Gift card"
+msgstr "Tarxeta Agasallo"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:46
+#: templates/woocommerce/checkout/pw-gift-cards.php:48
+msgid "Remaining balance is %s"
+msgstr "O saldo restante es %s"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:59
+msgid "Gift Card Total"
+msgstr "O total da Tarxeta Agasallo"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:61
+#: templates/woocommerce/checkout/pw-gift-cards.php:63
+msgid "[Remove]"
+msgstr "[Eliminar]"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+msgid "Click here to enter your gift card number"
+msgstr "Faga clic aquí para introducir seu número de Tarxeta Agasallo"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:36
+msgid "If you have a gift card number, please apply it below."
+msgstr "Se ten un número de Tarxeta Agasallo, escríbao abaixo."
+
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Apply Gift Card"
+msgstr "Aplique a Tarxeta Agasallo"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:146
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:25
+msgid "%s Gift Card"
+msgstr "%s Tarxeta Agasallo"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:164
+msgid "Gift Card Number"
+msgstr "Número da Tarxeta Agasallo"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:173
+msgid "Redeem"
+msgstr "Trocar"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:26
+msgid "Amount: %s"
+msgstr "Cantidade: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:27
+msgid "Gift card number: %s"
+msgstr "Número de Tarxeta Agasallo: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:28
+msgid "Link: %s"
+msgstr "Enlace: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:32
+msgid "Message:"
+msgstr "Mensaxe:"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:113
+msgid "Enter an email address for each recipient"
+msgstr "Introduza o enderezo de correo electrónico de cada destinatario"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:114
+msgid "Separate multiple email addresses with a comma."
+msgstr "Separe varias direccións cunha coma."
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:119
+msgid "Your name"
+msgstr "Seu nome"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:123
+msgid "(optional)"
+msgstr "(opcional)"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:124
+msgid "Add a message"
+msgstr "Escriba unha mensaxe"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:125
+msgid "characters remaining"
+msgstr "caracteres que quedan"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:129
+msgid "Quantity"
+msgstr "Cantidade"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:130
+msgid "1 to each recipient"
+msgstr "1 para cada destinatario"
+
+#. Plugin Name of the plugin/theme
+msgid "PW WooCommerce Gift Cards"
+msgstr "PW WooCommerce Gift Cards"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.pimwick.com/gift-cards/"
+msgstr "https://www.pimwick.com/gift-cards/"
+
+#. Description of the plugin/theme
+msgid "Sell gift cards in your WooCommerce store."
+msgstr "Vende Tarxetas Agasallo na túa tenda WooCommerce."
+
+#. Author of the plugin/theme
+msgid "Pimwick, LLC"
+msgstr "Pimwick, LLC"
+
+#. Author URI of the plugin/theme
+msgid "https://www.pimwick.com"
+msgstr "https://www.pimwick.com"
+
+#~ msgid ""
+#~ "Go to the <a href=\"%s\">WooCommerce Email Settings</a> to customize the "
+#~ "background color, subject, email heading, and more."
+#~ msgstr ""
+#~ "Vaia a <a href=\"%s\">Configuración de Correo Electrónico de WooCommerce</"
+#~ "a> para personalizar a cor de fondo, o asunto, o encabezado do correo "
+#~ "electrónico e máis."
+
+#~ msgid "Want even more control?"
+#~ msgstr "Desexas aínda máis control?"
+
+#~ msgid ""
+#~ "You can fully customize the gift card email to suit your needs. We use "
+#~ "the built in WooCommerce email template system. To override the email you "
+#~ "should copy this file"
+#~ msgstr ""
+#~ "Pode personalizar completamente o correo electrónico da Tarxeta Agasallo "
+#~ "para que se adapte ás súas necesidades. Utilizamos o sistema de padróns "
+#~ "de correo electrónico WooCommerce integrado. Para anular o correo "
+#~ "electrónico debe copiar este ficheiro"
+
+#~ msgid "To here"
+#~ msgstr "Ata aquí"
+
+#~ msgid ""
+#~ "You may need to create the subfolders if they do not exist in your theme "
+#~ "folder. Once the file is in your theme folder, open it up in a text "
+#~ "editor and make any changes."
+#~ msgstr ""
+#~ "É posible que teña que crear as subcarpetas se non existen na carpeta de "
+#~ "temas. Unha vez que o ficheiro estea na carpeta de temas, ábrao nun "
+#~ "editor de texto e faga as mudanzas necesarias."
+
+#~ msgid "Balance is currently %s, unable to adjust by %s"
+#~ msgstr "O saldo actual é %s, non se pode axustar por %s"
+
+#~ msgid ""
+#~ "PW WooCommerce Gift Cards is not compatible with the Advanced Dynamic "
+#~ "Pricing For WooCommerce plugin. Customers will not be able to redeem gift "
+#~ "cards online. Please deactivate the ADP plugin to continue using gift "
+#~ "cards. See <a href=\"https://wordpress.org/support/topic/priority-"
+#~ "php_int_max-for-woocommerce_after_calculate_totals\" target=\"_blank"
+#~ "\">this post on WordPress.org</a> for the latest information."
+#~ msgstr ""
+#~ "Las tarjetas de regalo de PW WooCommerce no son compatibles con el plugin "
+#~ "Advanced Dynamic Pricing For WooCommerce. Los clientes no podrán canjear "
+#~ "las tarjetas de regalo en línea. Por favor, desactiva el plugin ADP para "
+#~ "seguir utilizando las tarjetas de regalo. Vea <a href=\"https://wordpress."
+#~ "org/support/topic/priority-php_int_max-for-"
+#~ "woocommerce_after_calculate_totals\" target=\"_blank\">este post en "
+#~ "WordPress.org</a> para la última información."
+
+#~ msgid "Hide"
+#~ msgstr "Ocultar"
+
+#~ msgid "Invalid Email Notification"
+#~ msgstr "Notificación de correo electrónico no válida"
+
+#~ msgid ""
+#~ "Enter the email address (or addresses, comma separated) that should get "
+#~ "the gift card email notification when there is a problem sending to the "
+#~ "recipient."
+#~ msgstr ""
+#~ "Entre la dirección de correo electrónico (o direcciones, separadas por "
+#~ "comas) que recibirán notificación por correo electrónico cuando hay "
+#~ "problema sera enviando al destinatario."
+
+#~ msgid "Created %s gift cards."
+#~ msgstr "Crear %s Tarjetas de regalos."
+
+#~ msgid "Gift card number already exists."
+#~ msgstr "El número de Tarjeta de Regalo ya Existe."
+
+#~ msgid "Invalid gift card number: %s"
+#~ msgstr "Número Inválido de la tarjeta de regalo: %s"
+
+#~ msgid "Gift Card Balance"
+#~ msgstr "Saldo de la Tarjeta Regalo"
+
+#~ msgid "Create the Check Gift Card Balance page."
+#~ msgstr "Crear la página de saldo de la tarjeta de regalo."
+
+#~ msgid "Note (optional)"
+#~ msgstr "Nota (opcional)"
+
+#~ msgid "Create"
+#~ msgstr "Crea"
+
+#~ msgid "Other amount"
+#~ msgstr "Otra cantidad"
+
+#~ msgid "Check Gift Card Balance"
+#~ msgstr "Comprobar el saldo de la tarjeta de regalo"
+
+#~ msgid "Check Balance"
+#~ msgstr "Comprobar el saldo"

@@ -1,0 +1,974 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cryptocurrency-product-for-woocommerce\n"
+"POT-Creation-Date: 2020-10-12 20:30+0700\n"
+"PO-Revision-Date: 2020-10-12 20:35+0700\n"
+"Last-Translator: \n"
+"Language-Team: ethereumicoio\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: nbproject\n"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:14
+msgid "Standard"
+msgstr "Standard"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:118
+#: cryptocurrency-product-for-woocommerce.admin.php:217
+#: cryptocurrency-product-for-woocommerce.admin.php:224
+#: cryptocurrency-product-for-woocommerce.erc20.php:636
+#: cryptocurrency-product-for-woocommerce.erc223.php:424
+#: cryptocurrency-product-for-woocommerce.php:1980
+#: cryptocurrency-product-for-woocommerce.php:2475
+msgid "Ethereum wallet private key"
+msgstr "Ethereum-Wallet Private Key"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:139
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:171
+#: cryptocurrency-product-for-woocommerce.php:926
+#: cryptocurrency-product-for-woocommerce.php:943
+#: cryptocurrency-product-for-woocommerce.php:3050
+msgid "Cryptocurrency Product Settings"
+msgstr "Kryptowährungsprodukteinstellungen"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:176
+msgid "Install and Configure Guide"
+msgstr "Installations- und Konfigurationshandbuch"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:177
+#, php-format
+msgid ""
+"Use the official %1$sInstall and Configure%2$s step by step guide to "
+"configure this plugin."
+msgstr ""
+"Verwenden Sie die offizielle Schritt-für-Schritt-Anleitung zum "
+"%1$sInstallieren und Konfigurieren%2$s, um dieses Plugin zu konfigurieren."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:184
+msgid "Awesome Premium Features"
+msgstr "Fantastische Premium-Funktionen"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:185
+msgid "ERC20 tokens support and more."
+msgstr "ERC20-Token-Unterstützung und mehr."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:187
+msgid "Upgrade Now!"
+msgstr "Jetzt upgraden!"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:211
+#: cryptocurrency-product-for-woocommerce.erc20.php:504
+#: cryptocurrency-product-for-woocommerce.erc20.php:549
+#: cryptocurrency-product-for-woocommerce.erc20.php:562
+#: cryptocurrency-product-for-woocommerce.erc223.php:190
+#: cryptocurrency-product-for-woocommerce.erc223.php:293
+#: cryptocurrency-product-for-woocommerce.erc223.php:338
+#: cryptocurrency-product-for-woocommerce.erc223.php:353
+#: cryptocurrency-product-for-woocommerce.php:1826
+#: cryptocurrency-product-for-woocommerce.php:1911
+#: cryptocurrency-product-for-woocommerce.php:2108
+#: cryptocurrency-product-for-woocommerce.php:2155
+#: cryptocurrency-product-for-woocommerce.php:2302
+#: cryptocurrency-product-for-woocommerce.php:2405
+#: cryptocurrency-product-for-woocommerce.php:2421
+#: cryptocurrency-product-for-woocommerce.php:2452
+msgid "Ethereum wallet address"
+msgstr "Ethereum-Walletadresse"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:215
+msgid ""
+"The Ethereum address of your wallet from which you would sell Ether or ERC20 "
+"tokens."
+msgstr ""
+"Die Ethereum-Adresse der Wallet von der Sie Ihre Ether oder ERC20 Token "
+"verkaufen möchten."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:216
+#, php-format
+msgid ""
+"This Ethereum address is auto generated first time you install this plugin. "
+"You can change it by changing the \"%s\" setting."
+msgstr ""
+"Diese Ethereum-Adresse wird automatisch generiert, wenn Sie dieses Plugin "
+"zum ersten Mal installieren. Sie können es ändern, indem Sie die Einstellung "
+"\"%s\" ändern."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:218
+msgid ""
+"Send your Ether and/or ERC20/ERC721 tokens to this address to be able to "
+"sell it."
+msgstr ""
+"Senden Sie Ihre Ether- und / oder ERC20 / ERC721-Token an diese Adresse, um "
+"sie verkaufen zu können."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:228
+msgid ""
+"The private key of your Ethereum wallet from which you will sell Ether or "
+"ERC20 tokens. It is kept in a secret and <strong>never</strong> sent to the "
+"client side. See plugin documentation for additional security considerations."
+msgstr ""
+"Der Private Key der Ethereum-Wallet von der Sie Ihre Ether oder ERC20 Token "
+"verkaufen möchten. Der Private Key wird verschlüsselt abgespeichert und "
+"<strong>niemals</strong> veröffentlicht bzw. Kunden zugänglich gemacht. "
+"Werfen Sie einen Blick in die Plugin-Dokumentation um sich über weitere "
+"Sicherheitsmaßnahmen zu informieren."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:229
+msgid ""
+"This private key is auto generated first time you install this plugin. You "
+"can change it to your own if needed here."
+msgstr ""
+"Dieser private Schlüssel wird automatisch generiert, wenn Sie dieses Plugin "
+"zum ersten Mal installieren. Sie können es hier bei Bedarf ändern."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:235
+#: cryptocurrency-product-for-woocommerce.admin.php:275
+msgid "Infura.io API Key"
+msgstr "Infura.io API Key"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:238
+msgid "Put your Infura.io API Key here"
+msgstr "Geben Sie bitte hier Ihren Infura.io API Key ein"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:240
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to register on this site to obtain it. "
+"Use this guide please: %2$s."
+msgstr ""
+"Der API-Schlüssel für %1$s. Sie müssen sich auf dieser Site registrieren, um "
+"sie zu erhalten. Bitte benutzen Sie diese Anleitung: %2$s."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:245
+#, php-format
+msgid "Note that this setting is ignored if the \"%1$s\" setting is set"
+msgstr ""
+"Beachten Sie, dass diese Einstellung ignoriert wird, wenn die Einstellung "
+"\"%1$s\" festgelegt ist"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:246
+#: cryptocurrency-product-for-woocommerce.admin.php:269
+#: cryptocurrency-product-for-woocommerce.admin.php:288
+msgid "Ethereum Node JSON-RPC Endpoint"
+msgstr "JSON-RPC-Endpunkt des Ethereum-Knotens"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:253
+#: cryptocurrency-product-for-woocommerce.erc20.php:569
+#: cryptocurrency-product-for-woocommerce.erc223.php:361
+#: cryptocurrency-product-for-woocommerce.php:1920
+#: cryptocurrency-product-for-woocommerce.php:2458
+msgid "Blockchain"
+msgstr "Blockchain"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:257
+msgid ""
+"The blockchain used: mainnet or ropsten. Use mainnet in production, and "
+"ropsten in test mode. See plugin documentation for the testing guide."
+msgstr ""
+"Geben Sie hier die zu benutzende Blockchain an. In der Blockchain-Angabe "
+"können sowohl \"mainnet\" als auch Test-Etherchains wie z.B. \"ropsten\" "
+"oder \"rinkeby\" eingegeben werden. In der Plugin-Anleitung erhalten Sie "
+"weitere Informationen dazu."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:272
+msgid "Put your Ethereum Node JSON-RPC Endpoint here"
+msgstr "Fügen Sie Ihren JSON-RPC-Endpunkt des Ethereum-Knotens hier ein"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:274
+#, php-format
+msgid ""
+"The Ethereum Node JSON-RPC Endpoint URI. This is an advanced setting. Use "
+"with care. This setting supercedes the \"%1$s\" setting."
+msgstr ""
+"Der JSON-RPC-Endpunkt-URI des Ethereum-Knotens. Dies ist eine erweiterte "
+"Einstellung. Mit Vorsicht verwenden. Diese Einstellung ersetzt die "
+"Einstellung \"%1$s\"."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:282
+msgid "Transaction explorer URL"
+msgstr "Transaktions-Explorer-URL"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:285
+msgid "Put your Transaction explorer URL template here"
+msgstr "Fügen Sie hier Ihre Transaction Explorer URL-Vorlage ein"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:287
+#, php-format
+msgid ""
+"The Ethereum transaction explorer URL template. It should contain %%s "
+"pattern to insert tx hash to. This is an advanced setting most commonly used "
+"with the \"%1$s\" setting. Use with care."
+msgstr ""
+"Die URL-Vorlage für den Ethereum-Transaktions-Explorer. Es sollte %%s Muster "
+"enthalten, in das tx Hash eingefügt werden soll. Dies ist eine erweiterte "
+"Einstellung, die am häufigsten mit der Einstellung \"%1$s\" verwendet wird. "
+"Mit Vorsicht verwenden."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:301
+msgid "Gas Limit"
+msgstr "Gas Limit"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:305
+msgid ""
+"The default gas limit to to spend on your transactions. 200000 is a "
+"reasonable default value."
+msgstr ""
+"Legt das Standard - Gas-Limit zur Durchführung der Wallet-Transaktionen "
+"fest. 200000 ist ein vernünftiger Durchschnittswert."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:311
+msgid "Gas price"
+msgstr "Gas Price"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:317
+msgid ""
+"The gas price in Gwei. Reasonable values are in a 2-40 ratio. The default "
+"value is 2 that is cheap but not very fast. Increase if you want "
+"transactions to be mined faster, decrease if you want pay less fee per "
+"transaction."
+msgstr ""
+"Der Gas Price in GWEI. Vernünftige Werte sind innerhalb einer Rate von 2-40. "
+"Der Standardwert ist 2, was günstig, aber nicht sehr schnell ist. Erhöhen "
+"Sie diesen Wert, wenn Sie Ihre Transaktionen schneller bestätigt haben "
+"wollen, verringern Sie diesen Wert, wenn Geschwindigkeit nicht so wichtig "
+"ist, Sie daher weniger für Transaktionsgebühren zahlen wollen."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:323
+msgid "Ethereum Wallet meta key"
+msgstr "Ethereum Wallet Meta Key"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:327
+msgid ""
+"The meta key used in plugin like Ultimate Member for an Ethereum wallet "
+"address field in user registration form. It can be used here to pre-fill the "
+"Ethereum wallet field on the Checkout page."
+msgstr ""
+"Der Meta Key, der in Plugins wie z.B. Ultimate Membership für ein Ethereum-"
+"Wallet Adressfeld innerhalb des Benutzerregistrierungsformulars verwendet "
+"wird. Er kann hier benutzt werden, um das Ethereum-Wallet - Feld auf der "
+"Checkout-Seite automatisch mit der Kunden-Etherwalletadresse zu befüllen."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:333
+msgid "Disable Ethereum Wallet field?"
+msgstr "Das Ethereum-Wallet - Feld deaktivieren?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:337
+msgid ""
+"If the Ethereum Wallet meta key value is used, you can disable the Ethereum "
+"wallet field on the Checkout page. It prevents user to buy tokens to any "
+"other address except the registered one."
+msgstr ""
+"Wenn der Meta Key unseres Ethereum-Wallet - Plugins verwendet wird, können "
+"Sie das Ethereum-Wallet - Adressfeld auf der Checkout-Seite deaktivieren. "
+"Das verhindert, das Kunden Tokens zu irgend einer anderen Adresse, als der "
+"Ihrer Ether-Wallet in ihrem Mitgliederbereich auf dieser Seite nach Kauf "
+"gesendet bekommen."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:343
+msgid "Vendor Fee"
+msgstr "Verkäufergebühr"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:354
+#, php-format
+msgid ""
+"The fee in %1$s vendor should pay to publish cryptocurrency product. This "
+"fee would be taken from a vendor's Ethereum Wallet account in Ether."
+msgstr ""
+"Die Gebühr in %1$s, die der Anbieter für die Veröffentlichung des "
+"Kryptowährungsprodukts entrichten muss. Diese Gebühr wird vom Ethereum "
+"Wallet-Konto eines Anbieters in Ether abgebucht."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:362
+#: cryptocurrency-product-for-woocommerce.admin.php:444
+#, php-format
+msgid "%1$sUpgrade Now!%2$s to enable this feature."
+msgstr "%1$sJetzt upgraden!%2$s um diese Funktion zu aktivieren."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:383
+#: cryptocurrency-product-for-woocommerce.admin.php:391
+#, php-format
+msgid ""
+"Consider the %1$sCryptocurrency Product for WooCommerce WC Vendors "
+"Marketplace Addon%2$s for frontend multi-vendor features support."
+msgstr ""
+"Betrachten Sie das %1$sCryptocurrency-Produkt für das WooCommerce WC Vendors "
+"Marketplace-Addon%2$s für die Unterstützung von Frontend-Funktionen mehrerer "
+"Anbieter."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:413
+#, php-format
+msgid ""
+"Install the free %1$sWC Vendors Marketplace%2$s plugin for simple multi-"
+"vendor features support, or the %3$sWC Vendors Marketplace PRO%4$s plugin "
+"for advanced frontend multi-vendor features support."
+msgstr ""
+"Installieren Sie das kostenlose %1$sWC Vendors Marketplace-Plugin%2$s für "
+"die einfache Unterstützung von Funktionen mehrerer Anbieter oder das %3$sWC "
+"Vendors Marketplace PRO-Plugin%4$s für die erweiterte Unterstützung von "
+"Funktionen mehrerer Anbieter."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:427
+msgid "Expiration period"
+msgstr "Ablaufzeitraum"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:437
+msgid ""
+"Number of days to wait till mark an order as expired if no payment or "
+"blockchain transaction confirmation is detected."
+msgstr ""
+"Anzahl der Tage, die gewartet werden muss, bis eine Bestellung als "
+"abgelaufen markiert ist, wenn keine Bestätigung der Zahlung oder Blockchain-"
+"Transaktion festgestellt wird."
+
+#: cryptocurrency-product-for-woocommerce.admin.php:463
+msgid "Need help to configure this plugin?"
+msgstr "Brauchen Sie Hilfe bei der Konfiguration dieses Plugins?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:465
+#: cryptocurrency-product-for-woocommerce.admin.php:472
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr "Sie können mich gerne %1$sbeauftragen%2$s"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:470
+msgid "Need help to develop a ERC20 token for your ICO?"
+msgstr ""
+"Brauchen Sie Hilfe bei der Entwicklung eines ERC20 Tokens für Ihren ICO?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:477
+msgid "Want to perform an ICO Crowdsale from your Wordpress site?"
+msgstr ""
+"Wollen Sie Ihre ERC20/ERC223 ICO Token direkt über Ihre ICO-Seite verkaufen?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:479
+#, php-format
+msgid "Install the %1$sEthereum ICO WordPress plugin%2$s!"
+msgstr "Installieren Sie das %1$sThe EthereumICO Wordpress Plugin%2$s!"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:484
+msgid "Want to create Ethereum wallets on your Wordpress site?"
+msgstr "Wollen Sie Ethereum-Wallets auf Ihrer Wordpress-Seite einrichten?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:486
+#, php-format
+msgid "Install the %1$sWordPress Ethereum Wallet plugin%2$s!"
+msgstr "Installieren Sie das %1$sWordPress Ethereum Wallet plugin%2$s!"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:494
+msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
+msgstr "Wollen Sie ERC20 Token für FIAT und/oder Bitcoins verkaufen?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:496
+#, php-format
+msgid "Install the %1$sPRO plugin version%2$s!"
+msgstr "Installieren Sie bitte die %1$sPRO-Version des Plugins%2$s!"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:506
+msgid "Save Changes"
+msgstr "Einstellungen speichern"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:507
+msgid "Are you sure you want to delete all Cryptocurrency Product options?"
+msgstr ""
+"Sind Sie sicher, dass Sie alle Kryptowährungsprodukteinstellungen löschen "
+"wollen?"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:507
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: cryptocurrency-product-for-woocommerce.admin.php:513
+#, php-format
+msgid ""
+"If you like <strong>Cryptocurrency Product for WooCommerce</strong> please "
+"leave us a %1$s rating. A huge thanks in advance!"
+msgstr ""
+"Wenn Sie <strong>Cryptocurrency Product für WooCommerce</strong> mögen, "
+"hinterlassen Sie uns bitte eine %1$s Bewertung. Vielen Dank im Voraus!"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:150
+msgid "ERC20"
+msgstr "ERC20"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:182
+msgid "Token"
+msgstr "Token"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:184
+msgid "The Ethereum Token to sell"
+msgstr "Das Ethereum Token zu verkaufen"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:195
+#: cryptocurrency-product-for-woocommerce.php:1002
+msgid "Select a value"
+msgstr "Wählen Sie einen Wert"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:324
+#: cryptocurrency-product-for-woocommerce.erc223.php:205
+#: cryptocurrency-product-for-woocommerce.php:2320
+msgid "Transaction confirmed."
+msgstr "Transaktion bestätigt."
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:341
+#: cryptocurrency-product-for-woocommerce.erc223.php:220
+#: cryptocurrency-product-for-woocommerce.php:2335
+msgid "Transaction failed"
+msgstr "Transaktion fehlgeschlagen"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:349
+#: cryptocurrency-product-for-woocommerce.erc223.php:228
+#: cryptocurrency-product-for-woocommerce.php:2343
+#, php-format
+msgid "Transaction <a target=\"_blank\" href=\"%1$s\">%2$s</a> has failed."
+msgstr ""
+"Transaktion <a target=\"_blank\" href=\"%1$s\">%2$s</a> ist fehlgeschlagen."
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:504
+#: cryptocurrency-product-for-woocommerce.erc20.php:549
+#: cryptocurrency-product-for-woocommerce.erc20.php:562
+#: cryptocurrency-product-for-woocommerce.erc20.php:569
+#: cryptocurrency-product-for-woocommerce.erc20.php:636
+#: cryptocurrency-product-for-woocommerce.erc223.php:190
+#: cryptocurrency-product-for-woocommerce.erc223.php:293
+#: cryptocurrency-product-for-woocommerce.erc223.php:338
+#: cryptocurrency-product-for-woocommerce.erc223.php:353
+#: cryptocurrency-product-for-woocommerce.erc223.php:361
+#: cryptocurrency-product-for-woocommerce.erc223.php:424
+#: cryptocurrency-product-for-woocommerce.php:1826
+#: cryptocurrency-product-for-woocommerce.php:1911
+#: cryptocurrency-product-for-woocommerce.php:1920
+#: cryptocurrency-product-for-woocommerce.php:1980
+#: cryptocurrency-product-for-woocommerce.php:2108
+#: cryptocurrency-product-for-woocommerce.php:2155
+#: cryptocurrency-product-for-woocommerce.php:2302
+#: cryptocurrency-product-for-woocommerce.php:2405
+#: cryptocurrency-product-for-woocommerce.php:2421
+#: cryptocurrency-product-for-woocommerce.php:2452
+#: cryptocurrency-product-for-woocommerce.php:2458
+#: cryptocurrency-product-for-woocommerce.php:2475
+#, php-format
+msgid "Configuration error! The \"%s\" setting is not set."
+msgstr ""
+"Konfigurationsfehler! Die \"%s\" - Einstellung wurde nicht vorgenommen."
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:563
+#: cryptocurrency-product-for-woocommerce.erc20.php:570
+#: cryptocurrency-product-for-woocommerce.erc20.php:637
+#: cryptocurrency-product-for-woocommerce.erc223.php:191
+#: cryptocurrency-product-for-woocommerce.erc223.php:354
+#: cryptocurrency-product-for-woocommerce.erc223.php:362
+#: cryptocurrency-product-for-woocommerce.erc223.php:425
+#: cryptocurrency-product-for-woocommerce.php:1913
+#: cryptocurrency-product-for-woocommerce.php:1922
+#: cryptocurrency-product-for-woocommerce.php:1983
+#: cryptocurrency-product-for-woocommerce.php:2303
+msgid "Configuration error"
+msgstr "Konfigurationsfehler"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:578
+#: cryptocurrency-product-for-woocommerce.erc20.php:591
+#: cryptocurrency-product-for-woocommerce.erc20.php:623
+#: cryptocurrency-product-for-woocommerce.erc20.php:669
+#: cryptocurrency-product-for-woocommerce.erc223.php:370
+#: cryptocurrency-product-for-woocommerce.erc223.php:383
+#: cryptocurrency-product-for-woocommerce.erc223.php:415
+#: cryptocurrency-product-for-woocommerce.erc223.php:457
+#: cryptocurrency-product-for-woocommerce.php:1939
+#: cryptocurrency-product-for-woocommerce.php:1971
+#: cryptocurrency-product-for-woocommerce.php:2017
+msgid "Network error"
+msgstr "Netzwerkfehler"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:598
+#: cryptocurrency-product-for-woocommerce.erc223.php:390
+#: cryptocurrency-product-for-woocommerce.php:1947
+msgid "Insufficient funds"
+msgstr "Unzureichender Kontostand"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:604
+#, php-format
+msgid "Token balance (%1$s wei) is less then the value requested: %2$s wei."
+msgstr ""
+"Der Token-Kontostand (%1$s wei) ist geringer als der angeforderte Wert: %2$s "
+"wei."
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:710
+#: cryptocurrency-product-for-woocommerce.erc223.php:498
+#: cryptocurrency-product-for-woocommerce.php:2055
+msgid "Success"
+msgstr "Erfolgreich"
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:720
+#: cryptocurrency-product-for-woocommerce.php:2092
+#, php-format
+msgid ""
+"Sent to blockchain. Transaction hash  <a target=\"_blank\" href=\"%1$s\">"
+"%2$s</a>."
+msgstr ""
+"An die Blockchain gesendet. Transaction Hash <a target=\"_blank\" href=\"%1$s"
+"\">%2$s</a>."
+
+#: cryptocurrency-product-for-woocommerce.erc20.php:830
+#: cryptocurrency-product-for-woocommerce.erc20.php:858
+#: cryptocurrency-product-for-woocommerce.erc223.php:553
+msgid "Network problems detected. Last action was not completed."
+msgstr "Netzwerkprobleme entdeckt! Die letzte Aktion wurde nicht beendet."
+
+#: cryptocurrency-product-for-woocommerce.erc223.php:77
+msgid "ERC223"
+msgstr "ERC223"
+
+#: cryptocurrency-product-for-woocommerce.erc223.php:396
+#, php-format
+msgid "Token deposit (%1$s wei) is less then the value requested: %2$s wei."
+msgstr ""
+"Die Token-Einzahlung (%1$s wei) ist geringer als der angeforderte Wert: %2$s "
+"wei."
+
+#: cryptocurrency-product-for-woocommerce.php:182
+#: cryptocurrency-product-for-woocommerce.php:852
+msgid "Cryptocurrency"
+msgstr "Kryptowährung"
+
+#: cryptocurrency-product-for-woocommerce.php:183
+msgid "Make product a cryptocurrency."
+msgstr "Machen Sie eine Kryptowährung zum Produkt."
+
+#: cryptocurrency-product-for-woocommerce.php:885
+msgid "Select a dynamic price source"
+msgstr "Wählen Sie eine dynamische Preisquelle"
+
+#: cryptocurrency-product-for-woocommerce.php:891
+#: cryptocurrency-product-for-woocommerce.php:950
+msgid "The dynamic price source"
+msgstr "Die dynamische Preisquelle"
+
+#: cryptocurrency-product-for-woocommerce.php:946
+#, php-format
+msgid "%1$sUpgrade Now!%2$s to enable \"%3$s\" feature."
+msgstr ""
+"%1$sJetzt upgraden!%2$s Jetzt upgraden! um die \"%3$s\"-Funktion zu "
+"aktivieren."
+
+#: cryptocurrency-product-for-woocommerce.php:1003
+msgid "Ether"
+msgstr "Ether"
+
+#: cryptocurrency-product-for-woocommerce.php:1019
+#: src__premium_only/coinmarketcapratesource.php:36
+#: src__premium_only/cryptocompareratesource.php:36
+#: src__premium_only/kangaratesource.php:31
+msgid "The cryptocurrency"
+msgstr "Die Kryptowährung"
+
+#: cryptocurrency-product-for-woocommerce.php:1026
+msgid "Minimum amount"
+msgstr "Minimumanzahl"
+
+#: cryptocurrency-product-for-woocommerce.php:1028
+msgid "The minimum amount of cryptocurrency user can buy"
+msgstr "Die Minimumanzahl von Tokens, die der Kunde kaufen muss"
+
+#: cryptocurrency-product-for-woocommerce.php:1041
+msgid "Step"
+msgstr "Schrittintervall"
+
+#: cryptocurrency-product-for-woocommerce.php:1043
+msgid "The increment/decrement step"
+msgstr ""
+"Das Schrittintervall zur Erhöhung bzw. Verringerung der Tokenkaufanzahl"
+
+#: cryptocurrency-product-for-woocommerce.php:1056
+msgid "Balance"
+msgstr "Kontostand"
+
+#: cryptocurrency-product-for-woocommerce.php:1058
+msgid "The wallet balance"
+msgstr "Der Kontostand der Wallet"
+
+#: cryptocurrency-product-for-woocommerce.php:1497
+#: cryptocurrency-product-for-woocommerce.php:1529
+#: cryptocurrency-product-for-woocommerce.php:1538
+#: cryptocurrency-product-for-woocommerce.php:1622
+#: cryptocurrency-product-for-woocommerce.php:1728
+msgid "Ethereum Address"
+msgstr "ETH-Adresse"
+
+#: cryptocurrency-product-for-woocommerce.php:1562
+msgid "Crypto Wallet Address"
+msgstr "Crypto Wallet-Adresse"
+
+#: cryptocurrency-product-for-woocommerce.php:1574
+msgid "Crypto Tx Hash"
+msgstr "Crypto Tx Hash"
+
+#: cryptocurrency-product-for-woocommerce.php:1727
+#, php-format
+msgid "%1$s set to %2$s"
+msgstr "%1$s wird auf %2$s gesetzt"
+
+#: cryptocurrency-product-for-woocommerce.php:1953
+#, php-format
+msgid "Ether balance (%1$s wei) is less then the value requested: %2$s wei."
+msgstr ""
+"Ether Balance (%1$s wei) ist kleiner als der angeforderte Wert: %2$s wei."
+
+#: cryptocurrency-product-for-woocommerce.php:2369
+#: cryptocurrency-product-for-woocommerce.php:2372
+msgid "Timed out"
+msgstr "Zeitüberschreitung"
+
+#: cryptocurrency-product-for-woocommerce.php:2638
+#, php-format
+msgid "Product quantity %1$s less then the minimum allowed: %2$s."
+msgstr ""
+"Ihre Anzahl der zu kaufenden Tokens ist mit %1$s Stück zu gering. Bitte "
+"kaufen Sie mindestens %2$s Tokens."
+
+#: cryptocurrency-product-for-woocommerce.php:2661
+#, php-format
+msgid "Product quantity %1$s greater then the maximum allowed: %2$s."
+msgstr "Produktmenge %1$s größer als das erlaubte Maximum: %2$s."
+
+#: cryptocurrency-product-for-woocommerce.php:3051
+msgid "Cryptocurrency Product"
+msgstr "Kryptowährungsprodukt"
+
+#: cryptocurrency-product-for-woocommerce.php:3070
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: cryptocurrency-product-for-woocommerce.php:3291
+msgid ""
+"Please input correct Ethereum address in the form like "
+"0x476Bb28Bc6D0e9De04dB5E19912C392F9a76535d."
+msgstr ""
+"Bitte geben Sie eine gültige ETH-Adresse (z.B.: "
+"0x476Bb28Bc6D0e9De04dB5E19912C392F9a76535d) ein."
+
+#: src__premium_only/coinmarketcapratesource.php:27
+#: src__premium_only/cryptocompareratesource.php:27
+#: src__premium_only/metalsratesource.php:28
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: src__premium_only/coinmarketcapratesource.php:31
+#: src__premium_only/cryptocompareratesource.php:31
+#: src__premium_only/kangaratesource.php:26
+msgid "Select a cryptocurrency"
+msgstr "Wählen Sie eine Kryptowährung aus"
+
+#: src__premium_only/coinmarketcapratesource.php:38
+#: src__premium_only/cryptocompareratesource.php:38
+#: src__premium_only/kangaratesource.php:33
+#, php-format
+msgid ""
+"The \"%1$s\" and \"%2$s\" settings would be interpreted as values in this "
+"cryptocurrency."
+msgstr ""
+"Die Einstellungen \"%1$s\" und \"%2$s\" werden als Werte in dieser "
+"Kryptowährung interpretiert."
+
+#: src__premium_only/coinmarketcapratesource.php:39
+#: src__premium_only/coinmarketcapratesource.php:327
+#: src__premium_only/cryptocompareratesource.php:39
+#: src__premium_only/cryptocompareratesource.php:328
+#: src__premium_only/kangaratesource.php:34
+#: src__premium_only/kangaratesource.php:322
+#: src__premium_only/metalsratesource.php:40
+#: src__premium_only/metalsratesource.php:328
+msgid "Regular price"
+msgstr "Regulärer Preis"
+
+#: src__premium_only/coinmarketcapratesource.php:40
+#: src__premium_only/coinmarketcapratesource.php:328
+#: src__premium_only/cryptocompareratesource.php:40
+#: src__premium_only/cryptocompareratesource.php:329
+#: src__premium_only/kangaratesource.php:35
+#: src__premium_only/kangaratesource.php:323
+#: src__premium_only/metalsratesource.php:41
+#: src__premium_only/metalsratesource.php:329
+msgid "Sale price"
+msgstr "Verkaufspreis"
+
+#: src__premium_only/coinmarketcapratesource.php:51
+#: src__premium_only/cryptocompareratesource.php:51
+#: src__premium_only/kangaratesource.php:46
+#: src__premium_only/metalsratesource.php:52
+msgid "Input in currency selected"
+msgstr "Eingabe in ausgewählter Währung"
+
+#: src__premium_only/coinmarketcapratesource.php:52
+#: src__premium_only/cryptocompareratesource.php:52
+#: src__premium_only/kangaratesource.php:47
+#: src__premium_only/metalsratesource.php:53
+msgid "Input in store currency"
+msgstr "Eingabe in Geschäftswährung"
+
+#: src__premium_only/coinmarketcapratesource.php:53
+#: src__premium_only/cryptocompareratesource.php:53
+#: src__premium_only/kangaratesource.php:48
+#: src__premium_only/metalsratesource.php:54
+msgid "Input in fixed store currency"
+msgstr "Eingabe in fester Geschäftswährung"
+
+#: src__premium_only/coinmarketcapratesource.php:58
+#: src__premium_only/cryptocompareratesource.php:58
+#: src__premium_only/kangaratesource.php:53
+#: src__premium_only/metalsratesource.php:59
+msgid "Input mode"
+msgstr "Eingabemodus"
+
+#: src__premium_only/coinmarketcapratesource.php:60
+#: src__premium_only/cryptocompareratesource.php:60
+#: src__premium_only/kangaratesource.php:55
+#: src__premium_only/metalsratesource.php:61
+msgid ""
+"Input product price in the target currency selected, store currency like "
+"USD, instead of the cryptocurrency selected above, fixing the cryptocurrency "
+"amount at the current rate, or just in the store currency"
+msgstr ""
+"Geben Sie den Produktpreis in der ausgewählten Zielwährung ein, speichern "
+"Sie die Währung wie USD anstelle der oben ausgewählten Kryptowährung und "
+"legen Sie den Kryptowährungsbetrag auf den aktuellen Kurs oder nur in der "
+"Geschäftswährung fest"
+
+#: src__premium_only/coinmarketcapratesource.php:77
+#: src__premium_only/cryptocompareratesource.php:77
+#: src__premium_only/kangaratesource.php:72
+#: src__premium_only/metalsratesource.php:78
+msgid "Mark price up by %"
+msgstr "Markieren Sie den Preis um %"
+
+#: src__premium_only/coinmarketcapratesource.php:79
+#: src__premium_only/cryptocompareratesource.php:79
+#: src__premium_only/kangaratesource.php:74
+#: src__premium_only/metalsratesource.php:80
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"rates for you. These are applied as percentage markup, so a 1 Token for $100 "
+"rate value with a 1.00% markup will be presented to the customer as $101."
+msgstr ""
+"Um Währungsschwankungen auszugleichen, kann das Plugin automatisch Kurse für "
+"Sie ausweisen. Diese werden als prozentualer Aufschlag angewendet. Daher "
+"wird dem Kunden ein 1-Token-Wert für 100 USD mit einem Aufschlag von 1,00% "
+"als 101 USD angezeigt."
+
+#: src__premium_only/coinmarketcapratesource.php:97
+#: src__premium_only/cryptocompareratesource.php:97
+#: src__premium_only/kangaratesource.php:92
+#: src__premium_only/metalsratesource.php:98
+msgid "Minimum price"
+msgstr "Minimaler Preis"
+
+#: src__premium_only/coinmarketcapratesource.php:99
+#: src__premium_only/cryptocompareratesource.php:99
+#: src__premium_only/kangaratesource.php:94
+#: src__premium_only/metalsratesource.php:100
+msgid ""
+"If dynamic price becomes below this value, this value is used instead. It "
+"can be used to prevent losses in a case of market dumps."
+msgstr ""
+"Wenn der dynamische Preis unter diesen Wert fällt, wird stattdessen dieser "
+"Wert verwendet. Es kann verwendet werden, um Verluste bei Marktdumps zu "
+"vermeiden."
+
+#: src__premium_only/coinmarketcapratesource.php:116
+#: src__premium_only/cryptocompareratesource.php:116
+#: src__premium_only/kangaratesource.php:111
+#: src__premium_only/metalsratesource.php:117
+msgid "API calls per day available"
+msgstr "API-Aufrufe pro Tag verfügbar"
+
+#: src__premium_only/coinmarketcapratesource.php:118
+#: src__premium_only/cryptocompareratesource.php:118
+#: src__premium_only/kangaratesource.php:113
+#: src__premium_only/metalsratesource.php:119
+msgid "The maximum number of API calls per day available for your license."
+msgstr ""
+"Die maximale Anzahl von API-Aufrufen pro Tag, die für Ihre Lizenz verfügbar "
+"sind."
+
+#: src__premium_only/coinmarketcapratesource.php:135
+#: src__premium_only/cryptocompareratesource.php:135
+#: src__premium_only/kangaratesource.php:130
+#: src__premium_only/metalsratesource.php:136
+msgid "Base price display"
+msgstr "Grundpreisanzeige"
+
+#: src__premium_only/coinmarketcapratesource.php:137
+#: src__premium_only/cryptocompareratesource.php:137
+#: src__premium_only/kangaratesource.php:132
+msgid "Display price like \"$100 (0.1 ETH)\""
+msgstr "Preis anzeigen wie \"$100 (0.1 ETH)\""
+
+#: src__premium_only/coinmarketcapratesource.php:346
+msgid "Coinmarketcap API Key is empty"
+msgstr "Der Coinmarketcap-API-Schlüssel ist leer"
+
+#: src__premium_only/coinmarketcapratesource.php:383
+#: src__premium_only/kangaratesource.php:372
+#: src__premium_only/metalsratesource.php:385
+msgid "Empty body"
+msgstr "Leerer body-Bereich"
+
+#: src__premium_only/coinmarketcapratesource.php:392
+msgid "No data field"
+msgstr "Kein Datenfeld"
+
+#: src__premium_only/coinmarketcapratesource.php:397
+#: src__premium_only/metalsratesource.php:408
+msgid "id not found"
+msgstr "ID nicht gefunden"
+
+#: src__premium_only/coinmarketcapratesource.php:717
+#: src__premium_only/cryptocompareratesource.php:690
+#: src__premium_only/kangaratesource.php:701
+#: src__premium_only/metalsratesource.php:700
+msgid "Rate sources"
+msgstr "Quellen bewerten"
+
+#: src__premium_only/coinmarketcapratesource.php:741
+msgid "Coinmarketcap.com API Key"
+msgstr "Coinmarketcap.com API Key"
+
+#: src__premium_only/coinmarketcapratesource.php:744
+msgid "Put your Coinmarketcap.com API Key here"
+msgstr "Geben Sie bitte hier Ihren Coinmarketcap.com API Key ein"
+
+#: src__premium_only/coinmarketcapratesource.php:746
+#: src__premium_only/metalsratesource.php:729
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to register on this site to obtain it."
+msgstr ""
+"Der API key für das %1$s. Sie müssen sich auf dieser Seite registrieren um "
+"ihn zu erhalten."
+
+#: src__premium_only/cryptocompareratesource.php:345
+msgid "Cryptocompare API Key is empty"
+msgstr "Der Cryptocompare-API-Schlüssel ist leer"
+
+#: src__premium_only/cryptocompareratesource.php:714
+msgid "Cryptocompare.com API Key"
+msgstr "Cryptocompare.com API Key"
+
+#: src__premium_only/cryptocompareratesource.php:717
+msgid "Put your Cryptocompare.com API Key here"
+msgstr "Geben Sie Ihren Cryptocompare.com-API-Schlüssel hier ein"
+
+#: src__premium_only/cryptocompareratesource.php:719
+#, php-format
+msgid ""
+"<p>The API key for the %1$s. You need to register on this site to obtain it."
+"</p>"
+msgstr ""
+"<p>Der API-Schlüssel für das %1$s. Sie müssen sich auf dieser Site "
+"registrieren, um sie zu erhalten.</p>"
+
+#: src__premium_only/metalsratesource.php:32
+msgid "Select a metal or currency"
+msgstr "Wählen Sie ein Metall oder eine Währung"
+
+#: src__premium_only/metalsratesource.php:37
+msgid "The metal or currency"
+msgstr "Das Metall oder die Währung"
+
+#: src__premium_only/metalsratesource.php:39
+#, php-format
+msgid ""
+"The \"%1$s\" and \"%2$s\" settings would be interpreted as values in this "
+"metal or currency."
+msgstr ""
+"Die Einstellungen \"%1$s\" und \"%2$s\" werden als Werte in diesem Metall "
+"oder dieser Währung interpretiert."
+
+#: src__premium_only/metalsratesource.php:138
+msgid "Display price like \"$100 (0.1 XAU)\""
+msgstr "Preis anzeigen wie \"$100 (0.1 ETH)\""
+
+#: src__premium_only/metalsratesource.php:347
+msgid "Metals-api API Key is empty"
+msgstr "Der Metals-API-API-Schlüssel ist leer"
+
+#: src__premium_only/metalsratesource.php:395
+msgid "No base field"
+msgstr "Kein Datenfeld: base"
+
+#: src__premium_only/metalsratesource.php:403
+msgid "No rates field"
+msgstr "Kein Datenfeld: rates"
+
+#: src__premium_only/metalsratesource.php:724
+msgid "Metals-api.com API Key"
+msgstr "Metals-api.com API Key"
+
+#: src__premium_only/metalsratesource.php:727
+msgid "Put your Metals-api.com API Key here"
+msgstr "Geben Sie bitte hier Ihren Metals-api.com API Key ein"
+
+#~ msgid ""
+#~ "In order to sell your ERC20/ERC223 tokens install the %1$sPRO plugin "
+#~ "version%2$s please."
+#~ msgstr ""
+#~ "Um Ihre ERC20/ERC223 Token zu verkaufen, installieren Sie bitte die "
+#~ "%1$sPRO-Version des Plugins%2$s."
+
+#~ msgid "Token address"
+#~ msgstr "Token-Adresse"
+
+#~ msgid ""
+#~ "The API key for the %1$s. You need to register on this site to obtain it. "
+#~ "After register you'll get a mail with links like that: %2$s. Copy the "
+#~ "%3$s part here."
+#~ msgstr ""
+#~ "Der API key für das %1$s. Sie müssen sich auf dieser Seite registrieren "
+#~ "um ihn zu erhalten. Nach der Registrierung erhalten Sie ein Mail mit "
+#~ "Links wie z.B. diesem: %2$s. Kopieren Sie den %3$s - Teil und fügen Sie "
+#~ "ihn hier ein."
+
+#~ msgid "Balance on deposit"
+#~ msgstr "Deponierter Kontostand"
+
+#~ msgid "The wallet deposit available for sell"
+#~ msgstr "Das Depot auf der Wallet, das zum Verkauf zur Verfügung steht"
+
+#~ msgid "Make a deposit"
+#~ msgstr "Machen Sie eine Einzahlung"
+
+#~ msgid "Make a deposit available for sell"
+#~ msgstr ""
+#~ "Machen Sie eine Einzahlung, die dann zum Verkauf zur Verfügung steht"
+
+#~ msgid "Deposit amount"
+#~ msgstr "Einzahlungsbetrag"
+
+#~ msgid "The amount to deposit for sell"
+#~ msgstr "Der Einzahlungsbetrag, der danach zum Verkauf zur Verfügung steht"
+
+#~ msgid "Refund a deposit"
+#~ msgstr "Einzahlungsbetrag rückerstatten"
+
+#~ msgid "Refund your deposit available for sell"
+#~ msgstr "Erstatten Sie sich den zum Verkauf überwiesenen Betrag zurück"
+
+#~ msgid "Configuration error. Last action was not completed."
+#~ msgstr "Konfigurationsfehler! Die letzte Aktion wurde nicht beendet."
+
+#~ msgid "Unknown network name in configuration settings"
+#~ msgstr "Unbekannter Netzwerkname in den Konfigurationseinstellungen"

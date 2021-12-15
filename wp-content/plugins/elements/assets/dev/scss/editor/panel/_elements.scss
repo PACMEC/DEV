@@ -1,0 +1,121 @@
+//
+// Panel Elements
+//
+#elementor-panel-page-elements {
+
+	body:not(.elementor-controls-ready) & {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+#elementor-panel-elements-navigation {
+
+	.elementor-panel-navigation-tab {
+		text-align: center;
+		padding: 10px 0;
+		font-size: 11px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+}
+
+#elementor-panel-elements {
+	overflow: hidden;
+	padding: 0 5px;
+}
+
+#elementor-panel-elements-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+
+	body.elementor-controls-ready & {
+		display: none;
+	}
+
+	.eicon-loading {
+		font-size: 25px;
+		color: $editor-info;
+	}
+}
+
+.elementor-element-wrapper {
+	float: $start;
+	width: 50%;
+	padding: 5px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.elementor-element {
+	border-radius: 3px;
+	background-color: #fff;
+	cursor: move;
+
+	&:hover {
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+		.icon, .title {
+			color: $editor-accent;
+		}
+	}
+
+	.icon {
+		font-size: 28px;
+		padding-top: 15px;
+		color: $editor-darker;
+	}
+
+	.elementor-element-title-wrapper {
+		display: table;
+		width: 100%;
+	}
+
+	.title {
+		font-size: 11px;
+		color: $editor-darker;
+		display: table-cell;
+		vertical-align: middle;
+		height: 40px;
+	}
+}
+
+#elementor-panel-elements-search-wrapper {
+	position: relative;
+	margin: 10px 10px 5px;
+}
+
+#elementor-panel-elements-search-input {
+	background-color: rgba(255,255,255,.7);
+	font-size: 11px;
+	@include padding(10px, 10px, 10px, 29px);
+	font-style: italic;
+	color: $editor-light;
+	border: none;
+	transition: all 1s;
+	border-radius: 3px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	+ i {
+		position: absolute;
+		@include start(10px);
+		top: 50%;
+		color: $editor-light;
+		transform: translateY(-50%);
+	}
+
+	&:focus {
+		background-color: rgba(255,255,255,1);
+		@include padding-end(15px);
+	}
+}

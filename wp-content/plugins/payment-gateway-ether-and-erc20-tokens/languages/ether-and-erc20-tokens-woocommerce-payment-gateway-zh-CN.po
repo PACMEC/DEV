@@ -1,0 +1,1030 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ether-and-erc20-tokens-woocommerce-payment-gateway\n"
+"POT-Creation-Date: 2021-06-17 19:00+0700\n"
+"PO-Revision-Date: 2021-06-17 19:00+0700\n"
+"Last-Translator: daaab\n"
+"Language-Team: ethereumicoio\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: solidity\n"
+"X-Poedit-SearchPathExcluded-3: build\n"
+"X-Poedit-SearchPathExcluded-4: build-admin\n"
+"X-Poedit-SearchPathExcluded-5: img\n"
+"X-Poedit-SearchPathExcluded-6: css\n"
+"X-Poedit-SearchPathExcluded-7: scoped-php-build\n"
+"X-Poedit-SearchPathExcluded-8: vendor-bin\n"
+"X-Poedit-SearchPathExcluded-9: src/wpjobster*\n"
+
+#: ether-and-erc20-tokens-woocommerce-payment-gateway.php:190
+msgid "Settings"
+msgstr "设定"
+
+#: src/gateway.php:44 src/gateway.php:870 src/gateway.php:1329
+#: src/gateway.php:2676
+#, php-format
+msgid "Pay with %1$s or %2$s token"
+msgstr "使用%1$s或%2$s代币付款"
+
+#: src/gateway.php:49
+#, php-format
+msgid ""
+"Pay with %1$s or %2$s token provides customers a way to pay with MetaMask or "
+"any other %3$s wallet."
+msgstr ""
+"使用%1$s或%2$s令牌付款為客戶提供了一種使用MetaMask或任何其他%3$s錢包進行付款"
+"的方式。"
+
+#: src/gateway.php:67 src/gateway.php:432 src/gateway.php:865
+#: src/gateway.php:1324 src/gateway.php:2194 src/gateway.php:2671
+#, php-format
+msgid "Pay with %1$s"
+msgstr "用%1$s付款"
+
+#: src/gateway.php:215 src/gateway.php:431 src/gateway.php:2538
+#: src/main.php:291
+msgid "Fixed"
+msgstr "固定"
+
+#: src/gateway.php:400
+msgid "Withdraw"
+msgstr "退"
+
+#: src/gateway.php:401 src/gateway.php:2266
+msgid "Payment failed. Try to adjust gas setting"
+msgstr ""
+"支付失败，请尝试调整Gas  设置\n"
+"支付失败。     尝试调整气体设置"
+
+#: src/gateway.php:402 src/gateway.php:2288
+msgid "Trust Wallet"
+msgstr "Trust Wallet"
+
+#: src/gateway.php:403 src/gateway.php:2289
+msgid ""
+"Trust Wallet is a Secure Multi Coin Wallet for Android and iOS. It is the "
+"official cryptocurrency wallet of Binance."
+msgstr ""
+"Trust Wallet 是在安卓和iOS的一个安全的多币种钱包这是Binance的官方加密钱包."
+
+#: src/gateway.php:404 src/gateway.php:2290
+msgid "MetaMask"
+msgstr "MetaMask"
+
+#: src/gateway.php:405 src/gateway.php:2292
+#, php-format
+msgid ""
+"MetaMask is a bridge that allows you to visit the distributed web of "
+"tomorrow in your browser today. It allows you to run %1$s dApps right in "
+"your browser without running a full %1$s node."
+msgstr ""
+"MetaMask是一座橋樑，使您可以在今天的瀏覽器中訪問明天的分佈式Web。 它允許您直"
+"接在瀏覽器中運行%1$s dApp，而無需運行完整的%1$s節點。"
+
+#: src/gateway.php:408 src/gateway.php:2296
+#, php-format
+msgid "%1$s Wallet"
+msgstr "%1$s Wallet"
+
+#: src/gateway.php:411 src/gateway.php:2300
+#, php-format
+msgid "Use %1$s Wallet generated for you on this site upon registration"
+msgstr "註冊後，使用此網站上為您生成的%1$s錢包"
+
+#: src/gateway.php:415
+#, php-format
+msgid "The wallet connected should be the same as the \"%1$s\" setting value."
+msgstr "连接的钱包应与\"%1$s\"设置值相同."
+
+#: src/gateway.php:416 src/gateway.php:908
+#, php-format
+msgid "Your %1$s address"
+msgstr "您的%1$s地址"
+
+#: src/gateway.php:420
+msgid "Symbol"
+msgstr "记号"
+
+#: src/gateway.php:421 src/gateway.php:494 src/gateway.php:515
+#: src/gateway.php:2260 src/gateway.php:2283
+msgid "Address"
+msgstr "地址"
+
+#: src/gateway.php:422
+msgid "Rate Source"
+msgstr "费率来源"
+
+#: src/gateway.php:423
+msgid "Rate"
+msgstr "费率"
+
+#: src/gateway.php:424 src/gateway.php:525 src/gateway.php:2308
+msgid "Currency"
+msgstr "货币"
+
+#: src/gateway.php:425
+msgid "Markup, %"
+msgstr "标记，%"
+
+#: src/gateway.php:426
+msgid "Decimals"
+msgstr "小数点"
+
+#: src/gateway.php:427 src/gateway.php:428
+msgid "Remove"
+msgstr "移开"
+
+#: src/gateway.php:429
+msgid "Add Token"
+msgstr "增加Token"
+
+#: src/gateway.php:430
+msgid "Do you really want to remove this token?"
+msgstr "你真的想移走这个Token？"
+
+#: src/gateway.php:434 src/gateway.php:2196
+#, php-format
+msgid "Purchase %1$s tokens"
+msgstr "购买%1$s令牌"
+
+#: src/gateway.php:435 src/gateway.php:2197
+#, php-format
+msgid "Purchase %1$s"
+msgstr "购买%1$s令牌"
+
+#: src/gateway.php:436 src/gateway.php:2198
+msgid "Deposit with MetaMask"
+msgstr "用MetaMask存入款项"
+
+#: src/gateway.php:437 src/gateway.php:2200
+#, php-format
+msgid "Deposit with %1$s Wallet"
+msgstr "存入%1$s錢包"
+
+#: src/gateway.php:440 src/gateway.php:2203
+msgid "Pay with MetaMask"
+msgstr "用MetaMask付款"
+
+#: src/gateway.php:441 src/gateway.php:2204
+msgid "Download MetaMask"
+msgstr "下载MetaMask"
+
+#: src/gateway.php:442 src/gateway.php:2205
+msgid "Open / Install MetaMask Wallet"
+msgstr "打开/安装Trust Wallet"
+
+#: src/gateway.php:443 src/gateway.php:2206
+msgid "Open / Install Trust Wallet"
+msgstr "打开/安装Trust Wallet"
+
+#: src/gateway.php:444 src/gateway.php:2207
+msgid "Unlock your account please."
+msgstr "请解锁你的账户."
+
+#: src/gateway.php:445 src/gateway.php:2209
+#, php-format
+msgid "Pay with %1$s Wallet"
+msgstr "使用%1$s錢包付款"
+
+#: src/gateway.php:448 src/gateway.php:2212
+#, php-format
+msgid "Failed to pay %1$s"
+msgstr "支付%1$s失败"
+
+#: src/gateway.php:449 src/gateway.php:2213
+#, php-format
+msgid "Pay %1$s succeeded"
+msgstr "支付%1$s成功"
+
+#: src/gateway.php:450 src/gateway.php:2214
+#, php-format
+msgid "Failed to deposit %1$s"
+msgstr "%1$s存入失敗"
+
+#: src/gateway.php:451 src/gateway.php:2215
+#, php-format
+msgid "Deposit %1$s succeeded"
+msgstr "存款%1$s成功"
+
+#: src/gateway.php:452 src/gateway.php:2216
+#, php-format
+msgid "Failed to pay %1$s token"
+msgstr "无法支付%1$s代币"
+
+#: src/gateway.php:455 src/gateway.php:2219
+#, php-format
+msgid "Failed to pay %1$s token: insufficient balance"
+msgstr "无法支付%1$s代币：余额不足"
+
+#: src/gateway.php:458 src/gateway.php:2222
+#, php-format
+msgid "Pay %1$s token succeeded"
+msgstr "支付%1$s令牌成功"
+
+#: src/gateway.php:461 src/gateway.php:2225
+#, php-format
+msgid "Failed to pay %1$s - rejected"
+msgstr "未能支付%1$s：被拒絕"
+
+#: src/gateway.php:464 src/gateway.php:2228
+#, php-format
+msgid "Failed to pay %1$s token - rejected"
+msgstr "无法支付%1$s代币-被拒绝"
+
+#: src/gateway.php:467 src/gateway.php:2231
+#, php-format
+msgid "Failed to deposit %1$s token"
+msgstr "无法存入%1$s代币"
+
+#: src/gateway.php:470 src/gateway.php:2234
+#, php-format
+msgid "Failed to deposit %1$s token: insufficient balance"
+msgstr "无法存放%1$s代币：余额不足"
+
+#: src/gateway.php:473 src/gateway.php:2237
+#, php-format
+msgid "Deposit %1$s token succeeded"
+msgstr "存款%1$s代币成功"
+
+#: src/gateway.php:476 src/gateway.php:2240
+#, php-format
+msgid "Failed to deposit %1$s - rejected"
+msgstr "%1$s存入失敗：被拒絕"
+
+#: src/gateway.php:479 src/gateway.php:2243
+#, php-format
+msgid "Failed to deposit %1$s token - rejected"
+msgstr "无法存入%1$s代币-被拒绝"
+
+#: src/gateway.php:482 src/gateway.php:511 src/gateway.php:2246
+#: src/gateway.php:2279
+msgid "Copied to clipboard"
+msgstr "复制到剪贴簿"
+
+#: src/gateway.php:483 src/gateway.php:2248
+#, php-format
+msgid "You have rejected the store to %1$s Wallet connect request"
+msgstr "您已拒絕%1$s錢包連接請求的商店"
+
+#: src/gateway.php:486 src/gateway.php:2251
+msgid "Payment succeeded!"
+msgstr "付款成功！"
+
+#: src/gateway.php:487 src/gateway.php:2252
+msgid "Payment succeeded! Reload page if it was not auto reloaded."
+msgstr "付款成功！如果没有自动重新加载，请重新加载页面。"
+
+#: src/gateway.php:488 src/gateway.php:2253
+msgid "Payment status: not complete."
+msgstr "付款状态：进行中，未完成。"
+
+#: src/gateway.php:489 src/gateway.php:2254
+msgid "Network mismatch. Choose another network or ask site administrator."
+msgstr "MetaMask网络不匹配。选择其他网络或询问网站管理员。"
+
+#: src/gateway.php:490 src/gateway.php:2255
+#, php-format
+msgid ""
+"Network mismatch. Chosen network is %1$s, but this site is configured for "
+"%2$s. Choose another network or ask site administrator"
+msgstr ""
+"网络不匹配。 选择的网络为%1$s，但此站点配置为%2$s。 选择另一个网络或询问站点"
+"管理员"
+
+#: src/gateway.php:491 src/gateway.php:2257
+#, php-format
+msgid "To use the QR-code feature input your %1$s account address please"
+msgstr "要使用QR碼功能，請輸入您的%1$s帳戶地址"
+
+#: src/gateway.php:495 src/gateway.php:517 src/gateway.php:520
+#: src/gateway.php:2261 src/gateway.php:2285 src/gateway.php:2303
+msgid "QR-code"
+msgstr "二维码"
+
+#: src/gateway.php:496 src/gateway.php:2262
+msgid "Enter account address"
+msgstr "录入账户地址"
+
+#: src/gateway.php:497 src/gateway.php:504 src/gateway.php:2263
+#: src/gateway.php:2271
+msgid "OK"
+msgstr "好"
+
+#: src/gateway.php:498 src/gateway.php:2264
+msgid "Cancel"
+msgstr "取消"
+
+#: src/gateway.php:499 src/gateway.php:528 src/gateway.php:2265
+#: src/gateway.php:2311
+msgid "Account"
+msgstr "帐户"
+
+#: src/gateway.php:500 src/gateway.php:2267
+msgid "Pay"
+msgstr "支付"
+
+#: src/gateway.php:501 src/gateway.php:2268
+msgid "Deposit"
+msgstr "存款"
+
+#: src/gateway.php:502 src/gateway.php:2269
+msgid "Error"
+msgstr "错误"
+
+#: src/gateway.php:503 src/gateway.php:2270
+msgid "Alert"
+msgstr "警报"
+
+#: src/gateway.php:505 src/gateway.php:524 src/gateway.php:2272
+#: src/gateway.php:2307
+msgid "N/A"
+msgstr "不适用"
+
+#: src/gateway.php:506 src/gateway.php:2274
+#, php-format
+msgid "%1$s Payment"
+msgstr "%1$s付款"
+
+#: src/gateway.php:509 src/gateway.php:2277
+msgid "Token Deposit"
+msgstr "Token存款"
+
+#: src/gateway.php:510 src/gateway.php:2278
+msgid "Token Payment"
+msgstr "Token支付"
+
+#: src/gateway.php:512 src/gateway.php:2280
+msgid "Advanced"
+msgstr "进阶"
+
+#: src/gateway.php:513 src/gateway.php:2281
+msgid "Open to see advanced controls"
+msgstr "打开查看高级控制"
+
+#: src/gateway.php:514 src/gateway.php:2282
+msgid "Payment Step"
+msgstr "付款步骤"
+
+#: src/gateway.php:516 src/gateway.php:2284
+msgid "Copy to clipboard"
+msgstr "复制到剪贴簿"
+
+#: src/gateway.php:518 src/gateway.php:2286
+msgid "Value"
+msgstr "值"
+
+#: src/gateway.php:519 src/gateway.php:2287
+msgid "Data"
+msgstr "数据"
+
+#: src/gateway.php:521 src/gateway.php:2304
+msgid ""
+"QR-code is a read-only mode. You can copy values or scan QR-codes for the To "
+"address, Value and Data fields to make a payment with your favorite mobile "
+"wallet."
+msgstr ""
+"二维码是只读模式。您可以复制数值或扫描二维码来获得“收件人”，“值”和“数据”，去"
+"使用您喜欢的移动钱包进行付款。"
+
+#: src/gateway.php:522 src/gateway.php:2305
+#, php-format
+msgid "Payment succeeded! Tx %s"
+msgstr "付款成功！ 交易%s"
+
+#: src/gateway.php:523 src/gateway.php:2306
+msgid "Balance"
+msgstr "余额"
+
+#: src/gateway.php:526 src/gateway.php:2309
+msgid "Choose currency to pay with"
+msgstr "选择支付的货币"
+
+#: src/gateway.php:527 src/gateway.php:2310 src/main.php:528
+msgid "Amount"
+msgstr "总额"
+
+#: src/gateway.php:529 src/gateway.php:2312
+msgid "Connect"
+msgstr "连接"
+
+#: src/gateway.php:530 src/gateway.php:2313
+msgid "Disconnect"
+msgstr "断开"
+
+#: src/gateway.php:531 src/gateway.php:2314
+msgid "Scan QR-code"
+msgstr "扫描二维码"
+
+#: src/gateway.php:532 src/gateway.php:2315
+msgid "Confirmations"
+msgstr "确认"
+
+#: src/gateway.php:533 src/gateway.php:2316
+#, php-format
+msgid "Tx confirmations %s"
+msgstr "交易确认%s"
+
+#: src/gateway.php:748
+#, php-format
+msgid "Payment in %1$s will be due."
+msgstr "将支付%1$s."
+
+#: src/gateway.php:758 src/gateway.php:771
+#, php-format
+msgid "Payment in %1$s or an equivalent in supported %2$s tokens will be due."
+msgstr "将以%1$s或等价的被支持%2$s代币付款。"
+
+#: src/gateway.php:766
+#, php-format
+msgid "Payment in %1$s or an equivalent in %2$s tokens will be due."
+msgstr "必須以%1$s或等值的%2$s代幣付款。"
+
+#: src/gateway.php:779 src/gateway.php:788
+#, php-format
+msgid "Payment in a supported %1$s tokens will be due."
+msgstr "必须使用受支持的%1$s代币付款。"
+
+#: src/gateway.php:786
+#, php-format
+msgid "Payment in %s tokens will be due."
+msgstr "将支付 %s 代币。"
+
+#: src/gateway.php:851
+msgid "Enable / disable"
+msgstr "启用/禁用"
+
+#: src/gateway.php:853
+#, php-format
+msgid "Enable payment with %1$s or %2$s tokens"
+msgstr "使用%1$s或%2$s令牌啟用付款"
+
+#: src/gateway.php:877
+msgid "Basic settings"
+msgstr "基本设定"
+
+#: src/gateway.php:882
+msgid "Enable debug mode"
+msgstr "启用调试模式"
+
+#: src/gateway.php:883
+msgid "Enable only if you are diagnosing problems."
+msgstr "仅在诊断问题时启用。"
+
+#: src/gateway.php:885
+#, php-format
+msgid "Log interactions inside <code>%s</code>"
+msgstr "在<code>%s</code>内部交互记录"
+
+#: src/gateway.php:889
+msgid "Title"
+msgstr "标题"
+
+#: src/gateway.php:891
+msgid ""
+"This controls the name of the payment option that the user sees during "
+"checkout."
+msgstr "这将控制用户在结账时看到的付款选项的名称。"
+
+#: src/gateway.php:903 src/main.php:524
+msgid "Payment details"
+msgstr "付款详情"
+
+#: src/gateway.php:912
+#, php-format
+msgid ""
+"The %2$s address payment should be sent to. Make sure to use one address per "
+"one online store. Do not use one address for two or more stores! Also, make "
+"sure to use a %1$s tokens compatible wallet if you are planning to accept it!"
+msgstr ""
+"%2$s地址付款應發送到。 確保每個網上商店使用一個地址。 不要在兩個或兩個以上的"
+"商店中使用一個地址！ 另外，如果您打算接受%1$s令牌兼容的錢包，請確保使用它！"
+
+#: src/gateway.php:919
+#, php-format
+msgid "Supported %1$s tokens list"
+msgstr "支持的%1$s代币列表"
+
+#: src/gateway.php:923
+msgid "Provide a list of tokens you want to support."
+msgstr "提供一个你想支持的Token清单."
+
+#: src/gateway.php:928
+#, php-format
+msgid "Disable %1$s"
+msgstr "禁用%1$s"
+
+#: src/gateway.php:932
+#, php-format
+msgid "Disallow customer to pay with %1$s"
+msgstr "禁止客戶使用%1$s付款"
+
+#: src/gateway.php:936
+msgid ""
+"This option is useful to accept only some token. It is an advanced option. "
+"Use with care."
+msgstr "此选项对于限制仅接受某些代币很有用。这是一个高级选项。小心使用。"
+
+#: src/gateway.php:941
+#, php-format
+msgid "%1$s decimals"
+msgstr "%1$s小數"
+
+#: src/gateway.php:945
+#, php-format
+msgid ""
+"Number of digits after a decimal point for %1$s display. 5 is used by "
+"default."
+msgstr "%1$s顯示的小數點後的位數。 默認情況下使用5。"
+
+#: src/gateway.php:959
+msgid "Mark %1$s price up by %"
+msgstr "標記%1$s價格上漲％"
+
+#: src/gateway.php:962
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1ETH "
+"value with a 1.00% markup will be presented to the customer as 1.01ETH."
+msgstr ""
+"为了帮助弥补货币波动，该插件可以自动为您标记转换后的汇率。这是以百分比来标记"
+"的，因此带有1.00％标记的1ETH值将显示为1.01ETH。"
+
+#: src/gateway.php:973
+msgid "Mark %1$s token price up by %"
+msgstr "标记%1$s Token为 %"
+
+#: src/gateway.php:976
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1 %1$s "
+"Token value with a 1.00% markup will be presented to the customer as 1.01 "
+"Token."
+msgstr ""
+"为了帮助弥补货币波动，该插件可以自动为您标记转换后的汇率。这是以百分比来标记"
+"的，因此带有1.00％标记的1 %1$s Token值将显示为1.01 Token。"
+
+#: src/gateway.php:992
+msgid "Blockchain settings"
+msgstr "区块链设置"
+
+#: src/gateway.php:997
+msgid "Blockchain"
+msgstr "区块链"
+
+#: src/gateway.php:999
+msgid ""
+"<p>The blockchain used: mainnet, ropsten, rinkeby, bsctest, bsc. Use mainnet "
+"or bsc in production, and ropsten, rinkeby or bsctest in test mode.</p>"
+msgstr ""
+"<p>使用的区块链网络：mainnet 或 ropsten。建议在正式环境中使用mainnet，在测试"
+"模式下使用ropsten。 </p>"
+
+#: src/gateway.php:1003
+msgid "Gas limit"
+msgstr "燃料上限（Gas limit）"
+
+#: src/gateway.php:1005
+msgid "The gas limit for transaction."
+msgstr "交易的燃料上限（Gas limit for TX）。"
+
+#: src/gateway.php:1015
+msgid "Confirmations number"
+msgstr "确认数量"
+
+#: src/gateway.php:1018
+#, php-format
+msgid ""
+"Number of blocks to wait before confirm order as payed successfully. The "
+"recommended safe value is 12. There are no reason to set it to a higher "
+"value for %1$s blockchain. You can set it to a lower value like 2 to "
+"increase usability."
+msgstr ""
+"確認成功付款之前要等待的塊數。 推薦的安全值為12。對於%1$s區塊鏈，沒有理由將其"
+"設置為更高的值。 您可以將其設置為較低的值（如2）以提高可用性。"
+
+#: src/gateway.php:1028
+#, php-format
+msgid ""
+"%1$sUpgrade to the BIZ plan%2$s to support your private or any other EVM-"
+"compatible blockchain!"
+msgstr "%1$s升級到BIZ計劃%2$s，以支持您的私有或任何其他與EVM兼容的區塊鏈！"
+
+#: src/gateway.php:1036
+msgid "Advanced Blockchain settings"
+msgstr "区块链设置"
+
+#: src/gateway.php:1038
+msgid "These settings should be considered as advanced. Use with care!"
+msgstr "這些設置應視為高級設置。 小心使用！"
+
+#: src/gateway.php:1042 src/gateway.php:1047 src/gateway.php:1067
+#: src/gateway.php:1080 src/gateway.php:1093 src/gateway.php:1105
+#: src/gateway.php:1117 src/gateway.php:1129 src/gateway.php:1165
+#, php-format
+msgid "%1$s Node JSON-RPC Endpoint"
+msgstr "%1$s節點JSON-RPC端點"
+
+#: src/gateway.php:1051
+#, php-format
+msgid ""
+"The %2$s Node JSON-RPC Endpoint URI. This is an advanced setting. Use with "
+"care. This setting supercedes the \"%1$s\" setting."
+msgstr ""
+"%2$s節點JSON-RPC端點URI。 这是高级设置。 小心使用。 此设置取代\"%1$s\"设置。"
+
+#: src/gateway.php:1052 src/gateway.php:1065 src/gateway.php:1156
+msgid "Infura.io API Key"
+msgstr "Infura API密钥"
+
+#: src/gateway.php:1059
+#, php-format
+msgid "%1$s Node Websocket Endpoint"
+msgstr "%1$s節點Websocket端點"
+
+#: src/gateway.php:1064
+#, php-format
+msgid ""
+"The %3$s Node Websocket Endpoint URI. This is an advanced setting. Use with "
+"care. This setting supercedes the \"%1$s\" setting. MUST be set if the \"%2$s"
+"\" setting is set"
+msgstr ""
+"%3$s節點Websocket端點URI。 这是高级设置。 小心使用。 此设置取代\"%1$s\"设"
+"置。 如果设置了\"%2$s\"设置，则必须设置"
+
+#: src/gateway.php:1075
+msgid "Transaction explorer URL"
+msgstr "交易浏览器网址"
+
+#: src/gateway.php:1078
+#, php-format
+msgid ""
+"The %2$s transaction explorer URL template. It should contain %%s pattern to "
+"insert tx hash to. This is an advanced setting most commonly used with the "
+"\"%1$s\" setting. Use with care."
+msgstr ""
+"%2$s事務瀏覽器URL模板。 它应包含%%s模式以向其中插入tx哈希。 这是\"%1$s\"设置"
+"最常使用的高级设置。 小心使用。"
+
+#: src/gateway.php:1088
+msgid "Base crypto currency"
+msgstr "基本加密貨幣"
+
+#: src/gateway.php:1091
+#, php-format
+msgid ""
+"The base crypto currency ticker for the blockchain configured, like ETH for "
+"Ethereum or BNB for Binance Smart Chain. This is an advanced setting most "
+"commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"配置的區塊鏈的基本加密貨幣行情自動收錄器，例如ETH代表Ethereum或BNB代表"
+"Binance Smart Chain。这是\"%1$s\"设置最常使用的高级设置。 小心使用。"
+
+#: src/gateway.php:1100
+msgid "Base crypto currency name"
+msgstr "基本加密貨幣名稱"
+
+#: src/gateway.php:1103
+#, php-format
+msgid ""
+"The base crypto currency ticker name for the blockchain configured, like "
+"Ether for Ethereum or BNB for Binance Smart Chain. This is an advanced "
+"setting most commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"配置的區塊鏈的基本加密貨幣代碼名稱，例如以太坊（Ethereum）的Ether或幣安智能鏈"
+"（Binance Smart Chain）的BNB。这是\"%1$s\"设置最常使用的高级设置。 小心使用。"
+
+#: src/gateway.php:1112
+msgid "Token standard name"
+msgstr "令牌標準名稱"
+
+#: src/gateway.php:1115
+#, php-format
+msgid ""
+"The crypto currency token standard name for the blockchain configured, like "
+"ERC20 for Ethereum or BEP20 for Binance Smart Chain. This is an advanced "
+"setting most commonly used with the \"%1$s\" setting. Use with care."
+msgstr ""
+"配置的區塊鏈的加密貨幣令牌標準名稱，例如Ethereum的ERC20或Binance Smart Chain"
+"的BEP20。 这是\"%1$s\"设置最常使用的高级设置。 小心使用。"
+
+#: src/gateway.php:1124
+msgid "Blockchain display name"
+msgstr "區塊鏈顯示名稱"
+
+#: src/gateway.php:1127
+#, php-format
+msgid ""
+"The display name for the blockchain configured, like Ethereum or Binance "
+"Smart Chain. This is an advanced setting most commonly used with the \"%1$s"
+"\" setting. Use with care."
+msgstr ""
+"配置的區塊鏈的顯示名稱，例如Ethereum或Binance Smart Chain。 这是\"%1$s\"设置"
+"最常使用的高级设置。 小心使用。"
+
+#: src/gateway.php:1139
+msgid "API credentials"
+msgstr "API 凭证"
+
+#: src/gateway.php:1144
+msgid "Cryptocompare API Key"
+msgstr "Cryptocompare API 密钥"
+
+#: src/gateway.php:1147 src/gateway.php:1175
+#, php-format
+msgid ""
+"<p>The API key for the %1$s. You need to register on this site to obtain it."
+"</p>"
+msgstr "<p>%1$s的API密钥。 您需要在此站点上注册才能获取它。</p>"
+
+#: src/gateway.php:1159
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to register on this site to obtain it. "
+"Use this guide please: %2$s."
+msgstr "%1$s的API密钥。 您需要在此站点上注册才能获取它。 请使用本指南：%2$s。"
+
+#: src/gateway.php:1163
+#, php-format
+msgid "Note that this setting is ignored if the \"%1$s\" setting is set"
+msgstr "请注意，如果设置了\"%1$s\"设置，则会忽略此设置"
+
+#: src/gateway.php:1172
+msgid "Coinmarketcap.com API Key"
+msgstr "Coinmarketcap.com API密钥"
+
+#: src/gateway.php:1187
+msgid "Advanced settings"
+msgstr "高级设置"
+
+#: src/gateway.php:1192
+msgid "Yes / No"
+msgstr "是/否"
+
+#: src/gateway.php:1193
+msgid "Custom WooCommerce currency"
+msgstr "自定义WooCommerce货币"
+
+#: src/gateway.php:1195
+msgid "Check if custom WooCommerce currency is used in this store"
+msgstr "检查此商店是否使用自定义WooCommerce货币"
+
+#: src/gateway.php:1199
+msgid "Order Status"
+msgstr "訂單狀態"
+
+#: src/gateway.php:1200
+msgid "Payment Complete Order Status"
+msgstr "付款完成訂單狀態"
+
+#: src/gateway.php:1202
+msgid "The status to apply for order after payment is complete"
+msgstr "付款完成後申請訂單的狀態"
+
+#: src/gateway.php:1207
+msgid "Order expire timeout, seconds"
+msgstr "訂單過期超時（秒）"
+
+#: src/gateway.php:1209
+msgid ""
+"The number of seconds to wait for a payment confirmation before expiring the "
+"order. 24 hours is the default."
+msgstr "訂單到期前等待付款確認的秒數。 默認為24小時。"
+
+#: src/gateway.php:1231
+msgid "Need help to configure this plugin?"
+msgstr "需要帮助来配置这个插件？"
+
+#: src/gateway.php:1234 src/gateway.php:1247
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr "随时与%1$s雇用我！%2$s"
+
+#: src/gateway.php:1242
+#, php-format
+msgid "Need help to develop a %1$s token for your ICO?"
+msgstr "需要为您的ICO协助开发%1$s代币？"
+
+#: src/gateway.php:1255
+#, php-format
+msgid "Want to sell your %1$s ICO token from your ICO site?"
+msgstr "想从您的ICO网站出售您的%1$s ICO代币吗？"
+
+#: src/gateway.php:1260
+#, php-format
+msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
+msgstr "安装%1$sEthereumICO WordPress插件%2$s！"
+
+#: src/gateway.php:1268
+#, php-format
+msgid "Want to sell %1$s token for fiat and/or Bitcoin?"
+msgstr "想要用法币/或比特币来出售%1$s代币？"
+
+#: src/gateway.php:1273
+#, php-format
+msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
+msgstr "为WooCommerce插件%2$s安装%1$sCryptocurrency产品！"
+
+#: src/gateway.php:1282
+#, php-format
+msgid "Want to create %1$s wallets on your Wordpress site?"
+msgstr "是否想在您的Wordpress網站上創建%1$s錢包？"
+
+#: src/gateway.php:1287
+#, php-format
+msgid "Install the %1$sWordPress Ethereum Wallet plugin%2$s!"
+msgstr "安裝%1$sWordPress Ethereum Wallet插件%2$s！"
+
+#: src/gateway.php:1304
+#, php-format
+msgid "You must provide an %1$s address before enabling the gateway"
+msgstr "您必須先提供一個%1$s地址，然後才能啟用網關"
+
+#: src/gateway.php:1337
+#, php-format
+msgid ""
+"Your customers will be given instructions about where, and how much to pay. "
+"Your orders will be marked as on-hold when they are placed. And as complete "
+"when payment is recieved. You can update your orders on the <a href=\"%s"
+"\">WooCommerce Orders</a> page."
+msgstr ""
+"您的客户将获得有关付款地点和费用的说明。 下订单时，您的订单将被标记为保留。 "
+"并在收到付款时完成。 您可以在<a href=\"%s\"> WooCommerce订单</a>页面上更新订"
+"单。"
+
+#: src/gateway.php:1441
+#, php-format
+msgid "Order submitted, and payment with %s requested."
+msgstr "提交订单，并请求%s付款。"
+
+#: src/gateway.php:1471 src/gateway.php:1478 src/gateway.php:1484
+#, php-format
+msgid "Order value calculated as %f %s"
+msgstr "订单价值计算为%f%s"
+
+#: src/gateway.php:1490
+msgid "Awaiting payment."
+msgstr "等待付款。"
+
+#: src/gateway.php:1554 src/gateway.php:1769
+#, php-format
+msgid "Order do not need payment, tx check stopped: %s"
+msgstr "订单不需要付款，tx 检查停止：%s"
+
+#: src/gateway.php:1567 src/gateway.php:1783
+#, php-format
+msgid "Order expired.  Order updated to failed: %s"
+msgstr "订单已过期。订单状态更新为失败：%s"
+
+#: src/gateway.php:1602 src/gateway.php:1823
+#, php-format
+msgid "No payment found for order: %s"
+msgstr "订单找不到付款记录：%s"
+
+#: src/gateway.php:1641 src/gateway.php:1864
+#, php-format
+msgid ""
+"PaymentInfo recieved for order_id=%s. %s: %s. eth_value=%s, eth_value_wei=%s"
+msgstr "收到付款资料 order_id =%s。 %s：%s。 eth_value =%s，eth_value_wei =%s"
+
+#: src/gateway.php:1672 src/gateway.php:1897 src/gateway.php:1900
+msgid "Successful payment notification received. Order updated to pending."
+msgstr "收到成功的付款通知。订单已更新为待处理。"
+
+#: src/gateway.php:1715 src/gateway.php:1906
+#, php-format
+msgid ""
+"Non-successful payment notification received. Order updated to failed: %s"
+msgstr "收到了未成功的付款通知。订单已更新为失败：%s"
+
+#: src/gateway.php:1787 src/gateway.php:1789
+msgid "Order was expired."
+msgstr "订单已过期。"
+
+#: src/gateway.php:1910
+msgid "Non-successful payment notification received. Order updated to failed."
+msgstr "收到了未成功的付款通知。订单已更新为失败。"
+
+#: src/gateway.php:1912
+msgid "Non-successful payment notification."
+msgstr "未成功的付款通知。"
+
+#: src/gateway.php:2588
+#, php-format
+msgid "call contract %s method %s for market %s for order %s"
+msgstr "对于订单%s，调用合约%s方法%s为市场%s"
+
+#: src/main.php:258 src/main.php:263 src/main.php:351
+msgid "Unknown network name in configuration settings"
+msgstr "配置设置中的网络名称未知"
+
+#: src/main.php:442
+#, php-format
+msgid "Sent to blockchain. Transaction hash %1$s."
+msgstr "发送到区块链。 交易哈希%1$s。"
+
+#: src/main.php:529
+msgid "Payment page"
+msgstr "付款步骤"
+
+#: src/paymentreceivedemail.php:26
+msgid "ETH/ERC20 payment completed"
+msgstr "ETH / ERC20付款已完成"
+
+#: src/paymentreceivedemail.php:27
+msgid "Notification that payment by ETH/ERC20 has been received."
+msgstr "已收到ETH / ERC20付款的通知。"
+
+#: src/paymentreceivedemail.php:28 src/paymentreceivedemail.php:29
+msgid "Payment received"
+msgstr "已收到付款"
+
+#: src/paymentreceivedemail.php:47
+#, php-format
+msgid "%1$s/%2$s payment completed"
+msgstr "%1$s / %2$s付款已完成"
+
+#: src/paymentreceivedemail.php:51
+#, php-format
+msgid "Notification that payment by %1$s/%2$s has been received."
+msgstr "已收到%1$s / %2$s付款的通知。"
+
+#: src/paymentreceivedemail.php:143
+msgid "Enable/Disable"
+msgstr "启用/停用"
+
+#: src/paymentreceivedemail.php:145
+msgid "Enable this email notification"
+msgstr "启用此电子邮件通知"
+
+#: src/paymentreceivedemail.php:149
+msgid "Subject"
+msgstr "主旨"
+
+#: src/paymentreceivedemail.php:151
+#, php-format
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr "用来设置邮件主旨，留空代表使用预设主旨 : <code>%s</code>。"
+
+#: src/paymentreceivedemail.php:156
+msgid "Email Heading"
+msgstr "电子邮件主旨"
+
+#: src/paymentreceivedemail.php:158
+#, php-format
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr "用来设置邮件通知的主要标题，留空代表使用预设标题: <code>%s</code>。"
+
+#: src/paymentreceivedemail.php:163
+msgid "Email type"
+msgstr "电子邮件类型"
+
+#: src/paymentreceivedemail.php:165
+msgid "Choose which format of email to send."
+msgstr "选择要发送的电子邮件的格式。"
+
+#: src/paymentreceivedemail.php:169
+msgid "Plain text"
+msgstr "纯文本"
+
+#: src/paymentreceivedemail.php:170
+msgid "HTML"
+msgstr "HTML"
+
+#: src/paymentreceivedemail.php:171
+msgid "Multipart"
+msgstr "多部分"
+
+#: templates/emails/epg-payment-received.php:15
+#, php-format
+msgid "Payment received for order %d"
+msgstr "已收到订单%d的付款"
+
+#: templates/emails/epg-payment-received.php:17
+#: templates/emails/plain/epg-payment-received.php:16
+msgid ""
+"Congratulations. We've received payment for your order. We've included your "
+"details below as a reminder of your order."
+msgstr ""
+"恭喜。我们已收到您的订单付款。我们在下方提供了您的详细信息，以提醒您订购。"
+
+#: templates/emails/plain/epg-payment-received.php:14
+#, php-format
+msgid "Payment received for order %d."
+msgstr "已收到订单%d的付款。"
+
+#~ msgid "Failed to deposit %$1s"
+#~ msgstr "存入%1$s失败"

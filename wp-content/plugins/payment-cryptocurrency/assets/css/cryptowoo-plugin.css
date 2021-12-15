@@ -1,0 +1,303 @@
+/* Payment Currency Selection */
+#cw_gateway_description { display: block; }
+
+/* Price estimation */
+/* .crypto-price-table { } */
+.discountinfo,
+.priceinfo { font-weight:bold; }
+.exchangeinfo,
+.cw-rate-ts { font-size: 70%; }
+.crypto-price-table div[id*="price-"] {
+  min-width: 8em;
+}
+.crypto-price-table .cw-coinbtn {
+  cursor: pointer;
+  border-radius: 2px;
+}
+.crypto-price-table .cw-coinbtn:hover {
+  background-color: darkgrey;
+}
+/* Checkout field and rates list */
+.crypto_woo_wp_rates_list { font-size: 80%; font-weight: bold; }
+.selected_currency,
+.selected_currency:hover {
+  background-color: lightgrey;
+}
+
+.cw-noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+								  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.cw-bold {   font-weight: bold; }
+
+/* Payment page styling  */
+.cryptowoo-warning { color: #B94A48; }
+.ngh-message { font-weight: bold; }
+
+#cw-button-row {padding-top: 0.3em;}
+span.ngh-blocktext {   background-color:#ccc; display: block; text-align: center; border-radius: 2px; word-wrap: break-word;  }
+.copywrap-amount { padding: 1%; display: inline; border-radius: 2px;}
+.copywrap-address { padding: 1%; }
+
+.btn-check-payment { font-size: 80%; padding: 2%; border-radius: 2px; text-decoration:none; }
+.btn-change-addr-format {background-color: #e7e7e7; color: black; font-size: 14px}
+.ngh-smalltext { display: block; font-size:65%; }
+.ngh-qr { padding: 0.2em; width: 230px; height: 230px; background-color: #fff; }
+.ngh-payment-details { width: 100%; }
+
+/* Progress Bar */
+#progress { background-color: #ccc;}
+
+/* Tooltip */
+a.cw-tooltip-large-top,
+a.cw-tooltip-large,
+a.cw-tooltip {
+	position:relative;
+	text-decoration:none !important;
+	font-weight: normal;
+	opacity:1;
+
+}
+
+a.cw-tooltip span.cw-tt-info {
+	z-index: 999;
+	padding:2px 4px;
+	background:#ccc;
+	border:1px solid #bbb;
+	border-radius:3px;
+	min-width:12em;
+	position:absolute;
+	top:2em;
+	left:0.5em;
+	color:#404040;
+	box-shadow:0 1px 0 #fff;
+	text-align:center;
+	opacity:0;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	-o-transition:opacity 1s ease;
+	transition: opacity 1s ease;
+	font-weight: normal;
+	font-size: 110%;
+
+}
+a.cw-tooltip-large span.cw-tt-info-large {
+	padding:5px 10px;
+	background:#ccc;
+	border:1px solid #bbb;
+	border-radius:3px;
+	min-width:300px;
+	position:absolute;
+	top:25px;
+	left:5px;
+	color:#404040;
+	box-shadow:0 1px 0 #fff;
+	text-align:center;
+	opacity:0;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	-o-transition:opacity 1s ease;
+	transition: opacity 1s ease;
+	font-weight: normal;
+
+}
+a.cw-tooltip-large span.cw-tt-info-large-alt-pos {
+	padding:5px 10px;
+	background:#ccc;
+	border:1px solid #bbb;
+	border-radius:3px;
+	min-width:300px;
+	position:absolute;
+	top:3em;
+	left:-1em;
+	color:#404040;
+	box-shadow:0 1px 0 #fff;
+	text-align:center;
+	opacity:0;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	-o-transition:opacity 1s ease;
+	transition: opacity 1s ease;
+	font-weight: normal;
+}
+a.cw-tooltip-large-top span.cw-tt-info-large-alt-pos-top {
+	padding:5px 10px;
+	background:#ccc;
+	border:1px solid #bbb;
+	border-radius:3px;
+	min-width:300px;
+	position:absolute;
+	bottom:1em;
+	left:-1em;
+	color:#404040;
+	box-shadow:0 1px 0 #fff;
+	text-align:center;
+	opacity:0;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	-o-transition:opacity 1s ease;
+	transition: opacity 1s ease;
+	font-weight: normal;
+}
+
+a.cw-tooltip-large span:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #bbb;
+	display:block;
+	content: " ";
+	position:absolute;
+	top:-6px;
+	left:48%;
+}
+a.cw-tooltip-large-top span:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #bbb;
+	display:block;
+	content: " ";
+	position:absolute;
+	bottom:-6px;
+	left:48%;
+}
+a.cw-tooltip .cw-tt-info:after {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #bbb;
+	display:block;
+	content: " ";
+	position:absolute;
+	top:-0.5em;
+	left:0.6em;
+}
+a.cw-tooltip-large:hover span,
+a.cw-tooltip-large-top:hover span,
+a.cw-tooltip:hover span { opacity:1; }
+
+/* Columns */
+.cw-col-1 {width: 8.33%;}
+.cw-col-2 {width: 16.66%;}
+.cw-col-3 {width: 25%;}
+.cw-col-4 {width: 33.33%;}
+.cw-col-5 {width: 41.66%;}
+.cw-col-6 {width: 50%;}
+.cw-col-7 {width: 58.33%;}
+.cw-col-8 {width: 66.66%;}
+.cw-col-9 {width: 75%;}
+.cw-col-10 {width: 83.33%;}
+.cw-col-11 {width: 91.66%;}
+.cw-col-12 {width: 100%;}
+
+[class*="cw-col-"] {
+	float: left;
+	padding: 5px;
+	/* border: 1px solid red; */
+}
+
+.cw-row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media only screen and (max-width: 1331px) {
+	/* For mobile phones: */
+	.cw-label {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 925px) {
+	/* For mobile phones: */
+	[class*="cw-col-"],
+	.cw-label {
+		width: 100%;
+	}
+}
+
+/* Branding */
+.cw-branding {
+   text-align: right;
+   padding: 0 0 1em 5px;
+}
+a.about-cryptowoo {
+  text-decoration: none !important;
+  background-color: #fff;
+  border-radius: 1px;
+}
+.about-ngh { font-size: 95%; }
+
+/* Thank you page cryptocurrency info */
+.thankyou-ngh { padding: 0.5em 0; }
+.thankyou-cryptowoo { word-wrap: break-word; }
+
+/* Admin backend */
+#cryptowoo-aside {
+	width: 35%;
+	float: left;
+}
+
+table.cw-table { background-color: #efefef;  }
+.cw-table,
+.cw-table tr { border: 1px solid #666; }
+
+.cw-message { color:red; width:auto;    }
+.cw-postbox { padding:1em; background-color: #efefef; }
+
+.section-head {
+	border: 1px solid #CCC;
+	border-bottom-width: medium;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	background: none repeat scroll 0 0 #E4E4E4;
+	color: #555;
+	line-height: 16px;
+	padding: 4px 14px 6px;
+	text-decoration: none;
+	margin: 2px 4px 2px 0;
+}
+
+.section-row {
+	border: 1px solid #CCC;
+	border-bottom-width: medium;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	background: none repeat scroll 0 0 #E4E4E4;
+	color: #555;
+}
+
+/* Currency switcher plugin flag */
+img.dd-image-right {
+	border-radius: 2px;
+}
+
+.cw-hidden { display: none; }
+
+.cw-crypto-address {
+	word-break: break-all;
+}
+
+/* TODO: Apply this for only CryptoWoo! */
+#TB_window, #TB_ajaxContent {
+	width: auto !important;
+	height: auto !important;
+	margin: 0 auto !important;
+}

@@ -1,0 +1,915 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: S2W - Import Shopify to WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-14 03:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.3-alpha-45292"
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:38
+msgid ""
+"Please install and activate WooCommerce to use Import Shopify to WooCommerce "
+"plugin."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:180
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:183
+msgid "No log file selected."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:187
+msgid "Log file not found."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:216
+msgid "Settings"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:262
+msgid ""
+"S2W - Import Shopify to WooCommerce: Product images are being downloaded in "
+"the background."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:265
+#, php-format
+msgid ""
+"Please goto <a target=\"_blank\" href=\"%s\">Media</a> and view downloaded "
+"images. If <strong>some images are downloaded repeatedly and no new images "
+"are downloaded</strong>, please:"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:267
+msgid "<strong>Stop importing products immediately</strong>"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:268
+#, php-format
+msgid ""
+"<a class=\"s2w-cancel-download-images-button\" href=\"%s\">Cancel "
+"downloading</a></strong>"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:269
+msgid ""
+"Contact <strong>support@villatheme.com</strong> or create your ticket at <a "
+"target=\"_blank\" href=\"https://villatheme."
+"com/supports/forum/plugins/import-shopify-to-woocommerce/\">https:"
+"//villatheme.com/supports/forum/plugins/import-shopify-to-woocommerce/</a>"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:278
+msgid ""
+"S2W - Import Shopify to WooCommerce: There are products images in the queue."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:282
+#, php-format
+msgid ""
+"If the same images are downloaded again and again, please <strong><a "
+"class=\"s2w-empty-queue-images-button\" href=\"%s\">Empty queue</a></strong> "
+"and go to Products to update missing images for your products."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:285
+#, php-format
+msgid ""
+"If products images were downloading normally before, please <strong><a "
+"class=\"s2w-start-download-images-button\" href=\"%s\">Resume download</a>"
+"</strong>"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:295
+msgid ""
+"S2W - Import Shopify to WooCommerce: Product images are downloaded "
+"successfully."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1789
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2204
+msgid "Store settings"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1790
+msgid "Payments"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1791
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2205
+msgid "Shipping zones"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1792
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2206
+msgid "Taxes"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1793
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2207
+msgid "Pages"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1794
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2208
+msgid "Blogs"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1795
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2210
+msgid "Coupons"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1796
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2209
+msgid "Customers"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1797
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2202
+msgid "Products"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1798
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2211
+msgid "Orders"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1802
+msgid "Store address can not be empty! "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1803
+msgid "API key can not be empty! "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1804
+msgid "API secret can not be empty! "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1805
+msgid "Can not connect to your Shopify store. Please check your info."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1806
+msgid "Error assigning product categories"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1807
+msgid "Checking, please wait ..."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1808
+msgid ""
+"Click Import to start importing or Update cache to fetch new data to import"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1809
+msgid "Assigning product categories."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1810
+msgid "Importing..."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1811
+msgid "Completed"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1820
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1891
+msgid "Import Shopify to WooCommerce"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1820
+msgid "Shopify to Woo"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1829
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1830
+msgid "Logs"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1837
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1838
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2367
+msgid "System Status"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1849
+msgid "Import Shopify to WooCommerce log files"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1861
+msgid "View"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1874
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:37
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:34
+msgid "Shopify Admin API security recommendation"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1877
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:40
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:37
+msgid "You should enable only what is necessary for your app to work."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1878
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:41
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:38
+msgid ""
+"Treat the API key and password like you would any other password, since "
+"whoever has access to these credentials has API access to the store."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1879
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:42
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:39
+msgid "Change your API at least once a month"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1880
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:43
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:40
+msgid ""
+"If you only use API to import data, remove API permissions or delete the API "
+"after import completed"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1897
+msgid ""
+"You need to enter correct domain, API key and API secret to be able to import"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1905
+msgid "General settings"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1916
+msgid "Store address"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1923
+msgid "Your Store address, eg: <strong>myshop.myshopify.com</strong>"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1928
+msgid "API key"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1935
+msgid "The API key that has the right to access your products"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1940
+msgid "API secret(Password)"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1947
+msgid "Password of the API key above"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1955
+msgid "Learn how to get API key"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1967
+msgid "Request timeout(s)"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1981
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1988
+msgid "Import Products options"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1985
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2176
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:293
+msgid "Save"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:1994
+msgid "Products per ajax request"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2005
+msgid "Restrict results to after the specified ID"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2010
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2020
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2030
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2040
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2050
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2060
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2070
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2080
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2122
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2286
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:55
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:53
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/import_csv.php:92
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:121
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:191
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:263
+msgid "Upgrade this feature"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2015
+msgid "Filter results by product type"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2025
+msgid "Filter results by product vendor"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2035
+msgid "Filter results by collection ID"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2045
+msgid "Import products published after date"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2055
+msgid "Import products published before date"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2065
+msgid "Use global attributes"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2075
+msgid "Keep product slug"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2085
+msgid "Import Products sequence"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2091
+msgid "Order by Title Ascending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2092
+msgid "Order by Title Descending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2093
+msgid "Order by Created Date Ascending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2094
+msgid "Order by Created Date Descending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2095
+msgid "Order by Updated Date Ascending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2096
+msgid "Order by Updated Date Descending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2098
+msgid "This is to sort the results after applying all filters above if any"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2103
+msgid "Download images"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2111
+msgid "Product images will be downloaded in the background."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2128
+msgid "Product status"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2135
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:125
+msgid "Publish"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2136
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:126
+msgid "Pending"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2137
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:127
+msgid "Draft"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2140
+msgid "Status of products after importing successfully"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2145
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2203
+msgid "Product categories"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2167
+msgid "Choose categories you want to add imported products to"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2191
+msgid "How to use this plugin"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2218
+msgid "Data"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2219
+msgid "Enable"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2220
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:164
+msgid "Status"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2243
+msgid "View settings"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2314
+#, php-format
+msgid "Imported: %s"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2337
+msgid "Enable all"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2351
+msgid "Import"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2353
+msgid "Delete import history"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2356
+msgid "Logs: "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2371
+msgid "Option name"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2372
+msgid "Your option value"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2373
+msgid "Minimum recommended value"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2392
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2410
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2428
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2443
+msgid "Required"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2431
+msgid "Log Directory Writable"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2438
+#, php-format
+msgid ""
+"To allow logging, make <code>%s</code> writable or define a custom <code>"
+"VI_IMPORT_SHOPIFY_TO_WOOCOMMERCE_CACHE</code>."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2451
+msgid "PHP Time Limit"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2455
+msgid "300"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2458
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2463
+msgid "1000"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2466
+msgid "Memory Limit"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/import-shopify-to-woocommerce.php:2471
+msgid "64M"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:24
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:33
+msgid "Cron Update Orders"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:52
+msgid "Cron Update Orders is currently DISABLED"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:61
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:60
+msgid "Run update every"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:70
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:147
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:69
+msgid "Day(s)"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:76
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:75
+msgid "Run update at"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:87
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:86
+msgid "Hour"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:97
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:96
+msgid "Minute"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:107
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:106
+msgid "Second"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:116
+msgid "Only update orders with status:"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:138
+msgid "Only update orders created in the last x day(s):"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:149
+msgid "Set 0 to skip filtering orders by date range"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:154
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:168
+msgid "Select options to update"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:165
+msgid "Billing Address"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:166
+msgid "Shipping Address"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:167
+msgid "Fulfillments"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_orders.php:177
+msgid "Which order data do you want to update?"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:21
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:30
+msgid "Cron Update Products"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:50
+msgid "Cron Update Products is currently DISABLED"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:115
+msgid "Only update products with status:"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:141
+msgid "Only update products of these categories:"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:163
+msgid "Leave blank to update products from all categories"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:178
+msgid "Price"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/cron_update_products.php:179
+msgid "Inventory"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:108
+msgid "Error Images"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:129
+msgid "All error images"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:163
+msgid "Previous Page"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:172
+msgid "Current Page"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:177
+msgid " of "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:198
+msgid "Next Page"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:210
+msgid "Download All"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:211
+msgid "Delete All"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:223
+msgid "Index"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:224
+msgid "Product ID"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:225
+msgid "Product Title"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:226
+msgid "Product/Variation IDs"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:227
+msgid "Image"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:228
+msgid "Image alt"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:229
+msgid "Set gallery"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:230
+msgid "Actions"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:276
+msgid "Download"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:278
+msgid "Delete"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:293
+msgid "You don't have any error images. "
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:330
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/error_images.php:331
+msgid "Are you sure you want to delete all item on this page?"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/import_csv.php:27
+msgid "Import CSV"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/import_csv.php:86
+msgid "Import products from CSV"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/import_csv.php:89
+msgid "This is a Premium feature."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:73
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:82
+msgid "Webhooks"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:92
+msgid "Webhooks shared secret"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:102
+msgid ""
+"You can find your shared secret within the message at the bottom of "
+"Notifications settings in your Shopify admin: \"All your webhooks will be "
+"signed with <strong>{your_shared_secret}</strong> so you can verify their "
+"integrity.\""
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:103
+msgid "You must create at least 1 webhook to see the shared secret"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:104
+msgid ""
+"Please read the <a href=\"http://docs.villatheme.com/import-shopify-to-"
+"woocommerce/#set_up_child_menu_4124\" target=\"_blank\">docs</a> for more "
+"details"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:116
+msgid "Enable Orders"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:126
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:196
+msgid "Update which?"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:131
+msgid "Order status"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:132
+msgid "Order date"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:133
+msgid "Order fulfillments"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:134
+msgid "Billing address"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:135
+msgid "Shipping address"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:136
+msgid "Line items"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:154
+msgid "This option is used for updating order via webhook"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:159
+msgid "Orders Webhook URL"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:168
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:240
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:277
+msgid "Copy"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:172
+msgid ""
+"If you want to <strong>only import new order when one is created</strong> at "
+"your Shopify store, create a webhook with event <strong>Order "
+"Creation</strong> and use this URL for the webhook URL."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:173
+msgid ""
+"If you want to both <strong>create new order when one is created and update "
+"existing order when one is updated</strong> at your Shopify store, create a "
+"webhook with event <strong>Order Update</strong> and use this URL for the "
+"webhook URL."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:186
+msgid "Enable Products"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:201
+msgid "Product title"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:202
+msgid "Product price"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:203
+msgid "Product inventory"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:204
+msgid "Product description"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:205
+msgid "Product images"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:206
+msgid "Variation attributes"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:207
+msgid "Variation SKU"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:208
+msgid "Product slug"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:226
+msgid "This option is used for updating product via webhook"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:231
+msgid "Products Webhook URL"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:244
+msgid ""
+"If you want to <strong>only import new product when one is created</strong> "
+"at your Shopify store, create a webhook with event <strong>Product "
+"Creation</strong> and use this URL for the webhook URL."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:245
+msgid ""
+"If you want to both <strong>create new product when one is created and "
+"update existing product when one is updated</strong> at your Shopify store, "
+"create a webhook with event <strong>Product Update</strong> and use this URL "
+"for the webhook URL."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:258
+msgid "Enable Customers"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:268
+msgid "Customers Webhook URL"
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:281
+msgid ""
+"If you want to <strong>only import new customer when one is created</strong> "
+"at your Shopify store, create a webhook with event <strong>Customer "
+"Creation</strong> and use this URL for the webhook URL."
+msgstr ""
+
+#: E:/Git/master/free-version/import-shopify-to-woocommerce/import-shopify-to-woocommerce/admin/webhooks.php:282
+msgid ""
+"If you want to both <strong>create new customer when one is created and "
+"update existing customer when one is updated</strong> at your Shopify store, "
+"create a webhook with event <strong>Customer Update</strong> and use this "
+"URL for the webhook URL."
+msgstr ""
+
+#. Name of the plugin
+msgid "S2W - Import Shopify to WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Import all products from Shopify store to WooCommerce"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://villatheme.com/extensions/import-shopify-to-woocommerce"
+msgstr ""
+
+#. Author of the plugin
+msgid "VillaTheme"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://villatheme.com"
+msgstr ""

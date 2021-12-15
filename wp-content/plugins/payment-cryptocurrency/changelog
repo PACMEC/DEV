@@ -1,0 +1,894 @@
+= 0.25.24 2012-05-05 =
+Fixed: Make sure ImageTTFText() exists before trying to generate the security image in generate_sec_image()
+Improved: Update cw-coinfont to v4.0
+Improved: Enable ETH support in CW_TrezorConnect.php
+Improved: Support variable products in CW_Formatting::cryptowoo_crypto_rates_list()
+
+= 0.25.23 2021-02-16 =
+Fixed: Only update exchange rates for enabled currencies during cron job
+Fixed: Remove redundant checkmark icon from notice on payment page
+Fixed: Aelia Currency Switcher for WooCommerce compatibility
+Feature: Add filter for "Quote Refresh Needed" order status change notification email:
+
+```
+/**
+* Override the email notification text for orders that reach the status "Quote Refresh Needed"
+*
+* @param string $txnreference The message text
+* @param WC_Order $order The WooCommerce order object
+*
+* @return string
+*/
+function override_quote_refresh_email_text(string $txnreference, WC_Order $order) {
+ $txnreference = 'Custom message for "quote refresh needed" orders goes here';
+ return $txnreference;
+}
+add_filter('cryptowoo_quote_refresh_txnreference', 'override_quote_refresh_email_text', 10, 2);
+
+```
+
+= 0.25.22 2020-12-03 =
+Fixed: Don't redirect on order-received page
+Improved: Add support for "WooCommerce Multilingual (WCML)" currency switcher
+
+= 0.25.21 2020-10-29 =
+Improved: Add option to enable "Pay with Trezor" button
+
+= 0.25.20 2020-10-29 =
+Fixed: Decimal mismatch between order meta and payment page
+Fixed: Fix missing placeholder in add_blockcypher_limit_link()
+Fixed: Don't force update blockcypher token limits on every page load
+Fixed: Undefined index $options[ $processing_api_id ] for non-existent "processing_api_%s" option
+Modified: Increase Blockcypher token limit caching from 2 to 10 minutes
+Modified: Send maximum one "Processing API Error" email per hour
+
+= 0.25.19 2020-10-16 =
+Fixed: Don't disable blockexplorer URL formatting in main plugin
+Improved: Prevent excessive logging of exchange rate data
+improved: Update add-on currencies only once
+Modified: Disable Insight get_block_height() (A valid url was not provided)
+Fixed: Do not set $address variable to an empty string if we do not have a preferred block explorer
+Improved: Cast $crypto_amount to integer
+
+= 0.25.18 2020-10-16 =
+Fixed: Hardcoded values in "Pay with Trezor" button
+Fixed: Only force update currencies that are enabled
+Improved: Add function set_base_currency_name()
+Feature: Add ERC-20 custom exchange rate source class
+Improved: Add size parameter to cw_coin_icon_html filter
+
+= 0.25.17 2020-10-06 =
+Feature: Enable "Pay with Trezor" button
+
+= 0.25.16 2020-10-06 =
+
+Fixed: undefined index msg in options-init.php on line 252
+Feature: Add "Pay with Trezor" button to payment page
+Tweak: Update cw-coinfont to version 3
+Tweak: Require bcmath extension
+
+= 0.25.15 2020-10-05 =
+Fixed: Typo in options explanation
+Fixed: Force tooltips on payment page on top of all other elements
+Fixed: Make sure button links on payment page are not underlined
+Feature: Add "copy to clipboard" button to payment page
+Improved: Better logging in get_coin_price()
+Improved: Remove unused file
+Improved: Add filter to override payment page template path:
+
+  $custom_template = apply_filters('cw_payment_page_template_path', get_stylesheet_directory().'/cryptowoo/payment.php');
+
+Improved: Add "connect wallet" button action to payment page:
+
+  do_action('cw_display_wallet_connect_button', $payment_currency);
+
+= 0.25.14 2020-09-26 =
+Fixed: Force . as decimal separator for easy_copy in fbits (eg. order-pay page)
+Fixed: Do not cancel order if a doublespend/RBF attempt is detected
+Fixed: Force "To" crypto amount decimal separator on payment page to '.'
+Improved: Render shortcodes on custom checkout payment and "thank you" page text
+Improved: Shorten license menu titles
+Improved: Deprecate CW_Formatting::cw_get_template_html() and CW_Formatting::cw_ob()
+
+= 0.25.13 2020-09-04 =
+Fixed: Remove dropdown mention from "select payment currency" notice on checkout page
+Feature: Add filters 'cw_underpayment_notice_range' and 'cw_overpayment_buffer' to override mispayment handling on a per-currency basis
+
+    $underpayment_boundaries = apply_filters('cw_underpayment_notice_range',[
+						'lower' => (float)$options['underpayment_notice_range'][1],
+						'upper' => (float)$options['underpayment_notice_range'][2],
+					], $address->payment_currency, $order);
+
+    $overpayment_buffer = apply_filters('cw_overpayment_buffer', (float)$options['overpayment_buffer'], $address->payment_currency, $order);
+
+Feature: Add filter 'cw_crypto_amount_override' to override the crypto_amount before it is added to the order meta
+    $crypto_amount = apply_filters('cw_crypto_amount_override', $crypto_amount, $payment_currency, $order);
+
+Improved: Make sure the countdown is stopped even if there is no response from the server
+Improved: Verify wp_nonce in cw_front_process_open_orders_callback()
+Improved: Get payment details by order_id instead of payment_address before rendering payment page
+Improved: Verify wp_nonce and use wc_order_key instead of payment address to get payment details on frontend callbacks
+Improved: Remove redundant function check_receipt_callback()
+
+= 0.25.12 2020-08-31 =
+Feature: Checkout page currency select field styling options. Read more: https://www.cryptowoo.com/cryptowoo-release-0-25-12/
+Fixed: Missing argument in filter cryptowoo_valid_order_statuses_for_payment
+Fixed: CW_OrderProcessing::decline_order(): quote_refresh, amount_error and address_error should redirect to checkout instead of an empty cart
+
+= 0.25.11 2020-08-28 =
+Fixed: Remove z-index 9999 from nanobar
+Fixed: Non-numeric value in dynamic decimals
+Fixed: Make sure we display unconfirmed amounts on the "Order Received" page if they exist
+Improved: Switch to new cryptocurrency icon font
+Improved: Add option to change color of cryptocurrency icons from colored to black or white
+Improved: Add filter cw_override_preferred_exchange_$lc_currency to override CW_ExchangeRate_Tools::get_preferred_exchange()
+Improved: Rename "Order Received" payment details action cw_display_extra_details_$payment_currency to cw_display_extra_details_order_received_$payment_currency
+Improved: Rename hook cw_display_extra_details_$payment_currency to cw_display_extra_details_payment_$payment_currency and add additional arguments.
+
+= 0.25.10 2020-08-20 =
+Fixed: Unable to add payment addresses to address list in WordPress 5.5
+Fixed: Undefined index multiplier_$currency in CW_Address::get_wallet_config()
+Improved: Add support for WooCommerce Multi Currency switcher plugin (https://villatheme.com/extensions/woo-multi-currency/)
+Improved: Add order meta field "txids" to custom WP_Query vars
+Improved: Rearrange CryptoWoo > General settings section
+Improved: Add more CSS selectors to the payment page template
+Improved: Add filter to allow single address validation for arbitrary currencies in Redux validation callback
+Improved: Allow adding exchange rates for base currencies in cw_base_currencies filter
+  Example:
+
+  /**
+   * Add additional base currencies and their exchange rates in relation to the WooCommerce store currency
+   * @param $base_currencies
+   *
+   * @return mixed
+   */
+  function cw_add_base_currencies($base_currencies) {
+
+    // Use the store currency rate
+    // e.g. store currency US Dollar and 1 US-Dollar = 0.84 Euro
+    // becomes
+    // $base_currencies['EUR'] = ['rate' => 0.84];
+    $base_currencies[
+      'CAD' => ['rate' => 1.31],
+      'EUR' => ['rate' => 0.84]
+      ];
+    return $base_currencies;
+  }
+  add_filter('cw_base_currencies', 'cw_add_base_currencies');
+
+= 0.25.9 2020-07-29 =
+Fixed: Undefined properties in class.order-sorting.php
+
+= 0.25.8 2020-07-27 =
+Fixed: Skip block.io exchange rate fallback if we do not have an API key
+
+= 0.25.7 2020-07-27 =
+Fixed: Undefined index BTC in CoinGecko when BTC is disabled
+Fixed: PHP notices during order sorting
+Improved: Move cryptocurrencies list to own function cw_get_cryptocurrencies
+Improved: Add filter 'cw_get_cryptocurrencies' for addons to add coins
+Improved: Modify plugin header
+Improved: Add payment currency to Insight API error message
+Improved: Add plugin icon and banner
+Improved: Only log empty low frequency update interval filter if there is an old open order to use
+
+= 0.25.6 2020-06-18 =
+Feature: Low Frequency Update Interval - Change the update interval for long unpaid orders to reduce the number of API requests
+
+= 0.25.5 2020-06-18 =
+Fixed: Update WooCommerce API Manager to 2.7
+Fixed: Fix license key status option key for compatibility license manager >2.0
+Fixed: Catch Base58::decode($address) exceptions
+Improved: Allow an Order Expiration Time of up to 14 days but display a warning if it is set to more than 3 days
+Improved: Add option to disable overpayment handling
+
+
+= 0.25.4 2020-05-03 =
+Improved: Add exchange rate providers CoinGecko and CoinCap
+Fixed: Wrong amount unconfirmed on frontend when using WC order meta
+
+= 0.25.3 2020-04-11 =
+Improved: Update translations
+
+= 0.25.2 2020-04-11 =
+Feature: Enable address list support in main plugin for BTC, LTC and DOGE
+Fixed: Fix curl_it() does not log errors from exchange api
+Improved: Add logging when order is declined for better debugging of checkout issues
+Improved: Remove confusing fallback order explanation
+
+= 0.25.1 2020-01-05 =
+Fixed: Remove duplicate txs from blockcypher api response (unconf and conf tx)
+Fixed: Customer email missing in overpayment notice for admin
+Fixed: Use get_bloginfo('wpurl') instead of get_bloginfo('url') for wget cron job command example
+Improved: Temporary disable blockcypher rate limiting
+Improved: Don't log esplora input availability in check_input_sequences()
+Improved: Allow very low Underpayment Notice Range
+Improved: Only show decimals for overpayment percentage if the value is below 1
+Improved: Include old amount in order note if customer changes payment currency after placing the order
+Improved: Merged Electrum Daemon Add-on updates
+
+= 0.25.0 2019-12-09 =
+Feature: Support for blockstream.info API
+Feature: Support for custom esplora API: https://github.com/Blockstream/esplora
+Fixed: Limit Block.io API call to 5 addresses per interval
+Fixed: Failing integrity check when using WordPress multisite with different settings
+Improved: Add micropayment support and improve dynamic decimals
+Improved: Force accept payment: Use "processing" icon instead of "complete" icon in WooCommerce order overview
+
+= 0.24.5 2019-11-15 =
+Feature: Add support for placeholders in the custom instruction on the payment page
+Fixed: Avoid currency list override on the woocs settings page
+Fixed: Activation in license manager is never run causing instance not set
+Fixed: Use lowest rate from blockio instead of first in result
+Fixed: Undefined function wc_get_order_statuses() if WooCommerce is disabled
+Fixed: Gap limit notice trigger false positive
+Improved: Rename "Force complete order" to "Force accept payment"
+Improved: Change log verbosity settings from per-function to severity level
+Improved: Tweak "Order Expired" message if the customer already sent some coins
+Improved: Update API Manager Client Library
+Improved: Add cw_set_qr_data filter to run for all currencies
+Improved: Remove unnecessary extending of class CW_License_Menu
+Improved: Call woocommerce_order_data_store_cpt_get_orders_query filter hooks in one function
+
+= 0.24.4 2019-09-23 =
+Fixed: Force complete order form breaks WooCommerce order search
+Improved: Add option to display the Rate Multiplier Discount percentage on the checkout page
+
+= 0.24.3 2019-09-19 =
+Feature: Add support for links to addresses in blockstream.info explorer
+Feature: Add support for links to addresses in blockchair.com explorer
+Feature: Add WooCommerce order action "Force complete order"
+Fixed: DOGETEST available on checkout if DOGE xpub key exists
+Fixed: Processing API error counter resetting after one successful request to a fallback
+Fixed: Do not return raw exchange rate result from database
+Fixed: Only display "Exchange rates not found" if there are really not rates at all
+Fixed: Fix outdated order details written in order note after force updating
+Fixed: Add word-break to cryptocurrency addresses in cryptowoo_display_admin_order_meta()
+Improved: Processing API error handling
+Improved: Inform admin exchange rate update all fallbacks failed
+Improved: Add a setting for disabling exchange rate update error warnings
+Improved: Add transaction information to "force update order" note
+
+= 0.24.2 2019-08-07 =
+Fixed: Make sure the payment_currency selection is validated and updated on the order-pay page.
+Fixed: Fix undefined index $wallet_config['fwd_address_key']
+
+= 0.24.1 2019-08-05 =
+Feature: Add "Timeout Action": Select the behavior of CryptoWoo when the Order Expiration Time runs out.
+Feature: Add "Quote Refresh": Refresh the cryptocurrency order total after the time expired and let the customer try again.
+Fixed: Only autoload CW_Exchange classes if they exist or log critical error
+Fixed: Remove force update order action when payment method is not cryptowoo
+Improved: Add filter "cw_api_fallback_needed" to catch failing processing APIs without defined fallback option
+
+= 0.24.0 2019-06-24 =
+Feature: Add support for Electrum Daemon Add-on
+Improved: Add payment_currency to wc_get_orders() accepted query args
+Improved: Use wc_get_orders() to check the gap limit instead of relying on cryptowoo_payments_temp table
+Improved: Removed redundant columns from cryptowoo_payments_temp
+Fixed: Prevent naming collision with other JavaScript countdown functions
+Fixed: Table reset function on Database Actions page not resetting table
+
+= 0.23.6 2019-05-20 =
+Fixed: Remove Block.io forwarding address support (feature was discontinued by Block.io)
+Fixed: Undefined variable $currency_is_fiat in add_currencies_to_woocs()
+Fixed: "Cannot use object as array" in cryptowoo_log_data()
+Fixed: Add update routine that flushes the old exchange rate pairs
+Fixed: BTCTEST breaks other coins in checkout
+Improved: Partial compatibility with Aelia Currency Switcher (place order in any fiat currency, switcher itself can only use fiat currencies)
+Improved: Update Redux Framework to 3.6.15
+Improved: Increase length of 'address' field in table cryptowoo_payments_temp to 106
+Improved: Add version number to script and style files
+Improved: Price formatting on checkout and payment page
+Improved: Force refresh exchange rates if they seem stale
+
+= 0.23.5 2019-03-25 =
+Fixed: Do not hook into WooCommerce price formatting
+
+= 0.23.4 2019-03-25 =
+Fixed: Make sure get_coin_enabled_status() returns true if we have a wallet set up for this currency
+Improved: Force merchant to set an index and confirm the addresses of his HD wallet
+Improved: Force exchaneg rate update if we do not have the same number of rates in the database as the number of enabled currencies
+
+= 0.23.3 2019-03-23 =
+Improved: Force update rates in database when no rates are present
+Improved: Add filter to override exchange classes for autoloading in add-ons
+Improved: Bump supported WooCommerce version to 3.5.7
+
+= 0.23.2 2019-03-23 =
+Fixed: Issues with exchange autoload
+Fixed: Call to undefined function wc_logger()
+Fixed: Fatal error call to undefined function wc_get_logger
+Fixed: HD wallet dummy section icon
+Fixed: Remove woocs requirement for decimals settings and tweak feature explanation
+Fixed: Remove BOM from exchange rate tools to fix headers already sent warning
+Improved: Remove admin IP from integrity check warning email and tweak message
+Improved: Remove unneeded cryptowoo_plugin_init hook
+Improved: Remove unused cw_in_plugin_update_message()
+Improved: Remove redirect upon plugin activation
+Improved: Tweak section description of Wallets > Other
+Improved: Disable Shapeshift section
+
+= 0.23.1 2019-03-19 =
+Fixed: Make sure CW_Admin_Notice is included and rename class file
+Fixed: Only display gap limit notice if the option is set to "display"
+
+= 0.23.0 2019-03-15 =
+
+Feature: Monero support
+Feature: Add multi currency with support for WooCommerce Currency Switcher plugin
+Feature: Dynamic decimal setting
+Feature: Add partial Dutch translation
+Improved: Move, refactor & improve exchange rate processing and tools
+Improved: Add action "cw_display_extra_details_$payment_currency" to display extra details on checkout page
+Improved: Update cryptocurrency icons aw-cryptocoins
+Improved: Move payment currency dropdown above gateway description
+Improved: Add log entry and order note if the currency or order total changes
+Improved: Create CryptoWoo Admin Notice class
+Improved: Rename payment_currency select field on checkout to cw_payment_currency to prevent conflicts with other gateways
+Improved: Replace occurrences of file_put_contents() with CW_AdminMain::cryptowoo_log_data()
+Improved: Update fontawesome icon font to 5.4.1
+Improved: Begin unit test integration
+Fixed: Do not load fontawesome icon font if it is already enqueued in WordPress
+Fixed: WooCommerce order overview gives php warning "strip_tags() expects parameter 1 to be string, array given"
+Fixed: Fallback to other payment processing API if custom URL is missing for custom insight API
+Fixed: Remove blockchain url button on payment page if no url provided
+
+= 0.22.2 2018-10-08 =
+Feature: Add "force update payment status" as WooCommerce order action
+Feature: Option to disable final order status override
+Feature: Add Binance exchange rates
+Feature: Add insight api litecore.io to Litecoin processing api options
+Improved: Add support for WC_Logger log levels
+Improved: Display notice when reaching the gap limit
+Improved: Handle database changes between versions
+Improved: Add filter for custom exchange rates
+Improved: Refactor class CW_OrderProcessing()
+Improved: Honor Blockcypher API limits for confidence requests
+Improved: Better error handling in blockcypher_safe_remote_get()
+Improved: Better cryptowoo validate address filter
+Improved: Updated dependencies
+Improved: Dismissable "license inactive" notice
+Fixed: Do not consider RBF transactions a doublespend-attack but wait for at least one confirmation on any output to the payment address instead
+Fixed: Do not choke on Blockcypher tx outputs with null in address field
+Fixed: Disable WooCommerce "Hold Stock" order timeout feature if CryptoWoo expiration time is longer
+Fixed: Address validation: Keep $address if validation via BitWasp fails
+Fixed: get_transaction uses blockcypher_safe_remote_get() and returns proper result
+Fixed: Missing colon in payment amount info
+Fixed: Disable exchange rate error warning emails
+Removed: TGMPA plugin recommendation library
+Removed: Shifty button (service was discontinued)
+
+= 0.22.1 2016-06-18 =
+Improved: Add TREZOR to compatible hardware wallets
+Improved: Tweak Block.io forwarding address feature description
+Improved: Add apply_filters('cw_override_tx_api_config', $api_config, $currency, $options)
+Improved: Add chain.so as explicit processing API option
+Improved: Tweak exchange rate error admin notice
+Fixed: Check add-on version compatibility and disable plugin on collisions
+
+= 0.22.0 2018-06-11 =
+Feature: Segregated Witness support
+Improved: Update bitwasp/bitcoin to 0.35.0
+Improved: Use bitcoin-php library for address validation
+Improved: Allow cryptocurrency addresses with 95 characters
+Improved: Only honor the payment address filter if no other wallet is configured for this currency
+Improved: Move address validation filter into validation function
+Fixed: Make sure we have all outputs to the payment address in this transaction
+
+= 0.21.0 2018-05-16 =
+Improved: Update bitwasp/bitcoin to 0.34.4, remove mcrypt dependency warnings
+Improved: Remove Blockcypher PHP client dependency
+Improved: Use WC_Logger instead of file_put_contents
+Improved: Tweak Woocommerce Currency Switcher plugin explanation
+Fixed: Fix CryptoID.info API key notice
+
+= 0.20.4 2018-04-06 =
+Improved: remove redundant license manager classes from add-ons
+
+= 0.20.3 2018-04-06 =
+
+Remove fiat currency parameter for multirates in get_exchange_rate
+Prevent showing double amount in case of RBF payments
+Fix CSS class cw-hidden not getting removed
+Replace get_template_directory() with get_stylesheet_directory()
+Fix redundant slash in polling.js URL
+Rename CSS class "hidden" to prevent conflicts with themes and plugins
+Change litecoin decimals from 2 to 4
+Tweak option descriptions and warning messages
+Rename payment method id
+Only add decimals if we don't have enough
+Use constant for the payment method title
+Set defaults in get_wallet_config()
+Honor WooCommerce Currency Switcher settings other than number of decimals
+Use constant for the payment method title
+Honor disabled security image setting
+Remove redundant space from string
+Make sure php-gd is enabled before trying to use it
+Only call Block.io if we have an API key
+Return empty string if we don't have a Block.io API key for this currency
+Basic address sanity check before validation
+Add filter for coin icon html output
+Add more decimals if fiat currency rate is < 0.05
+
+= 0.20.2 2017-11-17 =
+Feature: Allow custom payment page templates: Copy the file wp-content/plugins/cryptowoo/includes/payment.php to wp-content/themes/YOURTHEME/cryptowoo/payment.php to modify it.
+Improved: Redirect to "order received" page if the WC order status is not "pending payment"
+Improved: Add order note on doublespend/RBF and keep the order open instead of just cancelling it.
+Improved: Remove unneeded file
+Improved: Remove redundant <p> element
+Fixed: Timer and progress bar on payment page disappearing after the first poll
+Fixed: Altcoin exchange rates not working when using BTC as WooCommerce store currency
+Fixed: Don't delete addresses of failed orders
+Fixed: Exit after wp_safe_redirect()
+
+= 0.20.1 2017-11-11 =
+Fixed:  escaped HTML in cryptocurrency payment details
+
+= 0.20.0 = 2017-11-10
+Feature: Add option to immediately redirect to the “Thank You” page when we detect a unconfirmed transaction
+Feature: Add option for custom Shapeshift Affiliate ID
+Feature: Allow connections to blockchain.info’s hidden service exchange rate API
+Feature: Add exchange rates from livecoin.net
+Improved: Add visual feedback about unconfirmed transaction to the payment page
+Improved: Security Image Threshold: Use spinner instead of select field
+Improved: Translatable button string
+Improved: Add “WC tested up to” header
+Improved: Add Dash “flag” for Currency Switcher
+Improved: Change text of empty currency batch response
+Improved: Update translations
+Improved: Remove old license manager menu
+Improved: Disable add-on overview
+Fixed: Escape translated strings
+Fixed: Forced exchange rate update not forcing
+Fixed: Wrong parameters in call to get_kraken_price()
+Fixed: Make sure the WooCommerce order exists before setting the status to “failed”
+Fixed: jQuery dependency
+Fixed: Change help desk URL
+Fixed: Wrap hash_pbkdf2 compat function in function_exists()
+Fixed: Keep address on invalid blockexplorer links
+Fixed: Pluralized cron schedule names
+
+= 0.19.4 = 2017-09-20
+Fixed: Litecoin multisig validation
+
+= 0.19.3 = 2017-09-20
+Feature: Display address in an additional image on the payment page to help the user detect address-replacing malware
+Improved: Use "Hide exchange rate provider" as default option
+Fixed: Don't override Currency Switcher defaults
+Fixed: WP 4.8.2 wpdb->prepare() compatibility
+
+= 0.19.2 = 2017-09-02
+Fixed: Revert extended rate error warning emails
+
+= 0.19.1 = 2017-09-02
+Fixed: Overzealous exchange rate error warning emails
+
+= 0.19.0 = 2017-09-01
+Improved: Add exchange rates from OKCoin.com, OKCoin.cn, Kraken, Luno.com
+Improved: Additional filters for easier altcoin integration
+Fixed: Duplicate coin icon on single product page pricing table
+Fixed: QR Code unreliable on dark background
+Fixed: Remove BTC-e from available exchange rate providers
+
+= 0.18.3.1 = 2017-07-31
+Fixed: Dash background exchange rate update not being triggered
+Improved: Validate address before creating a blockexplorer link
+
+= 0.18.3 = 2017-07-24
+Fixed: Skip address if the corresponding WooCommerce order does not exist
+Fixed: Update WooCommerce meta upon payment currency change
+Fixed: Prevent overzealous overpayment detection
+Improved: Move crypto-only store below class CW_Formatting
+Improved: Apply filters in update_tx_details if the processing API doesn't exist
+Improved: Display link to Database Actions page in exchange rate error email
+Improved: Composer update
+Improved: Allow up to 3 decimals in multiplier
+
+= 0.18.2.1 = 2017-06-30
+Fixed: get_coin_icon() assigning wrong class
+
+= 0.18.2 = 2017-06-30
+Feature: Add option to adapt the column width of each currency on the order total estimation
+Feature: Add option to hide the exchange rate
+Improved: Update aw-cryptocoins
+Improved: Use CSS columns instead of table on cryptocurrency price estimation
+Improved: Update Redux Framework to 3.6.5
+Improved: Remove redundant <br> elements from checkout page order total
+Fixed:  WooCommerce 3.0 compatibility issue in cryptocurrency price estimation on product pages
+Fixed: Fix cron schedule string
+Fixed: Catch undefined index in currency switcher filter
+
+= 0.18.1 = 2017-04-18
+Feature: Custom block explorers for links to cryptocurrency addresses
+Feature: Insight API class supports InstantSend
+Improved: Filter cryptowoo_misconfig_notice()
+Improved: Increase number of decimals in altcoin order total estimations on checkout page
+Fixed: Missing filter for cw_get_currency_symbol()
+
+= 0.18.0 = 2017-04-13
+Improved: WooCommerce 3.0 compatibility update
+
+= 0.17.1 = 2017-04-13
+Feature: Add payment method to searchable fields on WooCommerce order overview
+Improved: Remove "CryptoWoo Payments" page
+
+= 0.17.0 = 2017-04-12
+    Feature: Add CoinDesk Bitcoin Price Index exchange rates
+    Feature: Use apply_filters() for coin specific functions
+    Feature: Apply filters on CW_Insight::prepare_insight_api() if no Insight API URL is set
+    Feature: Add option to fully hide the order total estimation on the checkout page
+    Feature: Allow styling of order total estimation via custom CSS:
+
+                 /**
+                  * Add custom CSS to WooCommerce product or checkout pages
+                  */
+                 function enqueue_custom_cryptowoo_styles() {
+
+                     // Use is_product() to determine if we are on the product page
+                     // Use is_checkout() to determine if we are on the checkout page
+
+                     if ( is_checkout() ) { // If we are on a WooCommerce checkout page
+                 ?>
+                     <style type="text/css">
+                     .priceinfo { font-weight:bold; }
+                     .exchangeinfo { font-size: 70%; }
+                     #price-BTC { background-color: red; }
+                     #price-LTC { background-color: green; }
+                     #price-DOGE { background-color: yellow; }
+                     #price-BLK { background-color: turquoise; }
+                    </style>
+                 <?php }
+                 }
+                 add_action('wp_head', 'enqueue_custom_cryptowoo_styles', 100);
+
+    Improved: Hide zeroconf options if we are not accepting unconfirmed transactions
+    Improved: Update translations
+    Improved: Update dependencies
+    Fixed: Broken placeholder for minutes in "Underpayment Notice Trigger" select fields
+    Fixed: Order status is updated even if the customer switched the payment method
+    Fixed: Checkout page CSS issues
+
+
+= 0.16.9.1 = 2017-02-28
+
+    Fixed: Order processing not always honouring congestion handling settings
+
+= 0.16.9 = 2017-02-27
+
+    Fixed: bitcoincharts.com exchange rate provider not visible for store currencies other than USD
+
+= 0.16.8 = 2017-02-27
+
+    Feature: Add bitcoincharts.com exchange rates
+    Improved: Revisit internationalization
+
+= 0.16.7 = 2017-02-10
+
+    Fixed undefined index
+
+= 0.16.6 = 2017-02-10
+
+    Improved: Tweak Insight maybe getting tx confidence from chain.so
+    Improved: Refactor get_sum_outputs(), use value_int in smartbit response
+    Fixed: Insight not honouring min_conf > 1 setting
+    Fixed: Block.io library update: enforce use of TLSv1.2
+    Fixed: No gettext for empty string
+
+= 0.16.5 = 2017-01-29
+
+    Feature: Accept “raw” zeroconf transactions
+    Feature: Add bitcoin address and txid to WooCommerce order search fields
+    Feature: Change the payment page width
+    Improved: Rewrite payment page
+    Improved: WooCommerce order overview: Link payment address to blockexplorer
+    Improved: Update dependencies
+    Improved: Update jQuery fallback version
+    Fixed: Blockcypher batch update: Check only prioritized batch and make sure we bump last_update
+    Fixed: Order sorting by last_update
+
+= 0.16.4 = 2016-11-17
+
+Please visit the settings page and click on “Save Changes” after updating the plugin.
+
+    Fixed: Overzealous underpayment handling
+
+= 0.16.3 = 2016-11-15
+
+    Feature: Payment page amount and address highlight in one click
+    Feature: Email admin upon ‘cryptowoo_api_error’ action
+    Feature: Log verbosity options
+    Feature: Insight check transaction locktime against block height when processing zeroconf transactions
+    Feature: enable/disable add_currencies_to_woocs()
+    Feature: Define the number of decimals for cryptocurrency amounts added to WooCommerce Currency Switcher
+    Improved: Blockcypher zeroconf processing
+    Improved: Address reuse detection, log skipped transactions
+    Improved: Insight API processing
+    Improved: Blockcypher & Insight flag RBF txid in order meta
+    Improved: Disable RBF-check for chain.so
+    Improved: Custom API & third party confidence metric setting explanation
+    Improved: Calculation of amount received for confirmed transactions
+    Improved: Bitcoinaverage API v2 compatibility, cache rates for ~10 minutes to stay below request limits
+    Improved: Tweak data lag color on database actions page
+    Improved: Display orders with status “processing” on CryptoWoo Payments admin page
+    Fixed: Order prioritization not using prioritized array
+    Fixed: Custom processing API validation not displaying WP_Error message
+    Fixed: Pricing table not honoring multiplier
+    Fixed: Insight tx confidence request during zeroconf processing not using chain.so
+    Fixed: Use actual genesis blocks for Insight API URL validation
+    Fixed: add-on status detection
+    Fixed: Smartbit to chain.so fallback, add missing action hooks
+    Fixed: TX update error transient structure
+
+= 0.16.2 = 2016-10-13
+
+This update contains breaking changes!
+After updating the plugin, go to the CryptoWoo settings page (/wp-admin/admin.php?page=cryptowoo-options), refresh your browser cache (ctrl + F5), and make sure all settings are correct.
+
+Please click on “Save Changes”, regardless if you modified any setting or not.
+
+    Feature: Hide exchange rate provider on checkout page
+    Feature: Hide countdown and progress bar on payment page
+    Feature: Add Bitstamp, Coinbase, and Blockchain.info exchange rates
+    Feature: New action hook ‘cryptowoo_new_order’ that fires when a new CryptoWoo order is submitted.
+    Improved: Allow maximum order expiration time of 72 hours
+    Improved: Ignore slight underpayments
+    Improved: Select underpayment notice trigger event
+    Improved: Add smartbit.com.au fallback processing
+    Improved: Update Redux settings panel to 3.6.2
+    Fixed: Skip RBF check when no inputs are present in API response
+    Fixed: Bitcoinaverage API URL on Database Actions page
+    Fixed: Bitcoinaverage exchange rate fallback fails on large data lag
+    Fixed: Log rotation overwriting wrong file
+    Fixed: License activation link in admin notice points to wrong page
+    Fixed: Reset Currency Switcher to store currency on Dokan withdraw pages
+    Modified: Remove “WooCommerce Currency Switcher” from TGMPA
+
+= 0.15.2 = 2016-08-10
+
+    Fixed: Overzealous payment currency validation on checkout page
+    Improved: Adapt blockcypher batch updates to new API request limits
+    Improved: Update translations
+    Fixed: E-mail formatting
+
+= 0.15.1 = 2016-08-05
+
+    Improved: Clarified Blockcypher token requirements
+    Fixed: Currency Switcher plugin 1.1.7 compatibility, added instructions for free version – more info
+    Fixed: Gateway details on checkout page not visible if gateway description is empty
+    Fixed: Undefined index in QR Code and payment URI
+    Fixed: License manager undefined index, rename “API Key” to “License” to prevent confusion
+    Fixed: Blockcypher account link
+
+= 0.15.0 = 2016-07-25
+
+    Fixed: License manager not displaying updates, update lib to 1.4.6.3
+
+= 0.14.2 = 2016-07-25
+
+    Feature: Custom overpayment order note
+    Feature: HTML formatted admin e-Mails
+    Improved: Better Overpayment handling – more info
+
+= 0.14.1 = 2016-07-19
+
+    Fixed: Removed redundant HTML tags in settings explanations
+
+= 0.14.0 = 2016-07-19
+
+    Improved: Better handling of overpayments
+    Improved: Update Redux Framework to 3.6.0.2
+    Fixed: Fixed Customizer path issues
+
+= 0.13.3 = 2016-07-03
+
+    Feature: Add option to select the block explorer used for links to payment addresses
+    Feature: Add German translation for frontend
+    Improved: Refactor block explorer API helper functions
+    Improved: Add currency logos as images to use as flag for “WooCommerce Currency Switcher”
+    Improved: Update dependencies
+    Fixed: Minor bugs
+
+= 0.13.2 = 2016-03-28
+
+    Improved: Settings explanations
+    Improved: New logo
+    Fixed: Minor bugs
+
+= 0.13.1 = 2016-03-23
+
+    Fixed: Minor bugs
+
+= 0.13.0 = 2016-03-20
+
+    Feature: Insight API support
+    Feature: Add Poloniex & Bittrex altcoin exchange rates
+    Feature: Optional exchange rate error visualization
+    Improved: Confidence factor seperately for each currency
+    Improved: Block.io forwarding threshold amount for each currency
+    Improved: Transaction polling
+    Improved: Order processing
+    Improved: Admin settings validation
+
+= 0.12.2 = 2016-02-02
+
+    Improved: Optional license manager
+    Fixed: Remove Cryptsy exchange rates
+    Fixed: Dismissable update notice
+    Fixed: BlockCypher token limit check
+
+= 0.12.1 = 2016-01-24
+
+    Improved: Batch order processing
+    Improved: Network congestion handling
+    Improved: Honor BlockCypher API token limits
+    Improved: Update Redux Framework to 3.5.8.1
+    Improved: TX update error handling
+    Fixed: WooCommerce Currency Switcher 1.1.5 compatibility
+
+= 0.12 = 2015-12-24
+
+    Improved: Transaction update uses batch API calls.
+    Feature: Select preferred processing API
+    Feature: Accept any altcoin via Shapeshift button
+    Improved: Progress bar on payment page
+    Improved: Switch back to davidshimjs QR code library
+    Improved: noscript tags on payment page
+    Improved: Payment page styling
+    Modified: Implement Blockcypher php-client
+    Update BitWasp library to 0.0.19
+    Feature: Add action hooks
+        cwrc_catch_request # Cron execution result
+        cryptowoo_api_error # API error data
+        cryptowoo_doublespend # Doublespend alert (Blockcypher)
+        cryptowoo_refund_required # Customer sent less funds than required
+        cryptowoo_confirmed # An order has been confirmed
+
+= 0.11.3 = 2015-12-07
+
+    Feature: Pre-selected currency on checkout page
+    Improved: Set refund address field optional/required/disabled
+    Improved: Admin settings explanations
+    Removed: Internal price rewriting
+    Modified: Shorter polling interval on payment page
+    Fix: QR code encoding
+    Fix: Minor bugs
+
+= 0.11.2 = 2015-12-01
+
+    Improved: Admin settings explanations
+    Improved: HD wallet order processing
+    Modified: Use block explorer corresponding to API
+    Fix: Order timeout handling
+
+= 0.11.1 = 2015-11-30
+
+    Improved: License notice on plugin pages only
+    Fix: Minor bugs
+
+= 0.11.0 = 2015-11-20
+
+    Improved: WP Multisite compatibility
+    Improved: HD wallet order processing
+    Feature: Custom text on “payment”, “thank you”, and “view order” pages
+
+= 0.10.6 RC = 2015-11-17
+
+    Tweak: Block.io address archival function
+    Improved: Don’t enforce TLSv1 in Block.io library, catch SSL handshake errors instead
+    Tweak: Wording in admin notices
+    Tweak: Thank you page CSS
+    Fix: Minor bugs
+
+= 0.10.5 RC = 2015-11-10
+
+    Fix: Payment page CSS
+
+= 0.10.4 RC = 2015-11-06
+
+    Improved: Redirect after order timeout
+    Improved: Payment page styling
+    Improved: Redux Framework switches instead of checkboxes
+    Tweak: Display branding only if the license is not activated
+    Fix: Date in exchange rate error notice
+    Fix: Wrong order status on some failed orders
+
+= 0.10.3 RC = 2015-09-24
+
+    Improved: Price rewriting
+    Improved: Add aw-cryptocoin font
+    Improved: Display only icons of enabled currencies on checkout
+    Improved: CSS on payment page
+    Improved: Redux Framework switches instead of checkboxes
+    Tweak: Add branding
+    Fix: Catch errors in order amount calculation
+    Fix: select2 URL error in Redux Framework
+
+= 0.10.2 RC = 2015-09-11
+
+    Improved: Price rewriting
+    Improved: Add switch for “Pay Later” button on payment page
+    Improved: Update Redux Framework to 3.5.7
+    Fix: timing-based doublespend-check causing order failure
+
+= 0.10.1 RC = 2015-08-31
+
+    Improved: Use Ajax for admin backend operations
+    Fix: Litecoin exchange rate updates
+    Fix: Order timeout on payment page button
+    Improved: Move functions to HD Wallet Addon
+
+= 0.10.0 = 2015-08-19
+
+    Improved: Redux framework admin backend
+    Improved: Support for all WooCommerce store currencies except Lao KIP
+    Fix: Floating point errors
+    Fix: update_payment_details() not resetting amounts received in DB
+
+= 0.9.0 = 2015-06-09
+
+    Release Candidate
+    Improved: Exchange rate updates
+
+= 0.8.3 = 2015-05-25
+
+    Improved: Payment page & currency switch styling
+    Improved: Exchange rate updates
+    Improved: Cache rates for display currency switch in WP object cache
+    Improved: Create new logfile if file size > 10MB
+    Improved: Verify API key and address integrity before creating new order
+    Fix: Minor bugs
+
+= 0.8.2 = 2015-04-27
+
+    Improved: Payment page
+    Fix: Display currency switch not honouring selected currency
+    Fix: Minor bugs
+
+= 0.8.1 = 2015-04-17
+
+    Feature: Use Block.io forwarding addresses as payment address
+    Feature: Optional refund address on checkout page
+    Feature: Exchange rates from Bitfinex and BTC-e
+    Improved: Use the preferred BTC/USD exchange to calculate DOGE/USD and LTC/USD rates
+    Improved: Order timeout handling
+    Removed auto-withdrawal feature from plugin core
+    Improved: Atomic payment processing
+    Improved: Shorter cron interval options (30s & 15s)
+    Improved: Set max amount for accepting unconfirmed TXs
+    Improved: Payment page timeout countdown
+    Improved: Moved to Cryptsy API v2
+    Improved: Exchange rate error checking and fallback
+    Improved: Checkout settings page explanations
+
+= 0.7.3 = 2015-03-04
+
+    Improved: Archive Block.io addresses of completed orders after executing auto-withdrawal to save API resources
+    Improved: More explanations on checkout settings page
+    Improved: BTC exchange rate sources added: Bitcoinaverage, BitPay
+    Improved: Transaction processing of unconfirmed transactions, checking for double-spends
+    Improved: Auto-Withdraw from Block.io
+    Improved: Log file information
+    Fix: API key and address validation
+
+= 0.7.2 = 2015-01-20
+
+    Improved: Use WooCommerce log file directory for event logging to integrate into WooCommerce “Logs” tab (WooCommerce > System Status > Logs)
+    Fix: API key validation
+
+= 0.7.1 = 2015-01-17
+
+    First public release
+
+    Improved: switched payment processing API call from get_address_balance to get_transactions, introduced transaction confidence rating for unconfirmed transactions
+    Enhanced: Added a second mode for price rewriting
+    Feature: Choose between Cryptsy exchange API or Block.io API for all exchange rates used by the plugin.
+    Feature: Use the Display Currency Switch template tag to display the switch anywhere in your theme.
+    Fix: Prevent payment processing if the order total is not found.
+    Modified: QR Codes are now created locally using https://github.com/davidshimjs/qrcodejs
+    Modified: Checkout options structure and explanations
+
+= 0.6 =
+
+    First alpha release
+
+

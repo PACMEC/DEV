@@ -1,0 +1,29 @@
+form p.search-box {
+    float: left;
+}
+.s2w-button-all-container .button,
+.s2w-actions-container .button.s2w-action-download,
+.s2w-actions-container .button.s2w-action-delete{
+    font-size: 12px;
+}
+td.s2w-actions-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.s2w-button-all-container{
+    text-align: left;
+}
+.s2w-upgrade-button-container{
+    float: left;
+    margin: 3px 0 9px;
+}
+.s2w-upgrade-button.button{
+    vertical-align: bottom;
+    background: #ffffff;
+    font-size: 14px;
+}
+table.vi-ui td:nth-child(1),
+table.vi-ui td:nth-child(3),
+table.vi-ui th{
+    text-align: center !important;
+}

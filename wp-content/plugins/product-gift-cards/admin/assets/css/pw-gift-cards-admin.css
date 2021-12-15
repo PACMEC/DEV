@@ -1,0 +1,358 @@
+.pwgc-heading {
+    font-size: 200%;
+    font-weight: 600;
+    margin-bottom: 1.0em;
+}
+
+.pwgc-bordered-container {
+    min-width: 600px;
+    display: inline-block;
+    border-color: #0087B4;
+    border-width: 14px;
+    border-style: solid;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    padding: 32px;
+}
+
+.pwgc-header {
+    line-height: initial;
+    margin-bottom: 32px;
+}
+
+.pwgc-title-container {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pwgc-title {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.pwgc-credits {
+    opacity: 0.75;
+}
+
+.pwgc-version {
+    font-size: 80%;
+    opacity: 0.25;
+}
+
+.pwgc-main-content {
+    line-height: initial;
+}
+
+.pwgc-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pwgc-link:hover {
+    color: #0073aa;
+}
+
+.pwgc-footer {
+    display: block;
+    margin-top: 100px;
+    color: #CCCCCC;
+    background-color: #23292D;
+    padding: 12px;
+    line-height: 1.4;
+    margin-right: 20px;
+}
+
+.pwgc-footer-site-logo {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.pwgc-footer-site-title {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: #65686a;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.pwgc-rating {
+    display: inline-block;
+    margin-left: 24px;
+    line-height: 1.8;
+}
+
+.pwgc-rating-highlight {
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#pwgc-balance-summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.pwgc-summary-item {
+    padding-right: 64px;
+}
+
+.pwgc-summary-item-header {
+    font-weight: 600;
+    font-size: 350%;
+}
+
+#pwgc-setup-container {
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333333;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+#pwgc-setup-error {
+    color: red;
+    font-weight: 600;
+}
+
+.pwgc-setup-section {
+    margin: 32px;
+}
+
+.pwgc-setup-header {
+    color: #23282d;
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#pwgc-setup-create-product-success {
+    display: none;
+}
+
+.pwgc-balance-error {
+    color: red;
+    font-weight: 600;
+}
+
+#pwgc-balance-search {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#pwgc-balance-main-container {
+    display: flex;
+    margin-top: 32px;
+}
+
+#pwgc-balance-search-results {
+    min-width: 400px;
+}
+
+.pwgc-search-result-card-number {
+    font-weight: 600;
+}
+
+.pwgc-admin-table {
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.pwgc-admin-table td, .pwgc-admin-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.pwgc-admin-table tr:nth-child(even){background-color: #FFFEE0;}
+.pwgc-admin-table tr:nth-child(odd){background-color: #FFFFFF;}
+
+.pwgc-admin-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pwgc-balance-activity-container {
+    margin-top: 8px;
+}
+
+.pwgc-balance-activity-table {
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.pwgc-balance-activity-table td, .pwgc-balance-activity-table th {
+    border: 1px solid #ddd;
+}
+
+.pwgc-balance-activity-table tr:nth-child(even){background-color: #FFFFFF;}
+.pwgc-balance-activity-table tr:nth-child(odd){background-color: #FFFFFF;}
+
+.pwgc-balance-activity-table th {
+    padding: 4px;
+    text-align: left;
+    background-color: #D6D6D6;
+    color: #444444;
+}
+
+.pwgc-balance-activity {
+    font-weight: 600;
+}
+
+.pwgc-balance-activity-negative {
+    color: red;
+}
+
+.pwgc-import-error-message {
+    color: red;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+/*
+ Make sure these are always the last entry
+ in the .css file so it doesn't get overruled by
+ a later rule.
+*/
+
+.pwgc-hidden {
+    display: none;
+}
+
+.pwgc-pull-right {
+    float: right;
+}
+
+.pwgc-pull-left {
+    float: left;
+}
+
+.pwgc-container {
+    display: flex;
+    margin-left: 16px;
+}
+
+.pwgc-dashboard-item {
+    padding: 6px 25px;
+    margin-right: 50px;
+    text-align: center;
+    vertical-align: top;
+    color: #999999;
+    text-decoration: none;
+    flex-grow: 1;
+    flex-basis: 0;
+    white-space: nowrap;
+}
+
+.pwgc-dashboard-item:hover {
+    cursor: pointer;
+    color: #0073aa;
+}
+
+.pwgc-dashboard-item-title {
+    margin-top: 3px;
+    font-size: 90%;
+}
+
+.pwgc-dashboard-item-selected {
+    opacity: 1.0;
+    border-bottom: solid;
+    color: #0073aa;
+}
+
+.pwgc-section {
+    display: none;
+    min-height: 400px;
+    margin: 32px;
+}
+
+.pwgc-import-gift-cards-container {
+    display: flex;
+}
+
+.pwgc-import-gift-cards-instructions {
+    margin-left: 16px;
+    max-width: 550px;
+}
+
+.pwgc-import-preview-message {
+    line-height: 1.4;
+    display: inline-block;
+    padding: 16px;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #000000;
+    margin: 32px;
+    max-width: 550px;
+}
+
+.pwgc-import-summary {
+    font-size: 125%;
+    line-height: 1.4;
+    display: inline-block;
+    padding: 16px;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #000000;
+    margin: 32px 0;
+}
+
+.pwgc-import-summary-preview-header {
+    font-size: 125%;
+    font-weight: 600;
+}
+
+.pwgc-import-header {
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.pwgc-hide-button {
+    font-size: 75%;
+    margin-bottom: 4px;
+    text-align: right;
+}
+
+.pwgc-designer-label {
+    display: block;
+}
+
+.pwgc-designer-subtext {
+    font-size: 75%;
+}
+
+#pwgc-designer-panel-container {
+    margin-left: 24px;
+    display: flex;
+}
+
+.pwgc-designer-panel {
+    margin-right: 32px;
+}
+
+.pwgc-preview-header {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#pwgc-preview-container {
+    margin-top: 12px;
+    border-width: 1px;
+    border-color: #333;
+    border-style: solid;
+    padding: 24px;
+    background-color: #FFF;
+    min-width: 500px;
+}

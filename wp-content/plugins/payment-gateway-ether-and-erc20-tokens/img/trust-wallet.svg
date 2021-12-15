@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="367"
+   height="140"
+   viewBox="0 0 97.102081 37.041666"
+   version="1.1"
+   id="svg852"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="trust-wallet.svg">
+  <defs
+     id="defs846">
+    <clipPath
+       id="clip0">
+      <rect
+         style="fill:#ffffff"
+         y="0"
+         x="0"
+         width="38"
+         height="38"
+         id="rect14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="184.80026"
+     inkscape:cy="89.89033"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px" />
+  <metadata
+     id="metadata849">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-55.993577,-118.69007)">
+    <g
+       clip-path="url(#clip0)"
+       id="g4"
+       transform="matrix(0.84789019,0,0,0.84789019,88.06592,121.37375)">
+      <path
+         d="M 1.29438,6.48375 C 0,9.025 0,12.35 0,19 c 0,6.65 0,9.975 1.29438,12.5163 1.14,2.2325 2.95687,4.0493 5.18937,5.1893 C 9.025,38 12.35,38 19,38 c 6.65,0 9.975,0 12.5163,-1.2944 2.2325,-1.14 4.0493,-2.9568 5.1893,-5.1893 C 38,28.975 38,25.65 38,19 38,12.35 38,9.025 36.7056,6.48375 35.5656,4.25125 33.7488,2.43438 31.5163,1.29438 28.975,0 25.65,0 19,0 12.35,0 9.025,0 6.48375,1.29438 4.25125,2.43438 2.43438,4.25125 1.29438,6.48375 Z M 28.4822,10.2481 c 0.3325,0 0.6472,0.1366 0.8788,0.3682 0.2315,0.2375 0.3622,0.5581 0.3562,0.8846 -0.0593,3.5388 -0.1959,6.2463 -0.4512,8.3897 -0.2494,2.1435 -0.6235,3.7347 -1.1875,5.0232 -0.38,0.8609 -0.8491,1.5734 -1.4013,2.179 -0.7422,0.8016 -1.5912,1.3835 -2.5175,1.9357 -0.396,0.2368 -0.8077,0.4706 -1.2396,0.7159 -0.9215,0.5233 -1.9347,1.0987 -3.0829,1.8669 -0.4156,0.279 -0.9559,0.279 -1.3715,0 -1.1658,-0.7772 -2.1924,-1.3597 -3.1223,-1.8872 -0.2068,-0.1173 -0.4088,-0.2319 -0.6065,-0.3453 -1.0865,-0.6294 -2.0662,-1.2291 -2.9212,-2.096 -0.57,-0.57 -1.0628,-1.2647 -1.4547,-2.09 C 9.82661,24.0884 9.46442,22.7525 9.19724,21.0247 8.84098,18.715 8.66286,15.6928 8.59755,11.5009 8.59161,11.1744 8.7163,10.8538 8.94786,10.6163 9.17942,10.3847 9.50005,10.2481 9.83255,10.2481 h 0.51065 c 1.5734,0.006 5.0468,-0.1484 8.0512,-2.48778 0.4453,-0.34438 1.0688,-0.34438 1.5141,0 3.0044,2.33938 6.4778,2.49378 8.0572,2.48778 z m -2.7609,13.876 c 0.3859,-0.7957 0.7066,-1.8941 0.95,-3.4735 0.2909,-1.8881 0.4691,-4.4531 0.5522,-7.9443 -1.8525,-0.0535 -5.035,-0.4097 -8.0691,-2.4522 -3.034,2.0365 -6.2165,2.3928 -8.0631,2.4522 0.0653,2.8856 0.1959,5.13 0.4037,6.8934 0.2375,2.0069 0.576,3.3666 0.9975,4.3225 0.2791,0.6353 0.5879,1.0925 0.956,1.4962 0.4928,0.5404 1.1162,0.9857 1.9653,1.4963 0.3522,0.2113 0.7405,0.4311 1.1632,0.6704 0.7531,0.4262 1.6153,0.9142 2.5774,1.5265 0.9444,-0.6023 1.7942,-1.0853 2.5385,-1.5084 0.2244,-0.1275 0.4391,-0.2496 0.644,-0.3679 1.045,-0.5997 1.8169,-1.0984 2.3928,-1.6803 0.386,-0.3978 0.7007,-0.8312 0.9916,-1.4309 z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="clip-rule:evenodd;fill:#3375bb;fill-rule:evenodd" />
+    </g>
+  </g>
+</svg>

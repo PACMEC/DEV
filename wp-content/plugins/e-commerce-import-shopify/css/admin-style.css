@@ -1,0 +1,205 @@
+.wrap > h2 {
+    margin: 15px 0 !important;
+}
+
+.wrap form .segment .vi-ui.dropdown.selection {
+    min-height: inherit !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 34px;
+    border: 1px solid rgba(34, 36, 38, .15);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li .select2-search__field {
+    width: 100% !important;
+    border: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+
+}
+
+.select2-container--default .select2-selection--multiple {
+    border: 1px solid rgba(34, 36, 38, .15);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 34px;
+}
+
+input[type="number"] {
+    height: auto;
+}
+
+.iris-picker {
+    position: absolute !important;
+}
+
+.s2w-logs {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.s2w-logs > div {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.s2w-accordion.vi-ui.accordion table td div.content,
+.s2w-import-container .vi-ui.accordion div.content {
+    text-align: center;
+}
+
+.s2w-accordion.vi-ui.accordion > div.title {
+    font-size: 16px !important;
+}
+
+.s2w-accordion.vi-ui.accordion table td > div.title,
+.s2w-import-container .vi-ui.accordion > div.title {
+    font-size: 13px !important;
+}
+.vi-ui.accordion div.content iframe{
+    max-width: 100% !important;
+}
+@media screen and (max-width: 560px){
+    .vi-ui.accordion div.content iframe{
+        height: auto !important;
+    }
+}
+@media only screen and (max-width: 767px){
+    .vi-ui.form .vi-ui.segment .two.fields>.field{
+        width: 50% !important;
+    }
+}
+td i{
+    vertical-align: super;
+}
+.vi-ui.segment h3 {
+    text-align: center;
+}
+/*html no scroll*/
+html.s2w-noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+/*product and order options shortcut*/
+a.s2w-import-coupons-options-shortcut,
+a.s2w-import-orders-options-shortcut,
+a.s2w-import-products-options-shortcut {
+    display: block;
+    cursor: pointer;
+    color: #2185d0;
+    text-decoration: underline;
+    font-size: .8em;
+}
+
+.s2w-hidden {
+    display: none !important;
+}
+/*product options*/
+.s2w-import-products-options-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.s2w-import-products-options-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(1, 1, 1, .5);
+}
+
+.s2w-import-products-options-saving-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.vi-ui.segment.s2w-import-products-options-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    width: 700px;
+    max-width: 100%;
+}
+
+.s2w-import-products-options-main .s2w-import-products-options-content .s2w-import-products-options-heading {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px 0;
+    z-index: 99;
+    margin: 0 20px;
+}
+
+.s2w-import-products-options-main input {
+    width: 100%;
+}
+
+.s2w-import-products-options-main .s2w-import-products-options-content > table {
+    height: auto;
+    max-height: 500px;
+    overflow: auto;
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.s2w-import-products-options-main i.s2w-import-products-options-close {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    margin: 0;
+    transition: background 200ms;
+    background: white;
+}
+
+.s2w-import-products-options-main i.s2w-import-products-options-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.s2w-save-products-options-container {
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .s2w-save-products-options-container {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+#s2w-import-products-options .s2w-import-products-options-heading {
+    display: none;
+}

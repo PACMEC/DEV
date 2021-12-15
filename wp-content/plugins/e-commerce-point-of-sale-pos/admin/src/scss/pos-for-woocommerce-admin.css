@@ -1,0 +1,265 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.mwb-pos-notify {
+    display: none;
+    margin-top: 10px;
+    flex: 0 0 100%;
+}
+
+.mwb-pos-notify p {
+    margin-left: 15px;
+    padding: 0 15px;
+    color: red;
+    font-weight: bold;
+}
+/* Overview page css */
+
+.pfw-overview__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.pfw-overview__icons a {
+    display: block;
+}
+
+.pfw-overview__icons img {
+    width: 40px;
+    display: block;
+    margin-right: 20px;
+}
+
+.pfw-overview__icons a:last-child img {
+    margin-right: 0;
+}
+
+.pfw-overview__banner-img {
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+#mwb_pfw_qrcode {
+    width: 14%;
+}
+
+td.mwb_pfw_qrcode img {
+    width: 100%;
+}
+
+.pfw-overview__banner-img img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.pfw-overview__content-description h1 {
+    color: #163062;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pfw-overview__features h2 {
+    margin: 0 0 15px 0;
+}
+
+.pfw-overview__wrapper h2,
+.pfw-overview__wrapper h3 {
+    font-weight: 600;
+}
+
+.pfw-overview__wrapper p {
+    color: #565857;
+    letter-spacing: 0.5px;
+}
+
+.pfw-overview__content-description p {
+    font-size: 16px;
+}
+
+.pfw-overview__features {
+    margin-top: 70px;
+}
+
+.pfw-overview__features h2 {
+    margin-bottom: 20px;
+}
+
+.pfw-overview__features p {
+    margin: 0 0 15px 0;
+}
+
+.pfw-overview__features-list {
+    list-style: none;
+}
+
+.pfw-overview__features-list li::before {
+    color: #1a3365;
+    content: "⚬";
+    font-size: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.pfw-overview__features-list li {
+    color: #565857;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+.pfw-overview__content-description,.pfw-overview__keywords-wrap {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.pfw-overview__content h2 {
+    color: #163062;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.pfw-overview__wrapper h3 {
+    color: #163062;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.pfw-overview__keywords-wrap h2 {
+    margin: 0 0 30px 0;
+}
+
+.pfw-overview__keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pfw-overview__keywords-item {
+    background: #ffffff;
+    border-bottom: 3px solid #163062;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+    flex: 0 0 calc(33.85% - 40px);
+    margin-bottom: 40px;
+    margin-right: 15px;
+    max-width: calc(33.85% - 40px);
+    padding: 30px 30px;
+    transition: 0.3s linear all;
+}
+
+.pfw-overview__keywords-item:hover {
+    transform: translateY(-16px);
+    transition: 0.3s linear all;
+}
+
+.pfw-overview__keywords-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.pfw-overview__keywords-text {
+   text-align: center;
+}
+
+.pfw-overview__keywords-text img {
+    margin-bottom: 10px;
+}
+
+.pfw-overview__keywords-heading {
+    color: #163062;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+
+.pfw-overview__keywords-description {
+    font-size: 14px;
+}
+
+.pfw-overview__features-list li:before {
+   position: absolute;
+   left: 5px;
+   top: 0;
+}
+
+.pfw-overview__features-list li {
+   position: relative;
+   padding-left: 20px;
+}
+
+/* overview page css ends */
+
+.mwb_pfw_header_logo_img {
+    height: 80px!important;
+}
+.mwb_pfw_login_logo_img {
+    height: 80px;
+}
+#mwb-pfw-barcode-settings {
+    border-top: 1px solid rgb(211, 211, 211);
+}
+#mwb-pfw-barcode-settings h5 {
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+/*=====  End of system-status-table-section  ======*/
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    .pfw-overview__keywords-item {
+        flex: 0 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pfw-overview__keywords-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .pfw-overview__content-description,.pfw-overview__keywords-wrap {
+        padding: 15px 10px;
+    }
+    .pfw-overview__content-description h1 {
+        font-size: 30px;
+    }
+    .pfw-overview__content h2 {
+        font-size: 24px;
+    }
+    .pfw-overview__features {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .pfw-overview__content-description h1 {
+        font-size: 24px;
+    }
+    .pfw-overview__content h2 {
+        font-size: 20px;
+    }
+    .pfw-overview__content-description p {
+        font-size: 14px;
+    }
+    .pfw-overview__features-list li {
+        font-size: 14px;
+    }
+
+}
+
+/* Media Query Ends */
+

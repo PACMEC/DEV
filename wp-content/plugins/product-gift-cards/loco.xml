@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="PW WooCommerce Gift Cards">
+  <domain name="pw-woocommerce-gift-cards">
+    <project name="PW WooCommerce Gift Cards" slug="pw-woocommerce-gift-cards">
+      <source>
+        <directory>.</directory>
+      </source>
+      <target>
+        <directory>languages</directory>
+      </target>
+      <template>
+        <file>languages/pw-woocommerce-gift-cards.pot</file>
+      </template>
+    </project>
+  </domain>
+</bundle>

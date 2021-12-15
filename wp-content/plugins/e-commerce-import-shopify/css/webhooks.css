@@ -1,0 +1,28 @@
+.wrap > h2 {
+    margin: 15px 0 !important;
+}
+
+.wrap form .segment .vi-ui.dropdown.selection {
+    min-height: 36px !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    height: auto;
+}
+
+.s2w-webhooks-url-container {
+    position: relative;
+}
+
+.s2w-webhooks-url-container .check.icon {
+    position: absolute;
+    right: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: none;
+}

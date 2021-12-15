@@ -1,0 +1,58 @@
+.pwgc-hidden {
+    display: none;
+}
+
+.pwbf-noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.pwbf-form-text {
+    margin-left: 162px;
+}
+
+#woocommerce-product-data ul.wc-tabs li.pw-gift-card_cards_options a:before {
+    font-family: WooCommerce !important;
+    content: '\e01e' !important;
+}
+
+.pwgc-short-text-field {
+    width: 100px !important;
+}
+
+#pwgc-add-amount-button {
+    margin-left: 8px !important;
+}
+
+#pwgc-amounts-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pwgc-amount-container {
+    margin-right: 4px;
+    margin-bottom: 8px;
+    padding: 8px;
+    text-align: center;
+    background-color: #BEEFFA;
+    border-radius: 5px;
+    border-color: #999999;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.pwgc-remove-amount-button {
+    cursor: pointer;
+    color: #999;
+    margin-right: 2px;
+    font-weight: 700;
+}
+
+.pwgc-remove-amount-button:hover {
+    color: red;
+}

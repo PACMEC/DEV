@@ -1,0 +1,1008 @@
+# Copyright (C) 2020 PW WooCommerce Gift Cards
+# This file is distributed under the same license as the PW WooCommerce Gift Cards package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PW WooCommerce Gift Cards 1.130\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/free\n"
+"POT-Creation-Date: 2021-06-24 16:52:41+00:00\n"
+"PO-Revision-Date: 2021-06-24 12:56-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && n"
+"%100<=19) ? 1 : 2);\n"
+
+#: admin/pw-gift-cards-admin.php:34 admin/pw-gift-cards-admin.php:180
+#: admin/pw-gift-cards-admin.php:191 admin/pw-gift-cards-admin.php:203
+#: admin/pw-gift-cards-admin.php:204 admin/pw-gift-cards-admin.php:212
+#: admin/pw-gift-cards-admin.php:213 admin/pw-gift-cards-admin.php:347
+msgid "PW Gift Cards"
+msgstr "Carduri Cadou PW"
+
+#: admin/pw-gift-cards-admin.php:40
+msgid "Auto Complete Orders"
+msgstr "Completeaza Automat Comenzile"
+
+#: admin/pw-gift-cards-admin.php:41
+msgid ""
+"When an order only contains gift cards, automatically mark the order as "
+"Complete to send the gift cards immediately."
+msgstr ""
+"Cand o comanda contine doar carduri cadou, marcheaza automat comanda "
+"respectiva ca si \"Finalizata\" pentru a trimite cardurile cadou imediat."
+
+#: admin/pw-gift-cards-admin.php:47
+msgid "Send When Order Received"
+msgstr "Trimite Cand Primesti Comanda"
+
+#: admin/pw-gift-cards-admin.php:48
+msgid ""
+"By default we wait until the order status is Complete before generating and "
+"emailing the gift card. Check this box to send the gift card immediately "
+"when the order is received. Scheduled gift cards will still be sent on the "
+"scheduled date. Default: Unchecked"
+msgstr ""
+"Implicit se asteapta ca statusul comenzii sa fie \"Finalizat\" inainte de a "
+"genera si a trimite pe email cardul cadou. Bifeaza casuta pentru a trimite "
+"cardul cadou imediat ce comanda este primita. Cardurile cadou programate vor "
+"fi trimise in continuare la data aleasa. Implicit: Dezactivat"
+
+#: admin/pw-gift-cards-admin.php:54
+msgid "Buy Gift Cards with Gift Cards"
+msgstr "Cumpara carduri cadou folosind carduri cadou"
+
+#: admin/pw-gift-cards-admin.php:55
+msgid ""
+"Allow customers to purchase gift cards using another gift card. Disable this "
+"to prevent customers from extending the date on expiring gift cards. "
+"Default: Checked."
+msgstr ""
+"Permite clientilor sa cumpere carduri cadou folosind un alt card cadou. "
+"Dezactiveaza asta pentru a opri clientii din a extinde data cardurilor cadou "
+"care sunt aproape de data expirarii. Implicit: Activat."
+
+#: admin/pw-gift-cards-admin.php:61
+msgid "Use the WooCommerce Transactional Email System"
+msgstr "Foloseste sistemul de tranzactii email de la WooCommerce"
+
+#: admin/pw-gift-cards-admin.php:62
+msgid ""
+"Enabled by default. If you are not receiving your gift card emails, try "
+"disabling this setting."
+msgstr ""
+"Activata in mod implicit. Daca nu primesti emailurile de la cardurile cadou "
+"incearca sa dezactivezi optiunea asta."
+
+#: admin/pw-gift-cards-admin.php:68
+msgid "Apply fix for missing fields"
+msgstr "Aplica remediere pentru campurile lipsa"
+
+#: admin/pw-gift-cards-admin.php:69
+msgid ""
+"If you do not see the To / From / Message fields on your gift card product "
+"page, try checking this box and reloading. Some themes have out of date "
+"WooCommerce template files and need to be patched to work with the Gift Card "
+"product."
+msgstr ""
+"Daca nu vezi campurile Pentru / De la / Mesaj pe pagina produsului card "
+"cadou incearca sa activezi optiunea asta si sa reincarci pagina. Unele teme "
+"au sabloane WooCommerce expirate si trebuie reparate pentru a functiona cu "
+"produsul Card Cadou."
+
+#: admin/pw-gift-cards-admin.php:75
+msgid "Format Prices"
+msgstr "Formatul preturilor"
+
+#: admin/pw-gift-cards-admin.php:76
+msgid ""
+"For fixed gift card amounts, format the price with the system currency "
+"symbol. This is enabled by default. If you are having trouble with currency "
+"switchers, disable this setting. Note: You must remove and re-add your fixed "
+"gift card amounts if you change this setting."
+msgstr ""
+"Pentru sume fixe pe cardul cadou, seteaza formatul pretului cu simbolul "
+"monedei folosite de sistem. Optiunea este activata implicit. Daca apar "
+"probleme la conversiile valutare dezactiveaza aceasta optiune. Nota: Trebuie "
+"sa stergi si sa adaugi din nou sumele fixe de pe cardurile cadou daca "
+"modifici aceasta optiune."
+
+#: admin/pw-gift-cards-admin.php:82
+msgid "Redeem Location - Cart"
+msgstr "Recupereaza Locatia - Cosul de cumparaturi"
+
+#: admin/pw-gift-cards-admin.php:83
+msgid "Specifies where the \"Apply Gift Card\" box appears on the Cart page."
+msgstr ""
+"Specifica unde sa apara mesajul \"Aplica Card Cadou\" pe pagina Cosului de "
+"cumparaturi."
+
+#: admin/pw-gift-cards-admin.php:91
+msgid "Above the \"Proceed to Checkout\" button."
+msgstr "Deasupra butonului \"Mergi la finalizare comanda\"."
+
+#: admin/pw-gift-cards-admin.php:92 admin/pw-gift-cards-admin.php:107
+msgid "Below the \"Apply Coupon\" area."
+msgstr "Sub zona \"Aplica Cupon\"."
+
+#: admin/pw-gift-cards-admin.php:93 admin/pw-gift-cards-admin.php:108
+msgid "Do not display gift card field."
+msgstr "Nu afisa campul card cadou."
+
+#: admin/pw-gift-cards-admin.php:97
+msgid "Redeem Location - Checkout"
+msgstr "Recupereaza Locatia - Cosul de cumparaturi"
+
+#: admin/pw-gift-cards-admin.php:98
+msgid ""
+"Specifies where the \"Apply Gift Card\" box appears on the Checkout page."
+msgstr ""
+"Stabileste unde apare casuta \"Aplica card cadou\" pe pagina de Checkout."
+
+#: admin/pw-gift-cards-admin.php:106
+msgid "Below the \"Payment Methods\" area."
+msgstr "Sub zona \"Metode de Plata\"."
+
+#: admin/pw-gift-cards-admin.php:152
+msgid "Configuration error detected by"
+msgstr "Eroare configuratie detectata de"
+
+#: admin/pw-gift-cards-admin.php:153
+msgid ""
+"Your PayPal payment gateway is incorrectly configured. You should not have "
+"both IPN and PDT enabled. The \"IPN Email Notifications\" setting is enabled "
+"and there is also a \"PayPal Identity Token\" (PDT) value set. PayPal is "
+"reaching back to your site twice to confirm the payment. This causes things "
+"to happen twice including email notifications, stock reduction, and gift "
+"card generation. Go to WooCommerce -> Settings -> Payments -> PayPal and "
+"either clear the value from the \"PayPal Identity Token\" field or disable "
+"the \"IPN Email Notifications\" setting."
+msgstr ""
+"Interfata de plata PayPal este configurata gresit. Nu ar trebui sa fie "
+"activate simultan IPN si PDT. Setarea \"Notificari email IPN\" este activa "
+"si este de asemenea prezenta si o valoare pentru \"PayPal Token Identificare"
+"\" (PDT). PayPal apeleaza de doua ori site-ul tau pentru a confirma plata. "
+"Asta face ca lucrurile sa se intample de doua ori, incluzand notificarile "
+"email, reducerea stocului si generarea cardului cadou. Mergi la WooCommerce -"
+"> Setari -> Plati -> PayPal si fie goleste valoarea campului \"PayPal Token "
+"Identificare\" (PDT), fie dezactiveaza setarea \"Notificari email IPN\"."
+
+#: admin/pw-gift-cards-admin.php:154
+msgid "Dismiss this notice"
+msgstr "Anuleaza aceasta notificare"
+
+#: admin/pw-gift-cards-admin.php:181 admin/pw-gift-cards-admin.php:192
+msgid "Pimwick Plugins"
+msgstr "Plugin-uri Pimwick"
+
+#: admin/pw-gift-cards-admin.php:240
+msgid "Note: Be sure to save changes before sending a preview email."
+msgstr ""
+"Nota: Asigura-te ca salvezi modificarile inainte de a trimite un email de "
+"previzualizare."
+
+#: admin/pw-gift-cards-admin.php:241
+msgid "Recipient email address?"
+msgstr "Adresa de email a destinatarului?"
+
+#: admin/pw-gift-cards-admin.php:268
+msgid "Wait"
+msgstr "Asteapta"
+
+#: admin/pw-gift-cards-admin.php:269
+msgid "Add"
+msgstr "Adauga"
+
+#: admin/pw-gift-cards-admin.php:270
+msgid "Remove"
+msgstr "Elimina"
+
+#: admin/pw-gift-cards-admin.php:271
+#: includes/class-wc-product-pw-gift-card.php:60
+msgid "Amount must be greater than zero."
+msgstr "Suma trebuie sa fie mai mare de zero."
+
+#: admin/pw-gift-cards-admin.php:272
+msgid "Amount must be greater than minimum amount."
+msgstr "Suma trebuie sa fie mai mare decat suma minima."
+
+#: admin/pw-gift-cards-admin.php:273
+msgid "Amount must be less than maximum amount."
+msgstr "Suma trebuie sa fie mai mica decat suma maxima."
+
+#: admin/pw-gift-cards-admin.php:274
+msgid "Error"
+msgstr "Eroare"
+
+#: admin/pw-gift-cards-admin.php:293 admin/pw-gift-cards-admin.php:546
+#: pw-gift-cards.php:130
+msgid "Gift Card"
+msgstr "Card Cadou"
+
+#: admin/pw-gift-cards-admin.php:392
+msgid "Could not locate product id %s"
+msgstr "Nu am putut localiza identificatorul produsului %s"
+
+#: admin/pw-gift-cards-admin.php:416
+msgid "Could not locate product using product_id "
+msgstr "Nu am putut localiza produsul folosind product_id "
+
+#: admin/pw-gift-cards-admin.php:530
+msgid "Settings saved."
+msgstr "Setari salvate."
+
+#: admin/pw-gift-cards-admin.php:610 admin/pw-gift-cards-admin.php:624
+msgid "Gift card not found."
+msgstr "Cardul cadou nu a fost gasit."
+
+#: admin/pw-gift-cards-admin.php:645
+msgid "Design saved."
+msgstr "Design salvat."
+
+#: admin/pw-gift-cards-admin.php:655
+msgid "Preview email system"
+msgstr "Previzualizeaza sistemul email"
+
+#: admin/pw-gift-cards-admin.php:656 admin/ui/sections/designer-panel.php:53
+msgid "Recipient Name"
+msgstr "Numele Destinatarului"
+
+#: admin/pw-gift-cards-admin.php:657 admin/ui/sections/designer-panel.php:55
+msgid "Gift card message to the recipient from the sender."
+msgstr "Mesajul cardului cadou de la expeditor pentru destinatar."
+
+#: admin/pw-gift-cards-admin.php:662
+msgid "Email sent."
+msgstr "Email trimis."
+
+#: admin/ui/footer.php:30
+msgid "Need help? Email %s"
+msgstr "Ai nevoie de ajutor? Email %s"
+
+#: admin/ui/footer.php:32
+msgid ""
+"Please consider <%s>leaving a review on WordPress.org</a>. This really helps "
+"us out!"
+msgstr ""
+"Te rugam sa iei in considerare <%s> sa ne lasi o recenzie pe WordPress.org</"
+"a>. Acest lucru ne ajuta mult!"
+
+#: admin/ui/initial-setup.php:12
+msgid "Step 1: Create a \"%s\" product to start selling Gift Cards."
+msgstr ""
+"Pasul1: Creeaza un \"%s\" produs pentru a incepe sa vinzi Carduri Cadou."
+
+#: admin/ui/initial-setup.php:16
+msgid "Create the Gift Card product"
+msgstr "Creeaza produsul Card Cadou"
+
+#: admin/ui/initial-setup.php:24
+msgid "Success!"
+msgstr "Succes!"
+
+#: admin/ui/initial-setup.php:25
+msgid ""
+"The Gift Card product has been created. Click on the Products menu in the "
+"left to edit it."
+msgstr ""
+"Cardul Cadou a fost creat. Click pe meniul Produse din stanga pentru a-l "
+"edita."
+
+#: admin/ui/initial-setup.php:30
+msgid "Step 2: Let your customers check their gift card balances."
+msgstr "Pasul 2: Permite clientilor sa isi verifice soldul cardului cadou."
+
+#: admin/ui/initial-setup.php:32
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create a Check Balance page for your customers."
+msgstr ""
+"Actualizeaza la <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards "
+"Pro</a> pentru a crea o pagina Verifica Sold pentru clientii tai."
+
+#: admin/ui/order-gift-card-total.php:36
+msgid "PW Gift Card"
+msgstr "PW Card Cadou"
+
+#: admin/ui/product-data-panel-cards.php:35
+msgid "Gift card amounts"
+msgstr "Sume card cadou"
+
+#: admin/ui/product-data-panel-cards.php:39
+msgid ""
+"The available denominations that can be purchased. For example: %1$s25.00, "
+"%1$s50.00, %1$s100.00"
+msgstr ""
+"Denominarile disponibile care pot fi cumparate. De exemplu: %1$s25.00, "
+"%1$s50.00, %1$s100.00"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid "PW WooCommerce Gift Cards Pro"
+msgstr "PW WooCommerce Carduri Cadou Pro"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid " includes these great additional features:"
+msgstr " contine aceste functionalitati suplimentare:"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid "Multiple Designs"
+msgstr "Design-uri Multiple"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid ""
+"Create as many custom email designs as you would like. Happy birthday, "
+"congratulations, happy holidays, and more!"
+msgstr ""
+"Creeaza cate design-uri personalizate doresti. La multi ani, felicitari, "
+"sarbatori fericite si multe altele!"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid "Custom Amounts"
+msgstr "Sume personalizate"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid ""
+"Allow customers to specify the amount. You can set a minimum and a maximum "
+"amount."
+msgstr ""
+"Permite clientilor sa specifice suma. Tu poti seta o suma minima si una "
+"maxima."
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid "Delivery Date"
+msgstr "Data Livrare"
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid ""
+"Customers can choose when the gift card should be delivered to the recipient."
+msgstr "Clientii pot alege cand sa fie livrat cardul cadou catre destinatar."
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid "Physical Gift Cards"
+msgstr "Carduri Cadou Fizice"
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid ""
+"Sell physical gift cards to your customers without requiring a recipient "
+"email address."
+msgstr ""
+"Vinde carduri cadou fizice clientilor tai fara a mai fi nevoie de adresa de "
+"email a destinatarului."
+
+#: admin/ui/product-data-panel-cards.php:66 admin/ui/section-buttons.php:19
+msgid "Create Gift Cards"
+msgstr "Creeaza Carduri Cadou"
+
+#: admin/ui/product-data-panel-cards.php:66
+msgid ""
+"Enter the quantity, amount, and expiration date to easily generate gift "
+"cards."
+msgstr ""
+"Alege cantitatea, suma si data de expirare pentru a genera usor carduri "
+"cadou."
+
+#: admin/ui/product-data-panel-cards.php:67 admin/ui/section-buttons.php:23
+msgid "Import Card Numbers"
+msgstr "Importa numere de carduri"
+
+#: admin/ui/product-data-panel-cards.php:67
+msgid ""
+"Have physical cards or numbers from another system? Import them in one click!"
+msgstr ""
+"Detii carduri fizice sau virtuale de la alt sistem? Importa-le cu un singur "
+"click!"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "Default Amount"
+msgstr "Suma Implicita"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "choose an amount that will be pre-selected when purchasing a gift card."
+msgstr ""
+"alege o suma care va fi pre-selectata implicit cand se cumpara un card cadou."
+
+#: admin/ui/product-data-panel-cards.php:69 admin/ui/section-buttons.php:11
+msgid "Balances"
+msgstr "Sold"
+
+#: admin/ui/product-data-panel-cards.php:69
+msgid "A shortcode to let customers check their gift card balances."
+msgstr ""
+"Un cod scurt pentru a permite clientilor sa verifice soldul cardului cadou."
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Expiration Dates"
+msgstr "Date Expirare"
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Automatically set an expiration date based on the purchase date."
+msgstr ""
+"Seteaza in mod automat o data de expirare in functie de data achizitiei."
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Balance Adjustments"
+msgstr "Ajustari Sold"
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Perform balance adjustments in the admin area."
+msgstr "Realizeaza ajustari de sold in zona admin."
+
+#: admin/ui/section-buttons.php:15
+msgid "Email Designer"
+msgstr "Designer Email"
+
+#: admin/ui/section-buttons.php:27
+msgid "Settings"
+msgstr "Setari"
+
+#: admin/ui/sections/activity-records.php:26
+msgid "Date"
+msgstr "Data"
+
+#: admin/ui/sections/activity-records.php:27
+msgid "Action"
+msgstr "Actiune"
+
+#: admin/ui/sections/activity-records.php:28
+msgid "User"
+msgstr "Utilizator"
+
+#: admin/ui/sections/activity-records.php:29
+msgid "Note"
+msgstr "Nota"
+
+#: admin/ui/sections/activity-records.php:30 pw-gift-cards.php:131
+#: templates/woocommerce/emails/customer-pw-gift-card.php:156
+msgid "Amount"
+msgstr "Suma"
+
+#: admin/ui/sections/activity-records.php:31
+#: admin/ui/sections/search-results.php:33
+msgid "Balance"
+msgstr "Sold"
+
+#: admin/ui/sections/activity-records.php:53
+msgid "Guest"
+msgstr "Vizitator"
+
+#: admin/ui/sections/balance-summary.php:32
+msgid "Active gift cards"
+msgstr "Carduri cadou active"
+
+#: admin/ui/sections/balance-summary.php:36
+msgid "Outstanding balances"
+msgstr "Solduri exceptionale"
+
+#: admin/ui/sections/balances.php:32
+msgid "Gift card number or recipient email (leave blank for all)"
+msgstr "Numar card cadou sau email destinatar (lasa gol pentru toate)"
+
+#: admin/ui/sections/balances.php:33
+msgid "Search"
+msgstr "Cauta"
+
+#: admin/ui/sections/create.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create gift cards from the admin area."
+msgstr ""
+"Actualizeaza la <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards "
+"Pro</a> pentru a crea carduri cadou direct din zona admin."
+
+#: admin/ui/sections/designer-panel.php:12
+msgid "Gift card color"
+msgstr "Culoare card cadou"
+
+#: admin/ui/sections/designer-panel.php:13
+msgid "Redeem button color"
+msgstr "Culoarea butonului Foloseste"
+
+#: admin/ui/sections/designer-panel.php:14
+msgid "Redeem button text color"
+msgstr "Culoarea textului butonului Foloseste"
+
+#: admin/ui/sections/designer-panel.php:18
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to change even more settings such image, gift card title, additional "
+"colors, and more!"
+msgstr ""
+"Actualizați la <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards "
+"Pro</a> pentru a schimba chiar mai multe setări, cum ar fi imaginea, titlul "
+"cardului cadou, culori suplimentare și multe altele!"
+
+#: admin/ui/sections/designer-panel.php:25
+msgid "Save design"
+msgstr "Salveaza design-ul"
+
+#: admin/ui/sections/designer-panel.php:36
+msgid "Custom template file detected!"
+msgstr "A fost detectat un fisier sablon personalizat!"
+
+#: admin/ui/sections/designer-panel.php:39
+msgid ""
+"It appears as though you already have a custom email template file, your "
+"changes in the Designer may not appear when you actually send the email. "
+"Click the Send Preview Email button to confirm."
+msgstr ""
+"Se pare ca ai deja un fisier sablon email personalizat, modificarile tale "
+"din Designer ar putea sa nu apara cand trimiti emailul efectiv. Apasa "
+"butonul \"Trimite Email Previzualizare\" pentru a confirma."
+
+#: admin/ui/sections/designer-panel.php:44
+msgid "Preview"
+msgstr "Previzualizare"
+
+#: admin/ui/sections/designer-panel.php:47
+msgid "Send a preview email"
+msgstr "Trimite un email de previzualizare"
+
+#: admin/ui/sections/designer-panel.php:54
+msgid "The Purchasing Customer"
+msgstr "Clientul care cumpără"
+
+#: admin/ui/sections/import.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to import existing gift card numbers."
+msgstr ""
+"Actualizeaza la <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards "
+"Pro</a> pentru a importa numere de carduri cadou existente."
+
+#: admin/ui/sections/search-results.php:25
+msgid "No results"
+msgstr "Nici un rezultat"
+
+#: admin/ui/sections/search-results.php:26
+msgid "There are no gift cards found matching your search terms."
+msgstr ""
+"Nu s-au gasit carduri cadou care sa se potriveasca termenilor tai de cautare."
+
+#: admin/ui/sections/search-results.php:32
+msgid "Card Number"
+msgstr "Numar Card"
+
+#: admin/ui/sections/search-results.php:34
+msgid "Expiration Date"
+msgstr "Data Expirare"
+
+#: admin/ui/sections/search-results.php:44
+msgid "Card has been deleted."
+msgstr "Cardul a fost sters."
+
+#: admin/ui/sections/search-results.php:56
+msgid "View activity"
+msgstr "Vezi activitate"
+
+#: admin/ui/sections/search-results.php:58
+msgid "Delete"
+msgstr "Sterge"
+
+#: admin/ui/sections/search-results.php:61
+msgid "Restore"
+msgstr "Restabileste"
+
+#: admin/ui/sections/search-results.php:84
+msgid "Are you sure you want to delete this gift card?"
+msgstr "Esti sigur ca vrei sa stergi acest card cadou?"
+
+#: admin/ui/sections/settings.php:35
+msgid "Save Settings"
+msgstr "Salveaza Setarile"
+
+#: includes/class-pw-gift-card-activity.php:90
+msgid "Could not find activity record %d."
+msgstr "Nu am putut gasi nici o inregistrare %d."
+
+#: includes/class-pw-gift-card-activity.php:102
+msgid "Invalid action value: "
+msgstr "Valoare actiune invalida: "
+
+#: includes/class-pw-gift-card.php:70
+msgid "Card number does not exist."
+msgstr "Cardul introdus nu exista."
+
+#: includes/class-pw-gift-card.php:73
+msgid "Enter a card number."
+msgstr "Introduceti un numar de card."
+
+#: includes/class-pw-gift-card.php:119
+#: templates/woocommerce/cart/cart-pw-gift-card.php:52
+#: templates/woocommerce/checkout/pw-gift-cards.php:54
+msgid "Expired"
+msgstr "Expirat"
+
+#: includes/class-pw-gift-card.php:122
+msgid "None"
+msgstr "Nimic"
+
+#: includes/class-pw-gift-card.php:212
+msgid "Amount added should be greater than zero."
+msgstr "Suma adaugata ar trebui sa fie mai mare decat zero."
+
+#: includes/class-pw-gift-card.php:225
+msgid "Amount deducted should be less than zero."
+msgstr "Suma dedusa ar trebui sa fie mai mica decat zero."
+
+#: includes/class-pw-gift-card.php:234
+msgid "Unable to adjust balance, card is not active."
+msgstr "Imposibil de ajustat soldul, cardul nu este activ."
+
+#: includes/class-pw-gift-card.php:298
+msgid "Card Number cannot be empty."
+msgstr "Numarul Cardului nu poate fi gol."
+
+#: includes/class-pw-gift-card.php:330
+msgid "Failed to generate a unique random card number after %d attempts. %s"
+msgstr ""
+"Imposibil de generat un numar de card unic si aleator dupa %d incercari. %s"
+
+#: includes/class-pw-gift-card.php:402
+msgid "Property %s does not exist on %s"
+msgstr "Proprietatea %s nu exista pe %s"
+
+#: includes/class-wc-product-pw-gift-card.php:73
+msgid "Amount already exists: "
+msgstr "Suma exista deja: "
+
+#: includes/class-wc-product-pw-gift-card.php:86
+msgid "Could not create variation."
+msgstr "Nu s-a putut crea variatia."
+
+#: includes/class-wc-product-pw-gift-card.php:107
+msgid "Could not locate variation using variation_id "
+msgstr "Nu s-a putut localiza variatia folosind variation_id "
+
+#: includes/class-wc-product-pw-gift-card.php:278
+msgid "Select amount"
+msgstr "Selecteaza suma"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:31
+msgid "PW Gift Card Email"
+msgstr "PW Email Card Cadou"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:32
+msgid "This email is sent to the recipients of a gift card."
+msgstr "Acest email este trimis destinatarilor unui card cadou."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:34
+msgid "You were given a gift card"
+msgstr "Ai primit un card cadou"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:35
+msgid "{sender} sent you a gift card"
+msgstr "{sender} ti-a trimis un card cadou"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:319
+msgid "Enable/Disable"
+msgstr "Activeaza/Dezactiveaza"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:321
+msgid "Enable this email notification"
+msgstr "Activeaza aceasta notificare email"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:325
+msgid "Subject"
+msgstr "Subiect"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:327
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr ""
+"Asta controleaza linia subiect email. Lasa gol pentru a folosi subiectul "
+"implicit: <code>%s</code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:332
+msgid "Email Heading"
+msgstr "Antet Email"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:334
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+"Asta controleaza antetul principal continut in notificarea email. Lasa gol "
+"pentru a folosi antetul implicit: <code>%s</code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:339
+msgid "Email type"
+msgstr "Tip email"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:341
+msgid "Choose which format of email to send."
+msgstr "Alege ce format de email sa trimiti."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:345
+msgid "Plain text"
+msgstr "Text simplu"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:346
+msgid "HTML"
+msgstr "HTML"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:347
+msgid "Multipart"
+msgstr "Parti multiple"
+
+#: includes/pw-gift-cards-purchasing.php:88
+msgid "Choose an amount"
+msgstr "Alege o suma"
+
+#: includes/pw-gift-cards-purchasing.php:281
+msgid "Order %s purchased by %s %s"
+msgstr "Comanda %s cumparata de %s %s"
+
+#: includes/pw-gift-cards-purchasing.php:304
+msgid "Unable to retrieve variation "
+msgstr "Imposibil de recuperat variatia "
+
+#: includes/pw-gift-cards-purchasing.php:401
+msgid " (inactive)"
+msgstr " (inactiv)"
+
+#: includes/pw-gift-cards-purchasing.php:426
+msgid "Generated and emailed after the order is marked Complete."
+msgstr "Generat si trimis pe email dupa ce comanda este marcata Completa."
+
+#: includes/pw-gift-cards-redeeming.php:352
+msgid "Gift card %s:"
+msgid_plural "Gift cards %s:"
+msgstr[0] "Carduri cadou %s:"
+msgstr[1] "Carduri cadou %s:"
+msgstr[2] "Carduri cadou %s:"
+
+#: includes/pw-gift-cards-redeeming.php:424
+msgid "Shipping via %s"
+msgstr "Expediere via %s"
+
+#: includes/pw-gift-cards-redeeming.php:489
+#: includes/pw-gift-cards-redeeming.php:542
+#: includes/pw-gift-cards-redeeming.php:611 pw-gift-cards.php:185
+msgid "This gift card has a zero balance."
+msgstr "Acest card are sold zero."
+
+#: includes/pw-gift-cards-redeeming.php:492
+#: includes/pw-gift-cards-redeeming.php:614 pw-gift-cards.php:188
+msgid "Gift card applied."
+msgstr "Card cadou aplicat."
+
+#: includes/pw-gift-cards-redeeming.php:507
+msgid "Gift card removed."
+msgstr "Card cadou inlaturat."
+
+#: includes/pw-gift-cards-redeeming.php:538
+msgid "Gift cards cannot be used to purchase other gift cards."
+msgstr ""
+"Cardurile cadou nu pot fi folosite pentru a cumpara alte carduri cadou."
+
+#: includes/pw-gift-cards-redeeming.php:545
+msgid "Card is inactive."
+msgstr "Cardul este inactiv."
+
+#: includes/pw-gift-cards-redeeming.php:616
+msgid "Error: %s"
+msgstr "Eroare: %s"
+
+#: pw-gift-cards.php:129
+msgid "Gift Card Amount"
+msgstr "Suma Card Cadou"
+
+#: pw-gift-cards.php:132
+msgid "To"
+msgstr "Pentru"
+
+#: pw-gift-cards.php:133
+#: templates/woocommerce/emails/customer-pw-gift-card.php:129
+msgid "From"
+msgstr "De la"
+
+#: pw-gift-cards.php:134
+msgid "Message"
+msgstr "Mesaj"
+
+#: pw-gift-cards.php:205
+msgid "Required"
+msgstr "Necesar"
+
+#: pw-gift-cards.php:206
+msgid "Minimum amount is %s"
+msgstr "Suma minima este %s"
+
+#: pw-gift-cards.php:207
+msgid "Maximum amount is %s"
+msgstr "Suma maxima este %s"
+
+#: pw-gift-cards.php:208
+msgid ""
+"The \"To\" field should only contain email addresses. The following "
+"recipients do not look like valid email addresses:"
+msgstr ""
+"Campul \"Pentru\" trebuie sa contina doar adrese email. Urmatorii "
+"destinatari nu par a fi adrese de email valide:"
+
+#: pw-gift-cards.php:333
+msgid "%s requires WooCommerce version %s or later."
+msgstr "%s necesita WooCommerce versiunea %s sau mai noua."
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:39
+msgid "Gift Card:"
+msgstr "Card Cadou:"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:40
+#: templates/woocommerce/cart/apply-gift-card.php:52
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:39
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:34
+msgid "Gift card number"
+msgstr "Numar card cadou"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+msgid "Apply gift card"
+msgstr "Aplica cardul cadou"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/cart/apply-gift-card.php:53
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Please wait..."
+msgstr "Te rog asteapta..."
+
+#: templates/woocommerce/cart/apply-gift-card.php:50
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:32
+msgid "Have a gift card?"
+msgstr "Ai un card cadou?"
+
+#: templates/woocommerce/cart/apply-gift-card.php:53
+msgid "Apply"
+msgstr "Aplica"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:43
+#: templates/woocommerce/checkout/pw-gift-cards.php:45
+msgid "Gift card"
+msgstr "Card cadou"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:46
+#: templates/woocommerce/checkout/pw-gift-cards.php:48
+msgid "Remaining balance is %s"
+msgstr "Soldul ramas este %s"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:59
+msgid "Gift Card Total"
+msgstr "Total Card Cadou"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:61
+#: templates/woocommerce/checkout/pw-gift-cards.php:63
+msgid "[Remove]"
+msgstr "[Elimina]"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+msgid "Click here to enter your gift card number"
+msgstr "Apasa aici pentru a introduce numarul cardului tau cadou"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:36
+msgid "If you have a gift card number, please apply it below."
+msgstr "Daca ai numarul unui card cadou, te rog sa il aplici mai jos."
+
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Apply Gift Card"
+msgstr "Aplica cardul cadou"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:146
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:25
+msgid "%s Gift Card"
+msgstr "%s Card Cadou"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:164
+msgid "Gift Card Number"
+msgstr "Numar Card Cadou"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:173
+msgid "Redeem"
+msgstr "Foloseste"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:26
+msgid "Amount: %s"
+msgstr "Suma: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:27
+msgid "Gift card number: %s"
+msgstr "Numar card cadou: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:28
+msgid "Link: %s"
+msgstr "Link: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:32
+msgid "Message:"
+msgstr "Mesaj:"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:113
+msgid "Enter an email address for each recipient"
+msgstr "Introduceti o adresa de email pentru fiecare destinatar"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:114
+msgid "Separate multiple email addresses with a comma."
+msgstr "Puteti introduce mai multe adrese de email separate cu virgula."
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:119
+msgid "Your name"
+msgstr "Numele tau"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:123
+msgid "(optional)"
+msgstr "(optional)"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:124
+msgid "Add a message"
+msgstr "Adauga un mesaj"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:125
+msgid "characters remaining"
+msgstr "de caractere mai ai la dispozitie"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:129
+msgid "Quantity"
+msgstr "Cantitate"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:130
+msgid "1 to each recipient"
+msgstr "1 pentru fiecare destinatar"
+
+#. Plugin Name of the plugin/theme
+msgid "PW WooCommerce Gift Cards"
+msgstr "PW WooCommerce Gift Cards"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.pimwick.com/gift-cards/"
+msgstr "https://www.pimwick.com/gift-cards/"
+
+#. Description of the plugin/theme
+msgid "Sell gift cards in your WooCommerce store."
+msgstr "Vinde carduri cadou in magazinul tau WooCommerce."
+
+#. Author of the plugin/theme
+msgid "Pimwick, LLC"
+msgstr "Pimwick, LLC"
+
+#. Author URI of the plugin/theme
+msgid "https://www.pimwick.com"
+msgstr "https://www.pimwick.com"
+
+#~ msgid ""
+#~ "Go to the <a href=\"%s\">WooCommerce Email Settings</a> to customize the "
+#~ "background color, subject, email heading, and more."
+#~ msgstr ""
+#~ "Mergi la <a href=\"%s\">WooCommerce Email Settings</a> pentru a "
+#~ "personaliza culoarea fundalului, subiectul, antetul email si multe altele."
+
+#~ msgid "Want even more control?"
+#~ msgstr "Vrei si mai mult control?"
+
+#~ msgid ""
+#~ "You can fully customize the gift card email to suit your needs. We use "
+#~ "the built in WooCommerce email template system. To override the email you "
+#~ "should copy this file"
+#~ msgstr ""
+#~ "Poti personaliza complet emailul cardului cadou pentru a se potrivi "
+#~ "dorintelor tale. Folosim sistemul de sablon email prezent in WooCommerce. "
+#~ "Pentru a suprascrie emailul trebuie sa copiezi acest fisier"
+
+#~ msgid "To here"
+#~ msgstr "Aici"
+
+#~ msgid ""
+#~ "You may need to create the subfolders if they do not exist in your theme "
+#~ "folder. Once the file is in your theme folder, open it up in a text "
+#~ "editor and make any changes."
+#~ msgstr ""
+#~ "Este posibil sa fie nevoie sa creezi sub-directoarele daca ele nu exista "
+#~ "in directorul temei tale. Cand fisierul este in directorul temei tale "
+#~ "deschide-l cu un editor de text si fa orice modificari."
+
+#~ msgid "Balance is currently %s, unable to adjust by %s"
+#~ msgstr "Soldul este momentan %s, imposibil de ajustat cu %s"

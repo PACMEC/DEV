@@ -1,0 +1,459 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ethereum-wallet\n"
+"POT-Creation-Date: 2020-10-09 10:03+0700\n"
+"PO-Revision-Date: 2020-10-09 10:03+0700\n"
+"Last-Translator: \n"
+"Language-Team: ethereumicoio\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: nbproject\n"
+"X-Poedit-SearchPathExcluded-3: scoped-php-build\n"
+"X-Poedit-SearchPathExcluded-4: vendor-bin\n"
+"X-Poedit-SearchPathExcluded-5: build\n"
+"X-Poedit-SearchPathExcluded-6: build-premium\n"
+"X-Poedit-SearchPathExcluded-7: contracts\n"
+"X-Poedit-SearchPathExcluded-8: tests\n"
+
+#: ethereum-wallet.admin.php:52
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#: ethereum-wallet.admin.php:68 ethereum-wallet.php:3598
+msgid "Ethereum Wallet Settings"
+msgstr "Базовые настройки"
+
+#: ethereum-wallet.admin.php:74
+msgid "Install and Configure Guide"
+msgstr "Руководство по установке и настройке"
+
+#: ethereum-wallet.admin.php:75
+#, php-format
+msgid ""
+"Use the official %1$sInstall and Configure%2$s step by step guide to "
+"configure this plugin."
+msgstr ""
+"Воспользуйтесь официальным пошаговым %1$sРуководством по установке и "
+"настройке%2$s."
+
+#: ethereum-wallet.admin.php:103
+msgid "Cryptocompare API Key"
+msgstr "Ключ API Cryptocompare.com"
+
+#: ethereum-wallet.admin.php:106
+msgid "Put your Cryptocompare API Key here"
+msgstr "Скопируйте сюда свой ключ API Cryptocompare.com"
+
+#: ethereum-wallet.admin.php:107
+#, php-format
+msgid ""
+"<p>The API key for the <a target=\"_blank\" href=\"%s\">%s</a>. You need to "
+"register on this site to obtain it.</p>"
+msgstr ""
+"<p>Ключ доступа к API <a target=\"_blank\" href=\"%s\">%s</a>. "
+"Зарегистрируйтесь чтобы получить свой ключ.</p>"
+
+#: ethereum-wallet.admin.php:116
+msgid "Infura.io API Key"
+msgstr "Ключ API Infura.io"
+
+#: ethereum-wallet.admin.php:119
+msgid "Put your Infura.io API Key here"
+msgstr "Скопируйте сюда свой ключ API Infura.io"
+
+#: ethereum-wallet.admin.php:121
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to register on this site to obtain it. "
+"Follow the %2$sGet infura API Key%3$s guide please."
+msgstr ""
+"Ключ API для %1$s. Вам необходимо зарегистрироваться на сайте чтобы получить "
+"его. Следуйте руководству %2$sGet infura API Key%3$s."
+
+#: ethereum-wallet.admin.php:131
+msgid "Etherscan Api Key"
+msgstr "Ключ API etherscan"
+
+#: ethereum-wallet.admin.php:134
+msgid "Put your Etherscan Api Key here"
+msgstr "Введите ваш ключ API для etherscan"
+
+#: ethereum-wallet.admin.php:135
+#, php-format
+msgid ""
+"The API key for the %1$s. You need to %2$sregister%3$s on this site to "
+"obtain it."
+msgstr ""
+"Ключ API для %1$s. Вам необходимо %2$sзарегистрироваться%3$s на этом сайте "
+"чтобы получить его."
+
+#: ethereum-wallet.admin.php:144
+msgid "Blockchain"
+msgstr "Блокчейн"
+
+#: ethereum-wallet.admin.php:148
+msgid ""
+"The blockchain used: mainnet or ropsten. Use mainnet in production, and "
+"ropsten in test mode. See plugin documentation for the testing guide."
+msgstr ""
+"Используемый блокчейн: mainnet или ropsten. Используйте mainnet в релизе и "
+"ropsten для тестирования. В документации плагина этот вопрос освещён более "
+"подробно."
+
+#: ethereum-wallet.admin.php:154
+msgid "Gas Limit"
+msgstr "Ограничение газа"
+
+#: ethereum-wallet.admin.php:158
+msgid ""
+"The default gas limit to to spend on your transactions. 200000 is a "
+"reasonable default value."
+msgstr ""
+"Максимальное количество газа, которое будет потрачено на транзакцию по "
+"пересылке Ether или ERC20 токенов. 200000 является разумным ограничением."
+
+#: ethereum-wallet.admin.php:164
+msgid "Gas price"
+msgstr "Стоимость газа"
+
+#: ethereum-wallet.admin.php:168
+msgid ""
+"The gas price in Gwei. Reasonable values are in a 2-40 ratio. The default "
+"value is 2 that is cheap but not very fast. Increase if you want "
+"transactions to be mined faster, decrease if you want pay less fee per "
+"transaction."
+msgstr ""
+"Стоимость газа указывается в единицах Gwei. Разумные значения лежат в "
+"диапазоне 2-40 Gwei. Значение по умолчанию 2 является дешёвым, но не очень "
+"быстрым. Увеличьте это значение, чтобы ваши транзакции выполнялись быстрее, "
+"или уменьшите, если хотите сэкономить."
+
+#: ethereum-wallet.admin.php:177
+msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
+msgstr "Хотите продавать ваши ERC20 токены за рубли/доллары или Bitcoin?"
+
+#: ethereum-wallet.admin.php:179
+#, php-format
+msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
+msgstr "Установите плагин %1$sCryptocurrency Product for WooCommerce%2$s!"
+
+#: ethereum-wallet.admin.php:184
+msgid ""
+"Want to accept Ether or any ERC20/ERC223 token in your WooCommerce store?"
+msgstr ""
+"Хотите принимать платежи в ETH или любых ERC20/ERC223 токенах в вашем "
+"WooCommerce сайте?"
+
+#: ethereum-wallet.admin.php:186
+#, php-format
+msgid ""
+"Install the %1$sEther and ERC20 tokens WooCommerce Payment Gateway%2$s "
+"plugin!"
+msgstr ""
+"Установите %1$sEther and ERC20 tokens WooCommerce Payment Gateway%2$s плагин!"
+
+#: ethereum-wallet.admin.php:191
+msgid "Want to sell your ERC20/ERC223 ICO token from your ICO site?"
+msgstr "Хотите продавать ваши ERC20/ERC223 ICO токены с вашего ICO сайта?"
+
+#: ethereum-wallet.admin.php:193
+#, php-format
+msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
+msgstr "Установите %1$sEthereumICO WordPress%2$s плагин!"
+
+#: ethereum-wallet.admin.php:198
+msgid "Need help to configure this plugin?"
+msgstr "Нужна помощь в настройке этого плагина?"
+
+#: ethereum-wallet.admin.php:200 ethereum-wallet.admin.php:207
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr "Вы можете поручить эту задачу %1$sнам!%2$s"
+
+#: ethereum-wallet.admin.php:205
+msgid "Need help to develop a ERC20 token for your ICO?"
+msgstr "Нуждаетесь в помощи  разработке ERC20 токена для вашего ICO?"
+
+#: ethereum-wallet.admin.php:215
+msgid "ERC20 tokens support"
+msgstr "Поддержка токенов ERC20"
+
+#: ethereum-wallet.admin.php:217
+#, php-format
+msgid "Install the %1$sPRO plugin version%2$s!"
+msgstr "Перейдите на %1$sPRO версию плагина%2$s!"
+
+#: ethereum-wallet.admin.php:227
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: ethereum-wallet.admin.php:228
+msgid "Are you sure you want to delete all Ethereum Wallet options?"
+msgstr "Вы уверены, что хотите удалить все настройки этого плагина?"
+
+#: ethereum-wallet.admin.php:228
+msgid "Reset"
+msgstr "Сбросить"
+
+#: ethereum-wallet.php:837 ethereum-wallet.php:865
+msgid "Rank"
+msgstr "Место"
+
+#: ethereum-wallet.php:838
+msgid "Avatar"
+msgstr "Фото"
+
+#: ethereum-wallet.php:839
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: ethereum-wallet.php:840 ethereum-wallet.php:866
+msgid "Wallet"
+msgstr "Кошелёк"
+
+#: ethereum-wallet.php:841 ethereum-wallet.php:867 ethereum-wallet.php:3113
+msgid "Balance"
+msgstr "Баланс"
+
+#: ethereum-wallet.php:842 ethereum-wallet.php:868
+msgid "Tx Count"
+msgstr "Количество транзакций"
+
+#: ethereum-wallet.php:1043 ethereum-wallet.php:2565 ethereum-wallet.php:2696
+#: ethereum-wallet.php:2777 ethereum-wallet.php:2805 ethereum-wallet.php:3355
+msgid "Default account"
+msgstr "Учетная запись по умолчанию"
+
+#: ethereum-wallet.php:1057 ethereum-wallet.php:1060 ethereum-wallet.php:2219
+msgid "ETH"
+msgstr "ETH"
+
+#: ethereum-wallet.php:1063
+msgid "K"
+msgstr "К"
+
+#: ethereum-wallet.php:1065
+msgid "M"
+msgstr "М"
+
+#: ethereum-wallet.php:1087
+msgid "Result code is not 200"
+msgstr "HTTP код возврата отличен от 200"
+
+#: ethereum-wallet.php:1091
+msgid "Empty body"
+msgstr "Пустой ответ сервера"
+
+#: ethereum-wallet.php:1096
+msgid "No result field"
+msgstr "В ответе сервера отсутствует поле result"
+
+#: ethereum-wallet.php:1265 ethereum-wallet.php:1292
+msgid "Network problems detected. Last action was not completed."
+msgstr "Ошибка сети. Ваше последнее действие не было применено."
+
+#: ethereum-wallet.php:1392
+msgid "Ethereum"
+msgstr "Ethereum"
+
+#: ethereum-wallet.php:1424
+msgid "Failed to retrieve Ether balance"
+msgstr "Не удалось получить баланс учётной записи"
+
+#: ethereum-wallet.php:1464 ethereum-wallet.php:1467 ethereum-wallet.php:1687
+#: ethereum-wallet.php:1690 ethereum-wallet.php:1693
+msgid "Failed to retrieve token balance"
+msgstr "Не удалось получить баланс учётной записи"
+
+#: ethereum-wallet.php:1577 ethereum-wallet.php:1800
+#, php-format
+msgid "%1$s per %2$s"
+msgstr "%1$s в  %2$s"
+
+#: ethereum-wallet.php:1586 ethereum-wallet.php:1809
+#, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s  %2$s"
+
+#: ethereum-wallet.php:1644
+msgid "N/A"
+msgstr "N/A"
+
+#: ethereum-wallet.php:1843
+msgid "Account"
+msgstr "Учетная запись"
+
+#: ethereum-wallet.php:1873 ethereum-wallet.php:1952 ethereum-wallet.php:2184
+msgid "QR"
+msgstr "QR-код"
+
+#: ethereum-wallet.php:1880 ethereum-wallet.php:1958
+msgid "Copy"
+msgstr "Копировать"
+
+#: ethereum-wallet.php:1924 ethereum-wallet.php:2627
+msgid "Private key"
+msgstr "Секретный ключ"
+
+#: ethereum-wallet.php:2029 ethereum-wallet.php:3576
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: ethereum-wallet.php:2123 ethereum-wallet.php:2132
+#, php-format
+msgid ""
+"Last transaction %1$s%2$s%3$s%4$s%5$s is still in progress. Wait please."
+msgstr ""
+"Последняя транзакция %1$s%2$s%3$s%4$s%5$s ещё не подтверждена. Пожалуйста, "
+"дождитесь её завершения."
+
+#: ethereum-wallet.php:2169
+msgid "To"
+msgstr "Получатель"
+
+#: ethereum-wallet.php:2173
+msgid "Input the recipient ethereum address"
+msgstr "Введите Ethereum адрес учётной записи получателя"
+
+#: ethereum-wallet.php:2193
+msgid ""
+"Unable to access video stream (please make sure you have a webcam enabled)"
+msgstr ""
+"Не удалось включить видео (пожалуйста, убедитесь что ваша web-камера "
+"исправна)"
+
+#: ethereum-wallet.php:2204 ethereum-wallet.php:3160 ethereum-wallet.php:3214
+msgid "Amount"
+msgstr "Сумма"
+
+#: ethereum-wallet.php:2235 ethereum-wallet.php:2236
+msgid "Send"
+msgstr "Отправить"
+
+#: ethereum-wallet.php:2380
+msgid "Failed to get token decimals"
+msgstr "Не удалось получить маркер десятичных знаков"
+
+#: ethereum-wallet.php:2499 ethereum-wallet.php:2616
+msgid "Account name"
+msgstr "Название учетной записи"
+
+#: ethereum-wallet.php:2503 ethereum-wallet.php:2620
+msgid "Input new account name"
+msgstr "Введите название учетной записи"
+
+#: ethereum-wallet.php:2520 ethereum-wallet.php:2521
+msgid "Create"
+msgstr "Создать"
+
+#: ethereum-wallet.php:2632
+msgid "Input your private key here"
+msgstr "Введите ваш секретный ключ"
+
+#: ethereum-wallet.php:2649 ethereum-wallet.php:2650
+msgid "Import"
+msgstr "Импортировать"
+
+#: ethereum-wallet.php:2826 ethereum-wallet.php:2827
+msgid "Select"
+msgstr "Выбрать"
+
+#: ethereum-wallet.php:2832 ethereum-wallet.php:2833
+msgid "Remove"
+msgstr "Удалить"
+
+#: ethereum-wallet.php:3112 ethereum-wallet.php:3159 ethereum-wallet.php:3213
+msgid "#"
+msgstr "№"
+
+#: ethereum-wallet.php:3114
+msgid "Token"
+msgstr "Токен"
+
+#: ethereum-wallet.php:3161 ethereum-wallet.php:3215
+msgid "Date"
+msgstr "Дата"
+
+#: ethereum-wallet.php:3162 ethereum-wallet.php:3216
+msgid "Tx"
+msgstr "Транзакция"
+
+#: ethereum-wallet.php:3574
+msgid "Copied to clipboard"
+msgstr "Скопировано в буфер обмена"
+
+#: ethereum-wallet.php:3575
+msgid "Insufficient Ether balance for tx fee payment."
+msgstr "Недостаточно эфира для оплаты комиссии за транзакцию."
+
+#: ethereum-wallet.php:3577
+msgid "Pending"
+msgstr "В очереди"
+
+#: ethereum-wallet.php:3578
+msgid "recently"
+msgstr "только-что"
+
+#: ethereum-wallet.php:3579
+#, php-format
+msgid "%1$s days"
+msgstr "%1$s дней"
+
+#: ethereum-wallet.php:3580
+#, php-format
+msgid "%1$s hours"
+msgstr "%1$s часов"
+
+#: ethereum-wallet.php:3581
+#, php-format
+msgid "%1$s minutes"
+msgstr "%1$s минут"
+
+#: ethereum-wallet.php:3599 ethereum-wallet.php:4081
+msgid "Ethereum Wallet"
+msgstr "Кошелёк Ethereum"
+
+#: ethereum-wallet.php:3618
+msgid "Settings"
+msgstr "Настройки"
+
+#: ethereum-wallet.php:4080
+msgid "Ethereum Wallet Tools"
+msgstr "Утилиты кошелька Ethereum"
+
+#: ethereum-wallet.php:4153
+#, php-format
+msgid "Calculated %1$s/%2$s."
+msgstr "Обсчитано %1$s из %2$s."
+
+#~ msgid ""
+#~ "In order to sell your ERC20/ERC223 tokens install the %1$sPRO plugin "
+#~ "version%2$s please."
+#~ msgstr ""
+#~ "Чтобы создавать товары для продажи токенов ERC20/ERC223 перейдите на "
+#~ "%1$sPRO версию плагина%2$s."
+
+#~ msgid "Ethereum wallet address"
+#~ msgstr "Адрес кошелька Ethereum"
+
+#~ msgid ""
+#~ "The Ethereum address of your wallet from which you would sell Ether or "
+#~ "ERC20 tokens."
+#~ msgstr ""
+#~ "Адрес кошелька Ethereum с которого вы хотите продавать Ether или ERC20 "
+#~ "токены."
+
+#~ msgid "Ethereum wallet private key"
+#~ msgstr "Секретный ключ кошелька Ethereum"

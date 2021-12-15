@@ -1,0 +1,2969 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce PDF Invoices, Packing Slips, Delivery Notes "
+"& Shipping Labels\n"
+"POT-Creation-Date: 2021-10-09 21:23+0530\n"
+"PO-Revision-Date: 2021-10-09 21:48+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wf-woocommerce-packing-list.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:110
+msgid "Settings updated."
+msgstr "Indstillinger opdateret"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:111
+msgid "All fields are mandatory"
+msgstr "alle felter skal udfyldes"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:112
+#, php-format
+msgid ""
+"Unable to update settings due to an internal error. %s To troubleshoot "
+"please click %s here. %s"
+msgstr ""
+"Kan ikke opdatere indstillinger på grund af en intern fejl. %s Klik på %s "
+"her for at foretage fejlfinding. %s"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:113
+msgid "You have to select order(s) first!"
+msgstr "Du skal først vælge rækkefølge (r)!"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:114
+msgid "One or more order do not have invoice generated. Generate manually?"
+msgstr "En eller flere ordrer har ikke genereret faktura. Generer manuelt?"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:115
+#: admin/class-wf-woocommerce-packing-list-admin.php:1042
+#: admin/class-wf-woocommerce-packing-list-admin.php:1062
+#: admin/modules/customizer/customizer.php:49
+#: admin/modules/customizer/customizer.php:237
+#: public/modules/invoice/invoice.php:131
+#: public/modules/shippinglabel/shippinglabel.php:239
+msgid "Error"
+msgstr "Fejl"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:116
+msgid "Please wait"
+msgstr "Vent venligst"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:117
+msgid "is required"
+msgstr "påkrævet"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:118
+#: admin/modules/freevspro/views/comparison-table.php:16
+#: public/modules/invoice/invoice.php:102
+#: public/modules/invoice/invoice.php:103
+#: public/modules/invoice/invoice.php:1255
+#: public/modules/invoice/invoice.php:1279
+#: public/modules/invoice/views/invoice-admin-settings.php:12
+msgid "Invoice"
+msgstr "Faktura"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:119
+msgid ""
+"number has not been generated yet. Do you want to manually generate one ?"
+msgstr "nummer er ikke genereret endnu. Vil du manuelt generere en?"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:120
+msgid ""
+"‘Generate invoice for free orders’ is disabled in Invoice settings > "
+"Advanced. You are attempting to generate invoice for this free order. "
+"Proceed?"
+msgstr ""
+"'Generer faktura for gratis ordrer' er deaktiveret i Fakturaindstillinger> "
+"Avanceret. Du forsøger at generere faktura for denne gratis ordre. Fortsæt?"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:213
+msgctxt "placeholder"
+msgid "Enter "
+msgstr "Gå ind"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:374
+msgid "Print Actions"
+msgstr "Udskrivningshandlinger"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:384
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:23
+#: admin/views/admin-settings-documents.php:84
+#: public/modules/invoice/views/invoice-admin-settings.php:12
+#: public/modules/shippinglabel/views/admin-settings.php:11
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:385
+#: admin/modules/freevspro/views/goto-pro.php:50
+msgid "Upgrade to premium"
+msgstr "Opgrader til premium"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:386
+msgid "Support"
+msgstr "Support"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:387
+msgid "Review"
+msgstr "Anmeldelse"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:424
+#: admin/class-wf-woocommerce-packing-list-admin.php:449
+msgid "General Settings"
+msgstr "Generelle indstillinger"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:425
+msgid "Invoice/Packing"
+msgstr "Faktura / Pakliste"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:439
+#: admin/class-wf-woocommerce-packing-list-admin.php:440
+msgid "Other Documents"
+msgstr "Dokumentation"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:502
+msgid "You are not allowed to view this page."
+msgstr "Du har ikke lov til at se denne side."
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:503
+msgid "Access denied !!!."
+msgstr "Adgang nægtet !!!."
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:1048
+#: admin/class-wf-woocommerce-packing-list-admin.php:1111
+msgid "Settings Updated"
+msgstr "Indstillinger opdateret"
+
+#. translators: %s: method
+#: admin/class-wf-woocommerce-packing-list-admin.php:1592
+#: public/modules/invoice/invoice.php:928
+#, php-format
+msgid "via %s"
+msgstr "Via %s"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:1597
+msgid "Free!"
+msgstr "Gratis!"
+
+#: admin/data/data.tooltip.php:3
+msgid ""
+"Specify your company name in the field provided. You can choose to display "
+"the name or logo in the invoice from the customize tab."
+msgstr ""
+"Angiv dit firmanavn i det angivne felt. Du kan vælge at vise navnet eller "
+"logoet på fakturaen fra fanen Tilpas."
+
+#: admin/data/data.tooltip.php:4
+msgid ""
+"Upload a company logo (preferably of size 150x50px for better usability) "
+"from the media library which will be displayed in your document."
+msgstr ""
+"Upload et firmalogo (helst i størrelse 150x50px for bedre brugervenlighed) "
+"fra mediebiblioteket, der vises i dit dokument."
+
+#: admin/data/data.tooltip.php:5
+msgid ""
+"Additional details like the terms and conditions, any specific messages that "
+"have to be displayed at the bottom of the document can be specified in the "
+"expandable text area provided."
+msgstr ""
+"Yderligere detaljer som vilkår og betingelser, eventuelle specifikke "
+"meddelelser, der skal vises nederst i dokumentet, kan specificeres i det "
+"angivne tekstområde, der kan udvides."
+
+#: admin/data/data.tooltip.php:6
+msgid ""
+"The 'From Address' to be displayed in the shipping documents will be loaded "
+"from details specified in these fields."
+msgstr ""
+"Den 'Fra adresse', der skal vises i forsendelsesdokumenterne, indlæses fra "
+"de detaljer, der er angivet i disse felter."
+
+#: admin/data/data.tooltip.php:7
+msgid ""
+"Click here to load the default WooCommerce store address details into the "
+"respective fields."
+msgstr ""
+"Klik her for at indlæse standardoplysninger om WooCommerce-butikens adresse "
+"i de respektive felter."
+
+#: admin/data/data.tooltip.php:8
+msgid ""
+"Enable to obtain a preview of the document whenever a user initiates a print."
+msgstr ""
+"Aktiver for at få en forhåndsvisning af dokumentet, hver gang en bruger "
+"starter et udskrivning."
+
+#: admin/data/data.tooltip.php:9
+msgid ""
+"Enable to obtain the document in right to left alignment. (P.S: Use it only "
+"for languages with the right to left text direction)"
+msgstr ""
+"Aktiver for at hente dokumentet i højre til venstre-justering. (PS: Brug det "
+"kun til sprog med tekstretningen fra højre til venstre)"
+
+#: admin/data/data.tooltip.php:10
+msgid ""
+"Configure the product price/subtotal inclusive or exclusive of tax. "
+"Provision to set up tax also provided."
+msgstr ""
+"Konfigurer produktpris / subtotal inklusive eller eksklusiv moms. Der er "
+"også mulighed for at oprette skat."
+
+#: admin/modules/customizer/classes/class-customizer.php:86
+msgid "Box name"
+msgstr "Box navn"
+
+#: admin/modules/customizer/classes/class-customizer.php:401
+msgid "Refund"
+msgstr "Tilbagebetale"
+
+#: admin/modules/customizer/classes/class-customizer.php:429
+msgid "incl. tax"
+msgstr "inkl. skat"
+
+#: admin/modules/customizer/classes/class-customizer.php:686
+#: admin/modules/customizer/classes/class-customizer.php:1354
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:138
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:145
+msgid "n/a"
+msgstr "n / a"
+
+#: admin/modules/customizer/classes/class-customizer.php:1587
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: admin/modules/customizer/classes/class-customizer.php:1985
+msgid ""
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
+"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
+"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
+"lectus vel"
+msgstr ""
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
+"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus "
+"mollis porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum "
+"lectus vel"
+
+#: admin/modules/customizer/classes/class-customizer.php:1986
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
+"purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, "
+"et interdum tellus fermentum at. Fusce pellentesque justo rhoncus"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
+"purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, "
+"et interdum tellus fermentum kl. Fusce pellentesque justo rhoncus"
+
+#: admin/modules/customizer/customizer.php:81
+msgid "Unable to generate PDF."
+msgstr "Kan ikke indlæse PDF skabelonen."
+
+#: admin/modules/customizer/customizer.php:183
+#: admin/modules/customizer/customizer.php:188
+msgid "Customize"
+msgstr "Tilpas"
+
+#: admin/modules/customizer/customizer.php:238
+msgid "Success"
+msgstr "Succes"
+
+#: admin/modules/customizer/customizer.php:239
+msgid "You can't undo this action. Are you sure?"
+msgstr "Du kan ikke fortryde denne handling. Er du sikker?"
+
+#: admin/modules/customizer/customizer.php:240
+msgid "Click here to add Company logo"
+msgstr "Klik her for at tilføje firmaets logo"
+
+#: admin/modules/customizer/customizer.php:241
+msgid "Click here to add Company name"
+msgstr "Klik her for at tilføje firmaets navn"
+
+#: admin/modules/customizer/customizer.php:242
+msgid "Click here to add From address"
+msgstr "Klik her for at tilføje Fra adresse"
+
+#: admin/modules/customizer/customizer.php:243
+msgid "Click here to add Signature"
+msgstr "Klik her for at tilføje Signatur"
+
+#: admin/modules/customizer/customizer.php:244
+msgid ""
+"Please save all data before leaving this page. All unsaved data will be "
+"lost. Are you sure?"
+msgstr ""
+"Gem alle data inden du forlader denne side. Alle ikke-gemte data vil gå "
+"tabt. Er du sikker?"
+
+#: admin/modules/customizer/customizer.php:245
+#: admin/modules/customizer/views/customize.php:184
+msgid "Create new template"
+msgstr "Opret ny skabelon"
+
+#: admin/modules/customizer/customizer.php:246
+msgid "Change layout"
+msgstr "Skift layout"
+
+#: admin/modules/customizer/customizer.php:247
+msgid "Saving"
+msgstr "Gemmer"
+
+#: admin/modules/customizer/customizer.php:248
+#: public/modules/invoice/invoice.php:129
+#: public/modules/shippinglabel/shippinglabel.php:237
+msgid "Please enter order number"
+msgstr "Indtast ordrenummer"
+
+#: admin/modules/customizer/customizer.php:249
+#: public/modules/invoice/invoice.php:130
+#: public/modules/shippinglabel/shippinglabel.php:238
+msgid "Generating"
+msgstr "Genererer"
+
+#: admin/modules/customizer/customizer.php:289
+#: admin/modules/customizer/customizer.php:553
+msgid "Active"
+msgstr "Aktiv"
+
+#: admin/modules/customizer/customizer.php:525
+msgid "Error."
+msgstr "Fejl."
+
+#: admin/modules/customizer/customizer.php:556
+#: admin/modules/customizer/views/customize.php:201
+msgid "Activate"
+msgstr "Aktiver"
+
+#: admin/modules/customizer/customizer.php:583
+msgid "No template found."
+msgstr "Ingen skabelon fundet."
+
+#: admin/modules/customizer/customizer.php:600
+msgid "Unable to save theme."
+msgstr "Kan ikke gemme tema."
+
+#: admin/modules/customizer/customizer.php:618
+msgid "Template with same name already exists."
+msgstr "Skabelon med samme navn findes allerede."
+
+#: admin/modules/customizer/customizer.php:648
+msgid "Template created."
+msgstr "Skabelon oprettet."
+
+#: admin/modules/customizer/customizer.php:683
+msgid "Template updated."
+msgstr "Skabelon opdateret."
+
+#: admin/modules/customizer/customizer.php:725
+msgid "Unable to switch view."
+msgstr "Kan ikke skifte visning."
+
+#: admin/modules/customizer/customizer.php:1011
+msgid "Unable to load template."
+msgstr "Kan ikke indlæse skabelonen."
+
+#: admin/modules/customizer/customizer.php:1034
+msgid "Untitled template"
+msgstr "Unavngivet skabelon"
+
+#: admin/modules/customizer/customizer.php:1114
+msgid "Lighter"
+msgstr "lighter"
+
+#: admin/modules/customizer/customizer.php:1115
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/modules/customizer/customizer.php:1116
+msgid "Bold"
+msgstr "Dristig"
+
+#: admin/modules/customizer/customizer.php:1117
+msgid "Bolder"
+msgstr "Bolder"
+
+#: admin/modules/customizer/customizer.php:1131
+msgid "Select One"
+msgstr "Vælg en"
+
+#: admin/modules/customizer/customizer.php:1146
+msgid "Left"
+msgstr "Venstre"
+
+#: admin/modules/customizer/customizer.php:1147
+msgid "Right"
+msgstr "Højre"
+
+#: admin/modules/customizer/customizer.php:1148
+msgid "Center"
+msgstr "Center"
+
+#: admin/modules/customizer/customizer.php:1149
+msgid "Start"
+msgstr "Start"
+
+#: admin/modules/customizer/customizer.php:1150
+msgid "End"
+msgstr "Slut"
+
+#: admin/modules/customizer/customizer.php:1158
+msgid "None"
+msgstr "Ingen"
+
+#: admin/modules/customizer/customizer.php:1171
+msgid "Solid"
+msgstr "Solid"
+
+#: admin/modules/customizer/customizer.php:1172
+msgid "Dotted"
+msgstr "Prikket"
+
+#: admin/modules/customizer/customizer.php:1173
+msgid "Dashed"
+msgstr "Stiplet"
+
+#: admin/modules/customizer/data/data.tooltip.php:3
+msgid "Click to view predefined templates."
+msgstr "Klik her for at få vist foruddefinerede skabeloner."
+
+#: admin/modules/customizer/data/data.tooltip.php:4
+msgid "Create a new template or edit an existing template."
+msgstr "Opret en ny skabelon, eller rediger en eksisterende skabelon."
+
+#: admin/modules/customizer/data/data.tooltip.php:5
+msgid ""
+"Displays the currently chosen document template with provisions to modify."
+msgstr ""
+"Viser den aktuelt valgte dokumentskabelon med bestemmelser, der skal ændres."
+
+#: admin/modules/customizer/data/data.tooltip.php:6
+msgid ""
+"Shows a preview of the template on an actual order. Key in an order number "
+"to view the same."
+msgstr ""
+"Viser et eksempel på skabelonen i en faktisk rækkefølge. Tast i et "
+"ordrenummer for at få vist det samme."
+
+#: admin/modules/customizer/data/data.translation_strings.php:1
+msgid "Invoice No:"
+msgstr "Faktura nr.:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:2
+#: admin/modules/customizer/data/data.translation_strings.php:28
+msgid "Order Date:"
+msgstr "Ordre dato:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:3
+msgid "Dispatch Date:"
+msgstr "Afsendelsesdato"
+
+#: admin/modules/customizer/data/data.translation_strings.php:4
+msgid "From Address:"
+msgstr "Fra Adresse:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:5
+msgid "Billing Address:"
+msgstr "Betalingsadresse:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:6
+#: admin/modules/customizer/data/data.translation_strings.php:40
+msgid "Email:"
+msgstr "E-mail:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:7
+msgid "Tel:"
+msgstr "Telefon:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:8
+msgid "Shipping Address:"
+msgstr "Afsendelsesadresse:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:9
+msgid "Tracking number:"
+msgstr "Tracking nummer"
+
+#: admin/modules/customizer/data/data.translation_strings.php:10
+msgid "SSN:"
+msgstr "Ssn:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:11
+msgid "SKU"
+msgstr "Varenummer"
+
+#: admin/modules/customizer/data/data.translation_strings.php:12
+msgid "Product"
+msgstr "Produkt"
+
+#: admin/modules/customizer/data/data.translation_strings.php:13
+msgid "Quantity"
+msgstr "Antal"
+
+#: admin/modules/customizer/data/data.translation_strings.php:14
+msgid "Price"
+msgstr "Pris"
+
+#: admin/modules/customizer/data/data.translation_strings.php:15
+msgid "Total Price"
+msgstr "Samlet pris"
+
+#: admin/modules/customizer/data/data.translation_strings.php:16
+#: admin/modules/customizer/views/_customize_properties.php:606
+#: public/modules/invoice/invoice.php:1321
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: admin/modules/customizer/data/data.translation_strings.php:17
+#: admin/modules/customizer/views/_customize_properties.php:612
+#: public/modules/invoice/invoice.php:1322
+msgid "Shipping"
+msgstr "Forsendelse"
+
+#: admin/modules/customizer/data/data.translation_strings.php:18
+#: admin/modules/customizer/views/_customize_properties.php:619
+#: public/modules/invoice/invoice.php:1323
+msgid "Cart Discount"
+msgstr "Kurvrabat"
+
+#: admin/modules/customizer/data/data.translation_strings.php:19
+#: admin/modules/customizer/views/_customize_properties.php:625
+#: public/modules/invoice/invoice.php:1324
+msgid "Order Discount"
+msgstr "Bestil rabat"
+
+#: admin/modules/customizer/data/data.translation_strings.php:20
+#: admin/modules/customizer/views/_customize_properties.php:632
+#: public/modules/invoice/invoice.php:1325
+msgid "Total Tax"
+msgstr "Samlet skat"
+
+#: admin/modules/customizer/data/data.translation_strings.php:21
+#: admin/modules/customizer/views/_customize_properties.php:638
+#: public/modules/invoice/invoice.php:1326
+msgid "Fee"
+msgstr "Betaling"
+
+#: admin/modules/customizer/data/data.translation_strings.php:22
+msgid "Coupon Used"
+msgstr "Kupon info"
+
+#: admin/modules/customizer/data/data.translation_strings.php:23
+#: admin/modules/customizer/views/_customize_properties.php:651
+#: public/modules/invoice/invoice.php:1329
+msgid "Total"
+msgstr "i alt"
+
+#: admin/modules/customizer/data/data.translation_strings.php:24
+msgid "INVOICE"
+msgstr "FAKTURA"
+
+#: admin/modules/customizer/data/data.translation_strings.php:25
+msgid "Invoice Date:"
+msgstr "Faktura Dato"
+
+#: admin/modules/customizer/data/data.translation_strings.php:26
+msgid "Invoice No.:"
+msgstr "Faktura nr.:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:27
+msgid "Order No.:"
+msgstr "Ordre nr.:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:29
+msgid "Image"
+msgstr "Billede"
+
+#: admin/modules/customizer/data/data.translation_strings.php:30
+msgid "Jumbing LED Light Wall Ball"
+msgstr "Jumbing LED Light Wall Ball"
+
+#: admin/modules/customizer/data/data.translation_strings.php:31
+msgid "Payment method:"
+msgstr "Betalingsmetode:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:32
+#: admin/modules/customizer/data/data.translation_strings.php:42
+msgid "Order No:"
+msgstr "Ordre nr."
+
+#: admin/modules/customizer/data/data.translation_strings.php:33
+msgid "Date:"
+msgstr "Dato:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:34
+msgid "From:"
+msgstr "Afsender:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:35
+msgid "To:"
+msgstr "Til:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:36
+msgid "Weight:"
+msgstr "Vægt:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:37
+msgid "Ship Date:"
+msgstr "Afsendelses dato"
+
+#: admin/modules/customizer/data/data.translation_strings.php:38
+msgid "Phone No:"
+msgstr "Telefon:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:39
+msgid "Ph No:"
+msgstr "Ph No:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:41
+msgid "Tracking Number:"
+msgstr "Tracking nummer"
+
+#: admin/modules/customizer/data/data.translation_strings.php:43
+msgid "Total Weight"
+msgstr "Total Vægt"
+
+#: admin/modules/customizer/views/_customize_properties.php:113
+#: admin/modules/customizer/views/_customize_properties.php:289
+#: admin/modules/customizer/views/_customize_properties.php:313
+#: admin/modules/customizer/views/_customize_properties.php:565
+#: public/modules/shippinglabel/shippinglabel.php:103
+#: public/modules/shippinglabel/shippinglabel.php:128
+msgid "Title"
+msgstr "Titel"
+
+#: admin/modules/customizer/views/_customize_properties.php:119
+#: admin/modules/customizer/views/_customize_properties.php:208
+#: admin/modules/customizer/views/_customize_properties.php:260
+#: admin/modules/customizer/views/_customize_properties.php:318
+#: admin/modules/customizer/views/_customize_properties.php:570
+#: public/modules/invoice/invoice.php:294
+msgid "Font size"
+msgstr "Skriftstørrelse"
+
+#: admin/modules/customizer/views/_customize_properties.php:126
+#: admin/modules/customizer/views/_customize_properties.php:294
+msgid "Text align"
+msgstr "Tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:136
+msgid "Text Color"
+msgstr "Tekstfarve"
+
+#: admin/modules/customizer/views/_customize_properties.php:148
+msgid "Display"
+msgstr "Skærm"
+
+#: admin/modules/customizer/views/_customize_properties.php:152
+#: public/modules/shippinglabel/shippinglabel.php:155
+msgid "Company Logo"
+msgstr "Firma Logo"
+
+#: admin/modules/customizer/views/_customize_properties.php:153
+msgid "Company Name"
+msgstr "firmanavn"
+
+#: admin/modules/customizer/views/_customize_properties.php:157
+msgid "Logo Width"
+msgstr "Logo bredde"
+
+#: admin/modules/customizer/views/_customize_properties.php:164
+msgid "Logo Height"
+msgstr "Logo Højde"
+
+#: admin/modules/customizer/views/_customize_properties.php:172
+msgid "Company name font size"
+msgstr "Firmanavn skriftstørrelse"
+
+#: admin/modules/customizer/views/_customize_properties.php:178
+msgid "Extra Details"
+msgstr "Ekstra detaljer"
+
+#: admin/modules/customizer/views/_customize_properties.php:184
+msgid "Extra detail font size"
+msgstr "Ekstra detaljer skriftstørrelse"
+
+#: admin/modules/customizer/views/_customize_properties.php:190
+msgid "Header Color"
+msgstr "Hovedfarge"
+
+#: admin/modules/customizer/views/_customize_properties.php:203
+#: admin/modules/customizer/views/_customize_properties.php:237
+#: public/modules/invoice/invoice.php:288
+msgid "Text"
+msgstr "Tekst"
+
+#: admin/modules/customizer/views/_customize_properties.php:216
+#: admin/modules/customizer/views/_customize_properties.php:268
+msgid "Style"
+msgstr "Stil"
+
+#: admin/modules/customizer/views/_customize_properties.php:226
+#: admin/modules/customizer/views/_customize_properties.php:278
+#: admin/modules/customizer/views/_customize_properties.php:302
+#: admin/modules/customizer/views/_customize_properties.php:336
+msgid "Text color"
+msgstr "Tekstfarve"
+
+#: admin/modules/customizer/views/_customize_properties.php:242
+#: public/modules/invoice/views/invoice-number.php:25
+msgid "Format"
+msgstr "Format"
+
+#: admin/modules/customizer/views/_customize_properties.php:347
+msgid "Table head background"
+msgstr "Bordhoved baggrund"
+
+#: admin/modules/customizer/views/_customize_properties.php:354
+msgid "Table head text color"
+msgstr "Bordhovedtekstfarve"
+
+#: admin/modules/customizer/views/_customize_properties.php:361
+msgid "Table body text color"
+msgstr "Bordteksttekstfarve"
+
+#: admin/modules/customizer/views/_customize_properties.php:375
+msgid "Image label"
+msgstr "Billedetiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:381
+msgid "Image text align"
+msgstr "Billedtekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:398
+msgid "SKU label"
+msgstr "SKU label"
+
+#: admin/modules/customizer/views/_customize_properties.php:404
+msgid "SKU text align"
+msgstr "SKU-tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:421
+msgid "Product label"
+msgstr "Produktetiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:427
+msgid "Product text align"
+msgstr "Produkttekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:444
+msgid "Qty label"
+msgstr "Antal etiketter"
+
+#: admin/modules/customizer/views/_customize_properties.php:450
+msgid "Qty text align"
+msgstr "Antal tekstjusteringer"
+
+#: admin/modules/customizer/views/_customize_properties.php:467
+msgid "Price label"
+msgstr "Prisetiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:473
+msgid "Price text align"
+msgstr "Pris tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:490
+msgid "Tax label"
+msgstr "Total etiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:496
+msgid "Tax text align"
+msgstr "Samlet tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:513
+msgid "Total weight label"
+msgstr "Samlet vægtmærke"
+
+#: admin/modules/customizer/views/_customize_properties.php:519
+msgid "Total weight text align"
+msgstr "Samlet vægt tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:536
+msgid "Total label"
+msgstr "Total etiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:542
+msgid "Total text align"
+msgstr "Samlet tekstjustering"
+
+#: admin/modules/customizer/views/_customize_properties.php:556
+msgid "Signature type"
+msgstr "Signatur type"
+
+#: admin/modules/customizer/views/_customize_properties.php:560
+msgid "Manual Signature"
+msgstr "Manuel signatur"
+
+#: admin/modules/customizer/views/_customize_properties.php:561
+msgid "Image Signature"
+msgstr "Billed signatur"
+
+#: admin/modules/customizer/views/_customize_properties.php:578
+msgid "Align"
+msgstr "Juster"
+
+#: admin/modules/customizer/views/_customize_properties.php:595
+msgid "Label"
+msgstr "Etiket"
+
+#: admin/modules/customizer/views/_customize_properties.php:645
+#: public/modules/invoice/invoice.php:1328
+msgid "Payment Method"
+msgstr "Betalingsmetode"
+
+#: admin/modules/customizer/views/_pdf_preview.php:23
+msgid "View sample customization demo"
+msgstr "Se eksempel på tilpasning af demo"
+
+#: admin/modules/customizer/views/_pdf_preview.php:29
+msgid "Preview sample PDF"
+msgstr "Eksempel på EKSEMPEL på PDF-eksempel"
+
+#: admin/modules/customizer/views/_pdf_preview.php:30
+msgid "Order"
+msgstr "Ordre"
+
+#: admin/modules/customizer/views/_pdf_preview.php:34
+#: admin/modules/customizer/views/_pdf_preview.php:35
+msgid "Order number"
+msgstr "Ordre nummer"
+
+#: admin/modules/customizer/views/customize.php:94
+msgid "Templates"
+msgstr "Skabeloner"
+
+#: admin/modules/customizer/views/customize.php:99
+msgid "Type template name to search"
+msgstr "Indtast skabelonnavn for at søge"
+
+#: admin/modules/customizer/views/customize.php:109
+msgid "Enter a name for your template"
+msgstr "Indtast et navn til din skabelon"
+
+#: admin/modules/customizer/views/customize.php:114
+msgid "Please enter name"
+msgstr "Indtast venligst navn"
+
+#: admin/modules/customizer/views/customize.php:121
+#: admin/modules/customizer/views/customize.php:192
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:154
+msgid "Cancel"
+msgstr "Afbestille"
+
+#: admin/modules/customizer/views/customize.php:124
+#: admin/modules/customizer/views/customize.php:142
+#: admin/modules/customizer/views/customize.php:188
+#: admin/views/admin-settings-documents.php:101
+msgid "Save"
+msgstr "Gemme"
+
+#: admin/modules/customizer/views/customize.php:132
+msgid "Choose a layout."
+msgstr "Vælg et layout."
+
+#: admin/modules/customizer/views/customize.php:138
+msgid "All unsaved changes will be lost upon switching to a new layout."
+msgstr "Alle ikke-gemte ændringer går tabt, når der skiftes til et nyt layout."
+
+#: admin/modules/customizer/views/customize.php:140
+msgid "Save before you proceed."
+msgstr "Gem inden du fortsætter."
+
+#: admin/modules/customizer/views/customize.php:141
+msgid "Saving..."
+msgstr "Gemmer…"
+
+#: admin/modules/customizer/views/customize.php:166
+msgid "Use"
+msgstr "Brug"
+
+#: admin/modules/customizer/views/customize.php:202
+msgid "Delete"
+msgstr "Slet"
+
+#: admin/modules/customizer/views/customize.php:203
+msgid "Create new"
+msgstr "Lav ny"
+
+#: admin/modules/customizer/views/customize.php:204
+msgid "My templates"
+msgstr "Mine skabeloner"
+
+#: admin/modules/customizer/views/customize.php:215
+#: admin/modules/customizer/views/customize.php:227
+msgid "Visual"
+msgstr "Visuel"
+
+#: admin/modules/customizer/views/customize.php:216
+#: admin/modules/customizer/views/customize.php:228
+msgid "Code"
+msgstr "Kode"
+
+#: admin/modules/customizer/views/customize.php:228
+#: public/modules/invoice/invoice.php:1302
+#: public/modules/shippinglabel/shippinglabel.php:152
+msgid "Pro version"
+msgstr "PRO-version"
+
+#: admin/modules/freevspro/freevspro.php:48
+msgid "Decorator – WooCommerce Email Customizer"
+msgstr "Decorator - WooCommerce Email Customizer"
+
+#: admin/modules/freevspro/freevspro.php:49
+msgid "Customize your WooCommerce emails now and stand out from the crowd!"
+msgstr "Tilpas dine WooCommerce-e-mails og skild dig ud fra mængden!"
+
+#: admin/modules/freevspro/freevspro.php:54
+msgid "GDPR Cookie Consent (CCPA Ready)"
+msgstr "GDPR Cookie -samtykke (CCPA -klar)"
+
+#: admin/modules/freevspro/freevspro.php:55
+msgid ""
+"This plugin will assist you in making your website GDPR (RGPD, DSVGO) "
+"compliant."
+msgstr ""
+"Dette plugin hjælper dig med at gøre dit websted GDPR (RGPD, DSVGO) "
+"kompatibelt."
+
+#: admin/modules/freevspro/freevspro.php:60
+msgid "Import Export WordPress Users and WooCommerce Customers"
+msgstr "Import Eksporter WordPress -brugere og WooCommerce -kunder"
+
+#: admin/modules/freevspro/freevspro.php:61
+msgid ""
+"This plugin allows you to import and export WordPress users and WooCommerce "
+"customers quickly and easily."
+msgstr ""
+"Dette plugin giver dig mulighed for hurtigt og nemt at importere og "
+"eksportere WordPress -brugere og WooCommerce -kunder."
+
+#: admin/modules/freevspro/freevspro.php:65
+msgid "Order XML File Export Import for WooCommerce"
+msgstr "Bestil XML -fileksportimport til WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:66
+msgid ""
+"The Order XML File Export Import Plugin for WooCommerce will export your "
+"WooCommerce orders in XML format."
+msgstr ""
+"Ordren XML -fileksport -import -plugin til WooCommerce eksporterer dine "
+"WooCommerce -ordrer i XML -format."
+
+#: admin/modules/freevspro/freevspro.php:70
+msgid "Related Products for WooCommerce"
+msgstr "Relaterede produkter til WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:71
+msgid ""
+"This plugin allows you to choose related products for a particular product."
+msgstr ""
+"Dette plugin giver dig mulighed for at vælge relaterede produkter til et "
+"bestemt produkt."
+
+#: admin/modules/freevspro/freevspro.php:77
+msgid "Sequential Order Number for WooCommerce"
+msgstr "Sekventielt ordrenummer for WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:78
+msgid ""
+"Using this plugin, you will always get sequential order number for "
+"woocommerce."
+msgstr ""
+"Ved hjælp af dette plugin får du altid et sekventielt ordrenummer for "
+"woocommerce."
+
+#: admin/modules/freevspro/freevspro.php:83
+msgid "Smart Coupons for WooCommerce"
+msgstr "Smarte kuponer til WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:84
+msgid ""
+"This plugin provides additional features with default WooCommerce coupons to "
+"get more conversions."
+msgstr ""
+"Dette plugin giver yderligere funktioner med standard WooCommerce -kuponer "
+"for at få flere konverteringer."
+
+#: admin/modules/freevspro/freevspro.php:90
+msgid "WebToffee Product Feed for Facebook"
+msgstr "WebToffee -produktfeed til Facebook"
+
+#: admin/modules/freevspro/freevspro.php:91
+msgid ""
+"This plugin allows you to integrate your WooCommerce store with Facebook in "
+"a few steps by syncing your store’s products with it."
+msgstr ""
+"Dette plugin giver dig mulighed for at integrere din WooCommerce -butik med "
+"Facebook i et par trin ved at synkronisere din butiks produkter med den."
+
+#: admin/modules/freevspro/freevspro.php:96
+msgid "WordPress Migration & Duplicator"
+msgstr "WordPress Migration & Duplicator"
+
+#: admin/modules/freevspro/freevspro.php:97
+msgid ""
+"This plugin exports your WordPress website media files, plugins and themes "
+"including the database with a single click."
+msgstr ""
+"Dette plugin eksporterer dine WordPress -websteds mediefiler, plugins og "
+"temaer inklusive databasen med et enkelt klik."
+
+#: admin/modules/freevspro/freevspro.php:102
+msgid "PayPal Express Checkout Payment Gateway for WooCommerce"
+msgstr "PayPal Express Checkout Payment Gateway til WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:103
+msgid ""
+"With this plugin, your customer can use their credit cards or PayPal Money "
+"to make order from cart page itself."
+msgstr ""
+"Med dette plugin kan din kunde bruge deres kreditkort eller PayPal -penge "
+"til at foretage bestilling fra selve vognens side."
+
+#: admin/modules/freevspro/freevspro.php:112
+msgid ""
+"mPDF add-on for PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels"
+msgstr ""
+"WooCommerce PDF-fakturaer, pakningsbreve, leveringsanvisninger og "
+"forsendelsesetiketter"
+
+#: admin/modules/freevspro/freevspro.php:113
+msgid ""
+"Add-on to support RTL and Unicode languages seamlessly in PDF documents."
+msgstr ""
+"Tilføjelse til problemfrit at understøtte RTL- og Unicode-sprog i PDF-"
+"dokumenter."
+
+#: admin/modules/freevspro/freevspro.php:123
+msgid "OTHER FREE SOLUTIONS FROM WEBTOFFEE"
+msgstr "ANDRE GRATIS LØSNINGER FRA WEBTOFFEE"
+
+#: admin/modules/freevspro/freevspro.php:147
+msgid "Download"
+msgstr "Download"
+
+#: admin/modules/freevspro/freevspro.php:186
+msgid ""
+"Generate and print additional documents (Address Labels, Pick Lists, "
+"Proforma Invoices, and Credit Notes)."
+msgstr ""
+"Generér og udskriv yderligere dokumenter (adresseetiketter, pluklister, "
+"Proforma-fakturaer og kreditnotaer)."
+
+#: admin/modules/freevspro/freevspro.php:187
+msgid "Advanced customization options along with code editor."
+msgstr "Avancerede tilpasningsmuligheder sammen med kode -editor."
+
+#: admin/modules/freevspro/freevspro.php:188
+msgid "Choose from pre-built templates."
+msgstr "Vælg mellem forudbyggede skabeloner."
+
+#: admin/modules/freevspro/freevspro.php:189
+msgid "Choose from multiple packaging types for Packing slips."
+msgstr "Vælg mellem flere emballagetyper til pakkesedler."
+
+#: admin/modules/freevspro/freevspro.php:190
+msgid "Supports custom sizes for address/shipping labels."
+msgstr "Indstil brugerdefineret footer for alle forsendelsesdokumenter."
+
+#: admin/modules/freevspro/freevspro.php:191
+msgid "Group order items by category in the product table of documents."
+msgstr "Gruppér ordrevarer efter kategori i produkttabellen med dokumenter."
+
+#: admin/modules/freevspro/freevspro.php:192
+msgid "Display individual tax column(s) in the product table."
+msgstr "Vis individuelle skattekolonner i produkttabellen."
+
+#: admin/modules/freevspro/freevspro.php:193
+msgid "Share Packing Slip PDF and Picklist PDF as separate mail."
+msgstr "Del Packing Slip PDF og Picklist PDF som separat mail."
+
+#: admin/modules/freevspro/freevspro.php:194
+msgid "Sort order items in the product table of documents."
+msgstr "Sorter ordreelementer i produkttabellen med dokumenter."
+
+#: admin/modules/freevspro/freevspro.php:195
+msgid "Add-on for remote printing (PrintNode)."
+msgstr "Tilføjelse til fjernudskrivning (PrintNode)."
+
+#: admin/modules/freevspro/freevspro.php:196
+msgid "Supports checkout, order, product meta fields & product attributes."
+msgstr ""
+"Understøtter kassen, ordren, produktmetafelterne og produktattributterne."
+
+#: admin/modules/freevspro/freevspro.php:220
+msgid "Free vs. Pro"
+msgstr "Gratis vs. Pro"
+
+#: admin/modules/freevspro/views/bottom-banner.php:3
+msgid ""
+"Upgrade to WooCommerce PDF Invoices, Packing Slips, Delivery Notes & "
+"Shipping Labels Premium to get hold of advanced features."
+msgstr ""
+"WooCommerce PDF-fakturaer, pakningsbreve, leveringsanvisninger og "
+"forsendelsesetiketter"
+
+#: admin/modules/freevspro/views/bottom-banner.php:6
+#: admin/modules/freevspro/views/goto-pro.php:65 admin/views/goto-pro.php:212
+#: admin/views/goto-pro.php:233
+msgid "UPGRADE TO PREMIUM"
+msgstr "OPGRADERING TIL PREMIUM"
+
+#: admin/modules/freevspro/views/comparison-table.php:17
+#: public/modules/packinglist/packinglist.php:25
+#: public/modules/packinglist/views/general.php:6
+msgid "Packing slip"
+msgstr "Pakkeseddel"
+
+#: admin/modules/freevspro/views/comparison-table.php:18
+#: public/modules/shippinglabel/shippinglabel.php:215
+#: public/modules/shippinglabel/shippinglabel.php:216
+#: public/modules/shippinglabel/views/admin-settings.php:11
+msgid "Shipping label"
+msgstr "Fragtlabel"
+
+#: admin/modules/freevspro/views/comparison-table.php:19
+#: public/modules/deliverynote/views/general.php:6
+msgid "Delivery note"
+msgstr "Leveringsseddel"
+
+#: admin/modules/freevspro/views/comparison-table.php:20
+#: public/modules/dispatchlabel/views/general.php:6
+msgid "Dispatch label"
+msgstr "Print Dispatch Label"
+
+#: admin/modules/freevspro/views/comparison-table.php:23
+msgid "Address label"
+msgstr "Adresselabel"
+
+#: admin/modules/freevspro/views/comparison-table.php:24
+msgid "Picklist"
+msgstr "Valgliste"
+
+#: admin/modules/freevspro/views/comparison-table.php:25
+msgid "Proforma invoice"
+msgstr "Proformafaktura (Proforma invoice)"
+
+#: admin/modules/freevspro/views/comparison-table.php:26
+msgid "Credit note"
+msgstr "Kreditnota"
+
+#: admin/modules/freevspro/views/comparison-table.php:41
+msgid "Supported Documents"
+msgstr "Dokumentation"
+
+#: admin/modules/freevspro/views/comparison-table.php:46
+msgid "Automatically Attach PDF Invoice with order email"
+msgstr "Tilkæd automatisk PDF-faktura med ordremail"
+
+#: admin/modules/freevspro/views/comparison-table.php:51
+msgid "Customizer"
+msgstr "Tilpasning"
+
+#: admin/modules/freevspro/views/comparison-table.php:52
+msgid "Minimal customizer available for Invoice and Shipping label only"
+msgstr ""
+"Minimal tilpasser, der kun er tilgængelig for faktura- og forsendelsesetiket"
+
+#: admin/modules/freevspro/views/comparison-table.php:53
+msgid ""
+"Advanced customizer with source code editor, available for all documents"
+msgstr ""
+"Avanceret tilpasser med kildekodeeditor, der er tilgængelig for alle "
+"dokumenter"
+
+#: admin/modules/freevspro/views/comparison-table.php:56
+msgid "Predefined templates"
+msgstr "Opret ny skabelon"
+
+#: admin/modules/freevspro/views/comparison-table.php:57
+msgid "One for document type"
+msgstr "En til dokumenttype"
+
+#: admin/modules/freevspro/views/comparison-table.php:58
+msgid "Multiple template options"
+msgstr "Tilpas skabelon"
+
+#: admin/modules/freevspro/views/comparison-table.php:61
+msgid "Free add-on for RTL and Unicode language support"
+msgstr "Gratis tilføjelse til RTL- og Unicode-sprogsupport"
+
+#: admin/modules/freevspro/views/comparison-table.php:66
+msgid "Auto-generate customized Invoice number"
+msgstr "Faktura nummer"
+
+#: admin/modules/freevspro/views/comparison-table.php:71
+msgid "Bulk print all documents from the orders page"
+msgstr "Masseudprinte alle dokumenter fra ordresiden"
+
+#: admin/modules/freevspro/views/comparison-table.php:76
+msgid "Option to include/exclude tax to Invoice"
+msgstr "Mulighed for at medtage/udelade moms til faktura"
+
+#: admin/modules/freevspro/views/comparison-table.php:81
+msgid "WPML compatibility"
+msgstr "WPML-kompatibilitet"
+
+#: admin/modules/freevspro/views/comparison-table.php:86
+msgid "Signature in Invoice"
+msgstr "Udskriv faktura"
+
+#: admin/modules/freevspro/views/comparison-table.php:91
+msgid "Remote(cloud) print add-on support"
+msgstr "Ekstern understøttelse af tilføjelsesprogram til udskrivning (sky)"
+
+#: admin/modules/freevspro/views/comparison-table.php:96
+msgid "Supports multiple packaging types"
+msgstr "Understøtter flere emballagetyper"
+
+#: admin/modules/freevspro/views/comparison-table.php:101
+msgid "Supports custom label sizes"
+msgstr "Forsendelsesmærke størrelse"
+
+#: admin/modules/freevspro/views/comparison-table.php:106
+msgid "In-built custom checkout field manager"
+msgstr "Indbygget brugerdefineret checkout-feltmanager"
+
+#: admin/modules/freevspro/views/comparison-table.php:111
+msgid "In-built Order meta, Product meta, Product attribute manager"
+msgstr "Indbygget Order meta, Product meta, Product attribute manager"
+
+#: admin/modules/freevspro/views/comparison-table.php:116
+msgid "Separate tax column in product table for multiple tax options"
+msgstr "Separat skattekolonne i produkttabellen for flere afgiftsmuligheder"
+
+#: admin/modules/freevspro/views/comparison-table.php:121
+msgid "Total tax column in product table"
+msgstr "Samlet skat i produkttabellen"
+
+#: admin/modules/freevspro/views/comparison-table.php:126
+msgid "Sort order items in product table"
+msgstr "Sorter ordreelementer i produkttabellen"
+
+#: admin/modules/freevspro/views/comparison-table.php:131
+msgid "Group order items by category in the product table"
+msgstr "Gruppér varer efter kategori i produkttabellen"
+
+#: admin/modules/freevspro/views/comparison-table.php:136
+msgid "Share Packing slip PDF and Picklist PDF as separate emails."
+msgstr "Del følgeseddel PDF og Picklist PDF som separate e -mails."
+
+#: admin/modules/freevspro/views/comparison-table.php:141
+msgid "Temp file manager (Auto cleanup, Download as zip etc)"
+msgstr "Temp -filhåndtering (automatisk oprydning, download som zip osv.)"
+
+#: admin/modules/freevspro/views/comparison-table.php:146
+msgid "Custom footer for individual documents"
+msgstr "Indstil brugerdefineret footer for alle forsendelsesdokumenter."
+
+#: admin/modules/freevspro/views/comparison-table.php:151
+msgid "Custom logo to Invoice"
+msgstr "Brugerdefineret logo til faktura"
+
+#: admin/modules/freevspro/views/comparison-table.php:187
+msgid "FEATURES"
+msgstr "FEATURES"
+
+#: admin/modules/freevspro/views/comparison-table.php:188
+msgid "FREE"
+msgstr "GRATIS"
+
+#: admin/modules/freevspro/views/comparison-table.php:189
+msgid "PREMIUM"
+msgstr "PREMIUM"
+
+#: admin/modules/freevspro/views/goto-pro.php:54
+msgid "30 day money back guarantee"
+msgstr "30 dages pengene tilbage garanti"
+
+#: admin/modules/freevspro/views/goto-pro.php:58
+msgid "Fast and superior support"
+msgstr "Hurtig og overlegen support"
+
+#: admin/modules/freevspro/views/goto-pro.php:62
+msgid "Features that every site needs"
+msgstr "Funktioner, som hvert websted har brug for"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:38
+msgid "I couldn't understand how to make it work"
+msgstr "Jeg kunne ikke forstå at få det til at fungere"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:40
+msgid "Would you like us to assist you?"
+msgstr "Vil du have, at vi hjælper dig?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:44
+msgid "Language support issues"
+msgstr "Sprogstøttespørgsmål"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:49
+msgid "Plugin settings not available in my language"
+msgstr "Plugin -indstillinger er ikke tilgængelige på mit sprog"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:51
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:57
+msgid "Which language?"
+msgstr "Hvilket sprog?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+msgid ""
+"Missing RTL/Unicode language(e.g Chinese, Arabic etc) support for PDF "
+"document."
+msgstr ""
+"Mangler RTL/Unicode -sprog (f.eks. Kinesisk, arabisk osv.) Understøttelse af "
+"PDF -dokument."
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+#, php-format
+msgid "Already tried the free %s WebToffee mPDF addon %s."
+msgstr "Har allerede prøvet den gratis %s WebToffee mPDF -tilføjelse %s."
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:63
+msgid "I found a better plugin"
+msgstr "Jeg fandt et bedre plugin"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:65
+msgid "Which plugin?"
+msgstr "Hvilket plugin?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:69
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr ""
+"Pluginnet er dejligt, men jeg har brug for en specifik feature du ikke har"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:71
+msgid "Could you tell us more about that feature?"
+msgstr "Kan du fortælle os mere om denne funktion?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:75
+msgid "The plugin didn't work as expected"
+msgstr "Plugin'et virkede ikke som forventet"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:77
+msgid "What did you expect?"
+msgstr "Hvad havde du forventet?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:81
+msgid "Upgraded to pro version"
+msgstr "Opgraderet til pro version"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:87
+msgid "Other"
+msgstr "Andet"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:89
+msgid "Could you tell us a bit more?"
+msgstr "Kan du fortælle os lidt mere?"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:108
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr ""
+"Hvis du har et øjeblik, så lad os venligst vide, hvorfor du deaktiverer:"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:145
+msgid ""
+"We do not collect any personal data when you submit this form. It's your "
+"feedback that we value."
+msgstr ""
+"Vi indsamler ingen personlige oplysninger, når du sender denne formular. Det "
+"er din feedback, som vi sætter pris på."
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:146
+msgid "Privacy Policy"
+msgstr "Privatlivspolitik"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:152
+msgid "Go to support"
+msgstr "Gå til support"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:153
+msgid "Submit & Deactivate"
+msgstr "Indsend & Deaktiver"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:155
+msgid "I rather wouldn't say"
+msgstr "Det ønsker jeg ikke at fortælle"
+
+#. Plugin Name of the plugin/theme
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:24
+#: admin/views/goto-pro.php:204
+msgid ""
+"WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels"
+msgstr ""
+"WooCommerce PDF-fakturaer, pakningsbreve, leveringsanvisninger og "
+"forsendelsesetiketter"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:31
+msgid "Documents"
+msgstr "Dokumenter"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:32
+#: public/modules/invoice/views/invoice-admin-settings.php:6
+#: public/modules/shippinglabel/views/admin-settings.php:6
+msgid "General"
+msgstr "Generel"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:33
+msgid "Help Guide"
+msgstr "Hjælpeguide"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-document-settings.php:21
+msgid "Document Settings"
+msgstr "Dokument indstillinger"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-document-settings.php:27
+msgid "Other documents"
+msgstr "Andre dokumenter"
+
+#: admin/views/_form_advanced_field_generator.php:56
+msgid "[prefix][order_no]"
+msgstr "[præfiks] [nummer]"
+
+#: admin/views/_form_advanced_field_generator.php:57
+msgid "[prefix][invoice_no]"
+msgstr "[præfiks] [nummer]"
+
+#: admin/views/_form_field_generator.php:130
+msgid "Choose Order Status"
+msgstr "Vælg ordrestatus"
+
+#: admin/views/_form_field_generator.php:165
+msgid "Upload"
+msgstr "Upload"
+
+#: admin/views/admin-document-settings-page.php:22
+msgid ""
+"Either of the document types, Packing  slip, Shipping label, Dispatch label "
+"or Delivery note should be activated to view relevant settings."
+msgstr ""
+"En af dokumenttyperne, følgesedlen, forsendelsesetiketten, "
+"forsendelsesetiketten eller følgesedlen skal aktiveres for at se relevante "
+"indstillinger."
+
+#: admin/views/admin-document-settings-page.php:23
+#, php-format
+msgid "Go to %s General Settings %s Documents %s in order to activate."
+msgstr "Gå til %s Generelle indstillinger %s Dokumenter %s for at aktivere."
+
+#: admin/views/admin-settings-debug.php:7
+msgid "Debug"
+msgstr "Fejlfind"
+
+#: admin/views/admin-settings-debug.php:8
+msgid "Caution: Settings here are only for advanced users."
+msgstr "Forsigtig: Indstillinger her er kun for avancerede brugere."
+
+#: admin/views/admin-settings-documents.php:27
+msgid ""
+"The document types(Invoice, Packing  slip, Shipping label, Dispatch label "
+"and Delivery note) have been enabled by default for use. Click on the "
+"Settings under the document types to configure the respective settings. You "
+"can use the toggle button to activate/deactivate the respective document "
+"type."
+msgstr ""
+"Dokumenttyperne (Faktura, følgeseddel, forsendelsesetiket, "
+"forsendelsesetiket og følgeseddel) er som standard aktiveret til brug. Klik "
+"på Indstillinger under dokumenttyperne for at konfigurere de respektive "
+"indstillinger. Du kan bruge vippeknappen til at aktivere/deaktivere den "
+"respektive dokumenttype."
+
+#: admin/views/admin-settings-documents.php:30
+msgid "Note:"
+msgstr "Note:"
+
+#: admin/views/admin-settings-documents.php:32
+msgid ""
+"Also make sure to fill-up the Company and Address information from the "
+"General tab above prior to customization of the respective document types."
+msgstr ""
+"Sørg også for at udfylde virksomheds- og adresseoplysningerne fra fanen "
+"Generelt ovenfor før tilpasning af de respektive dokumenttyper."
+
+#: admin/views/admin-settings-documents.php:33
+#, php-format
+msgid ""
+"For better Unicode/RTL support, use our free %s mPDF add-on %s along with "
+"this plugin."
+msgstr ""
+"For bedre Unicode / RTL support, brug vores gratis %s mPDF add-on %s sammen "
+"med dette plugin."
+
+#: admin/views/admin-settings-general.php:7
+msgid ""
+"The company name and the address details from the sections below will be "
+"used as the 'Shipping from' address in the invoice and other related "
+"documents."
+msgstr ""
+"Virksomheden og forsendelse fra adresseoplysninger fra nedenstående afsnit "
+"vil blive brugt til at udfylde fakturaen og relaterede dokumenter i "
+"overensstemmelse hermed."
+
+#: admin/views/admin-settings-general.php:8
+msgid "Company Info"
+msgstr "Virksomhedsinfo"
+
+#: admin/views/admin-settings-general.php:13
+msgid "Name"
+msgstr "Navn"
+
+#: admin/views/admin-settings-general.php:18
+msgid "Logo"
+msgstr "Logo"
+
+#: admin/views/admin-settings-general.php:20
+msgid ""
+"Ensure to select company logo from ‘Invoice > Customize > Company Logo’ to "
+"reflect on the invoice. Recommended size is 150x50px."
+msgstr ""
+"Sørg for at vælge virksomhedens logo fra 'Faktura> Tilpas> Firma -logo' for "
+"at afspejle fakturaen. Anbefalet størrelse er 150x50px."
+
+#: admin/views/admin-settings-general.php:23
+msgid "Company Tax ID"
+msgstr "firmanavn"
+
+#: admin/views/admin-settings-general.php:25
+msgid ""
+"Specify your company tax ID. For e.g. you may enter as VAT: GB123456789, "
+"GSTIN:0948745 or ABN:51 824 753 556"
+msgstr ""
+"Angiv dit virksomheds skatte -id. For f.eks. du kan angive som moms: "
+"GB123456789, GSTIN: 0948745 eller ABN: 51 824 753555"
+
+#: admin/views/admin-settings-general.php:29
+#: public/modules/invoice/invoice.php:1330
+msgid "Footer"
+msgstr "Sidefod"
+
+#: admin/views/admin-settings-general.php:31
+msgid "Set up a footer which will be used across the respective documents."
+msgstr ""
+"Opret en sidefod, der skal bruges på tværs af de respektive dokumenter."
+
+#: admin/views/admin-settings-general.php:38
+msgid "Address(Sender details)"
+msgstr "Adresse (afsenderoplysninger)"
+
+#: admin/views/admin-settings-general.php:42
+msgid "Load from WooCommerce"
+msgstr "Indlæs fra WooCommerce"
+
+#: admin/views/admin-settings-general.php:49
+msgid "Department/Business Unit/Sender"
+msgstr "Afdeling / forretningsenhed / afsender"
+
+#: admin/views/admin-settings-general.php:54
+msgid "Address line 1"
+msgstr "Adresselinje 1"
+
+#: admin/views/admin-settings-general.php:59
+msgid "Address line 2"
+msgstr "Adresselinje 2"
+
+#: admin/views/admin-settings-general.php:63
+msgid "City"
+msgstr "Kommune"
+
+#: admin/views/admin-settings-general.php:83
+msgid "Country/State"
+msgstr "Afsender Land / Stat"
+
+#: admin/views/admin-settings-general.php:85
+msgid "Choose a country&hellip;"
+msgstr "Vælg et land & hellip;"
+
+#: admin/views/admin-settings-general.php:86
+msgid "Select country"
+msgstr "Vælg land"
+
+#: admin/views/admin-settings-general.php:95
+msgid "Postal code"
+msgstr "Postnummer"
+
+#: admin/views/admin-settings-general.php:100
+msgid "Contact number"
+msgstr "Tlf. nummer"
+
+#: admin/views/admin-settings-general.php:106
+msgid "Other settings"
+msgstr "Andre indstillinger"
+
+#: admin/views/admin-settings-general.php:113
+msgid "Display state name"
+msgstr "Vis statens navn"
+
+#: admin/views/admin-settings-general.php:116
+#: admin/views/admin-settings-general.php:135
+#: public/modules/deliverynote/views/general.php:16
+#: public/modules/deliverynote/views/general.php:26
+#: public/modules/deliverynote/views/general.php:37
+#: public/modules/dispatchlabel/views/general.php:16
+#: public/modules/dispatchlabel/views/general.php:27
+#: public/modules/invoice/views/general.php:16
+#: public/modules/invoice/views/general.php:26
+#: public/modules/invoice/views/general.php:44
+#: public/modules/invoice/views/general.php:60
+#: public/modules/invoice/views/general.php:110
+#: public/modules/invoice/views/general.php:121
+#: public/modules/invoice/views/invoice-number.php:108
+#: public/modules/packinglist/views/general.php:16
+#: public/modules/packinglist/views/general.php:27
+#: public/modules/packinglist/views/general.php:38
+#: public/modules/shippinglabel/views/general.php:29
+msgid "Yes"
+msgstr "Ja"
+
+#: admin/views/admin-settings-general.php:117
+#: admin/views/admin-settings-general.php:136
+#: public/modules/deliverynote/views/general.php:17
+#: public/modules/deliverynote/views/general.php:27
+#: public/modules/deliverynote/views/general.php:38
+#: public/modules/dispatchlabel/views/general.php:17
+#: public/modules/dispatchlabel/views/general.php:28
+#: public/modules/invoice/views/general.php:17
+#: public/modules/invoice/views/general.php:27
+#: public/modules/invoice/views/general.php:45
+#: public/modules/invoice/views/general.php:61
+#: public/modules/invoice/views/general.php:111
+#: public/modules/invoice/views/general.php:122
+#: public/modules/invoice/views/invoice-number.php:109
+#: public/modules/packinglist/views/general.php:17
+#: public/modules/packinglist/views/general.php:28
+#: public/modules/packinglist/views/general.php:39
+#: public/modules/shippinglabel/views/general.php:30
+msgid "No"
+msgstr "ingen"
+
+#: admin/views/admin-settings-general.php:119
+msgid ""
+"Displays the state name instead of state code in from,return,billing and "
+"shipping addresses"
+msgstr ""
+"Aktivér for at vise statens navn i stedet for statskoden i fakturerings- og "
+"forsendelsesadresse"
+
+#: admin/views/admin-settings-general.php:123
+msgid "Preview before printing"
+msgstr "Se eksempel før udskrivning"
+
+#: admin/views/admin-settings-general.php:126
+msgid "Enabled"
+msgstr "Aktiveret"
+
+#: admin/views/admin-settings-general.php:127
+msgid "Disabled"
+msgstr "handicappet"
+
+#: admin/views/admin-settings-general.php:132
+msgid "Enable RTL support"
+msgstr "RTL-støtte"
+
+#: admin/views/admin-settings-general.php:138
+#, php-format
+msgid ""
+"RTL support for documents. For better RTL integration in PDF documents "
+"please use our %s mPDF addon %s."
+msgstr ""
+"RTL support til dokumenter. Brug vores %s mPDF-tilføjelsesprogram %s til "
+"bedre RTL-integration i PDF-dokumenter."
+
+#: admin/views/admin-settings-general.php:155
+msgid "PDF library"
+msgstr "PDF-bibliotek"
+
+#: admin/views/admin-settings-general.php:158
+msgid "The default library to generate PDF"
+msgstr "Standardbiblioteket til generering af PDF"
+
+#: admin/views/admin-settings-general.php:167
+#, php-format
+msgid ""
+"%sNote:%s You have not enabled tax option in WooCommerce. If you need to "
+"apply tax for new orders you need to enable it %s here. %s"
+msgstr ""
+"%s Bemærk: %s Du har ikke aktiveret skatteindstilling i WooCommerce. Hvis du "
+"har brug for at opkræve skat for nye ordrer, skal du aktivere den %s her. %s"
+
+#: admin/views/admin-settings-general.php:171
+msgid "Show tax"
+msgstr "Vis skat"
+
+#: admin/views/admin-settings-general.php:176
+msgid "Setup Tax"
+msgstr "Opsætningsskat"
+
+#: admin/views/admin-settings-general.php:178
+msgid "Exclude tax"
+msgstr "excl. moms"
+
+#: admin/views/admin-settings-general.php:179
+msgid "Include tax"
+msgstr "Inkluder skat"
+
+#: admin/views/admin-settings-general.php:183
+msgid "All price columns displayed will be inclusive of tax."
+msgstr "Alle viste priskolonner inkluderer moms."
+
+#: admin/views/admin-settings-general.php:189
+msgid ""
+"The tax amount will be displayed in a separate column, not included within "
+"the price."
+msgstr ""
+"Afgiftsbeløbet vises i en separat kolonne, der ikke er inkluderet i prisen. "
+"%s Få flere oplysninger om, hvordan du tilføjer afgifts -kolonne i "
+"dokumenterne. %s"
+
+#: admin/views/admin-settings-help.php:48
+#: admin/views/admin-settings-help.php:77
+msgid "Filters"
+msgstr "Filtre"
+
+#: admin/views/admin-settings-help.php:49
+#: admin/views/admin-settings-help.php:53
+msgid "Help Links"
+msgstr "Hjælp links"
+
+#: admin/views/admin-settings-help.php:57
+#: admin/views/admin-settings-help.php:60
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: admin/views/admin-settings-help.php:58
+msgid "Refer to our documentation to setup and get started"
+msgstr "Vi henviser til vores dokumentation for at komme i gang"
+
+#: admin/views/admin-settings-help.php:65
+msgid "Help and Support"
+msgstr "Hjælp og Support"
+
+#: admin/views/admin-settings-help.php:66
+msgid "We would love to help you on any queries or issues."
+msgstr "Vi hjælper gerne med spørgsmål og problemer"
+
+#: admin/views/admin-settings-help.php:68
+msgid "Contact Us"
+msgstr "Kontakt os"
+
+#: admin/views/admin-settings-help.php:79
+msgid "Some useful `filters` to extend plugin's functionality"
+msgstr "Nogle nyttige `filtre` til at udvide plugins funktionalitet"
+
+#: admin/views/admin-settings-help.php:112
+msgid "Example Code"
+msgstr "Stregkode"
+
+#: admin/views/admin-settings-save-button.php:6
+msgid "Update Settings"
+msgstr "Opdater indstillinger"
+
+#: admin/views/goto-pro.php:196
+msgid "Watch setup video (premium)"
+msgstr "Se installationsvideo (premium)"
+
+#: admin/views/goto-pro.php:208
+msgid "30 Day Money Back Guarantee"
+msgstr "30 dages penge tilbage garanti"
+
+#: admin/views/goto-pro.php:209
+msgid "Fast and Superior Support"
+msgstr "Hurtig og overlegen support"
+
+#: admin/views/goto-pro.php:218
+msgid "Dynamic customizer for invoice"
+msgstr "Brugerdefineret logo til faktura"
+
+#: admin/views/goto-pro.php:219
+msgid "Enable ‘Pay Later’ checkout method and pay via invoice"
+msgstr "Aktivér betalingsmetoden ‘Betal senere’, og betal via faktura"
+
+#: admin/views/goto-pro.php:222
+msgid "Generate picklist, credit notes, proforma invoice, & address labels"
+msgstr "Generer valgliste, kreditnotaer, proformafaktura og adressetiketter"
+
+#: admin/views/goto-pro.php:223
+msgid "A variety of pre-built templates for each document"
+msgstr "En række fantastiske skabeloner at vælge imellem!"
+
+#: admin/views/goto-pro.php:224
+msgid "Advanced customization of templates using code-editor"
+msgstr "Avancerede tilpasningsmuligheder sammen med kode -editor."
+
+#: admin/views/goto-pro.php:225
+msgid "Choose from various packing methods"
+msgstr "Vælg mellem forskellige pakkemetoder"
+
+#: admin/views/goto-pro.php:226
+msgid "Option to customize return policy"
+msgstr "Mulighed for at tilpasse returpolitik og sidefod."
+
+#: admin/views/goto-pro.php:227
+msgid "Supports checkout, order & product meta fields (SSN, VAT, etc.)"
+msgstr "Understøtter betalings-, ordre- og produktmetafelter (SSN, moms osv.)."
+
+#: admin/views/goto-pro.php:228
+msgid "Verified compatibility with major plugins"
+msgstr "Verificeret kompatibilitet med større plugins"
+
+#: admin/views/goto-pro.php:229
+msgid "Create custom sized labels"
+msgstr "Forsendelsesmærke størrelse"
+
+#: admin/views/goto-pro.php:230
+msgid "Premium add-on for cloud printing"
+msgstr "Se eksempel før udskrivning"
+
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:134
+msgid "0"
+msgstr "0"
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:53
+#, php-format
+msgid ""
+"Hey, we at %sWebToffee%s would like to thank you for using %s %s %s. %s Less "
+"than a minute of your time will motivate us to keep doing what we do. We "
+"would really appreciate if you could take a moment to drop a quick review "
+"that motivate us to keep going."
+msgstr ""
+"Hej, vi på %sWebToffee% s vil gerne takke dig for at bruge %s %s %s. %s "
+"Mindre end et minut af din tid vil motivere os til at blive ved med at gøre, "
+"hvad vi gør. Vi ville virkelig sætte pris på, hvis du kunne bruge et øjeblik "
+"på at skrive en hurtig anmeldelse, der motiverer os til at fortsætte."
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:56
+msgid "Remind me later"
+msgstr "Påmind mig senere"
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:57
+msgid "Not interested"
+msgstr "Ikke interesseret"
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:58
+msgid "Review now"
+msgstr "Anmeldelse nu"
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:52
+#, php-format
+msgid ""
+"The plugins %s and %s cannot be active in your store at the same time. "
+"Kindly deactivate one of these prior to activating the other."
+msgstr ""
+"Plugins %s og %s kan ikke være aktive i din butik på samme tid. Deaktiver "
+"venligst en af disse, inden du aktiverer den anden."
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:52
+msgid "Go to plugins page"
+msgstr "Gå til pluginsside"
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:158
+#, php-format
+msgid ""
+"%s WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels "
+"(Basic) %s is enabled but not effective. It requires %s WooCommerce %s in "
+"order to work."
+msgstr ""
+"%s WooCommerce PDF -fakturaer, følgesedler, leveringsnotater og "
+"forsendelsesetiketter (grundlæggende) %s er aktiveret, men ikke effektiv. "
+"Det kræver %s WooCommerce %s for at fungere."
+
+#: public/modules/deliverynote/data/data.templates.php:5
+#: public/modules/invoice/data/data.templates.php:5
+#: public/modules/packinglist/data/data.templates.php:5
+msgid "Classic"
+msgstr "Klassisk"
+
+#: public/modules/deliverynote/deliverynote.php:61
+#: public/modules/packinglist/packinglist.php:64
+msgid "Enable to include product image in the document."
+msgstr "Aktiver for at inkludere produktbillede i dokumentet."
+
+#: public/modules/deliverynote/deliverynote.php:62
+#: public/modules/dispatchlabel/dispatchlabel.php:54
+#: public/modules/packinglist/packinglist.php:65
+msgid "Enable to display the customer's note in the document."
+msgstr "Aktiver for at få vist kundens note i dokumentet."
+
+#: public/modules/deliverynote/deliverynote.php:63
+#: public/modules/dispatchlabel/dispatchlabel.php:55
+#: public/modules/packinglist/packinglist.php:66
+#: public/modules/shippinglabel/shippinglabel.php:277
+msgid "Enable to display footer content in the document."
+msgstr "Aktiver for at vise sidefodindhold i dokumentet."
+
+#: public/modules/deliverynote/deliverynote.php:239
+#: public/modules/deliverynote/deliverynote.php:250
+msgid "Print Delivery note"
+msgstr "Udskriv følgeseddel"
+
+#: public/modules/deliverynote/deliverynote.php:312
+msgid "Unable to print Delivery note. Please check the items in the order."
+msgstr "Kan ikke udskrive leveringsnota. Kontroller varerne i ordren."
+
+#: public/modules/deliverynote/views/general.php:12
+#: public/modules/packinglist/views/general.php:12
+msgid "Include product image"
+msgstr "Medtag produktbillede"
+
+#: public/modules/deliverynote/views/general.php:22
+#: public/modules/dispatchlabel/views/general.php:12
+#: public/modules/packinglist/views/general.php:23
+msgid "Add customer note"
+msgstr "Tilføj brugerdefineret felt"
+
+#: public/modules/deliverynote/views/general.php:29
+msgid "Add customer note in delivery note"
+msgstr "Tilføje kundenote i leveringsnota"
+
+#: public/modules/deliverynote/views/general.php:33
+#: public/modules/dispatchlabel/views/general.php:23
+#: public/modules/packinglist/views/general.php:34
+#: public/modules/shippinglabel/views/general.php:25
+msgid "Add footer"
+msgstr "Tilføj Sidefod"
+
+#: public/modules/deliverynote/views/general.php:40
+msgid "Add footer in delivery note"
+msgstr "Tilføj sidefod i følgeseddel"
+
+#: public/modules/dispatchlabel/data/data.templates.php:5
+msgid "Dispatch Label 1"
+msgstr "Forsendelsesetiket 1"
+
+#: public/modules/dispatchlabel/dispatchlabel.php:212
+#: public/modules/dispatchlabel/dispatchlabel.php:223
+msgid "Print Dispatch Label"
+msgstr "Print Dispatch Label"
+
+#: public/modules/dispatchlabel/views/general.php:19
+msgid "Add customer note in dispatch label"
+msgstr "Tilføj kundenote i forsendelsesetiketten"
+
+#: public/modules/dispatchlabel/views/general.php:30
+msgid "Add footer in dispatch label"
+msgstr "Print Dispatch Label"
+
+#: public/modules/invoice/data/data.templates.php:10
+msgid "Standard"
+msgstr "Standard"
+
+#: public/modules/invoice/data/data.tooltip.php:3
+msgid ""
+"By enabling, you are permitting admin as well as customers to have access to "
+"print, download, attach invoice in the mail, etc from wherever applicable. "
+"Disabling will remove all the provisions, still, admin can customize the "
+"template, set invoice number pattern and so on."
+msgstr ""
+"Ved at aktivere tillader du admin såvel som kunder at få adgang til at "
+"udskrive, downloade, vedhæfte faktura i posten osv. Hvor det er relevant. "
+"Deaktivering fjerner alle bestemmelser, alligevel kan admin tilpasse "
+"skabelonen, indstille fakturanummermønster og så videre."
+
+#: public/modules/invoice/data/data.tooltip.php:4
+msgid ""
+"If you choose 'No' then the invoice date will be the date on which it is "
+"printed, downloaded or attached in the mail."
+msgstr ""
+"Hvis du vælger 'Nej', vil fakturadatoen være den dato, hvor den udskrives, "
+"downloades eller vedlægges med posten."
+
+#: public/modules/invoice/data/data.tooltip.php:5
+msgid ""
+"PDF version of the currently active invoice template will be attached with "
+"the Woocommerce order emails sent to customers and admins for the chosen "
+"order statuses."
+msgstr ""
+"PDF-version af den aktuelt aktive fakturaskabelon vedhæftes Woocommerce-"
+"ordre-e-mails sendt til kunder og administratorer for de valgte "
+"ordrestatusser."
+
+#: public/modules/invoice/data/data.tooltip.php:6
+msgid ""
+"Choose the order statuses for which an email is to be sent to the customer "
+"with an invoice attached to it."
+msgstr ""
+"Vælg de ordrestatusser, som der skal sendes en e -mail til med en faktura "
+"vedlagt."
+
+#: public/modules/invoice/data/data.tooltip.php:7
+msgid ""
+"Enabling this option will allow your customers to print the invoice (via "
+"print button) from their order mail as well as after checkout."
+msgstr ""
+"Aktivering af denne mulighed gør det muligt for dine kunder at udskrive "
+"fakturaen (via udskrivningsknappen) fra deres ordrepost såvel som efter "
+"kassen."
+
+#: public/modules/invoice/data/data.tooltip.php:8
+msgid "You can add any personalised note/comment in this"
+msgstr "Du kan tilføje enhver personlig note/kommentar i dette"
+
+#: public/modules/invoice/data/data.tooltip.php:9
+msgid ""
+"Upload to include a unique logo in the invoice other than the one loaded "
+"from general settings.  If left blank, then defaulted to the logo from "
+"general settings."
+msgstr ""
+"Upload for at inkludere et unikt logo i fakturaen, bortset fra det, der er "
+"indlæst fra de generelle indstillinger. Hvis det er tomt, er logoet som "
+"standard fra de generelle indstillinger."
+
+#: public/modules/invoice/data/data.tooltip.php:10
+msgid ""
+"Select an invoice number format from the drop-down. You can choose to have a "
+"prefix, suffix or both for your invoice number."
+msgstr ""
+"Vælg et fakturanummerformat i rullemenuen. Du kan vælge at have et præfiks, "
+"suffiks eller begge dele til dit fakturanummer."
+
+#: public/modules/invoice/data/data.tooltip.php:11
+msgid ""
+"You can mirror the order number as the invoice number by enabling this "
+"option, else, you can create an invoice number of your own choice by "
+"specifying an invoice start number."
+msgstr ""
+"Du kan spejle ordrenummeret som fakturanummer ved at aktivere denne "
+"mulighed, ellers kan du oprette et fakturanummer efter eget valg ved at "
+"angive et fakturastartnummer."
+
+#: public/modules/invoice/data/data.tooltip.php:12
+msgid ""
+"Set a starting number for the invoice number to have a specific number other "
+"than the order number. Reset provisions are also allowed."
+msgstr ""
+"Indstil et startnummer for fakturanummeret for at have et andet specifikt "
+"nummer end ordrenummeret. Nulstil bestemmelser er også tilladt."
+
+#: public/modules/invoice/data/data.tooltip.php:13
+msgid ""
+"Specify a prefix that will appear at the leading edge of the invoice number. "
+"Provisions are included to select predefined date formats as prefixes."
+msgstr ""
+"Angiv et præfiks, der vises i forkant af fakturanummeret. Bestemmelser er "
+"inkluderet for at vælge foruddefinerede datoformater som præfikser."
+
+#: public/modules/invoice/data/data.tooltip.php:14
+msgid ""
+"Specify a suffix that will appear at the trailing edge of the invoice "
+"number. Provisions are included to select predefined date formats as "
+"suffixes."
+msgstr ""
+"Angiv et suffiks, der vises ved den bageste kant af fakturanummeret. "
+"Bestemmelser er inkluderet for at vælge foruddefinerede datoformater som "
+"suffikser."
+
+#: public/modules/invoice/data/data.tooltip.php:15
+#: public/modules/invoice/views/invoice-number.php:155
+msgid ""
+"Indicates the total length of the invoice number, excluding the length of "
+"prefix and suffix if added. If the length of the generated invoice number is "
+"less than the provided, it will be padded with ‘0’. E.g if you specify 7 as "
+"invoice length and your invoice number is 8009, it will be represented as "
+"0008009 in the respective documents."
+msgstr ""
+"Angiver den samlede længde på fakturanummeret eksklusive længden af "
+"præfikset og suffikset, hvis det tilføjes. Hvis længden af det genererede "
+"fakturanummer er mindre end det angivne, polstres det med '0'. F.eks. Hvis "
+"du angiver 7 som fakturalængde og dit fakturanummer er 8009, vil det blive "
+"repræsenteret som 0008009 i de respektive dokumenter."
+
+#: public/modules/invoice/data/data.tooltip.php:16
+msgid ""
+"Allows displaying additional details pertaining to your order in the invoice."
+msgstr ""
+"Tillader visning af yderligere oplysninger vedrørende din ordre på fakturaen."
+
+#: public/modules/invoice/invoice.php:252
+#, php-format
+msgid ""
+"You can control the visibility of the seal according to order status via "
+"filters. See filter documentation %s here. %s"
+msgstr ""
+"Du kan kontrollere synligheden af forseglingen i henhold til ordrestatus via "
+"filtre. Se filterdokumentation %s her. %s"
+
+#: public/modules/invoice/invoice.php:271
+msgid "Width"
+msgstr "Bredde"
+
+#: public/modules/invoice/invoice.php:279
+msgid "Height"
+msgstr "Højde"
+
+#: public/modules/invoice/invoice.php:303
+msgid "Border width"
+msgstr "Kant bredde"
+
+#: public/modules/invoice/invoice.php:311
+msgid "Line height"
+msgstr "Linje højde"
+
+#: public/modules/invoice/invoice.php:319
+msgid "Opacity"
+msgstr "Gennemsigtighed"
+
+#: public/modules/invoice/invoice.php:340
+msgid "Border radius"
+msgstr "Kant radius"
+
+#: public/modules/invoice/invoice.php:348
+msgid "From left"
+msgstr "Fra venstre"
+
+#: public/modules/invoice/invoice.php:356
+msgid "From top"
+msgstr "Fra toppen"
+
+#: public/modules/invoice/invoice.php:364
+msgid "Angle"
+msgstr "Vinkel"
+
+#: public/modules/invoice/invoice.php:371
+msgid "Color"
+msgstr "Farve"
+
+#: public/modules/invoice/invoice.php:1305
+msgid "Document title"
+msgstr "Dokument titel"
+
+#: public/modules/invoice/invoice.php:1306
+msgid "Company Logo / Company name"
+msgstr "Firma Logo"
+
+#: public/modules/invoice/invoice.php:1308
+#: public/modules/invoice/views/invoice-admin-settings.php:7
+msgid "Invoice Number"
+msgstr "Faktura nummer"
+
+#: public/modules/invoice/invoice.php:1309
+#: public/modules/shippinglabel/shippinglabel.php:158
+msgid "Order Number"
+msgstr "Ordrenummer"
+
+#: public/modules/invoice/invoice.php:1310
+msgid "Invoice Date"
+msgstr "Fakturadato"
+
+#: public/modules/invoice/invoice.php:1311
+msgid "Order Date"
+msgstr "Bestillingsdato"
+
+#: public/modules/invoice/invoice.php:1312
+msgid "Payment received stamp"
+msgstr "Betaling modtaget stempel"
+
+#: public/modules/invoice/invoice.php:1313
+#: public/modules/shippinglabel/shippinglabel.php:156
+msgid "From Address"
+msgstr "Fra Adresse"
+
+#: public/modules/invoice/invoice.php:1314
+msgid "Billing Address"
+msgstr "Betalingsadresse"
+
+#: public/modules/invoice/invoice.php:1315
+msgid "Shipping Address"
+msgstr "Afsendelsesadresse"
+
+#: public/modules/invoice/invoice.php:1316
+#: public/modules/shippinglabel/shippinglabel.php:162
+msgid "Email Field"
+msgstr "Email Field"
+
+#: public/modules/invoice/invoice.php:1317
+#: public/modules/shippinglabel/shippinglabel.php:163
+msgid "Tel Field"
+msgstr "Telfelt"
+
+#: public/modules/invoice/invoice.php:1319
+#: public/modules/shippinglabel/shippinglabel.php:161
+msgid "Tracking Number"
+msgstr "Tracking nummer"
+
+#: public/modules/invoice/invoice.php:1320
+msgid "Product Table"
+msgstr "Produkttabel"
+
+#: public/modules/invoice/invoice.php:1327
+msgid "Coupon info"
+msgstr "Kupon info"
+
+#: public/modules/invoice/invoice.php:1401
+msgid "Print Invoices"
+msgstr "Udskriv fakturaer"
+
+#: public/modules/invoice/invoice.php:1402
+msgid "Download Invoices"
+msgstr "Download fakturaer"
+
+#: public/modules/invoice/invoice.php:1424
+#: public/modules/invoice/invoice.php:1528
+#: public/modules/invoice/invoice.php:1554
+msgid "Print Invoice"
+msgstr "Udskriv faktura"
+
+#: public/modules/invoice/invoice.php:1425
+msgid "Download Invoice"
+msgstr "Download faktura"
+
+#: public/modules/invoice/invoice.php:1455
+msgid "Invoice Number:"
+msgstr "Faktura Nummer:"
+
+#: public/modules/invoice/invoice.php:1611
+msgid "Customizer module is not active."
+msgstr "Tilpasningsmodulet er ikke aktivt."
+
+#: public/modules/invoice/views/general.php:7
+msgid "Configure the general settings required for the invoice."
+msgstr "Konfigurer de generelle indstillinger, der kræves for fakturaen."
+
+#: public/modules/invoice/views/general.php:13
+msgid "Enable invoice"
+msgstr "Aktivér faktura"
+
+#: public/modules/invoice/views/general.php:22
+msgid "Use order date as invoice date"
+msgstr "Brug ordrenummer som faktura nummer"
+
+#: public/modules/invoice/views/general.php:24
+msgid ""
+"If you choose 'No' then the invoice date will be the date on which it is "
+"generated."
+msgstr ""
+"Hvis du vælger 'Nej', vil fakturadatoen være den dato, hvor den genereres."
+
+#: public/modules/invoice/views/general.php:32
+msgid "Generate invoice for order statuses"
+msgstr "Generer faktura for ordrestatusser"
+
+#: public/modules/invoice/views/general.php:34
+msgid "Order statuses for which an invoice should be generated."
+msgstr "Ordrestatuser, for hvilke en faktura skal genereres."
+
+#: public/modules/invoice/views/general.php:41
+msgid "Attach invoice PDF in order email"
+msgstr "Vedhæft PDF-faktura i ordre-e-mail"
+
+#: public/modules/invoice/views/general.php:47
+msgid ""
+"PDF version of invoice will be attached with the order email based on the "
+"above statuses"
+msgstr ""
+"PDF-version af fakturaen vedhæftes ordre-mailen baseret på ovenstående status"
+
+#: public/modules/invoice/views/general.php:57
+msgid "Enable print invoice option for customers"
+msgstr "Vis printfaktura mulighed for kunder"
+
+#: public/modules/invoice/views/general.php:63
+msgid ""
+"Displays print button in the order email, order listing page and in the "
+"order summary."
+msgstr ""
+"Viser udskrivningsknappen i ordre-mailen, ordrelistingsiden og i "
+"ordresammendraget."
+
+#: public/modules/invoice/views/general.php:71
+msgid "Show print button only for statuses"
+msgstr "Vis kun udskrivningsknap for status"
+
+#: public/modules/invoice/views/general.php:83
+msgid "Order meta fields"
+msgstr "Bestil metafelter"
+
+#: public/modules/invoice/views/general.php:86
+msgid "Select/add the additional order information in the invoice"
+msgstr "Vælg / tilføj yderligere ordreoplysninger i fakturaen."
+
+#: public/modules/invoice/views/general.php:90
+msgid "Custom logo for invoice"
+msgstr "Brugerdefineret logo til faktura"
+
+#: public/modules/invoice/views/general.php:92
+msgid ""
+"If left blank, defaulted to logo from General settings.Ensure to select "
+"company logo from ‘Invoice > Customize > Company Logo’ to reflect on the "
+"invoice. Recommended size is 150x50px."
+msgstr ""
+"Hvis det er tomt, er logoet standardiseret fra Generelle indstillinger. Sørg "
+"for at vælge firmalogo fra 'Faktura> Tilpas> Firma -logo' for at afspejle "
+"fakturaen. Anbefalet størrelse er 150x50px."
+
+#: public/modules/invoice/views/general.php:99
+msgid "Advanced options"
+msgstr "Avancerede indstillinger"
+
+#: public/modules/invoice/views/general.php:106
+msgid "Generate invoice for free orders"
+msgstr "Generer faktura for ordrestatusser"
+
+#: public/modules/invoice/views/general.php:108
+msgid "Choose ‘No’ to not generate invoice for free orders."
+msgstr "Vælg 'Nej' for ikke at generere faktura for gratis ordrer."
+
+#: public/modules/invoice/views/general.php:117
+msgid "Display free line items in the invoice"
+msgstr "Vis gratis linjeposter i fakturaen"
+
+#: public/modules/invoice/views/general.php:119
+msgid "Choose ‘No’ to not display free line items in the invoice."
+msgstr "Vælg 'Nej' for ikke at få vist gratis linjeposter på fakturaen."
+
+#: public/modules/invoice/views/general.php:128
+msgid "PDF name format"
+msgstr "Datoformater"
+
+#: public/modules/invoice/views/general.php:130
+msgid ""
+"Select a name format for PDF invoice that includes invoice/order number."
+msgstr ""
+"Vælg et navneformat til PDF -faktura, der indeholder faktura/ordrenummer."
+
+#: public/modules/invoice/views/general.php:135
+msgid "Custom PDF name prefix"
+msgstr "Brugerdefineret PDF -navn præfiks"
+
+#: public/modules/invoice/views/general.php:138
+msgid ""
+"Input a custom prefix for ‘PDF name format’ that will appear at the "
+"beginning of the name. Defaulted to ‘Invoice_’."
+msgstr ""
+"Indtast et brugerdefineret præfiks for 'PDF -navnformat', der vises i "
+"begyndelsen af navnet. Standard til 'Faktura_'."
+
+#: public/modules/invoice/views/invoice-number.php:5
+msgid "Click to append with existing data"
+msgstr "Klik for at tilføje eksisterende data"
+
+#: public/modules/invoice/views/invoice-number.php:18
+msgid "Date formats"
+msgstr "Datoformater"
+
+#: public/modules/invoice/views/invoice-number.php:25
+msgid "Output"
+msgstr "Afgang"
+
+#: public/modules/invoice/views/invoice-number.php:75
+msgid ""
+"Use the configurations below to set up a custom invoice number with prefix/"
+"suffix/number series or mirror the order number respectively."
+msgstr ""
+"Brug nedenstående konfigurationer til at konfigurere et tilpasset "
+"fakturanummer med præfiks/suffiks/nummerserier eller spejle henholdsvis "
+"ordrenummeret."
+
+#: public/modules/invoice/views/invoice-number.php:93
+msgid "Invoice number format"
+msgstr "Faktura nummerformat"
+
+#: public/modules/invoice/views/invoice-number.php:96
+msgid "[number]"
+msgstr "Ordrenummeretiket"
+
+#: public/modules/invoice/views/invoice-number.php:97
+msgid "[number][suffix]"
+msgstr "Nummer endelse"
+
+#: public/modules/invoice/views/invoice-number.php:98
+msgid "[prefix][number]"
+msgstr "[præfiks] [nummer]"
+
+#: public/modules/invoice/views/invoice-number.php:99
+msgid "[prefix][number][suffix]"
+msgstr "[præfiks] [nummer] [suffiks]"
+
+#: public/modules/invoice/views/invoice-number.php:105
+msgid "Use order number as invoice number"
+msgstr "Brug ordrenummer som faktura nummer"
+
+#: public/modules/invoice/views/invoice-number.php:124
+msgid "Invoice Start Number"
+msgstr "Faktura Startnummer"
+
+#: public/modules/invoice/views/invoice-number.php:128
+msgid "Reset Invoice no"
+msgstr "Nulstil faktura nr"
+
+#: public/modules/invoice/views/invoice-number.php:141
+msgid "Prefix"
+msgstr "Prefiks"
+
+#: public/modules/invoice/views/invoice-number.php:143
+#: public/modules/invoice/views/invoice-number.php:148
+#, php-format
+msgid "Use any of the %s date formats %s or alphanumeric characters."
+msgstr "Brug et af %s datoformaterne %s eller alfanumeriske tegn."
+
+#: public/modules/invoice/views/invoice-number.php:146
+msgid "Suffix"
+msgstr "Suffix"
+
+#: public/modules/invoice/views/invoice-number.php:152
+msgid "Invoice length"
+msgstr "Fakturadato"
+
+#: public/modules/invoice/views/invoice-number.php:161
+msgid "Save Invoice number settings"
+msgstr "Faktura nummer Postfix"
+
+#: public/modules/packinglist/packinglist.php:245
+#: public/modules/packinglist/packinglist.php:256
+msgid "Print Packing slip"
+msgstr "Udskriv emballageseddel"
+
+#: public/modules/packinglist/packinglist.php:261
+msgid "Download Packing slip"
+msgstr "Download Følgeseddel"
+
+#: public/modules/packinglist/packinglist.php:331
+#: public/modules/shippinglabel/shippinglabel.php:473
+msgid "Unable to print Packing slip. Please check the items in the order."
+msgstr "Kan ikke udskrive Emballageseddel. Kontroller varerne i ordren."
+
+#: public/modules/packinglist/views/general.php:19
+msgid "Add product image in product table"
+msgstr "Tilføj produktbillede i produkttabellen"
+
+#: public/modules/packinglist/views/general.php:30
+msgid "Add customer note in packing slip"
+msgstr "Udskriv pakke liste"
+
+#: public/modules/packinglist/views/general.php:41
+msgid "Add footer in packing slip"
+msgstr "Udskriv pakke liste"
+
+#: public/modules/shippinglabel/data/data.templates.php:5
+msgid "Shipping Label 1"
+msgstr "Fragt-label"
+
+#: public/modules/shippinglabel/shippinglabel.php:108
+#: public/modules/shippinglabel/shippinglabel.php:133
+msgid "Title font size"
+msgstr "Titel skriftstørrelse"
+
+#: public/modules/shippinglabel/shippinglabel.php:115
+msgid "Address font size"
+msgstr "Adresse skriftstørrelse"
+
+#: public/modules/shippinglabel/shippinglabel.php:157
+msgid "To Address"
+msgstr "At adresse"
+
+#: public/modules/shippinglabel/shippinglabel.php:159
+msgid "Weight"
+msgstr "Vægt"
+
+#: public/modules/shippinglabel/shippinglabel.php:160
+msgid "Ship date"
+msgstr "Afsendelses dato"
+
+#: public/modules/shippinglabel/shippinglabel.php:164
+msgid "Barcode"
+msgstr "Stregkode"
+
+#: public/modules/shippinglabel/shippinglabel.php:166
+msgid "Return Policy"
+msgstr "Returpolitik"
+
+#: public/modules/shippinglabel/shippinglabel.php:276
+msgid ""
+"Prints the shipping label in full page. Provisions to create custom sized "
+"labels are allowed in premium versions."
+msgstr ""
+"Udskriver forsendelsesetiketten på hele siden. Bestemmelser til oprettelse "
+"af etiketter i brugerdefineret størrelse er tilladt i premiumversioner."
+
+#: public/modules/shippinglabel/shippinglabel.php:343
+#: public/modules/shippinglabel/shippinglabel.php:354
+msgid "Print Shipping Label"
+msgstr "Udskriv forsendelsesetiket"
+
+#: public/modules/shippinglabel/shippinglabel.php:406
+msgid "Please add shipping from address in the plugin's general settings."
+msgstr "Tilføj venligst fragt fra adresse i pluginets generelle indstillinger."
+
+#: public/modules/shippinglabel/views/general.php:7
+msgid "Configure the general settings required for the shipping label."
+msgstr ""
+"Konfigurer de generelle indstillinger, der kræves til forsendelsesetiketten."
+
+#: public/modules/shippinglabel/views/general.php:11
+msgid "Shipping label size"
+msgstr "Label størrelse"
+
+#: public/modules/shippinglabel/views/general.php:15
+msgid "Full Page"
+msgstr "Hel side"
+
+#: public/modules/shippinglabel/views/general.php:16
+msgid "Custom (Pro version)"
+msgstr "Brugerdefineret footer"
+
+#: public/modules/shippinglabel/views/general.php:32
+msgid "Add footer in shipping label"
+msgstr "Udskriv forsendelsesetiket"
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+msgstr ""
+"https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+
+#. Description of the plugin/theme
+msgid "Prints Packing List,Invoice,Delivery Note & Shipping Label."
+msgstr "Udskriver pakkeliste, faktura, leveringsnota og forsendelsesetiket."
+
+#. Author of the plugin/theme
+msgid "WebToffee"
+msgstr "WebToffee"
+
+#. Author URI of the plugin/theme
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"
+
+#~ msgid "Upgrade to Premium"
+#~ msgstr "Opgrader til premium"
+
+#~ msgid "Easy options to Customise and Personalise the Templates."
+#~ msgstr "Nemme muligheder for at tilpasse og tilpasse skabelonerne."
+
+#~ msgid ""
+#~ "Various Packing Options - Box Packing, Single package per order & Pack "
+#~ "items individually."
+#~ msgstr ""
+#~ "Forskellige pakkemuligheder - Box Packing, Single package per order & "
+#~ "Pack items individuelt."
+
+#~ msgid "Bulk Printing."
+#~ msgstr "Masseudskrivning."
+
+#~ msgid "Customize Invoice Number."
+#~ msgstr "Faktura nummer"
+
+#~ msgid "Address labels"
+#~ msgstr "Adresselabel"
+
+#~ msgid "Option to send invoice to your Customer by e-Mail."
+#~ msgstr "Mulighed for at sende faktura til din kunde via e-mail."
+
+#~ msgid "Like this plugin?"
+#~ msgstr "Kan du lide denne plugin?"
+
+#~ msgid "If you find this plugin useful please show your support and rate it"
+#~ msgstr ""
+#~ "Hvis du finder dette plugin nyttigt, skal du vise din support og bedømme "
+#~ "den"
+
+#~ msgid " on"
+#~ msgstr " på"
+
+#~ msgid "  much appreciated!"
+#~ msgstr " Meget værdsat!"
+
+#, fuzzy
+#~| msgid "Documentation"
+#~ msgid "Document settings"
+#~ msgstr "Dokumentation"
+
+#, fuzzy
+#~| msgid "Sender Name"
+#~ msgid "Field Name"
+#~ msgstr "Afsender navn"
+
+#~ msgid "Add Existing Order Meta Field"
+#~ msgstr "Tilføj eksisterende bestil Meta-felt"
+
+#~ msgid "Add Product Meta"
+#~ msgstr "Tilføj produkt Meta"
+
+#, fuzzy
+#~| msgid "Support"
+#~ msgid "support"
+#~ msgstr "Support"
+
+#, fuzzy
+#~| msgid "RTL support in documents generated by browser "
+#~ msgid "RTL support in documents generated by browser"
+#~ msgstr "RTL support i dokumenter genereret af browser"
+
+#~ msgid "<strong>Invoice Number: </strong>"
+#~ msgstr "<strong>Faktura nummer:</strong>"
+
+#~ msgid "Add print invoice button to the order email"
+#~ msgstr "Tilføj print faktura knap til ordre email"
+
+#, fuzzy
+#~| msgid ""
+#~| "Oops! You tried installing the premium version without deactivating and "
+#~| "deleting the basic version. Kindly deactivate and delete Print Invoices, "
+#~| "Packing List & Labels for WooCommerce (BASIC) and then try again"
+#~ msgid ""
+#~ "Oops! You tried installing the basic version without deactivating and "
+#~ "deleting the premium version. Kindly deactivate and delete Print "
+#~ "Invoices, Packing Slip & Labels for WooCommerce (premium) and then try "
+#~ "again"
+#~ msgstr ""
+#~ "Ups! Du forsøgte at installere premium versionen uden at deaktivere og "
+#~ "slette den grundlæggende version. Deaktiver og slet venligst "
+#~ "udskriftsfakturaer, pakningsliste og etiketter til WooCommerce (BASIC), "
+#~ "og prøv igen"
+
+#~ msgid ""
+#~ "If you are switching to a new theme, all unsaved changes will be lost."
+#~ msgstr ""
+#~ "Hvis du skifter til et nyt tema, vil alle ikke-gemte ændringer gå tabt."
+
+#~ msgid "Licence"
+#~ msgstr "Licens"
+
+#~ msgid "Additional Fields on Checkout Page"
+#~ msgstr "Yderligere felter på Checkout Page"
+
+#~ msgid ""
+#~ "Select the additional information you want to have in the Checkout page."
+#~ msgstr "Vælg de yderligere oplysninger, du vil have på Checkout-siden."
+
+#~ msgid "Tracking Number Meta"
+#~ msgstr "Sporingsnummer Meta"
+
+#~ msgid "Enter the tracking number meta to add tracking number information"
+#~ msgstr "Indtast sporingsnummermeta for at tilføje sporingsnummeroplysninger"
+
+#~ msgid "Packaging Type"
+#~ msgstr "Emballagetype"
+
+#~ msgid "Pack Items Individually"
+#~ msgstr "Pack Items Individually"
+
+#~ msgid "Box Packing"
+#~ msgstr "box pakning"
+
+#~ msgid "Single Package Per Order"
+#~ msgstr "Enkeltpakke pr. Ordre"
+
+#~ msgid "Box Sizes"
+#~ msgstr "Boksstørrelser"
+
+#~ msgid "Length"
+#~ msgstr "Længde"
+
+#~ msgid "Box Weight"
+#~ msgstr "Boksvægt"
+
+#~ msgid "Max Weight"
+#~ msgstr "Maks. Vægt"
+
+#~ msgid "Add Box"
+#~ msgstr "Tilføj boks"
+
+#~ msgid "Remove selected box(es)"
+#~ msgstr "Fjern markeret boks (er)"
+
+#~ msgid ""
+#~ "Items will be packed into these boxes depending based on item dimensions "
+#~ "and volume. Dimensions will be passed to FedEx and used for packing. "
+#~ "Items not fitting into boxes will be packed individually."
+#~ msgstr ""
+#~ "Elementer vil blive pakket ind i disse felter afhængigt af "
+#~ "varedimensioner og volumen. Dimensioner sendes til FedEx og bruges til "
+#~ "pakning. Varer, der ikke passer i kasser, pakkes individuelt."
+
+#~ msgid "Shipping From Address"
+#~ msgstr "Afsendelse fra adresse"
+
+#~ msgid "Custom Logo"
+#~ msgstr "Brugerdefineret logo"
+
+#~ msgid "Return Policy, Conditions"
+#~ msgstr "Returpolitik, Betingelser"
+
+#~ msgid "Sender City"
+#~ msgstr "Afsender By"
+
+#~ msgid "Invoice Number Prefix"
+#~ msgstr "Faktura nummer præfiks"
+
+#~ msgid "Invoice Padding Number"
+#~ msgstr "Faktura Padding Number"
+
+#~ msgid "Tax Type"
+#~ msgstr "Skat Type"
+
+#~ msgid ""
+#~ "The license key for %s has expired. You can reactivate or purchase a "
+#~ "license key from your account <a href=\"%s\" target=\"_blank\">dashboard</"
+#~ "a>."
+#~ msgstr ""
+#~ "Licensnøglen for% s er udløbet. Du kan genaktivere eller købe en "
+#~ "licensnøgle fra din konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "The subscription for %s is on-hold. You can reactivate the subscription "
+#~ "from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Abonnementet for% s er på vent. Du kan genaktivere abonnementet fra din "
+#~ "konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "The subscription for %s has been cancelled. You can renew the "
+#~ "subscription from your account <a href=\"%s\" target=\"_blank"
+#~ "\">dashboard</a>. A new license key will be emailed to you after your "
+#~ "order has been completed."
+#~ msgstr ""
+#~ "Abonnementet for% s er blevet annulleret. Du kan forny abonnementet fra "
+#~ "din konto <a href=“%s” target=“_blank”> dashboard </a>. En ny licensnøgle "
+#~ "vil blive sendt til dig, når din ordre er gennemført."
+
+#~ msgid ""
+#~ "The subscription for %s has expired. You can reactivate the subscription "
+#~ "from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Abonnementet for% s er udløbet. Du kan genaktivere abonnementet fra din "
+#~ "konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "The subscription for %s has been suspended. You can reactivate the "
+#~ "subscription from your account <a href=\"%s\" target=\"_blank"
+#~ "\">dashboard</a>."
+#~ msgstr ""
+#~ "Abonnementet for% s er blevet suspenderet. Du kan genaktivere "
+#~ "abonnementet fra din konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "The subscription for %s is still pending. You can check on the status of "
+#~ "the subscription from your account <a href=\"%s\" target=\"_blank"
+#~ "\">dashboard</a>."
+#~ msgstr ""
+#~ "Abonnementet for% s afventer stadig. Du kan kontrollere status for "
+#~ "abonnementet fra din konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "The subscription for %s has been placed in the trash and will be deleted "
+#~ "soon. You can purchase a new subscription from your account <a href=\"%s"
+#~ "\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Abonnementet for% s er blevet anbragt i skraldespanden og vil blive "
+#~ "slettet snart. Du kan købe et nyt abonnement fra din konto <a href=“%s” "
+#~ "target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "A subscription for %s could not be found. You can purchase a subscription "
+#~ "from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Et abonnement på% s kunne ikke findes. Du kan købe et abonnement fra din "
+#~ "konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "A license key for %s could not be found. Maybe you forgot to enter a "
+#~ "license key when setting up %s, or the key was deactivated in your "
+#~ "account. You can reactivate license key at your plugin <a href=\"%s\" "
+#~ "target=\"_blank\">settings page</a>."
+#~ msgstr ""
+#~ "En licensnøgle til %s kunne ikke findes. Måske har du glemt at indtaste "
+#~ "en licensnøgle, når du konfigurerer %s, eller nøglen blev deaktiveret i "
+#~ "din konto. Du kan genaktivere licensnøglen på din plugin- <a href=\"%s\" "
+#~ "target=\"_blank\">indstillingsside</a> ."
+
+#~ msgid ""
+#~ "Download permission for %s has been revoked possibly due to a license key "
+#~ "or subscription expiring. You can reactivate or purchase a license key "
+#~ "from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Download tilladelse til% s er blevet tilbagekaldt muligvis på grund af en "
+#~ "licensnøgle eller abonnement udløber. Du kan genaktivere eller købe en "
+#~ "licensnøgle fra din konto <a href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "%s has not been activated. Go to the plugin <a href=\"%s\" target=\"_blank"
+#~ "\">settings page</a> and enter the license key and license email to "
+#~ "activate %s."
+#~ msgstr ""
+#~ "%s er ikke blevet aktiveret. Gå til plugin- <a href=\"%s\" target=\"_blank"
+#~ "\">indstillingssiden</a> og indtast licenøglen og licens e-mail for at "
+#~ "aktivere %s."
+
+#~ msgid ""
+#~ "You changed the subscription for %s, so you will need to enter your new "
+#~ "API License Key in the settings page. The License Key should have arrived "
+#~ "in your email inbox, if not you can get it by logging into your account "
+#~ "<a href=\"%s\" target=\"_blank\">dashboard</a>."
+#~ msgstr ""
+#~ "Du har ændret abonnementet for% s, så du skal indtaste din nye API-"
+#~ "licensnøgle på indstillingssiden. Licensnøglen skal være ankommet i din e-"
+#~ "mail-indbakke, hvis du ikke kan få det ved at logge ind på din konto <a "
+#~ "href=“%s” target=“_blank”> dashboard </a>."
+
+#~ msgid ""
+#~ "Oops! You tried installing the premium version without deactivating and "
+#~ "deleting the basic version. Kindly deactivate and delete WooCommerce "
+#~ "Shipping Labels (BASIC) and then try again"
+#~ msgstr ""
+#~ "Ups! Du forsøgte at installere premium versionen uden at deaktivere og "
+#~ "slette den grundlæggende version. Deaktiver og slet venligst WooCommerce "
+#~ "Shipping Labels (BASIC) og prøv igen"
+
+#~ msgid "Rows"
+#~ msgstr "rækker"
+
+#~ msgid "Columns"
+#~ msgstr "Kolonner"
+
+#~ msgid "Margin top"
+#~ msgstr "Margen top"
+
+#~ msgid "Margin right"
+#~ msgstr "Margen højre"
+
+#~ msgid "Margin bottom"
+#~ msgstr "Margin bund"
+
+#~ msgid "Column spacing"
+#~ msgstr "Kolonneafstand"
+
+#~ msgid "Rows spacing"
+#~ msgstr "Rækker afstand"
+
+#~ msgid "Description"
+#~ msgstr "Beskrivelse"
+
+#~ msgid "Properties"
+#~ msgstr "Ejendomme"
+
+#~ msgid "Print Address Label"
+#~ msgstr "Udskriv adresselabel"
+
+#~ msgid "You do not have sufficient permissions to access this page."
+#~ msgstr ""
+#~ "Du har ikke tilstrækkelige tilladelser til at få adgang til denne side."
+
+#~ msgid "Return Address"
+#~ msgstr "Retur adresse"
+
+#~ msgid "Shipping Method"
+#~ msgstr "Fragtmetode"
+
+#~ msgid "Additional Fields on Invoice"
+#~ msgstr "Yderligere felter på faktura"
+
+#~ msgid ""
+#~ "Select the additional information you want to display on the Dispatch "
+#~ "Label."
+#~ msgstr "Vælg de yderligere oplysninger, du vil vise på Dispatch Label."
+
+#~ msgid ""
+#~ "Select the additional information you want to display in the Dispatch "
+#~ "Label Product Table."
+#~ msgstr ""
+#~ "Vælg de yderligere oplysninger, du vil have vist i Dispatch Label Product "
+#~ "Table."
+
+#~ msgid "VAT Field"
+#~ msgstr "Momsfelt"
+
+#~ msgid "SSN Field"
+#~ msgstr "SSN-felt"
+
+#~ msgid "Signature"
+#~ msgstr "Underskrift"
+
+#~ msgid ""
+#~ "Select the additional information you want to display in the Invoice "
+#~ "Product Table."
+#~ msgstr ""
+#~ "Vælg de yderligere oplysninger, du vil vise i faktura produkttabellen."
+
+#~ msgid "Order Status to Generate Invoice"
+#~ msgstr "Ordrestatus til generering af faktura"
+
+#~ msgid "Enable Variation Data"
+#~ msgstr "Aktivér variationsdata"
+
+#~ msgid "Enable to add variation information"
+#~ msgstr "Aktivér at tilføje variationsoplysninger"
+
+#~ msgid "Send invoice email"
+#~ msgstr "Send faktura email"
+
+#~ msgid "Order statuses for which an invoice should be mailed."
+#~ msgstr "Ordrestatuser, for hvilke en faktura skal sendes."
+
+#~ msgid "Upload Signature"
+#~ msgstr "Upload signatur"
+
+#~ msgid "Packing List"
+#~ msgstr "Pakke liste"
+
+#~ msgid "Print Packing List"
+#~ msgstr "Udskriv pakke liste"
+
+#~ msgid "Group by category"
+#~ msgstr "Gruppe efter kategori"
+
+#~ msgid "Additional Fields"
+#~ msgstr "Yderligere felter"
+
+#~ msgid ""
+#~ "Select the additional information you want to display on the Packing Slip."
+#~ msgstr "Vælg de yderligere oplysninger, du vil vise på Packing Slip."
+
+#~ msgid ""
+#~ "Select the additional information you want to display on the Packing Slip "
+#~ "Product Table."
+#~ msgstr "Vælg de yderligere oplysninger, du vil have vist på pakken."
+
+#~ msgid "Show print packing slip option in email"
+#~ msgstr "Vis udskriftspakke slip indstilling i email"
+
+#~ msgid ""
+#~ "Order statuses for which print packing slip option should appear in email."
+#~ msgstr ""
+#~ "Ordrestatuser, for hvilke indstillinger for udskriftspakke skal vises i e-"
+#~ "mail."
+
+#~ msgid "Enter the footer text to be printed in the packing slip"
+#~ msgstr "Indtast footerteksten, der skal udskrives i pakken"
+
+#~ msgid "Order number label"
+#~ msgstr "Ordrenummeretiket"
+
+#~ msgid "Weight label"
+#~ msgstr "Vægtmærke"
+
+#~ msgid "Shipping Details"
+#~ msgstr "Forsendelsesdetaljer"
+
+#~ msgid "Enable multiple labels in one page"
+#~ msgstr "Aktivér flere etiketter på en side"
+
+#~ msgid "No of labels in one row"
+#~ msgstr "Ingen etiketter i en række"
+
+#~ msgid "Custom Shipping Label Size"
+#~ msgstr "Tilpasset forsendelsesetiketstørrelse"
+
+#~ msgid "Enter the custom width and height values(in that order), in inches."
+#~ msgstr ""
+#~ "Indtast brugerdefinerede bredde- og højdeværdier (i den rækkefølge), i "
+#~ "tommer."
+
+#~ msgid ""
+#~ "Order statuses for which print shipping label option should appear in "
+#~ "email."
+#~ msgstr "Ordrestatuser, for hvilken udskriftsskiltet skal vises i e-mail."
+
+#~ msgid ""
+#~ "This is a short description of what the plugin does. It's displayed in "
+#~ "the WordPress admin area."
+#~ msgstr ""
+#~ "Dette er en kort beskrivelse af, hvad plugin'et gør. Den vises i "
+#~ "WordPress admin-området."

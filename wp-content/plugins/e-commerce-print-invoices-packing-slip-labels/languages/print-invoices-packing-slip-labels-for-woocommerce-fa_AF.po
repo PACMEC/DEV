@@ -1,0 +1,2497 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce PDF Invoices, Packing Slips, Delivery Notes & "
+"Shipping Labels\n"
+"POT-Creation-Date: 2021-10-09 23:02+0530\n"
+"PO-Revision-Date: 2021-10-09 23:03+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_AF\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: print-invoices-packing-slip-labels-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:110
+msgid "Settings updated."
+msgstr "تنظیمات بروز شدند."
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:111
+msgid "All fields are mandatory"
+msgstr "تمام فیلد‌ها اجباری هستند"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:112
+#, php-format
+msgid ""
+"Unable to update settings due to an internal error. %s To troubleshoot please "
+"click %s here. %s"
+msgstr ""
+"به دلیل خطای داخلی نمی توان تنظیمات را به روز کرد. %s برای عیب یابی لطفاً %s "
+"اینجا را کلیک کنید. %s"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:113
+msgid "You have to select order(s) first!"
+msgstr "اول باید سفارش/سفارشات را انتخاب کنید!"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:114
+msgid "One or more order do not have invoice generated. Generate manually?"
+msgstr "برای یک یا چند سفارش فاکتور ایجاد نشده است. آیا بصورت دستی ایجاد شوند؟"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:115
+#: admin/class-wf-woocommerce-packing-list-admin.php:1042
+#: admin/class-wf-woocommerce-packing-list-admin.php:1062
+#: admin/modules/customizer/customizer.php:49
+#: admin/modules/customizer/customizer.php:237
+#: public/modules/invoice/invoice.php:131
+#: public/modules/shippinglabel/shippinglabel.php:239
+msgid "Error"
+msgstr "خطا"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:116
+msgid "Please wait"
+msgstr "لطفا شکیبا باشید"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:117
+msgid "is required"
+msgstr "اجباری"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:118
+#: admin/modules/freevspro/views/comparison-table.php:16
+#: public/modules/invoice/invoice.php:102 public/modules/invoice/invoice.php:103
+#: public/modules/invoice/invoice.php:1255 public/modules/invoice/invoice.php:1279
+#: public/modules/invoice/views/invoice-admin-settings.php:12
+msgid "Invoice"
+msgstr "فاکتور"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:119
+msgid "number has not been generated yet. Do you want to manually generate one ?"
+msgstr "تعداد هنوز ایجاد نشده است آیا می خواهید یکی را به صورت دستی ایجاد کنید؟"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:120
+msgid ""
+"‘Generate invoice for free orders’ is disabled in Invoice settings > Advanced. "
+"You are attempting to generate invoice for this free order. Proceed?"
+msgstr ""
+"\"ایجاد فاکتور برای سفارشات رایگان\" در تنظیمات فاکتور> پیشرفته غیرفعال است. "
+"شما در حال تلاش برای ایجاد فاکتور برای این سفارش رایگان هستید. ادامه دهید؟"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:213
+msgctxt "placeholder"
+msgid "Enter "
+msgstr "وارد‌کردن"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:374
+msgid "Print Actions"
+msgstr "عملکردهای چاپ"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:384
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:23
+#: admin/views/admin-settings-documents.php:84
+#: public/modules/invoice/views/invoice-admin-settings.php:12
+#: public/modules/shippinglabel/views/admin-settings.php:11
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:385
+#: admin/modules/freevspro/views/goto-pro.php:50
+msgid "Upgrade to premium"
+msgstr "ارتقا به نسخه پرمیوم"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:386
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:387
+msgid "Review"
+msgstr "مرور"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:424
+#: admin/class-wf-woocommerce-packing-list-admin.php:449
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:425
+msgid "Invoice/Packing"
+msgstr "فاکتور/بسته‌بندی"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:439
+#: admin/class-wf-woocommerce-packing-list-admin.php:440
+msgid "Other Documents"
+msgstr "سایر اسناد"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:502
+msgid "You are not allowed to view this page."
+msgstr "شما مجاز به مشاهده این صفحه نیستید."
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:503
+msgid "Access denied !!!."
+msgstr "دسترسی برای شما مجاز نیست !!!"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:1048
+#: admin/class-wf-woocommerce-packing-list-admin.php:1111
+msgid "Settings Updated"
+msgstr "تنظیمات بروزرسانی شدند"
+
+#. translators: %s: method
+#: admin/class-wf-woocommerce-packing-list-admin.php:1592
+#: public/modules/invoice/invoice.php:928
+#, php-format
+msgid "via %s"
+msgstr "از طریق %s"
+
+#: admin/class-wf-woocommerce-packing-list-admin.php:1597
+msgid "Free!"
+msgstr "رایگان!"
+
+#: admin/data/data.tooltip.php:3
+msgid ""
+"Specify your company name in the field provided. You can choose to display the "
+"name or logo in the invoice from the customize tab."
+msgstr ""
+"نام شرکت/فروشگاه خود را در قسمت مربوطه وارد نمایید. شما می‌توانید از بخش "
+"شخصی‌سازی انتخاب نمایید نام یا لوگو/آرم/نشان تجاری شما در فاکتور نمایش داده شود "
+"یا خیر."
+
+#: admin/data/data.tooltip.php:4
+msgid ""
+"Upload a company logo (preferably of size 150x50px for better usability) from "
+"the media library which will be displayed in your document."
+msgstr ""
+"لوگو/آرم/نشان تجاری خود را از کتابخانه چند‌رسانه‌ای انتخاب نمایید. (سایز 150*150 "
+"پیکسل برای بهترین کارکرد مناسب است)."
+
+#: admin/data/data.tooltip.php:5
+msgid ""
+"Additional details like the terms and conditions, any specific messages that "
+"have to be displayed at the bottom of the document can be specified in the "
+"expandable text area provided."
+msgstr ""
+"متن پا‌برگ‌: جزئیات اضافی مانند شرایط و ضوابط و یا هر پیام دیگری که بعنوان پاورقی "
+"در پایین‌ترین قسمت سند نمایش داده می‌شود، برای وارد کردن متن محدودیت وجود ندارد و "
+"قسمت مربوطه بصورت خودکار قابل گسترش می‌باشد."
+
+#: admin/data/data.tooltip.php:6
+msgid ""
+"The 'From Address' to be displayed in the shipping documents will be loaded "
+"from details specified in these fields."
+msgstr ""
+"مشخصات و آدرس فرستنده برای نمایش در برچسب حمل موارد وارد شده در فرم زیر "
+"خواهندبود."
+
+#: admin/data/data.tooltip.php:7
+msgid ""
+"Click here to load the default WooCommerce store address details into the "
+"respective fields."
+msgstr ""
+"اگر نمی‌خواهید آدرس و مشخصات فرستنده را بصورت دستی وارد کرده و موارد موجود در "
+"فرم زیر بصورت خودکار از آدرس وارد شده فروشگاه در ووکامرس بارگذاری گردند، اینجا "
+"کلیک کنید."
+
+#: admin/data/data.tooltip.php:8
+msgid ""
+"Enable to obtain a preview of the document whenever a user initiates a print."
+msgstr ""
+"فعال کنید تا هر موقع کاربر تصمیم به چاپ یک سند گرفت قبل از چاپ اول پیش‌نمایشی از "
+"آن‌را مشاهده نماید."
+
+#: admin/data/data.tooltip.php:9
+msgid ""
+"Enable to obtain the document in right to left alignment. (P.S: Use it only for "
+"languages with the right to left text direction)"
+msgstr ""
+"اگر از افزونه در یک زبان راست به چپ استفاده می‌کنید، فعال نمایید. (الفبای زبان "
+"فارسی نیز جزو الفبای راست به چپ می‌باشد، برای فارسی اگر فعال نکنید با بهم ریختگی "
+"در اسناد خروجی مواجه خواهید شد، فراموش نکنید که کتابخانه PDF در پایین را هم "
+"حتما روی mPDF تنظیم کنید)"
+
+#: admin/data/data.tooltip.php:10
+msgid ""
+"Configure the product price/subtotal inclusive or exclusive of tax. Provision "
+"to set up tax also provided."
+msgstr ""
+"تنظیم اینکه آیا قیمت محصول/جمع کل با محاسبه مالیات باشد یا بدون محاسبه مالیات. "
+"پیش بینی تنظیم مالیات نیز در این قسمت دیده شده است."
+
+#: admin/modules/customizer/classes/class-customizer.php:86
+msgid "Box name"
+msgstr "نام جعبه"
+
+#: admin/modules/customizer/classes/class-customizer.php:401
+msgid "Refund"
+msgstr "بازپرداخت"
+
+#: admin/modules/customizer/classes/class-customizer.php:429
+msgid "incl. tax"
+msgstr "شامل مالیات"
+
+#: admin/modules/customizer/classes/class-customizer.php:686
+#: admin/modules/customizer/classes/class-customizer.php:1354
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:138
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:145
+msgid "n/a"
+msgstr "در دسترس نیست"
+
+#: admin/modules/customizer/classes/class-customizer.php:1587
+msgid "Phone:"
+msgstr "تلفن:"
+
+#: admin/modules/customizer/classes/class-customizer.php:1985
+msgid ""
+"Mauris dignissim neque ut sapien vulputate, eu semper tellus porttitor. Cras "
+"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis "
+"porttitor enim sit amet fringilla. Nulla sed ligula venenatis, rutrum lectus vel"
+msgstr ""
+"Mauris respectissim neque ut sapien vulputate، eu semper tellus porttitor. Cras "
+"porta lectus id augue interdum egestas. Suspendisse potenti. Phasellus mollis "
+"porttitor enim sit amet fringilla. Nulla sed ligula venenatis ، rutrum lectus "
+"vel"
+
+#: admin/modules/customizer/classes/class-customizer.php:1986
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec vehicula "
+"purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor, et "
+"interdum tellus fermentum at. Fusce pellentesque justo rhoncus"
+msgstr ""
+"Lorem ipsum dolor sit amet، consectetur adipiscing elit. Nunc nec vehicula "
+"purus. Mauris tempor nec ipsum ac tempus. Aenean vehicula porttitor tortor، et "
+"interdum tellus fermentum در. Fusce pellentesque justo rhoncus"
+
+#: admin/modules/customizer/customizer.php:81
+msgid "Unable to generate PDF."
+msgstr "ایجاد PDF ممکن نشد."
+
+#: admin/modules/customizer/customizer.php:183
+#: admin/modules/customizer/customizer.php:188
+msgid "Customize"
+msgstr "شخصی‌سازی"
+
+#: admin/modules/customizer/customizer.php:238
+msgid "Success"
+msgstr "موفق"
+
+#: admin/modules/customizer/customizer.php:239
+msgid "You can't undo this action. Are you sure?"
+msgstr "این عمل قابل بازگشت نیست. آیا مطمئن هستید؟"
+
+#: admin/modules/customizer/customizer.php:240
+msgid "Click here to add Company logo"
+msgstr "برای قراردادن لوگو/آرم/نشان تجاری اینجا کلیک کنید"
+
+#: admin/modules/customizer/customizer.php:241
+msgid "Click here to add Company name"
+msgstr "برای قراردادن نام شرکت/فروشگاه اینجا کلیک کنید"
+
+#: admin/modules/customizer/customizer.php:242
+msgid "Click here to add From address"
+msgstr "برای قراردادن فرم آدرس کلیک کنید"
+
+#: admin/modules/customizer/customizer.php:243
+msgid "Click here to add Signature"
+msgstr "برای قراردادن امضا کلیک کنید"
+
+#: admin/modules/customizer/customizer.php:244
+msgid ""
+"Please save all data before leaving this page. All unsaved data will be lost. "
+"Are you sure?"
+msgstr ""
+"لطفا قبل از ترک این صفحه تمام اطلاعات را ذخیره کنید. تمام اطلاعات ذخیره نشده از "
+"دست خواهند رفت. آیا برای خروج مطمئن هستید؟"
+
+#: admin/modules/customizer/customizer.php:245
+#: admin/modules/customizer/views/customize.php:184
+msgid "Create new template"
+msgstr "ساخت قالب جدید"
+
+#: admin/modules/customizer/customizer.php:246
+msgid "Change layout"
+msgstr "تغییر طرح"
+
+#: admin/modules/customizer/customizer.php:247
+msgid "Saving"
+msgstr "در حال ذخیره"
+
+#: admin/modules/customizer/customizer.php:248
+#: public/modules/invoice/invoice.php:129
+#: public/modules/shippinglabel/shippinglabel.php:237
+msgid "Please enter order number"
+msgstr "لطفا شماره سفارش را وارد کنید"
+
+#: admin/modules/customizer/customizer.php:249
+#: public/modules/invoice/invoice.php:130
+#: public/modules/shippinglabel/shippinglabel.php:238
+msgid "Generating"
+msgstr "در حال ایجاد"
+
+#: admin/modules/customizer/customizer.php:289
+#: admin/modules/customizer/customizer.php:553
+msgid "Active"
+msgstr "فعال"
+
+#: admin/modules/customizer/customizer.php:525
+msgid "Error."
+msgstr "خطا."
+
+#: admin/modules/customizer/customizer.php:556
+#: admin/modules/customizer/views/customize.php:201
+msgid "Activate"
+msgstr "فعال کن"
+
+#: admin/modules/customizer/customizer.php:583
+msgid "No template found."
+msgstr "قالب پیدا نشد."
+
+#: admin/modules/customizer/customizer.php:600
+msgid "Unable to save theme."
+msgstr "ذخیره تم ممکن نیست"
+
+#: admin/modules/customizer/customizer.php:618
+msgid "Template with same name already exists."
+msgstr "الگویی با همین نام از قبل موجود است."
+
+#: admin/modules/customizer/customizer.php:648
+msgid "Template created."
+msgstr "قالب ایجاد شد."
+
+#: admin/modules/customizer/customizer.php:683
+msgid "Template updated."
+msgstr "قالب بروزرسانی شد."
+
+#: admin/modules/customizer/customizer.php:725
+msgid "Unable to switch view."
+msgstr "تغییر دید ممکن نیست."
+
+#: admin/modules/customizer/customizer.php:1011
+msgid "Unable to load template."
+msgstr "بارگذاری قالب ممکن نیست."
+
+#: admin/modules/customizer/customizer.php:1034
+msgid "Untitled template"
+msgstr "قالب بدون نام"
+
+#: admin/modules/customizer/customizer.php:1114
+msgid "Lighter"
+msgstr "باریک‌تر"
+
+#: admin/modules/customizer/customizer.php:1115
+msgid "Normal"
+msgstr "معمولی"
+
+#: admin/modules/customizer/customizer.php:1116
+msgid "Bold"
+msgstr "درشت"
+
+#: admin/modules/customizer/customizer.php:1117
+msgid "Bolder"
+msgstr "درشت‌تر"
+
+#: admin/modules/customizer/customizer.php:1131
+msgid "Select One"
+msgstr "یک مورد را انتخاب کنید"
+
+#: admin/modules/customizer/customizer.php:1146
+msgid "Left"
+msgstr "چپ"
+
+#: admin/modules/customizer/customizer.php:1147
+msgid "Right"
+msgstr "راست"
+
+#: admin/modules/customizer/customizer.php:1148
+msgid "Center"
+msgstr "مرکز"
+
+#: admin/modules/customizer/customizer.php:1149
+msgid "Start"
+msgstr "شروع"
+
+#: admin/modules/customizer/customizer.php:1150
+msgid "End"
+msgstr "پایان"
+
+#: admin/modules/customizer/customizer.php:1158
+msgid "None"
+msgstr "خالی"
+
+#: admin/modules/customizer/customizer.php:1171
+msgid "Solid"
+msgstr "خط ممتد"
+
+#: admin/modules/customizer/customizer.php:1172
+msgid "Dotted"
+msgstr "خط‌چین"
+
+#: admin/modules/customizer/customizer.php:1173
+msgid "Dashed"
+msgstr "نقطه‌چین"
+
+#: admin/modules/customizer/data/data.tooltip.php:3
+msgid "Click to view predefined templates."
+msgstr "برای مشاهده قالب‌های از پیش تعریف‌شده کلیک کنید."
+
+#: admin/modules/customizer/data/data.tooltip.php:4
+msgid "Create a new template or edit an existing template."
+msgstr "ساخت یک قالب جدید یا ویرایش تمپلت فعلی."
+
+#: admin/modules/customizer/data/data.tooltip.php:5
+msgid "Displays the currently chosen document template with provisions to modify."
+msgstr "قالب سند انتخاب شده را با موارد اصلاح شده نمایش می‌دهد."
+
+#: admin/modules/customizer/data/data.tooltip.php:6
+msgid ""
+"Shows a preview of the template on an actual order. Key in an order number to "
+"view the same."
+msgstr ""
+"بازبینی قالب را در یک سفارش واقعی نمایش می‌دهد. اگر خواستید یک شماره سفارش را "
+"وارد کنید تا همان را ببینید."
+
+#: admin/modules/customizer/data/data.translation_strings.php:1
+msgid "Invoice No:"
+msgstr "شماره فاکتور:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:2
+#: admin/modules/customizer/data/data.translation_strings.php:28
+msgid "Order Date:"
+msgstr "تاریخ سفارش:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:3
+msgid "Dispatch Date:"
+msgstr "تاریخ ارسال:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:4
+msgid "From Address:"
+msgstr "فرستنده:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:5
+msgid "Billing Address:"
+msgstr "آدرس ارسال صورتحساب:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:6
+#: admin/modules/customizer/data/data.translation_strings.php:40
+msgid "Email:"
+msgstr "ایمیل:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:7
+msgid "Tel:"
+msgstr "تلفن:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:8
+msgid "Shipping Address:"
+msgstr "گیرنده:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:9
+msgid "Tracking number:"
+msgstr "شماره پیگیری:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:10
+msgid "SSN:"
+msgstr "کد ملی:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:11
+msgid "SKU"
+msgstr "کد انبار"
+
+#: admin/modules/customizer/data/data.translation_strings.php:12
+msgid "Product"
+msgstr "محصول"
+
+#: admin/modules/customizer/data/data.translation_strings.php:13
+msgid "Quantity"
+msgstr "تعداد"
+
+#: admin/modules/customizer/data/data.translation_strings.php:14
+msgid "Price"
+msgstr "قیمت"
+
+#: admin/modules/customizer/data/data.translation_strings.php:15
+msgid "Total Price"
+msgstr "قیمت کل"
+
+#: admin/modules/customizer/data/data.translation_strings.php:16
+#: admin/modules/customizer/views/_customize_properties.php:606
+#: public/modules/invoice/invoice.php:1321
+msgid "Subtotal"
+msgstr "زیر مجموعه"
+
+#: admin/modules/customizer/data/data.translation_strings.php:17
+#: admin/modules/customizer/views/_customize_properties.php:612
+#: public/modules/invoice/invoice.php:1322
+msgid "Shipping"
+msgstr "هزینه ارسال"
+
+#: admin/modules/customizer/data/data.translation_strings.php:18
+#: admin/modules/customizer/views/_customize_properties.php:619
+#: public/modules/invoice/invoice.php:1323
+msgid "Cart Discount"
+msgstr "تخفیف سبد خرید"
+
+#: admin/modules/customizer/data/data.translation_strings.php:19
+#: admin/modules/customizer/views/_customize_properties.php:625
+#: public/modules/invoice/invoice.php:1324
+msgid "Order Discount"
+msgstr "تخفیف سفارش"
+
+#: admin/modules/customizer/data/data.translation_strings.php:20
+#: admin/modules/customizer/views/_customize_properties.php:632
+#: public/modules/invoice/invoice.php:1325
+msgid "Total Tax"
+msgstr "جمع مالیات "
+
+#: admin/modules/customizer/data/data.translation_strings.php:21
+#: admin/modules/customizer/views/_customize_properties.php:638
+#: public/modules/invoice/invoice.php:1326
+msgid "Fee"
+msgstr "تخفیف ویژه"
+
+#: admin/modules/customizer/data/data.translation_strings.php:22
+msgid "Coupon Used"
+msgstr "کوپن‌های تخفیف استفاده شده"
+
+#: admin/modules/customizer/data/data.translation_strings.php:23
+#: admin/modules/customizer/views/_customize_properties.php:651
+#: public/modules/invoice/invoice.php:1329
+msgid "Total"
+msgstr "جمع"
+
+#: admin/modules/customizer/data/data.translation_strings.php:24
+msgid "INVOICE"
+msgstr "صورتحساب"
+
+#: admin/modules/customizer/data/data.translation_strings.php:25
+msgid "Invoice Date:"
+msgstr "تاریخ فاکتور:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:26
+msgid "Invoice No.:"
+msgstr "شماره فاکتور:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:27
+msgid "Order No.:"
+msgstr "تاریخ سفارش:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:29
+msgid "Image"
+msgstr "تصویر"
+
+#: admin/modules/customizer/data/data.translation_strings.php:30
+msgid "Jumbing LED Light Wall Ball"
+msgstr "توپ دیواری LED سبک Jumbing"
+
+#: admin/modules/customizer/data/data.translation_strings.php:31
+msgid "Payment method:"
+msgstr "روش پرداخت:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:32
+#: admin/modules/customizer/data/data.translation_strings.php:42
+msgid "Order No:"
+msgstr "شماره سفارش:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:33
+msgid "Date:"
+msgstr "تاریخ:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:34
+msgid "From:"
+msgstr "از:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:35
+msgid "To:"
+msgstr "به:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:36
+msgid "Weight:"
+msgstr "وزن:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:37
+msgid "Ship Date:"
+msgstr "تاریخ ارسال"
+
+#: admin/modules/customizer/data/data.translation_strings.php:38
+msgid "Phone No:"
+msgstr "شماره تلفن:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:39
+msgid "Ph No:"
+msgstr "شماره Ph:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:41
+msgid "Tracking Number:"
+msgstr "شماره پیگیری:"
+
+#: admin/modules/customizer/data/data.translation_strings.php:43
+msgid "Total Weight"
+msgstr "مجموع وزن"
+
+#: admin/modules/customizer/views/_customize_properties.php:113
+#: admin/modules/customizer/views/_customize_properties.php:289
+#: admin/modules/customizer/views/_customize_properties.php:313
+#: admin/modules/customizer/views/_customize_properties.php:565
+#: public/modules/shippinglabel/shippinglabel.php:103
+#: public/modules/shippinglabel/shippinglabel.php:128
+msgid "Title"
+msgstr "عنوان"
+
+#: admin/modules/customizer/views/_customize_properties.php:119
+#: admin/modules/customizer/views/_customize_properties.php:208
+#: admin/modules/customizer/views/_customize_properties.php:260
+#: admin/modules/customizer/views/_customize_properties.php:318
+#: admin/modules/customizer/views/_customize_properties.php:570
+#: public/modules/invoice/invoice.php:294
+msgid "Font size"
+msgstr "اندازه قلم"
+
+#: admin/modules/customizer/views/_customize_properties.php:126
+#: admin/modules/customizer/views/_customize_properties.php:294
+msgid "Text align"
+msgstr "تراز متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:136
+msgid "Text Color"
+msgstr "رنگ متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:148
+msgid "Display"
+msgstr "نمایش"
+
+#: admin/modules/customizer/views/_customize_properties.php:152
+#: public/modules/shippinglabel/shippinglabel.php:155
+msgid "Company Logo"
+msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
+
+#: admin/modules/customizer/views/_customize_properties.php:153
+msgid "Company Name"
+msgstr "نام شرکت/فروشگاه"
+
+#: admin/modules/customizer/views/_customize_properties.php:157
+msgid "Logo Width"
+msgstr "عرض لوگو"
+
+#: admin/modules/customizer/views/_customize_properties.php:164
+msgid "Logo Height"
+msgstr "ارتفاع لوگو/آرم/نشان تجاری"
+
+#: admin/modules/customizer/views/_customize_properties.php:172
+msgid "Company name font size"
+msgstr "اندازه قلم برای نام شرکت/فروشگاه"
+
+#: admin/modules/customizer/views/_customize_properties.php:178
+msgid "Extra Details"
+msgstr "جزئیات اضافی"
+
+#: admin/modules/customizer/views/_customize_properties.php:184
+msgid "Extra detail font size"
+msgstr "جزئیات اضافی اندازه قلم"
+
+#: admin/modules/customizer/views/_customize_properties.php:190
+msgid "Header Color"
+msgstr "رنگ سربرگ"
+
+#: admin/modules/customizer/views/_customize_properties.php:203
+#: admin/modules/customizer/views/_customize_properties.php:237
+#: public/modules/invoice/invoice.php:288
+msgid "Text"
+msgstr "متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:216
+#: admin/modules/customizer/views/_customize_properties.php:268
+msgid "Style"
+msgstr "سبک"
+
+#: admin/modules/customizer/views/_customize_properties.php:226
+#: admin/modules/customizer/views/_customize_properties.php:278
+#: admin/modules/customizer/views/_customize_properties.php:302
+#: admin/modules/customizer/views/_customize_properties.php:336
+msgid "Text color"
+msgstr "رنگ متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:242
+#: public/modules/invoice/views/invoice-number.php:25
+msgid "Format"
+msgstr "فرمت"
+
+#: admin/modules/customizer/views/_customize_properties.php:347
+msgid "Table head background"
+msgstr "پس زمینه بالای جدول"
+
+#: admin/modules/customizer/views/_customize_properties.php:354
+msgid "Table head text color"
+msgstr "رنگ متن بالای جدول"
+
+#: admin/modules/customizer/views/_customize_properties.php:361
+msgid "Table body text color"
+msgstr "رنگ متن بدنه جدول"
+
+#: admin/modules/customizer/views/_customize_properties.php:375
+msgid "Image label"
+msgstr "تصویر برچسب"
+
+#: admin/modules/customizer/views/_customize_properties.php:381
+msgid "Image text align"
+msgstr "تراز متن تصویر"
+
+#: admin/modules/customizer/views/_customize_properties.php:398
+msgid "SKU label"
+msgstr "کد انبار برچسب"
+
+#: admin/modules/customizer/views/_customize_properties.php:404
+msgid "SKU text align"
+msgstr "تراز متن کد انبار"
+
+#: admin/modules/customizer/views/_customize_properties.php:421
+msgid "Product label"
+msgstr "برچسب محصول"
+
+#: admin/modules/customizer/views/_customize_properties.php:427
+msgid "Product text align"
+msgstr "تراز متن محصول"
+
+#: admin/modules/customizer/views/_customize_properties.php:444
+msgid "Qty label"
+msgstr "تعداد برچسب"
+
+#: admin/modules/customizer/views/_customize_properties.php:450
+msgid "Qty text align"
+msgstr "تراز مقدار متن"
+
+#: admin/modules/customizer/views/_customize_properties.php:467
+msgid "Price label"
+msgstr "برچسب قیمت"
+
+#: admin/modules/customizer/views/_customize_properties.php:473
+msgid "Price text align"
+msgstr "تراز متن قیمت"
+
+#: admin/modules/customizer/views/_customize_properties.php:490
+msgid "Tax label"
+msgstr "برچسب مالیات"
+
+#: admin/modules/customizer/views/_customize_properties.php:496
+msgid "Tax text align"
+msgstr "تراز متن مالیات"
+
+#: admin/modules/customizer/views/_customize_properties.php:513
+msgid "Total weight label"
+msgstr "برچسب وزن کل"
+
+#: admin/modules/customizer/views/_customize_properties.php:519
+msgid "Total weight text align"
+msgstr "تراز متن وزن کل"
+
+#: admin/modules/customizer/views/_customize_properties.php:536
+msgid "Total label"
+msgstr "برچسب کل"
+
+#: admin/modules/customizer/views/_customize_properties.php:542
+msgid "Total text align"
+msgstr "تراز متن برچسب کل"
+
+#: admin/modules/customizer/views/_customize_properties.php:556
+msgid "Signature type"
+msgstr "نوع امضا"
+
+#: admin/modules/customizer/views/_customize_properties.php:560
+msgid "Manual Signature"
+msgstr "امضای دستی"
+
+#: admin/modules/customizer/views/_customize_properties.php:561
+msgid "Image Signature"
+msgstr "امضای تصویری"
+
+#: admin/modules/customizer/views/_customize_properties.php:578
+msgid "Align"
+msgstr "تراز"
+
+#: admin/modules/customizer/views/_customize_properties.php:595
+msgid "Label"
+msgstr "برچسب"
+
+#: admin/modules/customizer/views/_customize_properties.php:645
+#: public/modules/invoice/invoice.php:1328
+msgid "Payment Method"
+msgstr "روش پرداخت"
+
+#: admin/modules/customizer/views/_pdf_preview.php:23
+msgid "View sample customization demo"
+msgstr "مشاهده نسخه نمایشی سفارشی سازی"
+
+#: admin/modules/customizer/views/_pdf_preview.php:29
+msgid "Preview sample PDF"
+msgstr "بازبینی نمونه PDF ایجادشده"
+
+#: admin/modules/customizer/views/_pdf_preview.php:30
+msgid "Order"
+msgstr "سفارش"
+
+#: admin/modules/customizer/views/_pdf_preview.php:34
+#: admin/modules/customizer/views/_pdf_preview.php:35
+msgid "Order number"
+msgstr "شماره سفارش"
+
+#: admin/modules/customizer/views/customize.php:94
+msgid "Templates"
+msgstr "قالب‌ها"
+
+#: admin/modules/customizer/views/customize.php:99
+msgid "Type template name to search"
+msgstr "برای جستجو نام قالب را تایپ کنید"
+
+#: admin/modules/customizer/views/customize.php:109
+msgid "Enter a name for your template"
+msgstr "نامی را برای قالب خود وارد کنید"
+
+#: admin/modules/customizer/views/customize.php:114
+msgid "Please enter name"
+msgstr "لطفا نام را وارد کنید"
+
+#: admin/modules/customizer/views/customize.php:121
+#: admin/modules/customizer/views/customize.php:192
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:154
+msgid "Cancel"
+msgstr "لغو"
+
+#: admin/modules/customizer/views/customize.php:124
+#: admin/modules/customizer/views/customize.php:142
+#: admin/modules/customizer/views/customize.php:188
+#: admin/views/admin-settings-documents.php:101
+msgid "Save"
+msgstr "ذخیره"
+
+#: admin/modules/customizer/views/customize.php:132
+msgid "Choose a layout."
+msgstr "یک طرح را انتخاب کنید."
+
+#: admin/modules/customizer/views/customize.php:138
+msgid "All unsaved changes will be lost upon switching to a new layout."
+msgstr "تمام تغییرات ذخیره نشده با تغییر به یک طرح جدید از دست خواهند رفت."
+
+#: admin/modules/customizer/views/customize.php:140
+msgid "Save before you proceed."
+msgstr "قبل از ادامه اقدام به ذخیره کنید."
+
+#: admin/modules/customizer/views/customize.php:141
+msgid "Saving..."
+msgstr "درحال ذخیره"
+
+#: admin/modules/customizer/views/customize.php:166
+msgid "Use"
+msgstr "استفاده"
+
+#: admin/modules/customizer/views/customize.php:202
+msgid "Delete"
+msgstr "حذف"
+
+#: admin/modules/customizer/views/customize.php:203
+msgid "Create new"
+msgstr "ساختن جدید"
+
+#: admin/modules/customizer/views/customize.php:204
+msgid "My templates"
+msgstr "قالب‌های من"
+
+#: admin/modules/customizer/views/customize.php:215
+#: admin/modules/customizer/views/customize.php:227
+msgid "Visual"
+msgstr "دیداری"
+
+#: admin/modules/customizer/views/customize.php:216
+#: admin/modules/customizer/views/customize.php:228
+msgid "Code"
+msgstr "کد"
+
+#: admin/modules/customizer/views/customize.php:228
+#: public/modules/invoice/invoice.php:1302
+#: public/modules/shippinglabel/shippinglabel.php:152
+msgid "Pro version"
+msgstr "نسخه حرفه‌ای"
+
+#: admin/modules/freevspro/freevspro.php:48
+msgid "Decorator – WooCommerce Email Customizer"
+msgstr "دکوراتور - سفارشی ساز ایمیل WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:49
+msgid "Customize your WooCommerce emails now and stand out from the crowd!"
+msgstr ""
+"هم اکنون ایمیل های WooCommerce خود را سفارشی کنید و از بین دیگران متمایز شوید!"
+
+#: admin/modules/freevspro/freevspro.php:54
+msgid "GDPR Cookie Consent (CCPA Ready)"
+msgstr "GDPR رضایت کوکی (CCPA آماده)"
+
+#: admin/modules/freevspro/freevspro.php:55
+msgid ""
+"This plugin will assist you in making your website GDPR (RGPD, DSVGO) compliant."
+msgstr ""
+"این افزونه به شما کمک می کند وب سایت خود را مطابق با GDPR (RGPD، DSVGO) سازگار "
+"کنید."
+
+#: admin/modules/freevspro/freevspro.php:60
+msgid "Import Export WordPress Users and WooCommerce Customers"
+msgstr "واردات صادرات کاربران وردپرس و مشتریان WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:61
+msgid ""
+"This plugin allows you to import and export WordPress users and WooCommerce "
+"customers quickly and easily."
+msgstr ""
+"این افزونه به شما امکان می دهد کاربران وردپرس و مشتریان WooCommerce را به سرعت "
+"و به راحتی وارد و صادر کنید."
+
+#: admin/modules/freevspro/freevspro.php:65
+msgid "Order XML File Export Import for WooCommerce"
+msgstr "سفارش وارد کردن فایل XML واردات برای WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:66
+msgid ""
+"The Order XML File Export Import Plugin for WooCommerce will export your "
+"WooCommerce orders in XML format."
+msgstr ""
+"افزونه Import Import Export File for WooCommerce سفارشات WooCommerce شما را با "
+"فرمت XML صادر می کند."
+
+#: admin/modules/freevspro/freevspro.php:70
+msgid "Related Products for WooCommerce"
+msgstr "بارگذاری از ووکامرس"
+
+#: admin/modules/freevspro/freevspro.php:71
+msgid ""
+"This plugin allows you to choose related products for a particular product."
+msgstr ""
+"این افزونه به شما امکان می دهد محصولات مرتبط را برای یک محصول خاص انتخاب کنید."
+
+#: admin/modules/freevspro/freevspro.php:77
+msgid "Sequential Order Number for WooCommerce"
+msgstr "شماره سفارش پی در پی برای ووکامرس"
+
+#: admin/modules/freevspro/freevspro.php:78
+msgid ""
+"Using this plugin, you will always get sequential order number for woocommerce."
+msgstr ""
+"با استفاده از این افزونه ، همیشه شماره سفارش متوالی برای woocommerce دریافت "
+"خواهید کرد."
+
+#: admin/modules/freevspro/freevspro.php:83
+msgid "Smart Coupons for WooCommerce"
+msgstr "بارگذاری از ووکامرس"
+
+#: admin/modules/freevspro/freevspro.php:84
+msgid ""
+"This plugin provides additional features with default WooCommerce coupons to "
+"get more conversions."
+msgstr ""
+"این افزونه ویژگی های اضافی را با کوپن های پیش فرض WooCommerce برای تبدیل بیشتر "
+"ارائه می دهد."
+
+#: admin/modules/freevspro/freevspro.php:90
+msgid "WebToffee Product Feed for Facebook"
+msgstr "خوراک محصول WebToffee برای فیس بوک"
+
+#: admin/modules/freevspro/freevspro.php:91
+msgid ""
+"This plugin allows you to integrate your WooCommerce store with Facebook in a "
+"few steps by syncing your store’s products with it."
+msgstr ""
+"این افزونه به شما امکان می دهد فروشگاه ووکامرس خود را در چند مرحله با همگام "
+"سازی محصولات فروشگاه خود با آن ادغام کنید."
+
+#: admin/modules/freevspro/freevspro.php:96
+msgid "WordPress Migration & Duplicator"
+msgstr "مهاجرت و کپی کننده وردپرس"
+
+#: admin/modules/freevspro/freevspro.php:97
+msgid ""
+"This plugin exports your WordPress website media files, plugins and themes "
+"including the database with a single click."
+msgstr ""
+"این افزونه فایل های رسانه ای وب سایت وردپرس ، افزونه ها و موضوعات شما از جمله "
+"پایگاه داده را با یک کلیک صادر می کند."
+
+#: admin/modules/freevspro/freevspro.php:102
+msgid "PayPal Express Checkout Payment Gateway for WooCommerce"
+msgstr "PayPal Express Checkout Payment Gateway برای WooCommerce"
+
+#: admin/modules/freevspro/freevspro.php:103
+msgid ""
+"With this plugin, your customer can use their credit cards or PayPal Money to "
+"make order from cart page itself."
+msgstr ""
+"با استفاده از این افزونه ، مشتری شما می تواند از کارت های اعتباری یا PayPal "
+"Money خود برای سفارش از صفحه سبد خرید استفاده کند."
+
+#: admin/modules/freevspro/freevspro.php:112
+msgid ""
+"mPDF add-on for PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels"
+msgstr "صدور و چاپ فاکتور، حواله بسته‌بندی، یادداشت‌ تحویل و برچسب حمل بصورت PDF"
+
+#: admin/modules/freevspro/freevspro.php:113
+msgid "Add-on to support RTL and Unicode languages seamlessly in PDF documents."
+msgstr "افزودنی برای پشتیبانی از زبانهای RTL و Unicode در اسناد PDF."
+
+#: admin/modules/freevspro/freevspro.php:123
+msgid "OTHER FREE SOLUTIONS FROM WEBTOFFEE"
+msgstr "سایر راه حل های رایگان از WEBTOFFEE"
+
+#: admin/modules/freevspro/freevspro.php:147
+msgid "Download"
+msgstr "دانلود"
+
+#: admin/modules/freevspro/freevspro.php:186
+msgid ""
+"Generate and print additional documents (Address Labels, Pick Lists, Proforma "
+"Invoices, and Credit Notes)."
+msgstr ""
+"تولید و چاپ اسناد اضافی (برچسب آدرس ، لیست انتخاب ، فاکتورهای پروفورما و "
+"یادداشت های اعتباری)."
+
+#: admin/modules/freevspro/freevspro.php:187
+msgid "Advanced customization options along with code editor."
+msgstr "گزینه های سفارشی سازی پیشرفته همراه با ویرایشگر کد."
+
+#: admin/modules/freevspro/freevspro.php:188
+msgid "Choose from pre-built templates."
+msgstr "از بین الگوهای از پیش ساخته شده انتخاب کنید."
+
+#: admin/modules/freevspro/freevspro.php:189
+msgid "Choose from multiple packaging types for Packing slips."
+msgstr "از بین انواع بسته بندی متعدد برای برگه های بسته بندی انتخاب کنید."
+
+#: admin/modules/freevspro/freevspro.php:190
+msgid "Supports custom sizes for address/shipping labels."
+msgstr "پشتیبانی از اندازه های سفارشی برای آدرس/برچسب حمل و نقل."
+
+#: admin/modules/freevspro/freevspro.php:191
+msgid "Group order items by category in the product table of documents."
+msgstr "موارد مورد نظر را بر اساس دسته بندی در جدول محصولات اسناد گروه بندی کنید."
+
+#: admin/modules/freevspro/freevspro.php:192
+msgid "Display individual tax column(s) in the product table."
+msgstr "ستون (های) مالیاتی جداگانه را در جدول محصول نمایش دهید."
+
+#: admin/modules/freevspro/freevspro.php:193
+msgid "Share Packing Slip PDF and Picklist PDF as separate mail."
+msgstr ""
+"PDF Package Slip و PDF Picklist را به عنوان نامه جداگانه به اشتراک بگذارید."
+
+#: admin/modules/freevspro/freevspro.php:194
+msgid "Sort order items in the product table of documents."
+msgstr "موارد سفارش را در فهرست محصولات اسناد مرتب کنید."
+
+#: admin/modules/freevspro/freevspro.php:195
+msgid "Add-on for remote printing (PrintNode)."
+msgstr "افزونه برای چاپ از راه دور (PrintNode)."
+
+#: admin/modules/freevspro/freevspro.php:196
+msgid "Supports checkout, order, product meta fields & product attributes."
+msgstr "پشتیبانی از تسویه‌حساب، سفارش و متای محصول (SSN, VAT, etc.)."
+
+#: admin/modules/freevspro/freevspro.php:220
+msgid "Free vs. Pro"
+msgstr "رایگان در مقابل نرم افزار"
+
+#: admin/modules/freevspro/views/bottom-banner.php:3
+msgid ""
+"Upgrade to WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping "
+"Labels Premium to get hold of advanced features."
+msgstr "صدور و چاپ فاکتور، حواله بسته‌بندی، یادداشت‌ تحویل و برچسب حمل بصورت PDF"
+
+#: admin/modules/freevspro/views/bottom-banner.php:6
+#: admin/modules/freevspro/views/goto-pro.php:65 admin/views/goto-pro.php:212
+#: admin/views/goto-pro.php:233
+msgid "UPGRADE TO PREMIUM"
+msgstr "ارتقا دادن به سطح حرفه ای"
+
+#: admin/modules/freevspro/views/comparison-table.php:17
+#: public/modules/packinglist/packinglist.php:25
+#: public/modules/packinglist/views/general.php:6
+msgid "Packing slip"
+msgstr "حواله ارسال"
+
+#: admin/modules/freevspro/views/comparison-table.php:18
+#: public/modules/shippinglabel/shippinglabel.php:215
+#: public/modules/shippinglabel/shippinglabel.php:216
+#: public/modules/shippinglabel/views/admin-settings.php:11
+msgid "Shipping label"
+msgstr "برچسب حمل"
+
+#: admin/modules/freevspro/views/comparison-table.php:19
+#: public/modules/deliverynote/views/general.php:6
+msgid "Delivery note"
+msgstr "یادداشت تحویل"
+
+#: admin/modules/freevspro/views/comparison-table.php:20
+#: public/modules/dispatchlabel/views/general.php:6
+msgid "Dispatch label"
+msgstr "برچسب ارسال"
+
+#: admin/modules/freevspro/views/comparison-table.php:23
+msgid "Address label"
+msgstr "برچسب‌های آدرس"
+
+#: admin/modules/freevspro/views/comparison-table.php:24
+msgid "Picklist"
+msgstr "لیست انتخاب"
+
+#: admin/modules/freevspro/views/comparison-table.php:25
+msgid "Proforma invoice"
+msgstr "پیش فاکتور"
+
+#: admin/modules/freevspro/views/comparison-table.php:26
+msgid "Credit note"
+msgstr "یادداشت اعتباری"
+
+#: admin/modules/freevspro/views/comparison-table.php:41
+msgid "Supported Documents"
+msgstr "سایر اسناد"
+
+#: admin/modules/freevspro/views/comparison-table.php:46
+msgid "Automatically Attach PDF Invoice with order email"
+msgstr "پیوست فاکتور PDF به ایمیل سفارش"
+
+#: admin/modules/freevspro/views/comparison-table.php:51
+msgid "Customizer"
+msgstr "سفارشی سازی"
+
+#: admin/modules/freevspro/views/comparison-table.php:52
+msgid "Minimal customizer available for Invoice and Shipping label only"
+msgstr "حداقل سفارشی ساز فقط برای برچسب فاکتور و ارسال موجود است"
+
+#: admin/modules/freevspro/views/comparison-table.php:53
+msgid "Advanced customizer with source code editor, available for all documents"
+msgstr "سفارشی ساز پیشرفته با ویرایشگر کد منبع ، برای همه اسناد موجود است"
+
+#: admin/modules/freevspro/views/comparison-table.php:56
+msgid "Predefined templates"
+msgstr "ساخت قالب جدید"
+
+#: admin/modules/freevspro/views/comparison-table.php:57
+msgid "One for document type"
+msgstr "سایر اسناد"
+
+#: admin/modules/freevspro/views/comparison-table.php:58
+msgid "Multiple template options"
+msgstr "قالب بدون نام"
+
+#: admin/modules/freevspro/views/comparison-table.php:61
+msgid "Free add-on for RTL and Unicode language support"
+msgstr "افزونه رایگان برای پشتیبانی زبان RTL و یونیکد"
+
+#: admin/modules/freevspro/views/comparison-table.php:66
+msgid "Auto-generate customized Invoice number"
+msgstr "شخصی‌سازی شماره فاکتور."
+
+#: admin/modules/freevspro/views/comparison-table.php:71
+msgid "Bulk print all documents from the orders page"
+msgstr "چاپ عمده کلیه اسناد از صفحه سفارشات"
+
+#: admin/modules/freevspro/views/comparison-table.php:76
+msgid "Option to include/exclude tax to Invoice"
+msgstr "امکان درج/حذف مالیات به صورتحساب"
+
+#: admin/modules/freevspro/views/comparison-table.php:81
+msgid "WPML compatibility"
+msgstr "سازگاری WPML"
+
+#: admin/modules/freevspro/views/comparison-table.php:86
+msgid "Signature in Invoice"
+msgstr "چاپ فاکتور"
+
+#: admin/modules/freevspro/views/comparison-table.php:91
+msgid "Remote(cloud) print add-on support"
+msgstr "پشتیبانی افزونه از راه دور (ابری)"
+
+#: admin/modules/freevspro/views/comparison-table.php:96
+msgid "Supports multiple packaging types"
+msgstr "پشتیبانی از انواع مختلف بسته بندی"
+
+#: admin/modules/freevspro/views/comparison-table.php:101
+msgid "Supports custom label sizes"
+msgstr "سایز برچسب حمل"
+
+#: admin/modules/freevspro/views/comparison-table.php:106
+msgid "In-built custom checkout field manager"
+msgstr "مدیر فیلد پرداخت داخلی سفارشی"
+
+#: admin/modules/freevspro/views/comparison-table.php:111
+msgid "In-built Order meta, Product meta, Product attribute manager"
+msgstr "متای سفارش داخلی ، متای محصول ، مدیر ویژگی محصول"
+
+#: admin/modules/freevspro/views/comparison-table.php:116
+msgid "Separate tax column in product table for multiple tax options"
+msgstr "ستون مالیاتی جداگانه در جدول محصول برای چندین گزینه مالیاتی"
+
+#: admin/modules/freevspro/views/comparison-table.php:121
+msgid "Total tax column in product table"
+msgstr "درج تصویبر محصول در کنار آن"
+
+#: admin/modules/freevspro/views/comparison-table.php:126
+msgid "Sort order items in product table"
+msgstr "درج تصویبر محصول در کنار آن"
+
+#: admin/modules/freevspro/views/comparison-table.php:131
+msgid "Group order items by category in the product table"
+msgstr "موارد محصول را بر اساس دسته بندی در جدول محصولات گروه بندی کنید"
+
+#: admin/modules/freevspro/views/comparison-table.php:136
+msgid "Share Packing slip PDF and Picklist PDF as separate emails."
+msgstr ""
+"PDF برگه بسته بندی و PDF Picklist را به عنوان ایمیل های جداگانه به اشتراک "
+"بگذارید."
+
+#: admin/modules/freevspro/views/comparison-table.php:141
+msgid "Temp file manager (Auto cleanup, Download as zip etc)"
+msgstr "مدیریت فایل Temp (پاکسازی خودکار ، بارگیری به صورت zip و غیره)"
+
+#: admin/modules/freevspro/views/comparison-table.php:146
+msgid "Custom footer for individual documents"
+msgstr "لوگو/آرم/نشان/تجاری سفارشی برای فاکتور"
+
+#: admin/modules/freevspro/views/comparison-table.php:151
+msgid "Custom logo to Invoice"
+msgstr "لوگو/آرم/نشان/تجاری سفارشی برای فاکتور"
+
+#: admin/modules/freevspro/views/comparison-table.php:187
+msgid "FEATURES"
+msgstr "امکانات"
+
+#: admin/modules/freevspro/views/comparison-table.php:188
+msgid "FREE"
+msgstr "رایگان"
+
+#: admin/modules/freevspro/views/comparison-table.php:189
+msgid "PREMIUM"
+msgstr "پرو"
+
+#: admin/modules/freevspro/views/goto-pro.php:54
+msgid "30 day money back guarantee"
+msgstr "تضمین بازگشت وجه به‌مدت سی روز"
+
+#: admin/modules/freevspro/views/goto-pro.php:58
+msgid "Fast and superior support"
+msgstr "پشتیبانی سریع و عالی"
+
+#: admin/modules/freevspro/views/goto-pro.php:62
+msgid "Features that every site needs"
+msgstr "ویژگی هایی که هر سایتی به آن نیاز دارد"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:38
+msgid "I couldn't understand how to make it work"
+msgstr "نمی‌توانم درک کنم که چگونه این کار را انجام دهم"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:40
+msgid "Would you like us to assist you?"
+msgstr "آیا دوست دارید ما به شما کمک کنیم؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:44
+msgid "Language support issues"
+msgstr "خطای پشتیبانی زبان"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:49
+msgid "Plugin settings not available in my language"
+msgstr "تنظیمات افزونه برای زبان مورد استفاده من در دسترس نیست"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:51
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:57
+msgid "Which language?"
+msgstr "کدام زبان؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+msgid ""
+"Missing RTL/Unicode language(e.g Chinese, Arabic etc) support for PDF document."
+msgstr "از دست رفتن پشتیبانی زبان (مانند چینی، عربی و غیره) برای سند PDF. "
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:55
+#, php-format
+msgid "Already tried the free %s WebToffee mPDF addon %s."
+msgstr ""
+"آیا قبلا %s برنامه افزودنی WebToffee mPDF addon ( لازمه استفاده از زبان‌های "
+"راست‌چین) %s را امتحان کردید؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:63
+msgid "I found a better plugin"
+msgstr "من افزونه بهتری را پیدا کردم"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:65
+msgid "Which plugin?"
+msgstr "کدام افزونه؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:69
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr "افزونه عالی است، اما من ویژگی‌های خاصی مد نظرم است که شما پشتیبانی نمی‌کنید"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:71
+msgid "Could you tell us more about that feature?"
+msgstr "آیا برای شما امکان دارد که آن ویژگی‌ها را با ما در میان بگذارید؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:75
+msgid "The plugin didn't work as expected"
+msgstr "افزونه آنگونه که من انتظار داشتم کار نمی‌کند"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:77
+msgid "What did you expect?"
+msgstr "شما چه انتظاراتی داشتید؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:81
+msgid "Upgraded to pro version"
+msgstr "ارتقا به نسخه پرمیوم"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:87
+msgid "Other"
+msgstr "سایر"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:89
+msgid "Could you tell us a bit more?"
+msgstr "آیا می‌توانید کمی بیشتر به ما بگویید؟"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:108
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr ""
+"اگر شما لحظاتی وقت دارید، لطفا به ما اجازه دهید تا بدانیم که چرا افزونه را غیر "
+"فعال می‌کنید:"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:145
+msgid ""
+"We do not collect any personal data when you submit this form. It's your "
+"feedback that we value."
+msgstr ""
+"وقتی شما این فرم را تکمیل می‌کنید ما هیچگونه اطلاعات شخصی را جمع‌آوری نمی‌کنیم. "
+"این فقط بازخورد شماست که برای ما مهم است."
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:146
+msgid "Privacy Policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:152
+msgid "Go to support"
+msgstr "مراجعه به پشتیبانی"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:153
+msgid "Submit & Deactivate"
+msgstr "ارسال و غیرفعالسازی"
+
+#: admin/modules/uninstall-feedback/uninstall-feedback.php:155
+msgid "I rather wouldn't say"
+msgstr "ترجیح می‌دهم که نگویم"
+
+#. Plugin Name of the plugin/theme
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:24
+#: admin/views/goto-pro.php:204
+msgid "WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels"
+msgstr "صدور و چاپ فاکتور، حواله بسته‌بندی، یادداشت‌ تحویل و برچسب حمل بصورت PDF"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:31
+msgid "Documents"
+msgstr "اسناد"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:32
+#: public/modules/invoice/views/invoice-admin-settings.php:6
+#: public/modules/shippinglabel/views/admin-settings.php:6
+msgid "General"
+msgstr "عمومی"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-display.php:33
+msgid "Help Guide"
+msgstr "راهنمایی"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-document-settings.php:21
+msgid "Document Settings"
+msgstr "تنظیمات سند"
+
+#: admin/partials/wf-woocommerce-packing-list-admin-document-settings.php:27
+msgid "Other documents"
+msgstr "سایر اسناد"
+
+#: admin/views/_form_advanced_field_generator.php:56
+msgid "[prefix][order_no]"
+msgstr "[پیشوند] [سفارش_نه]"
+
+#: admin/views/_form_advanced_field_generator.php:57
+msgid "[prefix][invoice_no]"
+msgstr "[پیشوند] [invoice_no]"
+
+#: admin/views/_form_field_generator.php:130
+msgid "Choose Order Status"
+msgstr "وضعیت سفارش را انتخاب کنید"
+
+#: admin/views/_form_field_generator.php:165
+msgid "Upload"
+msgstr "بارگذاری"
+
+#: admin/views/admin-document-settings-page.php:22
+msgid ""
+"Either of the document types, Packing  slip, Shipping label, Dispatch label or "
+"Delivery note should be activated to view relevant settings."
+msgstr ""
+"هر کدام از انواع اسناد، حواله بسته‌بندی، برچسب حمل، برچسب ارسال یا یادداشت ارسال "
+"برای مشاهده تنظیمات مربوطه، باید فعال گردند."
+
+#: admin/views/admin-document-settings-page.php:23
+#, php-format
+msgid "Go to %s General Settings %s Documents %s in order to activate."
+msgstr "برای فعال شدن به %s تنظیمات عمومی %s اسناد %s بروید."
+
+#: admin/views/admin-settings-debug.php:7
+msgid "Debug"
+msgstr "اشکال‌زدایی"
+
+#: admin/views/admin-settings-debug.php:8
+msgid "Caution: Settings here are only for advanced users."
+msgstr "هشدار: تنظیمات موجود در این قسمت فقط برای کاربران حرفه‌ای و آشنا می‌باشد."
+
+#: admin/views/admin-settings-documents.php:27
+msgid ""
+"The document types(Invoice, Packing  slip, Shipping label, Dispatch label and "
+"Delivery note) have been enabled by default for use. Click on the Settings "
+"under the document types to configure the respective settings. You can use the "
+"toggle button to activate/deactivate the respective document type."
+msgstr ""
+"انواع اسناد (فاکتور_ـInvoic، حواله بسته‌بندی_Packing slip، برچسب حمل_Shipping "
+"label، برچسب ارسال_ Dispatch labelو یادداشت تحویل_Delivery note) بصورت پیش‌فرض "
+"فعال می‌باشند. برای پیکربندی تنظیمات مربوطه ، روی تنظیمات، در زیر نام هر سند "
+"کلیک کنید. برای فعال/غیرفعال کردن هر نوع از اسناد مربوطه می توانید از دگمه "
+"لغزنده استفاده کنید."
+
+#: admin/views/admin-settings-documents.php:30
+msgid "Note:"
+msgstr "توجه:"
+
+#: admin/views/admin-settings-documents.php:32
+msgid ""
+"Also make sure to fill-up the Company and Address information from the General "
+"tab above prior to customization of the respective document types."
+msgstr ""
+"همچنین قبل از شخصی سازی انواع سند مربوطه ، اطمینان حاصل کنید که اطلاعات شرکت و "
+"آدرس را از برگه عمومی در بالا پر کنید."
+
+#: admin/views/admin-settings-documents.php:33
+#, php-format
+msgid ""
+"For better Unicode/RTL support, use our free %s mPDF add-on %s along with this "
+"plugin."
+msgstr ""
+"برای پشتیبانی بهتر از یونیکد / راست چین از %s برنامه افزودنی mPDF add-on رایگان "
+"%s همزمان با این افزونه استفاده کنید. یادداشت مترجم: الفبای زبان فارسی هم "
+"راست‌چین می‌باشد، پس برای استفاده کامل و جلوگیری از احتمال به‌هم ریختگی حروف و "
+"کلمات در خروجی‌های افزونه، باید این برنامه افزودنی رایگان را نیز نصب کرده باشید."
+
+#: admin/views/admin-settings-general.php:7
+msgid ""
+"The company name and the address details from the sections below will be used "
+"as the 'Shipping from' address in the invoice and other related documents."
+msgstr ""
+"اطلاعات شرکت/فروشگاه، آدرس‌ حمل و مشخصات فرستنده قید شده در بخش‌های پایین، برای "
+"درج در فاکتور و اسناد مربوط به آن استفاده خواهند شد."
+
+#: admin/views/admin-settings-general.php:8
+msgid "Company Info"
+msgstr "مشخصات شرکت/فروشگاه"
+
+#: admin/views/admin-settings-general.php:13
+msgid "Name"
+msgstr "نام"
+
+#: admin/views/admin-settings-general.php:18
+msgid "Logo"
+msgstr "لوگو/آرم/نشان تجاری"
+
+#: admin/views/admin-settings-general.php:20
+msgid ""
+"Ensure to select company logo from ‘Invoice > Customize > Company Logo’ to "
+"reflect on the invoice. Recommended size is 150x50px."
+msgstr ""
+"اطمینان حاصل کنید که آرم شرکت را از \"فاکتور> سفارشی سازی> آرم شرکت\" انتخاب "
+"کنید تا فاکتور منعکس شود. اندازه توصیه شده 150x50px است."
+
+#: admin/views/admin-settings-general.php:23
+msgid "Company Tax ID"
+msgstr "مشخصات شرکت/فروشگاه"
+
+#: admin/views/admin-settings-general.php:25
+msgid ""
+"Specify your company tax ID. For e.g. you may enter as VAT: GB123456789, "
+"GSTIN:0948745 or ABN:51 824 753 556"
+msgstr ""
+"شناسه مالیات شرکت خود را مشخص کنید. برای مثال شما می توانید به عنوان مالیات بر "
+"ارزش افزوده وارد کنید: GB123456789 ، GSTIN: 0948745 یا ABN: 51 824 753 556"
+
+#: admin/views/admin-settings-general.php:29
+#: public/modules/invoice/invoice.php:1330
+msgid "Footer"
+msgstr "پابرگ"
+
+#: admin/views/admin-settings-general.php:31
+msgid "Set up a footer which will be used across the respective documents."
+msgstr "یک پابرگ (پاورقی) را برای استفاده در اسناد مربوطه درج نمایید."
+
+#: admin/views/admin-settings-general.php:38
+msgid "Address(Sender details)"
+msgstr "آدرس (مشخصات فرستنده)"
+
+#: admin/views/admin-settings-general.php:42
+msgid "Load from WooCommerce"
+msgstr "بارگذاری از ووکامرس"
+
+#: admin/views/admin-settings-general.php:49
+msgid "Department/Business Unit/Sender"
+msgstr "واحد/بخش/ارسال کننده"
+
+#: admin/views/admin-settings-general.php:54
+msgid "Address line 1"
+msgstr "آدرس"
+
+#: admin/views/admin-settings-general.php:59
+msgid "Address line 2"
+msgstr "ادامه آدرس"
+
+#: admin/views/admin-settings-general.php:63
+msgid "City"
+msgstr "شهر"
+
+#: admin/views/admin-settings-general.php:83
+msgid "Country/State"
+msgstr "کشور/استان"
+
+#: admin/views/admin-settings-general.php:85
+msgid "Choose a country&hellip;"
+msgstr "کشور و استان "
+
+#: admin/views/admin-settings-general.php:86
+msgid "Select country"
+msgstr "انتخاب کشور"
+
+#: admin/views/admin-settings-general.php:95
+msgid "Postal code"
+msgstr "کد پستی"
+
+#: admin/views/admin-settings-general.php:100
+msgid "Contact number"
+msgstr "شماره تماس"
+
+#: admin/views/admin-settings-general.php:106
+msgid "Other settings"
+msgstr "سایر تنظیمات"
+
+#: admin/views/admin-settings-general.php:113
+msgid "Display state name"
+msgstr "نمایش نام حالت"
+
+#: admin/views/admin-settings-general.php:116
+#: admin/views/admin-settings-general.php:135
+#: public/modules/deliverynote/views/general.php:16
+#: public/modules/deliverynote/views/general.php:26
+#: public/modules/deliverynote/views/general.php:37
+#: public/modules/dispatchlabel/views/general.php:16
+#: public/modules/dispatchlabel/views/general.php:27
+#: public/modules/invoice/views/general.php:16
+#: public/modules/invoice/views/general.php:26
+#: public/modules/invoice/views/general.php:44
+#: public/modules/invoice/views/general.php:60
+#: public/modules/invoice/views/general.php:110
+#: public/modules/invoice/views/general.php:121
+#: public/modules/invoice/views/invoice-number.php:108
+#: public/modules/packinglist/views/general.php:16
+#: public/modules/packinglist/views/general.php:27
+#: public/modules/packinglist/views/general.php:38
+#: public/modules/shippinglabel/views/general.php:29
+msgid "Yes"
+msgstr "بله"
+
+#: admin/views/admin-settings-general.php:117
+#: admin/views/admin-settings-general.php:136
+#: public/modules/deliverynote/views/general.php:17
+#: public/modules/deliverynote/views/general.php:27
+#: public/modules/deliverynote/views/general.php:38
+#: public/modules/dispatchlabel/views/general.php:17
+#: public/modules/dispatchlabel/views/general.php:28
+#: public/modules/invoice/views/general.php:17
+#: public/modules/invoice/views/general.php:27
+#: public/modules/invoice/views/general.php:45
+#: public/modules/invoice/views/general.php:61
+#: public/modules/invoice/views/general.php:111
+#: public/modules/invoice/views/general.php:122
+#: public/modules/invoice/views/invoice-number.php:109
+#: public/modules/packinglist/views/general.php:17
+#: public/modules/packinglist/views/general.php:28
+#: public/modules/packinglist/views/general.php:39
+#: public/modules/shippinglabel/views/general.php:30
+msgid "No"
+msgstr "نه"
+
+#: admin/views/admin-settings-general.php:119
+msgid ""
+"Displays the state name instead of state code in from,return,billing and "
+"shipping addresses"
+msgstr ""
+"نام دولت را به جای کد دولتی در آدرس های بازگشت ، صورتحساب و ارسال نشان می دهد"
+
+#: admin/views/admin-settings-general.php:123
+msgid "Preview before printing"
+msgstr "بازبینی قبل از اقدام به چاپ"
+
+#: admin/views/admin-settings-general.php:126
+msgid "Enabled"
+msgstr "فعال"
+
+#: admin/views/admin-settings-general.php:127
+msgid "Disabled"
+msgstr "غیر فعال"
+
+#: admin/views/admin-settings-general.php:132
+msgid "Enable RTL support"
+msgstr ""
+"فعال‌سازی پشتیبانی از RTL (زبان‌های راست‌چین)، یادآوری: الفبای زبان فارسی نیز راست "
+"چین می‌باشد."
+
+#: admin/views/admin-settings-general.php:138
+#, php-format
+msgid ""
+"RTL support for documents. For better RTL integration in PDF documents please "
+"use our %s mPDF addon %s."
+msgstr ""
+"پشتیبانی از راست‌چین برای اسناد. برای ادغام بهتر الفبای راست‌چین در اسناد PDF "
+"لطفا از %s برنامه افزودنی mPDF addon رایگان ما  %s استفاده نمایید."
+
+#: admin/views/admin-settings-general.php:155
+msgid "PDF library"
+msgstr "کتابخانه PDF"
+
+#: admin/views/admin-settings-general.php:158
+msgid "The default library to generate PDF"
+msgstr "کتابخانه پیش فرض برای ایجاد PDF"
+
+#: admin/views/admin-settings-general.php:167
+#, php-format
+msgid ""
+"%sNote:%s You have not enabled tax option in WooCommerce. If you need to apply "
+"tax for new orders you need to enable it %s here. %s"
+msgstr ""
+"%s توجه: %s شما گزینه مالیات را در WooCommerce فعال نکرده اید. در صورت نیاز به "
+"اعمال مالیات برای سفارشات جدید ، باید آن را %s در اینجا فعال کنید. %s"
+
+#: admin/views/admin-settings-general.php:171
+msgid "Show tax"
+msgstr "نمایش مالیات"
+
+#: admin/views/admin-settings-general.php:176
+msgid "Setup Tax"
+msgstr "تنظیم مالیات"
+
+#: admin/views/admin-settings-general.php:178
+msgid "Exclude tax"
+msgstr "بدون مالیات"
+
+#: admin/views/admin-settings-general.php:179
+msgid "Include tax"
+msgstr "با مالیات "
+
+#: admin/views/admin-settings-general.php:183
+msgid "All price columns displayed will be inclusive of tax."
+msgstr "همه ستون های قیمت نمایش داده شده شامل مالیات خواهند بود."
+
+#: admin/views/admin-settings-general.php:189
+msgid ""
+"The tax amount will be displayed in a separate column, not included within the "
+"price."
+msgstr ""
+"مبلغ مالیات در ستون جداگانه ای نمایش داده می شود که در قیمت گنجانده نشده است."
+
+#: admin/views/admin-settings-help.php:48 admin/views/admin-settings-help.php:77
+msgid "Filters"
+msgstr "فیلترها"
+
+#: admin/views/admin-settings-help.php:49 admin/views/admin-settings-help.php:53
+msgid "Help Links"
+msgstr "لینک‌های کمکی"
+
+#: admin/views/admin-settings-help.php:57 admin/views/admin-settings-help.php:60
+msgid "Documentation"
+msgstr "مستندات"
+
+#: admin/views/admin-settings-help.php:58
+msgid "Refer to our documentation to setup and get started"
+msgstr "برای تنظیم و شروع استفاده به مستندات ما رجوع کنید"
+
+#: admin/views/admin-settings-help.php:65
+msgid "Help and Support"
+msgstr "کمک و پشتیبانی"
+
+#: admin/views/admin-settings-help.php:66
+msgid "We would love to help you on any queries or issues."
+msgstr "ما مشتاقیم تا در مورد هرگونه سوال یا مشکلی به شما کمک کنیم"
+
+#: admin/views/admin-settings-help.php:68
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: admin/views/admin-settings-help.php:79
+msgid "Some useful `filters` to extend plugin's functionality"
+msgstr "چند فیلتر مفید برای افزایش عملکرد افزونه"
+
+#: admin/views/admin-settings-help.php:112
+msgid "Example Code"
+msgstr "کد بعنوان مثال"
+
+#: admin/views/admin-settings-save-button.php:6
+msgid "Update Settings"
+msgstr "به روز رسانی تنظیمات"
+
+#: admin/views/goto-pro.php:196
+msgid "Watch setup video (premium)"
+msgstr "تماشای ویدیوی راه اندازی (حق بیمه)"
+
+#: admin/views/goto-pro.php:208
+msgid "30 Day Money Back Guarantee"
+msgstr "تضمین بازگشت وجه به‌مدت سی روز"
+
+#: admin/views/goto-pro.php:209
+msgid "Fast and Superior Support"
+msgstr "پشتیبانی سریع و عالی"
+
+#: admin/views/goto-pro.php:218
+msgid "Dynamic customizer for invoice"
+msgstr "لوگو/آرم/نشان/تجاری سفارشی برای فاکتور"
+
+#: admin/views/goto-pro.php:219
+msgid "Enable ‘Pay Later’ checkout method and pay via invoice"
+msgstr "روش پرداخت «پرداخت بعدا» را فعال کرده و از طریق فاکتور پرداخت کنید"
+
+#: admin/views/goto-pro.php:222
+msgid "Generate picklist, credit notes, proforma invoice, & address labels"
+msgstr "ایجاد لیست انتخاب ، یادداشت های اعتباری ، فاکتور رسمی و برچسب آدرس"
+
+#: admin/views/goto-pro.php:223
+msgid "A variety of pre-built templates for each document"
+msgstr "انواع مختلفی از قالب‌های جذاب برای انتخاب"
+
+#: admin/views/goto-pro.php:224
+msgid "Advanced customization of templates using code-editor"
+msgstr "گزینه های سفارشی سازی پیشرفته همراه با ویرایشگر کد."
+
+#: admin/views/goto-pro.php:225
+msgid "Choose from various packing methods"
+msgstr "از بین روشهای مختلف بسته بندی انتخاب کنید"
+
+#: admin/views/goto-pro.php:226
+msgid "Option to customize return policy"
+msgstr "سیاست برگشت کالا و پابرگ"
+
+#: admin/views/goto-pro.php:227
+msgid "Supports checkout, order & product meta fields (SSN, VAT, etc.)"
+msgstr "پشتیبانی از تسویه‌حساب، سفارش و متای محصول (SSN, VAT, etc.)."
+
+#: admin/views/goto-pro.php:228
+msgid "Verified compatibility with major plugins"
+msgstr "سازگاری تأیید شده با افزونه های اصلی"
+
+#: admin/views/goto-pro.php:229
+msgid "Create custom sized labels"
+msgstr "سایز برچسب حمل"
+
+#: admin/views/goto-pro.php:230
+msgid "Premium add-on for cloud printing"
+msgstr "بازبینی قبل از اقدام به چاپ"
+
+#: includes/class-wf-woocommerce-packing-list-box_packing.php:134
+msgid "0"
+msgstr "."
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:53
+#, php-format
+msgid ""
+"Hey, we at %sWebToffee%s would like to thank you for using %s %s %s. %s Less "
+"than a minute of your time will motivate us to keep doing what we do. We would "
+"really appreciate if you could take a moment to drop a quick review that "
+"motivate us to keep going."
+msgstr ""
+"ما در %s وب تافی %s مشتاقیم تا از استفاده شما از %s %s %s تشکر کنیم. %s کمتر از "
+"یک دقیقه از وقت شما انگیزه ما را برای ادامه کارهایی که انجام می‌دهیم بیشتر "
+"می‌کند. ما واقعا ممنون می‌شویم لحظاتی را برای یک مرور سریع اختصاص دهید تا ما را "
+"برای ادامه کار دلگرم‌تر کنید."
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:56
+msgid "Remind me later"
+msgstr "بعدا یادآوری کن"
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:57
+msgid "Not interested"
+msgstr "مایل نیستم"
+
+#: includes/class-wf-woocommerce-packing-list-review_request.php:58
+msgid "Review now"
+msgstr "هم‌اکنون مرور می‌کنم"
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:52
+#, php-format
+msgid ""
+"The plugins %s and %s cannot be active in your store at the same time. Kindly "
+"deactivate one of these prior to activating the other."
+msgstr ""
+"افزونه های %s و %s نمی توانند همزمان در فروشگاه شما فعال باشند. لطفاً قبل از "
+"فعال سازی دیگری ، یکی از این موارد را غیرفعال کنید."
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:52
+msgid "Go to plugins page"
+msgstr "برو به صفحه افزونه ها"
+
+#: print-invoices-packing-slip-labels-for-woocommerce.php:158
+#, php-format
+msgid ""
+"%s WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels "
+"(Basic) %s is enabled but not effective. It requires %s WooCommerce %s in order "
+"to work."
+msgstr ""
+"%s فاکتورهای PDF WooCommerce ، برگه های بسته بندی ، یادداشت های تحویل و برچسب "
+"های حمل و نقل (عمومی) %s فعال است اما موثر نیست. برای کار نیاز به %s "
+"WooCommerce %s دارد."
+
+#: public/modules/deliverynote/data/data.templates.php:5
+#: public/modules/invoice/data/data.templates.php:5
+#: public/modules/packinglist/data/data.templates.php:5
+msgid "Classic"
+msgstr "کلاسیک"
+
+#: public/modules/deliverynote/deliverynote.php:61
+#: public/modules/packinglist/packinglist.php:64
+msgid "Enable to include product image in the document."
+msgstr "فعال کردن تصویر محصول در سند"
+
+#: public/modules/deliverynote/deliverynote.php:62
+#: public/modules/dispatchlabel/dispatchlabel.php:54
+#: public/modules/packinglist/packinglist.php:65
+msgid "Enable to display the customer's note in the document."
+msgstr "فعال‌کردن یادداشت مشتری در سند."
+
+#: public/modules/deliverynote/deliverynote.php:63
+#: public/modules/dispatchlabel/dispatchlabel.php:55
+#: public/modules/packinglist/packinglist.php:66
+#: public/modules/shippinglabel/shippinglabel.php:277
+msgid "Enable to display footer content in the document."
+msgstr "فعال‌کردن نمایش محتوای پابرگ در سند."
+
+#: public/modules/deliverynote/deliverynote.php:239
+#: public/modules/deliverynote/deliverynote.php:250
+msgid "Print Delivery note"
+msgstr "چاپ یادداشت تحویل"
+
+#: public/modules/deliverynote/deliverynote.php:312
+msgid "Unable to print Delivery note. Please check the items in the order."
+msgstr "چاپ یادداشت تحویل میسر نشد. لطفا مورد را در سفارش بررسی نمایید."
+
+#: public/modules/deliverynote/views/general.php:12
+#: public/modules/packinglist/views/general.php:12
+msgid "Include product image"
+msgstr "شامل تصویر محصول"
+
+#: public/modules/deliverynote/views/general.php:22
+#: public/modules/dispatchlabel/views/general.php:12
+#: public/modules/packinglist/views/general.php:23
+msgid "Add customer note"
+msgstr "درج یادداشت مشتری"
+
+#: public/modules/deliverynote/views/general.php:29
+msgid "Add customer note in delivery note"
+msgstr "درج یادداشت مشتری در یادداشت تحویل"
+
+#: public/modules/deliverynote/views/general.php:33
+#: public/modules/dispatchlabel/views/general.php:23
+#: public/modules/packinglist/views/general.php:34
+#: public/modules/shippinglabel/views/general.php:25
+msgid "Add footer"
+msgstr "درج پابرگ"
+
+#: public/modules/deliverynote/views/general.php:40
+msgid "Add footer in delivery note"
+msgstr "درج پابرگ در یادداشت تحویل"
+
+#: public/modules/dispatchlabel/data/data.templates.php:5
+msgid "Dispatch Label 1"
+msgstr "برچسب ارسال"
+
+#: public/modules/dispatchlabel/dispatchlabel.php:212
+#: public/modules/dispatchlabel/dispatchlabel.php:223
+msgid "Print Dispatch Label"
+msgstr "چاپ برچسب ارسال"
+
+#: public/modules/dispatchlabel/views/general.php:19
+msgid "Add customer note in dispatch label"
+msgstr "درج یادداشت مشتری در برچسب ارسال"
+
+#: public/modules/dispatchlabel/views/general.php:30
+msgid "Add footer in dispatch label"
+msgstr "درج پابرگ در برچسب ارسال"
+
+#: public/modules/invoice/data/data.templates.php:10
+msgid "Standard"
+msgstr "استاندارد"
+
+#: public/modules/invoice/data/data.tooltip.php:3
+msgid ""
+"By enabling, you are permitting admin as well as customers to have access to "
+"print, download, attach invoice in the mail, etc from wherever applicable. "
+"Disabling will remove all the provisions, still, admin can customize the "
+"template, set invoice number pattern and so on."
+msgstr ""
+"با فعال‌سازی، شما به مدیر و همچنین مشتریان اجازه دسترسی به چاپ، دانلود، پیوست "
+"فاکتور به ایمیل و غیره را از هر کجا که قابل اعمال باشند،می‌دهید. غیرفعال‌سازی، "
+"کلیه این موارد را سلب می‌نماید. اما مدیر همچنان می‌تواند قالب را شخصی‌سازی نماید، "
+"الگوی شماره فاکتور را تنظیم نماید و غیره."
+
+#: public/modules/invoice/data/data.tooltip.php:4
+msgid ""
+"If you choose 'No' then the invoice date will be the date on which it is "
+"printed, downloaded or attached in the mail."
+msgstr ""
+"اگر شما را 'خیر' انتخاب کنید، تاریخ فاکتور تاریخی خواهد بود که در آن تاریخ چاپ، "
+"دانلود یا به ایمیل پیوست می‌گردد."
+
+#: public/modules/invoice/data/data.tooltip.php:5
+msgid ""
+"PDF version of the currently active invoice template will be attached with the "
+"Woocommerce order emails sent to customers and admins for the chosen order "
+"statuses."
+msgstr ""
+"اگر ارسال ایمیل سفارش در ووکامرس برای هر وضعیت سفارشی فعال باشد و همان وضعیت در "
+"این بخش نیز انتخاب گردد، نسخه PDF فاکتور نیز (با قالب فعال فعلی) به آن ایمیل "
+"پیوست خواهد شد."
+
+#: public/modules/invoice/data/data.tooltip.php:6
+msgid ""
+"Choose the order statuses for which an email is to be sent to the customer with "
+"an invoice attached to it."
+msgstr ""
+"وضعیت های سفارشی را که قرار است نامه ای در آن همراه با فاکتور ضمیمه شده به "
+"ایمیل ارسال گردد را انتخاب کنید."
+
+#: public/modules/invoice/data/data.tooltip.php:7
+msgid ""
+"Enabling this option will allow your customers to print the invoice (via print "
+"button) from their order mail as well as after checkout."
+msgstr ""
+"فعال‌سازی این گزینه به مشتریان شما اجازه می‌دهد تا فاکتور را از ایمیل سفارش "
+"(بوسیله دگمه چاپ) چاپ نمایند و همچنین بعد از پرداخت."
+
+#: public/modules/invoice/data/data.tooltip.php:8
+msgid "You can add any personalised note/comment in this"
+msgstr "شما می‌توانید هر نوع یادداشت شخصی یا نظر را در اینجا درج نمایید"
+
+#: public/modules/invoice/data/data.tooltip.php:9
+msgid ""
+"Upload to include a unique logo in the invoice other than the one loaded from "
+"general settings.  If left blank, then defaulted to the logo from general "
+"settings."
+msgstr ""
+"اگر خواهان داشتن یک لوگو/آرم/نشان تجاری در فاکتور غیر از آنچه که در تنظیمات "
+"عمومی بارگذاری کرده‌اید می‌باشید آن‌را اینجا بارگذاری نمایید. اگر صرف‌نظر کنید، "
+"همان که در صفحه تنظیمات عمومی بارگذاری کرده‌اید اعمال خواهد شد."
+
+#: public/modules/invoice/data/data.tooltip.php:10
+msgid ""
+"Select an invoice number format from the drop-down. You can choose to have a "
+"prefix, suffix or both for your invoice number."
+msgstr ""
+"یک فرمت برای شماره فاکتور از لیست کشویی انتخاب نمایید. شما می‌توانید داشتن یک "
+"پیشوند، پسوند یا همزمان هر دو آنها را برای شماره فکتورتان انتخاب نمایید."
+
+#: public/modules/invoice/data/data.tooltip.php:11
+msgid ""
+"You can mirror the order number as the invoice number by enabling this option, "
+"else, you can create an invoice number of your own choice by specifying an "
+"invoice start number."
+msgstr ""
+"با فعال‌سازی این گزینه، شما می‌توانید شماره سفارش را قرینه کرده و بعنوان شماره "
+"فاکتور استفاده نمایید، در غیر این صورت ، می‌توانید با تعیین شماره شروع فاکتور ، "
+"یک شماره فاکتور به انتخاب خود ایجاد کنید."
+
+#: public/modules/invoice/data/data.tooltip.php:12
+msgid ""
+"Set a starting number for the invoice number to have a specific number other "
+"than the order number. Reset provisions are also allowed."
+msgstr ""
+"یک شماره شروع برای شماره فاکتور تنظیم کنید تا شماره خاصی غیر از شماره سفارش "
+"داشته باشد. اعمال بازنشانی نیز مجاز است."
+
+#: public/modules/invoice/data/data.tooltip.php:13
+msgid ""
+"Specify a prefix that will appear at the leading edge of the invoice number. "
+"Provisions are included to select predefined date formats as prefixes."
+msgstr ""
+"پیشوندی را مشخص کنید که در ابتدای شماره فاکتور ظاهر شود. امکان انتخاب قالب های "
+"تاریخ از پیش تعریف شده به عنوان پیشوند نیز وجود دارد."
+
+#: public/modules/invoice/data/data.tooltip.php:14
+msgid ""
+"Specify a suffix that will appear at the trailing edge of the invoice number. "
+"Provisions are included to select predefined date formats as suffixes."
+msgstr ""
+"پسوندی را مشخص کنید که در انتهای شماره فاکتور ظاهر شود. امکان انتخاب قالب های "
+"تاریخ از پیش تعریف شده به عنوان پسوند نیز وجود دارد."
+
+#: public/modules/invoice/data/data.tooltip.php:15
+#: public/modules/invoice/views/invoice-number.php:155
+msgid ""
+"Indicates the total length of the invoice number, excluding the length of "
+"prefix and suffix if added. If the length of the generated invoice number is "
+"less than the provided, it will be padded with ‘0’. E.g if you specify 7 as "
+"invoice length and your invoice number is 8009, it will be represented as "
+"0008009 in the respective documents."
+msgstr ""
+"تعداد کل اعداد شماره فاکتور را نشان می‌دهد ، البته به استثنای طول پیشوند و پسوند "
+"در صورت اضافه شدن. به‌عبارت دیگر اگر تعداد ارقام شماره فاکتور تولید شده کمتر از "
+"مقدار درج شده باشد ، با \"0\" پر می شود. به عنوان مثال اگر 7 را به عنوان طول "
+"فاکتور تعیین کنید و شماره فاکتور شما 8009 باشد ، در اسناد مربوطه 0008009 نشان "
+"داده می شود."
+
+#: public/modules/invoice/data/data.tooltip.php:16
+msgid ""
+"Allows displaying additional details pertaining to your order in the invoice."
+msgstr "اجازه می دهد تا جزئیات اضافی مربوط به سفارش شما را در فاکتور نمایش دهید."
+
+#: public/modules/invoice/invoice.php:252
+#, php-format
+msgid ""
+"You can control the visibility of the seal according to order status via "
+"filters. See filter documentation %s here. %s"
+msgstr ""
+"شما می توانید دید مهر و موم را با توجه به وضعیت سفارش از طریق فیلترها کنترل "
+"کنید. اسناد فیلتر %s را اینجا ببینید. %s"
+
+#: public/modules/invoice/invoice.php:271
+msgid "Width"
+msgstr "عرض"
+
+#: public/modules/invoice/invoice.php:279
+msgid "Height"
+msgstr "ارتفاع"
+
+#: public/modules/invoice/invoice.php:303
+msgid "Border width"
+msgstr "عرض حاشیه"
+
+#: public/modules/invoice/invoice.php:311
+msgid "Line height"
+msgstr "ارتفاع خط"
+
+#: public/modules/invoice/invoice.php:319
+msgid "Opacity"
+msgstr "تیرگی"
+
+#: public/modules/invoice/invoice.php:340
+msgid "Border radius"
+msgstr "گردکردن گوشه‌ها"
+
+#: public/modules/invoice/invoice.php:348
+msgid "From left"
+msgstr "از چپ"
+
+#: public/modules/invoice/invoice.php:356
+msgid "From top"
+msgstr "از بالا"
+
+#: public/modules/invoice/invoice.php:364
+msgid "Angle"
+msgstr "فرشته"
+
+#: public/modules/invoice/invoice.php:371
+msgid "Color"
+msgstr "رنگ"
+
+#: public/modules/invoice/invoice.php:1305
+msgid "Document title"
+msgstr "مستندات"
+
+#: public/modules/invoice/invoice.php:1306
+msgid "Company Logo / Company name"
+msgstr "لوگو/آرم/ نشان تجاری شرکت یا فروشگاه"
+
+#: public/modules/invoice/invoice.php:1308
+#: public/modules/invoice/views/invoice-admin-settings.php:7
+msgid "Invoice Number"
+msgstr "شماره فاکتور"
+
+#: public/modules/invoice/invoice.php:1309
+#: public/modules/shippinglabel/shippinglabel.php:158
+msgid "Order Number"
+msgstr "شماره سفارش"
+
+#: public/modules/invoice/invoice.php:1310
+msgid "Invoice Date"
+msgstr "تاریخ فاکتور"
+
+#: public/modules/invoice/invoice.php:1311
+msgid "Order Date"
+msgstr "تاریخ سفارش"
+
+#: public/modules/invoice/invoice.php:1312
+msgid "Payment received stamp"
+msgstr "تاییدیه پرداخت"
+
+#: public/modules/invoice/invoice.php:1313
+#: public/modules/shippinglabel/shippinglabel.php:156
+msgid "From Address"
+msgstr "فرستنده"
+
+#: public/modules/invoice/invoice.php:1314
+msgid "Billing Address"
+msgstr "آدرس صورتحساب"
+
+#: public/modules/invoice/invoice.php:1315
+msgid "Shipping Address"
+msgstr "گیرنده: "
+
+#: public/modules/invoice/invoice.php:1316
+#: public/modules/shippinglabel/shippinglabel.php:162
+msgid "Email Field"
+msgstr "فیلد ایمیل"
+
+#: public/modules/invoice/invoice.php:1317
+#: public/modules/shippinglabel/shippinglabel.php:163
+msgid "Tel Field"
+msgstr "فیلد تلفن"
+
+#: public/modules/invoice/invoice.php:1319
+#: public/modules/shippinglabel/shippinglabel.php:161
+msgid "Tracking Number"
+msgstr "شماره پیگیری"
+
+#: public/modules/invoice/invoice.php:1320
+msgid "Product Table"
+msgstr "جدول محصول"
+
+#: public/modules/invoice/invoice.php:1327
+msgid "Coupon info"
+msgstr "جزئیات کوپن تخفیف"
+
+#: public/modules/invoice/invoice.php:1401
+msgid "Print Invoices"
+msgstr "چاپ فاکتورها"
+
+#: public/modules/invoice/invoice.php:1402
+msgid "Download Invoices"
+msgstr "دانلود فاکتورها"
+
+#: public/modules/invoice/invoice.php:1424 public/modules/invoice/invoice.php:1528
+#: public/modules/invoice/invoice.php:1554
+msgid "Print Invoice"
+msgstr "چاپ فاکتور"
+
+#: public/modules/invoice/invoice.php:1425
+msgid "Download Invoice"
+msgstr "دانلود فاکتور"
+
+#: public/modules/invoice/invoice.php:1455
+msgid "Invoice Number:"
+msgstr "شماره فاکتور:"
+
+#: public/modules/invoice/invoice.php:1611
+msgid "Customizer module is not active."
+msgstr "ماژول شخصی‌سازی فعال نیست."
+
+#: public/modules/invoice/views/general.php:7
+msgid "Configure the general settings required for the invoice."
+msgstr "تنظیمات کلی مورد نیاز برای فاکتور را پیکربندی کنید."
+
+#: public/modules/invoice/views/general.php:13
+msgid "Enable invoice"
+msgstr "فعال‌سازی فاکتور"
+
+#: public/modules/invoice/views/general.php:22
+msgid "Use order date as invoice date"
+msgstr "استفاده از تاریخ سفارش بجای تاریخ فاکتور"
+
+#: public/modules/invoice/views/general.php:24
+msgid ""
+"If you choose 'No' then the invoice date will be the date on which it is "
+"generated."
+msgstr ""
+"اگر شما 'خیر' را انتخاب کنید، برای تاریخ فاکتور از تاریخ ایجاد فاکتور استفاده "
+"خواهد شد."
+
+#: public/modules/invoice/views/general.php:32
+msgid "Generate invoice for order statuses"
+msgstr "ایجاد فاکتور برای وضعیت‌های مختلف سفارش"
+
+#: public/modules/invoice/views/general.php:34
+msgid "Order statuses for which an invoice should be generated."
+msgstr "وضعیت های سفارش که باید برای آنها فاکتور ایجاد گردد."
+
+#: public/modules/invoice/views/general.php:41
+msgid "Attach invoice PDF in order email"
+msgstr "پیوست فاکتور PDF به ایمیل سفارش"
+
+#: public/modules/invoice/views/general.php:47
+msgid ""
+"PDF version of invoice will be attached with the order email based on the above "
+"statuses"
+msgstr ""
+"نسخه PDF فاکتور به ایمیل‌های سفارشی که وضعیت‌ سفارش در بالا درج می‌شود، پیوست "
+"خواهد شد."
+
+#: public/modules/invoice/views/general.php:57
+msgid "Enable print invoice option for customers"
+msgstr "فعال‌سازی امکان چاپ فاکتور برای مشتریان"
+
+#: public/modules/invoice/views/general.php:63
+msgid ""
+"Displays print button in the order email, order listing page and in the order "
+"summary."
+msgstr ""
+"دکمه چاپ را در ایمیل سفارش ، صفحه فهرست سفارشات و در خلاصه سفارش نمایش می دهد."
+
+#: public/modules/invoice/views/general.php:71
+msgid "Show print button only for statuses"
+msgstr "دگمه چاپ فقط برای وضعیت‌ها نمایش داده شود"
+
+#: public/modules/invoice/views/general.php:83
+msgid "Order meta fields"
+msgstr "فیلدهای متا برای سفارش"
+
+#: public/modules/invoice/views/general.php:86
+msgid "Select/add the additional order information in the invoice"
+msgstr "اطلاعات اضافی سفارش را در فاکتور انتخاب کنید."
+
+#: public/modules/invoice/views/general.php:90
+msgid "Custom logo for invoice"
+msgstr "لوگو/آرم/نشان/تجاری سفارشی برای فاکتور"
+
+#: public/modules/invoice/views/general.php:92
+msgid ""
+"If left blank, defaulted to logo from General settings.Ensure to select company "
+"logo from ‘Invoice > Customize > Company Logo’ to reflect on the invoice. "
+"Recommended size is 150x50px."
+msgstr ""
+"در صورت خالی ، به طور پیش فرض لوگو از تنظیمات عمومی است. اطمینان حاصل کنید که "
+"آرم شرکت را از \"فاکتور> سفارشی سازی> آرم شرکت\" انتخاب کنید تا فاکتور منعکس "
+"شود. اندازه توصیه شده 150x50px است."
+
+#: public/modules/invoice/views/general.php:99
+msgid "Advanced options"
+msgstr "تنظیمات پیشرفته"
+
+#: public/modules/invoice/views/general.php:106
+msgid "Generate invoice for free orders"
+msgstr "ایجاد فاکتور برای وضعیت‌های مختلف سفارش"
+
+#: public/modules/invoice/views/general.php:108
+msgid "Choose ‘No’ to not generate invoice for free orders."
+msgstr "برای ایجاد فاکتور برای سفارشات رایگان ، \"نه\" را انتخاب کنید."
+
+#: public/modules/invoice/views/general.php:117
+msgid "Display free line items in the invoice"
+msgstr "موارد خط رایگان را در فاکتور نمایش دهید"
+
+#: public/modules/invoice/views/general.php:119
+msgid "Choose ‘No’ to not display free line items in the invoice."
+msgstr "برای نمایش موارد خط رایگان در فاکتور ، \"نه\" را انتخاب کنید."
+
+#: public/modules/invoice/views/general.php:128
+msgid "PDF name format"
+msgstr "فرمت تاریخ"
+
+#: public/modules/invoice/views/general.php:130
+msgid "Select a name format for PDF invoice that includes invoice/order number."
+msgstr "قالب نامی برای فاکتور PDF انتخاب کنید که شامل فاکتور/شماره سفارش باشد."
+
+#: public/modules/invoice/views/general.php:135
+msgid "Custom PDF name prefix"
+msgstr "پیشوند نام PDF سفارشی"
+
+#: public/modules/invoice/views/general.php:138
+msgid ""
+"Input a custom prefix for ‘PDF name format’ that will appear at the beginning "
+"of the name. Defaulted to ‘Invoice_’."
+msgstr ""
+"پیشوند سفارشی برای \"قالب نام PDF\" را وارد کنید که در ابتدای نام ظاهر می شود. "
+"به صورت پیش فرض روی \"فاکتور_\" تنظیم شده است."
+
+#: public/modules/invoice/views/invoice-number.php:5
+msgid "Click to append with existing data"
+msgstr "برای افزودن داده‌های موجود کلیک کنید"
+
+#: public/modules/invoice/views/invoice-number.php:18
+msgid "Date formats"
+msgstr "فرمت تاریخ"
+
+#: public/modules/invoice/views/invoice-number.php:25
+msgid "Output"
+msgstr "خروجی"
+
+#: public/modules/invoice/views/invoice-number.php:75
+msgid ""
+"Use the configurations below to set up a custom invoice number with prefix/"
+"suffix/number series or mirror the order number respectively."
+msgstr ""
+"از تنظیمات زیر برای تنظیم شماره فاکتور سفارشی با پیشوند/پسوند/سری شماره استفاده "
+"کنید یا شماره سفارش را آینه کنید."
+
+#: public/modules/invoice/views/invoice-number.php:93
+msgid "Invoice number format"
+msgstr "فرمت شماره فاکتور"
+
+#: public/modules/invoice/views/invoice-number.php:96
+msgid "[number]"
+msgstr "شماره سفارش"
+
+#: public/modules/invoice/views/invoice-number.php:97
+msgid "[number][suffix]"
+msgstr "[شماره] [پسوند]"
+
+#: public/modules/invoice/views/invoice-number.php:98
+msgid "[prefix][number]"
+msgstr "[پیشوند] [شماره]"
+
+#: public/modules/invoice/views/invoice-number.php:99
+msgid "[prefix][number][suffix]"
+msgstr "[پیشوند] [شماره] [پسوند]"
+
+#: public/modules/invoice/views/invoice-number.php:105
+msgid "Use order number as invoice number"
+msgstr "استفاده از شماره سفارش به‌عنوان شماره فاکتور"
+
+#: public/modules/invoice/views/invoice-number.php:124
+msgid "Invoice Start Number"
+msgstr "شروع شماره فاکتور از"
+
+#: public/modules/invoice/views/invoice-number.php:128
+msgid "Reset Invoice no"
+msgstr "بازنشانی شماره فاکتور"
+
+#: public/modules/invoice/views/invoice-number.php:141
+msgid "Prefix"
+msgstr "پیشوند"
+
+#: public/modules/invoice/views/invoice-number.php:143
+#: public/modules/invoice/views/invoice-number.php:148
+#, php-format
+msgid "Use any of the %s date formats %s or alphanumeric characters."
+msgstr "از هر %s قالب تاریخ %s یا نویسه های عددی استفاده کنید."
+
+#: public/modules/invoice/views/invoice-number.php:146
+msgid "Suffix"
+msgstr "پسوند"
+
+#: public/modules/invoice/views/invoice-number.php:152
+msgid "Invoice length"
+msgstr "طول فاکتور"
+
+#: public/modules/invoice/views/invoice-number.php:161
+msgid "Save Invoice number settings"
+msgstr "فرمت شماره فاکتور"
+
+#: public/modules/packinglist/packinglist.php:245
+#: public/modules/packinglist/packinglist.php:256
+msgid "Print Packing slip"
+msgstr "چاپ حواله بسته‌بندی"
+
+#: public/modules/packinglist/packinglist.php:261
+msgid "Download Packing slip"
+msgstr "دانلود حواله بسته‌بندی"
+
+#: public/modules/packinglist/packinglist.php:331
+#: public/modules/shippinglabel/shippinglabel.php:473
+msgid "Unable to print Packing slip. Please check the items in the order."
+msgstr "چاپ حواله بسته‌بندی میسر نشد. لطفا سفارش را بررسی نمایید."
+
+#: public/modules/packinglist/views/general.php:19
+msgid "Add product image in product table"
+msgstr "درج تصویبر محصول در کنار آن"
+
+#: public/modules/packinglist/views/general.php:30
+msgid "Add customer note in packing slip"
+msgstr "درج یادداشت مشتری در لیست حواله بسته‌بندی"
+
+#: public/modules/packinglist/views/general.php:41
+msgid "Add footer in packing slip"
+msgstr "درج پابرگ در حواله بسته‌بندی"
+
+#: public/modules/shippinglabel/data/data.templates.php:5
+msgid "Shipping Label 1"
+msgstr "برچسب حمل"
+
+#: public/modules/shippinglabel/shippinglabel.php:108
+#: public/modules/shippinglabel/shippinglabel.php:133
+msgid "Title font size"
+msgstr "اندازه قلم عنوان"
+
+#: public/modules/shippinglabel/shippinglabel.php:115
+msgid "Address font size"
+msgstr "اندازه قلم آدرس"
+
+#: public/modules/shippinglabel/shippinglabel.php:157
+msgid "To Address"
+msgstr "به آدرس"
+
+#: public/modules/shippinglabel/shippinglabel.php:159
+msgid "Weight"
+msgstr "وزن"
+
+#: public/modules/shippinglabel/shippinglabel.php:160
+msgid "Ship date"
+msgstr "تاریخ ارسال"
+
+#: public/modules/shippinglabel/shippinglabel.php:164
+msgid "Barcode"
+msgstr "بارکد"
+
+#: public/modules/shippinglabel/shippinglabel.php:166
+msgid "Return Policy"
+msgstr "دستورالعمل بازگشت"
+
+#: public/modules/shippinglabel/shippinglabel.php:276
+msgid ""
+"Prints the shipping label in full page. Provisions to create custom sized "
+"labels are allowed in premium versions."
+msgstr ""
+"چاپ برچسب حمل در صفحه کامل. امکان ایجاد برچسب‌های با اندازه سفارشی در نسخه "
+"حرفه‌ای فراهم است."
+
+#: public/modules/shippinglabel/shippinglabel.php:343
+#: public/modules/shippinglabel/shippinglabel.php:354
+msgid "Print Shipping Label"
+msgstr "چاپ برچسب حمل"
+
+#: public/modules/shippinglabel/shippinglabel.php:406
+msgid "Please add shipping from address in the plugin's general settings."
+msgstr "لطفا از تنظیمات عمومی افزونه حمل از آدرس را درج نمایید."
+
+#: public/modules/shippinglabel/views/general.php:7
+msgid "Configure the general settings required for the shipping label."
+msgstr "تنظیمات کلی مورد نیاز برای برچسب حمل را پیکربندی کنید."
+
+#: public/modules/shippinglabel/views/general.php:11
+msgid "Shipping label size"
+msgstr "سایز برچسب حمل"
+
+#: public/modules/shippinglabel/views/general.php:15
+msgid "Full Page"
+msgstr "تمام صفحه"
+
+#: public/modules/shippinglabel/views/general.php:16
+msgid "Custom (Pro version)"
+msgstr "نسخه حرفه‌ای"
+
+#: public/modules/shippinglabel/views/general.php:32
+msgid "Add footer in shipping label"
+msgstr "درج پابرگ در برچسب حمل"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+msgstr "https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/"
+
+#. Description of the plugin/theme
+msgid "Prints Packing List,Invoice,Delivery Note & Shipping Label."
+msgstr "چاپ لیست بسته‌بندی، فاکتور، یادداشت تحویل و برچسب حمل."
+
+#. Author of the plugin/theme
+msgid "WebToffee"
+msgstr "وب تافی"
+
+#. Author URI of the plugin/theme
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"

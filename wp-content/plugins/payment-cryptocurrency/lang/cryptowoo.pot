@@ -1,0 +1,2225 @@
+# Copyright (C) CryptoWoo AS
+# This file is distributed under the same license as the CryptoWoo plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: CryptoWoo 0.25.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cryptowoo\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-11T08:28:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: cryptowoo\n"
+
+#. Plugin Name of the plugin
+#: admin/options-init.php:848
+msgid "CryptoWoo"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.cryptowoo.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Digital Currency Payment Gateway for WooCommerce"
+msgstr ""
+
+#. Author of the plugin
+msgid "CryptoWoo AS"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.cryptowoo.com"
+msgstr ""
+
+#: admin/class.cw-admin-notice.php:190
+#: admin/class-cw-adminmain.php:664
+#: admin/class-cw-adminmain.php:777
+#: admin/class-cw-adminmain.php:801
+#: admin/class-cw-adminmain.php:822
+msgid "Dismiss"
+msgstr ""
+
+#: admin/options-init.php:73
+msgid ""
+"<b>Error: The settings are incomplete</b> - payment gateway is disabled<br>\n"
+"                                        Go to the Wallet Settings and make sure that you have entered either a valid Block.io API key or a valid Master Public Key for at least one livenet currency.<br>\n"
+"                                        Then come back here and try to enable the gateway again."
+msgstr ""
+
+#: admin/options-init.php:123
+msgid "API key invalid!"
+msgstr ""
+
+#: admin/options-init.php:162
+msgid "BlockCypher Connection Error"
+msgstr ""
+
+#: admin/options-init.php:213
+msgid "Bitcoin Testnet mode is enabled. Please remove your BTCTEST Block.io API Key or enter a valid Bitcoin Testnet address."
+msgstr ""
+
+#: admin/options-init.php:215
+msgid "Dogecoin Testnet mode is enabled. Please remove your DOGETEST Block.io API Key or enter a valid Dogecoin Testnet address."
+msgstr ""
+
+#: admin/options-init.php:260
+msgid "Could not add address \"%1$s\"%2$sMake sure to add only unused addresses."
+msgstr ""
+
+#: admin/options-init.php:308
+msgid "You have to enter a %s Block.io API key to use the Block.io exchange rate API."
+msgstr ""
+
+#: admin/options-init.php:342
+msgid "custom API"
+msgstr ""
+
+#: admin/options-init.php:343
+msgid "your %s"
+msgstr ""
+
+#: admin/options-init.php:347
+msgid "API key in the wallet settings"
+msgstr ""
+
+#: admin/options-init.php:387
+msgid "You have to enter a %s %s to use %s during payment processing."
+msgstr ""
+
+#: admin/options-init.php:462
+msgid "This is not a %s API. The hash of the genesis block in the API response %s%s%s does not match the %s genesis block %s%s%s"
+msgstr ""
+
+#: admin/options-init.php:472
+msgid "API Error: %s%s%s"
+msgstr ""
+
+#: admin/options-init.php:499
+msgid "Invalid URL"
+msgstr ""
+
+#: admin/options-init.php:502
+msgid "{{ADDRESS}} placeholder not found"
+msgstr ""
+
+#: admin/options-init.php:509
+msgid "Error: %s"
+msgstr ""
+
+#: admin/options-init.php:540
+msgid "Error connecting to %s via %s"
+msgstr ""
+
+#: admin/options-init.php:566
+msgid "<b>Error: "
+msgstr ""
+
+#: admin/options-init.php:613
+msgid "<b>Error: No currency enabled</b><br>Make sure that you have entered either Block.io API keys or a Master Public Key for at least one livenet currency."
+msgstr ""
+
+#: admin/options-init.php:654
+msgid "Use in posts, pages, and widgets: <pre>[cw_currency_switch]</pre> Use in PHP files: <pre> %s </pre>"
+msgstr ""
+
+#: admin/options-init.php:666
+msgid ""
+"%s Limited Exchange API Choice%s\n"
+"                 Your WooCommerce store currency %s limits the available Bitcoin exchange rate APIs.%s\n"
+"                 For a wider range of available rate APIs change your %sWooCommerce Currency Settings%s to %sUS Dollar%s"
+msgstr ""
+
+#: admin/options-init.php:726
+msgid "Pay with %s and receive a %s%s discount on all products.<br>"
+msgstr ""
+
+#: admin/options-init.php:729
+msgid "Pay with digital currencies to receive a discount on all orders!"
+msgstr ""
+
+#: admin/options-init.php:809
+msgid "Customize the message that is sent to the customer upon sending too many coins."
+msgstr ""
+
+#: admin/options-init.php:810
+msgid "Available placeholders:"
+msgstr ""
+
+#: admin/options-init.php:833
+msgid "Database Maintenance"
+msgstr ""
+
+#: admin/options-init.php:842
+msgid "CryptoWoo Options"
+msgstr ""
+
+#: admin/options-init.php:973
+msgid "You need the  PHP extension \"php-gd\" to use this feature. Please check your PHP configuration and make sure the extension is enabled."
+msgstr ""
+
+#: admin/options-init.php:984
+msgid "General"
+msgstr ""
+
+#: admin/options-init.php:987
+msgid "General Options"
+msgstr ""
+
+#: admin/options-init.php:992
+msgid "No default currency"
+msgstr ""
+
+#: admin/options-init.php:995
+msgid "Checkout Flow Configuration"
+msgstr ""
+
+#: admin/options-init.php:1004
+msgid "Enable/Disable Payment Gateway"
+msgstr ""
+
+#: admin/options-init.php:1005
+msgid "Enable to display the payment method on the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1013
+msgid "Order Status"
+msgstr ""
+
+#: admin/options-init.php:1020
+msgid "Final Order Status"
+msgstr ""
+
+#: admin/options-init.php:1021
+msgid "Select the WooCommerce order status after the payment has been received."
+msgstr ""
+
+#: admin/options-init.php:1023
+msgid "Processing"
+msgstr ""
+
+#: admin/options-init.php:1024
+msgid "Completed"
+msgstr ""
+
+#: admin/options-init.php:1025
+msgid "On Hold"
+msgstr ""
+
+#: admin/options-init.php:1026
+msgid "Use WooCommerce default logic"
+msgstr ""
+
+#: admin/options-init.php:1030
+msgid "Set this to \"Completed\" to give your customer instant access to software downloads or other digital products."
+msgstr ""
+
+#: admin/options-init.php:1035
+msgid "Timeout Action"
+msgstr ""
+
+#: admin/options-init.php:1036
+msgid "Select the behavior of CryptoWoo when the Order Expiration Time runs out."
+msgstr ""
+
+#: admin/options-init.php:1038
+msgid "Cancelled"
+msgstr ""
+
+#: admin/options-init.php:1039
+msgid "Quote Refresh: Refresh the cryptocurrency order total and let the customer try again."
+msgstr ""
+
+#: admin/options-init.php:1043
+msgid "CryptoWoo will set all orders to this status after they time out."
+msgstr ""
+
+#: admin/options-init.php:1049
+msgid "Send \"Quote Expired\" Email"
+msgstr ""
+
+#: admin/options-init.php:1050
+msgid "Enable this to notify the customer via email that the cryptocurrency quote has expired."
+msgstr ""
+
+#: admin/options-init.php:1051
+msgid "The email contains a link to the payment page so the customer can pick up the order again."
+msgstr ""
+
+#: admin/options-init.php:1061
+msgid "Send \"Order Cancelled\" Email"
+msgstr ""
+
+#: admin/options-init.php:1062
+msgid "Enable this to notify the customer via email that the order has expired."
+msgstr ""
+
+#: admin/options-init.php:1076
+msgid "Checkout Page"
+msgstr ""
+
+#: admin/options-init.php:1079
+msgid "Checkout page settings"
+msgstr ""
+
+#: admin/options-init.php:1085
+msgid "Gateway Title"
+msgstr ""
+
+#: admin/options-init.php:1086
+msgid "This is the title of the payment gateway the customer will see on the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1094
+msgid "Gateway Description"
+msgstr ""
+
+#: admin/options-init.php:1095
+msgid "This is the description the customer can see on the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1096
+msgid "Pay with Bitcoin, Litecoin or Dogecoin?"
+msgstr ""
+
+#: admin/options-init.php:1105
+msgid "Default Payment Currency"
+msgstr ""
+
+#: admin/options-init.php:1106
+msgid "Pre-select a payment currency."
+msgstr ""
+
+#: admin/options-init.php:1114
+msgid "Refund Addresses"
+msgstr ""
+
+#: admin/options-init.php:1115
+msgid "Collect refund addresses and save them to the order meta."
+msgstr ""
+
+#: admin/options-init.php:1117
+#: admin/options-init.php:2141
+#: admin/options-init.php:2198
+#: admin/options-init.php:2242
+#: admin/options-init.php:2284
+msgid "Disabled"
+msgstr ""
+
+#: admin/options-init.php:1118
+msgid "Refund address is optional"
+msgstr ""
+
+#: admin/options-init.php:1119
+msgid "Refund address is required"
+msgstr ""
+
+#: admin/options-init.php:1127
+msgid "Currency estimation column width"
+msgstr ""
+
+#: admin/options-init.php:1128
+msgid "Width for each cryptocurrency column in the order total estimation."
+msgstr ""
+
+#: admin/options-init.php:1137
+msgid "Show/Hide Order Total Estimation"
+msgstr ""
+
+#: admin/options-init.php:1138
+msgid "Disable to hide the cryptocurrency order total estimation from the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1139
+#: admin/options-init.php:1147
+#: admin/options-init.php:1155
+#: admin/options-init.php:1188
+#: admin/options-init.php:2894
+msgid "Show/Hide"
+msgstr ""
+
+#: admin/options-init.php:1145
+msgid "Show/Hide Fiat Exchange Rate"
+msgstr ""
+
+#: admin/options-init.php:1146
+msgid "Disable to hide the underlying exchange rate from the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1153
+msgid "Show/Hide Exchange Rate Provider"
+msgstr ""
+
+#: admin/options-init.php:1154
+msgid "Disable to hide the current exchange rate provider from the checkout page."
+msgstr ""
+
+#: admin/options-init.php:1166
+msgid "Payment Page"
+msgstr ""
+
+#: admin/options-init.php:1169
+msgid "Payment page settings"
+msgstr ""
+
+#: admin/options-init.php:1175
+msgid "Payment Page Instructions"
+msgstr ""
+
+#: admin/options-init.php:1176
+msgid "Custom instructions to be displayed on the payment page."
+msgstr ""
+
+#: admin/options-init.php:1177
+msgid "Available placeholders: {{PAYMENT_ADDRESS}}, {{CRYPTO_AMOUNT}}, {{PAYMENT_CURRENCY}}"
+msgstr ""
+
+#: admin/options-init.php:1187
+msgid "\"I have sent the payment\" Button"
+msgstr ""
+
+#: admin/options-init.php:1189
+msgid ""
+"If the customer clicks the \"I have sent the payment\" button on the payment page, he will be redirected to the receipt page\n"
+"                           where a notice about the current status of the payment is displayed. This button does not influence whether an order will be confirmed.\n"
+"                           The processing will continue in the background."
+msgstr ""
+
+#: admin/options-init.php:1197
+msgid "Payment Page Width"
+msgstr ""
+
+#: admin/options-init.php:1200
+msgid "Narrow"
+msgstr ""
+
+#: admin/options-init.php:1201
+msgid "Medium"
+msgstr ""
+
+#: admin/options-init.php:1202
+msgid "Wide"
+msgstr ""
+
+#: admin/options-init.php:1206
+msgid "Change this setting if the elements on the payment page are too close together or too far apart."
+msgstr ""
+
+#: admin/options-init.php:1211
+msgid "Security Image Order Threshold (%s)"
+msgstr ""
+
+#: admin/options-init.php:1212
+msgid "Display the payment address in an additional image if the order amount in %s is above this value and the customer highlights the payment address."
+msgstr ""
+
+#: admin/options-init.php:1213
+msgid "Set to \"0\" to disable"
+msgstr ""
+
+#: admin/options-init.php:1222
+msgid "Redirect on unconfirmed transaction"
+msgstr ""
+
+#: admin/options-init.php:1223
+msgid "Redirect the user to the \"Thank You\" page as soon as an unconfirmed transaction is detected."
+msgstr ""
+
+#: admin/options-init.php:1224
+msgid "The redirect will not affect the status of the WooCommerce order."
+msgstr ""
+
+#: admin/options-init.php:1235
+msgid "Thank You Page"
+msgstr ""
+
+#: admin/options-init.php:1238
+msgid "\"Thank You\" page settings"
+msgstr ""
+
+#: admin/options-init.php:1244
+msgid "Custom \"Thank You\" Text"
+msgstr ""
+
+#: admin/options-init.php:1245
+msgid "Custom \"payment completed\" text on \"Thank You\" and \"View Order\" (logged in users only) pages."
+msgstr ""
+
+#: admin/options-init.php:1246
+msgid "Your payment has been received. Thank you for shopping with us."
+msgstr ""
+
+#: admin/options-init.php:1292
+msgid "WordPress Multisite"
+msgstr ""
+
+#: admin/options-init.php:1293
+msgid "Configure the plugin behavior on <a href=\"https://codex.wordpress.org/Create_A_Network\" target=\"_blank\" title=\"WordPress Multisite\">WordPress Multisite</a> installations."
+msgstr ""
+
+#: admin/options-init.php:1302
+msgid "Network Wide Admin (Multisite only!)"
+msgstr ""
+
+#: admin/options-init.php:1304
+msgid ""
+"<strong>Enable:</strong> Use only one instance of CryptoWoo settings for your whole multisite network.<br>\n"
+"                              <strong>Disable:</strong> The plugin settings for each blog have to be configured seperately."
+msgstr ""
+
+#: admin/options-init.php:1315
+msgid "Multisite Setup Info"
+msgstr ""
+
+#: admin/options-init.php:1316
+msgid ""
+"To enable network wide CryptoWoo settings, follow the instructions at %1$s"
+msgstr ""
+
+#: admin/options-init.php:1326
+#: admin/options-init.php:1328
+msgid "Wallet Settings"
+msgstr ""
+
+#: admin/options-init.php:1333
+msgid "Address List"
+msgstr ""
+
+#: admin/options-init.php:1335
+msgid "Supply a list of addresses to use. Each WooCommerce order will get a unique address assigned. If you enter an invalid address it will be removed."
+msgstr ""
+
+#: admin/options-init.php:1343
+msgid "Email Alert"
+msgstr ""
+
+#: admin/options-init.php:1344
+msgid "Send an email alert to %s when less than 5 addresses are left for a currency."
+msgstr ""
+
+#: admin/options-init.php:1345
+msgid "Enable/Disable email alert"
+msgstr ""
+
+#: admin/options-init.php:1354
+#: admin/options-init.php:1368
+#: admin/options-init.php:1383
+#: admin/options-init.php:1398
+msgid "Only add addresses for one currency at a time. Do not forget to click 'Save Changes' after you added the addresses."
+msgstr ""
+
+#: admin/options-init.php:1360
+#: admin/options-init.php:1375
+#: admin/options-init.php:1390
+msgid "%s Addresses"
+msgstr ""
+
+#: admin/options-init.php:1362
+#: admin/options-init.php:1377
+#: admin/options-init.php:1392
+msgid "Current unused %1$s addresses: %2$s%3$s%4$s"
+msgstr ""
+
+#: admin/options-init.php:1421
+msgid "HD Wallet"
+msgstr ""
+
+#: admin/options-init.php:1423
+msgid ""
+"<p>Hierarchical deterministic (\"<a href=\"https://bitcoin.org/en/glossary/hd-protocol\" target=\"_blank\" title=\"Bitcoin.org Glossary: HD Protocol\">HD</a>\") wallets enable you to receive payments directly to addresses under your control without relying on any third party service.\n"
+"                            <br>You need to create an \"Extended Public Key\" with a <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki\" target=\"_blank\">BIP32</a> or <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki\" target=\"_blank\">BIP44</a> compatible client to use this feature. Check out the <a href=\"http://www.cryptowoo.com/hd-wallet-tutorials?utm_source=config\" target=\"_blank\" title=\"HD Wallet Tutorials\">HD wallet tutorial section</a> on our website to learn how to make the most out of CryptoWoo.</p>\n"
+"                                <table>\n"
+"                                    <tr><th>Compatible clients</th></tr>\n"
+"                                    <tr>\n"
+"                                        <td>Bitcoin</td>\n"
+"                                        <td><a href=\"https://electrum.org/\" title=\"Electrum\" target=\"_blank\">Electrum</a> | <a title=\"Mycelium Wallet\" href=\"https://mycelium.com/mycelium-wallet.html\" target=\"_blank\">Mycelium Wallet</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptowoo.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td>Litecoin</td>\n"
+"                                        <td><a href=\"https://electrum-ltc.org/\" title=\"Electrum for Litecoin\" target=\"_blank\">Electrum-LTC</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptowoo.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://coinomi.com/\" title=\"Coinomi\" target=\"_blank\">Coinomi</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td>Dogecoin</td>\n"
+"                                        <td><a href=\"https://coinomi.com/\" title=\"Coinomi\" target=\"_blank\">Coinomi</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
+"                                    </tr>\n"
+"                                    <tr>\n"
+"                                        <td>BlackCoin</td>\n"
+"                                        <td><a href=\"https://coinomi.com/\" title=\"Coinomi\" target=\"_blank\">Coinomi</a> | <a href=\"http://blackcoin.co/\" title=\"BlackCoin Website\" target=\"_blank\">More</a></td>\n"
+"                                    </tr>\n"
+"                                </table>"
+msgstr ""
+
+#: admin/options-init.php:1452
+msgid "You need the CryptoWoo HD Wallet Add-on to use this feature. %sGet it now!%s"
+msgstr ""
+
+#: admin/options-init.php:1460
+msgid "Electrum Daemon"
+msgstr ""
+
+#: admin/options-init.php:1462
+msgid ""
+"<p>Use the Electrum daemon JSON-RPC interface to look up transactions or to create payment requests in your Electrum wallet.\n"
+"                  You have to configure your client before using this feature.\n"
+"                  Refer to the <a href=\"http://docs.electrum.org/en/latest/merchant.html#requirements\" target=\"_blank\">Electrum Documentation</a> for more information.</p>\n"
+"                  <p><span class=\"cryptowoo-warning\"><strong>Please note:</strong> This is an experimental feature. Proceed with caution!</span></p>"
+msgstr ""
+
+#: admin/options-init.php:1474
+msgid "You need the CryptoWoo Electrum Daemon Add-on to use this feature. %sGet it now!%s"
+msgstr ""
+
+#: admin/options-init.php:1481
+msgid "Block.io"
+msgstr ""
+
+#: admin/options-init.php:1483
+msgid ""
+"Get your API keys in your <a href=\"http://block.io/\" target=\"_blank\">Block.io</a> Administration Console<br>\n"
+"                                 <strong>Create a dedicated Block.io account to handle payments for your store. <br>DO NOT use the same account for other purposes.</strong>"
+msgstr ""
+
+#: admin/options-init.php:1495
+#: admin/options-init.php:1512
+#: admin/options-init.php:1529
+msgid "HD wallet detected. If you want to use the Block.io online wallet, you need to remove the %s Extended Public Key. Using Block.io only as processing API will work fine."
+msgstr ""
+
+#: admin/options-init.php:1500
+#: admin/options-init.php:1517
+#: admin/options-init.php:1534
+msgid "Remove to disable the currency"
+msgstr ""
+
+#: admin/options-init.php:1502
+#: admin/options-init.php:1519
+#: admin/options-init.php:1536
+msgid "<a href=\"http://block.io/\" target=\"_blank\">Block.io</a> %s API Key"
+msgstr ""
+
+#: admin/options-init.php:1544
+msgid "Archive Block.io Addresses"
+msgstr ""
+
+#: admin/options-init.php:1545
+msgid ""
+"CryptoWoo will archive up to 100 addresses with a zero balance once every 24 hours.\n"
+"                                        <br>Archiving of Block.io wallet addresses helps you control account bloat and enhances the operational security by allowing you to move coins to new addresses without clogging your API call responses."
+msgstr ""
+
+#: admin/options-init.php:1547
+msgid "Enable/Disable automatic archiving of empty addresses in your Block.io account."
+msgstr ""
+
+#: admin/options-init.php:1555
+msgid "TESTNET Currencies"
+msgstr ""
+
+#: admin/options-init.php:1558
+msgid "Accept BTC/DOGE testnet coins in your store. (testing purposes only!)"
+msgstr ""
+
+#: admin/options-init.php:1564
+msgid "Show Testnet Currency options"
+msgstr ""
+
+#: admin/options-init.php:1565
+msgid "Show/Hide Testnet Currencies"
+msgstr ""
+
+#: admin/options-init.php:1566
+msgid "Remove the API key to disable the currency."
+msgstr ""
+
+#: admin/options-init.php:1579
+#: admin/options-init.php:1602
+msgid "Please enter your %1$s Block.io API key above before you enable the %1$s Testnet."
+msgstr ""
+
+#: admin/options-init.php:1584
+#: admin/options-init.php:1607
+msgid "This is obtained through the <a href=\"http://block.io/\" target=\"_blank\">Block.io</a> Administration Console - %s API-Key"
+msgstr ""
+
+#: admin/options-init.php:1632
+msgid "Disable \"Shifty\" button"
+msgstr ""
+
+#: admin/options-init.php:1634
+msgid "With %s as destination currency (receive %s from Shapeshift)"
+msgstr ""
+
+#: admin/options-init.php:1694
+msgid "Other"
+msgstr ""
+
+#: admin/options-init.php:1704
+msgid "Payment Processing"
+msgstr ""
+
+#: admin/options-init.php:1712
+msgid "Cron Scheduling"
+msgstr ""
+
+#: admin/options-init.php:1714
+msgid "We are using the default WordPress scheduled events manager (\"WP cron\") to update the exchange rates and process open orders. "
+msgstr ""
+
+#: admin/options-init.php:1721
+msgid "WP-Cron interval"
+msgstr ""
+
+#: admin/options-init.php:1722
+msgid ""
+"Choose an interval for the payment processing and the exchange rates.\n"
+"                                 To save resources, exchange rates will be updated maximum once per minute.\n"
+"                                 %sDon't use intervals below one minute together with zeroconf transactions if you expect to have multiple open orders simultaneously as you could run into API request limits.%s"
+msgstr ""
+
+#: admin/options-init.php:1726
+#: admin/options-init.php:1727
+#: admin/class-cw-adminmain.php:66
+#: admin/class-cw-adminmain.php:70
+msgid "Once every %s seconds"
+msgstr ""
+
+#: admin/options-init.php:1728
+#: admin/options-init.php:1729
+#: admin/options-init.php:1730
+#: admin/class-cw-adminmain.php:74
+#: admin/class-cw-adminmain.php:78
+#: admin/class-cw-adminmain.php:82
+msgid "Once every minute"
+msgid_plural "Once every %s minutes"
+msgstr[0] ""
+
+#: admin/options-init.php:1734
+msgid "<strong>Please Note:</strong> Follow the cron setup instructions below to make sure everything is running smoothly."
+msgstr ""
+
+#: admin/options-init.php:1741
+msgid "Single Cronjob Setup Info"
+msgstr ""
+
+#: admin/options-init.php:1753
+msgid "Multiple Cronjob Setup Info"
+msgstr ""
+
+#: admin/options-init.php:1765
+msgid "Confirmations"
+msgstr ""
+
+#: admin/options-init.php:1767
+msgid ""
+"<p>Generally, it is recommended to accept transactions only after they received at least one confirmation in the blockchain.</p><p>Accepting unconfirmed transactions as payment (=\"0 Confirmations\") allows for very fast payment completion but makes high value transactions susceptible to <a target=\"_blank\" title=\"Read more about double spending in the Bitcoin wiki.\" href=\"https://en.bitcoin.it/wiki/Double-spending\">double spending</a> attacks.\n"
+"                            <br>Use the order amount threshold and the transaction confidence value settings below to adjust the plugin behavior to the level of fraud risk you are willing to take.\n"
+"                            <br>This risk is lower if you are selling only physical items and manually verify the payment in your favorite block explorer before shipping the order.\n"
+"                            <br>Please note that processing zeroconf transactions requires an additional API call for each open order so you may run into API request limits if you are processing multiple open orders simultaneously.</p>"
+msgstr ""
+
+#: admin/options-init.php:1777
+#: admin/options-init.php:1823
+#: admin/options-init.php:1858
+#: admin/options-init.php:1893
+msgid "%s Minimum Confirmations"
+msgstr ""
+
+#: admin/options-init.php:1778
+#: admin/options-init.php:1824
+#: admin/options-init.php:1859
+#: admin/options-init.php:1894
+msgid "Minimum number of confirmations for <strong>%s</strong> transactions - %s Confirmation Threshold"
+msgstr ""
+
+#: admin/options-init.php:1789
+#: admin/options-init.php:1835
+#: admin/options-init.php:1870
+msgid "BlockCypher token required"
+msgstr ""
+
+#: admin/options-init.php:1795
+#: admin/options-init.php:1841
+#: admin/options-init.php:1876
+msgid "Please enter your BlockCypher token in the \"Blockchain Access\" tab to use the BlockCypher confidence metric or set the \"Transaction Confidence\" option to zero."
+msgstr ""
+
+#: admin/options-init.php:1800
+msgid "No transaction confidence metrics available via smartbit API"
+msgstr ""
+
+#: admin/options-init.php:1802
+msgid "Using chain.so transaction confidence metrics instead."
+msgstr ""
+
+#: admin/options-init.php:1811
+#: admin/options-init.php:1846
+#: admin/options-init.php:1881
+msgid "No confidence metrics available"
+msgstr ""
+
+#: admin/options-init.php:1813
+#: admin/options-init.php:1848
+#: admin/options-init.php:1883
+msgid "You may want to enable the third party confidence metrics at the bottom of this page to reduce your risk of double-spend attacks against your custom processing API."
+msgstr ""
+
+#: admin/options-init.php:1902
+msgid "Zeroconf Threshold"
+msgstr ""
+
+#: admin/options-init.php:1904
+msgid ""
+"The maximum order amount in %s for which you want to accept unconfirmed transactions (= Transactions that have been broadcasted to the network but are not yet included in the block chain.)\n"
+"                                    If the order amount is higher than the threshold, the plugin will require at least one confirmation.\n"
+"                                    When set to \"0\" the plugin will accept unconfirmed transactions regardless of the order amount (not recommended)."
+msgstr ""
+
+#: admin/options-init.php:1913
+#: admin/options-init.php:1934
+#: admin/options-init.php:1955
+msgid "%s zeroconf threshold (%s)"
+msgstr ""
+
+#: admin/options-init.php:1928
+#: admin/options-init.php:1949
+#: admin/options-init.php:1970
+msgid "%s Zeroconf Threshold Disabled"
+msgstr ""
+
+#: admin/options-init.php:1929
+#: admin/options-init.php:1950
+#: admin/options-init.php:1971
+#: admin/options-init.php:2021
+#: admin/options-init.php:2052
+#: admin/options-init.php:2082
+msgid "This option is disabled because you do not accept unconfirmed %s payments."
+msgstr ""
+
+#: admin/options-init.php:1999
+msgid "Transaction Confidence"
+msgstr ""
+
+#: admin/options-init.php:2001
+msgid ""
+"To mitigate the risk of unconfirmed transactions, CryptoWoo only accepts transactions with a \"Transaction Confidence\" of or above the value set below. This rating is calculated by the API provider.\n"
+"                            Transaction Confidence is basically a rating for the network's belief in the probability that a specific transaction will be included in the next block that is mined. More details can be found in the documentation of the respective providers BlockCypher or Block.io.\n"
+"                            If a double spend is detected for an unconfirmed transaction, its confidence rating falls to 0 and the order status changes to \"failed\"."
+msgstr ""
+
+#: admin/options-init.php:2008
+msgid "\"Raw\" Zeroconf"
+msgstr ""
+
+#: admin/options-init.php:2011
+msgid "To accept unconfirmed transaction without any further security checks as soon as they are seen on the network, set the confidence slider to \"0\". %sBeware that this opens you up to double-spend attacks and the chance that a transaction never receives any confirmation.%s"
+msgstr ""
+
+#: admin/options-init.php:2020
+#: admin/options-init.php:2051
+#: admin/options-init.php:2081
+msgid "%s Transaction Confidence Disabled"
+msgstr ""
+
+#: admin/options-init.php:2026
+msgid "Be careful!"
+msgstr ""
+
+#: admin/options-init.php:2028
+#: admin/options-init.php:2071
+#: admin/options-init.php:2101
+msgid "Accepting transactions with a low confidence value increases your exposure to double-spend attacks. Only proceed if you don't automatically deliver your products and know what you're doing."
+msgstr ""
+
+#: admin/options-init.php:2034
+#: admin/options-init.php:2057
+#: admin/options-init.php:2087
+msgid "%s transaction confidence (%s)"
+msgstr ""
+
+#: admin/options-init.php:2069
+#: admin/options-init.php:2099
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: admin/options-init.php:2107
+msgid "Third Party Confidence Metrics"
+msgstr ""
+
+#: admin/options-init.php:2108
+msgid "Enable this to use the chain.so confidence metrics when accepting zeroconf transactions with your custom Bitcoin, Litecoin, or Dogecoin API."
+msgstr ""
+
+#: admin/options-init.php:2116
+msgid "Make sure the root URL of the API has a trailing slash ( / )."
+msgstr ""
+
+#: admin/options-init.php:2120
+msgid "Blockchain Access"
+msgstr ""
+
+#: admin/options-init.php:2122
+msgid ""
+"To find out if we have received a payment for an order, we have to query transaction data from the currency's block chain.\n"
+"                          If your store exceeds the request limits of the selected API, a fallback will be used and the polling interval will automatically slow down for a while before it goes back to the selected interval.\n"
+"                          Please note that you have to trust the API provider to deliver honest data. To further improve the privacy and security we recommend to use your own %1$sEsplora%3$s or %2$sInsight API%3$s instance for transaction verification."
+msgstr ""
+
+#: admin/options-init.php:2131
+#: admin/options-init.php:2191
+#: admin/options-init.php:2233
+#: admin/options-init.php:2278
+msgid "%s Processing API"
+msgstr ""
+
+#: admin/options-init.php:2132
+#: admin/options-init.php:2192
+#: admin/options-init.php:2234
+#: admin/options-init.php:2279
+msgid "Choose the API provider you want to use to look up %s payments."
+msgstr ""
+
+#: admin/options-init.php:2140
+msgid "Custom Insight (no testnet)"
+msgstr ""
+
+#: admin/options-init.php:2143
+#: admin/options-init.php:2200
+#: admin/options-init.php:2235
+msgid "If you use CryptoWoo with a Block.io account, we recommend you also select Block.io here."
+msgstr ""
+
+#: admin/options-init.php:2158
+#: admin/options-init.php:2215
+#: admin/options-init.php:2258
+msgid "Please enter a valid URL in the field below to use a custom %s processing API"
+msgstr ""
+
+#: admin/options-init.php:2163
+#: admin/options-init.php:2220
+#: admin/options-init.php:2264
+#: admin/options-init.php:2318
+msgid "%s Insight API URL"
+msgstr ""
+
+#: admin/options-init.php:2164
+#: admin/options-init.php:2221
+#: admin/options-init.php:2265
+msgid "Connect to any %sInsight API%s instance."
+msgstr ""
+
+#: admin/options-init.php:2165
+#: admin/options-init.php:2222
+#: admin/options-init.php:2266
+#: admin/options-init.php:2320
+msgid "The root URL of the API instance:%sLink to address:%shttps://insight.bitpay.com/api/addr/12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX%sRoot URL: %shttps://insight.bitpay.com/api/%s"
+msgstr ""
+
+#: admin/options-init.php:2170
+#: admin/options-init.php:2184
+msgid "Invalid Bitcoin API URL"
+msgstr ""
+
+#: admin/options-init.php:2177
+msgid "%s Esplora API URL"
+msgstr ""
+
+#: admin/options-init.php:2178
+msgid "Enter the The root URL of the API instance to connect to any %sEsplora API%s instance."
+msgstr ""
+
+#: admin/options-init.php:2179
+msgid "%sLink to address:%shttps://blockstream.info/api/address/12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX%sRoot URL: %shttps://blockstream.info/api/%sUse \"%s\" as placeholder for testnet and liquid endpoint support (=/api/, /testnet/api/, /liquid/api/)"
+msgstr ""
+
+#: admin/options-init.php:2194
+#: admin/options-init.php:2237
+msgid "Block.io (Enter API keys in \"Wallet Settings\")"
+msgstr ""
+
+#: admin/options-init.php:2195
+msgid "BlockCypher.com (no DOGE testnet)"
+msgstr ""
+
+#: admin/options-init.php:2197
+#: admin/options-init.php:2241
+msgid "Custom (no testnet)"
+msgstr ""
+
+#: admin/options-init.php:2226
+msgid "Invalid Dogecoin API URL"
+msgstr ""
+
+#: admin/options-init.php:2238
+msgid "BlockCypher.com"
+msgstr ""
+
+#: admin/options-init.php:2240
+msgid "insight.litecore.io"
+msgstr ""
+
+#: admin/options-init.php:2270
+msgid "Invalid Litecoin API URL"
+msgstr ""
+
+#: admin/options-init.php:2283
+msgid "cryptoID.info (no fallback)"
+msgstr ""
+
+#: admin/options-init.php:2296
+msgid "cryptoID API Key required"
+msgstr ""
+
+#: admin/options-init.php:2300
+msgid "Please enter your cryptoID API key below. Otherwise payment data will be delayed by up to 6 hours.%shttps://chainz.cryptoid.info/api.dws%s"
+msgstr ""
+
+#: admin/options-init.php:2306
+#: admin/options-init.php:2332
+msgid "%sMore info%s"
+msgstr ""
+
+#: admin/options-init.php:2307
+msgid "cryptoID API Key (required)"
+msgstr ""
+
+#: admin/options-init.php:2308
+msgid "Use the API token from your %sCryptoID%s account."
+msgstr ""
+
+#: admin/options-init.php:2319
+msgid "Connect to any %sBlacksight API%s instance. For installation and configuration instructions please refer to the README in the Blacksight repository on GitHub."
+msgstr ""
+
+#: admin/options-init.php:2324
+msgid "Invalid BlackCoin API URL"
+msgstr ""
+
+#: admin/options-init.php:2333
+msgid "BlockCypher Token (optional)"
+msgstr ""
+
+#: admin/options-init.php:2334
+msgid "Use the API token from your %sBlockCypher%s account."
+msgstr ""
+
+#: admin/options-init.php:2341
+msgid "API Resource Control"
+msgstr ""
+
+#: admin/options-init.php:2366
+msgid "Processing API Fallback"
+msgstr ""
+
+#: admin/options-init.php:2367
+msgid "Use a fallback API to process the payments in case the one selected above fails. Retry the originally selected API upon beginning of the next hour."
+msgstr ""
+
+#: admin/options-init.php:2368
+msgid "%sPlease Note:%s If you disable this and your selected API fails repeatedly, orders may time out even though they received a payment."
+msgstr ""
+
+#: admin/options-init.php:2374
+msgid "Prevent BlockCypher Rate Limiting"
+msgstr ""
+
+#: admin/options-init.php:2375
+msgid "Slows down the cron interval depending on the number of concurrent orders and the time until the limit counter resets. This setting tries to prevent hitting BlockCypher API request limits when several orders are in the queue at the same time but may increase the order completion time of these orders."
+msgstr ""
+
+#: admin/options-init.php:2376
+msgid "If you are frequently hitting the limit you may want to upgrade to a paid BlockCypher account or enable the \"Processing API Fallback\" to use a different processing API until the BlockCypher request limits have been reset. Check the %scryptowoo-tx-update.log%s to find out if your store is hitting the limit."
+msgstr ""
+
+#: admin/options-init.php:2382
+msgid "Advanced Options"
+msgstr ""
+
+#: admin/options-init.php:2391
+msgid "Order Expiration Time (Minutes)"
+msgstr ""
+
+#: admin/options-init.php:2392
+msgid ""
+"The %sduration in minutes%s after which the order expires and no further payment will be accepted.%s\n"
+"                                        %sNote%s: If the full amount is seen on the network (confirmed & unconfirmed) but the payment is not receiving the required confirmations within this limit,\n"
+"                                        the \"Network Congestion Handling\" option below can be used to put orders on hold that take too long to confirm."
+msgstr ""
+
+#: admin/options-init.php:2395
+msgid ""
+"%sYour exchange rate volatility risk increases the more time you give your customers to pay for their order.%s\n"
+"                                        If you set this value low, your customers will have less time to pay before the order status is set to cancelled.%s\n"
+"                                        Maximum value: 4320 minutes (= 3 days) "
+msgstr ""
+
+#: admin/options-init.php:2406
+msgid "Show/Hide Countdown"
+msgstr ""
+
+#: admin/options-init.php:2407
+msgid "Hide the countdown and the progress bar from the payment page."
+msgstr ""
+
+#: admin/options-init.php:2408
+msgid "If you set this to \"Off\", the customer will not see how much time is left to send the payment before the order expires. Hiding the countdown is generally not recommended but it may be useful if you have configured a very long \"Order Expiration Time\" and do not want to rush your customer.%sNote: The \"Order Expiration Time\" setting will be honoured regardless if the countdown is visible or not.%s"
+msgstr ""
+
+#: admin/options-init.php:2414
+msgid "Network Congestion Handling (Hours)"
+msgstr ""
+
+#: admin/options-init.php:2415
+msgid ""
+"The <strong>duration in hours</strong> after which the order is set to \"on hold\" even though the full amount is seen on the network but the transaction does not receive the required confirmations.<br>\n"
+"                                        <strong>Note: This applies only to orders where the full amount is seen on the network but does not get confirmed.\n"
+"                                        All orders with no or insufficient payments (=less than the lower boundary of the \"Underpayment Notice Range\") get cancelled after the \"Order Expiration Time\".</strong>"
+msgstr ""
+
+#: admin/options-init.php:2418
+msgid ""
+"If you leave this at \"0\", all orders that have the full amount incoming will stay open until the transaction confirms.\n"
+"                                        This may be helpful when transactions take longer than usual before they are included in a block because the transaction fees are too low.<br>\n"
+"                                        <strong>The order status will be set to \"cancelled\" if the transaction is dropped from the memory pool of the selected processing API.</strong>"
+msgstr ""
+
+#: admin/options-init.php:2430
+msgid "Underpayments"
+msgstr ""
+
+#: admin/options-init.php:2433
+msgid "Handling of underpayments"
+msgstr ""
+
+#: admin/options-init.php:2439
+msgid "Underpayment Notice Range (%)"
+msgstr ""
+
+#: admin/options-init.php:2440
+msgid ""
+"The range expressed as a percentage of the order amount in which the customer receives a notification and is given another \"Order Expiration Time\" to pay for the order.\n"
+"                                       %sIf the customer fails to send the missing amount within the extended time, the order will be removed from the background polling queue and the order status will change to \"On Hold\".%s"
+msgstr ""
+
+#: admin/options-init.php:2442
+msgid ""
+"A customer that sends more than the lower boundary but less than the upper boundary will be notified and the timeout will be extended.<br>\n"
+"                                        Examples:<br>- If you set the lower boundary to \"90\", a customer that sends more than 90% of the order amount will be notified and given more time to send the missing amount.<br>\n"
+"                                       - If you set the upper boundary to \"98\", an order will be completed even if the amount received is 2% lower than the amount due.<br>\n"
+"                                       - Set both values to \"100\" to disable underpayment handling completely. All orders that receive less than 100% of the amount will be set to \"cancelled\" after the \"Order Expiration Time\"."
+msgstr ""
+
+#: admin/options-init.php:2460
+msgid "Underpayment Notice Trigger"
+msgstr ""
+
+#: admin/options-init.php:2461
+msgid "Which event shall trigger the underpayment e-mail to the customer?"
+msgstr ""
+
+#: admin/options-init.php:2462
+msgid "If you have configured an \"Order Expiration Time\" of more than one hour, you may want to trigger the underpayment notice when the transaction that contains the insufficient amount receives the required number of confirmations instead of waiting until shortly before the \"Order Expiration Time\" is reached."
+msgstr ""
+
+#: admin/options-init.php:2464
+#: admin/options-init.php:2465
+msgid "One minute before order expiration"
+msgid_plural "%d minutes before order expiration"
+msgstr[0] ""
+
+#: admin/options-init.php:2467
+msgid "Insufficient amount confirmed in blockchain"
+msgstr ""
+
+#: admin/options-init.php:2476
+msgid "Overpayments"
+msgstr ""
+
+#: admin/options-init.php:2479
+msgid "Handling of overpayments"
+msgstr ""
+
+#: admin/options-init.php:2485
+msgid "Overpayment Buffer (%)"
+msgstr ""
+
+#: admin/options-init.php:2486
+msgid "The overpayment buffer is the percentage up to which the received amount may exceed the order amount before it is considered as an overpayment."
+msgstr ""
+
+#: admin/options-init.php:2487
+msgid ""
+"This is useful to ignore slight overpayments where the customer rounds his transaction amount up.<br>\n"
+"                                       If you set this to \"0\", all orders that receive more than the exact amount will trigger an overpayment."
+msgstr ""
+
+#: admin/options-init.php:2499
+msgid "Overpayment Message Text"
+msgstr ""
+
+#: admin/options-init.php:2501
+#: includes/class.formatting.php:818
+msgid "You paid {{AMOUNT_DIFF}} {{PAYMENT_CURRENCY}} too much. Please get in touch with us."
+msgstr ""
+
+#: admin/options-init.php:2502
+msgid "Example"
+msgstr ""
+
+#: admin/options-init.php:2502
+msgid "You paid {{PERCENTAGE_PAID}}% ({{AMOUNT_DIFF}} {{PAYMENT_CURRENCY}}) too much. You will receive a refund to {{REFUND_ADDRESS}} within 48 hours."
+msgstr ""
+
+#: admin/options-init.php:2502
+msgid "You paid 2% (0.03 BTC) too much. You will receive a refund to 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa within 48 hours."
+msgstr ""
+
+#: admin/options-init.php:2519
+msgid "Pricing"
+msgstr ""
+
+#: admin/options-init.php:2527
+msgid "Preferred Exchanges"
+msgstr ""
+
+#: admin/options-init.php:2530
+msgid ""
+"If there is a problem with the preferred exchange's API, CryptoWoo uses the lowest exchange rate provided by chain.so\n"
+"                                        (the rate that results in the highest amount of digital currency for the given price).\n"
+"                                        Additionally, if an error or has been detected, the plugin notifies the administrator by sending an e-mail to %s%s%s"
+msgstr ""
+
+#: admin/options-init.php:2539
+msgid "Exchange Rate Providers"
+msgstr ""
+
+#: admin/options-init.php:2564
+msgid "Choose the exchange you prefer to use to calculate the <strong>Bitcoin to %s exchange rate</strong>."
+msgstr ""
+
+#: admin/options-init.php:2577
+msgid "Bitcoinaverage exchange rates will be cached for ~10 minutes to stay below the request limits for free accounts"
+msgstr ""
+
+#: admin/options-init.php:2585
+msgid "Bitcoincharts.com exchange rates will be cached for ~15 minutes to stay below the request limits for free accounts"
+msgstr ""
+
+#: admin/options-init.php:2590
+msgid "Leave empty to connect to the clearnet URL"
+msgstr ""
+
+#: admin/options-init.php:2592
+msgid "Connect to blockchain.info's hidden service (blockchainbdgpzk.onion) via SOCKS5 proxy"
+msgstr ""
+
+#: admin/options-init.php:2601
+msgid "Choose the exchange you prefer to use to calculate the <strong>Dogecoin to Bitcoin exchange rate</strong>."
+msgstr ""
+
+#: admin/options-init.php:2602
+#: admin/options-init.php:2620
+#: admin/options-init.php:2640
+msgid "Cross-calculated via BTC/%s"
+msgstr ""
+
+#: admin/options-init.php:2656
+msgid "Decimals"
+msgstr ""
+
+#: admin/options-init.php:2658
+msgid "Select the number of decimals for amounts in each of the currencies. This option also overrides the decimals option of the WooCommerce Currency Switcher plugin."
+msgstr ""
+
+#: admin/options-init.php:2712
+msgid "Rate Multiplier (Discount & Surcharge)"
+msgstr ""
+
+#: admin/options-init.php:2715
+msgid ""
+"Use the rate multiplier to give a discount to customers purchasing with digital currencies by setting the multiplier to value smaller than 1.00 or to compensate merchant's loss to fees when converting to local currency (by setting a value higher than 1.00).<br>\n"
+"                            Example: 1.05 - will add extra 5% to the total price of the order in the selected digital currency."
+msgstr ""
+
+#: admin/options-init.php:2721
+msgid "Show/Hide Discounted Rate"
+msgstr ""
+
+#: admin/options-init.php:2722
+msgid "Display the discount percentage on the checkout page."
+msgstr ""
+
+#: admin/options-init.php:2723
+msgid "Show/Hide Does not display surcharges."
+msgstr ""
+
+#: admin/options-init.php:2729
+#: admin/options-init.php:2743
+#: admin/options-init.php:2757
+#: admin/options-init.php:2771
+msgid "%s exchange rate multiplier"
+msgstr ""
+
+#: admin/options-init.php:2730
+#: admin/options-init.php:2744
+#: admin/options-init.php:2758
+#: admin/options-init.php:2772
+msgid "Extra multiplier to apply when calculating %s prices."
+msgstr ""
+
+#: admin/options-init.php:2785
+msgid "Discount Notice"
+msgstr ""
+
+#: admin/options-init.php:2786
+msgid "Use this field to notify your customers about an eventual discount when paying with digital currencies."
+msgstr ""
+
+#: admin/options-init.php:2787
+msgid "Coming soon: Use this field to notify your customers about an eventual discount when paying with digital currencies."
+msgstr ""
+
+#: admin/options-init.php:2799
+msgid "WooCommerce Currency Switcher Plugin"
+msgstr ""
+
+#: admin/options-init.php:2812
+msgid "Price Rewriting with \"WooCommerce Currency Switcher\" plugin"
+msgstr ""
+
+#: admin/options-init.php:2813
+msgid "<p>Just install and enable the plugin and enable the option below to add the rates to the switcher plugin dropdown. Requires <a href=\"https://wordpress.org/plugins/woocommerce-currency-switcher/\" title=\"WooCommerce Currency Switcher\" target=\"_blank\">WooCommerce Currency Switcher</a></p>"
+msgstr ""
+
+#: admin/options-init.php:2818
+msgid "Add CryptoWoo Rates to WooCommerce Currency Switcher"
+msgstr ""
+
+#: admin/options-init.php:2819
+msgid "CryptoWoo uses the rates of the \"Preferred Exchange\" provider to calculate the order amount in cryptocurrency. Enable this option to add the CryptoWoo rates to the WooCommerce Currency Switcher plugin."
+msgstr ""
+
+#: admin/options-init.php:2820
+msgid "%sPlease Note:%s If you disable this you have to add the currencies to the WooCommerce Currency Switcher manually and rely on it to update the exchange rate it is using."
+msgstr ""
+
+#: admin/options-init.php:2826
+msgid "Force checkout in fiat currency"
+msgstr ""
+
+#: admin/options-init.php:2827
+msgid "When the customer places the order, the currency that is selected in WooCommerce Currency Switcher is used as the WooCommerce order currency. Enable this to force the order currency to be in the default WooCommerce store currency, if the selected currency is a cryptocurrency."
+msgstr ""
+
+#: admin/options-init.php:2828
+msgid "Enable to force the checkout to be in the WooCommerce store currency if the selected currency in the switcher is a cryptocurrency."
+msgstr ""
+
+#: admin/options-init.php:2835
+msgid "Default payment currency is selected currency"
+msgstr ""
+
+#: admin/options-init.php:2836
+msgid "Normally the customer has to select the payment currency in the checkout. The customer may have selected a cryptocurrency in the currency switcher. In that case the pre-selected payment currency will be the cryptocurrency that is selected in the currency switcher."
+msgstr ""
+
+#: admin/options-init.php:2837
+msgid "Enable to pre-select the CryptoWoo payment currency if the selected currency in the switcher is a cryptocurrency."
+msgstr ""
+
+#: admin/options-init.php:2883
+msgid "Display Settings"
+msgstr ""
+
+#: admin/options-init.php:2892
+msgid "Show/Hide Price Table"
+msgstr ""
+
+#: admin/options-init.php:2893
+msgid "Add a digital currency price estimate above the product short description on single product pages."
+msgstr ""
+
+#: admin/options-init.php:2900
+#: admin/options-init.php:2946
+#: admin/options-init.php:2987
+msgid "%s Block Explorer"
+msgstr ""
+
+#: admin/options-init.php:2901
+#: admin/options-init.php:2947
+#: admin/options-init.php:2988
+msgid "Choose the block explorer you want to use for links to the %s blockchain."
+msgstr ""
+
+#: admin/options-init.php:2904
+#: admin/options-init.php:2950
+#: admin/options-init.php:2991
+msgid "Autoselect by processing API"
+msgstr ""
+
+#: admin/options-init.php:2914
+#: admin/options-init.php:2955
+#: admin/options-init.php:2996
+msgid "Custom (Please enter URL below)"
+msgstr ""
+
+#: admin/options-init.php:2928
+#: admin/options-init.php:2969
+#: admin/options-init.php:3010
+msgid "Please enter a valid URL in the field below to use a custom %s block explorer"
+msgstr ""
+
+#: admin/options-init.php:2933
+#: admin/options-init.php:2974
+#: admin/options-init.php:3015
+msgid "Custom %s Block Explorer URL"
+msgstr ""
+
+#: admin/options-init.php:2934
+#: admin/options-init.php:2975
+#: admin/options-init.php:3016
+msgid "Link to a block explorer of your choice."
+msgstr ""
+
+#: admin/options-init.php:2935
+#: admin/options-init.php:2976
+#: admin/options-init.php:3017
+msgid "The URL to the page that displays the information for a single address.%sPlease add %s{{ADDRESS}}%s as placeholder for the cryptocurrency address in the URL.%s"
+msgstr ""
+
+#: admin/options-init.php:2940
+#: admin/options-init.php:2981
+#: admin/options-init.php:3022
+msgid "Invalid custom block explorer URL"
+msgstr ""
+
+#: admin/options-init.php:3029
+msgid "Debugging"
+msgstr ""
+
+#: admin/options-init.php:3043
+msgid "Debug logging is disabled"
+msgstr ""
+
+#: admin/options-init.php:3053
+msgid "Debug logging is enabled. Make sure to disable it after you are done."
+msgstr ""
+
+#: admin/options-init.php:3058
+msgid "Enable Debug Logging"
+msgstr ""
+
+#: admin/options-init.php:3059
+msgid "Add event log files to the WooCommerce \"System Status\" log file directory. %s%s%s"
+msgstr ""
+
+#: admin/options-init.php:3060
+msgid "<a href=\"%s\" target=\"_blank\" title=\"Open WooCommerce log viewer in new tab\">Click here to view the logs</a>"
+msgstr ""
+
+#: admin/options-init.php:3066
+msgid "Log Verbosity"
+msgstr ""
+
+#: admin/options-init.php:3067
+msgid "Select which message severity and up to log."
+msgstr ""
+
+#: admin/options-init.php:3072
+#: admin/class-cw-adminmain.php:215
+msgid "Emergency: System is unusable."
+msgstr ""
+
+#: admin/options-init.php:3073
+#: admin/class-cw-adminmain.php:216
+msgid "Alert: Action must be taken immediately."
+msgstr ""
+
+#: admin/options-init.php:3074
+#: admin/class-cw-adminmain.php:217
+msgid "Critical: Critical conditions."
+msgstr ""
+
+#: admin/options-init.php:3075
+#: admin/class-cw-adminmain.php:218
+msgid "Error: Error conditions."
+msgstr ""
+
+#: admin/options-init.php:3076
+#: admin/class-cw-adminmain.php:219
+msgid "Warning: Warning conditions."
+msgstr ""
+
+#: admin/options-init.php:3077
+#: admin/class-cw-adminmain.php:220
+msgid "Notice: Normal but significant condition."
+msgstr ""
+
+#: admin/options-init.php:3078
+#: admin/class-cw-adminmain.php:221
+msgid "Info: Informational messages."
+msgstr ""
+
+#: admin/options-init.php:3079
+#: admin/class-cw-adminmain.php:222
+msgid "Debug: Debug-level messages."
+msgstr ""
+
+#: admin/options-init.php:3089
+msgid "Rate Error Counter"
+msgstr ""
+
+#: admin/options-init.php:3090
+msgid "Display a admin notice with the exchange rate error count since the last counter reset."
+msgstr ""
+
+#: admin/options-init.php:3091
+msgid "The error counter is independent from the detailed error data visualization below."
+msgstr ""
+
+#: admin/options-init.php:3097
+msgid "Disable exchange rate error warning"
+msgstr ""
+
+#: admin/options-init.php:3098
+msgid "Exchange rate error notifications are not sent when failing to get exchange rates."
+msgstr ""
+
+#: admin/options-init.php:3099
+msgid "When enabling this setting be aware that no exchange rate error notifications will be sent."
+msgstr ""
+
+#: admin/options-init.php:3105
+msgid "Visualize Exchange Rate Errors"
+msgstr ""
+
+#: admin/options-init.php:3106
+msgid "%sPlease note:%s This feature uses the Google Charts libraries.%shttps://developers.google.com/chart/%s"
+msgstr ""
+
+#: admin/options-init.php:3107
+msgid "Collect additional details about the exchange rate errors and display them on the %s%s%sdatabase actions%s page."
+msgstr ""
+
+#: admin/options-init.php:3113
+msgid "Keep Tables"
+msgstr ""
+
+#: admin/options-init.php:3114
+msgid "Removing the tables will not have an influence on the payment details for previous orders."
+msgstr ""
+
+#: admin/options-init.php:3115
+msgid "Keep CryptoWoo <strong>tables</strong> when uninstalling the plugin."
+msgstr ""
+
+#: admin/options-init.php:3121
+msgid "Keep Settings"
+msgstr ""
+
+#: admin/options-init.php:3122
+msgid "Keep CryptoWoo <strong>settings</strong> when uninstalling the plugin."
+msgstr ""
+
+#: admin/error-charts.php:151
+msgid "Exchange rate error charts"
+msgstr ""
+
+#: admin/error-charts.php:152
+msgid "No data available. Enable the error visualization on the \"Debugging\" tab in the settings to start collecting exchange rate error data."
+msgstr ""
+
+#: admin/admin-menus.php:19
+msgid "View CryptoWoo Installation Tutorial"
+msgstr ""
+
+#: admin/admin-menus.php:19
+msgid "Getting Started"
+msgstr ""
+
+#: admin/admin-menus.php:20
+msgid "Visit Customer Help Desk"
+msgstr ""
+
+#: admin/admin-menus.php:20
+msgid "Knowledgebase & Support"
+msgstr ""
+
+#: admin/admin-menus.php:35
+msgid "Database Actions"
+msgstr ""
+
+#: admin/admin-menus.php:59
+msgid "View address on the"
+msgstr ""
+
+#: admin/admin-menus.php:59
+msgid "blockchain"
+msgstr ""
+
+#: admin/class-cw-versions.php:50
+msgid "%1$s%2$s has been disabled!%3$s Please install the latest version of the %2$s and re-enable the add-on on the WordPress plugins overview.%4$sNote: You will lose the settings for this add-on if you save the CryptoWoo plugin settings page while the add-on is disabled."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:127
+msgid "unpaid_addresses"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:130
+msgid "Transaction data unchanged - processing skipped"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:440
+msgid "Block.io address archival warning"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:442
+msgid "Hello Admin,%sCryptoWoo at %s has found an issue while archiving your addresses at Block.io:%s%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:622
+msgid "%sWe recommend you use an external cron via cPanel/crontab/Task Scheduler to trigger WP Cron to make sure that the orders are being processed and the rates are updated.%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:629
+#: admin/class-cw-adminmain.php:639
+msgid "%s# Additionally for intervals < 1 minute:%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:644
+msgid "# Make sure you create the file %1$swp-multisite-cron.php%2$s in %3$s as described at %4$s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:646
+msgid "</div></p><p>Explanation:<br>The example above consists of <strong>4 crontasks that are each executed every minute</strong>.<br>The 2nd, 3rd, and 4th cronjob will sleep for 15, 30, and 45 seconds before they trigger WP cron.<br>This results in a <strong>15 second interval</strong> between each WP cron execution <strong>instead of the smallest possible interval of one minute</strong> when using only one crontask.</p>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:647
+msgid "<p>The first crontask is enough if you set the cron interval to 60 seconds or higher. Refer to %sthe tutorial%s on our Help Desk for further information.</p><p><i class=\"fa fa-exclamation-triangle\"></i> After setting up the crontask(s) add <code>define('DISABLE_WP_CRON', true);</code> to your <code>/wp-config.php</code>.</p>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:679
+msgid "Activate WooCommerce Plugin"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:679
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:680
+#: admin/class-cw-adminmain.php:701
+msgid "Enable CryptoWoo Payment Gateway"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:685
+msgid "<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce has been deactivated or is not installed.<br>Go to the Plugins menu and make sure that the WooCommerce plugin is installed and activated. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:699
+msgid "CryptoWoo payment gateway has been disabled!"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:700
+msgid "Go to the CryptoWoo checkout settings to make sure the settings are correct and re-enable the CryptoWoo payment gateway."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:701
+#: admin/class-cw-adminmain.php:710
+msgid "Go to CryptoWoo Checkout Settings"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:713
+msgid "<b>CryptoWoo can't find the integrity check file!</b><br>Go to the CryptoWoo checkout settings and click the \"Save Changes\" button to re-create it."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:738
+msgid "<b>CryptoWoo has detected %s exchange rate update errors since %s.</b><br>Go to the CryptoWoo Database Maintenance page, reset the error counter and try to update the rates manually.<br>Generally, these errors may occur from time to time and the fallback solution will catch them, but if the exchange rate update constantly fails, please select a different Preferred Exchange API on the options page.<p>%s</p>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:754
+msgid "<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce is not installed.<br>Click here to install and activate the WooCommerce plugin. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:773
+msgid "<h4>Your CryptoWoo License Key will expire on <strong>%s</strong></h4> Renew your license now for a discount!<br>Your discount code: <strong>%s</strong>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:793
+msgid "%1$sGap limit may have been reached in your wallet for cryptocurrencies: %2$s%3$sSend a small payment to your latest wallet address to see more transactions.%4$s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:818
+msgid "Thanks for updating CryptoWoo! Please verify that your settings are correct and click the \"Save settings\" button."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:837
+msgid "<b>%s extension</b> seems not to be installed.<br>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:840
+msgid "Your current <b>PHP Version is %s</b>.<br>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:853
+msgid "%sYou need to have at least PHP version 5.6 with <a href=\"http://php.net/manual/en/gmp.installation.php\" target=\"_blank\">GMP</a>, and <a href=\"http://php.net/manual/en/curl.installation.php\" target=\"_blank\">cURL</a> extensions enabled to use CryptoWoo. <a href=\"https://www.cryptowoo.com/enable-required-php-extensions/?ref=cw_ext_error\" target=\"_blank\">More Info</a>"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:866
+msgid "%s%s%sCryptoWoo settings page%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:867
+msgid "%sImportant notice:%s During this CryptoWoo update we had to set the %s\"Payment Processing\" > \"Order Expiration Time\"%s back to the default value.%sIf you customized this setting before the update, please go to the %s and set it again."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:873
+msgid "Done"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:896
+msgid "%s%s payment processing configuration error%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:900
+msgid "Go to \"Payment Processing\" > \"Block Chain Access\" and make sure you have selected a \"Processing API\" provider. Otherwise CryptoWoo can not look up transactions in the block chain."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:933
+msgid "Unauthorized changes detected"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:936
+msgid "Hello Admin,%s on %s, CryptoWoo has detected an unauthorized change of your settings at %s.%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:939
+msgid "The CryptoWoo payment gateway has been disabled. From now on, open WooCommerce orders using CryptoWoo will not be completed and the payment method will not be available for new orders.%sPLEASE LOG IN AT %s TO CHANGE YOUR PASSWORDS AND API KEYS AS SOON AS POSSIBLE!%sSOMEONE ELSE MAY HAVE ACCESS TO THEM.%sValidation result:%s%s"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:941
+msgid "If you need help, please submit a ticket at http://cryptowoo.zendesk.com"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1025
+msgid "Payment data deleted"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1025
+msgid "Error deleting payment data"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1155
+msgid "Rate error counter has been reset."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1168
+msgid "Exchange rate table truncated successfully!"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1170
+msgid "There was a problem preparing the plugin table. Please try again."
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1186
+msgid "Payments table data has been reset!"
+msgstr ""
+
+#: admin/class-cw-adminmain.php:1188
+msgid "There was a problem resetting the payments table. Please try again."
+msgstr ""
+
+#: admin/debug.php:8
+msgid "Debug Information"
+msgstr ""
+
+#: admin/debug.php:9
+msgid "Please copy/paste the information below into your ticket when contacting support."
+msgstr ""
+
+#: admin/debug.php:31
+msgid "Unable to retrieve license info from server."
+msgstr ""
+
+#: admin/debug.php:51
+msgid "%s None"
+msgstr ""
+
+#: admin/debug.php:52
+msgid "%sExchange rate errors%s%s%s"
+msgstr ""
+
+#: admin/database-maintenance.php:14
+msgid "There was a problem inserting the live data. Please try again."
+msgstr ""
+
+#: admin/database-maintenance.php:21
+msgid "CryptoWoo Database Maintenance"
+msgstr ""
+
+#: admin/database-maintenance.php:23
+msgid "Update exchange rates in database"
+msgstr ""
+
+#: admin/database-maintenance.php:27
+msgid "Update Exchange Rate Data"
+msgstr ""
+
+#: admin/database-maintenance.php:29
+msgid "Reset Error Counter"
+msgstr ""
+
+#: admin/database-maintenance.php:67
+msgid "Process open orders"
+msgstr ""
+
+#: admin/database-maintenance.php:68
+msgid "Update incoming payments for open orders"
+msgstr ""
+
+#: admin/database-maintenance.php:68
+msgid "This will make a request to the selected block chain API, so better wait a while before clicking again!"
+msgstr ""
+
+#: admin/database-maintenance.php:69
+msgid "Process order data"
+msgstr ""
+
+#: admin/database-maintenance.php:69
+msgid "Check if any open orders have been paid or timed out."
+msgstr ""
+
+#: admin/database-maintenance.php:73
+msgid "Table reset"
+msgstr ""
+
+#: admin/database-maintenance.php:74
+msgid "Reset Exchange Rate Table"
+msgstr ""
+
+#: admin/database-maintenance.php:75
+msgid "Reset Payments Table"
+msgstr ""
+
+#: admin/database-maintenance.php:75
+msgid "This will remove all currently open orders from the queue."
+msgstr ""
+
+#: includes/class.formatting.php:84
+#: includes/class.formatting.php:182
+msgid "View address in block explorer"
+msgstr ""
+
+#: includes/class.formatting.php:248
+msgid "Exchange rates not found in database. Please refresh this page."
+msgstr ""
+
+#: includes/class.formatting.php:300
+msgid "%1$s(discounted %2$s%3$s)%4$s"
+msgstr ""
+
+#: includes/class.formatting.php:465
+msgid "Please select a currency"
+msgstr ""
+
+#: includes/class.formatting.php:479
+msgid "Payment Currency"
+msgstr ""
+
+#: includes/class.formatting.php:498
+msgid "Refund Address"
+msgstr ""
+
+#: includes/class.formatting.php:504
+msgid "powered by CryptoWoo"
+msgstr ""
+
+#: includes/class.formatting.php:516
+msgid "Please select your payment currency from the dropdown list."
+msgstr ""
+
+#: includes/class.formatting.php:523
+msgid "Please enter a refund address."
+msgstr ""
+
+#: includes/class.formatting.php:525
+msgid "Your refund address seems to be invalid. Make sure you copy and paste the whole address."
+msgstr ""
+
+#: includes/class.formatting.php:653
+msgid "The price quote for your order has expired. Please click the PAY button below to get a new quote."
+msgstr ""
+
+#: includes/class.formatting.php:662
+msgid "This order has expired. Please contact us as insufficient payment has been sent."
+msgstr ""
+
+#: includes/class.formatting.php:665
+#: includes/class.order-processing.php:1088
+#: includes/class.order-processing.php:1372
+msgid "This order has expired. Please try again or contact us if you have already sent a payment. Reference: %d"
+msgstr ""
+
+#: includes/class.formatting.php:677
+#: includes/class.formatting.php:764
+msgid "%s%s Payment Details%s"
+msgstr ""
+
+#: includes/class.formatting.php:678
+#: includes/class.formatting.php:765
+msgid "Your order total: %s %s%s"
+msgstr ""
+
+#: includes/class.formatting.php:679
+#: includes/class.formatting.php:766
+msgid "Amount received: %s %s%s"
+msgstr ""
+
+#: includes/class.formatting.php:683
+msgid "Amount unconfirmed: %s %s%s"
+msgstr ""
+
+#: includes/class.formatting.php:690
+#: includes/class.formatting.php:692
+#: includes/class.formatting.php:775
+msgid "Payment address"
+msgstr ""
+
+#: includes/class.formatting.php:690
+#: includes/class.formatting.php:775
+msgid "Payment address on the %s blockchain"
+msgstr ""
+
+#: includes/class.formatting.php:702
+msgid "Amount missing: %s %s%s"
+msgstr ""
+
+#: includes/class.formatting.php:708
+msgid "Please send the missing amount to the address above. You will receive an email when your payment is fully confirmed."
+msgstr ""
+
+#: includes/class.formatting.php:712
+msgid " and has been put on hold. Please contact us."
+msgstr ""
+
+#: includes/class.formatting.php:712
+msgid ". Please try again or contact us if you need assistance."
+msgstr ""
+
+#: includes/class.formatting.php:714
+msgid "Your order is expired%s"
+msgstr ""
+
+#: includes/class.formatting.php:721
+msgid "Your payment has been received. Thank you for shopping with us!"
+msgstr ""
+
+#: includes/class.formatting.php:726
+msgid "You will receive an email when your payment is fully confirmed."
+msgstr ""
+
+#: includes/class.formatting.php:770
+msgid "Unconfirmed: %s %s %s"
+msgstr ""
+
+#: includes/class.formatting.php:784
+msgid "%sAmount missing: %s %s%s"
+msgstr ""
+
+#: includes/class.formatting.php:789
+msgid "%sYour payment of %s %s has been received.%s"
+msgstr ""
+
+#: includes/class.formatting.php:791
+msgid "Your order is expired. Please try again or contact us if you need assistance."
+msgstr ""
+
+#: includes/class.formatting.php:796
+msgid "Your order has been put on hold. Please get in touch with us."
+msgstr ""
+
+#: includes/class.formatting.php:798
+msgid "You will receive another email when your payment is fully confirmed."
+msgstr ""
+
+#: includes/class.formatting.php:897
+msgid "Please compare the destination address with the one below%1$sbefore you send the payment:%1$s"
+msgstr ""
+
+#: includes/class.formatting.php:909
+msgid "Security Check"
+msgstr ""
+
+#: includes/class.formatting.php:920
+#: includes/class.formatting.php:975
+msgid "Force update payment status"
+msgstr ""
+
+#: includes/class.formatting.php:932
+#: includes/class.formatting.php:999
+msgid "Force accept payment"
+msgstr ""
+
+#: includes/class.formatting.php:974
+msgid "Force Update"
+msgstr ""
+
+#: includes/class.formatting.php:998
+msgid "Force accept"
+msgstr ""
+
+#: includes/class.address.php:118
+msgid "Skipped archiving addresses: We have open orders. Try again later."
+msgstr ""
+
+#: includes/class.address.php:148
+msgid "Total %s address count: %d, Current threshold: %d -> skipping"
+msgstr ""
+
+#: includes/class.address.php:178
+msgid "Warning: We found %d %s addresses in your account at Block.io. The free plan limit is almost reached!"
+msgstr ""
+
+#: includes/payment.php:35
+msgid "Send:"
+msgstr ""
+
+#: includes/payment.php:44
+msgid "To:"
+msgstr ""
+
+#: includes/payment.php:52
+msgid "Open %s client"
+msgstr ""
+
+#: includes/payment.php:58
+msgid "View address on %s block chain."
+msgstr ""
+
+#: includes/payment.php:80
+msgid "Unconfirmed:"
+msgstr ""
+
+#: includes/payment.php:89
+msgid "Confirmed:"
+msgstr ""
+
+#: includes/payment.php:98
+msgid "Time Left:"
+msgstr ""
+
+#: includes/payment.php:107
+msgid "Check Status"
+msgstr ""
+
+#: includes/payment.php:112
+msgid "Incoming transaction detected. You will receive an email when your payment is fully confirmed."
+msgstr ""
+
+#: includes/payment.php:131
+msgid "I have sent the payment - please process my order"
+msgstr ""
+
+#: includes/CW_AddressList.php:61
+msgid "Only %1$s %2$s addresses left in CryptoWoo address list. Please log in at %3$s and add new addresses to the list. Sent from %4$s"
+msgstr ""
+
+#: includes/processing/class.insight.php:200
+msgid "InstantSend detected: %d + %d %s"
+msgstr ""
+
+#: includes/class.order-processing.php:606
+#: includes/class.order-processing.php:1290
+msgid "No unpaid addresses found"
+msgstr ""
+
+#: includes/class.order-processing.php:924
+msgid "Undefined Error"
+msgstr ""
+
+#: includes/class.order-processing.php:927
+msgid "Error: Order #%s with address %s not found"
+msgstr ""
+
+#: includes/class.order-processing.php:933
+msgid "Payment method has been changed to %s - removing address from queue"
+msgstr ""
+
+#: includes/class.order-processing.php:1003
+msgid "Your payment is incomplete. This order has not been paid in full. Please send the missing amount within the next %d minutes."
+msgstr ""
+
+#: includes/class.order-processing.php:1053
+#: includes/class.order-processing.php:1099
+msgid "Payment timeout - "
+msgstr ""
+
+#: includes/class.order-processing.php:1056
+msgid "CryptoWoo payment failed - Percentage of order paid: %s%s. Manual interaction needed."
+msgstr ""
+
+#: includes/class.order-processing.php:1078
+msgid "The price quote for your order #%d has expired. Please visit your account orders section or use the link below to get a new quote for this order. %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1085
+msgid "This order has expired. Please contact us as insufficient payment has been sent. Reference: %d"
+msgstr ""
+
+#: includes/class.order-processing.php:1125
+msgid "Doublespend detected - "
+msgstr ""
+
+#: includes/class.order-processing.php:1130
+msgid "CryptoWoo detected a replace-by-fee or doublespend attempt. Old txid: %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1136
+msgid "Payment error - "
+msgstr ""
+
+#: includes/class.order-processing.php:1141
+msgid "We detected an error and had to cancel this order. Please try again or contact us if you already sent a payment. Sorry for the inconvenience."
+msgstr ""
+
+#: includes/class.order-processing.php:1162
+msgid "Incoming Payment: %s%s%s%s"
+msgstr ""
+
+#: includes/class.order-processing.php:1206
+msgid "Overpayment - "
+msgstr ""
+
+#: includes/class.order-processing.php:1223
+msgid " - Overpayment for order #"
+msgstr ""
+
+#: includes/class.order-processing.php:1225
+msgid "View Order"
+msgstr ""
+
+#: includes/class.order-processing.php:1229
+msgid "The customer paid %d%s (%s %s) too much."
+msgstr ""
+
+#: includes/class.order-processing.php:1230
+msgid "Customer e-Mail address"
+msgstr ""
+
+#: includes/class.order-processing.php:1235
+msgid "Refund address: "
+msgstr ""
+
+#: includes/class.order-processing.php:1236
+msgid "Refund Overpayment for Order"
+msgstr ""
+
+#: includes/class.order-processing.php:1243
+msgid "Scan or click the QR code to refund the excess amount."
+msgstr ""
+
+#: includes/class.order-processing.php:1253
+msgid "Click here to open your wallet and refund the excess amount."
+msgstr ""
+
+#: includes/class.order-processing.php:1258
+msgid "No refund address available."
+msgstr ""
+
+#: includes/class.order-processing.php:1379
+msgid "An error occurred while creating the payment address. Please try again."
+msgstr ""
+
+#: includes/class.order-processing.php:1383
+msgid "An error occurred while calculating the digital currency amount. Please try again."
+msgstr ""
+
+#: includes/class.order-processing.php:1387
+msgid "An unexpected error occurred and we had to cancel your order. Please contact us if you need assistance. Reference: %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1395
+msgid "ATTENTION: %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1618
+msgid "%s Payment Complete - Amount Confirmed: %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1633
+#: includes/class.order-processing.php:1906
+msgid "Payment Complete - "
+msgstr ""
+
+#: includes/class.order-processing.php:1664
+msgid "%s: Order #%d has been cancelled - removing address from queue."
+msgstr ""
+
+#: includes/class.order-processing.php:1775
+msgid "%s: Order #%d has been completed - removing address from queue."
+msgstr ""
+
+#: includes/class.order-processing.php:1801
+msgid " - Payment processing API error"
+msgstr ""
+
+#: includes/class.order-processing.php:1804
+msgid "CryptoWoo has detected an issue during payment processing%s %s"
+msgstr ""
+
+#: includes/class.order-processing.php:1823
+msgid "Force update of payment status has been started"
+msgstr ""
+
+#: includes/class.order-processing.php:1864
+msgid "Force accept payment has been started"
+msgstr ""
+
+#: includes/class.order-processing.php:1931
+msgid "Confirmed"
+msgstr ""
+
+#: includes/class.order-processing.php:1931
+msgid "Unconfirmed"
+msgstr ""
+
+#: includes/class.order-processing.php:1934
+msgid "Payment status for order was force updated.%s"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:839
+msgid "%s: CryptoWoo exchange rate update errors"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:845
+msgid ""
+"Hello Admin,<br>CryptoWoo has detected %s error(s) since %s while updating the exchange rates via %s:<br>\n"
+"                Please log in at %s, check your settings, reset the error counter via the button on the database maintenance page, and try to update the rates manually.<br>\n"
+"                Generally, these errors may occur from time to time, but if the exchange rate update fails constantly, please select a different preferred exchange API.<br>%s"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:852
+msgid "All errors up to now have been logged to"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:852
+msgid "You should inspect that file to find out what is causing the rate updates to fail."
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:854
+msgid ""
+"All subsequent errors will be logged to %s until you log in and reset the error counter.<br>\n"
+"                If the manual update fails try to select a different exchange rate API.<br>\n"
+"                If you continue to receive this e-Mail after selecting another exchange rate API, please submit a ticket at http://cryptowoo.zendesk.com <br>\n"
+"                Preferred method: %s <br>Used method: %s<br>Update Data: <br>%s<br>\n"
+"                <br>Update status: %s<br>"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-processing.php:924
+msgid "<div id=\"message\" class=\"error fade\"><p class=\"flash_message\">No exchange rates found in database. Please update manually.</p></div>"
+msgstr ""
+
+#: includes/pricing/class.exchange-rate-tools.php:104
+msgid "Could not get exchange api url "
+msgstr ""

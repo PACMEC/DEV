@@ -1,0 +1,987 @@
+# Copyright (C) 2020 PW WooCommerce Gift Cards
+# This file is distributed under the same license as the PW WooCommerce Gift Cards package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PW WooCommerce Gift Cards\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/free\n"
+"POT-Creation-Date: 2021-04-22 16:29:52+00:00\n"
+"PO-Revision-Date: 2021-06-24 13:21-0400\n"
+"Last-Translator: \n"
+"Language-Team: Pimwick, LLC\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
+"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Poedit 3.0\n"
+"X-Loco-Version: 2.4.0; wp-5.5.3\n"
+
+#: admin/pw-gift-cards-admin.php:34 admin/pw-gift-cards-admin.php:179
+#: admin/pw-gift-cards-admin.php:190 admin/pw-gift-cards-admin.php:202
+#: admin/pw-gift-cards-admin.php:203 admin/pw-gift-cards-admin.php:211
+#: admin/pw-gift-cards-admin.php:212 admin/pw-gift-cards-admin.php:346
+msgid "PW Gift Cards"
+msgstr "بطاقات هدايا PW"
+
+#: admin/pw-gift-cards-admin.php:40
+msgid "Auto Complete Orders"
+msgstr "أوامر الإكمال التلقائي"
+
+#: admin/pw-gift-cards-admin.php:41
+msgid ""
+"When an order only contains gift cards, automatically mark the order as "
+"Complete to send the gift cards immediately."
+msgstr ""
+"عندما يحتوي الطلب على بطاقات هدايا فقط ، قم تلقائيًا بتمييز الطلب على أنه "
+"مكتمل لإرسال بطاقات الهدايا على الفور."
+
+#: admin/pw-gift-cards-admin.php:47
+msgid "Send When Order Received"
+msgstr "إرسال عند استلام الطلب"
+
+#: admin/pw-gift-cards-admin.php:48
+msgid ""
+"By default we wait until the order status is Complete before generating and "
+"emailing the gift card. Check this box to send the gift card immediately "
+"when the order is received. Scheduled gift cards will still be sent on the "
+"scheduled date. Default: Unchecked"
+msgstr ""
+"بشكل افتراضي ، ننتظر حتى اكتمال حالة الطلب قبل إنشاء بطاقة الهدايا وإرسالها "
+"عبر البريد الإلكتروني. حدد هذا المربع لإرسال بطاقة الهدايا فورًا عند استلام "
+"الطلب. سيستمر إرسال بطاقات الهدايا المجدولة في التاريخ المحدد. الافتراضي: لم "
+"يتم التحقق منه"
+
+#: admin/pw-gift-cards-admin.php:54
+msgid "Buy Gift Cards with Gift Cards"
+msgstr "شراء بطاقات الهدايا مع بطاقات الهدايا"
+
+#: admin/pw-gift-cards-admin.php:55
+msgid ""
+"Allow customers to purchase gift cards using another gift card. Disable this "
+"to prevent customers from extending the date on expiring gift cards. "
+"Default: Checked."
+msgstr ""
+"السماح للعملاء بشراء بطاقات الهدايا باستخدام بطاقة هدايا أخرى. قم بتعطيل هذا "
+"لمنع العملاء من تمديد تاريخ انتهاء صلاحية بطاقات الهدايا. الافتراضي: محدد."
+
+#: admin/pw-gift-cards-admin.php:61
+msgid "Use the WooCommerce Transactional Email System"
+msgstr "استخدم نظام البريد الإلكتروني لمعاملات WooCommerce"
+
+#: admin/pw-gift-cards-admin.php:62
+msgid ""
+"Enabled by default. If you are not receiving your gift card emails, try "
+"disabling this setting."
+msgstr ""
+"ممكن بشكل افتراضي. إذا كنت لا تتلقى رسائل البريد الإلكتروني لبطاقات "
+"الهدايا ، فحاول تعطيل هذا الإعداد."
+
+#: admin/pw-gift-cards-admin.php:68
+msgid "Apply fix for missing fields"
+msgstr "تطبيق الإصلاح للحقول المفقودة"
+
+#: admin/pw-gift-cards-admin.php:69
+msgid ""
+"If you do not see the To / From / Message fields on your gift card product "
+"page, try checking this box and reloading. Some themes have out of date "
+"WooCommerce template files and need to be patched to work with the Gift Card "
+"product."
+msgstr ""
+"إذا كنت لا ترى الحقول إلى / من / رسالة في صفحة منتج بطاقة الهدايا ، فحاول "
+"تحديد هذا المربع وإعادة التحميل. تحتوي بعض السمات على ملفات قوالب "
+"WooCommerce قديمة وتحتاج إلى التصحيح للعمل مع منتج بطاقة الهدايا."
+
+#: admin/pw-gift-cards-admin.php:75
+msgid "Format Prices"
+msgstr "أسعار التنسيق"
+
+#: admin/pw-gift-cards-admin.php:76
+msgid ""
+"For fixed gift card amounts, format the price with the system currency "
+"symbol. This is enabled by default. If you are having trouble with currency "
+"switchers, disable this setting. Note: You must remove and re-add your fixed "
+"gift card amounts if you change this setting."
+msgstr ""
+"بالنسبة لمبالغ بطاقات الهدايا الثابتة ، قم بتنسيق السعر برمز عملة النظام. "
+"يتم تمكين هذا افتراضيا. إذا كنت تواجه مشكلة مع محولات العملات ، فقم بتعطيل "
+"هذا الإعداد. ملاحظة: يجب عليك إزالة مبالغ بطاقة الهدايا الثابتة وإعادة "
+"إضافتها إذا قمت بتغيير هذا الإعداد."
+
+#: admin/pw-gift-cards-admin.php:82
+msgid "Redeem Location - Cart"
+msgstr "استرداد الموقع - عربة التسوق"
+
+#: admin/pw-gift-cards-admin.php:83
+msgid "Specifies where the \"Apply Gift Card\" box appears on the Cart page."
+msgstr "يحدد مكان ظهور مربع \"تطبيق بطاقة الهدايا\" في صفحة عربة التسوق."
+
+#: admin/pw-gift-cards-admin.php:91
+msgid "Above the \"Proceed to Checkout\" button."
+msgstr "فوق زر \"متابعة الدفع\"."
+
+#: admin/pw-gift-cards-admin.php:92 admin/pw-gift-cards-admin.php:107
+msgid "Below the \"Apply Coupon\" area."
+msgstr "أسفل منطقة \"تطبيق القسيمة\"."
+
+#: admin/pw-gift-cards-admin.php:93 admin/pw-gift-cards-admin.php:108
+msgid "Do not display gift card field."
+msgstr "لا تعرض حقل بطاقة الهدايا."
+
+#: admin/pw-gift-cards-admin.php:97
+msgid "Redeem Location - Checkout"
+msgstr "استرداد الموقع - الخروج"
+
+#: admin/pw-gift-cards-admin.php:98
+msgid ""
+"Specifies where the \"Apply Gift Card\" box appears on the Checkout page."
+msgstr "يحدد مكان ظهور مربع \"تطبيق بطاقة الهدايا\" في صفحة الخروج."
+
+#: admin/pw-gift-cards-admin.php:106
+msgid "Below the \"Payment Methods\" area."
+msgstr "أسفل منطقة \"طرق الدفع\"."
+
+#: admin/pw-gift-cards-admin.php:151
+msgid "Configuration error detected by"
+msgstr "تم اكتشاف خطأ في التكوين بواسطة"
+
+#: admin/pw-gift-cards-admin.php:152
+msgid ""
+"Your PayPal payment gateway is incorrectly configured. You should not have "
+"both IPN and PDT enabled. The \"IPN Email Notifications\" setting is enabled "
+"and there is also a \"PayPal Identity Token\" (PDT) value set. PayPal is "
+"reaching back to your site twice to confirm the payment. This causes things "
+"to happen twice including email notifications, stock reduction, and gift "
+"card generation. Go to WooCommerce -> Settings -> Payments -> PayPal and "
+"either clear the value from the \"PayPal Identity Token\" field or disable "
+"the \"IPN Email Notifications\" setting."
+msgstr ""
+
+#: admin/pw-gift-cards-admin.php:153
+msgid "Dismiss this notice"
+msgstr "رفض هذا الإشعار"
+
+#: admin/pw-gift-cards-admin.php:180 admin/pw-gift-cards-admin.php:191
+msgid "Pimwick Plugins"
+msgstr "Pimwick Plugins"
+
+#: admin/pw-gift-cards-admin.php:239
+msgid "Note: Be sure to save changes before sending a preview email."
+msgstr "ملاحظة: تأكد من حفظ التغييرات قبل إرسال معاينة بريد إلكتروني."
+
+#: admin/pw-gift-cards-admin.php:240
+msgid "Recipient email address?"
+msgstr "البريد الألكتروني للمتلقي؟"
+
+#: admin/pw-gift-cards-admin.php:267
+msgid "Wait"
+msgstr "انتظر"
+
+#: admin/pw-gift-cards-admin.php:268
+msgid "Add"
+msgstr "أضف"
+
+#: admin/pw-gift-cards-admin.php:269
+msgid "Remove"
+msgstr "إزالة"
+
+#: admin/pw-gift-cards-admin.php:270
+#: includes/class-wc-product-pw-gift-card.php:60
+msgid "Amount must be greater than zero."
+msgstr "يجب أن يكون المبلغ أكبر من الصفر."
+
+#: admin/pw-gift-cards-admin.php:271
+msgid "Amount must be greater than minimum amount."
+msgstr "يجب أن يكون المبلغ أكبر من الحد الأدنى للمبلغ."
+
+#: admin/pw-gift-cards-admin.php:272
+msgid "Amount must be less than maximum amount."
+msgstr "يجب أن يكون المبلغ أقل من الحد الأقصى للمبلغ."
+
+#: admin/pw-gift-cards-admin.php:273
+msgid "Error"
+msgstr "خطأ"
+
+#: admin/pw-gift-cards-admin.php:292 admin/pw-gift-cards-admin.php:537
+#: pw-gift-cards.php:130
+msgid "Gift Card"
+msgstr "بطاقة هدية"
+
+#: admin/pw-gift-cards-admin.php:383
+msgid "Could not locate product id %s"
+msgstr "تعذر تحديد موقع معرّف المنتج %s"
+
+#: admin/pw-gift-cards-admin.php:407
+msgid "Could not locate product using product_id "
+msgstr "تعذر تحديد موقع المنتج باستخدام معرّف_المنتج "
+
+#: admin/pw-gift-cards-admin.php:521
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+#: admin/pw-gift-cards-admin.php:601 admin/pw-gift-cards-admin.php:615
+msgid "Gift card not found."
+msgstr "بطاقة الهدايا غير موجودة."
+
+#: admin/pw-gift-cards-admin.php:636
+msgid "Design saved."
+msgstr "تم حفظ التصميم."
+
+#: admin/pw-gift-cards-admin.php:646
+msgid "Preview email system"
+msgstr "معاينة نظام البريد الإلكتروني"
+
+#: admin/pw-gift-cards-admin.php:647 admin/ui/sections/designer-panel.php:69
+msgid "Recipient Name"
+msgstr "اسم المستلم"
+
+#: admin/pw-gift-cards-admin.php:648 admin/ui/sections/designer-panel.php:71
+msgid "Gift card message to the recipient from the sender."
+msgstr "رسالة بطاقة الهدايا إلى المستلم من المرسل."
+
+#: admin/pw-gift-cards-admin.php:653
+msgid "Email sent."
+msgstr "أرسل البريد الإلكتروني."
+
+#: admin/ui/footer.php:30
+msgid "Need help? Email %s"
+msgstr "تحتاج مساعدة؟ بريد إلكتروني %s"
+
+#: admin/ui/footer.php:32
+msgid ""
+"Please consider <%s>leaving a review on WordPress.org</a>. This really helps "
+"us out!"
+msgstr "يرجى مراعاة < %s > ترك تعليق على WordPress.org. هذا حقا يساعدنا!"
+
+#: admin/ui/initial-setup.php:12
+msgid "Step 1: Create a \"%s\" product to start selling Gift Cards."
+msgstr "الخطوة 1: قم بإنشاء منتج \" %s \" لبدء بيع بطاقات الهدايا."
+
+#: admin/ui/initial-setup.php:16
+msgid "Create the Gift Card product"
+msgstr "قم بإنشاء منتج بطاقة الهدايا"
+
+#: admin/ui/initial-setup.php:24
+msgid "Success!"
+msgstr "نجاح!"
+
+#: admin/ui/initial-setup.php:25
+msgid ""
+"The Gift Card product has been created. Click on the Products menu in the "
+"left to edit it."
+msgstr ""
+"تم إنشاء منتج بطاقة الهدايا. انقر فوق قائمة المنتجات على اليسار لتحريرها."
+
+#: admin/ui/initial-setup.php:30
+msgid "Step 2: Let your customers check their gift card balances."
+msgstr "الخطوة 2: اسمح لعملائك بالتحقق من أرصدة بطاقات الهدايا الخاصة بهم."
+
+#: admin/ui/initial-setup.php:32
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create a Check Balance page for your customers."
+msgstr ""
+"‫Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create a Check Balance page for your customers."
+
+#: admin/ui/order-gift-card-total.php:36
+msgid "PW Gift Card"
+msgstr "بطاقة هدايا PW"
+
+#: admin/ui/product-data-panel-cards.php:35
+msgid "Gift card amounts"
+msgstr "مبالغ بطاقات الهدايا"
+
+#: admin/ui/product-data-panel-cards.php:39
+msgid ""
+"The available denominations that can be purchased. For example: %1$s25.00, "
+"%1$s50.00, %1$s100.00"
+msgstr ""
+"الفئات المتاحة التي يمكن شراؤها. على سبيل المثال: %1$s 25.00 ، %1$s 50.00 ، "
+"%1$s 100.00"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid "PW WooCommerce Gift Cards Pro"
+msgstr "بطاقات هدايا PW WooCommerce Pro"
+
+#: admin/ui/product-data-panel-cards.php:60
+msgid " includes these great additional features:"
+msgstr " يتضمن هذه الميزات الإضافية الرائعة:"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid "Multiple Designs"
+msgstr "تصاميم متعددة"
+
+#: admin/ui/product-data-panel-cards.php:62
+msgid ""
+"Create as many custom email designs as you would like. Happy birthday, "
+"congratulations, happy holidays, and more!"
+msgstr ""
+"قم بإنشاء العديد من تصميمات البريد الإلكتروني المخصصة كما تريد. عيد ميلاد "
+"سعيد ، تهانينا ، أعياد سعيدة ، والمزيد!"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid "Custom Amounts"
+msgstr "المبالغ المخصصة"
+
+#: admin/ui/product-data-panel-cards.php:63
+msgid ""
+"Allow customers to specify the amount. You can set a minimum and a maximum "
+"amount."
+msgstr ""
+"السماح للعملاء بتحديد المبلغ. يمكنك تعيين الحد الأدنى والحد الأقصى للمبلغ."
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid "Delivery Date"
+msgstr "تاريخ التسليم او الوصول"
+
+#: admin/ui/product-data-panel-cards.php:64
+msgid ""
+"Customers can choose when the gift card should be delivered to the recipient."
+msgstr "يمكن للعملاء اختيار موعد تسليم بطاقة الهدايا إلى المستلم."
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid "Physical Gift Cards"
+msgstr "بطاقات الهدايا المادية"
+
+#: admin/ui/product-data-panel-cards.php:65
+msgid ""
+"Sell physical gift cards to your customers without requiring a recipient "
+"email address."
+msgstr ""
+"بيع بطاقات الهدايا الفعلية لعملائك دون الحاجة إلى عنوان بريد إلكتروني "
+"للمستلم."
+
+#: admin/ui/product-data-panel-cards.php:66 admin/ui/section-buttons.php:19
+msgid "Create Gift Cards"
+msgstr "إنشاء بطاقات هدايا"
+
+#: admin/ui/product-data-panel-cards.php:66
+msgid ""
+"Enter the quantity, amount, and expiration date to easily generate gift "
+"cards."
+msgstr ""
+"أدخل الكمية والمبلغ وتاريخ انتهاء الصلاحية لإنشاء بطاقات الهدايا بسهولة."
+
+#: admin/ui/product-data-panel-cards.php:67 admin/ui/section-buttons.php:23
+msgid "Import Card Numbers"
+msgstr "استيراد أرقام البطاقات"
+
+#: admin/ui/product-data-panel-cards.php:67
+msgid ""
+"Have physical cards or numbers from another system? Import them in one click!"
+msgstr "هل لديك بطاقات فعلية أو أرقام من نظام آخر؟ قم باستيرادها بنقرة واحدة!"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "Default Amount"
+msgstr "المبلغ الافتراضي"
+
+#: admin/ui/product-data-panel-cards.php:68
+msgid "choose an amount that will be pre-selected when purchasing a gift card."
+msgstr "اختر مبلغًا سيتم تحديده مسبقًا عند شراء بطاقة هدايا."
+
+#: admin/ui/product-data-panel-cards.php:69 admin/ui/section-buttons.php:11
+msgid "Balances"
+msgstr "أرصدة"
+
+#: admin/ui/product-data-panel-cards.php:69
+msgid "A shortcode to let customers check their gift card balances."
+msgstr "رمز قصير يتيح للعملاء التحقق من أرصدة بطاقات الهدايا الخاصة بهم."
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Expiration Dates"
+msgstr "تواريخ انتهاء الصلاحية"
+
+#: admin/ui/product-data-panel-cards.php:70
+msgid "Automatically set an expiration date based on the purchase date."
+msgstr "قم بتعيين تاريخ انتهاء الصلاحية تلقائيًا بناءً على تاريخ الشراء."
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Balance Adjustments"
+msgstr "تعديلات الميزان"
+
+#: admin/ui/product-data-panel-cards.php:71
+msgid "Perform balance adjustments in the admin area."
+msgstr "قم بإجراء عمليات ضبط التوازن في منطقة الإدارة."
+
+#: admin/ui/section-buttons.php:15
+msgid "Email Designer"
+msgstr "مصمم البريد الإلكتروني"
+
+#: admin/ui/section-buttons.php:27
+msgid "Settings"
+msgstr "إعدادات"
+
+#: admin/ui/sections/activity-records.php:26
+msgid "Date"
+msgstr "تاريخ"
+
+#: admin/ui/sections/activity-records.php:27
+msgid "Action"
+msgstr "عمل"
+
+#: admin/ui/sections/activity-records.php:28
+msgid "User"
+msgstr "المستعمل"
+
+#: admin/ui/sections/activity-records.php:29
+msgid "Note"
+msgstr "ملحوظة"
+
+#: admin/ui/sections/activity-records.php:30 pw-gift-cards.php:131
+#: templates/woocommerce/emails/customer-pw-gift-card.php:156
+msgid "Amount"
+msgstr "كمية"
+
+#: admin/ui/sections/activity-records.php:31
+#: admin/ui/sections/search-results.php:33
+msgid "Balance"
+msgstr "توازن"
+
+#: admin/ui/sections/activity-records.php:53
+msgid "Guest"
+msgstr "زائر"
+
+#: admin/ui/sections/balance-summary.php:32
+msgid "Active gift cards"
+msgstr "بطاقات الهدايا النشطة"
+
+#: admin/ui/sections/balance-summary.php:36
+msgid "Outstanding balances"
+msgstr "أرصدة مستحقة"
+
+#: admin/ui/sections/balances.php:32
+msgid "Gift card number or recipient email (leave blank for all)"
+msgstr "رقم بطاقة الهدايا أو البريد الإلكتروني للمستلم (اتركه فارغًا للجميع)"
+
+#: admin/ui/sections/balances.php:33
+msgid "Search"
+msgstr "بحث"
+
+#: admin/ui/sections/create.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create gift cards from the admin area."
+msgstr ""
+"‫Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to create gift cards from the admin area."
+
+#: admin/ui/sections/designer-panel.php:12
+msgid "Gift card color"
+msgstr "لون بطاقة الهدايا"
+
+#: admin/ui/sections/designer-panel.php:13
+msgid "Redeem button color"
+msgstr "استرداد لون الزر"
+
+#: admin/ui/sections/designer-panel.php:14
+msgid "Redeem button text color"
+msgstr "استرداد لون نص الزر"
+
+#: admin/ui/sections/designer-panel.php:18
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to change even more settings such as background image, gift card title, "
+"additional colors, and more!"
+msgstr ""
+"‫Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to change even more settings such as background image, gift card title, "
+"additional colors, and more!"
+
+#: admin/ui/sections/designer-panel.php:27
+msgid ""
+"Go to the <a href=\"%s\">WooCommerce Email Settings</a> to customize the "
+"background color, subject, email heading, and more."
+msgstr ""
+"‫Go to the <a href=\"%s\">WooCommerce Email Settings</a> to customize the "
+"background color, subject, email heading, and more."
+
+#: admin/ui/sections/designer-panel.php:31
+msgid "Want even more control?"
+msgstr "هل تريد المزيد من التحكم؟"
+
+#: admin/ui/sections/designer-panel.php:33
+msgid ""
+"You can fully customize the gift card email to suit your needs. We use the "
+"built in WooCommerce email template system. To override the email you should "
+"copy this file"
+msgstr ""
+"يمكنك تخصيص البريد الإلكتروني لبطاقة الهدايا بالكامل بما يناسب احتياجاتك. "
+"نحن نستخدم نظام قوالب البريد الإلكتروني WooCommerce المدمج. لتجاوز البريد "
+"الإلكتروني ، يجب عليك نسخ هذا الملف"
+
+#: admin/ui/sections/designer-panel.php:35
+msgid "To here"
+msgstr "إلى هنا"
+
+#: admin/ui/sections/designer-panel.php:37
+msgid ""
+"You may need to create the subfolders if they do not exist in your theme "
+"folder. Once the file is in your theme folder, open it up in a text editor "
+"and make any changes."
+msgstr ""
+"قد تحتاج إلى إنشاء المجلدات الفرعية إذا لم تكن موجودة في مجلد النسق الخاص "
+"بك. بمجرد أن يكون الملف في مجلد النسق الخاص بك ، افتحه في محرر نصوص وقم "
+"بإجراء أي تغييرات."
+
+#: admin/ui/sections/designer-panel.php:41
+msgid "Save design"
+msgstr "حفظ التصميم"
+
+#: admin/ui/sections/designer-panel.php:52
+msgid "Custom template file detected!"
+msgstr "تم الكشف عن ملف قالب مخصص!"
+
+#: admin/ui/sections/designer-panel.php:55
+msgid ""
+"It appears as though you already have a custom email template file, your "
+"changes in the Designer may not appear when you actually send the email. "
+"Click the Send Preview Email button to confirm."
+msgstr ""
+"يبدو كما لو كان لديك بالفعل ملف قالب بريد إلكتروني مخصص ، فقد لا تظهر "
+"تغييراتك في المصمم عندما تقوم بالفعل بإرسال البريد الإلكتروني. انقر فوق الزر "
+"إرسال معاينة البريد الإلكتروني للتأكيد."
+
+#: admin/ui/sections/designer-panel.php:60
+msgid "Preview"
+msgstr "معاينة"
+
+#: admin/ui/sections/designer-panel.php:63
+msgid "Send a preview email"
+msgstr "إرسال معاينة البريد الإلكتروني"
+
+#: admin/ui/sections/designer-panel.php:70
+msgid "The Purchasing Customer"
+msgstr "العميل المشتري"
+
+#: admin/ui/sections/import.php:25
+msgid ""
+"Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to import existing gift card numbers."
+msgstr ""
+"‫Upgrade to <a href=\"%s\" target=\"_blank\">PW WooCommerce Gift Cards Pro</"
+"a> to import existing gift card numbers."
+
+#: admin/ui/sections/search-results.php:25
+msgid "No results"
+msgstr "لا نتائج"
+
+#: admin/ui/sections/search-results.php:26
+msgid "There are no gift cards found matching your search terms."
+msgstr "لا توجد بطاقات هدايا مطابقة لشروط البحث الخاصة بك."
+
+#: admin/ui/sections/search-results.php:32
+msgid "Card Number"
+msgstr "رقم البطاقة"
+
+#: admin/ui/sections/search-results.php:34
+msgid "Expiration Date"
+msgstr "تاريخ إنتهاء الصلاحية"
+
+#: admin/ui/sections/search-results.php:44
+msgid "Card has been deleted."
+msgstr "تم حذف البطاقة."
+
+#: admin/ui/sections/search-results.php:56
+msgid "View activity"
+msgstr "عرض النشاط"
+
+#: admin/ui/sections/search-results.php:58
+msgid "Delete"
+msgstr "حذف"
+
+#: admin/ui/sections/search-results.php:61
+msgid "Restore"
+msgstr "استعادة"
+
+#: admin/ui/sections/search-results.php:84
+msgid "Are you sure you want to delete this gift card?"
+msgstr "هل أنت متأكد أنك تريد حذف بطاقة الهدايا هذه؟"
+
+#: admin/ui/sections/settings.php:35
+msgid "Save Settings"
+msgstr "احفظ التغييرات"
+
+#: includes/class-pw-gift-card-activity.php:90
+msgid "Could not find activity record %d."
+msgstr "تعذر العثور على سجل النشاط %d ."
+
+#: includes/class-pw-gift-card-activity.php:102
+msgid "Invalid action value: "
+msgstr "قيمة الإجراء غير صالحة: "
+
+#: includes/class-pw-gift-card.php:70
+msgid "Card number does not exist."
+msgstr "رقم البطاقة غير موجود."
+
+#: includes/class-pw-gift-card.php:73
+msgid "Enter a card number."
+msgstr "أدخل رقم البطاقة."
+
+#: includes/class-pw-gift-card.php:119
+#: templates/woocommerce/cart/cart-pw-gift-card.php:52
+#: templates/woocommerce/checkout/pw-gift-cards.php:54
+msgid "Expired"
+msgstr "منتهية الصلاحية"
+
+#: includes/class-pw-gift-card.php:122
+msgid "None"
+msgstr "لا شيء"
+
+#: includes/class-pw-gift-card.php:212
+msgid "Amount added should be greater than zero."
+msgstr "يجب أن يكون المبلغ المضاف أكبر من الصفر."
+
+#: includes/class-pw-gift-card.php:225
+msgid "Amount deducted should be less than zero."
+msgstr "يجب أن يكون المبلغ المخصوم أقل من صفر."
+
+#: includes/class-pw-gift-card.php:234
+msgid "Unable to adjust balance, card is not active."
+msgstr "غير قادر على ضبط الرصيد ، البطاقة غير نشطة."
+
+#: includes/class-pw-gift-card.php:298
+msgid "Card Number cannot be empty."
+msgstr "لا يمكن أن يكون رقم البطاقة فارغًا."
+
+#: includes/class-pw-gift-card.php:330
+msgid "Failed to generate a unique random card number after %d attempts. %s"
+msgstr "فشل إنشاء رقم بطاقة عشوائي فريد بعد %d  محاولة. ٪س"
+
+#: includes/class-pw-gift-card.php:402
+msgid "Property %s does not exist on %s"
+msgstr "الخاصية %s  غير موجودة على %s"
+
+#: includes/class-wc-product-pw-gift-card.php:73
+msgid "Amount already exists: "
+msgstr "المبلغ موجود بالفعل: "
+
+#: includes/class-wc-product-pw-gift-card.php:86
+msgid "Could not create variation."
+msgstr "تعذر إنشاء التباين."
+
+#: includes/class-wc-product-pw-gift-card.php:107
+msgid "Could not locate variation using variation_id "
+msgstr "تعذر تحديد موقع التباين باستخدام variation_id "
+
+#: includes/class-wc-product-pw-gift-card.php:278
+msgid "Select amount"
+msgstr "حدد المبلغ"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:31
+msgid "PW Gift Card Email"
+msgstr "بريد إلكتروني لبطاقة هدايا PW"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:32
+msgid "This email is sent to the recipients of a gift card."
+msgstr "يتم إرسال هذا البريد الإلكتروني إلى مستلمي بطاقة الهدايا."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:34
+msgid "You were given a gift card"
+msgstr "لقد حصلت على بطاقة هدية"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:35
+msgid "{sender} sent you a gift card"
+msgstr "{sender} ارسل اليك بطاقة هدية"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:319
+msgid "Enable/Disable"
+msgstr "مفعل وغير مفعل"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:321
+msgid "Enable this email notification"
+msgstr "قم بتمكين إشعار البريد الإلكتروني هذا"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:325
+msgid "Subject"
+msgstr "موضوع"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:327
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr ""
+"هنا يكون عنوان الرسالة. إذا تركته فارغ لنستخدم العنوان الإفتراضي: <code>%s</"
+"code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:332
+msgid "Email Heading"
+msgstr "عنوان البريد الإلكتروني"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:334
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+"هذا الحقل لتعديل عنوان البريد الالكتروني، اتركه فارغا لاستخدام الإعدادات "
+"الافتراضية<code>%s</code>."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:339
+msgid "Email type"
+msgstr "نوع البريد الإلكتروني"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:341
+msgid "Choose which format of email to send."
+msgstr "اختر تنسيق البريد الإلكتروني الذي تريد إرساله."
+
+#: includes/emails/class-wc-email-pw-gift-card.php:345
+msgid "Plain text"
+msgstr "نص عادي"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:346
+msgid "HTML"
+msgstr "لغة البرمجة"
+
+#: includes/emails/class-wc-email-pw-gift-card.php:347
+msgid "Multipart"
+msgstr "متعدد الأجزاء"
+
+#: includes/pw-gift-cards-purchasing.php:88
+msgid "Choose an amount"
+msgstr "اختر مبلغًا"
+
+#: includes/pw-gift-cards-purchasing.php:281
+msgid "Order %s purchased by %s %s"
+msgstr "طلب %s  تم شراؤه بواسطة %s% %s"
+
+#: includes/pw-gift-cards-purchasing.php:304
+msgid "Unable to retrieve variation "
+msgstr "تعذر استرداد التباين "
+
+#: includes/pw-gift-cards-purchasing.php:401
+msgid " (inactive)"
+msgstr " (غير نشط)"
+
+#: includes/pw-gift-cards-purchasing.php:426
+msgid "Generated and emailed after the order is marked Complete."
+msgstr "تم إنشاؤه وإرساله عبر البريد الإلكتروني بعد وضع علامة على الطلب مكتمل."
+
+#: includes/pw-gift-cards-redeeming.php:352
+msgid "Gift card %s:"
+msgid_plural "Gift cards %s:"
+msgstr[0] "بطاقات الهدايا:"
+msgstr[1] "بطاقات الهدايا %s :"
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: includes/pw-gift-cards-redeeming.php:424
+msgid "Shipping via %s"
+msgstr "الشحن عبر %s"
+
+#: includes/pw-gift-cards-redeeming.php:489
+#: includes/pw-gift-cards-redeeming.php:542
+#: includes/pw-gift-cards-redeeming.php:611 pw-gift-cards.php:185
+msgid "This gift card has a zero balance."
+msgstr "بطاقة الهدايا هذه لديها رصيد صفري."
+
+#: includes/pw-gift-cards-redeeming.php:492
+#: includes/pw-gift-cards-redeeming.php:614 pw-gift-cards.php:188
+msgid "Gift card applied."
+msgstr "تم تطبيق بطاقة الهدايا."
+
+#: includes/pw-gift-cards-redeeming.php:507
+msgid "Gift card removed."
+msgstr "تمت إزالة بطاقة الهدايا."
+
+#: includes/pw-gift-cards-redeeming.php:538
+msgid "Gift cards cannot be used to purchase other gift cards."
+msgstr "لا يمكن استخدام بطاقات الهدايا لشراء بطاقات هدايا أخرى."
+
+#: includes/pw-gift-cards-redeeming.php:545
+msgid "Card is inactive."
+msgstr "البطاقة غير نشطة."
+
+#: includes/pw-gift-cards-redeeming.php:616
+msgid "Error: %s"
+msgstr "خطأ: %s"
+
+#: pw-gift-cards.php:129
+msgid "Gift Card Amount"
+msgstr "مبلغ بطاقة الهدايا"
+
+#: pw-gift-cards.php:132
+msgid "To"
+msgstr "إلى"
+
+#: pw-gift-cards.php:133
+#: templates/woocommerce/emails/customer-pw-gift-card.php:129
+msgid "From"
+msgstr "من عند"
+
+#: pw-gift-cards.php:134
+msgid "Message"
+msgstr "رسالة"
+
+#: pw-gift-cards.php:205
+msgid "Required"
+msgstr "مطلوب"
+
+#: pw-gift-cards.php:206
+msgid "Minimum amount is %s"
+msgstr "الحد الأدنى للمبلغ %s"
+
+#: pw-gift-cards.php:207
+msgid "Maximum amount is %s"
+msgstr "الحد الأقصى للمبلغ %s"
+
+#: pw-gift-cards.php:208
+msgid ""
+"The \"To\" field should only contain email addresses. The following "
+"recipients do not look like valid email addresses:"
+msgstr ""
+"يجب أن يحتوي الحقل \"إلى\" على عناوين البريد الإلكتروني فقط. لا يبدو "
+"المستلمون التاليون كعناوين بريد إلكتروني صالحة:"
+
+#: pw-gift-cards.php:333
+msgid "%s requires WooCommerce version %s or later."
+msgstr "يتطلب %s  إصدار WooCommerce %s  أو أحدث."
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:39
+msgid "Gift Card:"
+msgstr "بطاقة الهدية:"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:40
+#: templates/woocommerce/cart/apply-gift-card.php:52
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:39
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:34
+msgid "Gift card number"
+msgstr "رقم بطاقة الهدية"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+msgid "Apply gift card"
+msgstr "تطبيق بطاقة الهدايا"
+
+#: templates/woocommerce/cart/apply-gift-card-after-cart-contents.php:41
+#: templates/woocommerce/cart/apply-gift-card.php:53
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:43
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Please wait..."
+msgstr "ارجو انتظار..."
+
+#: templates/woocommerce/cart/apply-gift-card.php:50
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:32
+msgid "Have a gift card?"
+msgstr "هل لديك بطاقة هدايا؟"
+
+#: templates/woocommerce/cart/apply-gift-card.php:53
+msgid "Apply"
+msgstr "نشر"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:43
+#: templates/woocommerce/checkout/pw-gift-cards.php:45
+msgid "Gift card"
+msgstr "بطاقة الهدايا"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:46
+#: templates/woocommerce/checkout/pw-gift-cards.php:48
+msgid "Remaining balance is %s"
+msgstr "الرصيد المتبقي %s"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:59
+msgid "Gift Card Total"
+msgstr "إجمالي بطاقة الهدايا"
+
+#: templates/woocommerce/cart/cart-pw-gift-card.php:61
+#: templates/woocommerce/checkout/pw-gift-cards.php:63
+msgid "[Remove]"
+msgstr "[إزالة]"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:31
+msgid "Click here to enter your gift card number"
+msgstr "انقر هنا لإدخال رقم بطاقة الهدايا الخاصة بك"
+
+#: templates/woocommerce/checkout/coupon-area-pw-gift-card.php:36
+msgid "If you have a gift card number, please apply it below."
+msgstr "إذا كان لديك رقم بطاقة هدايا ، فيرجى تطبيقه أدناه."
+
+#: templates/woocommerce/checkout/payment-method-pw-gift-card.php:35
+msgid "Apply Gift Card"
+msgstr "نشر بطاقة الهدايا"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:146
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:25
+msgid "%s Gift Card"
+msgstr "بطاقة هدايا %s"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:164
+msgid "Gift Card Number"
+msgstr "رقم بطاقة الهدية"
+
+#: templates/woocommerce/emails/customer-pw-gift-card.php:173
+msgid "Redeem"
+msgstr "استخدمها الأن"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:26
+msgid "Amount: %s"
+msgstr "كميات"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:27
+msgid "Gift card number: %s"
+msgstr "رقم بطاقة الهدايا: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:28
+msgid "Link: %s"
+msgstr "الرابط: %s"
+
+#: templates/woocommerce/emails/plain/customer-pw-gift-card.php:32
+msgid "Message:"
+msgstr "رسالة:"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:107
+msgid "Enter an email address for each recipient"
+msgstr "أدخل عنوان بريد إلكتروني لكل مستلم"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:108
+msgid "Separate multiple email addresses with a comma."
+msgstr "افصل بين عناوين البريد الإلكتروني المتعددة بفاصلة."
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:113
+msgid "Your name"
+msgstr "اسمك"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:117
+msgid "(optional)"
+msgstr "(اختياري)"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:118
+msgid "Add a message"
+msgstr "اضف رسالة"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:119
+msgid "characters remaining"
+msgstr "الأحرف المتبقية"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:123
+msgid "Quantity"
+msgstr "كمية"
+
+#: templates/woocommerce/single-product/add-to-cart/pw-gift-card-before-add-to-cart-quantity.php:124
+msgid "1 to each recipient"
+msgstr "1 لكل مستلم"
+
+#. Plugin Name of the plugin/theme
+msgid "PW WooCommerce Gift Cards"
+msgstr "بطاقات هدايا PW WooCommerce"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.pimwick.com/gift-cards/"
+msgstr "https://www.pimwick.com/gift-cards/"
+
+#. Description of the plugin/theme
+msgid "Sell gift cards in your WooCommerce store."
+msgstr "بيع بطاقات الهدايا في متجر WooCommerce الخاص بك."
+
+#. Author of the plugin/theme
+msgid "Pimwick, LLC"
+msgstr "Pimwick, LLC"
+
+#. Author URI of the plugin/theme
+msgid "https://www.pimwick.com"
+msgstr "‫https://www.pimwick.com"
+
+#~ msgid "Balance is currently %s, unable to adjust by %s"
+#~ msgstr "الرصيد حاليًا %s  ، غير قادر على الضبط بواسطة %s "

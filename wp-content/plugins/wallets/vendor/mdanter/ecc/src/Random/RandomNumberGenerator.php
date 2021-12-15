@@ -1,0 +1,37 @@
+<?php
+
+declare (strict_types=1);
+namespace Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Random;
+
+use Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Math\GmpMathInterface;
+use Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Util\NumberSize;
+class RandomNumberGenerator implements \Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Random\RandomNumberGeneratorInterface
+{
+    /**
+     * @var GmpMathInterface
+     */
+    private $adapter;
+    /**
+     * RandomNumberGenerator constructor.
+     * @param GmpMathInterface $adapter
+     */
+    public function __construct(\Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Math\GmpMathInterface $adapter)
+    {
+        $this->adapter = $adapter;
+    }
+    /**
+     * @param \GMP $max
+     * @return \GMP
+     */
+    public function generate(\GMP $max) : \GMP
+    {
+        $numBits = \Ethereumico\EthereumWallet\Dependencies\Mdanter\Ecc\Util\NumberSize::bnNumBits($this->adapter, $max);
+        $numBytes = (int) \ceil($numBits / 8);
+        // Generate an integer of size >= $numBits
+        $bytes = \random_bytes($numBytes);
+        $value = $this->adapter->stringToInt($bytes);
+        $mask = \gmp_sub(\gmp_pow(2, $numBits), 1);
+        $integer = \gmp_and($value, $mask);
+        return $integer;
+    }
+}
