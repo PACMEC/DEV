@@ -1,6 +1,6 @@
 <?php
 /**
- * @author flatfull.com
+ * @author pacmec.co
  */
 
 class Admin_Theme_PACMEC_Setting{
@@ -128,18 +128,18 @@ class Admin_Theme_PACMEC_Setting{
 		$current_screen->add_help_tab(
 			array(
 				'id'		=> 'overview',
-				'title'		=> __( 'Overview', 'ffl_admin_theme' ),
+				'title'		=> __( 'Overview', 'pacmec_admin_theme' ),
 				'content'	=>
-					'<p><strong>' . __( 'Admin Theme by flatfull.com', 'ffl_admin_theme' ) . '</strong></p>' .
-					'<p>' . __( 'Admin Theme changes your wordpress admin appearance', 'ffl_admin_theme' ) . '</p>' .
-					'<p>' . __( 'Have fun.', 'ffl_admin_theme' ) . '</p>',
+					'<p><strong>' . __( 'Admin Theme PACMEC by pacmec.co', 'pacmec_admin_theme' ) . '</strong></p>' .
+					'<p>' . __( 'Admin Theme changes your wordpress admin appearance', 'pacmec_admin_theme' ) . '</p>' .
+					'<p>' . __( 'Have fun.', 'pacmec_admin_theme' ) . '</p>',
 			)
 		);
 
 		// Help Sidebar
 		$current_screen->set_help_sidebar(
-			'<p><strong>' . __( 'For more information:', 'ffl_admin_theme' ) . '</strong></p>' .
-			'<p><a href="http://flatfull.com/" target="_blank">'     . __( 'FAQ',     'ffl_admin_theme' ) . '</a></p>' .
+			'<p><strong>' . __( 'For more information:', 'pacmec_admin_theme' ) . '</strong></p>' .
+			'<p><a href="http://pacmec.co/" target="_blank">'     . __( 'FAQ',     'pacmec_admin_theme' ) . '</a></p>' .
 			'<p></p>'
 		);
 	}

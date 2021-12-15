@@ -1,6 +1,6 @@
 <?php
 /**
- * @author flatfull.com
+ * @author pacmec.co
  * require $dir . '/modules/demo/demo.php';
  * new Admin_Theme_Demo($setting);
  */

@@ -6,10 +6,10 @@ Description: Cambiar la barra de administración, el menú, el inicio de sesión
 Version: 1.0.0
 Author: PACMEC
 Author URI: #
-Text Domain: admin_theme_PACMEC
+Text Domain: admin-theme-pacmec
 */
 
-class Admin_Theme_Material_PACMEC {
+class Admin_Theme_PACMEC {
 
 	function __construct() {
 		$this->init();
@@ -25,10 +25,10 @@ class Admin_Theme_Material_PACMEC {
 		require $dir . '/modules/footer/footer.php';
 
 		$arg = array(
-		     'page_title'   => 'Material Admin Theme'
-		    ,'menu_title'	=> 'Material Admin'
-		    ,'menu_slug'	=> 'admin-material'
-		    ,'setting_name' => 'admin_theme_material_option'
+		     'page_title'   => 'Admin Theme PACMEC'
+		    ,'menu_title'	=> 'Admin Theme PACMEC'
+		    ,'menu_slug'	=> 'admin-theme-pacmec'
+		    ,'setting_name' => 'admin_theme_pacmec_option'
 			,'plugin_file'  => __FILE__
 		);
 
@@ -46,4 +46,4 @@ class Admin_Theme_Material_PACMEC {
 
 }
 
-new Admin_Theme_Material_PACMEC;
+new Admin_Theme_PACMEC;

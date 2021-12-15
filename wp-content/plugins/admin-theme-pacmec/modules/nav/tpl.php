@@ -1,86 +1,86 @@
-	<h3 class="m-b"><span><?php esc_html_e('Bar', 'ffl_admin_theme'); ?></span></h3>
-	<p class="no-m-t text-sm"><?php esc_html_e('Change the admin bar on the top', 'ffl_admin_theme'); ?></p>
+	<h3 class="m-b"><span><?php esc_html_e('Bar', 'pacmec_admin_theme'); ?></span></h3>
+	<p class="no-m-t text-sm"><?php esc_html_e('Change the admin bar on the top', 'pacmec_admin_theme'); ?></p>
 	<p>
 		<label>
 			<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_front]" type="checkbox" <?php if ($this->setting->get_setting('bar_front') == true) echo 'checked="checked" '; ?>> 
-			<?php esc_html_e('Apply style on front-end', 'ffl_admin_theme'); ?>
+			<?php esc_html_e('Apply style on front-end', 'pacmec_admin_theme'); ?>
 		</label>
 	</p>
 	<div class="box">
-		<h4><span><?php esc_html_e('Logo &amp; name', 'ffl_admin_theme'); ?></span></h4>
+		<h4><span><?php esc_html_e('Logo &amp; name', 'pacmec_admin_theme'); ?></span></h4>
 		<div class="box-body b-t hide">
 			<p>
 				<label>
-					<?php esc_html_e('logo image', 'ffl_admin_theme'); ?>
+					<?php esc_html_e('logo image', 'pacmec_admin_theme'); ?>
 					<br>
 					<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_logo]" type="text" value="<?php esc_attr_e( $this->setting->get_setting('bar_logo') ); ?>">
-					<button type="button" class="button-secondary upload-btn"><?php esc_html_e('Upload', 'ffl_admin_theme'); ?></button>
+					<button type="button" class="button-secondary upload-btn"><?php esc_html_e('Upload', 'pacmec_admin_theme'); ?></button>
 				</label>
 			</p>
 			<p>
 				<label>
-					<?php esc_html_e('Link', 'ffl_admin_theme'); ?>
+					<?php esc_html_e('Link', 'pacmec_admin_theme'); ?>
 					<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_name_link]" type="text" value="<?php esc_attr_e( $this->setting->get_setting('bar_name_link') ); ?>" class="widefat">
 				</label> 
 			</p>
 			<p>
 				<label>
-					<?php esc_html_e('Name', 'ffl_admin_theme'); ?>
+					<?php esc_html_e('Name', 'pacmec_admin_theme'); ?>
 					<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_name]" type="text" value="<?php esc_attr_e( $this->setting->get_setting('bar_name') ); ?>" class="widefat">
 				</label> 
 			</p>
 			<p>
 				<label>
 					<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_name_hide]" type="checkbox" <?php if ( $this->setting->get_setting('bar_name_hide') == true ) echo 'checked="checked" '; ?>> 
-					<?php esc_html_e('Hide "Name"', 'ffl_admin_theme'); ?>
+					<?php esc_html_e('Hide "Name"', 'pacmec_admin_theme'); ?>
 				</label>
 			</p>
 		</div>
 	</div>
 	<div class="box">
-		<h4><span><?php esc_html_e('Quick links', 'ffl_admin_theme'); ?></span></h4>
+		<h4><span><?php esc_html_e('Quick links', 'pacmec_admin_theme'); ?></span></h4>
 		<div class="box-body b-t hide">
 			<p>
 				<fieldset>
 					<label>
 						<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_updates_hide]" type="checkbox" <?php if ($this->setting->get_setting('bar_updates_hide') == true) echo 'checked="checked" '; ?>> 
-						<?php esc_html_e('Remove "Updates"', 'ffl_admin_theme'); ?>
+						<?php esc_html_e('Remove "Updates"', 'pacmec_admin_theme'); ?>
 					</label>
 					<br>
 					<label>
 						<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_comments_hide]" type="checkbox" <?php if ($this->setting->get_setting('bar_comments_hide') == true) echo 'checked="checked" '; ?>> 
-						<?php esc_html_e('Remove "Comments"', 'ffl_admin_theme'); ?>
+						<?php esc_html_e('Remove "Comments"', 'pacmec_admin_theme'); ?>
 					</label>
 					<br>
 					<label>
 						<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_new_hide]" type="checkbox" <?php if ($this->setting->get_setting('bar_new_hide') == true) echo 'checked="checked" '; ?>> 
-						<?php esc_html_e('Remove "New"', 'ffl_admin_theme'); ?>
+						<?php esc_html_e('Remove "New"', 'pacmec_admin_theme'); ?>
 					</label>
 					<?php if ( is_multisite() && get_current_blog_id() == 1 && current_user_can( 'manage_options' ) ) { ?>
 					<br>
 					<label>
 						<input name="<?php esc_attr_e($this->setting->setting_name); ?>[bar_site_hide]" type="checkbox" <?php if ($this->setting->get_setting('bar_site_hide') == true) echo 'checked="checked" '; ?>> 
-						<?php esc_html_e('Remove "My sites"', 'ffl_admin_theme'); ?>
+						<?php esc_html_e('Remove "My sites"', 'pacmec_admin_theme'); ?>
 					</label>
 					<?php } ?>
 				</fieldset>
 			</p>
 		</div>
 	</div>
-	<h3 class="m-b"><span><?php esc_html_e('Menu', 'ffl_admin_theme'); ?></span></h3>
-	<p class="no-m-t  text-sm"><?php esc_html_e('Change the menu on the left.', 'ffl_admin_theme'); ?></p>
+	<h3 class="m-b"><span><?php esc_html_e('Menu', 'pacmec_admin_theme'); ?></span></h3>
+	<p class="no-m-t  text-sm"><?php esc_html_e('Change the menu on the left.', 'pacmec_admin_theme'); ?></p>
 	<p class="text-sm">
 		<label>
 			<input name="<?php esc_attr_e($this->setting->setting_name); ?>[menu_collapse]" type="checkbox" <?php if ($this->setting->get_setting('menu_collapse') == true) echo 'checked="checked" '; ?>> 
-			<?php esc_html_e('Collapse', 'ffl_admin_theme'); ?>
+			<?php esc_html_e('Collapse', 'pacmec_admin_theme'); ?>
 		</label> &nbsp;
 		<label>
 			<input name="<?php esc_attr_e($this->setting->setting_name); ?>[menu_collapse_hide]" type="checkbox" <?php if ($this->setting->get_setting('menu_collapse_hide') == true) echo 'checked="checked" '; ?>> 
-			<?php esc_html_e('Hide collapse link', 'ffl_admin_theme'); ?>
+			<?php esc_html_e('Hide collapse link', 'pacmec_admin_theme'); ?>
 		</label> &nbsp;
 		<label>
 			<input name="<?php esc_attr_e($this->setting->setting_name); ?>[menu_h]" type="checkbox" <?php if ($this->setting->get_setting('menu_h') == true) echo 'checked="checked" '; ?>> 
-			<?php esc_html_e('Horizontal', 'ffl_admin_theme'); ?>
+			<?php esc_html_e('Horizontal', 'pacmec_admin_theme'); ?>
 		</label>
 	</p>
 	<div class="clearfix admin-menus">
@@ -111,22 +111,22 @@
 					<?php if($id[1]){ ?>
 					<p>
 						<label>
-							<?php esc_html_e('Title:', 'ffl_admin_theme'); ?>
-							<input name="<?php esc_attr_e( $this->setting->setting_name.'[menu]['.$id[0].'][title]' ); ?>" value="<?php esc_attr_e( $title, 'ffl_admin_theme' ); ?>" type="text" class="widefat">
+							<?php esc_html_e('Title:', 'pacmec_admin_theme'); ?>
+							<input name="<?php esc_attr_e( $this->setting->setting_name.'[menu]['.$id[0].'][title]' ); ?>" value="<?php esc_attr_e( $title, 'pacmec_admin_theme' ); ?>" type="text" class="widefat">
 						</label>
 					</p>
 					<?php } ?>
 					<p>
 						<label>
 							<input name="<?php esc_attr_e( $this->setting->setting_name.'[menu]['.$id[0].'][hide]' ); ?>" <?php if ($hide) echo 'checked="checked" '; ?> type="checkbox"> 
-							<?php esc_html_e('Remove from menu', 'ffl_admin_theme'); ?>
+							<?php esc_html_e('Remove from menu', 'pacmec_admin_theme'); ?>
 						</label>
 					</p>
 					<?php
 						if(isset($this->submenus[$v[2]])){
 					?>
 					<p class="toggle">
-						<a href="#admin" class="c-p"><?php esc_html_e('Submenu', 'ffl_admin_theme'); ?></a>
+						<a href="#admin" class="c-p"><?php esc_html_e('Submenu', 'pacmec_admin_theme'); ?></a>
 					</p>
 					<?php } ?>
 					<div class="hide admin-menus">
@@ -152,14 +152,14 @@
 								<input name="<?php esc_attr_e( $this->setting->setting_name.'[submenu]['.$sid[0].'][index]' ); ?>" value="<?php esc_html_e( $index ); ?>" type="text" hidden>
 								<p>
 									<label>
-										<?php esc_html_e('Title:', 'ffl_admin_theme'); ?>
+										<?php esc_html_e('Title:', 'pacmec_admin_theme'); ?>
 										<input name="<?php esc_attr_e( $this->setting->setting_name.'[submenu]['.$sid[0].'][title]' ); ?>" value="<?php esc_attr_e( $title ); ?>" type="text" class="widefat">
 									</label>
 								</p>
 								<p>
 									<label>
 										<input name="<?php esc_attr_e( $this->setting->setting_name.'[submenu]['.$sid[0].'][hide]' ); ?>" <?php if ( $hide ) echo 'checked="checked" '; ?> type="checkbox"> 
-										<?php esc_html_e('Remove from menu', 'ffl_admin_theme'); ?>
+										<?php esc_html_e('Remove from menu', 'pacmec_admin_theme'); ?>
 									</label>
 								</p>
 							</div>
@@ -175,7 +175,7 @@
 				<div class="box-body" id="tab-iconlist">
 					<div class="clearfix">
 						<ul class="subsubsub">
-							<li><a href="#tab-icon-dashicons" class="current"><?php esc_html_e('Dashicons', 'ffl_admin_theme'); ?></a></li>
+							<li><a href="#tab-icon-dashicons" class="current"><?php esc_html_e('Dashicons', 'pacmec_admin_theme'); ?></a></li>
 							<?php
 								foreach ( $icons as $icon ) {
 									echo sprintf('<li> | <a href="#tab-icon-%s">%s</a></li>', esc_attr($icon), esc_html($icon));

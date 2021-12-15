@@ -13,7 +13,7 @@
 			<div class="box admin-theme-option">
 				<div class="box-body">
 					<p>
-						<input type="submit" class="button button-primary button-block button-lg m-b" value="<?php esc_attr_e('Save Changes', 'ffl_admin_theme') ?>" />
+						<input type="submit" class="button button-primary button-block button-lg m-b" value="<?php esc_attr_e('Save Changes', 'pacmec_admin_theme') ?>" />
 					</p>
 					</form>
 					<form method="post" enctype="multipart/form-data">
@@ -23,14 +23,14 @@
 						<p>
 							<input type="hidden" name="setting_action" value="import_setting" />
 							<?php wp_nonce_field( 'setting_import_nonce', 'setting_import_nonce' ); ?>
-							<?php submit_button( esc_html('Import theme', 'ffl_admin_theme'), 'button-block', 'submit', false, ! current_user_can( 'manage_options' ) ? array( 'disabled' => 'disabled' ) : null ); ?>
+							<?php submit_button( esc_html('Import theme', 'pacmec_admin_theme'), 'button-block', 'submit', false, ! current_user_can( 'manage_options' ) ? array( 'disabled' => 'disabled' ) : null ); ?>
 						</p>
 					</form>
 					<form method="post">
 						<p><input type="hidden" name="setting_action" value="export_setting" /></p>
 						<p>
 							<?php wp_nonce_field( 'setting_export_nonce', 'setting_export_nonce' ); ?>
-							<?php submit_button( esc_html('Export theme', 'ffl_admin_theme'), 'button-block', 'submit', false, ! current_user_can( 'manage_options' ) ? array( 'disabled' => 'disabled' ) : null ); ?>
+							<?php submit_button( esc_html('Export theme', 'pacmec_admin_theme'), 'button-block', 'submit', false, ! current_user_can( 'manage_options' ) ? array( 'disabled' => 'disabled' ) : null ); ?>
 						</p>
 					</form>
 				</div>

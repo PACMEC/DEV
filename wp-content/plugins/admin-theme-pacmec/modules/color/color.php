@@ -1,6 +1,6 @@
 <?php
 /**
- * @author flatfull.com
+ * @author pacmec.co
  */
 
 class Admin_Theme_PACMEC_Color{
