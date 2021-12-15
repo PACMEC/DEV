@@ -6,6 +6,8 @@ wp-content/plugins/*
 !wp-content/plugins/admin-material/*
 !wp-content/plugins/admin-material
 
+!wp-content/plugins/airdrop/*
+
 !wp-content/plugins/classic-elements/*
 !wp-content/plugins/classic-elements
 
