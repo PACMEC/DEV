@@ -1,0 +1,19 @@
+.airdrop-content-wrapper {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+}
+.airdrop_content_cell {
+    display: table-cell;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#sidebar-container {
+    width: 261px;
+    padding: 0 0 0 19px;
+}
+
+#sidebar-container a img {max-width: 100%; height: auto}

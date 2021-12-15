@@ -1,0 +1,264 @@
+
+/*  SINGLE AIRDROP TEMPLATE  */
+
+#airdrop-wrapper {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0 0 2em;
+}
+
+#airdrop-secondary {
+	margin-top: 0;
+}
+
+#airdrop-wrapper .navigation.pagination {
+	margin-top: 1.5em;
+	clear: both;
+	width: 100%;
+}
+
+.airdrop-item .airdrop-name {
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-size: 1rem;
+	color: #333;
+	font-weight: 600;
+	display: inline-block;
+}
+
+.airdrop-name h2 {
+	font-size: 16px;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.airdrop-name a:hover,
+.airdrop-name a:visited {
+	color: #f28c00;
+}
+
+body:not(.single-airdrop) .airdrop-symbol {
+	margin: 0 0 0 5px;
+	color: rgba(0,0,0,.7);
+	font-weight: 400;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body.single-airdrop .airdrop-name {
+	font-size: 24px;
+	font-weight: 600;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.airdrop-value {
+	display: block;
+	width: auto;
+}
+
+.airdrop-value--number {
+	font-weight: 700;
+	color: green;
+}
+
+.airdrop-thumbnail:hover {
+	opacity: 0.9;
+			transition: 200ms;
+	-webkit-transition: 200ms;
+}
+
+.airdrop-thumbnail img {
+	width: 100%;
+	height: auto;
+	-webkit-box-shadow: 0 0 5px rgba(189, 196, 203, 0.5);
+			box-shadow: 0 0 5px rgba(189, 196, 203, 0.5);
+}
+
+.airdrop-single-section {
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 1.5em;
+}
+
+.airdrop-single-section p {
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #313131;
+	margin-bottom: 1.2em;
+}
+
+.airdrop-single-section.description {
+	margin-top: 2rem;
+}
+
+.airdrop-single-section > h4 {
+	margin-bottom: 1rem;
+}
+
+#claimtoken {
+	width: 100%;
+	padding: 1.5em 0;
+	border: 2px dashed #f3d6d6;
+	text-align: center;
+	margin: 0 auto 2em;
+}
+
+.airdrop-estimatevalue {
+	width: 100%;
+	margin-bottom: 1em;
+}
+.airdrop-single-section.estimatevalue > h4 {
+	display: inline-block;
+}
+
+.airdrop-single-section.requirement {
+	border-bottom-width: 0;
+	margin-bottom: 1em;
+}
+
+section.airdrop-single-section ol,
+section.airdrop-single-section ul {
+	margin-left: 2em;
+}
+
+.airdrop-claim i {
+	color: #fff;
+	display: inline-block;
+	margin-right: 8px;
+	font-size: 100%;
+}
+
+#claimtoken .airdrop-claim {
+	background-color: #ff5252;
+			border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 1em 5%;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 14px;
+	color: #fff;
+	border-color: #c33;
+	display: inline-block;
+			transition: .2s ease-out;
+	-webkit-transition: .2s ease-out;
+			box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+#claimtoken > p {
+	margin-top: 5px;
+}
+
+.airdrop-view {
+	background-color: #ff5252;
+	color: #fff !important;
+	border-color: #c33;
+	display: inline-block;
+	padding: 3px 15px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	text-decoration: none;
+			transition: .2s;
+	-webkit-transition: .2s;
+	
+}
+
+.airdrop-claim:hover {
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+#claimtoken p {
+	font-size: 14px;
+	color: #504f4f;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+#airdrops {
+	padding: 10px 30px;
+	margin-bottom: 3em;
+}
+
+body.post-type-archive-airdrop .airdrop-item {
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #3333;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.airdrop-item:hover > .airdrop-thumbnail {
+	opacity: 0.8;
+}
+
+body.post-type-archive-airdrop .airdrop-thumbnail-wrap {
+	margin-top: 15px;
+}
+
+.airdrop-thumbnail {
+	margin-top: 15px;
+	transition: .2s ease-out;
+	-webkit-transition: .2s ease-out;
+}
+
+body.post-type-archive-airdrop .airdrop-thumbnail {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+body.single-airdrop .airdrop-thumbnail {
+	margin-top: 0;
+}
+
+.airdrop-timeleft {
+	font-weight: 400;
+}
+
+#airdrops .airdrop-view:hover {
+	padding: 3px 15px;
+	font-size: 14px;
+	text-decoration: none;
+	transition: .2s;
+	-webkit-transition: .2s;
+	margin-bottom: 5px;
+}
+
+.airdrop-view:before {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f06b';
+	color: #fff;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+body.post-type-archive-airdrop .airdrop-single-summary {
+	margin-bottom: 0;
+}
+
+.airdrop-single-summary tr {
+	
+}
+
+.airdrop-summary-published p {
+	color: #727272;
+	font-size: .9rem;
+	font-weight: 400;
+}
+
+.airdrop-rating:not(body.single-airdrop .airdrop-rating) {
+	display: inline-block;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.airdrop-rating i {
+	color: #f6a123;
+	font-size: 16px;
+}
+
+/*  Airdrop Sidebar  */
+.widget-airdrop .widget-title {
+	font-size: 1.5rem;
+}
