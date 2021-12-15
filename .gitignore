@@ -6,17 +6,8 @@ wp-content/plugins/*
 !wp-content/plugins/admin-material/*
 !wp-content/plugins/admin-material
 
-!wp-content/plugins/arrowpress_importer/*
-!wp-content/plugins/arrowpress_importer
-
-!wp-content/plugins/arrowpress-core/*
-!wp-content/plugins/arrowpress-core
-
 !wp-content/plugins/classic-elements/*
 !wp-content/plugins/classic-elements
-
-!wp-content/plugins/coin_charts/*
-!wp-content/plugins/coin_charts
 
 !wp-content/plugins/contact-form-7/*
 !wp-content/plugins/contact-form-7
