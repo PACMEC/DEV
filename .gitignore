@@ -48,8 +48,8 @@ wp-content/plugins/*
 !wp-content/plugins/e-commerce-stock-manager
 !wp-content/plugins/e-commerce-subscriptions/*
 !wp-content/plugins/e-commerce-subscriptions
-!wp-content/plugins/elements/*
-!wp-content/plugins/elements
+!wp-content/plugins/elementor/*
+!wp-content/plugins/elementor
 !wp-content/plugins/jscomposer/*
 !wp-content/plugins/jscomposer
 !wp-content/plugins/mailchimp/*
