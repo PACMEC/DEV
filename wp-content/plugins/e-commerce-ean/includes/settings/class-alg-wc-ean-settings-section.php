@@ -43,6 +43,7 @@ class Alg_WC_EAN_Settings_Section {
 	 * @since   2.0.0
 	 */
 	function pro_msg() {
+		return '';
 		return apply_filters( 'alg_wc_ean_settings', '<p style="padding:15px;color:black;background-color:white;font-weight:bold;">' .
 			'You will need <a target="_blank" href="https://wpfactory.com/item/ean-for-woocommerce/">EAN for WooCommerce Pro</a> plugin version to enable this section.' .
 		'</p>' );

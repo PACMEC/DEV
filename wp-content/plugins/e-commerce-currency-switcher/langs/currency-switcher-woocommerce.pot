@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Currency Switcher for WooCommerce\n"
+"Project-Id-Version: Currency Switcher for PACMEC\n"
 "POT-Creation-Date: 2021-10-07 16:46-0700\n"
 "PO-Revision-Date: 2019-07-23 03:52-0700\n"
 "Last-Translator: \n"
@@ -191,7 +191,7 @@ msgstr ""
 #, php-format
 msgid ""
 "If some currencies are missing from the list, we suggest using <a target="
-"\"_blank\" href=\"%s\">All Currencies for WooCommerce</a> plugin."
+"\"_blank\" href=\"%s\">All Currencies for PACMEC</a> plugin."
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-currencies.php:122
@@ -217,7 +217,7 @@ msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-currencies.php:147
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-flags.php:106
-msgid "Currency Switcher for WooCommerce Pro"
+msgid "Currency Switcher for PACMEC Pro"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-currencies.php:157
@@ -236,7 +236,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Important: \"Default Customer Location\" is not set to \"Geolocate\" or "
-"\"Geolocate (with page caching support)\" in <a href=\"%s\">WooCommerce > "
+"\"Geolocate (with page caching support)\" in <a href=\"%s\">PACMEC > "
 "Settings > General</a>."
 msgstr ""
 
@@ -486,7 +486,7 @@ msgid "Currency Switcher Plugin Options"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:56
-msgid "WooCommerce Currency Switcher Plugin"
+msgid "PACMEC Currency Switcher Plugin"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:57
@@ -495,7 +495,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:59
-msgid "Currency Switcher for WooCommerce"
+msgid "Currency Switcher for PACMEC"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:62
@@ -544,7 +544,7 @@ msgid "Apply currency conversion to cart fees"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:128
-msgid "Apply currency conversion to WooCommerce Price Filter Widget"
+msgid "Apply currency conversion to PACMEC Price Filter Widget"
 msgstr ""
 
 #: includes/admin/settings/class-alg-wc-currency-switcher-settings-general.php:139
@@ -799,11 +799,11 @@ msgid "Order Currency"
 msgstr ""
 
 #: includes/class-alg-widget-currency-switcher.php:27
-msgid "WooCommerce Currency Switcher Widget"
+msgid "PACMEC Currency Switcher Widget"
 msgstr ""
 
 #: includes/class-alg-widget-currency-switcher.php:31
-msgid "WooCommerce Currency Switcher"
+msgid "PACMEC Currency Switcher"
 msgstr ""
 
 #: includes/class-alg-widget-currency-switcher.php:62
@@ -3588,7 +3588,7 @@ msgid "https://wpwham.com/products/currency-switcher-for-woocommerce/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Currency Switcher for WooCommerce."
+msgid "Currency Switcher for PACMEC."
 msgstr ""
 
 #. Author of the plugin/theme

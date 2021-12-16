@@ -3265,6 +3265,6 @@ msgstr ""
 msgid "Account Tab 4"
 msgstr ""
 
-#: woocustomizer.php:132
+#: ecommercecustomizer.php:132
 msgid "StoreCustomizer requires the WooCommerce plugin to be active to work"
 msgstr ""

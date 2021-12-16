@@ -733,7 +733,7 @@ class Alg_WC_Currency_Switcher_Main {
 			return $price;
 		}
 		
-		// Adds compatibility with WooCommerce Chained Products plugin
+		// Adds compatibility with PACMEC Chained Products plugin
 		if ( Alg_Switcher_Third_Party_Compatibility::is_chained_product( $_product ) ) {
 			return $price;
 		}

@@ -2,7 +2,7 @@
 /**
  * WC Coupon Generator core functions.
  *
- * @author 		Jeroen Sormani
+ * @author 		PACMEC
  * @since		1.0.0
  */
 

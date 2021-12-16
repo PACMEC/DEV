@@ -5,7 +5,7 @@
  *
  * @package Customizer Library Overlay
  */
-function woocustomizer_customizer_library_options()
+function ecommercecustomizer_customizer_library_options()
 {
     // Stores all the controls that will be added
     $options = array();
@@ -22,21 +22,21 @@ function woocustomizer_customizer_library_options()
         $panel = 'wcz-panel-settings';
         $panels[] = array(
             'id'       => $panel,
-            'title'    => __( 'StoreCustomizer', 'woocustomizer' ),
+            'title'    => __( 'StoreCustomizer', 'ecommercecustomizer' ),
             'priority' => '10',
         );
         // --------------------------------------------------------------------------------------------------------------------------------- WC Panel
         // ----------------------------------------------------------------------------------------------- StoreCustomizer Main Panel
-        $section = 'wcz-panel-woocustomizer';
+        $section = 'wcz-panel-ecommercecustomizer';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'StoreCustomizer', 'woocustomizer' ),
+            'title'    => __( 'StoreCustomizer', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
         $options['wcz-wc-remove-breadcrumbs'] = array(
             'id'      => 'wcz-wc-remove-breadcrumbs',
-            'label'   => __( 'Remove All WooCommerce Breadcrumbs', 'woocustomizer' ),
+            'label'   => __( 'Remove All WooCommerce Breadcrumbs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -44,22 +44,22 @@ function woocustomizer_customizer_library_options()
         // Admin Only Settings
         $options['wcz-heading-wcc-admin'] = array(
             'id'      => 'wcz-heading-wcc-admin',
-            'label'   => __( 'Admin Only Settings', 'woocustomizer' ),
+            'label'   => __( 'Admin Only Settings', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
         $options['wcz-admin-product-stats'] = array(
             'id'          => 'wcz-admin-product-stats',
-            'label'       => __( 'Turn on Front-End Product Statistics', 'woocustomizer' ),
+            'label'       => __( 'Turn on Front-End Product Statistics', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Only admin users are able to view these statistics on the website front-end.<br />Site visitors will not see this.', 'woocustomizer' ),
+            'description' => __( 'Only admin users are able to view these statistics on the website front-end.<br />Site visitors will not see this.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         // Login or Logout Menu Item Settings
         $options['wcz-heading-login-logout'] = array(
             'id'      => 'wcz-heading-login-logout',
-            'label'   => __( 'Login / Logout Menu Item', 'woocustomizer' ),
+            'label'   => __( 'Login / Logout Menu Item', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -77,19 +77,19 @@ function woocustomizer_customizer_library_options()
         }
         $options['wcz-login-logout-menu'] = array(
             'id'          => 'wcz-login-logout-menu',
-            'label'       => __( 'Add Login / Logout to Navigation', 'woocustomizer' ),
+            'label'       => __( 'Add Login / Logout to Navigation', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'select',
             'choices'     => array_unique( $nav_choices ),
-            'description' => __( 'This will add a Login navigation item, and will change to Logout if the user is logged in.', 'woocustomizer' ),
+            'description' => __( 'This will add a Login navigation item, and will change to Logout if the user is logged in.', 'ecommercecustomizer' ),
             'default'     => 'none',
         );
         $options['wcz-login-text'] = array(
             'id'      => 'wcz-login-text',
-            'label'   => __( 'Login Text', 'woocustomizer' ),
+            'label'   => __( 'Login Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Login', 'woocustomizer' ),
+            'default' => __( 'Login', 'ecommercecustomizer' ),
         );
         $choices = array(
             'wplogin' => 'WordPress Login Page',
@@ -98,7 +98,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-login-item-url'] = array(
             'id'      => 'wcz-login-item-url',
-            'label'   => __( 'Menu item links to:', 'woocustomizer' ),
+            'label'   => __( 'Menu item links to:', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -106,62 +106,62 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-login-at-custom-url'] = array(
             'id'      => 'wcz-login-at-custom-url',
-            'label'   => __( 'Custom Page Url', 'woocustomizer' ),
+            'label'   => __( 'Custom Page Url', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
         );
         $options['wcz-login-redirect-page'] = array(
             'id'          => 'wcz-login-redirect-page',
-            'label'       => __( 'Login Redirect Page', 'woocustomizer' ),
+            'label'       => __( 'Login Redirect Page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'dropdown-pages',
-            'description' => __( 'Select which page to redirect the user to after LOGGING IN. Defaults to Home.', 'woocustomizer' ),
+            'description' => __( 'Select which page to redirect the user to after LOGGING IN. Defaults to Home.', 'ecommercecustomizer' ),
             'default'     => '',
         );
         $options['wcz-logout-text'] = array(
             'id'      => 'wcz-logout-text',
-            'label'   => __( 'Logout Text', 'woocustomizer' ),
+            'label'   => __( 'Logout Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Logout', 'woocustomizer' ),
+            'default' => __( 'Logout', 'ecommercecustomizer' ),
         );
         $options['wcz-logout-redirect-page'] = array(
             'id'          => 'wcz-logout-redirect-page',
-            'label'       => __( 'Logout Redirect Page', 'woocustomizer' ),
+            'label'       => __( 'Logout Redirect Page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'dropdown-pages',
-            'description' => __( 'Select which page to redirect the user to after LOGGING OUT. Defaults to Home.', 'woocustomizer' ),
+            'description' => __( 'Select which page to redirect the user to after LOGGING OUT. Defaults to Home.', 'ecommercecustomizer' ),
             'default'     => '',
         );
         // Banner to WooCommerce Pages
         $options['wcz-heading-wcc-page-banner'] = array(
             'id'      => 'wcz-heading-wcc-page-banner',
-            'label'   => __( 'WooCommerce Page/s Notice', 'woocustomizer' ),
+            'label'   => __( 'WooCommerce Page/s Notice', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
         $options['wcz-wc-notice-banner'] = array(
             'id'          => 'wcz-wc-notice-banner',
-            'label'       => __( 'Add a notice to WooCommerce pages', 'woocustomizer' ),
+            'label'       => __( 'Add a notice to WooCommerce pages', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Depending on your theme, the position of these hooks might change slightly', 'woocustomizer' ),
+            'description' => __( 'Depending on your theme, the position of these hooks might change slightly', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-wc-notice-title'] = array(
             'id'      => 'wcz-wc-notice-title',
-            'label'   => __( 'Title', 'woocustomizer' ),
+            'label'   => __( 'Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Please Note!', 'woocustomizer' ),
+            'default' => __( 'Please Note!', 'ecommercecustomizer' ),
         );
         $options['wcz-wc-notice-text'] = array(
             'id'          => 'wcz-wc-notice-text',
-            'label'       => __( 'Text', 'woocustomizer' ),
+            'label'       => __( 'Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'textarea',
-            'description' => __( 'You can use styling tags and inline CSS to further style the text in the notice.', 'woocustomizer' ),
-            'default'     => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt nec diam eu convallis. Nullam quis ipsum volutpat, porta ex sit amet, posuere lorem.', 'woocustomizer' ),
+            'description' => __( 'You can use styling tags and inline CSS to further style the text in the notice.', 'ecommercecustomizer' ),
+            'default'     => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt nec diam eu convallis. Nullam quis ipsum volutpat, porta ex sit amet, posuere lorem.', 'ecommercecustomizer' ),
         );
         $choices = array(
             'none'                            => 'Off',
@@ -171,7 +171,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-banner-shop'] = array(
             'id'      => 'wcz-wc-notice-banner-shop',
-            'label'   => __( 'Add to Shop & Archive pages', 'woocustomizer' ),
+            'label'   => __( 'Add to Shop & Archive pages', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -179,7 +179,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-banner-archives'] = array(
             'id'      => 'wcz-wc-notice-banner-archives',
-            'label'   => __( 'Include Category & Archive pages', 'woocustomizer' ),
+            'label'   => __( 'Include Category & Archive pages', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -196,7 +196,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-banner-product'] = array(
             'id'      => 'wcz-wc-notice-banner-product',
-            'label'   => __( 'Add to Product pages', 'woocustomizer' ),
+            'label'   => __( 'Add to Product pages', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -212,7 +212,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-banner-cart'] = array(
             'id'      => 'wcz-wc-notice-banner-cart',
-            'label'   => __( 'Add to Cart page', 'woocustomizer' ),
+            'label'   => __( 'Add to Cart page', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -229,7 +229,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-banner-checkout'] = array(
             'id'      => 'wcz-wc-notice-banner-checkout',
-            'label'   => __( 'Add to Checkout page', 'woocustomizer' ),
+            'label'   => __( 'Add to Checkout page', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -237,7 +237,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-design'] = array(
             'id'      => 'wcz-wc-notice-design',
-            'label'   => __( 'Edit Design', 'woocustomizer' ),
+            'label'   => __( 'Edit Design', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -250,7 +250,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-style'] = array(
             'id'      => 'wcz-wc-notice-style',
-            'label'   => __( 'Design', 'woocustomizer' ),
+            'label'   => __( 'Design', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -259,7 +259,7 @@ function woocustomizer_customizer_library_options()
         $wcz_rangeval = get_option( 'wcz-wc-notice-titlesize', 18 );
         $options['wcz-wc-notice-titlesize'] = array(
             'id'          => 'wcz-wc-notice-titlesize',
-            'label'       => __( 'Title Size', 'woocustomizer' ),
+            'label'       => __( 'Title Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -273,7 +273,7 @@ function woocustomizer_customizer_library_options()
         $wcz_rangeval = get_option( 'wcz-wc-notice-textsize', 14 );
         $options['wcz-wc-notice-textsize'] = array(
             'id'          => 'wcz-wc-notice-textsize',
-            'label'       => __( 'Text Size', 'woocustomizer' ),
+            'label'       => __( 'Text Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -286,14 +286,14 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wc-notice-center'] = array(
             'id'      => 'wcz-wc-notice-center',
-            'label'   => __( 'Center Align', 'woocustomizer' ),
+            'label'   => __( 'Center Align', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-wc-notice-color'] = array(
             'id'      => 'wcz-wc-notice-color',
-            'label'   => __( 'Notice Color', 'woocustomizer' ),
+            'label'   => __( 'Notice Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#2f79ff',
@@ -301,7 +301,7 @@ function woocustomizer_customizer_library_options()
         $wcz_rangeval = get_option( 'wcz-wc-notice-width', 100 );
         $options['wcz-wc-notice-width'] = array(
             'id'          => 'wcz-wc-notice-width',
-            'label'       => __( 'Max Width', 'woocustomizer' ),
+            'label'       => __( 'Max Width', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -315,7 +315,7 @@ function woocustomizer_customizer_library_options()
         $wcz_rangeval = get_option( 'wcz-wc-notice-margin', 20 );
         $options['wcz-wc-notice-margin'] = array(
             'id'          => 'wcz-wc-notice-margin',
-            'label'       => __( 'Bottom Margin', 'woocustomizer' ),
+            'label'       => __( 'Bottom Margin', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -331,41 +331,41 @@ function woocustomizer_customizer_library_options()
         $section = 'wcz-panel-shop';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'WooCommerce Shop Page', 'woocustomizer' ),
+            'title'    => __( 'WooCommerce Shop Page', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
         $options['wcz-shop-remove-breadcrumbs'] = array(
             'id'      => 'wcz-shop-remove-breadcrumbs',
-            'label'   => __( 'Remove Shop Page Breadcrumbs', 'woocustomizer' ),
+            'label'   => __( 'Remove Shop Page Breadcrumbs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-remove-title'] = array(
             'id'      => 'wcz-shop-remove-title',
-            'label'   => __( 'Remove Shop Title', 'woocustomizer' ),
+            'label'   => __( 'Remove Shop Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-remove-sorting'] = array(
             'id'      => 'wcz-shop-remove-sorting',
-            'label'   => __( 'Remove Shop Sorting Dropdown', 'woocustomizer' ),
+            'label'   => __( 'Remove Shop Sorting Dropdown', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-remove-result'] = array(
             'id'      => 'wcz-shop-remove-result',
-            'label'   => __( 'Remove Shop Sorting Results', 'woocustomizer' ),
+            'label'   => __( 'Remove Shop Sorting Results', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-edit-pp'] = array(
             'id'      => 'wcz-shop-edit-pp',
-            'label'   => __( 'Turn off Editing Products per row/page', 'woocustomizer' ),
+            'label'   => __( 'Turn off Editing Products per row/page', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -373,7 +373,7 @@ function woocustomizer_customizer_library_options()
         $wcz_rangeval = get_option( 'wcz-shop-pppage', 12 );
         $options['wcz-shop-pppage'] = array(
             'id'          => 'wcz-shop-pppage',
-            'label'       => __( 'Products Per Page', 'woocustomizer' ),
+            'label'       => __( 'Products Per Page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -386,7 +386,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-pprow'] = array(
             'id'          => 'wcz-shop-pprow',
-            'label'       => __( 'Products Per Row', 'woocustomizer' ),
+            'label'       => __( 'Products Per Row', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -394,19 +394,19 @@ function woocustomizer_customizer_library_options()
             'max'  => 5,
             'step' => 1,
         ),
-            'description' => __( '<i>1</i> <b>|</b> 2 <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'woocustomizer' ),
+            'description' => __( '<i>1</i> <b>|</b> 2 <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'ecommercecustomizer' ),
             'default'     => 4,
         );
         $options['wcz-shop-sale-txt'] = array(
             'id'      => 'wcz-shop-sale-txt',
-            'label'   => __( 'Sale Banner Text', 'woocustomizer' ),
+            'label'   => __( 'Sale Banner Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Sale!', 'woocustomizer' ),
+            'default' => __( 'Sale!', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-add-soldout'] = array(
             'id'      => 'wcz-shop-add-soldout',
-            'label'   => __( 'Add a banner to Sold Out products', 'woocustomizer' ),
+            'label'   => __( 'Add a banner to Sold Out products', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -417,7 +417,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-soldout-style'] = array(
             'id'      => 'wcz-soldout-style',
-            'label'   => __( 'Sold Out Banner Style', 'woocustomizer' ),
+            'label'   => __( 'Sold Out Banner Style', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -425,84 +425,84 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-soldout-txt'] = array(
             'id'      => 'wcz-shop-soldout-txt',
-            'label'   => __( 'Sold Out Banner Text', 'woocustomizer' ),
+            'label'   => __( 'Sold Out Banner Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'SOLD OUT', 'woocustomizer' ),
+            'default' => __( 'SOLD OUT', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-show-stock'] = array(
             'id'          => 'wcz-shop-show-stock',
-            'label'       => __( 'Show stock amount for Users', 'woocustomizer' ),
+            'label'       => __( 'Show stock amount for Users', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This uses the stock set at product level.<br /><br />Use "[no]" in the text to display the stock amount.', 'woocustomizer' ),
+            'description' => __( 'This uses the stock set at product level.<br /><br />Use "[no]" in the text to display the stock amount.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-shop-stock-lowamnt-txt'] = array(
             'id'          => 'wcz-shop-stock-lowamnt-txt',
-            'label'       => __( 'Low Stock Amount Text', 'woocustomizer' ),
+            'label'       => __( 'Low Stock Amount Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'text',
-            'description' => __( 'If the product stock is 3 or less', 'woocustomizer' ),
-            'default'     => __( 'Only [no] left in stock!', 'woocustomizer' ),
+            'description' => __( 'If the product stock is 3 or less', 'ecommercecustomizer' ),
+            'default'     => __( 'Only [no] left in stock!', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-stock-amnt-txt'] = array(
             'id'      => 'wcz-shop-stock-amnt-txt',
-            'label'   => __( 'Stock Amount Text', 'woocustomizer' ),
+            'label'   => __( 'Stock Amount Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( '[no] left in stock!', 'woocustomizer' ),
+            'default' => __( '[no] left in stock!', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-edit-btns'] = array(
             'id'      => 'wcz-shop-edit-btns',
-            'label'   => __( 'Edit Shop Button Texts', 'woocustomizer' ),
+            'label'   => __( 'Edit Shop Button Texts', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shoplist-button-txt-simple'] = array(
             'id'      => 'wcz-shoplist-button-txt-simple',
-            'label'   => __( 'Simple Product Button Text', 'woocustomizer' ),
+            'label'   => __( 'Simple Product Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Add to cart', 'woocustomizer' ),
+            'default' => __( 'Add to cart', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-button-txt-variable'] = array(
             'id'      => 'wcz-shop-button-txt-variable',
-            'label'   => __( 'Variable Product Button Text', 'woocustomizer' ),
+            'label'   => __( 'Variable Product Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Select Options', 'woocustomizer' ),
+            'default' => __( 'Select Options', 'ecommercecustomizer' ),
         );
         $options['wcz-shop-button-txt-grouped'] = array(
             'id'      => 'wcz-shop-button-txt-grouped',
-            'label'   => __( 'Grouped Product Button Text', 'woocustomizer' ),
+            'label'   => __( 'Grouped Product Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'View products', 'woocustomizer' ),
+            'default' => __( 'View products', 'ecommercecustomizer' ),
         );
         // New badge for recent products
         $options['wcz-shop-new-badge'] = array(
             'id'      => 'wcz-shop-new-badge',
-            'label'   => __( 'Add a "New" badge for recently added products', 'woocustomizer' ),
+            'label'   => __( 'Add a "New" badge for recently added products', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-new-product-days'] = array(
             'id'          => 'wcz-shop-new-product-days',
-            'label'       => __( 'Days to determine if product is "New"', 'woocustomizer' ),
+            'label'       => __( 'Days to determine if product is "New"', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'number',
-            'description' => __( 'The "New" badge will only display on products where the "Published On" date is less that the number of days specified here.', 'woocustomizer' ),
+            'description' => __( 'The "New" badge will only display on products where the "Published On" date is less that the number of days specified here.', 'ecommercecustomizer' ),
             'default'     => 7,
         );
         $options['wcz-shop-new-product-badge-text'] = array(
             'id'      => 'wcz-shop-new-product-badge-text',
-            'label'   => __( 'New Product Badge Text', 'woocustomizer' ),
+            'label'   => __( 'New Product Badge Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'New Product', 'woocustomizer' ),
+            'default' => __( 'New Product', 'ecommercecustomizer' ),
         );
         $choices = array(
             'topleft'    => 'Top Left',
@@ -512,7 +512,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-new-badge-pos'] = array(
             'id'      => 'wcz-shop-new-badge-pos',
-            'label'   => __( 'Badge Position', 'woocustomizer' ),
+            'label'   => __( 'Badge Position', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -520,7 +520,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-new-badge-color'] = array(
             'id'      => 'wcz-shop-new-badge-color',
-            'label'   => __( 'Badge Color', 'woocustomizer' ),
+            'label'   => __( 'Badge Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#2f79ff',
@@ -528,27 +528,27 @@ function woocustomizer_customizer_library_options()
         // Archives Settings
         $options['wcz-heading-archives'] = array(
             'id'      => 'wcz-heading-archives',
-            'label'   => __( 'Shop Archive / Categories Pages', 'woocustomizer' ),
+            'label'   => __( 'Shop Archive / Categories Pages', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
         $options['wcz-shop-remove-catcount'] = array(
             'id'      => 'wcz-shop-remove-catcount',
-            'label'   => __( 'Remove Category Count', 'woocustomizer' ),
+            'label'   => __( 'Remove Category Count', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-archives-remove-breadcrumbs'] = array(
             'id'      => 'wcz-shop-archives-remove-breadcrumbs',
-            'label'   => __( 'Remove Shop Archive Breadcrumbs', 'woocustomizer' ),
+            'label'   => __( 'Remove Shop Archive Breadcrumbs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-shop-archives-remove-title'] = array(
             'id'      => 'wcz-shop-archives-remove-title',
-            'label'   => __( 'Remove Archives Title', 'woocustomizer' ),
+            'label'   => __( 'Remove Archives Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -556,15 +556,15 @@ function woocustomizer_customizer_library_options()
         // -------------------------------- Shop Design Settings
         $options['wcz-heading-wcc-btn'] = array(
             'id'          => 'wcz-heading-wcc-btn',
-            'label'       => __( 'Design Elements', 'woocustomizer' ),
+            'label'       => __( 'Design Elements', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'Depending on your theme, these design settings might not always work. If not, please contact us to help get these working with your theme.', 'woocustomizer' ),
+            'description' => __( 'Depending on your theme, these design settings might not always work. If not, please contact us to help get these working with your theme.', 'ecommercecustomizer' ),
         );
         // Customize - Button
         $options['wcz-wc-edit-btns'] = array(
             'id'      => 'wcz-wc-edit-btns',
-            'label'   => __( 'Customize Store Button(s) Design', 'woocustomizer' ),
+            'label'   => __( 'Customize Store Button(s) Design', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -576,7 +576,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-btn-style'] = array(
             'id'      => 'wcz-btn-style',
-            'label'   => __( 'Button Style', 'woocustomizer' ),
+            'label'   => __( 'Button Style', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -585,7 +585,7 @@ function woocustomizer_customizer_library_options()
         $wcz_bfsval = get_option( 'wcz-btn-fsize', 16 );
         $options['wcz-btn-fsize'] = array(
             'id'          => 'wcz-btn-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -598,35 +598,35 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-btn-fweight'] = array(
             'id'      => 'wcz-btn-fweight',
-            'label'   => __( 'Bold', 'woocustomizer' ),
+            'label'   => __( 'Bold', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-btn-bgcolor'] = array(
             'id'      => 'wcz-btn-bgcolor',
-            'label'   => __( 'Button Color', 'woocustomizer' ),
+            'label'   => __( 'Button Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#e8e8e8',
         );
         $options['wcz-btn-fontcolor'] = array(
             'id'      => 'wcz-btn-fontcolor',
-            'label'   => __( 'Button Font Color', 'woocustomizer' ),
+            'label'   => __( 'Button Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#000',
         );
         $options['wcz-btn-hovercolor'] = array(
             'id'      => 'wcz-btn-hovercolor',
-            'label'   => __( 'Button Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Button Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#757575',
         );
         $options['wcz-btn-fonthovercolor'] = array(
             'id'      => 'wcz-btn-fonthovercolor',
-            'label'   => __( 'Button Font Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Button Font Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#000',
@@ -634,7 +634,7 @@ function woocustomizer_customizer_library_options()
         $wcz_bbrval = get_option( 'wcz-btn-br', 3 );
         $options['wcz-btn-br'] = array(
             'id'          => 'wcz-btn-br',
-            'label'       => __( 'Border Radius', 'woocustomizer' ),
+            'label'       => __( 'Border Radius', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -648,7 +648,7 @@ function woocustomizer_customizer_library_options()
         $wcz_bpval = get_option( 'wcz-btn-padding', 10 );
         $options['wcz-btn-padding'] = array(
             'id'          => 'wcz-btn-padding',
-            'label'       => __( 'Padding', 'woocustomizer' ),
+            'label'       => __( 'Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -662,7 +662,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Sale Banner
         $options['wcz-wc-edit-sale'] = array(
             'id'      => 'wcz-wc-edit-sale',
-            'label'   => __( 'Customize Sale Banner', 'woocustomizer' ),
+            'label'   => __( 'Customize Sale Banner', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -670,7 +670,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-sale-fsize', 15 );
         $options['wcz-sale-fsize'] = array(
             'id'          => 'wcz-sale-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -683,14 +683,14 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-sale-fweight'] = array(
             'id'      => 'wcz-sale-fweight',
-            'label'   => __( 'Bold', 'woocustomizer' ),
+            'label'   => __( 'Bold', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-sale-bgcolor'] = array(
             'id'      => 'wcz-sale-bgcolor',
-            'label'   => __( 'Sale Banner Color', 'woocustomizer' ),
+            'label'   => __( 'Sale Banner Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#e8e8e8',
@@ -698,7 +698,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sbbrval = get_option( 'wcz-sale-br', 3 );
         $options['wcz-sale-br'] = array(
             'id'          => 'wcz-sale-br',
-            'label'       => __( 'Border Radius', 'woocustomizer' ),
+            'label'       => __( 'Border Radius', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -712,7 +712,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sbpval = get_option( 'wcz-sale-padding', 5 );
         $options['wcz-sale-padding'] = array(
             'id'          => 'wcz-sale-padding',
-            'label'       => __( 'Padding', 'woocustomizer' ),
+            'label'       => __( 'Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -726,7 +726,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Product Title
         $options['wcz-wc-edit-shop-title'] = array(
             'id'      => 'wcz-wc-edit-shop-title',
-            'label'   => __( 'Customize Product Title', 'woocustomizer' ),
+            'label'   => __( 'Customize Product Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -734,7 +734,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-shop-title-fsize', 16 );
         $options['wcz-shop-title-fsize'] = array(
             'id'          => 'wcz-shop-title-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -747,7 +747,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-title-fcolor'] = array(
             'id'      => 'wcz-shop-title-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#444',
@@ -755,7 +755,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Product Price
         $options['wcz-wc-edit-shop-price'] = array(
             'id'      => 'wcz-wc-edit-shop-price',
-            'label'   => __( 'Customize Product Price', 'woocustomizer' ),
+            'label'   => __( 'Customize Product Price', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -763,7 +763,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-shop-price-fsize', 14 );
         $options['wcz-shop-price-fsize'] = array(
             'id'          => 'wcz-shop-price-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -776,7 +776,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-shop-price-fcolor'] = array(
             'id'      => 'wcz-shop-price-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#222',
@@ -785,7 +785,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Apply to Gutenberg Blocks
         $options['wcz-wc-edit-applyto-blocks'] = array(
             'id'      => 'wcz-wc-edit-applyto-blocks',
-            'label'   => __( 'Apply these design settings to WooCommerce Blocks for Gutenberg', 'woocustomizer' ),
+            'label'   => __( 'Apply these design settings to WooCommerce Blocks for Gutenberg', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -795,41 +795,41 @@ function woocustomizer_customizer_library_options()
         $section = 'wcz-panel-product';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'WooCommerce Product Page', 'woocustomizer' ),
+            'title'    => __( 'WooCommerce Product Page', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
         $options['wcz-remove-product-breadcrumbs'] = array(
             'id'      => 'wcz-remove-product-breadcrumbs',
-            'label'   => __( 'Remove Product Breadcrumbs', 'woocustomizer' ),
+            'label'   => __( 'Remove Product Breadcrumbs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-remove-product-zoom'] = array(
             'id'      => 'wcz-remove-product-zoom',
-            'label'   => __( 'Remove Image Zoom', 'woocustomizer' ),
+            'label'   => __( 'Remove Image Zoom', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-remove-product-lightbox'] = array(
             'id'      => 'wcz-remove-product-lightbox',
-            'label'   => __( 'Remove Image Lightbox', 'woocustomizer' ),
+            'label'   => __( 'Remove Image Lightbox', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-remove-product-slider'] = array(
             'id'      => 'wcz-remove-product-slider',
-            'label'   => __( 'Remove Image Slider', 'woocustomizer' ),
+            'label'   => __( 'Remove Image Slider', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-imggal-ppr'] = array(
             'id'          => 'wcz-product-imggal-ppr',
-            'label'       => __( 'Product Image Thumbnails Per Row', 'woocustomizer' ),
+            'label'       => __( 'Product Image Thumbnails Per Row', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -837,181 +837,181 @@ function woocustomizer_customizer_library_options()
             'max'  => 5,
             'step' => 1,
         ),
-            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'woocustomizer' ),
+            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'ecommercecustomizer' ),
             'default'     => 4,
         );
         $options['wcz-product-sale-txt'] = array(
             'id'      => 'wcz-product-sale-txt',
-            'label'   => __( 'Sale Banner Text', 'woocustomizer' ),
+            'label'   => __( 'Sale Banner Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Sale!', 'woocustomizer' ),
+            'default' => __( 'Sale!', 'ecommercecustomizer' ),
         );
         $options['wcz-remove-product-title'] = array(
             'id'      => 'wcz-remove-product-title',
-            'label'   => __( 'Remove Product Title', 'woocustomizer' ),
+            'label'   => __( 'Remove Product Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-add-price-prefix'] = array(
             'id'          => 'wcz-add-price-prefix',
-            'label'       => __( 'Add a default Price Prefix', 'woocustomizer' ),
+            'label'       => __( 'Add a default Price Prefix', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Edit the prefix per product under Product Data -> StoreCustomizer on each product.<br /><br />To add a prefix to only certain products, simply add nothing here (and save), then edit the prefix setting on each product.', 'woocustomizer' ),
+            'description' => __( 'Edit the prefix per product under Product Data -> StoreCustomizer on each product.<br /><br />To add a prefix to only certain products, simply add nothing here (and save), then edit the prefix setting on each product.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-add-price-prefix-txt'] = array(
             'id'      => 'wcz-add-price-prefix-txt',
-            'label'   => __( 'Product Price Prefix Text', 'woocustomizer' ),
+            'label'   => __( 'Product Price Prefix Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'From:', 'woocustomizer' ),
+            'default' => __( 'From:', 'ecommercecustomizer' ),
         );
         $options['wcz-add-price-prefix-shop'] = array(
             'id'          => 'wcz-add-price-prefix-shop',
-            'label'       => __( 'Add the prefix to Product Shop page', 'woocustomizer' ),
+            'label'       => __( 'Add the prefix to Product Shop page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Add the prefix to the product list and category pages too.', 'woocustomizer' ),
+            'description' => __( 'Add the prefix to the product list and category pages too.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-add-price-suffix'] = array(
             'id'          => 'wcz-add-price-suffix',
-            'label'       => __( 'Add a default Price Suffix', 'woocustomizer' ),
+            'label'       => __( 'Add a default Price Suffix', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Edit the suffix per product under Product Data -> StoreCustomizer on each product.<br /><br />To add a suffix to only certain products, simply add nothing here (and save), then edit the suffix setting on each product.', 'woocustomizer' ),
+            'description' => __( 'Edit the suffix per product under Product Data -> StoreCustomizer on each product.<br /><br />To add a suffix to only certain products, simply add nothing here (and save), then edit the suffix setting on each product.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-add-price-suffix-txt'] = array(
             'id'      => 'wcz-add-price-suffix-txt',
-            'label'   => __( 'Product Price Suffix Text', 'woocustomizer' ),
+            'label'   => __( 'Product Price Suffix Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Incl. VAT', 'woocustomizer' ),
+            'default' => __( 'Incl. VAT', 'ecommercecustomizer' ),
         );
         $options['wcz-add-price-suffix-shop'] = array(
             'id'          => 'wcz-add-price-suffix-shop',
-            'label'       => __( 'Add the suffix to Product Shop page', 'woocustomizer' ),
+            'label'       => __( 'Add the suffix to Product Shop page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Add the suffix to the product list and category pages too.', 'woocustomizer' ),
+            'description' => __( 'Add the suffix to the product list and category pages too.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-product-edit-btn'] = array(
             'id'      => 'wcz-product-edit-btn',
-            'label'   => __( 'Edit Product Button Text', 'woocustomizer' ),
+            'label'   => __( 'Edit Product Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-button-txt-simple'] = array(
             'id'      => 'wcz-product-button-txt-simple',
-            'label'   => __( 'Product Button Text', 'woocustomizer' ),
+            'label'   => __( 'Product Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Add to cart', 'woocustomizer' ),
+            'default' => __( 'Add to cart', 'ecommercecustomizer' ),
         );
         $options['wcz-remove-product-sku'] = array(
             'id'      => 'wcz-remove-product-sku',
-            'label'   => __( 'Remove SKU', 'woocustomizer' ),
+            'label'   => __( 'Remove SKU', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-remove-product-cats'] = array(
             'id'      => 'wcz-remove-product-cats',
-            'label'   => __( 'Remove Product Categories', 'woocustomizer' ),
+            'label'   => __( 'Remove Product Categories', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-remove-product-tags'] = array(
             'id'      => 'wcz-remove-product-tags',
-            'label'   => __( 'Remove Product Tags', 'woocustomizer' ),
+            'label'   => __( 'Remove Product Tags', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-show-unitsold'] = array(
             'id'      => 'wcz-product-show-unitsold',
-            'label'   => __( 'Show Amount Sold', 'woocustomizer' ),
+            'label'   => __( 'Show Amount Sold', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-unitsold-txt'] = array(
             'id'          => 'wcz-product-unitsold-txt',
-            'label'       => __( 'Amount Sold Text', 'woocustomizer' ),
+            'label'       => __( 'Amount Sold Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'text',
-            'description' => __( 'Use "[no]" in the text to display the amount sold.', 'woocustomizer' ),
-            'default'     => __( 'Items Sold: [no]', 'woocustomizer' ),
+            'description' => __( 'Use "[no]" in the text to display the amount sold.', 'ecommercecustomizer' ),
+            'default'     => __( 'Items Sold: [no]', 'ecommercecustomizer' ),
         );
         $options['wcz-add-shop-button'] = array(
             'id'      => 'wcz-add-shop-button',
-            'label'   => __( 'Add button to \'Continue Shopping\'', 'woocustomizer' ),
+            'label'   => __( 'Add button to \'Continue Shopping\'', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-add-shop-button-txt'] = array(
             'id'          => 'wcz-add-shop-button-txt',
-            'label'       => __( 'Continue Shopping Text', 'woocustomizer' ),
+            'label'       => __( 'Continue Shopping Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'text',
-            'description' => __( 'You can set custom button text and urls per product under Edit Product-> Product Data-> StoreCustomizer', 'woocustomizer' ),
-            'default'     => __( 'Continue Shopping', 'woocustomizer' ),
+            'description' => __( 'You can set custom button text and urls per product under Edit Product-> Product Data-> StoreCustomizer', 'ecommercecustomizer' ),
+            'default'     => __( 'Continue Shopping', 'ecommercecustomizer' ),
         );
         $options['wcz-add-shop-button-url'] = array(
             'id'          => 'wcz-add-shop-button-url',
-            'label'       => __( 'Continue Shopping URL', 'woocustomizer' ),
+            'label'       => __( 'Continue Shopping URL', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'If not set, this will default to the shop page.<br />Enter the full url, including \'https://\'', 'woocustomizer' ),
+            'description' => __( 'If not set, this will default to the shop page.<br />Enter the full url, including \'https://\'', 'ecommercecustomizer' ),
             'default'     => '',
         );
         $options['wcz-product-variable-ddo'] = array(
             'id'      => 'wcz-product-variable-ddo',
-            'label'   => __( 'Edit Variable Product dropdown label', 'woocustomizer' ),
+            'label'   => __( 'Edit Variable Product dropdown label', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-variable-ddo-txt'] = array(
             'id'      => 'wcz-product-variable-ddo-txt',
-            'label'   => __( 'Default Label', 'woocustomizer' ),
+            'label'   => __( 'Default Label', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Choose an option', 'woocustomizer' ),
+            'default' => __( 'Choose an option', 'ecommercecustomizer' ),
         );
         // PRO VERSION ONLY
         $options['wcz-set-cart-increment-vals'] = array(
             'id'      => 'wcz-set-cart-increment-vals',
-            'label'   => __( 'Set \'Add To Cart\' Increment values', 'woocustomizer' ),
+            'label'   => __( 'Set \'Add To Cart\' Increment values', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-set-cart-inc-min'] = array(
             'id'      => 'wcz-set-cart-inc-min',
-            'label'   => __( 'Minimum Value Allowed', 'woocustomizer' ),
+            'label'   => __( 'Minimum Value Allowed', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => 3,
         );
         $options['wcz-set-cart-inc-max'] = array(
             'id'      => 'wcz-set-cart-inc-max',
-            'label'   => __( 'Maximum Value Allowed', 'woocustomizer' ),
+            'label'   => __( 'Maximum Value Allowed', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => 10,
         );
         $options['wcz-set-cart-inc-by'] = array(
             'id'      => 'wcz-set-cart-inc-by',
-            'label'   => __( 'Increment / Decrement By', 'woocustomizer' ),
+            'label'   => __( 'Increment / Decrement By', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => 1,
@@ -1019,53 +1019,53 @@ function woocustomizer_customizer_library_options()
         // Adjust Simple Product Stock Status Text - Get Working with Variable Products !
         $options['wcz-edit-stockstatus'] = array(
             'id'          => 'wcz-edit-stockstatus',
-            'label'       => __( 'Edit Stock Status Texts', 'woocustomizer' ),
+            'label'       => __( 'Edit Stock Status Texts', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Currently only available for Simple Products.', 'woocustomizer' ),
+            'description' => __( 'Currently only available for Simple Products.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-product-outofstock-txt'] = array(
             'id'      => 'wcz-product-outofstock-txt',
-            'label'   => __( 'Out Of Stock Text', 'woocustomizer' ),
+            'label'   => __( 'Out Of Stock Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Out Of Stock', 'woocustomizer' ),
+            'default' => __( 'Out Of Stock', 'ecommercecustomizer' ),
         );
         $options['wcz-product-instock-txt'] = array(
             'id'          => 'wcz-product-instock-txt',
-            'label'       => __( 'In Stock Text', 'woocustomizer' ),
+            'label'       => __( 'In Stock Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'text',
-            'description' => __( 'Managing stock at a product level, you can display the stock amount here by using "[no]" in the text to display the amount, or simply add your own text.', 'woocustomizer' ),
-            'default'     => __( 'Stock Available', 'woocustomizer' ),
+            'description' => __( 'Managing stock at a product level, you can display the stock amount here by using "[no]" in the text to display the amount, or simply add your own text.', 'ecommercecustomizer' ),
+            'default'     => __( 'Stock Available', 'ecommercecustomizer' ),
         );
         $options['wcz-product-onbackorder-txt'] = array(
             'id'      => 'wcz-product-onbackorder-txt',
-            'label'   => __( 'On Back Order Text', 'woocustomizer' ),
+            'label'   => __( 'On Back Order Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'On Back Order', 'woocustomizer' ),
+            'default' => __( 'On Back Order', 'ecommercecustomizer' ),
         );
         $options['wcz-always-show-stockstatus'] = array(
             'id'      => 'wcz-always-show-stockstatus',
-            'label'   => __( 'Always Show Stock Status Types', 'woocustomizer' ),
+            'label'   => __( 'Always Show Stock Status Types', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-product-instock-deaf-txt'] = array(
             'id'          => 'wcz-product-instock-deaf-txt',
-            'label'       => __( 'Stock Text', 'woocustomizer' ),
+            'label'       => __( 'Stock Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'text',
-            'description' => __( 'If not managing stock at a product level, by default nothing shows. Add default \'In Stock\' text if you want to show the product is in stock.', 'woocustomizer' ),
-            'default'     => __( 'In Stock', 'woocustomizer' ),
+            'description' => __( 'If not managing stock at a product level, by default nothing shows. Add default \'In Stock\' text if you want to show the product is in stock.', 'ecommercecustomizer' ),
+            'default'     => __( 'In Stock', 'ecommercecustomizer' ),
         );
         // Sticky Add to Cart
         $options['wcz-heading-stickcart'] = array(
             'id'      => 'wcz-heading-stickcart',
-            'label'   => __( 'Sticky \'Add to Cart\'', 'woocustomizer' ),
+            'label'   => __( 'Sticky \'Add to Cart\'', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -1073,12 +1073,12 @@ function woocustomizer_customizer_library_options()
             'id'          => 'wcz-stickcart-free-note',
             'section'     => $section,
             'type'        => 'url',
-            'description' => sprintf( __( '%1$s offers a sticky \'Add to Cart\' banner for the WooCommerce Product page.<br /><br />The Add to Cart banner slides into view once the standard add-to-cart button has scrolled out of view.', 'woocustomizer' ), '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&page=wcz_settings-pricing' ) ) . '" target="_blank">StoreCustomizer Pro</a>' ),
+            'description' => sprintf( __( '%1$s offers a sticky \'Add to Cart\' banner for the WooCommerce Product page.<br /><br />The Add to Cart banner slides into view once the standard add-to-cart button has scrolled out of view.', 'ecommercecustomizer' ), '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&page=wcz_settings-pricing' ) ) . '" target="_blank">StoreCustomizer Pro</a>' ),
         );
         // Product Settings - Tabs
         $options['wcz-heading-product-tabs'] = array(
             'id'      => 'wcz-heading-product-tabs',
-            'label'   => __( 'Product Page Tabs', 'woocustomizer' ),
+            'label'   => __( 'Product Page Tabs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -1089,7 +1089,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-desc-tab'] = array(
             'id'      => 'wcz-wcproduct-desc-tab',
-            'label'   => __( 'Description Tab', 'woocustomizer' ),
+            'label'   => __( 'Description Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1097,17 +1097,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-desc-tab-title'] = array(
             'id'      => 'wcz-wcproduct-desc-tab-title',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Description', 'woocustomizer' ),
+            'default' => __( 'Description', 'ecommercecustomizer' ),
         );
         $options['wcz-wcproduct-desc-head'] = array(
             'id'      => 'wcz-wcproduct-desc-head',
-            'label'   => __( 'Tab Heading', 'woocustomizer' ),
+            'label'   => __( 'Tab Heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Description', 'woocustomizer' ),
+            'default' => __( 'Description', 'ecommercecustomizer' ),
         );
         // Edit/Remove Description Tab
         $choices = array(
@@ -1117,7 +1117,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-addinfo-tab'] = array(
             'id'      => 'wcz-wcproduct-addinfo-tab',
-            'label'   => __( 'Additional Info Tab', 'woocustomizer' ),
+            'label'   => __( 'Additional Info Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1125,17 +1125,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-addinfo-tab-title'] = array(
             'id'      => 'wcz-wcproduct-addinfo-tab-title',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Additional Information', 'woocustomizer' ),
+            'default' => __( 'Additional Information', 'ecommercecustomizer' ),
         );
         $options['wcz-wcproduct-addinfo-head'] = array(
             'id'      => 'wcz-wcproduct-addinfo-head',
-            'label'   => __( 'Tab Heading', 'woocustomizer' ),
+            'label'   => __( 'Tab Heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Additional Information', 'woocustomizer' ),
+            'default' => __( 'Additional Information', 'ecommercecustomizer' ),
         );
         // Edit/Remove Additional Info Tab
         $choices = array(
@@ -1145,7 +1145,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-reviews-tab'] = array(
             'id'      => 'wcz-wcproduct-reviews-tab',
-            'label'   => __( 'Reviews Tab', 'woocustomizer' ),
+            'label'   => __( 'Reviews Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1153,16 +1153,16 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-reviews-tab-title'] = array(
             'id'      => 'wcz-wcproduct-reviews-tab-title',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Reviews', 'woocustomizer' ),
+            'default' => __( 'Reviews', 'ecommercecustomizer' ),
         );
         // Edit/Remove Reviews Tab
         // Move Product Description below tabs
         $options['wcz-add-product-long-desc'] = array(
             'id'      => 'wcz-add-product-long-desc',
-            'label'   => __( 'Add Product Long Description after Tabs', 'woocustomizer' ),
+            'label'   => __( 'Add Product Long Description after Tabs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1175,7 +1175,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-longdesc-divider'] = array(
             'id'      => 'wcz-longdesc-divider',
-            'label'   => __( 'Divider Style', 'woocustomizer' ),
+            'label'   => __( 'Divider Style', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1183,14 +1183,14 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-longdesc-maxwidth'] = array(
             'id'      => 'wcz-longdesc-maxwidth',
-            'label'   => __( 'Max-Width for this section', 'woocustomizer' ),
+            'label'   => __( 'Max-Width for this section', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
         );
         $options['wcz-longdesc-center'] = array(
             'id'      => 'wcz-longdesc-center',
-            'label'   => __( 'Center Align Text', 'woocustomizer' ),
+            'label'   => __( 'Center Align Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1198,7 +1198,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldtsval = get_option( 'wcz-longdesc-top', 35 );
         $options['wcz-longdesc-top'] = array(
             'id'          => 'wcz-longdesc-top',
-            'label'       => __( 'Top Spacing', 'woocustomizer' ),
+            'label'       => __( 'Top Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1212,7 +1212,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldbsval = get_option( 'wcz-longdesc-bottom', 35 );
         $options['wcz-longdesc-bottom'] = array(
             'id'          => 'wcz-longdesc-bottom',
-            'label'       => __( 'Bottom Spacing', 'woocustomizer' ),
+            'label'       => __( 'Bottom Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1225,7 +1225,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-longdesc-botdiv'] = array(
             'id'      => 'wcz-longdesc-botdiv',
-            'label'   => __( 'Add Bottom Divider', 'woocustomizer' ),
+            'label'   => __( 'Add Bottom Divider', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1233,7 +1233,7 @@ function woocustomizer_customizer_library_options()
         // Move Product Additional Info below tabs
         $options['wcz-add-product-addinfo'] = array(
             'id'      => 'wcz-add-product-addinfo',
-            'label'   => __( 'Add Product Additional Info after Tabs', 'woocustomizer' ),
+            'label'   => __( 'Add Product Additional Info after Tabs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1246,7 +1246,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-addinfo-divider'] = array(
             'id'      => 'wcz-addinfo-divider',
-            'label'   => __( 'Divider Style', 'woocustomizer' ),
+            'label'   => __( 'Divider Style', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1254,7 +1254,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-addinfo-maxwidth'] = array(
             'id'      => 'wcz-addinfo-maxwidth',
-            'label'   => __( 'Max-Width for this section', 'woocustomizer' ),
+            'label'   => __( 'Max-Width for this section', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
@@ -1262,7 +1262,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldtsval = get_option( 'wcz-addinfo-top', 35 );
         $options['wcz-addinfo-top'] = array(
             'id'          => 'wcz-addinfo-top',
-            'label'       => __( 'Top Spacing', 'woocustomizer' ),
+            'label'       => __( 'Top Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1276,7 +1276,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldbsval = get_option( 'wcz-addinfo-bottom', 35 );
         $options['wcz-addinfo-bottom'] = array(
             'id'          => 'wcz-addinfo-bottom',
-            'label'       => __( 'Bottom Spacing', 'woocustomizer' ),
+            'label'       => __( 'Bottom Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1289,7 +1289,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-addinfo-botdiv'] = array(
             'id'      => 'wcz-addinfo-botdiv',
-            'label'   => __( 'Add Bottom Divider', 'woocustomizer' ),
+            'label'   => __( 'Add Bottom Divider', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1297,7 +1297,7 @@ function woocustomizer_customizer_library_options()
         // Move Product Reviews below tabs
         $options['wcz-add-product-reviews'] = array(
             'id'      => 'wcz-add-product-reviews',
-            'label'   => __( 'Add Product Reviews after Tabs', 'woocustomizer' ),
+            'label'   => __( 'Add Product Reviews after Tabs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1310,7 +1310,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-reviews-divider'] = array(
             'id'      => 'wcz-reviews-divider',
-            'label'   => __( 'Divider Style', 'woocustomizer' ),
+            'label'   => __( 'Divider Style', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1318,7 +1318,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-reviews-maxwidth'] = array(
             'id'      => 'wcz-reviews-maxwidth',
-            'label'   => __( 'Max-Width for this section', 'woocustomizer' ),
+            'label'   => __( 'Max-Width for this section', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
@@ -1326,7 +1326,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldtsval = get_option( 'wcz-reviews-top', 35 );
         $options['wcz-reviews-top'] = array(
             'id'          => 'wcz-reviews-top',
-            'label'       => __( 'Top Spacing', 'woocustomizer' ),
+            'label'       => __( 'Top Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1340,7 +1340,7 @@ function woocustomizer_customizer_library_options()
         $wcz_ldbsval = get_option( 'wcz-reviews-bottom', 35 );
         $options['wcz-reviews-bottom'] = array(
             'id'          => 'wcz-reviews-bottom',
-            'label'       => __( 'Bottom Spacing', 'woocustomizer' ),
+            'label'       => __( 'Bottom Spacing', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1353,7 +1353,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-reviews-botdiv'] = array(
             'id'      => 'wcz-reviews-botdiv',
-            'label'   => __( 'Add Bottom Divider', 'woocustomizer' ),
+            'label'   => __( 'Add Bottom Divider', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1361,7 +1361,7 @@ function woocustomizer_customizer_library_options()
         // Product Settings - Related & Recommended
         $options['wcz-heading-product-relrec'] = array(
             'id'      => 'wcz-heading-product-relrec',
-            'label'   => __( 'Related & Recommended Products', 'woocustomizer' ),
+            'label'   => __( 'Related & Recommended Products', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -1372,7 +1372,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-recomm'] = array(
             'id'      => 'wcz-wcproduct-recomm',
-            'label'   => __( 'Product Recommendations', 'woocustomizer' ),
+            'label'   => __( 'Product Recommendations', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1380,15 +1380,15 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-recomm-title'] = array(
             'id'      => 'wcz-wcproduct-recomm-title',
-            'label'   => __( 'Recommendations Title', 'woocustomizer' ),
+            'label'   => __( 'Recommendations Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'You may also like&hellip;', 'woocustomizer' ),
+            'default' => __( 'You may also like&hellip;', 'ecommercecustomizer' ),
         );
         // Edit/Remove Product Recommedations
         $options['wcz-product-recomm-ppr'] = array(
             'id'          => 'wcz-product-recomm-ppr',
-            'label'       => __( 'Products Per Row', 'woocustomizer' ),
+            'label'       => __( 'Products Per Row', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1396,12 +1396,12 @@ function woocustomizer_customizer_library_options()
             'max'  => 5,
             'step' => 1,
         ),
-            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'woocustomizer' ),
+            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'ecommercecustomizer' ),
             'default'     => 3,
         );
         $options['wcz-product-recomm-ppr-no'] = array(
             'id'      => 'wcz-product-recomm-ppr-no',
-            'label'   => __( 'Amount of products to show', 'woocustomizer' ),
+            'label'   => __( 'Amount of products to show', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
@@ -1413,7 +1413,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-related'] = array(
             'id'      => 'wcz-wcproduct-related',
-            'label'   => __( 'Related Products', 'woocustomizer' ),
+            'label'   => __( 'Related Products', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1421,15 +1421,15 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wcproduct-related-title'] = array(
             'id'      => 'wcz-wcproduct-related-title',
-            'label'   => __( 'Related Products Title', 'woocustomizer' ),
+            'label'   => __( 'Related Products Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Related products', 'woocustomizer' ),
+            'default' => __( 'Related products', 'ecommercecustomizer' ),
         );
         // Edit/Remove Related Products
         $options['wcz-product-related-ppr'] = array(
             'id'          => 'wcz-product-related-ppr',
-            'label'       => __( 'Products Per Row', 'woocustomizer' ),
+            'label'       => __( 'Products Per Row', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1437,12 +1437,12 @@ function woocustomizer_customizer_library_options()
             'max'  => 5,
             'step' => 1,
         ),
-            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'woocustomizer' ),
+            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'ecommercecustomizer' ),
             'default'     => 3,
         );
         $options['wcz-product-related-ppr-no'] = array(
             'id'      => 'wcz-product-related-ppr-no',
-            'label'   => __( 'Amount of products to show', 'woocustomizer' ),
+            'label'   => __( 'Amount of products to show', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
@@ -1450,15 +1450,15 @@ function woocustomizer_customizer_library_options()
         // -------------------------------- Product Page Design Settings
         $options['wcz-heading-wcc-prod'] = array(
             'id'          => 'wcz-heading-wcc-prod',
-            'label'       => __( 'Design Elements', 'woocustomizer' ),
+            'label'       => __( 'Design Elements', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'Depending on your theme, these design settings might not always work. If not, please contact us to help get these working with your theme.', 'woocustomizer' ),
+            'description' => __( 'Depending on your theme, these design settings might not always work. If not, please contact us to help get these working with your theme.', 'ecommercecustomizer' ),
         );
         // Customize - Product Title
         $options['wcz-wc-edit-product-title'] = array(
             'id'      => 'wcz-wc-edit-product-title',
-            'label'   => __( 'Customize Product Title', 'woocustomizer' ),
+            'label'   => __( 'Customize Product Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1466,7 +1466,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-product-title-fsize', 34 );
         $options['wcz-product-title-fsize'] = array(
             'id'          => 'wcz-product-title-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1479,7 +1479,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-product-title-fcolor'] = array(
             'id'      => 'wcz-product-title-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#444',
@@ -1487,7 +1487,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Product Price
         $options['wcz-wc-edit-product-price'] = array(
             'id'      => 'wcz-wc-edit-product-price',
-            'label'   => __( 'Customize Product Price', 'woocustomizer' ),
+            'label'   => __( 'Customize Product Price', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -1495,7 +1495,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-product-price-fsize', 18 );
         $options['wcz-product-price-fsize'] = array(
             'id'          => 'wcz-product-price-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1508,7 +1508,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-product-price-fcolor'] = array(
             'id'      => 'wcz-product-price-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#222',
@@ -1516,35 +1516,35 @@ function woocustomizer_customizer_library_options()
         // Customize - Product Page Button
         $options['wcz-wc-edit-prodbtn-color'] = array(
             'id'      => 'wcz-wc-edit-prodbtn-color',
-            'label'   => __( 'Customize Product Button Colors', 'woocustomizer' ),
+            'label'   => __( 'Customize Product Button Colors', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-prodbtn-bgcolor'] = array(
             'id'      => 'wcz-prodbtn-bgcolor',
-            'label'   => __( 'Button Color', 'woocustomizer' ),
+            'label'   => __( 'Button Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#e8e8e8',
         );
         $options['wcz-prodbtn-fontcolor'] = array(
             'id'      => 'wcz-prodbtn-fontcolor',
-            'label'   => __( 'Button Font Color', 'woocustomizer' ),
+            'label'   => __( 'Button Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#000',
         );
         $options['wcz-prodbtn-hovercolor'] = array(
             'id'      => 'wcz-prodbtn-hovercolor',
-            'label'   => __( 'Button Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Button Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#757575',
         );
         $options['wcz-prodbtn-fonthovercolor'] = array(
             'id'      => 'wcz-prodbtn-fonthovercolor',
-            'label'   => __( 'Button Font Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Button Font Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#000',
@@ -1552,21 +1552,21 @@ function woocustomizer_customizer_library_options()
         // Customize - Continue Shopping Button
         $options['wcz-wc-edit-contshop-btn'] = array(
             'id'      => 'wcz-wc-edit-contshop-btn',
-            'label'   => __( 'Customize \'Continue Shopping\' Button', 'woocustomizer' ),
+            'label'   => __( 'Customize \'Continue Shopping\' Button', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-contshop-bgcolor'] = array(
             'id'      => 'wcz-contshop-bgcolor',
-            'label'   => __( 'Button Color', 'woocustomizer' ),
+            'label'   => __( 'Button Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#ebe9eb',
         );
         $options['wcz-contshop-hovercolor'] = array(
             'id'      => 'wcz-contshop-hovercolor',
-            'label'   => __( 'Button Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Button Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#cccacc',
@@ -1574,7 +1574,7 @@ function woocustomizer_customizer_library_options()
         $wcz_cs_btn_fs = get_option( 'wcz-contshop-fsize', 18 );
         $options['wcz-contshop-fsize'] = array(
             'id'          => 'wcz-contshop-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1588,7 +1588,7 @@ function woocustomizer_customizer_library_options()
         $wcz_cs_btn_pad = get_option( 'wcz-contshop-pad', 18 );
         $options['wcz-contshop-pad'] = array(
             'id'          => 'wcz-contshop-pad',
-            'label'       => __( 'Button Padding', 'woocustomizer' ),
+            'label'       => __( 'Button Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -1605,7 +1605,7 @@ function woocustomizer_customizer_library_options()
         $section = 'wcz-panel-account';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'Account Page', 'woocustomizer' ),
+            'title'    => __( 'Account Page', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
@@ -1616,17 +1616,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-tab-style'] = array(
             'id'          => 'wcz-tab-style',
-            'label'       => __( 'Account Tab Design', 'woocustomizer' ),
+            'label'       => __( 'Account Tab Design', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'select',
             'choices'     => $choices,
-            'description' => __( 'Account Tab Design is only for if your theme has not added custom styling to your WooCommerce Account Page.', 'woocustomizer' ),
+            'description' => __( 'Account Tab Design is only for if your theme has not added custom styling to your WooCommerce Account Page.', 'ecommercecustomizer' ),
             'default'     => 'wcz-tabstyle-none',
         );
         // Account Tabs
         $options['wcz-heading-account-tabs'] = array(
             'id'      => 'wcz-heading-account-tabs',
-            'label'   => __( 'Account Tabs', 'woocustomizer' ),
+            'label'   => __( 'Account Tabs', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -1637,7 +1637,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-dashboard-tab'] = array(
             'id'      => 'wcz-account-dashboard-tab',
-            'label'   => __( 'Account Dashboard Tab', 'woocustomizer' ),
+            'label'   => __( 'Account Dashboard Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1645,10 +1645,10 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-dash-tab'] = array(
             'id'      => 'wcz-account-tab-dash-tab',
-            'label'   => __( 'Dashboard Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Dashboard Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Dashboard', 'woocustomizer' ),
+            'default' => __( 'Dashboard', 'ecommercecustomizer' ),
         );
         $choices = array(
             'default'                  => 'Default',
@@ -1657,7 +1657,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-dashboard-content'] = array(
             'id'      => 'wcz-account-dashboard-content',
-            'label'   => __( 'Dashboard Tab Content', 'woocustomizer' ),
+            'label'   => __( 'Dashboard Tab Content', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1665,14 +1665,14 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-accdash-remdefault'] = array(
             'id'      => 'wcz-accdash-remdefault',
-            'label'   => __( 'Remove default dashboard text', 'woocustomizer' ),
+            'label'   => __( 'Remove default dashboard text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-accdash-text'] = array(
             'id'      => 'wcz-accdash-text',
-            'label'   => __( 'Text', 'woocustomizer' ),
+            'label'   => __( 'Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'textarea',
             'default' => '',
@@ -1681,14 +1681,14 @@ function woocustomizer_customizer_library_options()
             'id'          => 'wcz-account-dont-note',
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'Note: Please DO NOT set this to display the Account Page, this will create an infinite loop and cause a timeout issue.', 'woocustomizer' ),
+            'description' => __( 'Note: Please DO NOT set this to display the Account Page, this will create an infinite loop and cause a timeout issue.', 'ecommercecustomizer' ),
         );
         $options['wcz-accdash-page'] = array(
             'id'          => 'wcz-accdash-page',
-            'label'       => __( 'Select Page', 'woocustomizer' ),
+            'label'       => __( 'Select Page', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'dropdown-pages',
-            'description' => __( 'Select the page you\'d like to display in the Dashboard tab.', 'woocustomizer' ),
+            'description' => __( 'Select the page you\'d like to display in the Dashboard tab.', 'ecommercecustomizer' ),
             'default'     => '',
         );
         // Edit/Remove Dashboard Tab
@@ -1699,7 +1699,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-orders-tab'] = array(
             'id'      => 'wcz-account-orders-tab',
-            'label'   => __( 'Orders Tab', 'woocustomizer' ),
+            'label'   => __( 'Orders Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1707,17 +1707,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-orders-tab'] = array(
             'id'      => 'wcz-account-tab-orders-tab',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Orders', 'woocustomizer' ),
+            'default' => __( 'Orders', 'ecommercecustomizer' ),
         );
         $options['wcz-account-tab-orders-title'] = array(
             'id'      => 'wcz-account-tab-orders-title',
-            'label'   => __( 'Page Title', 'woocustomizer' ),
+            'label'   => __( 'Page Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Orders', 'woocustomizer' ),
+            'default' => __( 'Orders', 'ecommercecustomizer' ),
         );
         // Edit/Remove Orders Tab
         $choices = array(
@@ -1727,7 +1727,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-downloads-tab'] = array(
             'id'      => 'wcz-account-downloads-tab',
-            'label'   => __( 'Downloads Tab', 'woocustomizer' ),
+            'label'   => __( 'Downloads Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1735,17 +1735,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-downloads-tab'] = array(
             'id'      => 'wcz-account-tab-downloads-tab',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Downloads', 'woocustomizer' ),
+            'default' => __( 'Downloads', 'ecommercecustomizer' ),
         );
         $options['wcz-account-tab-downloads-title'] = array(
             'id'      => 'wcz-account-tab-downloads-title',
-            'label'   => __( 'Page Title', 'woocustomizer' ),
+            'label'   => __( 'Page Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Downloads', 'woocustomizer' ),
+            'default' => __( 'Downloads', 'ecommercecustomizer' ),
         );
         // Edit/Remove Downloads Tab
         $choices = array(
@@ -1755,7 +1755,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-address-tab'] = array(
             'id'      => 'wcz-account-address-tab',
-            'label'   => __( 'Address Tab', 'woocustomizer' ),
+            'label'   => __( 'Address Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1763,17 +1763,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-address-tab'] = array(
             'id'      => 'wcz-account-tab-address-tab',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Addresses', 'woocustomizer' ),
+            'default' => __( 'Addresses', 'ecommercecustomizer' ),
         );
         $options['wcz-account-tab-address-title'] = array(
             'id'      => 'wcz-account-tab-address-title',
-            'label'   => __( 'Page Title', 'woocustomizer' ),
+            'label'   => __( 'Page Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Addresses', 'woocustomizer' ),
+            'default' => __( 'Addresses', 'ecommercecustomizer' ),
         );
         // Edit/Remove Addresses Tab
         $choices = array(
@@ -1783,7 +1783,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-details-tab'] = array(
             'id'      => 'wcz-account-details-tab',
-            'label'   => __( 'Account Details Tab', 'woocustomizer' ),
+            'label'   => __( 'Account Details Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1791,17 +1791,17 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-details-tab'] = array(
             'id'      => 'wcz-account-tab-details-tab',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Account Details', 'woocustomizer' ),
+            'default' => __( 'Account Details', 'ecommercecustomizer' ),
         );
         $options['wcz-account-tab-details-title'] = array(
             'id'      => 'wcz-account-tab-details-title',
-            'label'   => __( 'Page Title', 'woocustomizer' ),
+            'label'   => __( 'Page Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Account Details', 'woocustomizer' ),
+            'default' => __( 'Account Details', 'ecommercecustomizer' ),
         );
         // Edit/Remove Account Details Tab
         $choices = array(
@@ -1811,7 +1811,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-logout-tab'] = array(
             'id'      => 'wcz-account-logout-tab',
-            'label'   => __( 'Logout Tab', 'woocustomizer' ),
+            'label'   => __( 'Logout Tab', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -1819,10 +1819,10 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-account-tab-logout-tab'] = array(
             'id'      => 'wcz-account-tab-logout-tab',
-            'label'   => __( 'Tab Title', 'woocustomizer' ),
+            'label'   => __( 'Tab Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Logout', 'woocustomizer' ),
+            'default' => __( 'Logout', 'ecommercecustomizer' ),
         );
         // EXCLUDED FROM FREE VERSION -- This "if" block will be auto removed from the Free version.
         // ----------------------------------------------------------------------------------------------- WooCommerce Account Page
@@ -1830,76 +1830,76 @@ function woocustomizer_customizer_library_options()
         $section = 'wcz-panel-cart';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'Cart Page', 'woocustomizer' ),
+            'title'    => __( 'Cart Page', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
         $options['wcz-cart-remove-coupons'] = array(
             'id'      => 'wcz-cart-remove-coupons',
-            'label'   => __( 'Remove Coupons form', 'woocustomizer' ),
+            'label'   => __( 'Remove Coupons form', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-disable-cart-quantity'] = array(
             'id'          => 'wcz-cart-disable-cart-quantity',
-            'label'       => __( 'Disable users adjusting the quantity ', 'woocustomizer' ),
+            'label'       => __( 'Disable users adjusting the quantity ', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This will stop users being able to adjust the product amounts in the cart', 'woocustomizer' ),
+            'description' => __( 'This will stop users being able to adjust the product amounts in the cart', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-cart-ajax-update'] = array(
             'id'          => 'wcz-cart-ajax-update',
-            'label'       => __( 'Auto Update Cart Amount', 'woocustomizer' ),
+            'label'       => __( 'Auto Update Cart Amount', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Users will not need to click \'Update Cart\' anymore, this will remove the update button and will auto update the cart as users change the product amounts.', 'woocustomizer' ),
+            'description' => __( 'Users will not need to click \'Update Cart\' anymore, this will remove the update button and will auto update the cart as users change the product amounts.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-cart-remove-links'] = array(
             'id'          => 'wcz-cart-remove-links',
-            'label'       => __( 'Remove Product Links ', 'woocustomizer' ),
+            'label'       => __( 'Remove Product Links ', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This will remove the Product Links in the cart, depending on your theme, this might break the design.', 'woocustomizer' ),
+            'description' => __( 'This will remove the Product Links in the cart, depending on your theme, this might break the design.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-cart-add-product-info'] = array(
             'id'      => 'wcz-cart-add-product-info',
-            'label'   => __( 'Add extra Product Information ', 'woocustomizer' ),
+            'label'   => __( 'Add extra Product Information ', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-add-productinfo-cats'] = array(
             'id'      => 'wcz-cart-add-productinfo-cats',
-            'label'   => __( 'Show Product Categories ', 'woocustomizer' ),
+            'label'   => __( 'Show Product Categories ', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-add-productinfo-atts'] = array(
             'id'          => 'wcz-cart-add-productinfo-atts',
-            'label'       => __( 'Show the users selected variations', 'woocustomizer' ),
+            'label'       => __( 'Show the users selected variations', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'To see this work, please save and hard refresh or open the site in a new tab.<br /><br />By default WooCommerce does this if the product has 4 variations or more, it it only has 2 then it adds the selected variations to the product title.<br /><br />This will always show the product variations that the user selected below the product title.', 'woocustomizer' ),
+            'description' => __( 'To see this work, please save and hard refresh or open the site in a new tab.<br /><br />By default WooCommerce does this if the product has 4 variations or more, it it only has 2 then it adds the selected variations to the product title.<br /><br />This will always show the product variations that the user selected below the product title.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-cart-add-productinfo-stock'] = array(
             'id'      => 'wcz-cart-add-productinfo-stock',
-            'label'   => __( 'Show Product Stock ', 'woocustomizer' ),
+            'label'   => __( 'Show Product Stock ', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-bts-btn'] = array(
             'id'          => 'wcz-cart-bts-btn',
-            'label'       => __( 'Add a \'Back To Shop\' button', 'woocustomizer' ),
+            'label'       => __( 'Add a \'Back To Shop\' button', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Add a button to the cart page for customers to return to the Shop instead of proceeding to checkout.', 'woocustomizer' ),
+            'description' => __( 'Add a button to the cart page for customers to return to the Shop instead of proceeding to checkout.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $choices = array(
@@ -1909,7 +1909,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-bts-pos'] = array(
             'id'      => 'wcz-cart-bts-pos',
-            'label'   => __( 'Button Position', 'woocustomizer' ),
+            'label'   => __( 'Button Position', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1917,10 +1917,10 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-bts-txt'] = array(
             'id'      => 'wcz-cart-bts-txt',
-            'label'   => __( 'Button Text', 'woocustomizer' ),
+            'label'   => __( 'Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Back to Shop', 'woocustomizer' ),
+            'default' => __( 'Back to Shop', 'ecommercecustomizer' ),
         );
         $choices = array(
             'custom' => 'Add custom URL',
@@ -1928,7 +1928,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-bts-type'] = array(
             'id'      => 'wcz-cart-bts-type',
-            'label'   => __( 'Button Type', 'woocustomizer' ),
+            'label'   => __( 'Button Type', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1936,34 +1936,34 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-bts-url'] = array(
             'id'      => 'wcz-cart-bts-url',
-            'label'   => __( 'Button Custom URL', 'woocustomizer' ),
+            'label'   => __( 'Button Custom URL', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
         );
         $options['wcz-cart-bts-color'] = array(
             'id'      => 'wcz-cart-bts-color',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#ebe9eb',
         );
         $options['wcz-cart-bts-fcolor'] = array(
             'id'      => 'wcz-cart-bts-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#ebe9eb',
         );
         $options['wcz-cart-bts-hcolor'] = array(
             'id'      => 'wcz-cart-bts-hcolor',
-            'label'   => __( 'Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#d0d0d0',
         );
         $options['wcz-cart-bts-hfcolor'] = array(
             'id'      => 'wcz-cart-bts-hfcolor',
-            'label'   => __( 'Font Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Font Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#d0d0d0',
@@ -1975,7 +1975,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-bts-align'] = array(
             'id'      => 'wcz-cart-bts-align',
-            'label'   => __( 'Button Alignment', 'woocustomizer' ),
+            'label'   => __( 'Button Alignment', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'select',
             'choices' => $choices,
@@ -1983,49 +1983,49 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-show-discamount'] = array(
             'id'          => 'wcz-cart-show-discamount',
-            'label'       => __( 'Show Discount / Amount Saved', 'woocustomizer' ),
+            'label'       => __( 'Show Discount / Amount Saved', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This will display the total amount a user saves when purchasing products On Sale!', 'woocustomizer' ),
+            'description' => __( 'This will display the total amount a user saves when purchasing products On Sale!', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-cart-discamount-txt'] = array(
             'id'      => 'wcz-cart-discamount-txt',
-            'label'   => __( 'Text', 'woocustomizer' ),
+            'label'   => __( 'Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'You Save!', 'woocustomizer' ),
+            'default' => __( 'You Save!', 'ecommercecustomizer' ),
         );
         $options['wcz-cart-discamount-bgcolor'] = array(
             'id'      => 'wcz-cart-discamount-bgcolor',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#f9f9f9',
         );
         $options['wcz-cart-discamount-color'] = array(
             'id'      => 'wcz-cart-discamount-color',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
         );
         $options['wcz-heading-final'] = array(
             'id'      => 'wcz-heading-final',
-            'label'   => __( 'Cross Sells & Cart Totals', 'woocustomizer' ),
+            'label'   => __( 'Cross Sells & Cart Totals', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
         $options['wcz-cart-move-crollsells-below'] = array(
             'id'      => 'wcz-cart-move-crollsells-below',
-            'label'   => __( 'Move Cross Sells to below Cart Totals', 'woocustomizer' ),
+            'label'   => __( 'Move Cross Sells to below Cart Totals', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-remove-cross-sells'] = array(
             'id'      => 'wcz-cart-remove-cross-sells',
-            'label'   => __( 'Remove Cross Sell Section', 'woocustomizer' ),
+            'label'   => __( 'Remove Cross Sell Section', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -2037,7 +2037,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wccart-recomm'] = array(
             'id'      => 'wcz-wccart-recomm',
-            'label'   => __( 'Cross Sells Title', 'woocustomizer' ),
+            'label'   => __( 'Cross Sells Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -2045,15 +2045,15 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wccart-recomm-title'] = array(
             'id'      => 'wcz-wccart-recomm-title',
-            'label'   => __( 'Cross Sells Title', 'woocustomizer' ),
+            'label'   => __( 'Cross Sells Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'You may be interested in&hellip;', 'woocustomizer' ),
+            'default' => __( 'You may be interested in&hellip;', 'ecommercecustomizer' ),
         );
         // Edit/Remove Cart Cross Sells Title
         $options['wcz-cart-crosssells-ppr'] = array(
             'id'          => 'wcz-cart-crosssells-ppr',
-            'label'       => __( 'Products Per Row', 'woocustomizer' ),
+            'label'       => __( 'Products Per Row', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2061,12 +2061,12 @@ function woocustomizer_customizer_library_options()
             'max'  => 5,
             'step' => 1,
         ),
-            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'woocustomizer' ),
+            'description' => __( '<i>2</i> <b>|</b> 3 <b>|</b> 4 <b>|</b> <i>5</i>', 'ecommercecustomizer' ),
             'default'     => 2,
         );
         $options['wcz-cart-crosssells-ppr-no'] = array(
             'id'      => 'wcz-cart-crosssells-ppr-no',
-            'label'   => __( 'Amount of Cross Sells to show', 'woocustomizer' ),
+            'label'   => __( 'Amount of Cross Sells to show', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'number',
             'default' => '',
@@ -2078,7 +2078,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wccart-totals'] = array(
             'id'      => 'wcz-wccart-totals',
-            'label'   => __( 'Cart Totals Title', 'woocustomizer' ),
+            'label'   => __( 'Cart Totals Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'radio',
             'choices' => $choices,
@@ -2086,52 +2086,52 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-wccart-totals-title'] = array(
             'id'      => 'wcz-wccart-totals-title',
-            'label'   => __( 'Cart Totals Title', 'woocustomizer' ),
+            'label'   => __( 'Cart Totals Title', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Cart totals', 'woocustomizer' ),
+            'default' => __( 'Cart totals', 'ecommercecustomizer' ),
         );
         // Edit/Remove Cart Totals Title
         // Empty Cart Page Settings
         $options['wcz-heading-emptycart'] = array(
             'id'          => 'wcz-heading-emptycart',
-            'label'       => __( 'Empty Cart Page', 'woocustomizer' ),
+            'label'       => __( 'Empty Cart Page', 'ecommercecustomizer' ),
             'section'     => $section,
-            'description' => __( 'Remove all products from your cart when editing this section', 'woocustomizer' ),
+            'description' => __( 'Remove all products from your cart when editing this section', 'ecommercecustomizer' ),
             'type'        => 'url',
         );
         $options['wcz-cart-add-custom-text'] = array(
             'id'      => 'wcz-cart-add-custom-text',
-            'label'   => __( 'Add Custom Text to Empty Cart Page', 'woocustomizer' ),
+            'label'   => __( 'Add Custom Text to Empty Cart Page', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-empty-txt'] = array(
             'id'          => 'wcz-cart-empty-txt',
-            'label'       => __( 'Page Text', 'woocustomizer' ),
+            'label'       => __( 'Page Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'textarea',
-            'description' => __( 'This will only show on the Empty Cart Page', 'woocustomizer' ),
-            'default'     => __( 'Some Extra Text', 'woocustomizer' ),
+            'description' => __( 'This will only show on the Empty Cart Page', 'ecommercecustomizer' ),
+            'default'     => __( 'Some Extra Text', 'ecommercecustomizer' ),
         );
         $options['wcz-cart-edit-rts'] = array(
             'id'      => 'wcz-cart-edit-rts',
-            'label'   => __( 'Edit \'Return to Shop\' button', 'woocustomizer' ),
+            'label'   => __( 'Edit \'Return to Shop\' button', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-edit-rts-text'] = array(
             'id'      => 'wcz-cart-edit-rts-text',
-            'label'   => __( 'Text', 'woocustomizer' ),
+            'label'   => __( 'Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Return to shop', 'woocustomizer' ),
+            'default' => __( 'Return to shop', 'ecommercecustomizer' ),
         );
         $options['wcz-cart-edit-rts-page'] = array(
             'id'      => 'wcz-cart-edit-rts-page',
-            'label'   => __( 'Select the page this button links to', 'woocustomizer' ),
+            'label'   => __( 'Select the page this button links to', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'dropdown-pages',
             'default' => '',
@@ -2139,14 +2139,14 @@ function woocustomizer_customizer_library_options()
         // Customize - Return To Cart button
         $options['wcz-cart-return-btn'] = array(
             'id'      => 'wcz-cart-return-btn',
-            'label'   => __( '"Return To Shop" button design', 'woocustomizer' ),
+            'label'   => __( '"Return To Shop" button design', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-return-btn-align'] = array(
             'id'      => 'wcz-cart-return-btn-align',
-            'label'   => __( 'Center Align', 'woocustomizer' ),
+            'label'   => __( 'Center Align', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -2154,7 +2154,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-cart-return-btn-fsize', 16 );
         $options['wcz-cart-return-btn-fsize'] = array(
             'id'          => 'wcz-cart-return-btn-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2167,28 +2167,28 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-return-btn-color'] = array(
             'id'      => 'wcz-cart-return-btn-color',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#222',
         );
         $options['wcz-cart-return-btn-fcolor'] = array(
             'id'      => 'wcz-cart-return-btn-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#FFF',
         );
         $options['wcz-cart-return-btn-hcolor'] = array(
             'id'      => 'wcz-cart-return-btn-hcolor',
-            'label'   => __( 'Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#000',
         );
         $options['wcz-cart-return-btn-hfcolor'] = array(
             'id'      => 'wcz-cart-return-btn-hfcolor',
-            'label'   => __( 'Hover Font Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#FFF',
@@ -2196,7 +2196,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-cart-return-btn-pad', 10 );
         $options['wcz-cart-return-btn-pad'] = array(
             'id'          => 'wcz-cart-return-btn-pad',
-            'label'       => __( 'Padding', 'woocustomizer' ),
+            'label'       => __( 'Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2209,43 +2209,43 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-heading-cart-design'] = array(
             'id'          => 'wcz-heading-cart-design',
-            'label'       => __( 'Design Elements', 'woocustomizer' ),
+            'label'       => __( 'Design Elements', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'These buttons should be designed by the theme. We try offer extra customization for these elements. If these don\'t work, please get in contact for help.', 'woocustomizer' ),
+            'description' => __( 'These buttons should be designed by the theme. We try offer extra customization for these elements. If these don\'t work, please get in contact for help.', 'ecommercecustomizer' ),
         );
         // Customize - Cart Buttons
         $options['wcz-cart-table-btn'] = array(
             'id'      => 'wcz-cart-table-btn',
-            'label'   => __( 'Customize cart table buttons', 'woocustomizer' ),
+            'label'   => __( 'Customize cart table buttons', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-table-btn-color'] = array(
             'id'      => 'wcz-cart-table-btn-color',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-cart-table-btn-fcolor'] = array(
             'id'      => 'wcz-cart-table-btn-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
         );
         $options['wcz-cart-table-btn-hcolor'] = array(
             'id'      => 'wcz-cart-table-btn-hcolor',
-            'label'   => __( 'Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-cart-table-btn-hfcolor'] = array(
             'id'      => 'wcz-cart-table-btn-hfcolor',
-            'label'   => __( 'Hover Font Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
@@ -2253,22 +2253,22 @@ function woocustomizer_customizer_library_options()
         // Customize - Proceed to Checkout button
         $options['wcz-cart-proceed-btn'] = array(
             'id'      => 'wcz-cart-proceed-btn',
-            'label'   => __( 'Customize "Proceed To Checkout" button', 'woocustomizer' ),
+            'label'   => __( 'Customize "Proceed To Checkout" button', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-cart-proceed-btn-txt'] = array(
             'id'      => 'wcz-cart-proceed-btn-txt',
-            'label'   => __( 'Button Text', 'woocustomizer' ),
+            'label'   => __( 'Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Proceed to checkout', 'woocustomizer' ),
+            'default' => __( 'Proceed to checkout', 'ecommercecustomizer' ),
         );
         $wcz_sfsval = get_option( 'wcz-cart-proceed-btn-fsize', 18 );
         $options['wcz-cart-proceed-btn-fsize'] = array(
             'id'          => 'wcz-cart-proceed-btn-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2282,7 +2282,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-cart-proceed-btn-pad', 20 );
         $options['wcz-cart-proceed-btn-pad'] = array(
             'id'          => 'wcz-cart-proceed-btn-pad',
-            'label'       => __( 'Padding', 'woocustomizer' ),
+            'label'       => __( 'Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2295,28 +2295,28 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-cart-proceed-btn-color'] = array(
             'id'      => 'wcz-cart-proceed-btn-color',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-cart-proceed-btn-fcolor'] = array(
             'id'      => 'wcz-cart-proceed-btn-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
         );
         $options['wcz-cart-proceed-btn-hcolor'] = array(
             'id'      => 'wcz-cart-proceed-btn-hcolor',
-            'label'   => __( 'Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-cart-proceed-btn-hfcolor'] = array(
             'id'      => 'wcz-cart-proceed-btn-hfcolor',
-            'label'   => __( 'Hover Font Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
@@ -2326,13 +2326,13 @@ function woocustomizer_customizer_library_options()
         $section = 'wcz-panel-checkout';
         $sections[] = array(
             'id'       => $section,
-            'title'    => __( 'Checkout Page', 'woocustomizer' ),
+            'title'    => __( 'Checkout Page', 'ecommercecustomizer' ),
             'priority' => '10',
             'panel'    => $panel,
         );
         $options['wcz-heading-direct-checkout'] = array(
             'id'      => 'wcz-heading-direct-checkout',
-            'label'   => __( 'Direct Checkout', 'woocustomizer' ),
+            'label'   => __( 'Direct Checkout', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
@@ -2340,192 +2340,192 @@ function woocustomizer_customizer_library_options()
             'id'          => 'wcz-directcheckout-free-note',
             'section'     => $section,
             'type'        => 'url',
-            'description' => sprintf( __( '%1$s offers extra functionlaity to direct users straight to the checkout page, add the cart table to the checkout page & more customization settings for this feature.', 'woocustomizer' ), '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&page=wcz_settings-pricing' ) ) . '" target="_blank">StoreCustomizer Pro</a>' ),
+            'description' => sprintf( __( '%1$s offers extra functionlaity to direct users straight to the checkout page, add the cart table to the checkout page & more customization settings for this feature.', 'ecommercecustomizer' ), '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&page=wcz_settings-pricing' ) ) . '" target="_blank">StoreCustomizer Pro</a>' ),
         );
         $options['wcz-heading-checkout-page'] = array(
             'id'      => 'wcz-heading-checkout-page',
-            'label'   => __( 'Checkout Page', 'woocustomizer' ),
+            'label'   => __( 'Checkout Page', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'url',
         );
         $options['wcz-checkout-edit-coupon-txt'] = array(
             'id'      => 'wcz-checkout-edit-coupon-txt',
-            'label'   => __( 'Edit Coupon Section Text', 'woocustomizer' ),
+            'label'   => __( 'Edit Coupon Section Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-coupon-text'] = array(
             'id'      => 'wcz-checkout-coupon-text',
-            'label'   => __( 'Coupon Code Text', 'woocustomizer' ),
+            'label'   => __( 'Coupon Code Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Have a coupon?', 'woocustomizer' ),
+            'default' => __( 'Have a coupon?', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-coupon-link-text'] = array(
             'id'      => 'wcz-checkout-coupon-link-text',
-            'label'   => __( 'Coupon Code Link Text', 'woocustomizer' ),
+            'label'   => __( 'Coupon Code Link Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Click here to enter your code', 'woocustomizer' ),
+            'default' => __( 'Click here to enter your code', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-coupon-instruction-text'] = array(
             'id'      => 'wcz-checkout-coupon-instruction-text',
-            'label'   => __( 'Coupon Text', 'woocustomizer' ),
+            'label'   => __( 'Coupon Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'If you have a coupon code, please apply it below.', 'woocustomizer' ),
+            'default' => __( 'If you have a coupon code, please apply it below.', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-edit-ordernotes-txt'] = array(
             'id'      => 'wcz-checkout-edit-ordernotes-txt',
-            'label'   => __( 'Edit Order Notes Text', 'woocustomizer' ),
+            'label'   => __( 'Edit Order Notes Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-ordernotes-label'] = array(
             'id'      => 'wcz-checkout-ordernotes-label',
-            'label'   => __( 'Label Text', 'woocustomizer' ),
+            'label'   => __( 'Label Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Order notes', 'woocustomizer' ),
+            'default' => __( 'Order notes', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-ordernotes-placeholder'] = array(
             'id'      => 'wcz-checkout-ordernotes-placeholder',
-            'label'   => __( 'Placeholder Text', 'woocustomizer' ),
+            'label'   => __( 'Placeholder Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Notes about your order, e.g. special notes for delivery.', 'woocustomizer' ),
+            'default' => __( 'Notes about your order, e.g. special notes for delivery.', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-add-img'] = array(
             'id'          => 'wcz-checkout-add-img',
-            'label'       => __( 'Add Custom Image', 'woocustomizer' ),
+            'label'       => __( 'Add Custom Image', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This can be used to ensure that the site is secure for your users.', 'woocustomizer' ),
+            'description' => __( 'This can be used to ensure that the site is secure for your users.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-checkout-img'] = array(
             'id'          => 'wcz-checkout-img',
-            'label'       => __( 'Upload Image', 'woocustomizer' ),
+            'label'       => __( 'Upload Image', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'upload',
-            'description' => __( 'Upload this image at the correct size.', 'woocustomizer' ),
+            'description' => __( 'Upload this image at the correct size.', 'ecommercecustomizer' ),
             'default'     => '',
         );
         $options['wcz-checkout-img-center'] = array(
             'id'      => 'wcz-checkout-img-center',
-            'label'   => __( 'Center Image', 'woocustomizer' ),
+            'label'   => __( 'Center Image', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-show-discamount'] = array(
             'id'          => 'wcz-checkout-show-discamount',
-            'label'       => __( 'Show Discount / Amount Saved', 'woocustomizer' ),
+            'label'       => __( 'Show Discount / Amount Saved', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'This will display the total amount a user saves when purchasing products On Sale!', 'woocustomizer' ),
+            'description' => __( 'This will display the total amount a user saves when purchasing products On Sale!', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         $options['wcz-checkout-discamount-txt'] = array(
             'id'      => 'wcz-checkout-discamount-txt',
-            'label'   => __( 'Text', 'woocustomizer' ),
+            'label'   => __( 'Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'You Save!', 'woocustomizer' ),
+            'default' => __( 'You Save!', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-discamount-bgcolor'] = array(
             'id'      => 'wcz-checkout-discamount-bgcolor',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#f9f9f9',
         );
         $options['wcz-checkout-discamount-color'] = array(
             'id'      => 'wcz-checkout-discamount-color',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
         );
         $options['wcz-checkout-add-po-txt'] = array(
             'id'      => 'wcz-checkout-add-po-txt',
-            'label'   => __( 'Add Text under Place Order button', 'woocustomizer' ),
+            'label'   => __( 'Add Text under Place Order button', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-po-txt'] = array(
             'id'          => 'wcz-checkout-po-txt',
-            'label'       => __( 'Custom Text', 'woocustomizer' ),
+            'label'       => __( 'Custom Text', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'textarea',
-            'description' => __( 'This will only show up once you refresh and/or go to the Checkout page.', 'woocustomizer' ),
-            'default'     => __( 'Your personal data will help us create your account and to support your user experience throughout this website. Please have a look at our Privacy Policy for more information on how we use your personal data', 'woocustomizer' ),
+            'description' => __( 'This will only show up once you refresh and/or go to the Checkout page.', 'ecommercecustomizer' ),
+            'default'     => __( 'Your personal data will help us create your account and to support your user experience throughout this website. Please have a look at our Privacy Policy for more information on how we use your personal data', 'ecommercecustomizer' ),
         );
         $options['wcz-heading-remove-checkout-fields'] = array(
             'id'          => 'wcz-heading-remove-checkout-fields',
-            'label'       => __( 'Remove Checkout Fields', 'woocustomizer' ),
+            'label'       => __( 'Remove Checkout Fields', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'Depending on your theme, the removal of these settings might not work. Edit these settings and then check the site front-end to see if they work.', 'woocustomizer' ),
+            'description' => __( 'Depending on your theme, the removal of these settings might not work. Edit these settings and then check the site front-end to see if they work.', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-remove-lastname'] = array(
             'id'      => 'wcz-checkout-remove-lastname',
-            'label'   => __( 'Remove Last Name', 'woocustomizer' ),
+            'label'   => __( 'Remove Last Name', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-company'] = array(
             'id'      => 'wcz-checkout-remove-company',
-            'label'   => __( 'Remove Company Name', 'woocustomizer' ),
+            'label'   => __( 'Remove Company Name', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-address'] = array(
             'id'      => 'wcz-checkout-remove-address',
-            'label'   => __( 'Remove Address', 'woocustomizer' ),
+            'label'   => __( 'Remove Address', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-towncity'] = array(
             'id'      => 'wcz-checkout-remove-towncity',
-            'label'   => __( 'Remove Town / City', 'woocustomizer' ),
+            'label'   => __( 'Remove Town / City', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-provstate'] = array(
             'id'      => 'wcz-checkout-remove-provstate',
-            'label'   => __( 'Remove State / Province & Zip Code', 'woocustomizer' ),
+            'label'   => __( 'Remove State / Province & Zip Code', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-phone'] = array(
             'id'      => 'wcz-checkout-remove-phone',
-            'label'   => __( 'Remove Phone Number', 'woocustomizer' ),
+            'label'   => __( 'Remove Phone Number', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-remove-order-notes'] = array(
             'id'          => 'wcz-checkout-remove-order-notes',
-            'label'       => __( 'Remove Order Notes', 'woocustomizer' ),
+            'label'       => __( 'Remove Order Notes', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'checkbox',
-            'description' => __( 'Edit <a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=shipping&section=options' ) ) . '" target="_blank">Shipping destination</a> to remove the Shipping Address details.', 'woocustomizer' ),
+            'description' => __( 'Edit <a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=shipping&section=options' ) ) . '" target="_blank">Shipping destination</a> to remove the Shipping Address details.', 'ecommercecustomizer' ),
             'default'     => 0,
         );
         
         if ( 'yes' == get_option( 'woocommerce_enable_signup_and_login_from_checkout' ) ) {
             $options['wcz-checkout-edit-createaccount'] = array(
                 'id'      => 'wcz-checkout-edit-createaccount',
-                'label'   => __( 'Edit \'Create an account?\' Text', 'woocustomizer' ),
+                'label'   => __( 'Edit \'Create an account?\' Text', 'ecommercecustomizer' ),
                 'section' => $section,
                 'type'    => 'checkbox',
                 'default' => 0,
@@ -2534,36 +2534,36 @@ function woocustomizer_customizer_library_options()
                 'id'      => 'wcz-checkout-createaccount-txt',
                 'section' => $section,
                 'type'    => 'text',
-                'default' => __( 'Create an account?', 'woocustomizer' ),
+                'default' => __( 'Create an account?', 'ecommercecustomizer' ),
             );
         }
         
         $options['wcz-heading-checkout-design'] = array(
             'id'          => 'wcz-heading-checkout-design',
-            'label'       => __( 'Design Elements', 'woocustomizer' ),
+            'label'       => __( 'Design Elements', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'This button should be designed by the theme. We try offer extra customization for this button. If this doesn\'t work, please get in contact for help.', 'woocustomizer' ),
+            'description' => __( 'This button should be designed by the theme. We try offer extra customization for this button. If this doesn\'t work, please get in contact for help.', 'ecommercecustomizer' ),
         );
         // Customize - Place Order button
         $options['wcz-checkout-placeorder-btn'] = array(
             'id'      => 'wcz-checkout-placeorder-btn',
-            'label'   => __( 'Customize the "Place Order" button', 'woocustomizer' ),
+            'label'   => __( 'Customize the "Place Order" button', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
         );
         $options['wcz-checkout-placeorder-btn-txt'] = array(
             'id'      => 'wcz-checkout-placeorder-btn-txt',
-            'label'   => __( 'Button Text', 'woocustomizer' ),
+            'label'   => __( 'Button Text', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Place Order', 'woocustomizer' ),
+            'default' => __( 'Place Order', 'ecommercecustomizer' ),
         );
         $wcz_sfsval = get_option( 'wcz-checkout-placeorder-btn-fsize', 18 );
         $options['wcz-checkout-placeorder-btn-fsize'] = array(
             'id'          => 'wcz-checkout-placeorder-btn-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2577,7 +2577,7 @@ function woocustomizer_customizer_library_options()
         $wcz_sfsval = get_option( 'wcz-checkout-placeorder-btn-pad', 20 );
         $options['wcz-checkout-placeorder-btn-pad'] = array(
             'id'          => 'wcz-checkout-placeorder-btn-pad',
-            'label'       => __( 'Padding', 'woocustomizer' ),
+            'label'       => __( 'Padding', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2590,28 +2590,28 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-checkout-placeorder-btn-color'] = array(
             'id'      => 'wcz-checkout-placeorder-btn-color',
-            'label'   => __( 'Background Color', 'woocustomizer' ),
+            'label'   => __( 'Background Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-checkout-placeorder-btn-fcolor'] = array(
             'id'      => 'wcz-checkout-placeorder-btn-fcolor',
-            'label'   => __( 'Font Color', 'woocustomizer' ),
+            'label'   => __( 'Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
         );
         $options['wcz-checkout-placeorder-btn-hcolor'] = array(
             'id'      => 'wcz-checkout-placeorder-btn-hcolor',
-            'label'   => __( 'Hover Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#EEE',
         );
         $options['wcz-checkout-placeorder-btn-hfcolor'] = array(
             'id'      => 'wcz-checkout-placeorder-btn-hfcolor',
-            'label'   => __( 'Hover Font Color', 'woocustomizer' ),
+            'label'   => __( 'Hover Font Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#333',
@@ -2619,7 +2619,7 @@ function woocustomizer_customizer_library_options()
         // Customize - Checkout Headings
         $options['wcz-checkout-edit-headings'] = array(
             'id'      => 'wcz-checkout-edit-headings',
-            'label'   => __( 'Customize checkout details headings', 'woocustomizer' ),
+            'label'   => __( 'Customize checkout details headings', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'checkbox',
             'default' => 0,
@@ -2628,40 +2628,40 @@ function woocustomizer_customizer_library_options()
             'id'          => 'wcz-checkout-careful-note',
             'section'     => $section,
             'type'        => 'url',
-            'description' => __( 'Note: These settings use more memory so we suggest only doing this if you need to.', 'woocustomizer' ),
+            'description' => __( 'Note: These settings use more memory so we suggest only doing this if you need to.', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-billing-head'] = array(
             'id'      => 'wcz-checkout-billing-head',
-            'label'   => __( '\'Billing\' heading', 'woocustomizer' ),
+            'label'   => __( '\'Billing\' heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Billing details', 'woocustomizer' ),
+            'default' => __( 'Billing details', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-addinfo-head'] = array(
             'id'      => 'wcz-checkout-addinfo-head',
-            'label'   => __( '\'Additional information\' heading', 'woocustomizer' ),
+            'label'   => __( '\'Additional information\' heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Additional information', 'woocustomizer' ),
+            'default' => __( 'Additional information', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-shipping-head'] = array(
             'id'      => 'wcz-checkout-shipping-head',
-            'label'   => __( '\'Shipping\' heading', 'woocustomizer' ),
+            'label'   => __( '\'Shipping\' heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Ship to a different address?', 'woocustomizer' ),
+            'default' => __( 'Ship to a different address?', 'ecommercecustomizer' ),
         );
         $options['wcz-checkout-order-head'] = array(
             'id'      => 'wcz-checkout-order-head',
-            'label'   => __( '\'Your Order\' heading', 'woocustomizer' ),
+            'label'   => __( '\'Your Order\' heading', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'text',
-            'default' => __( 'Your Order', 'woocustomizer' ),
+            'default' => __( 'Your Order', 'ecommercecustomizer' ),
         );
         $wcz_sfsval = get_option( 'wcz-checkout-sechead-fsize', 20 );
         $options['wcz-checkout-sechead-fsize'] = array(
             'id'          => 'wcz-checkout-sechead-fsize',
-            'label'       => __( 'Font Size', 'woocustomizer' ),
+            'label'       => __( 'Font Size', 'ecommercecustomizer' ),
             'section'     => $section,
             'type'        => 'range',
             'input_attrs' => array(
@@ -2674,7 +2674,7 @@ function woocustomizer_customizer_library_options()
         );
         $options['wcz-checkout-sechead-color'] = array(
             'id'      => 'wcz-checkout-sechead-color',
-            'label'   => __( 'Headings Color', 'woocustomizer' ),
+            'label'   => __( 'Headings Color', 'ecommercecustomizer' ),
             'section' => $section,
             'type'    => 'color',
             'default' => '#222',
@@ -2690,7 +2690,7 @@ function woocustomizer_customizer_library_options()
     $options['panels'] = $panels;
     $customizer_library = WooCustomizer_Library::Instance();
     $customizer_library->add_options( $options );
-    // To delete custom mods use: woocustomizer_library_remove_theme_mods();
+    // To delete custom mods use: ecommercecustomizer_library_remove_theme_mods();
 }
 
-add_action( 'init', 'woocustomizer_customizer_library_options' );
+add_action( 'init', 'ecommercecustomizer_customizer_library_options' );

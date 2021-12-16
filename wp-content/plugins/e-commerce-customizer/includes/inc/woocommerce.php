@@ -24,22 +24,22 @@ add_filter( 'init', 'wcz_admin_stats_ajax' );
 function wcz_woocommerce_active_body_class( $classes )
 {
     $classes[] = 'wcz-woocommerce';
-    if ( get_option( 'wcz-wc-edit-btns', woocustomizer_library_get_default( 'wcz-wc-edit-btns' ) ) ) {
-        $classes[] = 'wcz-btns ' . sanitize_html_class( get_option( 'wcz-btn-style', woocustomizer_library_get_default( 'wcz-btn-style' ) ) );
+    if ( get_option( 'wcz-wc-edit-btns', ecommercecustomizer_library_get_default( 'wcz-wc-edit-btns' ) ) ) {
+        $classes[] = 'wcz-btns ' . sanitize_html_class( get_option( 'wcz-btn-style', ecommercecustomizer_library_get_default( 'wcz-btn-style' ) ) );
     }
-    if ( get_option( 'wcz-wc-edit-sale', woocustomizer_library_get_default( 'wcz-wc-edit-sale' ) ) ) {
+    if ( get_option( 'wcz-wc-edit-sale', ecommercecustomizer_library_get_default( 'wcz-wc-edit-sale' ) ) ) {
         $classes[] = 'wcz-edit-sale';
     }
-    if ( get_option( 'wcz-wc-edit-applyto-blocks', woocustomizer_library_get_default( 'wcz-wc-edit-applyto-blocks' ) ) ) {
+    if ( get_option( 'wcz-wc-edit-applyto-blocks', ecommercecustomizer_library_get_default( 'wcz-wc-edit-applyto-blocks' ) ) ) {
         $classes[] = 'wcz-wooblocks';
     }
-    if ( is_account_page() && 'wcz-tabstyle-none' !== get_option( 'wcz-tab-style', woocustomizer_library_get_default( 'wcz-tab-style' ) ) ) {
-        $classes[] = sanitize_html_class( get_option( 'wcz-tab-style', woocustomizer_library_get_default( 'wcz-tab-style' ) ) );
+    if ( is_account_page() && 'wcz-tabstyle-none' !== get_option( 'wcz-tab-style', ecommercecustomizer_library_get_default( 'wcz-tab-style' ) ) ) {
+        $classes[] = sanitize_html_class( get_option( 'wcz-tab-style', ecommercecustomizer_library_get_default( 'wcz-tab-style' ) ) );
     }
-    if ( get_option( 'wcz-shop-add-soldout', woocustomizer_library_get_default( 'wcz-shop-add-soldout' ) ) ) {
-        $classes[] = sanitize_html_class( get_option( 'wcz-soldout-style', woocustomizer_library_get_default( 'wcz-soldout-style' ) ) );
+    if ( get_option( 'wcz-shop-add-soldout', ecommercecustomizer_library_get_default( 'wcz-shop-add-soldout' ) ) ) {
+        $classes[] = sanitize_html_class( get_option( 'wcz-soldout-style', ecommercecustomizer_library_get_default( 'wcz-soldout-style' ) ) );
     }
-    if ( (is_shop() || is_product_category() || is_product_tag() || is_product()) && get_option( 'wcz_set_enable_product_badges', woocustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ) {
+    if ( (is_shop() || is_product_category() || is_product_tag() || is_product()) && get_option( 'wcz_set_enable_product_badges', ecommercecustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ) {
         $classes[] = 'wcz-pbhide';
     }
     return $classes;
@@ -70,7 +70,7 @@ add_filter( 'admin_body_class', 'wcz_admin_body_class' );
 if ( !function_exists( 'loop_columns' ) ) {
     function wcz_woocommerce_loop_columns()
     {
-        return esc_attr( get_option( 'wcz-shop-pprow', woocustomizer_library_get_default( 'wcz-shop-pprow' ) ) );
+        return esc_attr( get_option( 'wcz-shop-pprow', ecommercecustomizer_library_get_default( 'wcz-shop-pprow' ) ) );
     }
 
 }
@@ -82,8 +82,8 @@ if ( !function_exists( 'loop_columns' ) ) {
 function wcz_woocommerce_products_per_page( $cols )
 {
     
-    if ( !get_option( 'wcz-shop-edit-pp', woocustomizer_library_get_default( 'wcz-shop-edit-pp' ) ) ) {
-        return esc_attr( get_option( 'wcz-shop-pppage', woocustomizer_library_get_default( 'wcz-shop-pppage' ) ) );
+    if ( !get_option( 'wcz-shop-edit-pp', ecommercecustomizer_library_get_default( 'wcz-shop-edit-pp' ) ) ) {
+        return esc_attr( get_option( 'wcz-shop-pppage', ecommercecustomizer_library_get_default( 'wcz-shop-pppage' ) ) );
     } else {
         return $cols;
     }
@@ -98,7 +98,7 @@ add_filter( 'loop_shop_per_page', 'wcz_woocommerce_products_per_page', 9999 );
  */
 function wcz_woocommerce_thumbnail_columns()
 {
-    return esc_attr( get_option( 'wcz-product-imggal-ppr', woocustomizer_library_get_default( 'wcz-product-imggal-ppr' ) ) );
+    return esc_attr( get_option( 'wcz-product-imggal-ppr', ecommercecustomizer_library_get_default( 'wcz-product-imggal-ppr' ) ) );
 }
 
 add_filter( 'woocommerce_product_thumbnails_columns', 'wcz_woocommerce_thumbnail_columns', 9999 );
@@ -107,9 +107,9 @@ add_filter( 'woocommerce_product_thumbnails_columns', 'wcz_woocommerce_thumbnail
  */
 function wc_change_number_related_products( $args )
 {
-    $wcz_recp_amount = ( get_option( 'wcz-product-recomm-ppr-no', woocustomizer_library_get_default( 'wcz-product-recomm-ppr-no' ) ) ? get_option( 'wcz-product-recomm-ppr-no', woocustomizer_library_get_default( 'wcz-product-recomm-ppr-no' ) ) : get_option( 'wcz-product-recomm-ppr', woocustomizer_library_get_default( 'wcz-product-recomm-ppr' ) ) );
+    $wcz_recp_amount = ( get_option( 'wcz-product-recomm-ppr-no', ecommercecustomizer_library_get_default( 'wcz-product-recomm-ppr-no' ) ) ? get_option( 'wcz-product-recomm-ppr-no', ecommercecustomizer_library_get_default( 'wcz-product-recomm-ppr-no' ) ) : get_option( 'wcz-product-recomm-ppr', ecommercecustomizer_library_get_default( 'wcz-product-recomm-ppr' ) ) );
     $args['posts_per_page'] = esc_attr( $wcz_recp_amount );
-    $args['columns'] = esc_attr( get_option( 'wcz-product-recomm-ppr', woocustomizer_library_get_default( 'wcz-product-recomm-ppr' ) ) );
+    $args['columns'] = esc_attr( get_option( 'wcz-product-recomm-ppr', ecommercecustomizer_library_get_default( 'wcz-product-recomm-ppr' ) ) );
     return $args;
 }
 
@@ -122,10 +122,10 @@ add_filter( 'woocommerce_upsell_display_args', 'wc_change_number_related_product
  */
 function wcz_woocommerce_related_products_args( $args )
 {
-    $wcz_rp_amount = ( get_option( 'wcz-product-related-ppr-no', woocustomizer_library_get_default( 'wcz-product-related-ppr-no' ) ) ? get_option( 'wcz-product-related-ppr-no', woocustomizer_library_get_default( 'wcz-product-related-ppr-no' ) ) : get_option( 'wcz-product-related-ppr', woocustomizer_library_get_default( 'wcz-product-related-ppr' ) ) );
+    $wcz_rp_amount = ( get_option( 'wcz-product-related-ppr-no', ecommercecustomizer_library_get_default( 'wcz-product-related-ppr-no' ) ) ? get_option( 'wcz-product-related-ppr-no', ecommercecustomizer_library_get_default( 'wcz-product-related-ppr-no' ) ) : get_option( 'wcz-product-related-ppr', ecommercecustomizer_library_get_default( 'wcz-product-related-ppr' ) ) );
     $defaults = array(
         'posts_per_page' => esc_attr( $wcz_rp_amount ),
-        'columns'        => esc_attr( get_option( 'wcz-product-related-ppr', woocustomizer_library_get_default( 'wcz-product-related-ppr' ) ) ),
+        'columns'        => esc_attr( get_option( 'wcz-product-related-ppr', ecommercecustomizer_library_get_default( 'wcz-product-related-ppr' ) ) ),
     );
     $args = wp_parse_args( $defaults, $args );
     return $args;
@@ -139,14 +139,14 @@ add_filter( 'woocommerce_output_related_products_args', 'wcz_woocommerce_related
  */
 function wcz_woocommerce_cart_crosssells_cols()
 {
-    return esc_attr( get_option( 'wcz-cart-crosssells-ppr', woocustomizer_library_get_default( 'wcz-cart-crosssells-ppr' ) ) );
+    return esc_attr( get_option( 'wcz-cart-crosssells-ppr', ecommercecustomizer_library_get_default( 'wcz-cart-crosssells-ppr' ) ) );
 }
 
 add_filter( 'woocommerce_cross_sells_columns', 'wcz_woocommerce_cart_crosssells_cols', 9999 );
 // Cross Sells amount
 function wcz_woocommerce_cross_sells_amount( $columns )
 {
-    return ( get_option( 'wcz-cart-crosssells-ppr-no', woocustomizer_library_get_default( 'wcz-cart-crosssells-ppr-no' ) ) ? get_option( 'wcz-cart-crosssells-ppr-no', woocustomizer_library_get_default( 'wcz-cart-crosssells-ppr-no' ) ) : get_option( 'wcz-cart-crosssells-ppr', woocustomizer_library_get_default( 'wcz-cart-crosssells-ppr' ) ) );
+    return ( get_option( 'wcz-cart-crosssells-ppr-no', ecommercecustomizer_library_get_default( 'wcz-cart-crosssells-ppr-no' ) ) ? get_option( 'wcz-cart-crosssells-ppr-no', ecommercecustomizer_library_get_default( 'wcz-cart-crosssells-ppr-no' ) ) : get_option( 'wcz-cart-crosssells-ppr', ecommercecustomizer_library_get_default( 'wcz-cart-crosssells-ppr' ) ) );
 }
 
 add_filter( 'woocommerce_cross_sells_total', 'wcz_woocommerce_cross_sells_amount' );
@@ -155,15 +155,15 @@ add_filter( 'woocommerce_cross_sells_total', 'wcz_woocommerce_cross_sells_amount
  */
 function wcz_wc_texts()
 {
-    if ( !get_option( 'wcz-shop-edit-pp', woocustomizer_library_get_default( 'wcz-shop-edit-pp' ) ) ) {
+    if ( !get_option( 'wcz-shop-edit-pp', ecommercecustomizer_library_get_default( 'wcz-shop-edit-pp' ) ) ) {
         add_filter( 'loop_shop_columns', 'wcz_woocommerce_loop_columns', 9999 );
     }
     // Single Product Button Text
     
-    if ( get_option( 'wcz-product-edit-btn', woocustomizer_library_get_default( 'wcz-product-edit-btn' ) ) ) {
+    if ( get_option( 'wcz-product-edit-btn', ecommercecustomizer_library_get_default( 'wcz-product-edit-btn' ) ) ) {
         $setting = 'wcz-product-button-txt-simple';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             add_filter( 'woocommerce_product_single_add_to_cart_text', 'wcz_wc_texts_simple_button' );
         }
     }
@@ -171,7 +171,7 @@ function wcz_wc_texts()
     
     if ( is_woocommerce() || is_cart() ) {
         // Variable Product Button Text
-        if ( get_option( 'wcz-shop-edit-btns', woocustomizer_library_get_default( 'wcz-shop-edit-btns' ) ) ) {
+        if ( get_option( 'wcz-shop-edit-btns', ecommercecustomizer_library_get_default( 'wcz-shop-edit-btns' ) ) ) {
             add_filter( 'woocommerce_product_add_to_cart_text', 'wcz_wc_texts_variable_button' );
         }
         // Edit Sale Banner text
@@ -184,7 +184,7 @@ function wcz_wc_texts()
     }
     
     // Stock Availability Text
-    if ( is_product() && get_option( 'wcz-edit-stockstatus', woocustomizer_library_get_default( 'wcz-edit-stockstatus' ) ) ) {
+    if ( is_product() && get_option( 'wcz-edit-stockstatus', ecommercecustomizer_library_get_default( 'wcz-edit-stockstatus' ) ) ) {
         add_filter(
             'woocommerce_get_availability',
             'wcz_stock_availability_text',
@@ -194,56 +194,56 @@ function wcz_wc_texts()
     }
     // Remove Shop Sorting
     
-    if ( get_option( 'wcz-shop-remove-sorting', woocustomizer_library_get_default( 'wcz-shop-remove-sorting' ) ) ) {
+    if ( get_option( 'wcz-shop-remove-sorting', ecommercecustomizer_library_get_default( 'wcz-shop-remove-sorting' ) ) ) {
         remove_action( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
         remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
     }
     
     // Remove Shop Results text
     
-    if ( get_option( 'wcz-shop-remove-result', woocustomizer_library_get_default( 'wcz-shop-remove-result' ) ) ) {
+    if ( get_option( 'wcz-shop-remove-result', ecommercecustomizer_library_get_default( 'wcz-shop-remove-result' ) ) ) {
         remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
         remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
     }
     
     // Remove Shop Page Title
-    if ( get_option( 'wcz-shop-remove-title', woocustomizer_library_get_default( 'wcz-shop-remove-title' ) ) ) {
+    if ( get_option( 'wcz-shop-remove-title', ecommercecustomizer_library_get_default( 'wcz-shop-remove-title' ) ) ) {
         add_filter( 'woocommerce_show_page_title', 'wcz_remove_shop_title' );
     }
     // Add a new 'Continue Shopping' button to the product page
-    if ( get_option( 'wcz-add-shop-button', woocustomizer_library_get_default( 'wcz-add-shop-button' ) ) ) {
+    if ( get_option( 'wcz-add-shop-button', ecommercecustomizer_library_get_default( 'wcz-add-shop-button' ) ) ) {
         add_action( 'woocommerce_product_meta_start', 'wcz_add_product_shopping_button', 31 );
     }
     // Remove Product SKU
-    if ( get_option( 'wcz-remove-product-sku', woocustomizer_library_get_default( 'wcz-remove-product-sku' ) ) ) {
+    if ( get_option( 'wcz-remove-product-sku', ecommercecustomizer_library_get_default( 'wcz-remove-product-sku' ) ) ) {
         add_filter( 'wc_product_sku_enabled', 'wcz_remove_product_sku' );
     }
-    if ( get_option( 'wcz-shop-show-stock', woocustomizer_library_get_default( 'wcz-shop-show-stock' ) ) ) {
+    if ( get_option( 'wcz-shop-show-stock', ecommercecustomizer_library_get_default( 'wcz-shop-show-stock' ) ) ) {
         add_action( 'woocommerce_after_shop_loop_item', 'wcz_show_stock_amount_loop', 31 );
     }
     // Edit Coupon Code block text
     
-    if ( is_checkout() && get_option( 'wcz-checkout-edit-coupon-txt', woocustomizer_library_get_default( 'wcz-checkout-edit-coupon-txt' ) ) ) {
+    if ( is_checkout() && get_option( 'wcz-checkout-edit-coupon-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-edit-coupon-txt' ) ) ) {
         add_filter( 'woocommerce_checkout_coupon_message', 'wcz_coupon_message' );
         add_filter( 'gettext', 'woocommerce_edit_checkout_coupon_instruction_text' );
     }
     
     // Edit 'Create an account' text
-    if ( !is_user_logged_in() && is_checkout() && 'yes' == get_option( 'woocommerce_enable_signup_and_login_from_checkout' ) && get_option( 'wcz-checkout-edit-createaccount', woocustomizer_library_get_default( 'wcz-checkout-edit-createaccount' ) ) ) {
+    if ( !is_user_logged_in() && is_checkout() && 'yes' == get_option( 'woocommerce_enable_signup_and_login_from_checkout' ) && get_option( 'wcz-checkout-edit-createaccount', ecommercecustomizer_library_get_default( 'wcz-checkout-edit-createaccount' ) ) ) {
         add_filter( 'gettext', 'woocommerce_edit_createaccount_text' );
     }
     // Edit Order Notes Text
-    if ( is_checkout() && get_option( 'wcz-checkout-edit-ordernotes-txt', woocustomizer_library_get_default( 'wcz-checkout-edit-ordernotes-txt' ) ) ) {
+    if ( is_checkout() && get_option( 'wcz-checkout-edit-ordernotes-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-edit-ordernotes-txt' ) ) ) {
         add_filter( 'woocommerce_checkout_fields', 'wcz_edit_checkout_ordernotes_txt' );
     }
     // Remove Catgory Number Count
-    if ( get_option( 'wcz-shop-remove-catcount', woocustomizer_library_get_default( 'wcz-shop-remove-catcount' ) ) ) {
+    if ( get_option( 'wcz-shop-remove-catcount', ecommercecustomizer_library_get_default( 'wcz-shop-remove-catcount' ) ) ) {
         add_filter( 'woocommerce_subcategory_count_html', '__return_null' );
     }
     // Add Sold Out banner to sold out products
-    if ( get_option( 'wcz-shop-add-soldout', woocustomizer_library_get_default( 'wcz-shop-add-soldout' ) ) ) {
+    if ( get_option( 'wcz-shop-add-soldout', ecommercecustomizer_library_get_default( 'wcz-shop-add-soldout' ) ) ) {
         
-        if ( 'wcz-soldout-style-angle' == get_option( 'wcz-soldout-style', woocustomizer_library_get_default( 'wcz-soldout-style' ) ) ) {
+        if ( 'wcz-soldout-style-angle' == get_option( 'wcz-soldout-style', ecommercecustomizer_library_get_default( 'wcz-soldout-style' ) ) ) {
             add_action( 'woocommerce_after_shop_loop_item', 'wcz_add_soldout_to_shop' );
         } else {
             add_action( 'woocommerce_after_shop_loop_item', 'wcz_add_soldout_to_shop' );
@@ -251,11 +251,11 @@ function wcz_wc_texts()
     
     }
     // Shop List "New" Product Badge
-    if ( get_option( 'wcz-shop-new-badge', woocustomizer_library_get_default( 'wcz-shop-new-badge' ) ) ) {
+    if ( get_option( 'wcz-shop-new-badge', ecommercecustomizer_library_get_default( 'wcz-shop-new-badge' ) ) ) {
         
-        if ( 'abovetitle' == get_option( 'wcz-shop-new-badge-pos', woocustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) {
+        if ( 'abovetitle' == get_option( 'wcz-shop-new-badge-pos', ecommercecustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) {
             add_action( 'woocommerce_shop_loop_item_title', 'wcz_add_new_product_badge', 3 );
-        } elseif ( 'belowtitle' == get_option( 'wcz-shop-new-badge-pos', woocustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) {
+        } elseif ( 'belowtitle' == get_option( 'wcz-shop-new-badge-pos', ecommercecustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) {
             add_action( 'woocommerce_after_shop_loop_item', 'wcz_add_new_product_badge', 3 );
         } else {
             add_action( 'woocommerce_before_shop_loop_item', 'wcz_add_new_product_badge', 3 );
@@ -263,12 +263,12 @@ function wcz_wc_texts()
     
     }
     // Remove Product Page Title
-    if ( get_option( 'wcz-remove-product-title', woocustomizer_library_get_default( 'wcz-remove-product-title' ) ) ) {
+    if ( get_option( 'wcz-remove-product-title', ecommercecustomizer_library_get_default( 'wcz-remove-product-title' ) ) ) {
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
     }
     // Add Admin Stats button to products
     
-    if ( get_option( 'wcz-admin-product-stats', woocustomizer_library_get_default( 'wcz-admin-product-stats' ) ) ) {
+    if ( get_option( 'wcz-admin-product-stats', ecommercecustomizer_library_get_default( 'wcz-admin-product-stats' ) ) ) {
         add_action( 'woocommerce_after_shop_loop_item', 'wcz_add_admin_stats_btn' );
         // Footer Modal
         add_action( 'wp_footer', 'wcz_admin_stats_modal' );
@@ -276,13 +276,13 @@ function wcz_wc_texts()
     
     // Add custom banner to WooCommerce pages
     
-    if ( get_option( 'wcz-wc-notice-banner', woocustomizer_library_get_default( 'wcz-wc-notice-banner' ) ) ) {
-        $wcz_shophook = get_option( 'wcz-wc-notice-banner-shop', woocustomizer_library_get_default( 'wcz-wc-notice-banner-shop' ) );
-        $wcz_producthook = get_option( 'wcz-wc-notice-banner-product', woocustomizer_library_get_default( 'wcz-wc-notice-banner-product' ) );
-        $wcz_carthook = get_option( 'wcz-wc-notice-banner-cart', woocustomizer_library_get_default( 'wcz-wc-notice-banner-cart' ) );
-        $wcz_checkouthook = get_option( 'wcz-wc-notice-banner-checkout', woocustomizer_library_get_default( 'wcz-wc-notice-banner-checkout' ) );
+    if ( get_option( 'wcz-wc-notice-banner', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner' ) ) ) {
+        $wcz_shophook = get_option( 'wcz-wc-notice-banner-shop', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner-shop' ) );
+        $wcz_producthook = get_option( 'wcz-wc-notice-banner-product', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner-product' ) );
+        $wcz_carthook = get_option( 'wcz-wc-notice-banner-cart', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner-cart' ) );
+        $wcz_checkouthook = get_option( 'wcz-wc-notice-banner-checkout', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner-checkout' ) );
         $wcz_incarch = false;
-        if ( get_option( 'wcz-wc-notice-banner-archives', woocustomizer_library_get_default( 'wcz-wc-notice-banner-archives' ) ) && (is_product_category() || is_product_tag()) ) {
+        if ( get_option( 'wcz-wc-notice-banner-archives', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner-archives' ) ) && (is_product_category() || is_product_tag()) ) {
             $wcz_incarch = true;
         }
         if ( 'none' !== $wcz_shophook && (is_shop() || $wcz_incarch) ) {
@@ -301,18 +301,18 @@ function wcz_wc_texts()
     
     // Add 'Back to Shop' button to the Cart page
     
-    if ( get_option( 'wcz-cart-bts-btn', woocustomizer_library_get_default( 'wcz-cart-bts-btn' ) ) ) {
-        $wcz_bts_hook = get_option( 'wcz-cart-bts-pos', woocustomizer_library_get_default( 'wcz-cart-bts-pos' ) );
+    if ( get_option( 'wcz-cart-bts-btn', ecommercecustomizer_library_get_default( 'wcz-cart-bts-btn' ) ) ) {
+        $wcz_bts_hook = get_option( 'wcz-cart-bts-pos', ecommercecustomizer_library_get_default( 'wcz-cart-bts-pos' ) );
         add_action( $wcz_bts_hook, 'wcz_add_backtoshop_cart_button', 31 );
     }
     
     // Remove Order Notes on Checkout Page
-    if ( get_option( 'wcz-checkout-remove-order-notes', woocustomizer_library_get_default( 'wcz-checkout-remove-order-notes' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-order-notes', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-order-notes' ) ) ) {
         add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
     }
     // EXCLUDED FROM FREE VERSION -- This "if" block will be auto removed from the Free version.
     // Set Increment values for Product single page Add To Cart
-    if ( get_option( 'wcz-set-cart-increment-vals', woocustomizer_library_get_default( 'wcz-set-cart-increment-vals' ) ) ) {
+    if ( get_option( 'wcz-set-cart-increment-vals', ecommercecustomizer_library_get_default( 'wcz-set-cart-increment-vals' ) ) ) {
         add_filter(
             'woocommerce_quantity_input_args',
             'wcz_set_product_single_min_max_values',
@@ -320,12 +320,12 @@ function wcz_wc_texts()
             2
         );
     }
-    if ( get_option( 'wcz-product-variable-ddo', woocustomizer_library_get_default( 'wcz-product-variable-ddo' ) ) ) {
+    if ( get_option( 'wcz-product-variable-ddo', ecommercecustomizer_library_get_default( 'wcz-product-variable-ddo' ) ) ) {
         add_filter( 'woocommerce_dropdown_variation_attribute_options_args', 'wcz_edit_variable_dropdown_args', 10 );
     }
     
-    if ( is_cart() && get_option( 'wcz-cart-add-product-info', woocustomizer_library_get_default( 'wcz-cart-add-product-info' ) ) ) {
-        if ( get_option( 'wcz-cart-add-productinfo-cats', woocustomizer_library_get_default( 'wcz-cart-add-productinfo-cats' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-add-product-info', ecommercecustomizer_library_get_default( 'wcz-cart-add-product-info' ) ) ) {
+        if ( get_option( 'wcz-cart-add-productinfo-cats', ecommercecustomizer_library_get_default( 'wcz-cart-add-productinfo-cats' ) ) ) {
             add_action(
                 'woocommerce_after_cart_item_name',
                 'wcz_add_cart_page_categories',
@@ -333,7 +333,7 @@ function wcz_wc_texts()
                 3
             );
         }
-        if ( get_option( 'wcz-cart-add-productinfo-stock', woocustomizer_library_get_default( 'wcz-cart-add-productinfo-stock' ) ) ) {
+        if ( get_option( 'wcz-cart-add-productinfo-stock', ecommercecustomizer_library_get_default( 'wcz-cart-add-productinfo-stock' ) ) ) {
             add_action(
                 'woocommerce_after_cart_item_name',
                 'wcz_add_cart_page_stock',
@@ -350,9 +350,9 @@ add_filter( 'template_redirect', 'wcz_wc_texts' );
 // Single Product - Set min and max values allowed
 function wcz_set_product_single_min_max_values( $args, $product )
 {
-    $arg_min = get_option( 'wcz-set-cart-inc-min', woocustomizer_library_get_default( 'wcz-set-cart-inc-min' ) );
-    $arg_max = get_option( 'wcz-set-cart-inc-max', woocustomizer_library_get_default( 'wcz-set-cart-inc-max' ) );
-    $arg_step = get_option( 'wcz-set-cart-inc-by', woocustomizer_library_get_default( 'wcz-set-cart-inc-by' ) );
+    $arg_min = get_option( 'wcz-set-cart-inc-min', ecommercecustomizer_library_get_default( 'wcz-set-cart-inc-min' ) );
+    $arg_max = get_option( 'wcz-set-cart-inc-max', ecommercecustomizer_library_get_default( 'wcz-set-cart-inc-max' ) );
+    $arg_step = get_option( 'wcz-set-cart-inc-by', ecommercecustomizer_library_get_default( 'wcz-set-cart-inc-by' ) );
     
     if ( !is_cart() ) {
         $args['min_value'] = esc_attr( $arg_min );
@@ -377,7 +377,7 @@ function wcz_set_product_single_min_max_values( $args, $product )
 function wcz_wc_texts_simple_button()
 {
     $setting = 'wcz-product-button-txt-simple';
-    $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+    $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
     return esc_html( $mod );
 }
 
@@ -392,12 +392,12 @@ function wcz_wc_texts_variable_button()
     switch ( $product_type ) {
         case "variable":
             $setting = 'wcz-shop-button-txt-variable';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             return esc_html( $mod );
             break;
         case "grouped":
             $setting = 'wcz-shop-button-txt-grouped';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             return esc_html( $mod );
             break;
         case "external":
@@ -405,7 +405,7 @@ function wcz_wc_texts_variable_button()
             break;
         default:
             $setting = 'wcz-shoplist-button-txt-simple';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             return esc_html( $mod );
     }
 }
@@ -419,16 +419,16 @@ function wcz_stock_availability_text( $availability )
     }
     $wcz_stockid = get_the_ID();
     $product = wc_get_product( $wcz_stockid );
-    $wcz_always_show_status = get_option( 'wcz-always-show-stockstatus', woocustomizer_library_get_default( 'wcz-always-show-stockstatus' ) );
+    $wcz_always_show_status = get_option( 'wcz-always-show-stockstatus', ecommercecustomizer_library_get_default( 'wcz-always-show-stockstatus' ) );
     switch ( $product->get_stock_status() ) {
         case "instock":
             $wcz_sno = $product->get_stock_quantity();
-            $wcz_stocktxt = get_option( 'wcz-product-instock-txt', woocustomizer_library_get_default( 'wcz-product-instock-txt' ) );
+            $wcz_stocktxt = get_option( 'wcz-product-instock-txt', ecommercecustomizer_library_get_default( 'wcz-product-instock-txt' ) );
             
             if ( empty($wcz_sno) ) {
                 
                 if ( $wcz_always_show_status ) {
-                    $availability['availability'] = get_option( 'wcz-product-instock-deaf-txt', woocustomizer_library_get_default( 'wcz-product-instock-deaf-txt' ) );
+                    $availability['availability'] = get_option( 'wcz-product-instock-deaf-txt', ecommercecustomizer_library_get_default( 'wcz-product-instock-deaf-txt' ) );
                 } else {
                     $availability['availability'] = '';
                 }
@@ -439,11 +439,11 @@ function wcz_stock_availability_text( $availability )
             
             break;
         case "outofstock":
-            $wcz_stocktxt = get_option( 'wcz-product-outofstock-txt', woocustomizer_library_get_default( 'wcz-product-outofstock-txt' ) );
+            $wcz_stocktxt = get_option( 'wcz-product-outofstock-txt', ecommercecustomizer_library_get_default( 'wcz-product-outofstock-txt' ) );
             $availability['availability'] = $wcz_stocktxt;
             break;
         case "onbackorder":
-            $wcz_stocktxt = get_option( 'wcz-product-onbackorder-txt', woocustomizer_library_get_default( 'wcz-product-onbackorder-txt' ) );
+            $wcz_stocktxt = get_option( 'wcz-product-onbackorder-txt', ecommercecustomizer_library_get_default( 'wcz-product-onbackorder-txt' ) );
             $availability['availability'] = $wcz_stocktxt;
             break;
     }
@@ -467,7 +467,7 @@ function wcz_sale_banner_text()
         $setting = 'wcz-shop-sale-txt';
     }
     
-    $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+    $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
     return '<span class="onsale">' . esc_html( $mod ) . '</span>';
 }
 
@@ -483,8 +483,8 @@ function wcz_remove_shop_title( $title )
 // Add a new 'Continue Shopping' button to the product page
 function wcz_add_product_shopping_button()
 {
-    $wcz_cscbtxt = ( get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) ? get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) : get_option( 'wcz-add-shop-button-txt', woocustomizer_library_get_default( 'wcz-add-shop-button-txt' ) ) );
-    $wcz_cscblink = get_option( 'wcz-add-shop-button-url', woocustomizer_library_get_default( 'wcz-add-shop-button-url' ) );
+    $wcz_cscbtxt = ( get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) ? get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) : get_option( 'wcz-add-shop-button-txt', ecommercecustomizer_library_get_default( 'wcz-add-shop-button-txt' ) ) );
+    $wcz_cscblink = get_option( 'wcz-add-shop-button-url', ecommercecustomizer_library_get_default( 'wcz-add-shop-button-url' ) );
     $wcz_csblink = ( $wcz_cscblink ? $wcz_cscblink : get_permalink( wc_get_page_id( 'shop' ) ) );
     if ( get_post_meta( get_the_ID(), 'wcz_pcs_buttonurl', true ) ) {
         $wcz_csblink = get_post_meta( get_the_ID(), 'wcz_pcs_buttonurl', true );
@@ -495,16 +495,16 @@ function wcz_add_product_shopping_button()
 // Add 'Back To Shop' button to the Cart page
 function wcz_add_backtoshop_cart_button()
 {
-    $wcz_btsurl = get_option( 'wcz-cart-bts-url', woocustomizer_library_get_default( 'wcz-cart-bts-url' ) );
-    $wcz_btslink = ( $wcz_btsurl && 'custom' == get_option( 'wcz-cart-bts-type', woocustomizer_library_get_default( 'wcz-cart-bts-type' ) ) ? $wcz_btsurl : get_permalink( wc_get_page_id( 'shop' ) ) );
-    $wcz_btsalign = get_option( 'wcz-cart-bts-align', woocustomizer_library_get_default( 'wcz-cart-bts-align' ) );
+    $wcz_btsurl = get_option( 'wcz-cart-bts-url', ecommercecustomizer_library_get_default( 'wcz-cart-bts-url' ) );
+    $wcz_btslink = ( $wcz_btsurl && 'custom' == get_option( 'wcz-cart-bts-type', ecommercecustomizer_library_get_default( 'wcz-cart-bts-type' ) ) ? $wcz_btsurl : get_permalink( wc_get_page_id( 'shop' ) ) );
+    $wcz_btsalign = get_option( 'wcz-cart-bts-align', ecommercecustomizer_library_get_default( 'wcz-cart-bts-align' ) );
     
-    if ( 'back' === get_option( 'wcz-cart-bts-type', woocustomizer_library_get_default( 'wcz-cart-bts-type' ) ) ) {
+    if ( 'back' === get_option( 'wcz-cart-bts-type', ecommercecustomizer_library_get_default( 'wcz-cart-bts-type' ) ) ) {
         if ( wp_get_referer() ) {
-            echo  '<div class="wcz-btsbtn ' . sanitize_html_class( $wcz_btsalign ) . '"><a class="button wcz-bts-btn" onclick="javascript:history.back()">' . get_option( 'wcz-cart-bts-txt', woocustomizer_library_get_default( 'wcz-cart-bts-txt' ) ) . '</a></div>' ;
+            echo  '<div class="wcz-btsbtn ' . sanitize_html_class( $wcz_btsalign ) . '"><a class="button wcz-bts-btn" onclick="javascript:history.back()">' . get_option( 'wcz-cart-bts-txt', ecommercecustomizer_library_get_default( 'wcz-cart-bts-txt' ) ) . '</a></div>' ;
         }
     } else {
-        echo  '<div class="wcz-btsbtn ' . sanitize_html_class( $wcz_btsalign ) . '"><a class="button wcz-bts-btn" href="' . esc_url( $wcz_btslink ) . '">' . get_option( 'wcz-cart-bts-txt', woocustomizer_library_get_default( 'wcz-cart-bts-txt' ) ) . '</a></div>' ;
+        echo  '<div class="wcz-btsbtn ' . sanitize_html_class( $wcz_btsalign ) . '"><a class="button wcz-bts-btn" href="' . esc_url( $wcz_btslink ) . '">' . get_option( 'wcz-cart-bts-txt', ecommercecustomizer_library_get_default( 'wcz-cart-bts-txt' ) ) . '</a></div>' ;
     }
 
 }
@@ -521,20 +521,20 @@ function wcz_remove_product_sku( $enabled )
 // Edit Coupon Code block text
 function wcz_coupon_message()
 {
-    return esc_html( get_option( 'wcz-checkout-coupon-text', woocustomizer_library_get_default( 'wcz-checkout-coupon-text' ) ) ) . ' <a href="#" class="showcoupon">' . esc_html( get_option( 'wcz-checkout-coupon-link-text', woocustomizer_library_get_default( 'wcz-checkout-coupon-link-text' ) ) ) . '</a>';
+    return esc_html( get_option( 'wcz-checkout-coupon-text', ecommercecustomizer_library_get_default( 'wcz-checkout-coupon-text' ) ) ) . ' <a href="#" class="showcoupon">' . esc_html( get_option( 'wcz-checkout-coupon-link-text', ecommercecustomizer_library_get_default( 'wcz-checkout-coupon-link-text' ) ) ) . '</a>';
 }
 
 // Edit Coupon Code Instruction text
 function woocommerce_edit_checkout_coupon_instruction_text( $translated )
 {
-    $translated = str_ireplace( 'If you have a coupon code, please apply it below.', get_option( 'wcz-checkout-coupon-instruction-text', woocustomizer_library_get_default( 'wcz-checkout-coupon-instruction-text' ) ), $translated );
+    $translated = str_ireplace( 'If you have a coupon code, please apply it below.', get_option( 'wcz-checkout-coupon-instruction-text', ecommercecustomizer_library_get_default( 'wcz-checkout-coupon-instruction-text' ) ), $translated );
     return $translated;
 }
 
 // Edit 'Create an account' text
 function woocommerce_edit_createaccount_text( $translated )
 {
-    $translated = str_ireplace( 'Create an account?', get_option( 'wcz-checkout-createaccount-txt', woocustomizer_library_get_default( 'wcz-checkout-createaccount-txt' ) ), $translated );
+    $translated = str_ireplace( 'Create an account?', get_option( 'wcz-checkout-createaccount-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-createaccount-txt' ) ), $translated );
     return $translated;
 }
 
@@ -561,14 +561,14 @@ function wcz_add_soldout_to_shop()
         }
         // var_dump($variations_stock);
         if ( !$variations_stock ) {
-            echo  '<span class="wcz-soldout">' . get_option( 'wcz-shop-soldout-txt', woocustomizer_library_get_default( 'wcz-shop-soldout-txt' ) ) . '</span>' ;
+            echo  '<span class="wcz-soldout">' . get_option( 'wcz-shop-soldout-txt', ecommercecustomizer_library_get_default( 'wcz-shop-soldout-txt' ) ) . '</span>' ;
         }
     }
     
     if ( $product->is_type( 'simple' ) ) {
         // var_dump('Simple Product');
         if ( !$product->is_in_stock() ) {
-            echo  '<span class="wcz-soldout">' . get_option( 'wcz-shop-soldout-txt', woocustomizer_library_get_default( 'wcz-shop-soldout-txt' ) ) . '</span>' ;
+            echo  '<span class="wcz-soldout">' . get_option( 'wcz-shop-soldout-txt', ecommercecustomizer_library_get_default( 'wcz-shop-soldout-txt' ) ) . '</span>' ;
         }
     }
 }
@@ -578,10 +578,10 @@ function wcz_add_new_product_badge()
 {
     $product = wc_get_product( get_the_ID() );
     $wcz_product_created = strtotime( $product->get_date_created() );
-    $wcz_product_days = get_option( 'wcz-shop-new-product-days', woocustomizer_library_get_default( 'wcz-shop-new-product-days' ) );
-    $wcz_badge_txt = get_option( 'wcz-shop-new-product-badge-text', woocustomizer_library_get_default( 'wcz-shop-new-product-badge-text' ) );
+    $wcz_product_days = get_option( 'wcz-shop-new-product-days', ecommercecustomizer_library_get_default( 'wcz-shop-new-product-days' ) );
+    $wcz_badge_txt = get_option( 'wcz-shop-new-product-badge-text', ecommercecustomizer_library_get_default( 'wcz-shop-new-product-badge-text' ) );
     if ( time() - 60 * 60 * 24 * $wcz_product_days < $wcz_product_created ) {
-        echo  '<div class="wcz-new-product-badge wcz-badge-pos-' . sanitize_html_class( get_option( 'wcz-shop-new-badge-pos', woocustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) . '"><span class="">' . esc_html( $wcz_badge_txt ) . '</span></div>' ;
+        echo  '<div class="wcz-new-product-badge wcz-badge-pos-' . sanitize_html_class( get_option( 'wcz-shop-new-badge-pos', ecommercecustomizer_library_get_default( 'wcz-shop-new-badge-pos' ) ) ) . '"><span class="">' . esc_html( $wcz_badge_txt ) . '</span></div>' ;
     }
 }
 
@@ -600,10 +600,10 @@ function wcz_show_stock_amount_loop()
         
         if ( $wcz_pstock <= 3 ) {
             // if stock is low
-            $wcz_stocktxt = esc_html( get_option( 'wcz-shop-stock-lowamnt-txt', woocustomizer_library_get_default( 'wcz-shop-stock-lowamnt-txt' ) ) );
+            $wcz_stocktxt = esc_html( get_option( 'wcz-shop-stock-lowamnt-txt', ecommercecustomizer_library_get_default( 'wcz-shop-stock-lowamnt-txt' ) ) );
             echo  '<div class="wcz-stock-remaining">' . str_ireplace( '[no]', $wcz_pstock, $wcz_stocktxt ) . '</div>' ;
         } else {
-            $wcz_stocktxt = esc_html( get_option( 'wcz-shop-stock-amnt-txt', woocustomizer_library_get_default( 'wcz-shop-stock-amnt-txt' ) ) );
+            $wcz_stocktxt = esc_html( get_option( 'wcz-shop-stock-amnt-txt', ecommercecustomizer_library_get_default( 'wcz-shop-stock-amnt-txt' ) ) );
             echo  '<div class="wcz-stock-remaining">' . str_ireplace( '[no]', $wcz_pstock, $wcz_stocktxt ) . '</div>' ;
         }
     
@@ -613,7 +613,7 @@ function wcz_show_stock_amount_loop()
 
 // Cart Page Attributes
 
-if ( get_option( 'wcz-cart-add-product-info', woocustomizer_library_get_default( 'wcz-cart-add-product-info' ) ) && get_option( 'wcz-cart-add-productinfo-atts', woocustomizer_library_get_default( 'wcz-cart-add-productinfo-atts' ) ) ) {
+if ( get_option( 'wcz-cart-add-product-info', ecommercecustomizer_library_get_default( 'wcz-cart-add-product-info' ) ) && get_option( 'wcz-cart-add-productinfo-atts', ecommercecustomizer_library_get_default( 'wcz-cart-add-productinfo-atts' ) ) ) {
     add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
     add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false' );
 }
@@ -645,7 +645,7 @@ function wcz_add_cart_page_categories( $cart_item, $cart_item_key )
         'Category:',
         'Categories:',
         count( $cat_ids ),
-        'woocustomizer'
+        'ecommercecustomizer'
     ) . ' ',
         '</span></div>'
     ) : '' ) ;
@@ -654,11 +654,11 @@ function wcz_add_cart_page_categories( $cart_item, $cart_item_key )
 function wcz_remove_checkout_fields( $fields )
 {
     
-    if ( get_option( 'wcz-checkout-remove-lastname', woocustomizer_library_get_default( 'wcz-checkout-remove-lastname' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-lastname', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-lastname' ) ) ) {
         $fields['billing']['billing_first_name']['class'][0] = 'form-row-wide';
         $fields['shipping']['shipping_first_name']['class'][0] = 'form-row-wide';
-        $fields['billing']['billing_first_name']['label'] = __( 'Full Name', 'woocustomizer' );
-        $fields['shipping']['shipping_first_name']['label'] = __( 'Full Name', 'woocustomizer' );
+        $fields['billing']['billing_first_name']['label'] = __( 'Full Name', 'ecommercecustomizer' );
+        $fields['shipping']['shipping_first_name']['label'] = __( 'Full Name', 'ecommercecustomizer' );
         unset( $fields['billing']['billing_last_name'] );
         unset( $fields['shipping']['shipping_last_name'] );
         unset( $fields['billing']['billing_last_name']['validate'] );
@@ -666,7 +666,7 @@ function wcz_remove_checkout_fields( $fields )
     }
     
     
-    if ( get_option( 'wcz-checkout-remove-company', woocustomizer_library_get_default( 'wcz-checkout-remove-company' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-company', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-company' ) ) ) {
         unset( $fields['billing']['billing_company'] );
         unset( $fields['shipping']['shipping_company'] );
         unset( $fields['billing']['billing_company']['validate'] );
@@ -674,7 +674,7 @@ function wcz_remove_checkout_fields( $fields )
     }
     
     
-    if ( get_option( 'wcz-checkout-remove-address', woocustomizer_library_get_default( 'wcz-checkout-remove-address' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-address', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-address' ) ) ) {
         unset( $fields['billing']['billing_address_1'] );
         unset( $fields['billing']['billing_address_2'] );
         unset( $fields['shipping']['shipping_address_1'] );
@@ -686,7 +686,7 @@ function wcz_remove_checkout_fields( $fields )
     }
     
     
-    if ( get_option( 'wcz-checkout-remove-towncity', woocustomizer_library_get_default( 'wcz-checkout-remove-towncity' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-towncity', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-towncity' ) ) ) {
         unset( $fields['billing']['billing_city'] );
         unset( $fields['shipping']['shipping_city'] );
         unset( $fields['billing']['billing_city']['validate'] );
@@ -694,7 +694,7 @@ function wcz_remove_checkout_fields( $fields )
     }
     
     
-    if ( get_option( 'wcz-checkout-remove-provstate', woocustomizer_library_get_default( 'wcz-checkout-remove-provstate' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-provstate', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-provstate' ) ) ) {
         unset( $fields['billing']['billing_state'] );
         unset( $fields['billing']['billing_postcode'] );
         unset( $fields['shipping']['shipping_state'] );
@@ -706,7 +706,7 @@ function wcz_remove_checkout_fields( $fields )
     }
     
     
-    if ( get_option( 'wcz-checkout-remove-phone', woocustomizer_library_get_default( 'wcz-checkout-remove-phone' ) ) ) {
+    if ( get_option( 'wcz-checkout-remove-phone', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-phone' ) ) ) {
         unset( $fields['billing']['billing_phone'] );
         unset( $fields['shipping']['shipping_phone'] );
         unset( $fields['billing']['billing_phone']['validate'] );
@@ -717,21 +717,21 @@ function wcz_remove_checkout_fields( $fields )
 }
 
 // Remove Checkout Page Billing Fields
-if ( get_option( 'wcz-checkout-remove-firstname', woocustomizer_library_get_default( 'wcz-checkout-remove-firstname' ) ) || get_option( 'wcz-checkout-remove-firstname', woocustomizer_library_get_default( 'wcz-checkout-remove-firstname' ) ) || get_option( 'wcz-checkout-remove-lastname', woocustomizer_library_get_default( 'wcz-checkout-remove-lastname' ) ) || get_option( 'wcz-checkout-remove-company', woocustomizer_library_get_default( 'wcz-checkout-remove-company' ) ) || get_option( 'wcz-checkout-remove-address', woocustomizer_library_get_default( 'wcz-checkout-remove-address' ) ) || get_option( 'wcz-checkout-remove-citystate', woocustomizer_library_get_default( 'wcz-checkout-remove-citystate' ) ) || get_option( 'wcz-checkout-remove-phone', woocustomizer_library_get_default( 'wcz-checkout-remove-phone' ) ) ) {
+if ( get_option( 'wcz-checkout-remove-firstname', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-firstname' ) ) || get_option( 'wcz-checkout-remove-firstname', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-firstname' ) ) || get_option( 'wcz-checkout-remove-lastname', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-lastname' ) ) || get_option( 'wcz-checkout-remove-company', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-company' ) ) || get_option( 'wcz-checkout-remove-address', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-address' ) ) || get_option( 'wcz-checkout-remove-citystate', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-citystate' ) ) || get_option( 'wcz-checkout-remove-phone', ecommercecustomizer_library_get_default( 'wcz-checkout-remove-phone' ) ) ) {
     add_filter( 'woocommerce_checkout_fields', 'wcz_remove_checkout_fields' );
 }
 // Edit variable product 'choose an option' text
 function wcz_edit_variable_dropdown_args( $args )
 {
-    $args['show_option_none'] = get_option( 'wcz-product-variable-ddo-txt', woocustomizer_library_get_default( 'wcz-product-variable-ddo-txt' ) );
+    $args['show_option_none'] = get_option( 'wcz-product-variable-ddo-txt', ecommercecustomizer_library_get_default( 'wcz-product-variable-ddo-txt' ) );
     return $args;
 }
 
 // Edit Checkout page Order Notes text
 function wcz_edit_checkout_ordernotes_txt( $fields )
 {
-    $fields['order']['order_comments']['label'] = get_option( 'wcz-checkout-ordernotes-label', woocustomizer_library_get_default( 'wcz-checkout-ordernotes-label' ) );
-    $fields['order']['order_comments']['placeholder'] = get_option( 'wcz-checkout-ordernotes-placeholder', woocustomizer_library_get_default( 'wcz-checkout-ordernotes-placeholder' ) );
+    $fields['order']['order_comments']['label'] = get_option( 'wcz-checkout-ordernotes-label', ecommercecustomizer_library_get_default( 'wcz-checkout-ordernotes-label' ) );
+    $fields['order']['order_comments']['placeholder'] = get_option( 'wcz-checkout-ordernotes-placeholder', ecommercecustomizer_library_get_default( 'wcz-checkout-ordernotes-placeholder' ) );
     return $fields;
 }
 
@@ -756,12 +756,12 @@ function wcz_add_notice_banner_wc()
         'br'     => array(),
         'hr'     => array(),
     );
-    $wcz_notice_title = get_option( 'wcz-wc-notice-title', woocustomizer_library_get_default( 'wcz-wc-notice-title' ) );
-    $wcz_notice_text = get_option( 'wcz-wc-notice-text', woocustomizer_library_get_default( 'wcz-wc-notice-text' ) );
-    $wcz_notice_style = get_option( 'wcz-wc-notice-style', woocustomizer_library_get_default( 'wcz-wc-notice-style' ) );
+    $wcz_notice_title = get_option( 'wcz-wc-notice-title', ecommercecustomizer_library_get_default( 'wcz-wc-notice-title' ) );
+    $wcz_notice_text = get_option( 'wcz-wc-notice-text', ecommercecustomizer_library_get_default( 'wcz-wc-notice-text' ) );
+    $wcz_notice_style = get_option( 'wcz-wc-notice-style', ecommercecustomizer_library_get_default( 'wcz-wc-notice-style' ) );
     ?>
     <div class="wcz-banner-notice <?php 
-    echo  ( get_option( 'wcz-wc-notice-design', woocustomizer_library_get_default( 'wcz-wc-notice-design' ) ) ? sanitize_html_class( $wcz_notice_style ) : sanitize_html_class( 'wcz-notice-one' ) ) ;
+    echo  ( get_option( 'wcz-wc-notice-design', ecommercecustomizer_library_get_default( 'wcz-wc-notice-design' ) ) ? sanitize_html_class( $wcz_notice_style ) : sanitize_html_class( 'wcz-notice-one' ) ) ;
     ?>">
         <h4><span><?php 
     esc_html_e( $wcz_notice_title );
@@ -779,7 +779,7 @@ function wcz_add_admin_stats_btn()
     if ( current_user_can( 'manage_options' ) ) {
         ?>
         <button class="wcz-adminstats-btn" title="<?php 
-        esc_attr_e( 'View Product Statistics', 'woocustomizer' );
+        esc_attr_e( 'View Product Statistics', 'ecommercecustomizer' );
         ?>" data-productid="<?php 
         echo  esc_attr( get_the_ID() ) ;
         ?>"></button>
@@ -809,13 +809,13 @@ function wcz_admin_get_product_stats()
     ?></span><span><?php 
     esc_html_e( $product->get_type() );
     ?> <?php 
-    esc_html_e( 'product', 'woocustomizer' );
+    esc_html_e( 'product', 'ecommercecustomizer' );
     ?></span></h4>
 
 			<div class="wcz-adminstats-block">
 				<div class="wcz-adminstats-title">
 					<?php 
-    esc_html_e( 'Total Sales', 'woocustomizer' );
+    esc_html_e( 'Total Sales', 'ecommercecustomizer' );
     ?>
 				</div>
 				<div class="wcz-adminstats-stat">
@@ -843,7 +843,7 @@ function wcz_admin_get_product_stats()
                     
                     if ( $product_id == $product_item_id ) {
                         if ( $loop == 0 ) {
-                            echo  '<h5>' . esc_html__( 'Recent Sales', 'woocustomizer' ) . '</h5>' ;
+                            echo  '<h5>' . esc_html__( 'Recent Sales', 'ecommercecustomizer' ) . '</h5>' ;
                         }
                         ?>
 								<div class="wcz-adminstats-block">
@@ -870,7 +870,7 @@ function wcz_admin_get_product_stats()
 										<a href="<?php 
                         echo  esc_url( $order->get_edit_order_url() ) ;
                         ?>"><?php 
-                        esc_html_e( 'View Order', 'woocustomizer' );
+                        esc_html_e( 'View Order', 'ecommercecustomizer' );
                         ?></a>
 									</div>
 								</div>
@@ -892,7 +892,7 @@ function wcz_admin_get_product_stats()
 				<a href="<?php 
     echo  esc_url( get_edit_post_link( $product_id ) ) ;
     ?>"><?php 
-    esc_html_e( 'Edit Product', 'woocustomizer' );
+    esc_html_e( 'Edit Product', 'ecommercecustomizer' );
     ?></a>
 			</div>
 		</div>
@@ -909,11 +909,11 @@ function wcz_admin_get_product_stats()
  */
 function wcz_custom_per_product_settings_tab( $tabs )
 {
-    if ( empty(get_option( 'wcz-add-price-prefix', woocustomizer_library_get_default( 'wcz-add-price-prefix' ) )) && empty(get_option( 'wcz-add-price-suffix', woocustomizer_library_get_default( 'wcz-add-price-suffix' ) )) && empty(get_option( 'wcz-add-shop-button', woocustomizer_library_get_default( 'wcz-add-shop-button' ) )) ) {
+    if ( empty(get_option( 'wcz-add-price-prefix', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix' ) )) && empty(get_option( 'wcz-add-price-suffix', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix' ) )) && empty(get_option( 'wcz-add-shop-button', ecommercecustomizer_library_get_default( 'wcz-add-shop-button' ) )) ) {
         return $tabs;
     }
     // Only continue IF Product Level Pages option is selected on WCZ Settings Page
-    $tabs['wcz_woocustomizer_tab'] = array(
+    $tabs['wcz_ecommercecustomizer_tab'] = array(
         'label'  => 'StoreCustomizer',
         'target' => 'wcz_pps_product_data',
     );
@@ -928,50 +928,50 @@ function wcz_custom_per_product_settings()
 {
     // Only continue IF Product Level Pages option is selected on WCZ Settings Page
     echo  '<div id="wcz_pps_product_data" class="panel woocommerce_options_panel hidden">' ;
-    if ( get_option( 'wcz-add-price-prefix', woocustomizer_library_get_default( 'wcz-add-price-prefix' ) ) ) {
+    if ( get_option( 'wcz-add-price-prefix', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix' ) ) ) {
         woocommerce_wp_text_input( array(
             'id'          => 'wcz_pps_price_prefix',
             'value'       => ( get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) ? get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) : '' ),
             'type'        => 'text',
-            'label'       => __( 'Price Prefix', 'woocustomizer' ),
-            'placeholder' => get_option( 'wcz-add-price-prefix-txt', woocustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ),
+            'label'       => __( 'Price Prefix', 'ecommercecustomizer' ),
+            'placeholder' => get_option( 'wcz-add-price-prefix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ),
             'desc_tip'    => true,
-            'description' => __( 'Override the default price prefix set in the Customizer', 'woocustomizer' ),
+            'description' => __( 'Override the default price prefix set in the Customizer', 'ecommercecustomizer' ),
             'default'     => 0,
         ) );
     }
-    if ( get_option( 'wcz-add-price-suffix', woocustomizer_library_get_default( 'wcz-add-price-suffix' ) ) ) {
+    if ( get_option( 'wcz-add-price-suffix', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix' ) ) ) {
         woocommerce_wp_text_input( array(
             'id'          => 'wcz_pps_price_suffix',
             'value'       => ( get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ? get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) : '' ),
             'type'        => 'text',
-            'label'       => __( 'Price Suffix', 'woocustomizer' ),
-            'placeholder' => get_option( 'wcz-add-price-suffix-txt', woocustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ),
+            'label'       => __( 'Price Suffix', 'ecommercecustomizer' ),
+            'placeholder' => get_option( 'wcz-add-price-suffix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ),
             'desc_tip'    => true,
-            'description' => __( 'Override the default price suffix set in the Customizer', 'woocustomizer' ),
+            'description' => __( 'Override the default price suffix set in the Customizer', 'ecommercecustomizer' ),
             'default'     => 0,
         ) );
     }
     
-    if ( get_option( 'wcz-add-shop-button', woocustomizer_library_get_default( 'wcz-add-shop-button' ) ) ) {
+    if ( get_option( 'wcz-add-shop-button', ecommercecustomizer_library_get_default( 'wcz-add-shop-button' ) ) ) {
         woocommerce_wp_text_input( array(
             'id'          => 'wcz_pcs_buttontxt',
             'value'       => ( get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) ? get_post_meta( get_the_ID(), 'wcz_pcs_buttontxt', true ) : '' ),
             'type'        => 'text',
-            'label'       => __( '\'Continue Shopping\' text', 'woocustomizer' ),
-            'placeholder' => get_option( 'wcz-add-shop-button-txt', woocustomizer_library_get_default( 'wcz-add-shop-button-txt' ) ),
+            'label'       => __( '\'Continue Shopping\' text', 'ecommercecustomizer' ),
+            'placeholder' => get_option( 'wcz-add-shop-button-txt', ecommercecustomizer_library_get_default( 'wcz-add-shop-button-txt' ) ),
             'desc_tip'    => true,
-            'description' => __( 'Override the default \'Continue Shopping\' button text set in the Customizer', 'woocustomizer' ),
+            'description' => __( 'Override the default \'Continue Shopping\' button text set in the Customizer', 'ecommercecustomizer' ),
             'default'     => 0,
         ) );
         woocommerce_wp_text_input( array(
             'id'          => 'wcz_pcs_buttonurl',
             'value'       => ( get_post_meta( get_the_ID(), 'wcz_pcs_buttonurl', true ) ? get_post_meta( get_the_ID(), 'wcz_pcs_buttonurl', true ) : '' ),
             'type'        => 'text',
-            'label'       => __( '\'Continue Shopping\' url', 'woocustomizer' ),
-            'placeholder' => get_option( 'wcz-add-shop-button-url', woocustomizer_library_get_default( 'wcz-add-shop-button-url' ) ),
+            'label'       => __( '\'Continue Shopping\' url', 'ecommercecustomizer' ),
+            'placeholder' => get_option( 'wcz-add-shop-button-url', ecommercecustomizer_library_get_default( 'wcz-add-shop-button-url' ) ),
             'desc_tip'    => true,
-            'description' => __( 'Override the default \'Continue Shopping\' button url set in the Customizer', 'woocustomizer' ),
+            'description' => __( 'Override the default \'Continue Shopping\' button url set in the Customizer', 'ecommercecustomizer' ),
             'default'     => 0,
         ) );
     }
@@ -1004,31 +1004,31 @@ add_action(
 function wcz_wc_extras()
 {
     // Remove Breadcrumbs
-    if ( is_woocommerce() && get_option( 'wcz-wc-remove-breadcrumbs', woocustomizer_library_get_default( 'wcz-wc-remove-breadcrumbs' ) ) ) {
+    if ( is_woocommerce() && get_option( 'wcz-wc-remove-breadcrumbs', ecommercecustomizer_library_get_default( 'wcz-wc-remove-breadcrumbs' ) ) ) {
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb' );
     }
     // Remove Product Gallery Zoom
-    if ( is_woocommerce() && get_option( 'wcz-remove-product-zoom', woocustomizer_library_get_default( 'wcz-remove-product-zoom' ) ) ) {
+    if ( is_woocommerce() && get_option( 'wcz-remove-product-zoom', ecommercecustomizer_library_get_default( 'wcz-remove-product-zoom' ) ) ) {
         remove_theme_support( 'wc-product-gallery-zoom' );
     }
     // Remove Product Gallery Lightbox
-    if ( is_woocommerce() && get_option( 'wcz-remove-product-lightbox', woocustomizer_library_get_default( 'wcz-remove-product-lightbox' ) ) ) {
+    if ( is_woocommerce() && get_option( 'wcz-remove-product-lightbox', ecommercecustomizer_library_get_default( 'wcz-remove-product-lightbox' ) ) ) {
         remove_theme_support( 'wc-product-gallery-lightbox' );
     }
     // Remove Product Gallery Slider
-    if ( is_woocommerce() && get_option( 'wcz-remove-product-slider', woocustomizer_library_get_default( 'wcz-remove-product-slider' ) ) ) {
+    if ( is_woocommerce() && get_option( 'wcz-remove-product-slider', ecommercecustomizer_library_get_default( 'wcz-remove-product-slider' ) ) ) {
         remove_theme_support( 'wc-product-gallery-slider' );
     }
     // Edit Product Tabs
     add_filter( 'woocommerce_product_tabs', 'wcz_product_tabs', 98 );
-    if ( 'wcz-wcproduct-desc-tab-edit' == get_option( 'wcz-wcproduct-desc-tab', woocustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
+    if ( 'wcz-wcproduct-desc-tab-edit' == get_option( 'wcz-wcproduct-desc-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
         add_filter( 'woocommerce_product_description_heading', 'wcz_rename_desctab_headings' );
     }
-    if ( 'wcz-wcproduct-addinfo-tab-edit' == get_option( 'wcz-wcproduct-addinfo-tab', woocustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
+    if ( 'wcz-wcproduct-addinfo-tab-edit' == get_option( 'wcz-wcproduct-addinfo-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
         add_filter( 'woocommerce_product_additional_information_heading', 'wcz_rename_addinfotab_headings' );
     }
     // Rename Account Page Titles/Endpoints
-    if ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', woocustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
+    if ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', ecommercecustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
         add_filter(
             'woocommerce_endpoint_orders_title',
             'wcz_account_endpoint_title',
@@ -1036,7 +1036,7 @@ function wcz_wc_extras()
             2
         );
     }
-    if ( 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', woocustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
+    if ( 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', ecommercecustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
         add_filter(
             'woocommerce_endpoint_downloads_title',
             'wcz_account_endpoint_title',
@@ -1044,7 +1044,7 @@ function wcz_wc_extras()
             2
         );
     }
-    if ( 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', woocustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
+    if ( 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', ecommercecustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
         add_filter(
             'woocommerce_endpoint_edit-address_title',
             'wcz_account_endpoint_title',
@@ -1052,7 +1052,7 @@ function wcz_wc_extras()
             2
         );
     }
-    if ( 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', woocustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
+    if ( 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', ecommercecustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
         add_filter(
             'woocommerce_endpoint_edit-account_title',
             'wcz_account_endpoint_title',
@@ -1061,7 +1061,7 @@ function wcz_wc_extras()
         );
     }
     // Rename Account Page Titles/Endpoints
-    if ( get_option( 'wcz-add-price-prefix', woocustomizer_library_get_default( 'wcz-add-price-prefix' ) ) || get_option( 'wcz-add-price-suffix', woocustomizer_library_get_default( 'wcz-add-price-suffix' ) ) || get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) || get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ) {
+    if ( get_option( 'wcz-add-price-prefix', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix' ) ) || get_option( 'wcz-add-price-suffix', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix' ) ) || get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) || get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ) {
         add_filter(
             'woocommerce_get_price_html',
             'wcz_add_price_prefix_suffix',
@@ -1069,43 +1069,43 @@ function wcz_wc_extras()
             2
         );
     }
-    // if ( get_option( 'wcz-add-price-suffix', woocustomizer_library_get_default( 'wcz-add-price-suffix' ) ) || get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ) {
+    // if ( get_option( 'wcz-add-price-suffix', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix' ) ) || get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ) {
     //     add_filter( 'woocommerce_get_price_suffix', 'wcz_product_price_suffix', 99, 4 );
     //     add_filter( 'woocommerce_get_price_html', 'wcz_product_price_suffix', 99, 4 );
     // }
-    if ( is_product() && get_option( 'wcz-add-product-long-desc', woocustomizer_library_get_default( 'wcz-add-product-long-desc' ) ) ) {
+    if ( is_product() && get_option( 'wcz-add-product-long-desc', ecommercecustomizer_library_get_default( 'wcz-add-product-long-desc' ) ) ) {
         add_action( 'woocommerce_after_single_product_summary', 'wcz_add_product_long_desc', 10 );
     }
-    if ( is_product() && get_option( 'wcz-add-product-addinfo', woocustomizer_library_get_default( 'wcz-add-product-addinfo' ) ) ) {
+    if ( is_product() && get_option( 'wcz-add-product-addinfo', ecommercecustomizer_library_get_default( 'wcz-add-product-addinfo' ) ) ) {
         add_action( 'woocommerce_after_single_product_summary', 'wcz_add_product_addinfo', 10 );
     }
-    if ( is_product() && get_option( 'wcz-add-product-reviews', woocustomizer_library_get_default( 'wcz-add-product-reviews' ) ) ) {
+    if ( is_product() && get_option( 'wcz-add-product-reviews', ecommercecustomizer_library_get_default( 'wcz-add-product-reviews' ) ) ) {
         add_action( 'woocommerce_after_single_product_summary', 'wcz_add_product_reviews', 10 );
     }
-    if ( is_product() && get_option( 'wcz-product-show-unitsold', woocustomizer_library_get_default( 'wcz-product-show-unitsold' ) ) ) {
+    if ( is_product() && get_option( 'wcz-product-show-unitsold', ecommercecustomizer_library_get_default( 'wcz-product-show-unitsold' ) ) ) {
         add_action( 'woocommerce_single_product_summary', 'wcz_product_amount_sold', 11 );
     }
     // Product Recommendations Title
     
-    if ( is_woocommerce() && 'wcz-wcproduct-recomm-edit' == get_option( 'wcz-wcproduct-recomm', woocustomizer_library_get_default( 'wcz-wcproduct-recomm' ) ) ) {
+    if ( is_woocommerce() && 'wcz-wcproduct-recomm-edit' == get_option( 'wcz-wcproduct-recomm', ecommercecustomizer_library_get_default( 'wcz-wcproduct-recomm' ) ) ) {
         add_filter( 'gettext', 'wcz_product_recomtxt' );
         add_filter( 'ngettext', 'wcz_product_recomtxt' );
     }
     
     // Remove Related Products
     
-    if ( is_woocommerce() && 'wcz-wcproduct-related-remove' == get_option( 'wcz-wcproduct-related', woocustomizer_library_get_default( 'wcz-wcproduct-related' ) ) ) {
+    if ( is_woocommerce() && 'wcz-wcproduct-related-remove' == get_option( 'wcz-wcproduct-related', ecommercecustomizer_library_get_default( 'wcz-wcproduct-related' ) ) ) {
         remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 1 );
-    } elseif ( is_woocommerce() && 'wcz-wcproduct-related-edit' == get_option( 'wcz-wcproduct-related', woocustomizer_library_get_default( 'wcz-wcproduct-related' ) ) ) {
+    } elseif ( is_woocommerce() && 'wcz-wcproduct-related-edit' == get_option( 'wcz-wcproduct-related', ecommercecustomizer_library_get_default( 'wcz-wcproduct-related' ) ) ) {
         add_filter( 'gettext', 'wcz_product_relatedtxt' );
         add_filter( 'ngettext', 'wcz_product_relatedtxt' );
     }
     
-    if ( is_cart() && get_option( 'wcz-cart-add-custom-text', woocustomizer_library_get_default( 'wcz-cart-add-custom-text' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-add-custom-text', ecommercecustomizer_library_get_default( 'wcz-cart-add-custom-text' ) ) ) {
         add_action( 'woocommerce_cart_is_empty', 'wcz_add_textto_empty_cart_page' );
     }
     
-    if ( is_cart() && get_option( 'wcz-cart-edit-rts', woocustomizer_library_get_default( 'wcz-cart-edit-rts' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-edit-rts', ecommercecustomizer_library_get_default( 'wcz-cart-edit-rts' ) ) ) {
         add_filter(
             'gettext',
             'wcz_edit_empty_cart_btn_text',
@@ -1115,33 +1115,33 @@ function wcz_wc_extras()
         add_filter( 'woocommerce_return_to_shop_redirect', 'wcz_edit_empty_cart_btn_url' );
     }
     
-    if ( is_cart() && get_option( 'wcz-cart-remove-coupons', woocustomizer_library_get_default( 'wcz-cart-remove-coupons' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-remove-coupons', ecommercecustomizer_library_get_default( 'wcz-cart-remove-coupons' ) ) ) {
         add_filter( 'woocommerce_coupons_enabled', 'wcz_remove_cart_coupons' );
     }
     // Move Cross Sells section
     
-    if ( get_option( 'wcz-cart-remove-cross-sells', woocustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) && get_option( 'wcz-cart-move-crollsells-below', woocustomizer_library_get_default( 'wcz-cart-move-crollsells-below' ) ) || get_option( 'wcz-cart-remove-cross-sells', woocustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) ) {
+    if ( get_option( 'wcz-cart-remove-cross-sells', ecommercecustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) && get_option( 'wcz-cart-move-crollsells-below', ecommercecustomizer_library_get_default( 'wcz-cart-move-crollsells-below' ) ) || get_option( 'wcz-cart-remove-cross-sells', ecommercecustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) ) {
         remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-    } elseif ( !get_option( 'wcz-cart-remove-cross-sells', woocustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) && get_option( 'wcz-cart-move-crollsells-below', woocustomizer_library_get_default( 'wcz-cart-move-crollsells-below' ) ) ) {
+    } elseif ( !get_option( 'wcz-cart-remove-cross-sells', ecommercecustomizer_library_get_default( 'wcz-cart-remove-cross-sells' ) ) && get_option( 'wcz-cart-move-crollsells-below', ecommercecustomizer_library_get_default( 'wcz-cart-move-crollsells-below' ) ) ) {
         remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
         add_action( 'woocommerce_after_cart', 'woocommerce_cross_sell_display' );
     }
     
     // Cart Crosss Sells Title - Cart Page
     
-    if ( is_cart() && 'wcz-wccart-recomm-edit' == get_option( 'wcz-wccart-recomm', woocustomizer_library_get_default( 'wcz-wccart-recomm' ) ) ) {
+    if ( is_cart() && 'wcz-wccart-recomm-edit' == get_option( 'wcz-wccart-recomm', ecommercecustomizer_library_get_default( 'wcz-wccart-recomm' ) ) ) {
         add_filter( 'gettext', 'wcz_cart_recomtxt' );
         add_filter( 'ngettext', 'wcz_cart_recomtxt' );
     }
     
     // Cart Totals Title - Cart Page
     
-    if ( is_cart() && 'wcz-wccart-totals-edit' == get_option( 'wcz-wccart-totals', woocustomizer_library_get_default( 'wcz-wccart-totals' ) ) ) {
+    if ( is_cart() && 'wcz-wccart-totals-edit' == get_option( 'wcz-wccart-totals', ecommercecustomizer_library_get_default( 'wcz-wccart-totals' ) ) ) {
         add_filter( 'gettext', 'wcz_cart_totalstxt' );
         add_filter( 'ngettext', 'wcz_cart_totalstxt' );
     }
     
-    if ( is_cart() && get_option( 'wcz-cart-disable-cart-quantity', woocustomizer_library_get_default( 'wcz-cart-disable-cart-quantity' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-disable-cart-quantity', ecommercecustomizer_library_get_default( 'wcz-cart-disable-cart-quantity' ) ) ) {
         add_filter(
             'woocommerce_cart_item_quantity',
             'wcz_disable_cart_item_quantity',
@@ -1149,13 +1149,13 @@ function wcz_wc_extras()
             3
         );
     }
-    if ( is_cart() && get_option( 'wcz-cart-remove-links', woocustomizer_library_get_default( 'wcz-cart-remove-links' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-remove-links', ecommercecustomizer_library_get_default( 'wcz-cart-remove-links' ) ) ) {
         add_filter( 'woocommerce_cart_item_permalink', '__return_null' );
     }
-    if ( is_checkout() && get_option( 'wcz-checkout-add-img', woocustomizer_library_get_default( 'wcz-checkout-add-img' ) ) ) {
+    if ( is_checkout() && get_option( 'wcz-checkout-add-img', ecommercecustomizer_library_get_default( 'wcz-checkout-add-img' ) ) ) {
         add_action( 'woocommerce_after_checkout_form', 'wcz_checkout_custom_secureimg' );
     }
-    if ( is_checkout() && get_option( 'wcz-checkout-edit-headings', woocustomizer_library_get_default( 'wcz-checkout-edit-headings' ) ) ) {
+    if ( is_checkout() && get_option( 'wcz-checkout-edit-headings', ecommercecustomizer_library_get_default( 'wcz-checkout-edit-headings' ) ) ) {
         add_filter(
             'gettext',
             'wcz_edit_checkout_page_headings',
@@ -1163,7 +1163,7 @@ function wcz_wc_extras()
             3
         );
     }
-    if ( is_cart() && get_option( 'wcz-cart-show-discamount', woocustomizer_library_get_default( 'wcz-cart-show-discamount' ) ) ) {
+    if ( is_cart() && get_option( 'wcz-cart-show-discamount', ecommercecustomizer_library_get_default( 'wcz-cart-show-discamount' ) ) ) {
         add_action( 'woocommerce_cart_totals_after_order_total', 'wcz_show_discount_amount_saved', 999 );
     }
 }
@@ -1176,24 +1176,24 @@ add_action( 'template_redirect', 'wcz_wc_extras', 10 );
 function wcz_product_tabs( $tabs )
 {
     
-    if ( 'wcz-wcproduct-desc-tab-remove' == get_option( 'wcz-wcproduct-desc-tab', woocustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
+    if ( 'wcz-wcproduct-desc-tab-remove' == get_option( 'wcz-wcproduct-desc-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
         unset( $tabs['description'] );
-    } elseif ( 'wcz-wcproduct-desc-tab-edit' == get_option( 'wcz-wcproduct-desc-tab', woocustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
-        $tabs['description']['title'] = esc_html( get_option( 'wcz-wcproduct-desc-tab-title', woocustomizer_library_get_default( 'wcz-wcproduct-desc-tab-title' ) ) );
+    } elseif ( 'wcz-wcproduct-desc-tab-edit' == get_option( 'wcz-wcproduct-desc-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-desc-tab' ) ) ) {
+        $tabs['description']['title'] = esc_html( get_option( 'wcz-wcproduct-desc-tab-title', ecommercecustomizer_library_get_default( 'wcz-wcproduct-desc-tab-title' ) ) );
     }
     
     
-    if ( 'wcz-wcproduct-addinfo-tab-remove' == get_option( 'wcz-wcproduct-addinfo-tab', woocustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
+    if ( 'wcz-wcproduct-addinfo-tab-remove' == get_option( 'wcz-wcproduct-addinfo-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
         unset( $tabs['additional_information'] );
-    } elseif ( 'wcz-wcproduct-addinfo-tab-edit' == get_option( 'wcz-wcproduct-addinfo-tab', woocustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
-        $tabs['additional_information']['title'] = esc_html( get_option( 'wcz-wcproduct-addinfo-tab-title', woocustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab-title' ) ) );
+    } elseif ( 'wcz-wcproduct-addinfo-tab-edit' == get_option( 'wcz-wcproduct-addinfo-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab' ) ) ) {
+        $tabs['additional_information']['title'] = esc_html( get_option( 'wcz-wcproduct-addinfo-tab-title', ecommercecustomizer_library_get_default( 'wcz-wcproduct-addinfo-tab-title' ) ) );
     }
     
     
-    if ( 'wcz-wcproduct-reviews-tab-remove' == get_option( 'wcz-wcproduct-reviews-tab', woocustomizer_library_get_default( 'wcz-wcproduct-reviews-tab' ) ) ) {
+    if ( 'wcz-wcproduct-reviews-tab-remove' == get_option( 'wcz-wcproduct-reviews-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-reviews-tab' ) ) ) {
         unset( $tabs['reviews'] );
-    } elseif ( 'wcz-wcproduct-reviews-tab-edit' == get_option( 'wcz-wcproduct-reviews-tab', woocustomizer_library_get_default( 'wcz-wcproduct-reviews-tab' ) ) ) {
-        $tabs['reviews']['title'] = esc_html( get_option( 'wcz-wcproduct-reviews-tab-title', woocustomizer_library_get_default( 'wcz-wcproduct-reviews-tab-title' ) ) );
+    } elseif ( 'wcz-wcproduct-reviews-tab-edit' == get_option( 'wcz-wcproduct-reviews-tab', ecommercecustomizer_library_get_default( 'wcz-wcproduct-reviews-tab' ) ) ) {
+        $tabs['reviews']['title'] = esc_html( get_option( 'wcz-wcproduct-reviews-tab-title', ecommercecustomizer_library_get_default( 'wcz-wcproduct-reviews-tab-title' ) ) );
     }
     
     return $tabs;
@@ -1201,36 +1201,36 @@ function wcz_product_tabs( $tabs )
 
 function wcz_rename_desctab_headings()
 {
-    return esc_html( get_option( 'wcz-wcproduct-desc-head', woocustomizer_library_get_default( 'wcz-wcproduct-desc-head' ) ) );
+    return esc_html( get_option( 'wcz-wcproduct-desc-head', ecommercecustomizer_library_get_default( 'wcz-wcproduct-desc-head' ) ) );
 }
 
 function wcz_rename_addinfotab_headings()
 {
-    return esc_html( get_option( 'wcz-wcproduct-addinfo-head', woocustomizer_library_get_default( 'wcz-wcproduct-addinfo-head' ) ) );
+    return esc_html( get_option( 'wcz-wcproduct-addinfo-head', ecommercecustomizer_library_get_default( 'wcz-wcproduct-addinfo-head' ) ) );
 }
 
 function wcz_add_price_prefix_suffix( $price, $product )
 {
     $wcz_price_prefix = '';
     $wcz_price_suffix = '';
-    if ( get_option( 'wcz-add-price-prefix', woocustomizer_library_get_default( 'wcz-add-price-prefix' ) ) ) {
+    if ( get_option( 'wcz-add-price-prefix', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix' ) ) ) {
         
-        if ( get_option( 'wcz-add-price-prefix-shop', woocustomizer_library_get_default( 'wcz-add-price-prefix-shop' ) ) && (is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart()) ) {
-            $wcz_price_prefix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) ? '<small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) . '</small> ' : '<small>' . get_option( 'wcz-add-price-prefix-txt', woocustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ) . '</small> ' );
+        if ( get_option( 'wcz-add-price-prefix-shop', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix-shop' ) ) && (is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart()) ) {
+            $wcz_price_prefix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) ? '<small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) . '</small> ' : '<small>' . get_option( 'wcz-add-price-prefix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ) . '</small> ' );
         } else {
             if ( is_product() ) {
-                $wcz_price_prefix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) ? '<small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) . '</small> ' : '<small>' . get_option( 'wcz-add-price-prefix-txt', woocustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ) . '</small> ' );
+                $wcz_price_prefix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) ? '<small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_prefix', true ) . '</small> ' : '<small>' . get_option( 'wcz-add-price-prefix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-prefix-txt' ) ) . '</small> ' );
             }
         }
     
     }
-    if ( get_option( 'wcz-add-price-suffix', woocustomizer_library_get_default( 'wcz-add-price-suffix' ) ) ) {
+    if ( get_option( 'wcz-add-price-suffix', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix' ) ) ) {
         
-        if ( get_option( 'wcz-add-price-suffix-shop', woocustomizer_library_get_default( 'wcz-add-price-suffix-shop' ) ) && (is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart()) ) {
-            $wcz_price_suffix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ? ' <small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) . '</small> ' : ' <small>' . get_option( 'wcz-add-price-suffix-txt', woocustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ) . '</small> ' );
+        if ( get_option( 'wcz-add-price-suffix-shop', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix-shop' ) ) && (is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart()) ) {
+            $wcz_price_suffix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ? ' <small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) . '</small> ' : ' <small>' . get_option( 'wcz-add-price-suffix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ) . '</small> ' );
         } else {
             if ( is_product() ) {
-                $wcz_price_suffix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ? ' <small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) . '</small> ' : ' <small>' . get_option( 'wcz-add-price-suffix-txt', woocustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ) . '</small> ' );
+                $wcz_price_suffix = ( get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) ? ' <small>' . get_post_meta( get_the_ID(), 'wcz_pps_price_suffix', true ) . '</small> ' : ' <small>' . get_option( 'wcz-add-price-suffix-txt', ecommercecustomizer_library_get_default( 'wcz-add-price-suffix-txt' ) ) . '</small> ' );
             }
         }
     
@@ -1247,14 +1247,14 @@ function wcz_add_price_prefix_suffix( $price, $product )
 
 function wcz_add_product_long_desc()
 {
-    $wcz_longdesc_mwidth = get_option( 'wcz-longdesc-maxwidth', woocustomizer_library_get_default( 'wcz-longdesc-maxwidth' ) );
-    $wcz_longdesc_center = get_option( 'wcz-longdesc-center', woocustomizer_library_get_default( 'wcz-longdesc-center' ) );
-    $wcz_longdesc_bd = get_option( 'wcz-longdesc-botdiv', woocustomizer_library_get_default( 'wcz-longdesc-botdiv' ) );
+    $wcz_longdesc_mwidth = get_option( 'wcz-longdesc-maxwidth', ecommercecustomizer_library_get_default( 'wcz-longdesc-maxwidth' ) );
+    $wcz_longdesc_center = get_option( 'wcz-longdesc-center', ecommercecustomizer_library_get_default( 'wcz-longdesc-center' ) );
+    $wcz_longdesc_bd = get_option( 'wcz-longdesc-botdiv', ecommercecustomizer_library_get_default( 'wcz-longdesc-botdiv' ) );
     ?>
 	<div class="wcz-product-long-desc <?php 
     echo  ( $wcz_longdesc_center ? 'center' : '' ) ;
     ?> <?php 
-    echo  sanitize_html_class( 'wcz-longdescdiv-' . get_option( 'wcz-longdesc-divider', woocustomizer_library_get_default( 'wcz-longdesc-divider' ) ) ) ;
+    echo  sanitize_html_class( 'wcz-longdescdiv-' . get_option( 'wcz-longdesc-divider', ecommercecustomizer_library_get_default( 'wcz-longdesc-divider' ) ) ) ;
     ?> <?php 
     echo  ( $wcz_longdesc_bd ? 'bot-divider' : '' ) ;
     ?>">
@@ -1271,11 +1271,11 @@ function wcz_add_product_long_desc()
 
 function wcz_add_product_reviews()
 {
-    $wcz_reviews_mwidth = get_option( 'wcz-reviews-maxwidth', woocustomizer_library_get_default( 'wcz-reviews-maxwidth' ) );
-    $wcz_reviews_bd = get_option( 'wcz-reviews-botdiv', woocustomizer_library_get_default( 'wcz-reviews-botdiv' ) );
+    $wcz_reviews_mwidth = get_option( 'wcz-reviews-maxwidth', ecommercecustomizer_library_get_default( 'wcz-reviews-maxwidth' ) );
+    $wcz_reviews_bd = get_option( 'wcz-reviews-botdiv', ecommercecustomizer_library_get_default( 'wcz-reviews-botdiv' ) );
     ?>
 	<div class="wcz-product-reviews <?php 
-    echo  sanitize_html_class( 'wcz-reviewsdiv-' . get_option( 'wcz-reviews-divider', woocustomizer_library_get_default( 'wcz-reviews-divider' ) ) ) ;
+    echo  sanitize_html_class( 'wcz-reviewsdiv-' . get_option( 'wcz-reviews-divider', ecommercecustomizer_library_get_default( 'wcz-reviews-divider' ) ) ) ;
     ?> <?php 
     echo  ( $wcz_reviews_bd ? 'bot-divider' : '' ) ;
     ?>">
@@ -1292,11 +1292,11 @@ function wcz_add_product_reviews()
 
 function wcz_add_product_addinfo()
 {
-    $wcz_addinfo_mwidth = get_option( 'wcz-addinfo-maxwidth', woocustomizer_library_get_default( 'wcz-addinfo-maxwidth' ) );
-    $wcz_addinfo_bd = get_option( 'wcz-addinfo-botdiv', woocustomizer_library_get_default( 'wcz-addinfo-botdiv' ) );
+    $wcz_addinfo_mwidth = get_option( 'wcz-addinfo-maxwidth', ecommercecustomizer_library_get_default( 'wcz-addinfo-maxwidth' ) );
+    $wcz_addinfo_bd = get_option( 'wcz-addinfo-botdiv', ecommercecustomizer_library_get_default( 'wcz-addinfo-botdiv' ) );
     ?>
 	<div class="wcz-product-addinfo <?php 
-    echo  sanitize_html_class( 'wcz-addinfodiv-' . get_option( 'wcz-addinfo-divider', woocustomizer_library_get_default( 'wcz-addinfo-divider' ) ) ) ;
+    echo  sanitize_html_class( 'wcz-addinfodiv-' . get_option( 'wcz-addinfo-divider', ecommercecustomizer_library_get_default( 'wcz-addinfo-divider' ) ) ) ;
     ?> <?php 
     echo  ( $wcz_addinfo_bd ? 'bot-divider' : '' ) ;
     ?>">
@@ -1313,7 +1313,7 @@ function wcz_add_product_addinfo()
 
 function wcz_add_textto_empty_cart_page()
 {
-    echo  '<div class="wcz-cart-empty-txt">' . esc_html( get_option( 'wcz-cart-empty-txt', woocustomizer_library_get_default( 'wcz-cart-empty-txt' ) ) ) . '</div>' ;
+    echo  '<div class="wcz-cart-empty-txt">' . esc_html( get_option( 'wcz-cart-empty-txt', ecommercecustomizer_library_get_default( 'wcz-cart-empty-txt' ) ) ) . '</div>' ;
 }
 
 function wcz_remove_cart_coupons( $enabled )
@@ -1334,20 +1334,20 @@ function wcz_checkout_custom_secureimg()
 {
     ?>
 	<div class="wcz-checkout-secureimg <?php 
-    echo  ( get_option( 'wcz-checkout-img-center', woocustomizer_library_get_default( 'wcz-checkout-img-center' ) ) ? sanitize_html_class( 'wcz-checkout-centerimg' ) : '' ) ;
+    echo  ( get_option( 'wcz-checkout-img-center', ecommercecustomizer_library_get_default( 'wcz-checkout-img-center' ) ) ? sanitize_html_class( 'wcz-checkout-centerimg' ) : '' ) ;
     ?>">
 		<?php 
     
-    if ( get_option( 'wcz-checkout-img', woocustomizer_library_get_default( 'wcz-checkout-img' ) ) ) {
+    if ( get_option( 'wcz-checkout-img', ecommercecustomizer_library_get_default( 'wcz-checkout-img' ) ) ) {
         ?>
 			<img src="<?php 
-        echo  esc_url( get_option( 'wcz-checkout-img', woocustomizer_library_get_default( 'wcz-checkout-img' ) ) ) ;
+        echo  esc_url( get_option( 'wcz-checkout-img', ecommercecustomizer_library_get_default( 'wcz-checkout-img' ) ) ) ;
         ?>" />
 		<?php 
     } else {
         ?>
 			<?php 
-        esc_html_e( 'Please Upload an Image', 'woocustomizer' );
+        esc_html_e( 'Please Upload an Image', 'ecommercecustomizer' );
         ?>
 		<?php 
     }
@@ -1363,7 +1363,7 @@ function wcz_checkout_text_below_placeorder()
 	<div class="wcz-checkout-potxt">
 		<small>
 			<?php 
-    echo  esc_html( get_option( 'wcz-checkout-po-txt', woocustomizer_library_get_default( 'wcz-checkout-po-txt' ) ) ) ;
+    echo  esc_html( get_option( 'wcz-checkout-po-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-po-txt' ) ) ) ;
     ?>
 		</small>
 	</div>
@@ -1373,7 +1373,7 @@ function wcz_checkout_text_below_placeorder()
 function wcz_product_amount_sold()
 {
     $wcz_amntsold = get_post_meta( get_the_ID(), 'total_sales', true );
-    $wcz_stocktxt = esc_html( get_option( 'wcz-product-unitsold-txt', woocustomizer_library_get_default( 'wcz-product-unitsold-txt' ) ) );
+    $wcz_stocktxt = esc_html( get_option( 'wcz-product-unitsold-txt', ecommercecustomizer_library_get_default( 'wcz-product-unitsold-txt' ) ) );
     if ( $wcz_amntsold ) {
         echo  '<div class="wcz-stock-sold">' . str_ireplace( '[no]', $wcz_amntsold, $wcz_stocktxt ) . '</div>' ;
     }
@@ -1382,7 +1382,7 @@ function wcz_product_amount_sold()
 // Product Recommendations Title
 function wcz_product_recomtxt( $translated )
 {
-    $wcz_new_recomtitle = esc_html( get_option( 'wcz-wcproduct-recomm-title', woocustomizer_library_get_default( 'wcz-wcproduct-recomm-title' ) ) );
+    $wcz_new_recomtitle = esc_html( get_option( 'wcz-wcproduct-recomm-title', ecommercecustomizer_library_get_default( 'wcz-wcproduct-recomm-title' ) ) );
     $translated = str_ireplace( 'You may also like&hellip;', $wcz_new_recomtitle, $translated );
     return $translated;
 }
@@ -1390,7 +1390,7 @@ function wcz_product_recomtxt( $translated )
 // Related Products Title
 function wcz_product_relatedtxt( $translated )
 {
-    $wcz_new_reltitle = esc_html( get_option( 'wcz-wcproduct-related-title', woocustomizer_library_get_default( 'wcz-wcproduct-related-title' ) ) );
+    $wcz_new_reltitle = esc_html( get_option( 'wcz-wcproduct-related-title', ecommercecustomizer_library_get_default( 'wcz-wcproduct-related-title' ) ) );
     $translated = str_ireplace( 'Related products', $wcz_new_reltitle, $translated );
     return $translated;
 }
@@ -1400,7 +1400,7 @@ function wcz_edit_empty_cart_btn_text( $translated_text )
 {
     switch ( $translated_text ) {
         case 'Return to shop':
-            $translated_text = esc_html( get_option( 'wcz-cart-edit-rts-text', woocustomizer_library_get_default( 'wcz-cart-edit-rts-text' ) ) );
+            $translated_text = esc_html( get_option( 'wcz-cart-edit-rts-text', ecommercecustomizer_library_get_default( 'wcz-cart-edit-rts-text' ) ) );
             break;
     }
     return $translated_text;
@@ -1409,7 +1409,7 @@ function wcz_edit_empty_cart_btn_text( $translated_text )
 // Edit 'Return To Shop' button URL
 function wcz_edit_empty_cart_btn_url()
 {
-    $wcz_rts_url = get_option( 'wcz-cart-edit-rts-page', woocustomizer_library_get_default( 'wcz-cart-edit-rts-page' ) );
+    $wcz_rts_url = get_option( 'wcz-cart-edit-rts-page', ecommercecustomizer_library_get_default( 'wcz-cart-edit-rts-page' ) );
     if ( 0 == $wcz_rts_url ) {
         $wcz_rts_url = wc_get_page_id( 'shop' );
     }
@@ -1419,7 +1419,7 @@ function wcz_edit_empty_cart_btn_url()
 // Cart Cross Sells Title
 function wcz_cart_recomtxt( $translated )
 {
-    $wcz_new_recomtitle = esc_html( get_option( 'wcz-wccart-recomm-title', woocustomizer_library_get_default( 'wcz-wccart-recomm-title' ) ) );
+    $wcz_new_recomtitle = esc_html( get_option( 'wcz-wccart-recomm-title', ecommercecustomizer_library_get_default( 'wcz-wccart-recomm-title' ) ) );
     $translated = str_ireplace( 'You may be interested in&hellip;', $wcz_new_recomtitle, $translated );
     return $translated;
 }
@@ -1427,7 +1427,7 @@ function wcz_cart_recomtxt( $translated )
 // Cart Totals Title
 function wcz_cart_totalstxt( $translated )
 {
-    $wcz_new_totalstitle = esc_html( get_option( 'wcz-wccart-totals-title', woocustomizer_library_get_default( 'wcz-wccart-totals-title' ) ) );
+    $wcz_new_totalstitle = esc_html( get_option( 'wcz-wccart-totals-title', ecommercecustomizer_library_get_default( 'wcz-wccart-totals-title' ) ) );
     $translated = str_ireplace( 'Cart totals', $wcz_new_totalstitle, $translated );
     return $translated;
 }
@@ -1437,13 +1437,13 @@ if ( !function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
     function woocommerce_button_proceed_to_checkout()
     {
         
-        if ( get_option( 'wcz-cart-proceed-btn', woocustomizer_library_get_default( 'wcz-cart-proceed-btn' ) ) ) {
+        if ( get_option( 'wcz-cart-proceed-btn', ecommercecustomizer_library_get_default( 'wcz-cart-proceed-btn' ) ) ) {
             ?>
 			<a href="<?php 
             echo  esc_url( wc_get_checkout_url() ) ;
             ?>" class="checkout-button button alt wc-forward">
 				<?php 
-            echo  esc_html( get_option( 'wcz-cart-proceed-btn-txt', woocustomizer_library_get_default( 'wcz-cart-proceed-btn-txt' ) ) ) ;
+            echo  esc_html( get_option( 'wcz-cart-proceed-btn-txt', ecommercecustomizer_library_get_default( 'wcz-cart-proceed-btn-txt' ) ) ) ;
             ?>
 			</a><?php 
         } else {
@@ -1456,10 +1456,10 @@ if ( !function_exists( 'woocommerce_button_proceed_to_checkout' ) ) {
 // Edit Checkout page Place Order button text
 function wcz_edit_checkout_placeorder_btn_txt( $button_text )
 {
-    if ( !get_option( 'wcz-checkout-placeorder-btn', woocustomizer_library_get_default( 'wcz-checkout-placeorder-btn' ) ) ) {
+    if ( !get_option( 'wcz-checkout-placeorder-btn', ecommercecustomizer_library_get_default( 'wcz-checkout-placeorder-btn' ) ) ) {
         return $button_text;
     }
-    return esc_html( get_option( 'wcz-checkout-placeorder-btn-txt', woocustomizer_library_get_default( 'wcz-checkout-placeorder-btn-txt' ) ) );
+    return esc_html( get_option( 'wcz-checkout-placeorder-btn-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-placeorder-btn-txt' ) ) );
 }
 
 add_filter( 'woocommerce_order_button_text', 'wcz_edit_checkout_placeorder_btn_txt' );
@@ -1468,16 +1468,16 @@ function wcz_edit_checkout_page_headings( $translated_text, $text, $domain )
 {
     switch ( $translated_text ) {
         case 'Billing details':
-            $translated_text = get_option( 'wcz-checkout-billing-head', woocustomizer_library_get_default( 'wcz-checkout-billing-head' ) );
+            $translated_text = get_option( 'wcz-checkout-billing-head', ecommercecustomizer_library_get_default( 'wcz-checkout-billing-head' ) );
             break;
         case 'Additional information':
-            $translated_text = get_option( 'wcz-checkout-addinfo-head', woocustomizer_library_get_default( 'wcz-checkout-addinfo-head' ) );
+            $translated_text = get_option( 'wcz-checkout-addinfo-head', ecommercecustomizer_library_get_default( 'wcz-checkout-addinfo-head' ) );
             break;
         case 'Ship to a different address?':
-            $translated_text = get_option( 'wcz-checkout-shipping-head', woocustomizer_library_get_default( 'wcz-checkout-shipping-head' ) );
+            $translated_text = get_option( 'wcz-checkout-shipping-head', ecommercecustomizer_library_get_default( 'wcz-checkout-shipping-head' ) );
             break;
         case 'Your order':
-            $translated_text = get_option( 'wcz-checkout-order-head', woocustomizer_library_get_default( 'wcz-checkout-order-head' ) );
+            $translated_text = get_option( 'wcz-checkout-order-head', ecommercecustomizer_library_get_default( 'wcz-checkout-order-head' ) );
             break;
     }
     return $translated_text;
@@ -1485,7 +1485,7 @@ function wcz_edit_checkout_page_headings( $translated_text, $text, $domain )
 
 function wcz_show_discount_amount_saved()
 {
-    if ( is_checkout() && !get_option( 'wcz-checkout-show-discamount', woocustomizer_library_get_default( 'wcz-checkout-show-discamount' ) ) ) {
+    if ( is_checkout() && !get_option( 'wcz-checkout-show-discamount', ecommercecustomizer_library_get_default( 'wcz-checkout-show-discamount' ) ) ) {
         return;
     }
     $wcz_discount = 0;
@@ -1502,7 +1502,7 @@ function wcz_show_discount_amount_saved()
     }
     
     if ( $wcz_discount > 0 ) {
-        $wcz_savedtxt = ( is_checkout() ? get_option( 'wcz-checkout-discamount-txt', woocustomizer_library_get_default( 'wcz-checkout-discamount-txt' ) ) : get_option( 'wcz-cart-discamount-txt', woocustomizer_library_get_default( 'wcz-cart-discamount-txt' ) ) );
+        $wcz_savedtxt = ( is_checkout() ? get_option( 'wcz-checkout-discamount-txt', ecommercecustomizer_library_get_default( 'wcz-checkout-discamount-txt' ) ) : get_option( 'wcz-cart-discamount-txt', ecommercecustomizer_library_get_default( 'wcz-cart-discamount-txt' ) ) );
         echo  '<tr class="wcz-discamount"><th>' . esc_html( $wcz_savedtxt ) . '</th><td data-title="' . esc_attr( $wcz_savedtxt ) . '">' . wc_price( $wcz_discount + WC()->cart->get_discount_total() ) . '</td></tr>' ;
     }
 
@@ -1513,12 +1513,12 @@ add_action( 'woocommerce_review_order_after_order_total', 'wcz_show_discount_amo
 function wcz_account_add_custom_dashcontent()
 {
     
-    if ( is_account_page() && 'wcz-account-dashboard-edit' == get_option( 'wcz-account-dashboard-tab', woocustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) && 'default' !== get_option( 'wcz-account-dashboard-content', woocustomizer_library_get_default( 'wcz-account-dashboard-content' ) ) ) {
-        $wcz_dash_display = get_option( 'wcz-account-dashboard-content', woocustomizer_library_get_default( 'wcz-account-dashboard-content' ) );
+    if ( is_account_page() && 'wcz-account-dashboard-edit' == get_option( 'wcz-account-dashboard-tab', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) && 'default' !== get_option( 'wcz-account-dashboard-content', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-content' ) ) ) {
+        $wcz_dash_display = get_option( 'wcz-account-dashboard-content', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-content' ) );
         echo  '<div class="wcz-dash-content" >' ;
         
         if ( 'wcz-accdash-content-page' == $wcz_dash_display ) {
-            $wcz_dashpage_id = get_option( 'wcz-accdash-page', woocustomizer_library_get_default( 'wcz-accdash-page' ) );
+            $wcz_dashpage_id = get_option( 'wcz-accdash-page', ecommercecustomizer_library_get_default( 'wcz-accdash-page' ) );
             $wcz_dashpage = apply_filters( 'wpml_object_id', $wcz_dashpage_id, 'page' );
             // WPML fix for translations
             
@@ -1526,13 +1526,13 @@ function wcz_account_add_custom_dashcontent()
                 $wcz_page = get_page( $wcz_dashpage );
                 echo  apply_filters( 'the_content', $wcz_page->post_content ) ;
             } else {
-                esc_html_e( 'Please select the page you\'d like to display here.', 'woocustomizer' );
+                esc_html_e( 'Please select the page you\'d like to display here.', 'ecommercecustomizer' );
             }
         
         } else {
             
             if ( 'wcz-accdash-content-text' == $wcz_dash_display ) {
-                $wcz_dashtext = get_option( 'wcz-accdash-text', woocustomizer_library_get_default( 'wcz-accdash-text' ) );
+                $wcz_dashtext = get_option( 'wcz-accdash-text', ecommercecustomizer_library_get_default( 'wcz-accdash-text' ) );
                 echo  $wcz_dashtext ;
             } else {
                 return;
@@ -1556,18 +1556,18 @@ if ( !function_exists( 'wcz_remove_account_links' ) ) {
     function wcz_remove_account_links( $menu_links )
     {
         
-        if ( 'wcz-account-dashboard-remove' == get_option( 'wcz-account-dashboard-tab', woocustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) ) {
+        if ( 'wcz-account-dashboard-remove' == get_option( 'wcz-account-dashboard-tab', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) ) {
             unset( $menu_links['dashboard'] );
             // Remove Dashboard
-        } elseif ( 'wcz-account-dashboard-edit' == get_option( 'wcz-account-dashboard-tab', woocustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) ) {
-            $menu_links['dashboard'] = esc_html( get_option( 'wcz-account-tab-dash-tab', woocustomizer_library_get_default( 'wcz-account-tab-dash-tab' ) ) );
+        } elseif ( 'wcz-account-dashboard-edit' == get_option( 'wcz-account-dashboard-tab', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-tab' ) ) ) {
+            $menu_links['dashboard'] = esc_html( get_option( 'wcz-account-tab-dash-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-dash-tab' ) ) );
         } else {
-            $menu_links['dashboard'] = esc_html__( 'Dashboard', 'woocustomizer' );
+            $menu_links['dashboard'] = esc_html__( 'Dashboard', 'ecommercecustomizer' );
         }
         
         // Unset Links for Ordering
         
-        if ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', woocustomizer_library_get_default( 'wcz-account-orders-tab' ) ) || 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', woocustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) || 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', woocustomizer_library_get_default( 'wcz-account-address-tab' ) ) || 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', woocustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
+        if ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', ecommercecustomizer_library_get_default( 'wcz-account-orders-tab' ) ) || 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', ecommercecustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) || 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', ecommercecustomizer_library_get_default( 'wcz-account-address-tab' ) ) || 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', ecommercecustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
             unset( $menu_links['orders'] );
             unset( $menu_links['downloads'] );
             unset( $menu_links['edit-address'] );
@@ -1576,43 +1576,43 @@ if ( !function_exists( 'wcz_remove_account_links' ) ) {
         
         // Only Available in StoreCustomizer Pro
         
-        if ( 'wcz-account-orders-remove' == get_option( 'wcz-account-orders-tab', woocustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
+        if ( 'wcz-account-orders-remove' == get_option( 'wcz-account-orders-tab', ecommercecustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
             unset( $menu_links['orders'] );
             // Remove Orders
-        } elseif ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', woocustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
-            $menu_links['orders'] = esc_html( get_option( 'wcz-account-tab-orders-tab', woocustomizer_library_get_default( 'wcz-account-tab-orders-tab' ) ) );
+        } elseif ( 'wcz-account-orders-edit' == get_option( 'wcz-account-orders-tab', ecommercecustomizer_library_get_default( 'wcz-account-orders-tab' ) ) ) {
+            $menu_links['orders'] = esc_html( get_option( 'wcz-account-tab-orders-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-orders-tab' ) ) );
         } else {
-            $menu_links['orders'] = esc_html__( 'Orders', 'woocustomizer' );
+            $menu_links['orders'] = esc_html__( 'Orders', 'ecommercecustomizer' );
         }
         
         
-        if ( 'wcz-account-downloads-remove' == get_option( 'wcz-account-downloads-tab', woocustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
+        if ( 'wcz-account-downloads-remove' == get_option( 'wcz-account-downloads-tab', ecommercecustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
             unset( $menu_links['downloads'] );
             // Remove Downloads
-        } elseif ( 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', woocustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
-            $menu_links['downloads'] = esc_html( get_option( 'wcz-account-tab-downloads-tab', woocustomizer_library_get_default( 'wcz-account-tab-downloads-tab' ) ) );
+        } elseif ( 'wcz-account-downloads-edit' == get_option( 'wcz-account-downloads-tab', ecommercecustomizer_library_get_default( 'wcz-account-downloads-tab' ) ) ) {
+            $menu_links['downloads'] = esc_html( get_option( 'wcz-account-tab-downloads-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-downloads-tab' ) ) );
         } else {
-            $menu_links['downloads'] = esc_html__( 'Downloads', 'woocustomizer' );
+            $menu_links['downloads'] = esc_html__( 'Downloads', 'ecommercecustomizer' );
         }
         
         
-        if ( 'wcz-account-address-remove' == get_option( 'wcz-account-address-tab', woocustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
+        if ( 'wcz-account-address-remove' == get_option( 'wcz-account-address-tab', ecommercecustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
             unset( $menu_links['edit-address'] );
             // Addresses
-        } elseif ( 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', woocustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
-            $menu_links['edit-address'] = esc_html( get_option( 'wcz-account-tab-address-tab', woocustomizer_library_get_default( 'wcz-account-tab-address-tab' ) ) );
+        } elseif ( 'wcz-account-address-edit' == get_option( 'wcz-account-address-tab', ecommercecustomizer_library_get_default( 'wcz-account-address-tab' ) ) ) {
+            $menu_links['edit-address'] = esc_html( get_option( 'wcz-account-tab-address-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-address-tab' ) ) );
         } else {
-            $menu_links['edit-address'] = esc_html__( 'Addresses', 'woocustomizer' );
+            $menu_links['edit-address'] = esc_html__( 'Addresses', 'ecommercecustomizer' );
         }
         
         
-        if ( 'wcz-account-details-remove' == get_option( 'wcz-account-details-tab', woocustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
+        if ( 'wcz-account-details-remove' == get_option( 'wcz-account-details-tab', ecommercecustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
             unset( $menu_links['edit-account'] );
             // Remove Account details tab
-        } elseif ( 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', woocustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
-            $menu_links['edit-account'] = esc_html( get_option( 'wcz-account-tab-details-tab', woocustomizer_library_get_default( 'wcz-account-tab-details-tab' ) ) );
+        } elseif ( 'wcz-account-details-edit' == get_option( 'wcz-account-details-tab', ecommercecustomizer_library_get_default( 'wcz-account-details-tab' ) ) ) {
+            $menu_links['edit-account'] = esc_html( get_option( 'wcz-account-tab-details-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-details-tab' ) ) );
         } else {
-            $menu_links['edit-account'] = esc_html__( 'Account details', 'woocustomizer' );
+            $menu_links['edit-account'] = esc_html__( 'Account details', 'ecommercecustomizer' );
         }
         
         // Remove Logout to add back after custom tabs
@@ -1620,11 +1620,11 @@ if ( !function_exists( 'wcz_remove_account_links' ) ) {
         // Only Available in StoreCustomizer Pro
         // $menu_links['customer-logout'] = $logout;
         
-        if ( 'wcz-account-logout-remove' == get_option( 'wcz-account-logout-tab', woocustomizer_library_get_default( 'wcz-account-logout-tab' ) ) ) {
+        if ( 'wcz-account-logout-remove' == get_option( 'wcz-account-logout-tab', ecommercecustomizer_library_get_default( 'wcz-account-logout-tab' ) ) ) {
             unset( $menu_links['customer-logout'] );
             // Remove Logout link
-        } elseif ( 'wcz-account-logout-edit' == get_option( 'wcz-account-logout-tab', woocustomizer_library_get_default( 'wcz-account-logout-tab' ) ) ) {
-            $menu_links['customer-logout'] = esc_html( get_option( 'wcz-account-tab-logout-tab', woocustomizer_library_get_default( 'wcz-account-tab-logout-tab' ) ) );
+        } elseif ( 'wcz-account-logout-edit' == get_option( 'wcz-account-logout-tab', ecommercecustomizer_library_get_default( 'wcz-account-logout-tab' ) ) ) {
+            $menu_links['customer-logout'] = esc_html( get_option( 'wcz-account-tab-logout-tab', ecommercecustomizer_library_get_default( 'wcz-account-tab-logout-tab' ) ) );
         }
         
         return $menu_links;
@@ -1640,14 +1640,14 @@ function wcz_account_endpoint_title( $title, $id )
     
     if ( is_wc_endpoint_url( 'orders' ) && !is_admin() && in_the_loop() && is_account_page() ) {
         // add your endpoint urls
-        $title = esc_html( get_option( 'wcz-account-tab-orders-title', woocustomizer_library_get_default( 'wcz-account-tab-orders-title' ) ) );
+        $title = esc_html( get_option( 'wcz-account-tab-orders-title', ecommercecustomizer_library_get_default( 'wcz-account-tab-orders-title' ) ) );
         // change your entry-title
     } elseif ( is_wc_endpoint_url( 'downloads' ) && !is_admin() && in_the_loop() && is_account_page() ) {
-        $title = esc_html( get_option( 'wcz-account-tab-downloads-title', woocustomizer_library_get_default( 'wcz-account-tab-downloads-title' ) ) );
+        $title = esc_html( get_option( 'wcz-account-tab-downloads-title', ecommercecustomizer_library_get_default( 'wcz-account-tab-downloads-title' ) ) );
     } elseif ( is_wc_endpoint_url( 'edit-address' ) && !is_admin() && in_the_loop() && is_account_page() ) {
-        $title = esc_html( get_option( 'wcz-account-tab-address-title', woocustomizer_library_get_default( 'wcz-account-tab-address-title' ) ) );
+        $title = esc_html( get_option( 'wcz-account-tab-address-title', ecommercecustomizer_library_get_default( 'wcz-account-tab-address-title' ) ) );
     } elseif ( is_wc_endpoint_url( 'edit-account' ) && !is_admin() && in_the_loop() && is_account_page() ) {
-        $title = esc_html( get_option( 'wcz-account-tab-details-title', woocustomizer_library_get_default( 'wcz-account-tab-details-title' ) ) );
+        $title = esc_html( get_option( 'wcz-account-tab-details-title', ecommercecustomizer_library_get_default( 'wcz-account-tab-details-title' ) ) );
     }
     
     return $title;
@@ -1662,7 +1662,7 @@ function wcz_account_endpoint_title( $title, $id )
 if ( !function_exists( 'wcz_add_menu_login_logout' ) ) {
     function wcz_add_menu_login_logout( $items, $args )
     {
-        $wcz_logmenu = get_option( 'wcz-login-logout-menu', woocustomizer_library_get_default( 'wcz-login-logout-menu' ) );
+        $wcz_logmenu = get_option( 'wcz-login-logout-menu', ecommercecustomizer_library_get_default( 'wcz-login-logout-menu' ) );
         if ( 'none' === $wcz_logmenu ) {
             return $items;
         }
@@ -1671,15 +1671,15 @@ if ( !function_exists( 'wcz_add_menu_login_logout' ) ) {
         // echo '</pre>';
         
         if ( isset( $args->menu ) && $args->menu == $wcz_logmenu || isset( $args->menu->slug ) && $args->menu->slug == $wcz_logmenu || isset( $args->theme_location ) && $args->theme_location == $wcz_logmenu ) {
-            $wcz_login_redirecturl = ( get_option( 'wcz-login-redirect-page', woocustomizer_library_get_default( 'wcz-login-redirect-page' ) ) ? get_option( 'wcz-login-redirect-page', woocustomizer_library_get_default( 'wcz-login-redirect-page' ) ) : get_option( 'page_on_front' ) );
-            $wcz_login_url = ( 'wclogin' == get_option( 'wcz-login-item-url', woocustomizer_library_get_default( 'wcz-login-item-url' ) ) ? get_permalink( wc_get_page_id( 'myaccount' ) ) : wp_login_url( get_page_link( $wcz_login_redirecturl ) ) );
-            if ( 'custom' == get_option( 'wcz-login-item-url', woocustomizer_library_get_default( 'wcz-login-item-url' ) ) && '' != get_option( 'wcz-login-at-custom-url', woocustomizer_library_get_default( 'wcz-login-at-custom-url' ) ) ) {
-                $wcz_login_url = get_option( 'wcz-login-at-custom-url', woocustomizer_library_get_default( 'wcz-login-at-custom-url' ) );
+            $wcz_login_redirecturl = ( get_option( 'wcz-login-redirect-page', ecommercecustomizer_library_get_default( 'wcz-login-redirect-page' ) ) ? get_option( 'wcz-login-redirect-page', ecommercecustomizer_library_get_default( 'wcz-login-redirect-page' ) ) : get_option( 'page_on_front' ) );
+            $wcz_login_url = ( 'wclogin' == get_option( 'wcz-login-item-url', ecommercecustomizer_library_get_default( 'wcz-login-item-url' ) ) ? get_permalink( wc_get_page_id( 'myaccount' ) ) : wp_login_url( get_page_link( $wcz_login_redirecturl ) ) );
+            if ( 'custom' == get_option( 'wcz-login-item-url', ecommercecustomizer_library_get_default( 'wcz-login-item-url' ) ) && '' != get_option( 'wcz-login-at-custom-url', ecommercecustomizer_library_get_default( 'wcz-login-at-custom-url' ) ) ) {
+                $wcz_login_url = get_option( 'wcz-login-at-custom-url', ecommercecustomizer_library_get_default( 'wcz-login-at-custom-url' ) );
             }
-            $wcz_login_txt = get_option( 'wcz-login-text', woocustomizer_library_get_default( 'wcz-login-text' ) );
-            $wcz_logout_redirecturl = ( get_option( 'wcz-logout-redirect-page', woocustomizer_library_get_default( 'wcz-logout-redirect-page' ) ) ? get_option( 'wcz-logout-redirect-page', woocustomizer_library_get_default( 'wcz-logout-redirect-page' ) ) : get_option( 'page_on_front' ) );
+            $wcz_login_txt = get_option( 'wcz-login-text', ecommercecustomizer_library_get_default( 'wcz-login-text' ) );
+            $wcz_logout_redirecturl = ( get_option( 'wcz-logout-redirect-page', ecommercecustomizer_library_get_default( 'wcz-logout-redirect-page' ) ) ? get_option( 'wcz-logout-redirect-page', ecommercecustomizer_library_get_default( 'wcz-logout-redirect-page' ) ) : get_option( 'page_on_front' ) );
             $wcz_logout_url = wp_logout_url( get_page_link( $wcz_logout_redirecturl ) );
-            $wcz_logout_txt = get_option( 'wcz-logout-text', woocustomizer_library_get_default( 'wcz-logout-text' ) );
+            $wcz_logout_txt = get_option( 'wcz-logout-text', ecommercecustomizer_library_get_default( 'wcz-logout-text' ) );
             $class = ( isset( $args->menu_class ) && 'elementor-nav-menu' == $args->menu_class ? 'elementor-item' : '' );
             $items .= '<li class="wcz-login-logout ' . $class . '">';
             ob_start();
@@ -1722,8 +1722,8 @@ add_filter(
 function wcz_customer_login_redirect( $redirect, $user )
 {
     
-    if ( (wc_user_has_role( $user, 'customer' ) || wc_user_has_role( $user, 'subscriber' )) && 'wclogin' == get_option( 'wcz-login-item-url', woocustomizer_library_get_default( 'wcz-login-item-url' ) ) ) {
-        $wcz_login_redirecturl = ( get_option( 'wcz-login-redirect-page', woocustomizer_library_get_default( 'wcz-login-redirect-page' ) ) ? get_option( 'wcz-login-redirect-page', woocustomizer_library_get_default( 'wcz-login-redirect-page' ) ) : get_option( 'page_on_front' ) );
+    if ( (wc_user_has_role( $user, 'customer' ) || wc_user_has_role( $user, 'subscriber' )) && 'wclogin' == get_option( 'wcz-login-item-url', ecommercecustomizer_library_get_default( 'wcz-login-item-url' ) ) ) {
+        $wcz_login_redirecturl = ( get_option( 'wcz-login-redirect-page', ecommercecustomizer_library_get_default( 'wcz-login-redirect-page' ) ) ? get_option( 'wcz-login-redirect-page', ecommercecustomizer_library_get_default( 'wcz-login-redirect-page' ) ) : get_option( 'page_on_front' ) );
         $redirect = esc_url( get_page_link( $wcz_login_redirecturl ) );
     }
     

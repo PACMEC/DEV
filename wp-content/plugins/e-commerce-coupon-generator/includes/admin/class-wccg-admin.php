@@ -7,8 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Handle all general admin business.
  *
  * @class		WCCG_Admin
- * @author		Jeroen Sormani
- * @package		WooCommerce Coupon Generator
+ * @author		PACMEC
+ * @package		E-Commerce Coupon Generator
  * @version		1.0.0
  */
 class WCCG_Admin {
@@ -27,7 +27,7 @@ class WCCG_Admin {
 		// Enqueue scripts
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 
-		// WooCommerce screen IDs
+		// E-Commerce screen IDs
 		add_action( 'woocommerce_screen_ids', array( $this, 'add_wc_screen_id' ) );
 
 		add_action( 'init', array( $this, 'init' ) ); // Used init because admin_init is too late for admin_menu
@@ -47,7 +47,7 @@ class WCCG_Admin {
 
 		// Plugins page
 		if ( 'plugins.php' == $pagenow ) {
-			add_filter( 'plugin_action_links_' . plugin_basename( WooCommerce_Coupon_Generator()->file ), array( $this, 'add_plugin_action_links' ), 10, 2 );
+			add_filter( 'plugin_action_links_' . plugin_basename( E_Commerce_Coupon_Generator()->file ), array( $this, 'add_plugin_action_links' ), 10, 2 );
 			add_filter( 'plugin_row_meta', array( $this, 'add_plugin_row_meta' ), 10, 2 );
 		}
 	}
@@ -64,9 +64,9 @@ class WCCG_Admin {
 		$current_screen = get_current_screen();
 
 		if ( strpos( $current_screen->id, 'woocommerce_coupon_generator' ) !== false ) {
-			wp_enqueue_style( 'coupon-generator-for-woocommerce', plugins_url( 'assets/css/woocommerce-coupon-generator-admin.min.css', WooCommerce_Coupon_Generator()->file ), array( 'woocommerce_admin_styles', 'jquery-ui-style' ), WooCommerce_Coupon_Generator()->version );
+			wp_enqueue_style( 'coupon-generator-for-woocommerce', plugins_url( 'assets/css/woocommerce-coupon-generator-admin.min.css', E_Commerce_Coupon_Generator()->file ), array( 'woocommerce_admin_styles', 'jquery-ui-style' ), E_Commerce_Coupon_Generator()->version );
 
-			wp_enqueue_script( 'coupon-generator-for-woocommerce', plugins_url( 'assets/js/woocommerce-coupon-generator-admin.min.js', WooCommerce_Coupon_Generator()->file ), array( 'jquery' ), WooCommerce_Coupon_Generator()->version, true );
+			wp_enqueue_script( 'coupon-generator-for-woocommerce', plugins_url( 'assets/js/woocommerce-coupon-generator-admin.min.js', E_Commerce_Coupon_Generator()->file ), array( 'jquery' ), E_Commerce_Coupon_Generator()->version, true );
 
 			// Copied from WC Core; class-wc-admin-assets.php as this is only loaded on coupon pages
 			wp_enqueue_script( 'wc-admin-coupon-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-coupon.min.js', array( 'wc-admin-meta-boxes' ), WC()->version );
@@ -95,7 +95,7 @@ class WCCG_Admin {
 	public function add_generator_page() {
 		global $admin_page_hooks;
 		$parent_menu = ( isset( $admin_page_hooks['woocommerce-marketing'] ) ) ? 'woocommerce-marketing' : 'woocommerce';
-		add_submenu_page( $parent_menu, __( 'WooCommerce Coupon Generator', 'coupon-generator-for-woocommerce' ), __( 'Coupon generator', 'coupon-generator-for-woocommerce' ), 'manage_woocommerce', 'woocommerce_coupon_generator', array( $this, 'coupon_generator_callback' ) );
+		add_submenu_page( $parent_menu, __( 'E-Commerce Coupon Generator', 'coupon-generator-for-woocommerce' ), __( 'Coupon generator', 'coupon-generator-for-woocommerce' ), 'manage_woocommerce', 'woocommerce_coupon_generator', array( $this, 'coupon_generator_callback' ) );
 	}
 
 
@@ -118,7 +118,7 @@ class WCCG_Admin {
 
 
 	/**
-	 * WooCommerce screen IDs.
+	 * E-Commerce screen IDs.
 	 *
 	 * Add the coupon generator coupon page to the WC Screen IDs.
 	 *
@@ -147,7 +147,7 @@ class WCCG_Admin {
 	 * @return array         List of modified links.
 	 */
 	public function add_plugin_action_links( $links, $file ) {
-		if ( $file == plugin_basename( WooCommerce_Coupon_Generator()->file ) ) {
+		if ( $file == plugin_basename( E_Commerce_Coupon_Generator()->file ) ) {
 			$links = array_merge( array(
 				'<a href="' . esc_url( admin_url( '/admin.php?page=woocommerce_coupon_generator' ) ) . '">' . __( 'Start generating coupons', 'coupon-generator-for-woocommerce' ) . '</a>'
 			), $links );
@@ -169,8 +169,8 @@ class WCCG_Admin {
 	 * @return array         List of modified links.
 	 */
 	public function add_plugin_row_meta( $links, $file ) {
-		if ( $file == plugin_basename( WooCommerce_Coupon_Generator()->file ) ) {
-			$links[] = '<a href="https://aceplugins.com/plugin/category/woocommerce/" target="_blank">' . __( 'More WooCommerce plugins by Ace Plugins', 'coupon-generator-for-woocommerce' ) . '</a>';
+		if ( $file == plugin_basename( E_Commerce_Coupon_Generator()->file ) ) {
+			$links[] = '<a href="https://aceplugins.com/plugin/category/woocommerce/" target="_blank">' . __( 'More E-Commerce plugins by Ace Plugins', 'coupon-generator-for-woocommerce' ) . '</a>';
 		}
 
 		return $links;

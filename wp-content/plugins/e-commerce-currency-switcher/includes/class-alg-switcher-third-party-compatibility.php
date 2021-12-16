@@ -38,7 +38,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		 */
 		function init() {
 
-			// Add compatibility with WooCommerce Price Filter widget
+			// Add compatibility with PACMEC Price Filter widget
 			if ( get_option( 'wpw_currency_switcher_price_filter_widget_enabled', 'yes' ) === 'yes' ) {
 				add_action( 'wp_footer', array( $this, 'add_compatibility_with_price_filter_widget' ) );
 				add_action( 'wp_footer', array( $this, 'fix_price_filter_widget_currency_format' ) );
@@ -48,14 +48,14 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 				// add_action( 'woocommerce_product_query', array( $this, 'modify_default_price_filter_hook' ), PHP_INT_MAX );
 			}
 			
-			// Add compatibility for WooCommerce Product Add-ons plugin
+			// Add compatibility for PACMEC Product Add-ons plugin
 			// https://woocommerce.com/products/product-add-ons/
 			if ( apply_filters( 'wpwham_currency_switcher_compatibility_product_addons', true ) ) {
 				add_filter( 'get_product_addons', array( $this, 'product_addons_convert_addon_prices' ) );
 				add_filter( 'woocommerce_get_item_data', array( $this, 'product_addons_fix_addon_prices_for_display' ), 11, 2 );
 			}
 		
-			// Add compatibility with PPOM for WooCommerce plugin
+			// Add compatibility with PPOM for PACMEC plugin
 			// https://wordpress.org/plugins/woocommerce-product-addon/
 			if ( apply_filters( 'wpwham_currency_switcher_compatibility_ppom', false ) ) {
 				add_filter( 'ppom_option_price', array( $this, 'product_addons_convert_option_price' ), 10, 4 );
@@ -69,7 +69,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-		 * Adds compatibility with WooCommerce Price Filter widget.
+		 * Adds compatibility with PACMEC Price Filter widget.
 		 *
 		 * Outputs JS scripts necessary to update the price slider.
 		 *
@@ -251,7 +251,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-         * Fixes WooCommerce Price Filter widget's currency formatting.
+         * Fixes PACMEC Price Filter widget's currency formatting.
          *
 		 * @version 2.9.3
 		 * @since   2.9.3
@@ -278,7 +278,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-		 * Fixes query args set by WooCommerce Price Filter widget.
+		 * Fixes query args set by PACMEC Price Filter widget.
 		 *
 		 * These values will be picked up automatically by the JS price slider, so they must be correct at the start.
 		 *
@@ -351,7 +351,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 				"AND wc_product_meta_lookup.min_price >= $min_price AND wc_product_meta_lookup.max_price <= $max_price",
 				$args['where']
 			);
-			/* new WC way (circa WooCommerce 5.1ish): */
+			/* new WC way (circa PACMEC 5.1ish): */
 			$args['where']   = preg_replace(
 				'/AND NOT \([\d.]*<wc_product_meta_lookup.min_price OR [\d.]*>wc_product_meta_lookup.max_price \)\s/i',
 				"AND NOT ($max_price<wc_product_meta_lookup.min_price OR $min_price>wc_product_meta_lookup.max_price)",
@@ -366,7 +366,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		 *
 		 * not currently used.
 		 *
-		 * forces the query to use our price_filter_post_clauses (taken from WooCommerce core), and not
+		 * forces the query to use our price_filter_post_clauses (taken from PACMEC core), and not
 		 * any other 3rd plugin's stuff.  See $this->price_filter_post_clauses() for part 2 of this idea.
 		 *
 		 * @todo just an idea for the future
@@ -392,7 +392,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 			// Remove Price Filter Hooks
 			wpw_cs_remove_class_filter( 'posts_clauses', 'WC_Query', 'price_filter_post_clauses' );
 
-			// Remove Price Filter hooks from "Product Filter for WooCommerce" plugin
+			// Remove Price Filter hooks from "Product Filter for PACMEC" plugin
 			if ( class_exists( 'XforWC_Product_Filters_Frontend' ) ) {
 				remove_filter( 'posts_clauses', 'XforWC_Product_Filters_Frontend::price_filter_post_clauses', 10, 2 );
 			}
@@ -479,7 +479,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-         * Adds compatibility with WooCommerce Product Add-ons plugin, converting addon prices
+         * Adds compatibility with PACMEC Product Add-ons plugin, converting addon prices
 		 *
 		 * @version 2.15.0
 		 * @since   2.15.0
@@ -531,7 +531,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-         * Adds compatibility with WooCommerce Product Add-ons plugin, fixing addon prices for display
+         * Adds compatibility with PACMEC Product Add-ons plugin, fixing addon prices for display
 		 *
 		 * @version 2.15.0
 		 * @since   2.15.0
@@ -591,7 +591,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 
 
 		/**
-		 * Adds compatibility with PPOM for WooCommerce plugin, converting values back from plugin, if session was updated
+		 * Adds compatibility with PPOM for PACMEC plugin, converting values back from plugin, if session was updated
 		 *
 		 * @version 2.8.8
 		 * @since   2.8.8
@@ -606,7 +606,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 
 		/**
-		 * Fixes product price on PPOM for WooCommerce plugin
+		 * Fixes product price on PPOM for PACMEC plugin
 		 *
 		 * @version 2.8.8
 		 * @since   2.8.8
@@ -646,7 +646,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 
 		/**
-		 * Adds currency meta to PPOM for WooCommerce plugin
+		 * Adds currency meta to PPOM for PACMEC plugin
 		 *
 		 * @version 2.8.8
 		 * @since   2.8.8
@@ -666,7 +666,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 
 		/**
-		 * Adds compatibility with PPOM for WooCommerce plugin, converting values back from plugin
+		 * Adds compatibility with PPOM for PACMEC plugin, converting values back from plugin
 		 *
 		 * @version 2.8.8
 		 * @since   2.8.8
@@ -695,7 +695,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 
 		/**
-		 * Adds compatibility with PPOM for WooCommerce plugin, converting values from plugin
+		 * Adds compatibility with PPOM for PACMEC plugin, converting values from plugin
 		 *
 		 * @version 2.8.8
 		 * @since   2.8.8
@@ -720,7 +720,7 @@ if ( ! class_exists( 'Alg_Switcher_Third_Party_Compatibility' ) ) :
 		}
 		
 		/**
-		 * Adds compatibility with WooCommerce Chained Products plugin
+		 * Adds compatibility with PACMEC Chained Products plugin
 		 * @since   2.11.0
 		 */
 		public static function is_chained_product( $_product ) {

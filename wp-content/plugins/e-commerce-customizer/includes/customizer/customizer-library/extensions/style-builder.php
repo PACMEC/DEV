@@ -251,7 +251,7 @@ class WooCustomizer_Library_Styles {
 }
 endif;
 
-if ( ! function_exists( 'woocustomizer_library_styles' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_styles' ) ) :
 /**
  * Return the one WooCustomizer_Library_Styles object.
  *
@@ -259,9 +259,9 @@ if ( ! function_exists( 'woocustomizer_library_styles' ) ) :
  *
  * @return WooCustomizer_Library_Styles	The WooCustomizer_Library_Styles object.
  */
-function woocustomizer_library_styles() {
+function ecommercecustomizer_library_styles() {
 	return WooCustomizer_Library_Styles::instance();
 }
 endif;
 
-add_action( 'init', 'woocustomizer_library_styles', 1 );
+add_action( 'init', 'ecommercecustomizer_library_styles', 1 );

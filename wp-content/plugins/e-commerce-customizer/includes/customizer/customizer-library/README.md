@@ -49,7 +49,7 @@ Customizer Sections can be defined like this:
 
 $sections[] = array(
 	'id' => 'example', // Required
-	'title' => __( 'Example Section', 'woocustomizer' ), // Required
+	'title' => __( 'Example Section', 'ecommercecustomizer' ), // Required
 	'priority' => '30', // Optional
 	'description' => 'Example description', // Optional
 	'panel' => 'panel_id' // optional, and it requires WP >= 4.0
@@ -68,7 +68,7 @@ $panel = 'panel';
 
 $panels[] = array(
 	'id' => $panel,
-	'title' => __( 'Panel Examples', 'woocustomizer' ),
+	'title' => __( 'Panel Examples', 'ecommercecustomizer' ),
 	'priority' => '100'
 );
 
@@ -76,14 +76,14 @@ $section = 'panel-section';
 
 $sections[] = array(
 	'id' => $section,
-	'title' => __( 'Panel Section', 'woocustomizer' ),
+	'title' => __( 'Panel Section', 'ecommercecustomizer' ),
 	'priority' => '10',
 	'panel' => $panel
 );
 
 $options['example-panel-text'] = array(
 	'id' => 'example-panel-text',
-	'label'   => __( 'Example Text Input', 'woocustomizer' ),
+	'label'   => __( 'Example Text Input', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'text',
 );
@@ -96,7 +96,7 @@ The Customizer_Library uses the core function `$wp_customize->add_panel( $id, $a
 ~~~php
 $options['example-text'] = array(
 	'id' => 'example-text',
-	'label'   => __( 'Example Text Input', 'woocustomizer' ),
+	'label'   => __( 'Example Text Input', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'text',
 );
@@ -107,7 +107,7 @@ $options['example-text'] = array(
 ~~~php
 $options['example-url'] = array(
 	'id' => 'example-url',
-	'label'   => __( 'Example URL Input', 'woocustomizer' ),
+	'label'   => __( 'Example URL Input', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'url',
 );
@@ -118,7 +118,7 @@ $options['example-url'] = array(
 ~~~php
 $options['example-checkbox'] = array(
 	'id' => 'example-checkbox',
-	'label'   => __( 'Example Checkbox', 'woocustomizer' ),
+	'label'   => __( 'Example Checkbox', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'checkbox',
 	'default' => 0,
@@ -136,7 +136,7 @@ $choices = array(
 
 $options['example-select'] = array(
 	'id' => 'example-select',
-	'label'   => __( 'Example Select', 'woocustomizer' ),
+	'label'   => __( 'Example Select', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'select',
 	'choices' => $choices,
@@ -148,7 +148,7 @@ $options['example-select'] = array(
 
 $options['example-dropdown-pages'] = array(
 	'id' => 'example-dropdown-pages',
-	'label'   => __( 'Example Drop Down Pages', 'woocustomizer' ),
+	'label'   => __( 'Example Drop Down Pages', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'dropdown-pages',
 	'default' => ''
@@ -166,7 +166,7 @@ $choices = array(
 
 $options['example-radio'] = array(
 	'id' => 'example-radio',
-	'label'   => __( 'Example Radio', 'woocustomizer' ),
+	'label'   => __( 'Example Radio', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'radio',
 	'choices' => $choices,
@@ -179,7 +179,7 @@ $options['example-radio'] = array(
 ~~~php
 $options['example-upload'] = array(
 	'id' => 'example-upload',
-	'label'   => __( 'Example Upload', 'woocustomizer' ),
+	'label'   => __( 'Example Upload', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'upload',
 	'default' => '',
@@ -191,7 +191,7 @@ $options['example-upload'] = array(
 ~~~php
 $options['example-color'] = array(
 	'id' => 'example-color',
-	'label'   => __( 'Example Color', 'woocustomizer' ),
+	'label'   => __( 'Example Color', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'color',
 	'default' => $color // hex
@@ -204,10 +204,10 @@ $options['example-color'] = array(
 ~~~php
 $options['example-textarea'] = array(
 	'id' => 'example-textarea',
-	'label'   => __( 'Example Textarea', 'woocustomizer' ),
+	'label'   => __( 'Example Textarea', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'textarea',
-	'default' => __( 'Example textarea text.', 'woocustomizer'),
+	'default' => __( 'Example textarea text.', 'ecommercecustomizer'),
 );
 ~~~
 
@@ -216,7 +216,7 @@ $options['example-textarea'] = array(
 ~~~php
 $options['example-font'] = array(
 	'id' => 'example-font',
-	'label'   => __( 'Example Font', 'woocustomizer' ),
+	'label'   => __( 'Example Font', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'select',
 	'choices' => customizer_library_get_font_choices(),
@@ -229,7 +229,7 @@ $options['example-font'] = array(
 ~~~php
 $options['example-range'] = array(
 	'id' => 'example-range',
-	'label'   => __( 'Example Range Input', 'woocustomizer' ),
+	'label'   => __( 'Example Range Input', 'ecommercecustomizer' ),
 	'section' => $section,
 	'type'    => 'range',
 	'input_attrs' => array(
@@ -309,8 +309,8 @@ function overlay_fonts() {
 
 	// Font options
 	$fonts = array(
-		get_theme_mod( 'primary-font', woocustomizer_library_get_default( 'primary-font' ) ),
-		get_theme_mod( 'secondary-font', woocustomizer_library_get_default( 'secondary-font' ) )
+		get_theme_mod( 'primary-font', ecommercecustomizer_library_get_default( 'primary-font' ) ),
+		get_theme_mod( 'secondary-font', ecommercecustomizer_library_get_default( 'secondary-font' ) )
 	);
 
 	$font_uri = customizer_library_get_google_font_uri( $fonts );
@@ -327,10 +327,10 @@ Fonts can be used in inline styles like this:
 ~~~php
 // Primary Font
 $setting = 'primary-font';
-$mod = get_theme_mod( $setting, woocustomizer_library_get_default( $setting ) );
+$mod = get_theme_mod( $setting, ecommercecustomizer_library_get_default( $setting ) );
 $stack = customizer_library_get_font_stack( $mod );
 
-if ( $mod != woocustomizer_library_get_default( $setting ) ) {
+if ( $mod != ecommercecustomizer_library_get_default( $setting ) ) {
 
 	Customizer_Library_Styles()->add( array(
 		'selectors' => array(

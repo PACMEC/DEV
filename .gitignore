@@ -6,12 +6,10 @@ wp-content/languages/*
 
 !wp-content/plugins/admin-theme-pacmec/*
 !wp-content/plugins/admin-theme-pacmec
-!wp-content/plugins/contact-form-7/*
-!wp-content/plugins/contact-form-7
+!wp-content/plugins/pacmec-contact-form/*
+!wp-content/plugins/pacmec-contact-form
 !wp-content/plugins/e-commerce/*
 !wp-content/plugins/e-commerce
-!wp-content/plugins/e-commerce-accommodation-bookings/*
-!wp-content/plugins/e-commerce-accommodation-bookings
 !wp-content/plugins/e-commerce-coupon-generator/*
 !wp-content/plugins/e-commerce-coupon-generator
 !wp-content/plugins/e-commerce-currency-switcher/*

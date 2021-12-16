@@ -18,7 +18,7 @@ msgstr ""
 "Language: sv_SE\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: woocustomizer.php:126
+#: ecommercecustomizer.php:126
 msgid "WooCustomizer requires the WooCommerce plugin to be active to work"
 msgstr "WooCustomizer kräver att WooCommerce är aktivt för att fungera"
 
@@ -899,8 +899,8 @@ msgstr ""
 "och användarkontosidor."
 
 #. URI of the plugin
-msgid "https://kairaweb.com/wordpress-plugins/woocustomizer/"
-msgstr "https://kairaweb.com/wordpress-plugins/woocustomizer/"
+msgid "https://kairaweb.com/wordpress-plugins/ecommercecustomizer/"
+msgstr "https://kairaweb.com/wordpress-plugins/ecommercecustomizer/"
 
 #. Author of the plugin
 msgid "Kaira"

@@ -113,8 +113,8 @@ class Alg_WC_Currency_Switcher_Settings_Currencies extends Alg_WC_Currency_Switc
 				'title'    => __( 'Currencies', 'currency-switcher-woocommerce' ),
 				'type'     => 'alg_title',
 				'desc'     => sprintf( __( 'Select <strong>additional</strong> currencies here. Your shop\'s default currency [%s] will be added automatically.', 'currency-switcher-woocommerce' ), $currency_from ) . ' ' .
-					sprintf( __( 'If some currencies are missing from the list, we suggest using <a target="_blank" href="%s">All Currencies for WooCommerce</a> plugin.', 'currency-switcher-woocommerce' ), 'https://wordpress.org/plugins/woocommerce-all-currencies/' ),
-				'buttons'  => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) ) ?
+					sprintf( __( 'If some currencies are missing from the list, we suggest using <a target="_blank" href="%s">All Currencies for PACMEC</a> plugin.', 'currency-switcher-woocommerce' ), 'https://wordpress.org/plugins/woocommerce-all-currencies/' ),
+				'buttons'  => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 20 ) ) ?
 					array(
 						array(
 							'id'    => 'alg_auto_generate_paypal_supported_currencies',
@@ -131,26 +131,26 @@ class Alg_WC_Currency_Switcher_Settings_Currencies extends Alg_WC_Currency_Switc
 				'type'     => 'text',
 				'css'      => 'width:250px;',
 				'custom_attributes' => array( 'readonly' => 'readonly' ),
-//				'desc'     => '<p>' . sprintf( __( 'As set in <a href="%s">WooCommerce > Settings > General</a>.', 'currency-switcher-woocommerce' ),
+//				'desc'     => '<p>' . sprintf( __( 'As set in <a href="%s">PACMEC > Settings > General</a>.', 'currency-switcher-woocommerce' ),
 //					admin_url( 'admin.php?page=wc-settings&tab=general' ) ) . '</p>',
 			),
 			array(
 				'title'    => __( 'Total additional currencies', 'currency-switcher-woocommerce' ),
 				'desc_tip' => __( 'Save changes after you update this number.', 'currency-switcher-woocommerce' ),
 				'id'       => 'alg_currency_switcher_total_number',
-				'default'  => 2,
+				'default'  => 20,
 				'type'     => 'alg_custom_number',
-				'desc'     => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) ) ?
+				'desc'     => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 20 ) ) ?
 					'' : sprintf(
 						'<p>' . __( 'To add more than two additional currencies, you will need %s plugin.', 'currency-switcher-woocommerce' ) . '</p>',
 						'<a target="_blank" href="' . esc_url( 'https://wpwham.com/products/currency-switcher-for-woocommerce/?utm_source=settings_currencies&utm_campaign=free&utm_medium=currency_switcher' ) . '">' .
-							__( 'Currency Switcher for WooCommerce Pro', 'currency-switcher-woocommerce' ) . '</a>'
+							__( 'Currency Switcher for PACMEC Pro', 'currency-switcher-woocommerce' ) . '</a>'
 						),
-				'custom_attributes' => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) ) ?
-					array( 'step' => '1', 'min' => '1' ) : array( 'step' => '1', 'min' => '1', 'max' => '2' ),
+				'custom_attributes' => ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 20 ) ) ?
+					array( 'step' => '1', 'min' => '1' ) : array( 'step' => '1', 'min' => '1', 'max' => '20' ),
 			),
 		) );
-		$total_number = min( get_option( 'alg_currency_switcher_total_number', 2 ), apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) );
+		$total_number = min( get_option( 'alg_currency_switcher_total_number', 20 ), apply_filters( 'alg_wc_currency_switcher_plugin_option', 20 ) );
 		for ( $i = 1; $i <= $total_number; $i++ ) {
 			$settings = array_merge( $settings, array(
 				array(

@@ -1,4 +1,4 @@
-=== Coupon Generator for WooCommerce ===
+=== Coupon Generator for E-Commerce ===
 Contributors: sormano
 Tags: woocommerce coupon generator, woocommerce, woocommerce coupon, coupons, coupon importer, woocommerce automatic coupons, woocommerce random coupons
 Requires at least: 4.0.0
@@ -8,10 +8,10 @@ Requires PHP: 5.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Generate WooCommerce coupons easily and fast.
+Generate E-Commerce coupons easily and fast.
 
 == Description ==
-WooCommerce Coupon Generator is a coupon generator that allows you to setup and generator tens of thousands of coupons at the same time.
+E-Commerce Coupon Generator is a coupon generator that allows you to setup and generator tens of thousands of coupons at the same time.
 
 By going through 3 easy steps you can setup your desired coupons and start generating the coupons.
 

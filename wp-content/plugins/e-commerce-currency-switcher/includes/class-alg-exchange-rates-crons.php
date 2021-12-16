@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Currency Switcher Exchange Rates Crons
+ * PACMEC Currency Switcher Exchange Rates Crons
  *
- * The WooCommerce Currency Switcher Exchange Rates Crons class.
+ * The PACMEC Currency Switcher Exchange Rates Crons class.
  *
  * @version 1.0.0
  * @since   1.0.0

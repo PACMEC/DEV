@@ -5,7 +5,7 @@
  *
  * @package Customizer Library WooCommerce Designer
  */
-if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && class_exists( 'WooCustomizer_Library_Styles' ) ) {
+if ( !function_exists( 'ecommercecustomizer_customizer_library_build_styles' ) && class_exists( 'WooCustomizer_Library_Styles' ) ) {
     /**
      * Process user options to generate CSS needed to implement the choices.
      *
@@ -13,14 +13,14 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
      *
      * @return void
      */
-    function woocustomizer_customizer_library_build_styles()
+    function ecommercecustomizer_customizer_library_build_styles()
     {
         // ----------------------------------------------------------------------------------------------- WCD Panel Settings
         // Remove All WooCommerce Breadcrumbs
         $setting = 'wcz-wc-remove-breadcrumbs';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_shop_title = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce .woocommerce-breadcrumb' ),
@@ -31,15 +31,15 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-notice-banner', woocustomizer_library_get_default( 'wcz-wc-notice-banner' ) ) && get_option( 'wcz-wc-notice-design', woocustomizer_library_get_default( 'wcz-wc-notice-design' ) ) ) {
+        if ( get_option( 'wcz-wc-notice-banner', ecommercecustomizer_library_get_default( 'wcz-wc-notice-banner' ) ) && get_option( 'wcz-wc-notice-design', ecommercecustomizer_library_get_default( 'wcz-wc-notice-design' ) ) ) {
             // Notice Color
             $setting = 'wcz-wc-notice-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_notice_clr = wcz_sanitize_hex_color( $mod );
                 
-                if ( 'wcz-notice-four' == get_option( 'wcz-wc-notice-style', woocustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
+                if ( 'wcz-notice-four' == get_option( 'wcz-wc-notice-style', ecommercecustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
                     WooCustomizer_Library_Styles()->add( array(
                         'selectors'    => array( '.wcz-banner-notice.wcz-notice-four' ),
                         'declarations' => array(
@@ -49,7 +49,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
                     ) );
                 } else {
                     
-                    if ( 'wcz-notice-three' == get_option( 'wcz-wc-notice-style', woocustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
+                    if ( 'wcz-notice-three' == get_option( 'wcz-wc-notice-style', ecommercecustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
                         WooCustomizer_Library_Styles()->add( array(
                             'selectors'    => array( '.wcz-banner-notice.wcz-notice-three' ),
                             'declarations' => array(
@@ -58,8 +58,8 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
                         ) );
                     } else {
                         
-                        if ( 'wcz-notice-two' == get_option( 'wcz-wc-notice-style', woocustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
-                            $wcz_notice_clr_rgb = woocustomizer_library_hex_to_rgb( $mod );
+                        if ( 'wcz-notice-two' == get_option( 'wcz-wc-notice-style', ecommercecustomizer_library_get_default( 'wcz-wc-notice-style' ) ) ) {
+                            $wcz_notice_clr_rgb = ecommercecustomizer_library_hex_to_rgb( $mod );
                             WooCustomizer_Library_Styles()->add( array(
                                 'selectors'    => array( '.wcz-banner-notice.wcz-notice-two' ),
                                 'declarations' => array(
@@ -89,9 +89,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Notice Title Size
             $setting = 'wcz-wc-notice-titlesize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_note_tsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-banner-notice h4' ),
@@ -103,9 +103,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Notice Title Size
             $setting = 'wcz-wc-notice-textsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_note_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-banner-notice p' ),
@@ -117,9 +117,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Notice Center
             $setting = 'wcz-wc-notice-center';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_note_tsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-banner-notice' ),
@@ -131,9 +131,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Notice Width
             $setting = 'wcz-wc-notice-width';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_note_width = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-banner-notice' ),
@@ -145,9 +145,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Notice Margin
             $setting = 'wcz-wc-notice-margin';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_note_margin = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-banner-notice' ),
@@ -163,9 +163,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         // ----------------------------------------------------------------------------------------------- WCD Shop Page Settings
         // Remove Shop Page Breadcrumbs
         $setting = 'wcz-shop-remove-breadcrumbs';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_shop_bc = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.post-type-archive-product .woocommerce-breadcrumb' ),
@@ -177,9 +177,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Shop Page Title
         $setting = 'wcz-shop-remove-title';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_shop_title = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.post-type-archive-product header.woocommerce-products-header .woocommerce-products-header__title' ),
@@ -191,9 +191,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Shop Page Sorting
         $setting = 'wcz-shop-remove-sorting';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_shop_sort = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce form.woocommerce-ordering' ),
@@ -205,9 +205,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Shop Page Results
         $setting = 'wcz-shop-remove-result';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_shop_result = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce p.woocommerce-result-count' ),
@@ -219,9 +219,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Shop Archive Breadcrumbs
         $setting = 'wcz-shop-archives-remove-breadcrumbs';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_arch_bc = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.tax-product_cat .woocommerce-breadcrumb,
@@ -234,9 +234,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Shop Page Title
         $setting = 'wcz-shop-archives-remove-title';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_arch_title = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.tax-product_cat header.woocommerce-products-header,
@@ -248,14 +248,14 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-shop-new-badge', woocustomizer_library_get_default( 'wcz-shop-new-badge' ) ) ) {
+        if ( get_option( 'wcz-shop-new-badge', ecommercecustomizer_library_get_default( 'wcz-shop-new-badge' ) ) ) {
             // "New" Badge Color
             $setting = 'wcz-shop-new-badge-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_badge_bgcolor = wcz_sanitize_hex_color( $mod );
-                $wcz_badge_bgrgb = woocustomizer_library_hex_to_rgb( $wcz_badge_bgcolor );
+                $wcz_badge_bgrgb = ecommercecustomizer_library_hex_to_rgb( $wcz_badge_bgcolor );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'div.wcz-new-product-badge span' ),
                     'declarations' => array(
@@ -268,12 +268,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-btns', woocustomizer_library_get_default( 'wcz-wc-edit-btns' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-btns', ecommercecustomizer_library_get_default( 'wcz-wc-edit-btns' ) ) ) {
             // Button - Font Size
             $setting = 'wcz-btn-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -288,9 +288,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Font Weight
             $setting = 'wcz-btn-fweight';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_fweight = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -305,9 +305,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Color
             $setting = 'wcz-btn-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_bgcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -325,9 +325,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Font Color
             $setting = 'wcz-btn-fontcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_fontcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -343,9 +343,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Hover Color
             $setting = 'wcz-btn-hovercolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_hovercolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button:hover,
@@ -362,9 +362,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Font Hover Color
             $setting = 'wcz-btn-fonthovercolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_hovercolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button:hover,
@@ -380,9 +380,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Border Radius
             $setting = 'wcz-btn-br';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_br = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -397,9 +397,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Padding
             $setting = 'wcz-btn-padding';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_btn_pad = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-btns.wcz-woocommerce ul.products li.product a.button,
@@ -415,12 +415,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-prodbtn-color', woocustomizer_library_get_default( 'wcz-wc-edit-prodbtn-color' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-prodbtn-color', ecommercecustomizer_library_get_default( 'wcz-wc-edit-prodbtn-color' ) ) ) {
             // Button - Color
             $setting = 'wcz-prodbtn-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_prodbtn_bgcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single.single-product.wcz-woocommerce .summary form.cart button.single_add_to_cart_button,
@@ -435,9 +435,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Font Color
             $setting = 'wcz-prodbtn-fontcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_prodbtn_fontcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single.single-product.wcz-woocommerce .summary form.cart button.single_add_to_cart_button,
@@ -450,9 +450,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Hover Color
             $setting = 'wcz-prodbtn-hovercolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_prodbtn_hovercolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single.single-product.wcz-woocommerce .summary form.cart button.single_add_to_cart_button:hover,
@@ -466,9 +466,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Button - Font Hover Color
             $setting = 'wcz-prodbtn-fonthovercolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_prodbtn_fhovercolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single.single-product.wcz-woocommerce .summary form.cart button.single_add_to_cart_button:hover,
@@ -482,12 +482,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-sale', woocustomizer_library_get_default( 'wcz-wc-edit-sale' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-sale', ecommercecustomizer_library_get_default( 'wcz-wc-edit-sale' ) ) ) {
             // Sale Banner - Font Size
             $setting = 'wcz-sale-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_sale_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-edit-sale.woocommerce ul.products li.product span.onsale,
@@ -502,9 +502,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Sale Banner - Font Weight
             $setting = 'wcz-sale-fweight';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_sale_fweight = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-edit-sale.woocommerce ul.products li.product span.onsale,
@@ -519,11 +519,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Sale Banner - Color
             $setting = 'wcz-sale-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_sale_bgcolor = wcz_sanitize_hex_color( $mod );
-                $wcz_sale_bgrgb = woocustomizer_library_hex_to_rgb( $wcz_sale_bgcolor );
+                $wcz_sale_bgrgb = ecommercecustomizer_library_hex_to_rgb( $wcz_sale_bgcolor );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-edit-sale.woocommerce ul.products li.product span.onsale,
 					body.wcz-edit-sale.single-product span.onsale,
@@ -540,9 +540,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Sale Banner - Border Radius
             $setting = 'wcz-sale-br';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_sale_br = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-edit-sale.woocommerce ul.products li.product span.onsale,
@@ -557,9 +557,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Sale Banner - Padding
             $setting = 'wcz-sale-padding';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_sale_pad = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.wcz-edit-sale.woocommerce ul.products li.product span.onsale,
@@ -575,12 +575,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-shop-title', woocustomizer_library_get_default( 'wcz-wc-edit-shop-title' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-shop-title', ecommercecustomizer_library_get_default( 'wcz-wc-edit-shop-title' ) ) ) {
             // Product Title - Font Size
             $setting = 'wcz-shop-title-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_shop_prodtitlefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce.wcz-woocommerce ul.products li.product .woocommerce-loop-product__title,
@@ -594,9 +594,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Product Title - Color
             $setting = 'wcz-shop-title-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_shop_prodtitlefc = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce.wcz-woocommerce ul.products li.product .woocommerce-loop-product__title,
@@ -611,12 +611,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-shop-price', woocustomizer_library_get_default( 'wcz-wc-edit-shop-price' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-shop-price', ecommercecustomizer_library_get_default( 'wcz-wc-edit-shop-price' ) ) ) {
             // Product Price - Font Size
             $setting = 'wcz-shop-price-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_shop_prodpricefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce.wcz-woocommerce ul.products li.product .price,
@@ -630,11 +630,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Product Price - Color
             $setting = 'wcz-shop-price-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_shop_prodpricefc = wcz_sanitize_hex_color( $mod );
-                $wcz_shop_prodpricefc_rgb = woocustomizer_library_hex_to_rgb( $mod );
+                $wcz_shop_prodpricefc_rgb = ecommercecustomizer_library_hex_to_rgb( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce.wcz-woocommerce ul.products li.product .price,
 					body.wcz-woocommerce .products .product .price,
@@ -658,9 +658,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         // ----------------------------------------------------------------------------------------------- WooCommerce Product Page Settings
         // Remove Product Breadcrumbs
         $setting = 'wcz-remove-product-breadcrumbs';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_prod_bc = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.single-product .woocommerce-breadcrumb' ),
@@ -672,9 +672,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Product SKU, Cats & Tags
         $setting = 'wcz-remove-product-sku';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_prod_sku = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.single-product .product_meta .sku_wrapper' ),
@@ -685,9 +685,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-remove-product-cats';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_prod_cats = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.single-product .product_meta .posted_in' ),
@@ -698,9 +698,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-remove-product-tags';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_prod_tags = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.single-product .product_meta .tagged_as' ),
@@ -712,7 +712,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Product Recommendations
         $setting = 'wcz-wcproduct-recomm';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
         if ( $mod == 'wcz-wcproduct-recomm-remove' ) {
             $wcz_prod_recom = esc_attr( $mod );
@@ -726,7 +726,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Product Related Products
         $setting = 'wcz-wcproduct-related';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
         if ( $mod == 'wcz-wcproduct-related-remove' ) {
             $wcz_prod_rel = esc_attr( $mod );
@@ -739,9 +739,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-add-shop-button';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_prod_shop_btn = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.single-product a.wcz-continue' ),
@@ -752,11 +752,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-add-product-long-desc', woocustomizer_library_get_default( 'wcz-add-product-long-desc' ) ) ) {
+        if ( get_option( 'wcz-add-product-long-desc', ecommercecustomizer_library_get_default( 'wcz-add-product-long-desc' ) ) ) {
             $setting = 'wcz-longdesc-top';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldts = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-long-desc' ),
@@ -768,9 +768,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-longdesc-bottom';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldbs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-long-desc' ),
@@ -784,11 +784,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-add-product-reviews', woocustomizer_library_get_default( 'wcz-add-product-reviews' ) ) ) {
+        if ( get_option( 'wcz-add-product-reviews', ecommercecustomizer_library_get_default( 'wcz-add-product-reviews' ) ) ) {
             $setting = 'wcz-reviews-top';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldts = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-reviews' ),
@@ -800,9 +800,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-reviews-bottom';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldbs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-reviews' ),
@@ -816,11 +816,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-add-product-addinfo', woocustomizer_library_get_default( 'wcz-add-product-addinfo' ) ) ) {
+        if ( get_option( 'wcz-add-product-addinfo', ecommercecustomizer_library_get_default( 'wcz-add-product-addinfo' ) ) ) {
             $setting = 'wcz-addinfo-top';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldts = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-addinfo' ),
@@ -832,9 +832,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-addinfo-bottom';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_ldbs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.wcz-product-addinfo' ),
@@ -848,12 +848,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-product-title', woocustomizer_library_get_default( 'wcz-wc-edit-product-title' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-product-title', ecommercecustomizer_library_get_default( 'wcz-wc-edit-product-title' ) ) ) {
             // Product Page Title - Font Size
             $setting = 'wcz-product-title-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodtitlefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single-product.wcz-woocommerce div.product .product_title' ),
@@ -865,9 +865,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Product Page Title - Color
             $setting = 'wcz-product-title-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodtitlefc = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single-product.wcz-woocommerce div.product .product_title' ),
@@ -880,12 +880,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-product-price', woocustomizer_library_get_default( 'wcz-wc-edit-product-price' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-product-price', ecommercecustomizer_library_get_default( 'wcz-wc-edit-product-price' ) ) ) {
             // Product Page Price - Font Size
             $setting = 'wcz-product-price-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodpricefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single-product.wcz-woocommerce div.product p.price' ),
@@ -897,9 +897,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             
             // Product Page Price - Color
             $setting = 'wcz-product-price-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodpricefc = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.single-product.wcz-woocommerce div.product p.price,
@@ -913,12 +913,12 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-wc-edit-contshop-btn', woocustomizer_library_get_default( 'wcz-wc-edit-contshop-btn' ) ) ) {
+        if ( get_option( 'wcz-wc-edit-contshop-btn', ecommercecustomizer_library_get_default( 'wcz-wc-edit-contshop-btn' ) ) ) {
             // Continue Shopping
             $setting = 'wcz-contshop-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_contshop_bgcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'a.button.wcz-continue' ),
@@ -930,9 +930,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-contshop-hovercolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_contshop_bgcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'a.button.wcz-continue:hover' ),
@@ -944,9 +944,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-contshop-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodpricefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'a.button.wcz-continue' ),
@@ -957,9 +957,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-contshop-pad';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_product_prodpricefs = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'a.button.wcz-continue' ),
@@ -973,9 +973,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Account Dashboard default text
         $setting = 'wcz-accdash-remdefault';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) && is_account_page() && 'default' !== get_option( 'wcz-account-dashboard-content', woocustomizer_library_get_default( 'wcz-account-dashboard-content' ) ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) && is_account_page() && 'default' !== get_option( 'wcz-account-dashboard-content', ecommercecustomizer_library_get_default( 'wcz-account-dashboard-content' ) ) ) {
             $wcz_shop_result = esc_attr( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce-account .woocommerce-MyAccount-content > p' ),
@@ -992,8 +992,8 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         // ----------------------------------------------------------------------------------------------- WooCommerce Cart Settings
         // Remove Update Button from Cart Page
         $setting = 'wcz-cart-ajax-update';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
-        if ( is_cart() && $mod !== woocustomizer_library_get_default( $setting ) ) {
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
+        if ( is_cart() && $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( '.woocommerce button[name="update_cart"],
 				.woocommerce input[name="update_cart"]' ),
@@ -1004,7 +1004,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         // Remove Cross Sells heading
         $setting = 'wcz-wccart-recomm';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
         if ( $mod == 'wcz-wccart-recomm-remove' ) {
             $wcz_cart_recom = esc_attr( $mod );
@@ -1018,7 +1018,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Remove Cart Totals heading
         $setting = 'wcz-wccart-totals';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
         if ( $mod == 'wcz-wccart-totals-remove' ) {
             $wcz_cart_recom = esc_attr( $mod );
@@ -1032,9 +1032,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Cart - Back To Shop Button
         $setting = 'wcz-cart-bts-color';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_cartbts_color = wcz_sanitize_hex_color( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce-cart a.button.wcz-bts-btn' ),
@@ -1046,9 +1046,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-cart-bts-fcolor';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_cartbts_fcolor = wcz_sanitize_hex_color( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce-cart a.button.wcz-bts-btn' ),
@@ -1059,9 +1059,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-cart-bts-hcolor';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_cartbts_hcolor = wcz_sanitize_hex_color( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce-cart a.button.wcz-bts-btn:hover' ),
@@ -1073,9 +1073,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         $setting = 'wcz-cart-bts-hfcolor';
-        $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+        $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
         
-        if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+        if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
             $wcz_cartbts_hfcolor = wcz_sanitize_hex_color( $mod );
             WooCustomizer_Library_Styles()->add( array(
                 'selectors'    => array( 'body.woocommerce-cart a.button.wcz-bts-btn:hover' ),
@@ -1086,11 +1086,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-cart-return-btn', woocustomizer_library_get_default( 'wcz-cart-return-btn' ) ) ) {
+        if ( get_option( 'wcz-cart-return-btn', ecommercecustomizer_library_get_default( 'wcz-cart-return-btn' ) ) ) {
             $setting = 'wcz-cart-return-btn-align';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop' ),
@@ -1101,9 +1101,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button' ),
@@ -1114,9 +1114,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_color = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button' ),
@@ -1128,9 +1128,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button' ),
@@ -1141,9 +1141,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-hcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button:hover' ),
@@ -1155,9 +1155,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-hfcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hfcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button:hover' ),
@@ -1168,9 +1168,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-return-btn-pad';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_pad = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart p.return-to-shop a.button' ),
@@ -1183,11 +1183,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-cart-table-btn', woocustomizer_library_get_default( 'wcz-cart-table-btn' ) ) ) {
+        if ( get_option( 'wcz-cart-table-btn', ecommercecustomizer_library_get_default( 'wcz-cart-table-btn' ) ) ) {
             $setting = 'wcz-cart-table-btn-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_table_btn_color = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .woocommerce-cart-form .coupon button.button,
@@ -1200,9 +1200,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-table-btn-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_table_btn_fcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .woocommerce-cart-form .coupon button.button,
@@ -1214,9 +1214,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-table-btn-hcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_table_btn_hcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .woocommerce-cart-form .coupon button.button:hover,
@@ -1229,9 +1229,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-table-btn-hfcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_table_btn_hfcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .woocommerce-cart-form .coupon button.button:hover,
@@ -1245,11 +1245,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-cart-proceed-btn', woocustomizer_library_get_default( 'wcz-cart-proceed-btn' ) ) ) {
+        if ( get_option( 'wcz-cart-proceed-btn', ecommercecustomizer_library_get_default( 'wcz-cart-proceed-btn' ) ) ) {
             $setting = 'wcz-cart-proceed-btn-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button' ),
@@ -1260,9 +1260,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-proceed-btn-pad';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_pad = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button' ),
@@ -1273,9 +1273,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-proceed-btn-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_color = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button' ),
@@ -1287,9 +1287,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-proceed-btn-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button' ),
@@ -1300,9 +1300,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-proceed-btn-hcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button:hover' ),
@@ -1314,9 +1314,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-proceed-btn-hfcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hfcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-cart .wc-proceed-to-checkout a.button.checkout-button:hover' ),
@@ -1329,11 +1329,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-cart-show-discamount', woocustomizer_library_get_default( 'wcz-cart-show-discamount' ) ) ) {
+        if ( get_option( 'wcz-cart-show-discamount', ecommercecustomizer_library_get_default( 'wcz-cart-show-discamount' ) ) ) {
             $setting = 'wcz-cart-discamount-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cartys = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'tr.wcz-discamount' ),
@@ -1345,9 +1345,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-cart-discamount-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cartysc = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'tr.wcz-discamount' ),
@@ -1360,11 +1360,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-checkout-placeorder-btn', woocustomizer_library_get_default( 'wcz-checkout-placeorder-btn' ) ) ) {
+        if ( get_option( 'wcz-checkout-placeorder-btn', ecommercecustomizer_library_get_default( 'wcz-checkout-placeorder-btn' ) ) ) {
             $setting = 'wcz-checkout-placeorder-btn-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order' ),
@@ -1375,9 +1375,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-placeorder-btn-pad';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_pad = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order' ),
@@ -1388,9 +1388,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-placeorder-btn-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_color = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order' ),
@@ -1402,9 +1402,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-placeorder-btn-fcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order' ),
@@ -1415,9 +1415,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-placeorder-btn-hcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order:hover' ),
@@ -1429,9 +1429,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-placeorder-btn-hfcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_hfcolor = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'body.woocommerce-checkout #payment button#place_order:hover' ),
@@ -1445,11 +1445,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         
         // Checkout Headings
         
-        if ( get_option( 'wcz-checkout-edit-headings', woocustomizer_library_get_default( 'wcz-checkout-edit-headings' ) ) ) {
+        if ( get_option( 'wcz-checkout-edit-headings', ecommercecustomizer_library_get_default( 'wcz-checkout-edit-headings' ) ) ) {
             $setting = 'wcz-checkout-sechead-fsize';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_fsize = esc_attr( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.woocommerce-page.woocommerce-checkout #customer_details h3,
@@ -1463,9 +1463,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-sechead-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_cart_rts_btn_color = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( '.woocommerce-page.woocommerce-checkout #customer_details h3,
@@ -1481,11 +1481,11 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
         }
         
         
-        if ( get_option( 'wcz-checkout-show-discamount', woocustomizer_library_get_default( 'wcz-checkout-show-discamount' ) ) ) {
+        if ( get_option( 'wcz-checkout-show-discamount', ecommercecustomizer_library_get_default( 'wcz-checkout-show-discamount' ) ) ) {
             $setting = 'wcz-checkout-discamount-bgcolor';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_checkoutys = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'tr.wcz-discamount' ),
@@ -1497,9 +1497,9 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
             }
             
             $setting = 'wcz-checkout-discamount-color';
-            $mod = get_option( $setting, woocustomizer_library_get_default( $setting ) );
+            $mod = get_option( $setting, ecommercecustomizer_library_get_default( $setting ) );
             
-            if ( $mod !== woocustomizer_library_get_default( $setting ) ) {
+            if ( $mod !== ecommercecustomizer_library_get_default( $setting ) ) {
                 $wcz_checkoutysc = wcz_sanitize_hex_color( $mod );
                 WooCustomizer_Library_Styles()->add( array(
                     'selectors'    => array( 'tr.wcz-discamount' ),
@@ -1515,8 +1515,8 @@ if ( !function_exists( 'woocustomizer_customizer_library_build_styles' ) && clas
     }
 
 }
-add_action( 'customizer_library_styles', 'woocustomizer_customizer_library_build_styles' );
-if ( !function_exists( 'woocustomizer_customizer_library_styles' ) ) {
+add_action( 'customizer_library_styles', 'ecommercecustomizer_customizer_library_build_styles' );
+if ( !function_exists( 'ecommercecustomizer_customizer_library_styles' ) ) {
     /**
      * Generates the style tag and CSS needed for the theme options.
      *
@@ -1527,7 +1527,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_styles' ) ) {
      *
      * @return void
      */
-    function woocustomizer_customizer_library_styles()
+    function ecommercecustomizer_customizer_library_styles()
     {
         do_action( 'customizer_library_styles' );
         // Echo the rules
@@ -1542,7 +1542,7 @@ if ( !function_exists( 'woocustomizer_customizer_library_styles' ) ) {
     }
 
 }
-add_action( 'wp_enqueue_scripts', 'woocustomizer_customizer_library_styles', 11 );
+add_action( 'wp_enqueue_scripts', 'ecommercecustomizer_customizer_library_styles', 11 );
 function wcz_getContrastColor( $hexColor )
 {
     // hexColor RGB

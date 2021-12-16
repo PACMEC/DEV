@@ -7,8 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * In this step the options of the coupon are shown as known from the regular
  * add coupon screen.
  *
- * @author		Jeroen Sormani
- * @package		WooCommerce Coupon Generator
+ * @author		PACMEC
+ * @package		E-Commerce Coupon Generator
  * @version		1.0.0
  */
 

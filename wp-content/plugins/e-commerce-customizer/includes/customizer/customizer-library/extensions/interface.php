@@ -6,7 +6,7 @@
  * @author        Devin Price
  */
 
-if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
+if ( ! function_exists( 'ecommercecustomizer_library_register' ) ) : /**
  * Configure settings and controls for the theme customizer
  *
  * @since  1.0.0.
@@ -15,7 +15,7 @@ if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
  *
  * @return void
  */ {
-	function woocustomizer_library_register( $wp_customize ) {
+	function ecommercecustomizer_library_register( $wp_customize ) {
 
 		$customizer_library = WooCustomizer_Library::Instance();
 
@@ -28,12 +28,12 @@ if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
 
 		// Add the sections
 		if ( isset( $options['sections'] ) ) {
-			woocustomizer_library_add_sections( $options['sections'], $wp_customize );
+			ecommercecustomizer_library_add_sections( $options['sections'], $wp_customize );
 		}
 
 		// Add the sections
 		if ( isset( $options['panels'] ) ) {
-			woocustomizer_library_add_panels( $options['panels'], $wp_customize );
+			ecommercecustomizer_library_add_panels( $options['panels'], $wp_customize );
 		}
 
 		// Sets the priority for each control added
@@ -53,7 +53,7 @@ if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
 
 				// Apply a default sanitization if one isn't set
 				if ( ! isset( $option['sanitize_callback'] ) ) {
-					$option['sanitize_callback'] = woocustomizer_library_get_sanitization( $option['type'] );
+					$option['sanitize_callback'] = ecommercecustomizer_library_get_sanitization( $option['type'] );
 				}
 
 				// Set blank active_callback if one isn't set
@@ -62,7 +62,7 @@ if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
 				}
 
 				// Add the setting
-				woocustomizer_library_add_setting( $option, $wp_customize );
+				ecommercecustomizer_library_add_setting( $option, $wp_customize );
 
 				// Priority for control
 				if ( ! isset( $option['priority'] ) ) {
@@ -149,7 +149,7 @@ if ( ! function_exists( 'woocustomizer_library_register' ) ) : /**
 
 endif;
 
-add_action( 'customize_register', 'woocustomizer_library_register', 100 );
+add_action( 'customize_register', 'ecommercecustomizer_library_register', 100 );
 
 /**
  * Add the customizer sections
@@ -160,7 +160,7 @@ add_action( 'customize_register', 'woocustomizer_library_register', 100 );
  *
  * @return void
  */
-function woocustomizer_library_add_sections( $sections, $wp_customize ) {
+function ecommercecustomizer_library_add_sections( $sections, $wp_customize ) {
 
 	foreach ( $sections as $section ) {
 
@@ -182,7 +182,7 @@ function woocustomizer_library_add_sections( $sections, $wp_customize ) {
  *
  * @return void
  */
-function woocustomizer_library_add_panels( $panels, $wp_customize ) {
+function ecommercecustomizer_library_add_panels( $panels, $wp_customize ) {
 
 	foreach ( $panels as $panel ) {
 
@@ -205,7 +205,7 @@ function woocustomizer_library_add_panels( $panels, $wp_customize ) {
  *
  * @return void
  */
-function woocustomizer_library_add_setting( $option, $wp_customize ) {
+function ecommercecustomizer_library_add_setting( $option, $wp_customize ) {
 
 	// Delete option if it's a checkbox and set to 0
 	if ( '0' == get_option( $option['id'] ) ) {
@@ -248,14 +248,14 @@ function woocustomizer_library_add_setting( $option, $wp_customize ) {
  *
  * @return void
  */
-function woocustomizer_library_get_sanitization( $type ) {
+function ecommercecustomizer_library_get_sanitization( $type ) {
 
 	if ( 'select' == $type || 'radio' == $type ) {
-		return 'woocustomizer_library_sanitize_choices';
+		return 'ecommercecustomizer_library_sanitize_choices';
 	}
 
 	if ( 'checkbox' == $type ) {
-		return 'woocustomizer_library_sanitize_checkbox';
+		return 'ecommercecustomizer_library_sanitize_checkbox';
 	}
 
 	if ( 'color' == $type ) {
@@ -263,11 +263,11 @@ function woocustomizer_library_get_sanitization( $type ) {
 	}
 
 	if ( 'upload' == $type || 'image' == $type ) {
-		return 'woocustomizer_library_sanitize_file_url';
+		return 'ecommercecustomizer_library_sanitize_file_url';
 	}
 
 	if ( 'text' == $type || 'textarea' == $type ) {
-		return 'woocustomizer_library_sanitize_text';
+		return 'ecommercecustomizer_library_sanitize_text';
 	}
 
 	if ( 'url' == $type ) {
@@ -275,7 +275,7 @@ function woocustomizer_library_get_sanitization( $type ) {
 	}
 
 	if ( 'range' == $type ) {
-		return 'woocustomizer_library_sanitize_range';
+		return 'ecommercecustomizer_library_sanitize_range';
 	}
 
 	if ( 'dropdown-pages' == $type ) {

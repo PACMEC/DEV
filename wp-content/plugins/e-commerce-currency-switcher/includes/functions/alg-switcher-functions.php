@@ -145,7 +145,7 @@ if ( ! function_exists( 'alg_get_enabled_currencies' ) ) {
 		if ( $with_default ) {
 			$additional_currencies[] = $default_currency;
 		}
-		$total_number = min( get_option( 'alg_currency_switcher_total_number', 2 ), apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) );
+		$total_number = min( get_option( 'alg_currency_switcher_total_number', 20 ), apply_filters( 'alg_wc_currency_switcher_plugin_option', 20 ) );
 		for ( $i = 1; $i <= $total_number; $i++ ) {
 			if ( 'yes' === get_option( 'alg_currency_switcher_currency_enabled_' . $i, 'yes' ) ) {
 				$additional_currencies[] = get_option( 'alg_currency_switcher_currency_' . $i, $default_currency );

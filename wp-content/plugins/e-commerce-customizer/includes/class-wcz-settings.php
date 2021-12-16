@@ -82,7 +82,7 @@ class WooCustomizer_Settings {
 	 * @return array 		Modified links
 	 */
 	public function wcz_add_plugins_settings_link( $links ) {
-		$settings_link = '<a href="admin.php?page=wcz_settings">' . esc_html__( 'Settings', 'woocustomizer' ) . '</a>';
+		$settings_link = '<a href="admin.php?page=wcz_settings">' . esc_html__( 'Settings', 'ecommercecustomizer' ) . '</a>';
 		array_push( $links, $settings_link );
 		
   		return $links;
@@ -134,8 +134,8 @@ class WooCustomizer_Settings {
 			array(
 				'location'    => 'submenu', // Possible settings: options, menu, submenu.
 				'parent_slug' => 'woocommerce',
-				'page_title'  => __( 'StoreCustomizer', 'woocustomizer' ),
-				'menu_title'  => __( 'StoreCustomizer', 'woocustomizer' ) . '<span class="wcznotif"></span>',
+				'page_title'  => __( 'StoreCustomizer', 'ecommercecustomizer' ),
+				'menu_title'  => __( 'StoreCustomizer', 'ecommercecustomizer' ) . '<span class="wcznotif"></span>',
 				'capability'  => 'manage_options',
 				'menu_slug'   => $this->parent->_token . '_settings',
 				'function'    => array( $this, 'settings_page' ),
@@ -189,19 +189,19 @@ class WooCustomizer_Settings {
 		if ( ! wcz_fs()->can_use_premium_code() ) {
 
 			$settings['wcz_general'] = array(
-				'title'       => __( 'StoreCustomizer', 'woocustomizer' ),
+				'title'       => __( 'StoreCustomizer', 'ecommercecustomizer' ),
 				'description' => '<b>Note:</b> All settings for StoreCustomizer are built into the WordPress Customizer.<br />Please go to <b>Appearance -> Customize -> StoreCustomizer</b>',
 				'fields'      => array(
 					array(
 						'id'          => 'set_general_tour',
-						'label'       => __( 'Turn off the Customizer Tour', 'woocustomizer' ),
+						'label'       => __( 'Turn off the Customizer Tour', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
 					),
 					array(
 						'id'          => 'set_data_to_delete',
-						'label'       => __( 'Delete all plugin data when StoreCustomizer is deleted', 'woocustomizer' ),
+						'label'       => __( 'Delete all plugin data when StoreCustomizer is deleted', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -210,106 +210,106 @@ class WooCustomizer_Settings {
 			);
 			// Catalogue Mode Promo Tab
 			$settings['wcz_catalogue'] = array(
-				'title'       => __( 'Catalogue Mode', 'woocustomizer' ),
-				'description' => __( 'These are settings to turn your online store into Catalogue Mode so users can only browse products and not purchase them for the time period set.', 'woocustomizer' ),
+				'title'       => __( 'Catalogue Mode', 'ecommercecustomizer' ),
+				'description' => __( 'These are settings to turn your online store into Catalogue Mode so users can only browse products and not purchase them for the time period set.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'catalogue_mode_promo',
-						'label'       => __( 'Catalogue Mode', 'woocustomizer' ),
-						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'woocustomizer' ),
+						'label'       => __( 'Catalogue Mode', 'ecommercecustomizer' ),
+						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'ecommercecustomizer' ),
 						'type'        => 'promo',
 						'default'     => '',
-						'top_txt' => __( 'Easily remove the purchase functionality from your shop, turning your online store into a beautiful online catalogue. Apply these settings to all products, selected products, or only to logged out users, prompting users to create an account and log in to purchase your products.', 'woocustomizer' ),
+						'top_txt' => __( 'Easily remove the purchase functionality from your shop, turning your online store into a beautiful online catalogue. Apply these settings to all products, selected products, or only to logged out users, prompting users to create an account and log in to purchase your products.', 'ecommercecustomizer' ),
 					),
 				),
 			);
 			// Menu Cart Promo Tab
 			$settings['wcz_menu_cart'] = array(
-				'title'       => __( 'Menu Cart', 'woocustomizer' ),
-				'description' => __( 'Easily add a WooCommerce Menu Cart to your site navigation.', 'woocustomizer' ),
+				'title'       => __( 'Menu Cart', 'ecommercecustomizer' ),
+				'description' => __( 'Easily add a WooCommerce Menu Cart to your site navigation.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'menu_cart_promo',
-						'label'       => __( 'Menu Cart', 'woocustomizer' ),
-						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'woocustomizer' ),
+						'label'       => __( 'Menu Cart', 'ecommercecustomizer' ),
+						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'ecommercecustomizer' ),
 						'type'        => 'promo',
 						'default'     => '',
-						'top_txt' => __( 'Simply turn on Menu Cart and select which menu you’d like to display a WooCommerce cart in. Add a drop down mini cart basket so your users can add or remove products, view their cart or go straight to checkout.', 'woocustomizer' ),
+						'top_txt' => __( 'Simply turn on Menu Cart and select which menu you’d like to display a WooCommerce cart in. Add a drop down mini cart basket so your users can add or remove products, view their cart or go straight to checkout.', 'ecommercecustomizer' ),
 					),
 				)
 			);
 			// Product Quick View Promo Tab
 			$settings['wcz_product_quickview'] = array(
-				'title'       => __( 'Product Quick View', 'woocustomizer' ),
-				'description' => __( 'Add a Quick View Popup to your WooCommerce Products.', 'woocustomizer' ),
+				'title'       => __( 'Product Quick View', 'ecommercecustomizer' ),
+				'description' => __( 'Add a Quick View Popup to your WooCommerce Products.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'product_quickview_promo',
-						'label'       => __( 'Product Quick View', 'woocustomizer' ),
-						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'woocustomizer' ),
+						'label'       => __( 'Product Quick View', 'ecommercecustomizer' ),
+						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'ecommercecustomizer' ),
 						'type'        => 'promo',
 						'default'     => '',
-						'top_txt' => __( 'Give your users the option to preview your products and easily \'add to cart\' or browse the images from within a popup on your shop page, or click through to the product page after they\'ve seen it all.', 'woocustomizer' ),
+						'top_txt' => __( 'Give your users the option to preview your products and easily \'add to cart\' or browse the images from within a popup on your shop page, or click through to the product page after they\'ve seen it all.', 'ecommercecustomizer' ),
 					),
 				),
 			);
 			// Ajax Search Promo Tab
 			$settings['wcz_ajax_search'] = array(
-				'title'       => __( 'Ajax Search', 'woocustomizer' ),
-				'description' => __( 'Add Ajax Search functionlaity to make finding your products quicker and easier.', 'woocustomizer' ),
+				'title'       => __( 'Ajax Search', 'ecommercecustomizer' ),
+				'description' => __( 'Add Ajax Search functionlaity to make finding your products quicker and easier.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'ajax_search_promo',
-						'label'       => __( 'Ajax Product Search', 'woocustomizer' ),
-						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'woocustomizer' ),
+						'label'       => __( 'Ajax Product Search', 'ecommercecustomizer' ),
+						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'ecommercecustomizer' ),
 						'type'        => 'promo',
 						'default'     => '',
-						'top_txt' => __( 'Want to speed up users finding your products? Add simple ajax product search to your search bar and configure a bunch of settings to display a prediction of products when your users start typing to search through your products.', 'woocustomizer' ),
+						'top_txt' => __( 'Want to speed up users finding your products? Add simple ajax product search to your search bar and configure a bunch of settings to display a prediction of products when your users start typing to search through your products.', 'ecommercecustomizer' ),
 					),
 				),
 			);
 			// Custom Thank You Pages Promo Tab
 			$settings['wcz_thank_you'] = array(
-				'title'       => __( 'Thank You Page(s)', 'woocustomizer' ),
-				'description' => __( 'The after purchase Thank You page is a very powerful place to get your users to sign up to your newsletter, show how to use the products, or to advertise other products that they might like<br /><br />They have just purchased something from you so they already trust you and want your products.', 'woocustomizer' ),
+				'title'       => __( 'Thank You Page(s)', 'ecommercecustomizer' ),
+				'description' => __( 'The after purchase Thank You page is a very powerful place to get your users to sign up to your newsletter, show how to use the products, or to advertise other products that they might like<br /><br />They have just purchased something from you so they already trust you and want your products.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'thank_you_promo',
-						'label'       => __( 'Custom Thank You Pages', 'woocustomizer' ),
-						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'woocustomizer' ),
+						'label'       => __( 'Custom Thank You Pages', 'ecommercecustomizer' ),
+						'description' => __( 'Upgrade from only <b>$49</b> to unlock these extra Pro features', 'ecommercecustomizer' ),
 						'type'        => 'promo',
 						'default'     => '',
-						'top_txt' => __( 'StoreCustomizer offers the ability to build your own custom Thank You pages for WooCommerce, using default WordPress or any page builder you like, and to redirect the customer to your new default Thank You page, redirect them to different pages depending on the products they\'ve just bought, or to pages depending how they purchased the products on your store.', 'woocustomizer' ),
+						'top_txt' => __( 'StoreCustomizer offers the ability to build your own custom Thank You pages for WooCommerce, using default WordPress or any page builder you like, and to redirect the customer to your new default Thank You page, redirect them to different pages depending on the products they\'ve just bought, or to pages depending how they purchased the products on your store.', 'ecommercecustomizer' ),
 					),
 				),
             );
             // Handheld Footer Bar Settings Tab
 			$settings['wcz_handheld_footer'] = array(
-				'title'       => __( 'Handheld Footer Bar', 'woocustomizer' ),
-				'description' => __( 'Make navigating your products and proceeding to the cart or checkout pages on your store even quicker and easier for all users on handheld devices.', 'woocustomizer' ),
+				'title'       => __( 'Handheld Footer Bar', 'ecommercecustomizer' ),
+				'description' => __( 'Make navigating your products and proceeding to the cart or checkout pages on your store even quicker and easier for all users on handheld devices.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'handheld_footer_promo',
-						'label'       => __( 'Handheld Footer Bar', 'woocustomizer' ),
+						'label'       => __( 'Handheld Footer Bar', 'ecommercecustomizer' ),
 						'description' => 'Upgrade from only <b>$49</b> to unlock these extra Pro features',
 						'type'        => 'promo',
                         'default'     => '',
-                        'top_txt' => __( 'Your users can easily search for products, proceed to checkout, or view their account pages from anywhere within your store when on mobile or tablet devices. StoreCustomizer Pro gives you a neat footer navigation bar for handheld devices. Plus you are able to further customize the footer navigation bar to suit your website design.', 'woocustomizer' ),
+                        'top_txt' => __( 'Your users can easily search for products, proceed to checkout, or view their account pages from anywhere within your store when on mobile or tablet devices. StoreCustomizer Pro gives you a neat footer navigation bar for handheld devices. Plus you are able to further customize the footer navigation bar to suit your website design.', 'ecommercecustomizer' ),
 					),
 				),
             );
             // Product Badges Settings Tab
 			$settings['wcz_product_badges'] = array(
-				'title'       => __( 'Product Badges', 'woocustomizer' ),
-				'description' => __( 'Add custom badges to your WooCommerce Products.', 'woocustomizer' ),
+				'title'       => __( 'Product Badges', 'ecommercecustomizer' ),
+				'description' => __( 'Add custom badges to your WooCommerce Products.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'custom_product_badges_promo',
-						'label'       => __( 'WooCommerce Product Badges', 'woocustomizer' ),
+						'label'       => __( 'WooCommerce Product Badges', 'ecommercecustomizer' ),
 						'description' => 'Upgrade from only <b>$49</b> to unlock these extra Pro features',
 						'type'        => 'promo',
                         'default'     => '',
-                        'top_txt' => __( 'Do you want fancy badges for your WooCommerce Products? Turn on StoreCustomizer Product Badges and start creating your own badges under Products -> Product Badges.', 'woocustomizer' ),
+                        'top_txt' => __( 'Do you want fancy badges for your WooCommerce Products? Turn on StoreCustomizer Product Badges and start creating your own badges under Products -> Product Badges.', 'ecommercecustomizer' ),
 					),
 				),
 			);
@@ -320,19 +320,19 @@ class WooCustomizer_Settings {
 		if ( wcz_fs()->can_use_premium_code() ) {
 
 			$settings['wcz_general'] = array(
-				'title'       => __( 'StoreCustomizer', 'woocustomizer' ),
+				'title'       => __( 'StoreCustomizer', 'ecommercecustomizer' ),
 				'description' => __( '<b>Note:</b> All settings for StoreCustomizer are built into the WordPress Customizer.<br />Please go to <b>Appearance -> Customize -> StoreCustomizer</b>' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_general_tour',
-						'label'       => __( 'Turn off the Customizer Tour', 'woocustomizer' ),
+						'label'       => __( 'Turn off the Customizer Tour', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
 					),
 					array(
 						'id'          => 'set_data_to_delete',
-						'label'       => __( 'Delete all plugin data when StoreCustomizer is deleted', 'woocustomizer' ),
+						'label'       => __( 'Delete all plugin data when StoreCustomizer is deleted', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -341,12 +341,12 @@ class WooCustomizer_Settings {
 			);
 			// Catalogue Mode Settings Tab
 			$settings['wcz_catalogue'] = array(
-				'title'       => __( 'Catalogue Mode', 'woocustomizer' ),
-				'description' => __( 'These are settings to turn your online store into Catalogue Mode so users can only browse products and not purchase them for the time period set.', 'woocustomizer' ),
+				'title'       => __( 'Catalogue Mode', 'ecommercecustomizer' ),
+				'description' => __( 'These are settings to turn your online store into Catalogue Mode so users can only browse products and not purchase them for the time period set.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_catalogue_mode',
-						'label'       => __( 'Enable Catalogue Mode', 'woocustomizer' ),
+						'label'       => __( 'Enable Catalogue Mode', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -368,19 +368,19 @@ class WooCustomizer_Settings {
 
 			// Menu Cart Settings Tab
 			$settings['wcz_menu_cart'] = array(
-				'title'       => __( 'Menu Cart', 'woocustomizer' ),
-				'description' => __( 'Easily add a WooCommerce Menu Cart to your site navigation.', 'woocustomizer' ),
+				'title'       => __( 'Menu Cart', 'ecommercecustomizer' ),
+				'description' => __( 'Easily add a WooCommerce Menu Cart to your site navigation.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_menu_cart',
-						'label'       => __( 'Enable Menu Cart', 'woocustomizer' ),
+						'label'       => __( 'Enable Menu Cart', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
 					),
 					array(
 						'id'          => 'set_menu_cart_menu',
-						'label'       => __( 'Select which Menu to add a Menu Cart to', 'woocustomizer' ),
+						'label'       => __( 'Select which Menu to add a Menu Cart to', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'select',
 						'options'     => array_unique( $wcz_arr ),
@@ -390,12 +390,12 @@ class WooCustomizer_Settings {
 			);
 			// Product Quick View Settings Tab
 			$settings['wcz_product_quickview'] = array(
-				'title'       => __( 'Product Quick View', 'woocustomizer' ),
-				'description' => __( 'Add a Quick View Popup to your WooCommerce Products.', 'woocustomizer' ),
+				'title'       => __( 'Product Quick View', 'ecommercecustomizer' ),
+				'description' => __( 'Add a Quick View Popup to your WooCommerce Products.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_product_quickview',
-						'label'       => __( 'Enable Product Quick View', 'woocustomizer' ),
+						'label'       => __( 'Enable Product Quick View', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -404,12 +404,12 @@ class WooCustomizer_Settings {
 			);
 			// Ajax Search Settings Tab
 			$settings['wcz_ajax_search'] = array(
-				'title'       => __( 'Ajax Search', 'woocustomizer' ),
-				'description' => __( 'Add Ajax Search functionlaity to make finding your products quicker and easier.', 'woocustomizer' ),
+				'title'       => __( 'Ajax Search', 'ecommercecustomizer' ),
+				'description' => __( 'Add Ajax Search functionlaity to make finding your products quicker and easier.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_ajax_search',
-						'label'       => __( 'Enable Ajax Search', 'woocustomizer' ),
+						'label'       => __( 'Enable Ajax Search', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -439,19 +439,19 @@ class WooCustomizer_Settings {
 			unset( $wcz_pages_list['pid-' . wc_get_page_id( 'checkout' )] );
 
 			$settings['wcz_thank_you'] = array(
-				'title'       => __( 'Thank You Page(s)', 'woocustomizer' ),
-				'description' => __( 'Set an after purchase Custom Thank You Page.', 'woocustomizer' ),
+				'title'       => __( 'Thank You Page(s)', 'ecommercecustomizer' ),
+				'description' => __( 'Set an after purchase Custom Thank You Page.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_cthank_you',
-						'label'       => __( 'Enable Custom Thank You Pages', 'woocustomizer' ),
+						'label'       => __( 'Enable Custom Thank You Pages', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
 					),
 					array(
 						'id'          => 'set_ctp_default_page',
-						'label'       => __( 'Select a default Purchase Thank You Page', 'woocustomizer' ),
+						'label'       => __( 'Select a default Purchase Thank You Page', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'select',
 						'options'     => $wcz_pages_list,
@@ -459,20 +459,20 @@ class WooCustomizer_Settings {
 					),
 					array(
 						'id'          => 'set_ctp_type',
-						'label'       => __( 'Select How You Want To Create Thank You Pages', 'woocustomizer' ),
+						'label'       => __( 'Select How You Want To Create Thank You Pages', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'select',
 						'options' => array(
-							'wcz_ctp_type_default' => __( 'Use Only The One Custom Page Above', 'woocustomizer' ),
-							'wcz_ctp_type_product_level' => __( 'Create Thank You Pages Per Product', 'woocustomizer' ),
-							'wcz_ctp_type_payment_type' => __( 'Create Thank You Pages Per Payment Type', 'woocustomizer' )
+							'wcz_ctp_type_default' => __( 'Use Only The One Custom Page Above', 'ecommercecustomizer' ),
+							'wcz_ctp_type_product_level' => __( 'Create Thank You Pages Per Product', 'ecommercecustomizer' ),
+							'wcz_ctp_type_payment_type' => __( 'Create Thank You Pages Per Payment Type', 'ecommercecustomizer' )
 						),
 						'default'     => 'wcz_ctp_type_default',
 					),
 					array(
 						'id'          => 'set_ctp_help',
-						'label'       => __( 'See StoreCustomizer Documentation', 'woocustomizer' ),
-						'description' => __( 'View Documentation', 'woocustomizer' ),
+						'label'       => __( 'See StoreCustomizer Documentation', 'ecommercecustomizer' ),
+						'description' => __( 'View Documentation', 'ecommercecustomizer' ),
 						'type'        => 'doclinkout',
 						'placeholder'     => esc_url( 'https://storecustomizer.com/documentation/' ),
 					)
@@ -480,12 +480,12 @@ class WooCustomizer_Settings {
             );
             // Handheld Footer Bar Settings Tab
 			$settings['wcz_handheld_footer'] = array(
-				'title'       => __( 'Handheld Footer Bar', 'woocustomizer' ),
-				'description' => __( 'Turn on a neat Footer Bar Navigation for handheld (mobile) devices.', 'woocustomizer' ),
+				'title'       => __( 'Handheld Footer Bar', 'ecommercecustomizer' ),
+				'description' => __( 'Turn on a neat Footer Bar Navigation for handheld (mobile) devices.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_handheld_footerbar',
-						'label'       => __( 'Enable Handheld Footer Bar', 'woocustomizer' ),
+						'label'       => __( 'Enable Handheld Footer Bar', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
@@ -498,7 +498,7 @@ class WooCustomizer_Settings {
 			$badges = $wcz_pbadges->posts;
 			
 			$wcz_badgelist = array( 'id-default' => 'Default Sale Badge' );
-			if ( 'on' == get_option( 'wcz_set_enable_product_badges', woocustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ) {
+			if ( 'on' == get_option( 'wcz_set_enable_product_badges', ecommercecustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ) {
 				foreach( $badges as $badge ) {
 					$badgename = get_the_title( $badge->ID ) ? get_the_title( $badge->ID ) : $badge->ID;
 					$wcz_badgelist['id-' . $badge->ID] = $badgename;
@@ -506,26 +506,26 @@ class WooCustomizer_Settings {
 			}
 
 			$settings['wcz_product_badges'] = array(
-				'title'       => __( 'Product Badges', 'woocustomizer' ),
-				'description' => __( 'Do you want fancy badges for your WooCommerce Products?<br />Turn on StoreCustomizer Product Badges and start creating your own badges under <b>Products -> Product Badges</b>.', 'woocustomizer' ),
+				'title'       => __( 'Product Badges', 'ecommercecustomizer' ),
+				'description' => __( 'Do you want fancy badges for your WooCommerce Products?<br />Turn on StoreCustomizer Product Badges and start creating your own badges under <b>Products -> Product Badges</b>.', 'ecommercecustomizer' ),
 				'fields'      => array(
 					array(
 						'id'          => 'set_enable_product_badges',
-						'label'       => __( 'Enable Product Badges', 'woocustomizer' ),
+						'label'       => __( 'Enable Product Badges', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'checkbox',
 						'default'     => '',
 					),
 					array(
 						'id'          => 'set_pb_help',
-						'label'       => 'on' == get_option( 'wcz_set_enable_product_badges', woocustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? __( 'Go to Product Badges', 'woocustomizer' ) : '',
-						'description' => 'on' == get_option( 'wcz_set_enable_product_badges', woocustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? __( 'Product Badges', 'woocustomizer' ) : '',
+						'label'       => 'on' == get_option( 'wcz_set_enable_product_badges', ecommercecustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? __( 'Go to Product Badges', 'ecommercecustomizer' ) : '',
+						'description' => 'on' == get_option( 'wcz_set_enable_product_badges', ecommercecustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? __( 'Product Badges', 'ecommercecustomizer' ) : '',
 						'type'        => 'doclinkin',
-						'placeholder' => 'on' == get_option( 'wcz_set_enable_product_badges', woocustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? esc_url( admin_url( 'edit.php?post_type=wcz-badges' ) ) : '',
+						'placeholder' => 'on' == get_option( 'wcz_set_enable_product_badges', ecommercecustomizer_library_get_default( 'wcz_set_enable_product_badges' ) ) ? esc_url( admin_url( 'edit.php?post_type=wcz-badges' ) ) : '',
 					),
 					array(
 						'id'          => 'set_default_sale_badge',
-						'label'       => __( 'Replace the default sale badge', 'woocustomizer' ),
+						'label'       => __( 'Replace the default sale badge', 'ecommercecustomizer' ),
 						'description' => '',
 						'type'        => 'select',
 						'options'     => $wcz_badgelist,
@@ -623,7 +623,7 @@ class WooCustomizer_Settings {
 	public function settings_page() {
 		// Build page HTML.
 		$html    = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
-        $html 	.= '<h2>' . __( 'StoreCustomizer', 'woocustomizer' ) . '</h2>' . "\n";
+        $html 	.= '<h2>' . __( 'StoreCustomizer', 'ecommercecustomizer' ) . '</h2>' . "\n";
 
 			$tab = '';
 		//phpcs:disable
@@ -694,13 +694,13 @@ class WooCustomizer_Settings {
 
                     $html     .= '<p class="submit">' . "\n";
                         $html .= '<input type="hidden" name="tab" value="' . esc_attr( $tab ) . '" />' . "\n";
-                        $html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings', 'woocustomizer' ) ) . '" />' . "\n";
+                        $html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings', 'ecommercecustomizer' ) ) . '" />' . "\n";
                     $html     .= '</p>' . "\n";
 
                     if ( ( isset( $_GET['page'] ) && 'wcz_settings' == $_GET['page'] && !isset( $_GET['tab'] ) ) || ( isset( $_GET['tab'] ) && 'wcz_general' == $_GET['tab'] ) ) {
                         $html .= '<div class="wcz-video-wrap">' . "\n";
-                        $html .= '<h4>' . esc_attr( __( 'Using StoreCustomizer', 'woocustomizer' ) ) . '</h4>';
-                        $html .= '<p>' . esc_attr( __( 'Watch our \'getting started\' video on how to use StoreCustomizer', 'woocustomizer' ) ) . '</p>';
+                        $html .= '<h4>' . esc_attr( __( 'Using StoreCustomizer', 'ecommercecustomizer' ) ) . '</h4>';
+                        $html .= '<p>' . esc_attr( __( 'Watch our \'getting started\' video on how to use StoreCustomizer', 'ecommercecustomizer' ) ) . '</p>';
                         $html .= '<div class="wcz-video"><div class="wcz-vid"><iframe width="635" height="357" src="https://www.youtube.com/embed/Byr4Lr6qUaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>' . "\n";
                         $html .= '</div>' . "\n";
                     }
@@ -709,20 +709,20 @@ class WooCustomizer_Settings {
 			$html         .= '</form>' . "\n";
 		$html             .= '</div><div class="wcz-customizer">' . "\n";
 		$html             .= '<div class="wcz-customizer-links">' . "\n";
-            $html             .= '<a href="' . esc_url( wcz_fs()->get_account_url() ) . '" class="wcz-acc-account">' . esc_html( __( 'Account', 'woocustomizer' ) ) . '</a>' . "\n";
+            $html             .= '<a href="' . esc_url( wcz_fs()->get_account_url() ) . '" class="wcz-acc-account">' . esc_html( __( 'Account', 'ecommercecustomizer' ) ) . '</a>' . "\n";
 			// Only displayed in the free version
 			if ( ! wcz_fs()->can_use_premium_code() ) {
-				$html             .= '<a href="' . esc_url( wcz_fs()->get_upgrade_url() ) . '" class="wcz-upgrade wcz-acc-upgrade">' . esc_html( __( 'Upgrade', 'woocustomizer' ) ) . '</a>' . "\n";
-                $html             .= '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&trial=true&page=wcz_settings-pricing' ) ) . '" class="wcz-acc-trial">' . esc_html( __( 'Free Premium Trial', 'woocustomizer' ) ) . '</a>' . "\n";
+				$html             .= '<a href="' . esc_url( wcz_fs()->get_upgrade_url() ) . '" class="wcz-upgrade wcz-acc-upgrade">' . esc_html( __( 'Upgrade', 'ecommercecustomizer' ) ) . '</a>' . "\n";
+                $html             .= '<a href="' . esc_url( admin_url( 'admin.php?billing_cycle=annual&trial=true&page=wcz_settings-pricing' ) ) . '" class="wcz-acc-trial">' . esc_html( __( 'Free Premium Trial', 'ecommercecustomizer' ) ) . '</a>' . "\n";
             }
-            $html             .= '<a href="' . esc_url( admin_url( 'admin.php?page=wcz_settings-affiliation' ) ) . '" class="wcz-acc-affiliate">' . esc_html( __( 'Become an Affiliate', 'woocustomizer' ) ) . '</a>' . "\n";
+            $html             .= '<a href="' . esc_url( admin_url( 'admin.php?page=wcz_settings-affiliation' ) ) . '" class="wcz-acc-affiliate">' . esc_html( __( 'Become an Affiliate', 'ecommercecustomizer' ) ) . '</a>' . "\n";
 			// Contact is only for Premium users
 			if ( wcz_fs()->can_use_premium_code() ) {
-				$html             .= '<a href="' . esc_url( wcz_fs()->contact_url() ) . '" class="wcz-acc-contact">' . esc_html( __( 'Contact Us', 'woocustomizer' ) ) . '</a>' . "\n";
+				$html             .= '<a href="' . esc_url( wcz_fs()->contact_url() ) . '" class="wcz-acc-contact">' . esc_html( __( 'Contact Us', 'ecommercecustomizer' ) ) . '</a>' . "\n";
 			}
 		$html             .= '</div>' . "\n";
-		$html             .= '<p>' . esc_html( __( 'Click here to open the WordPress Customizer and navigate to the -> StoreCustomizer panel.', 'woocustomizer' ) ) . '</p>' . "\n";
-		$html             .= '<a href="' . esc_url( admin_url( 'customize.php' ) ) . '" class="wcz-customizer-btn">' . esc_html( __( 'Customize Your Settings', 'woocustomizer' ) ) . '</a>' . "\n";
+		$html             .= '<p>' . esc_html( __( 'Click here to open the WordPress Customizer and navigate to the -> StoreCustomizer panel.', 'ecommercecustomizer' ) ) . '</p>' . "\n";
+		$html             .= '<a href="' . esc_url( admin_url( 'customize.php' ) ) . '" class="wcz-customizer-btn">' . esc_html( __( 'Customize Your Settings', 'ecommercecustomizer' ) ) . '</a>' . "\n";
 		$html             .= '</div>' . "\n";
 		$html             .= '</div>' . "\n";
 

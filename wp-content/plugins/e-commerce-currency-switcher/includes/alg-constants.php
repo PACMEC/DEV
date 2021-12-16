@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce Currency Switcher - Constants
+ * PACMEC Currency Switcher - Constants
  *
  * @version 2.8.0
  * @since   2.3.0
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! defined( 'ALG_WC_VERSION' ) ) {
 	/**
-	 * WooCommerce version.
+	 * PACMEC version.
 	 *
 	 * @version 2.3.0
 	 * @since   2.3.0
@@ -21,7 +21,7 @@ if ( ! defined( 'ALG_WC_VERSION' ) ) {
 
 if ( ! defined( 'ALG_IS_WC_VERSION_BELOW_3' ) ) {
 	/**
-	 * WooCommerce version - is below version 3.0.0.
+	 * PACMEC version - is below version 3.0.0.
 	 *
 	 * @version 2.3.0
 	 * @since   2.3.0
@@ -31,7 +31,7 @@ if ( ! defined( 'ALG_IS_WC_VERSION_BELOW_3' ) ) {
 
 if ( ! defined( 'ALG_IS_WC_VERSION_AT_LEAST_3_2' ) ) {
 	/**
-	 * WooCommerce version - is at least version 3.2.0.
+	 * PACMEC version - is at least version 3.2.0.
 	 *
 	 * @version 2.8.0
 	 * @since   2.8.0
@@ -41,7 +41,7 @@ if ( ! defined( 'ALG_IS_WC_VERSION_AT_LEAST_3_2' ) ) {
 
 if ( ! defined( 'ALG_PRODUCT_GET_PRICE_FILTER' ) ) {
 	/**
-	 * WooCommerce price filters - price.
+	 * PACMEC price filters - price.
 	 *
 	 * @version 2.3.0
 	 * @since   2.3.0
@@ -51,7 +51,7 @@ if ( ! defined( 'ALG_PRODUCT_GET_PRICE_FILTER' ) ) {
 
 if ( ! defined( 'ALG_PRODUCT_GET_SALE_PRICE_FILTER' ) ) {
 	/**
-	 * WooCommerce price filters - sale price.
+	 * PACMEC price filters - sale price.
 	 *
 	 * @version 2.3.0
 	 * @since   2.3.0
@@ -61,7 +61,7 @@ if ( ! defined( 'ALG_PRODUCT_GET_SALE_PRICE_FILTER' ) ) {
 
 if ( ! defined( 'ALG_PRODUCT_GET_REGULAR_PRICE_FILTER' ) ) {
 	/**
-	 * WooCommerce price filters - regular price.
+	 * PACMEC price filters - regular price.
 	 *
 	 * @version 2.3.0
 	 * @since   2.3.0

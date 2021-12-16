@@ -6,7 +6,7 @@
  * @author		Devin Price, The Theme Foundry
  */
 
-if ( ! function_exists( 'woocustomizer_library_sanitize_text' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_sanitize_text' ) ) :
 /**
  * Sanitize a string to allow only tags in the allowedtags array.
  *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'woocustomizer_library_sanitize_text' ) ) :
  * @param  string    $string    The unsanitized string.
  * @return string               The sanitized string.
  */
-function woocustomizer_library_sanitize_text( $string ) {
+function ecommercecustomizer_library_sanitize_text( $string ) {
 	$allowedtags = array(
 		'a' => array(
 			'href' => array (),
@@ -39,7 +39,7 @@ function woocustomizer_library_sanitize_text( $string ) {
 }
 endif;
 
-if ( ! function_exists( 'woocustomizer_library_sanitize_checkbox' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_sanitize_checkbox' ) ) :
 /**
  * Sanitize a checkbox to only allow 0 or 1
  *
@@ -48,7 +48,7 @@ if ( ! function_exists( 'woocustomizer_library_sanitize_checkbox' ) ) :
  * @param  boolean    $value    The unsanitized value.
  * @return boolean				The sanitized boolean.
  */
-function woocustomizer_library_sanitize_checkbox( $value ) {
+function ecommercecustomizer_library_sanitize_checkbox( $value ) {
 	if ( $value == 1 ) {
 		return 1;
     } else {
@@ -57,7 +57,7 @@ function woocustomizer_library_sanitize_checkbox( $value ) {
 }
 endif;
 
-if ( ! function_exists( 'woocustomizer_library_sanitize_choices' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_sanitize_choices' ) ) :
 /**
  * Sanitize a value from a list of allowed values.
  *
@@ -67,23 +67,23 @@ if ( ! function_exists( 'woocustomizer_library_sanitize_choices' ) ) :
  * @param  mixed    $setting    The setting for which the sanitizing is occurring.
  * @return mixed                The sanitized value.
  */
-function woocustomizer_library_sanitize_choices( $value, $setting ) {
+function ecommercecustomizer_library_sanitize_choices( $value, $setting ) {
 	if ( is_object( $setting ) ) {
 		$setting = $setting->id;
 	}
 
-	$choices = woocustomizer_library_get_choices( $setting );
+	$choices = ecommercecustomizer_library_get_choices( $setting );
 	$allowed_choices = array_keys( $choices );
 
 	if ( ! in_array( $value, $allowed_choices ) ) {
-		$value = woowoocustomizer_library_get_default( $setting );
+		$value = wooecommercecustomizer_library_get_default( $setting );
 	}
 
 	return $value;
 }
 endif;
 
-if ( ! function_exists( 'woocustomizer_library_sanitize_file_url' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_sanitize_file_url' ) ) :
 /**
  * Sanitize the url of uploaded media.
  *
@@ -92,7 +92,7 @@ if ( ! function_exists( 'woocustomizer_library_sanitize_file_url' ) ) :
  * @param  string    $value      The url to sanitize
  * @return string    $output     The sanitized url.
  */
-function woocustomizer_library_sanitize_file_url( $url ) {
+function ecommercecustomizer_library_sanitize_file_url( $url ) {
 
 	$output = '';
 
@@ -131,7 +131,7 @@ function wcz_sanitize_hex_color( $color ) {
 }
 endif;
 
-if ( ! function_exists( 'woocustomizer_library_sanitize_range' ) ) :
+if ( ! function_exists( 'ecommercecustomizer_library_sanitize_range' ) ) :
 /**
  * Sanitizes a range value
  *
@@ -140,7 +140,7 @@ if ( ! function_exists( 'woocustomizer_library_sanitize_range' ) ) :
  * @param string $color
  * @return string|null
  */
-function woocustomizer_library_sanitize_range( $value ) {
+function ecommercecustomizer_library_sanitize_range( $value ) {
 
 	if ( is_numeric( $value ) ) {
 		return $value;

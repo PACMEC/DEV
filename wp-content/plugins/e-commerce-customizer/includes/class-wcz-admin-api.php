@@ -166,8 +166,8 @@ class WooCustomizer_Admin_API {
 					$image_thumb = wp_get_attachment_thumb_url( $data );
 				}
 				$html .= '<img id="' . $option_name . '_preview" class="image_preview" src="' . $image_thumb . '" /><br/>' . "\n";
-				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image', 'woocustomizer' ) . '" data-uploader_button_text="' . __( 'Use image', 'woocustomizer' ) . '" class="image_upload_button button" value="' . __( 'Upload new image', 'woocustomizer' ) . '" />' . "\n";
-				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image', 'woocustomizer' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image', 'ecommercecustomizer' ) . '" data-uploader_button_text="' . __( 'Use image', 'ecommercecustomizer' ) . '" class="image_upload_button button" value="' . __( 'Upload new image', 'ecommercecustomizer' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image', 'ecommercecustomizer' ) . '" />' . "\n";
 				$html .= '<input id="' . $option_name . '" class="image_data_field" type="hidden" name="' . $option_name . '" value="' . $data . '"/><br/>' . "\n";
 				break;
 

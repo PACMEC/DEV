@@ -1,26 +1,26 @@
 <?php
 /**
- * Plugin Name: 	WooCommerce Coupon Generator
- * Plugin URI:		https://jeroensormani.com/
- * Description:		Easily generate <strong>MILLIONS</strong> of unique coupons for your online store. Use all the coupon settings you are familiar with!
- * Version: 		1.2.0
- * Author: 			Jeroen Sormani
- * Author URI: 		https://jeroensormani.com/
- * Text Domain: 	coupon-generator-for-woocommerce
+ * Plugin Name: 	E-Commerce - Generador de cupones
+ * Plugin URI:		#
+ * Description:		Genere fácilmente <strong> MILLONES </strong> de cupones únicos para su tienda en línea. ¡Utilice todos los ajustes de cupón con los que esté familiarizado!
+ * Version: 		  1.0.0
+ * Author: 			  PACMEC
+ * Author URI: 	  #
+ * Text Domain: 	e-commerce-coupon-generator
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Class WooCommerce_Coupon_Generator.
+ * Class E_Commerce_Coupon_Generator.
  *
- * Main WooCommerce_Coupon_Generator class initializes the plugin.
+ * Main E_Commerce_Coupon_Generator class initializes the plugin.
  *
- * @class		WooCommerce_Coupon_Generator
+ * @class		E_Commerce_Coupon_Generator
  * @version		1.0.0
- * @author		Jeroen Sormani
+ * @author		PACMEC
  */
-class WooCommerce_Coupon_Generator {
+class E_Commerce_Coupon_Generator {
 
 
 	/**
@@ -29,7 +29,7 @@ class WooCommerce_Coupon_Generator {
 	 * @since 1.0.0
 	 * @var string $version Plugin version number.
 	 */
-	public $version = '1.2.0';
+	public $version = '1.0.0';
 
 
 	/**
@@ -42,11 +42,11 @@ class WooCommerce_Coupon_Generator {
 
 
 	/**
-	 * Instance of WooCommerce_Coupon_Generator.
+	 * Instance of E_Commerce_Coupon_Generator.
 	 *
 	 * @since 1.0.0
 	 * @access private
-	 * @var object $instance The instance of WooCommerce_Coupon_Generator.
+	 * @var object $instance The instance of E_Commerce_Coupon_Generator.
 	 */
 	private static $instance;
 
@@ -90,7 +90,7 @@ class WooCommerce_Coupon_Generator {
 	 */
 	public function init() {
 
-		// Check if WooCommerce is active
+		// Check if E-Commerce is active
 		require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 		if ( ! is_plugin_active( 'woocommerce/woocommerce.php' ) && ! function_exists( 'WC' ) ) {
 			return;
@@ -124,22 +124,22 @@ class WooCommerce_Coupon_Generator {
 }
 
 
-if ( ! function_exists( 'WooCommerce_Coupon_Generator' ) ) {
+if ( ! function_exists( 'E_Commerce_Coupon_Generator' ) ) {
 
 	/**
-	 * The main function responsible for returning the WooCommerce_Coupon_Generator object.
+	 * The main function responsible for returning the E_Commerce_Coupon_Generator object.
 	 *
 	 * Use this function like you would a global variable, except without needing to declare the global.
 	 *
-	 * Example: <?php WooCommerce_Coupon_Generator()->method_name(); ?>
+	 * Example: <?php E_Commerce_Coupon_Generator()->method_name(); ?>
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return object WooCommerce_Coupon_Generator class object.
+	 * @return object E_Commerce_Coupon_Generator class object.
 	 */
-	function WooCommerce_Coupon_Generator() {
-		return WooCommerce_Coupon_Generator::instance();
+	function E_Commerce_Coupon_Generator() {
+		return E_Commerce_Coupon_Generator::instance();
 	}
 }
 
-WooCommerce_Coupon_Generator();
+E_Commerce_Coupon_Generator();

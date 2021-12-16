@@ -15,7 +15,7 @@
  * @return mixed $default
  */
 
-function woocustomizer_library_get_default( $setting ) {
+function ecommercecustomizer_library_get_default( $setting ) {
 
 	$customizer_library = WooCustomizer_Library::Instance();
 	$options = $customizer_library->get_options();
@@ -34,7 +34,7 @@ function woocustomizer_library_get_default( $setting ) {
  * @param string
  * @return mixed $default
  */
-function woocustomizer_library_get_choices( $setting ) {
+function ecommercecustomizer_library_get_choices( $setting ) {
 
 	$customizer_library = WooCustomizer_Library::Instance();
 	$options = $customizer_library->get_options();
@@ -54,7 +54,7 @@ function woocustomizer_library_get_choices( $setting ) {
  * @param  string  $hex
  * @return array
  */
-function woocustomizer_library_hex_to_rgb( $hex ) {
+function ecommercecustomizer_library_hex_to_rgb( $hex ) {
 
 	// Remove "#" if it was added
 	$color = trim( $hex, '#' );
@@ -86,7 +86,7 @@ function woocustomizer_library_hex_to_rgb( $hex ) {
  * @param string
  * @return mixed $default
  */
-function woocustomizer_library_remove_theme_mods() {
+function ecommercecustomizer_library_remove_theme_mods() {
 
 	$customizer_library = WooCustomizer_Library::Instance();
 	$options = $customizer_library->get_options();

@@ -1,26 +1,25 @@
 <?php
 /*
-Plugin Name: EAN for WooCommerce
-Plugin URI: https://wpfactory.com/item/ean-for-woocommerce/
-Description: Manage product EAN in WooCommerce. Beautifully.
-Version: 2.7.0
-Author: Algoritmika Ltd
-Author URI: https://algoritmika.com
-Text Domain: ean-for-woocommerce
+Plugin Name: E-Commerce - EAN
+Plugin URI: #
+Description: Gestione el EAN del producto en su tienda.
+Version: 1.0.0
+Author: PACMEC
+Author URI: #
+Text Domain: e-commerce-ean
 Domain Path: /langs
-WC tested up to: 5.9
 */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( 'ean-for-woocommerce.php' === basename( __FILE__ ) ) {
+if ( 'e-commerce-ean' === basename( __FILE__ ) ) {
 	/**
 	 * Check if Pro plugin version is activated.
 	 *
 	 * @version 2.2.0
 	 * @since   2.2.0
 	 */
-	$plugin = 'ean-for-woocommerce-pro/ean-for-woocommerce-pro.php';
+	$plugin = 'e-commerce-ean/e-commerce-ean.php';
 	if (
 		in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
 		( is_multisite() && array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) ) )

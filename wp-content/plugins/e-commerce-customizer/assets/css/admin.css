@@ -24,7 +24,7 @@ span.wcznotif.hasnotif {
 
 .wrap .wcz-admin-notice.notice {
     min-height: 100px;
-    background-image: url(../images/woocustomizer-logo.png);
+    background-image: url(../images/ecommercecustomizer-logo.png);
     background-repeat: no-repeat;
     background-position: 18px 0;
     padding: 20px 20px 18px 115px;
@@ -139,7 +139,7 @@ span.wcznotif.hasnotif {
     color: #999;
 }
 
-body.wp-admin.plugins-php tr[data-slug="woocustomizer"] span.upgrade a {
+body.wp-admin.plugins-php tr[data-slug="ecommercecustomizer"] span.upgrade a {
     color: #1fc127;
     font-weight: 700;
 }
@@ -229,7 +229,7 @@ body.wp-admin.plugins-php tr[data-slug="woocustomizer"] span.upgrade a {
     margin: 0;
     padding: 18px 40px 25px;
     box-sizing: border-box;
-    background-image: url(../images/woocustomizer-logo.png);
+    background-image: url(../images/ecommercecustomizer-logo.png);
     background-repeat: no-repeat;
     background-position: right top;
     min-height: 500px;

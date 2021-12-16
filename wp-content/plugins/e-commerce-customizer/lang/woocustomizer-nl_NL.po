@@ -3100,7 +3100,7 @@ msgstr "Kies uit de meest gebruikte %s"
 msgid "No %s found"
 msgstr "Geen %s gevonden"
 
-#: woocustomizer.php:133
+#: ecommercecustomizer.php:133
 msgid "StoreCustomizer requires the WooCommerce plugin to be active to work"
 msgstr ""
 "StoreCustomizer vereist dat de WooCommerce-plug-in actief is om te werken"

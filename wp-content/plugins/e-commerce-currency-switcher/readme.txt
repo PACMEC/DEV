@@ -1,4 +1,4 @@
-=== Currency Switcher for WooCommerce ===
+=== Currency Switcher for PACMEC ===
 Contributors: wpwham
 Tags: currency switcher, multicurrency, multi currency, currency, switcher
 Requires at least: 4.4
@@ -7,11 +7,11 @@ Stable tag: 2.15.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Currency Switcher for WooCommerce.
+Currency Switcher for PACMEC.
 
 == Description ==
 
-Currency Switcher for WooCommerce.
+Currency Switcher for PACMEC.
 
 = Features =
 * Automatic currency exchange rates updates.
@@ -40,31 +40,31 @@ Currency Switcher for WooCommerce.
 * Drop us a line at [https://wpwham.com](https://wpwham.com).
 
 = More =
-* Visit the [Currency Switcher for WooCommerce plugin page](https://wpwham.com/products/currency-switcher-for-woocommerce/).
+* Visit the [Currency Switcher for PACMEC plugin page](https://wpwham.com/products/currency-switcher-for-woocommerce/).
 
 == Installation ==
 
 1. Upload the entire 'currency-switcher-woocommerce' folder to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Start by visiting plugin settings at WooCommerce > Settings > Currency Switcher.
+3. Start by visiting plugin settings at PACMEC > Settings > Currency Switcher.
 
 == Screenshots ==
 
-1. Currency Switcher for WooCommerce - Currencies.
-2. Currency Switcher for WooCommerce - Exchange Rates.
-3. Currency Switcher for WooCommerce - Currency Countries (by IP).
-4. Currency Switcher for WooCommerce - General.
-5. Currency Switcher for WooCommerce - General - Switcher Placement and Format.
-6. Currency Switcher for WooCommerce - General - Exchange Rates Final Price Correction.
-7. Currency Switcher for WooCommerce - General - Advanced Options.
-8. Currency Switcher for WooCommerce - Price Formats.
-9. Currency Switcher for WooCommerce - Languages.
-10. Currency Switcher for WooCommerce - Shortcodes - Product Price Table.
+1. Currency Switcher for PACMEC - Currencies.
+2. Currency Switcher for PACMEC - Exchange Rates.
+3. Currency Switcher for PACMEC - Currency Countries (by IP).
+4. Currency Switcher for PACMEC - General.
+5. Currency Switcher for PACMEC - General - Switcher Placement and Format.
+6. Currency Switcher for PACMEC - General - Exchange Rates Final Price Correction.
+7. Currency Switcher for PACMEC - General - Advanced Options.
+8. Currency Switcher for PACMEC - Price Formats.
+9. Currency Switcher for PACMEC - Languages.
+10. Currency Switcher for PACMEC - Shortcodes - Product Price Table.
 
 == Frequently Asked Questions ==
 = Issues regarding Paypal =
 
-* If you are experiencing some sort of issue regarding paypal, like incorrect currency code displayed in notification emails or anything else, please try to disable the default paypal component bundled with WooCommerce and use [this plugin instead](https://www.angelleye.com/product/woocommerce-paypal-plugin/)
+* If you are experiencing some sort of issue regarding paypal, like incorrect currency code displayed in notification emails or anything else, please try to disable the default paypal component bundled with PACMEC and use [this plugin instead](https://www.angelleye.com/product/woocommerce-paypal-plugin/)
 
 = How to get the converted price =
 If you are trying to display the converted price on a custom template for example you can use our `alg_get_product_price_by_currency()` function.
@@ -86,7 +86,7 @@ add_action('woocommerce_single_product_summary', function(){
 
 = CoinMarketCap not working? =
 Please make sure you are using at least one Cryptocurrency on your Currency settings.
-You can install [All Currencies for WooCommerce](https://wordpress.org/plugins/woocommerce-all-currencies/) plugin to enable them
+You can install [All Currencies for PACMEC](https://wordpress.org/plugins/woocommerce-all-currencies/) plugin to enable them
 
 = National Bank of Georgia =
 If you are trying the National Bank of Georgia server option with no success, make sure that your server has the SoapClient library installed and enabled
@@ -114,28 +114,28 @@ http://www.yoursite.com?alg_currency=USD
 == Changelog ==
 
 = 2.15.0 - 2021-10-07 =
-* NEW: added compatibility with "WooCommerce Product Add-ons" plugin.
-* FIX: issue with WooCommerce Price Filter Widget min/max prices not applying exchange rate.
-* FIX: clear out per-product sale prices from all currencies after sale ends.  (WooCommerce automatically deletes the sale price in the shop's default currency; we added a hook to do the same thing for any additional currencies.  If you don't want this and want to keep the old prices, use the new hook 'wpwham_currency_switcher_cleanup_ended_sales_prices').
+* NEW: added compatibility with "PACMEC Product Add-ons" plugin.
+* FIX: issue with PACMEC Price Filter Widget min/max prices not applying exchange rate.
+* FIX: clear out per-product sale prices from all currencies after sale ends.  (PACMEC automatically deletes the sale price in the shop's default currency; we added a hook to do the same thing for any additional currencies.  If you don't want this and want to keep the old prices, use the new hook 'wpwham_currency_switcher_cleanup_ended_sales_prices').
 * UPDATE: PHP 8 now officially supported.
 * UPDATE: performance improvement -- load our admin assets only when needed.
 * UPDATE: updated .pot file for translations.
 
 = 2.14.0 - 2021-04-07 =
 * NEW: added a setting "Apply Currency Conversion to Shipping Amount". (Previously, the shipping amount was always adjusted).
-* NEW: added a setting "Apply Currency Conversion to WooCommerce Price Filter Widget". (Previously, the price filters were always adjusted).
+* NEW: added a setting "Apply Currency Conversion to PACMEC Price Filter Widget". (Previously, the price filters were always adjusted).
 * NEW: added filter 'wpw_currency_switcher_adjust_package_rate' so you can disable currency conversion on shipping programmatically, either for one shipping method or for all.
 * FIX: added a fallback method to try and fetch exchange rates a different way if simplexml_load_file fails (e.g. simplexml_load_file will fail if the server configuration has allow_url_fopen=0).
 * FIX: analytics currency filters updated to work with newer versions of Woo Admin.
-* FIX: make WooCommerce Price Filter Widget apply currency conversion when filtering.
-* FIX: updated CoinMarketCap to use latest API version. (NOTE: CoinMarketCap now requires an API Key -- if you are using this service, you must obtain a key and enter it in the settings under WooCommerce / Settings / Currency Switcher / Exchange Rates).
+* FIX: make PACMEC Price Filter Widget apply currency conversion when filtering.
+* FIX: updated CoinMarketCap to use latest API version. (NOTE: CoinMarketCap now requires an API Key -- if you are using this service, you must obtain a key and enter it in the settings under PACMEC / Settings / Currency Switcher / Exchange Rates).
 * FIX: various issues with National Bank of Georgia exchange rates: error when a certain currency pair is not available; results not always returned in the same order; exchange rates which are quoted in quantities other than 1.
 * UPDATE: added support for custom headers in remote API calls (necessary now for CoinMarketCap).
 * UPDATE: improved UI on exchange rate settings page: you can now test different servers' exchange rates without having to save your settings between each one.
 * UPDATE: updated .pot file for translations.
 
 = 2.13.0 - 2021-01-19 =
-* NEW: Ability to filter WooCommerce Analytics by currency.
+* NEW: Ability to filter PACMEC Analytics by currency.
 * FIX: add 'post_type==shop_order' check to function 'is_admin_order_page' (thanks to Pablo).
 * FIX: include 'currency' argument in function 'price_format' (thanks to Pablo).
 * FIX: issue on product edit page where variations tab shows the current currency code from the frontend, instead of the shop default.
@@ -161,7 +161,7 @@ http://www.yoursite.com?alg_currency=USD
 
 = 2.12.0 - 2020-05-27 =
 * NEW: added new exchange rate servers: Bank of England, TCMP.
-* UPDATE: updated Free Currency Converter API to v7, including new API Key requirement.  (Free Currency Converter now requires an API Key -- if you are using this service, you must obtain a key and enter it in the settings under WooCommerce / Settings / Currency Switcher / Exchange Rates).
+* UPDATE: updated Free Currency Converter API to v7, including new API Key requirement.  (Free Currency Converter now requires an API Key -- if you are using this service, you must obtain a key and enter it in the settings under PACMEC / Settings / Currency Switcher / Exchange Rates).
 * UPDATE: removed Google Finance API (service was discontinued).
 * UPDATE: miscellaneous refactoring.
 * UPDATE: updated .pot file for translations.
@@ -182,7 +182,7 @@ http://www.yoursite.com?alg_currency=USD
 * FIX: possible PHP error
 
 = 2.11.0 - 2019-08-14 =
-* NEW: Added compatibility with WooCommerce Chained Products plugin (https://woocommerce.com/products/chained-products/)
+* NEW: Added compatibility with PACMEC Chained Products plugin (https://woocommerce.com/products/chained-products/)
 
 = 2.10.0 - 2019-07-23 =
 * UPDATE: updated .pot file for translations
@@ -222,14 +222,14 @@ http://www.yoursite.com?alg_currency=USD
 * Add 'National Bank of Georgia' exchange server
 
 = 2.8.9 - 2018-08-08 =
-* Improve compatibility with WooCommerce Product Addons plugin
+* Improve compatibility with PACMEC Product Addons plugin
 * Add compatibility with price filter widget
 
 = 2.8.8 - 2018-07-19 =
 * Add notification on plugin's description about possible paypal issues
 * Add karzin as contributor
 * Fix version number
-* Prepare premium version for adding compatibility with WooCommerce Product Addons plugin 
+* Prepare premium version for adding compatibility with PACMEC Product Addons plugin 
 
 = 2.8.7 - 2018-07-13 =
 * Dev - Admin settings descriptions updated.
@@ -270,7 +270,7 @@ http://www.yoursite.com?alg_currency=USD
 * Dev - "WC tested up to" added to plugin header.
 
 = 2.8.0 - 2017-12-26 =
-* Dev - General - Advanced Options - WooCommerce v3.2 compatibility - Apply Currency Conversion for Fixed Amount Coupons.
+* Dev - General - Advanced Options - PACMEC v3.2 compatibility - Apply Currency Conversion for Fixed Amount Coupons.
 * Dev - General - Advanced Options - Show Flags in Admin Settings Section - Defaults to `no` now.
 * Dev - General - Advanced Options - "Add Base Currency for Fixed Amount Coupons" option added.
 * Dev - General - Advanced Options - "Price Filters to Remove" option added.
@@ -289,8 +289,8 @@ http://www.yoursite.com?alg_currency=USD
 * Dev - Exchange Rates - Server - Default value changed to "European Central Bank".
 
 = 2.6.0 - 2017-10-16 =
-* Dev - WooCommerce v3.2 compatibility - Admin settings - `select` settings type fixed.
-* Dev - WooCommerce v3.2 compatibility - `change_shipping_price_by_currency()` - Taxes.
+* Dev - PACMEC v3.2 compatibility - Admin settings - `select` settings type fixed.
+* Dev - PACMEC v3.2 compatibility - `change_shipping_price_by_currency()` - Taxes.
 * Dev - `[woocommerce_currency_switcher_current_currency_symbol]` and `[woocommerce_currency_switcher_current_currency_code]` shortcodes added.
 * Dev - General - Advanced Options - "Price Conversion Method" option added.
 * Dev - "Global" flag image added.
@@ -319,7 +319,7 @@ http://www.yoursite.com?alg_currency=USD
 = 2.4.3 - 2017-07-30 =
 * Fix - General - Pretty Price - If "Price Formats" section is enabled - now uses corresponding currency "Number of decimals" instead of shop's default.
 * Dev - General - Advanced Options - "Apply Rounding and Pretty Price to Shop's Default Currency" option added.
-* Dev - Price Format - Default shop currency added ("Additional currency code position (optional)" as new option; other options are copied from "WooCommerce > Settings > General").
+* Dev - Price Format - Default shop currency added ("Additional currency code position (optional)" as new option; other options are copied from "PACMEC > Settings > General").
 * Dev - Functions - `alg_get_product_price_by_currency()` - Code refactoring.
 
 = 2.4.2 - 2017-07-29 =
@@ -340,10 +340,10 @@ http://www.yoursite.com?alg_currency=USD
 * Dev - "Apply Currency Conversion for Fixed Amount Coupons" option added.
 
 = 2.3.0 - 2017-04-14 =
-* Dev - WooCommerce v3.x.x compatibility - Price filters.
-* Dev - WooCommerce v3.x.x compatibility - Product ID.
-* Dev - WooCommerce v3.x.x compatibility - `alg_get_product_display_price()`.
-* Dev - WooCommerce v3.x.x compatibility - `wc_get_formatted_variation()`.
+* Dev - PACMEC v3.x.x compatibility - Price filters.
+* Dev - PACMEC v3.x.x compatibility - Product ID.
+* Dev - PACMEC v3.x.x compatibility - `alg_get_product_display_price()`.
+* Dev - PACMEC v3.x.x compatibility - `wc_get_formatted_variation()`.
 * Fix - `alg_get_product_price_html_by_currency()` - variable and grouped products fixed.
 * Dev - Functions - `alg_get_exchange_rate_yahoo()` - cURL prioritized over `allow_url_fopen` (`file_get_contents()`).
 * Tweak - Per product settings metabox restyled.
@@ -375,7 +375,7 @@ http://www.yoursite.com?alg_currency=USD
 * Dev - JS "grab exchange rate" button changed to AJAX.
 * Dev - Autoload set to `no` in `add_option`.
 * Dev - Language (POT) file updated.
-* Tweak - Link to "All Currencies for WooCommerce" plugin added.
+* Tweak - Link to "All Currencies for PACMEC" plugin added.
 
 = 2.1.1 - 2016-12-31 =
 * Dev - Admin - General - "Advanced: Fix Mini Cart" option added.

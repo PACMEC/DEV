@@ -1,22 +1,16 @@
 <?php
 
 /**
- * Plugin Name: StoreCustomizer
- * Version: 2.3.5
- * Plugin URI: https://kairaweb.com/wordpress-plugins/woocustomizer/
- * Description: A WooCommerce customizer plugin, your answer to editing the WooCommerce store and product pages, cart and checkout pages and also your user account page, all within the WordPress Customizer.
- * Author: Kaira
- * Author URI: https://kairaweb.com/
- * Requires at least: 5.0
- * Tested up to: 5.8
- * WC requires at least: 3.2
- * WC tested up to: 5.9
- * Text Domain: woocustomizer
+ * Plugin Name: E-Commerce - Personalizador de tienda
+ * Version: 1.0.0
+ * Plugin URI: #
+ * Description: Un complemento de personalización de PACMEC, su respuesta para editar su E-Commerce y las páginas de productos, el carrito y las páginas de pago y también la página de su cuenta de usuario, todo dentro del Personalizador de la tienda.
+ * Author: PACMEC
+ * Author URI: #
+ * Text Domain: e-commerce-customizer
  * Domain Path: /lang/
- * 
- *
- * @package WordPress
- * @author Kaira
+ * @package PACMEC
+ * @author PACMEC
  * @since 1.0.0
  */
 define( 'WCD_PLUGIN_VERSION', '2.3.5' );
@@ -39,29 +33,29 @@ if ( function_exists( 'wcz_fs' ) ) {
                 // Include Freemius SDK.
                 require_once dirname( __FILE__ ) . '/freemius/start.php';
                 $wcz_fs = fs_dynamic_init( array(
-                    'id'              => '4668',
-                    'slug'            => 'woocustomizer',
-                    'premium_slug'    => 'woocustomizer-pro',
+                    'id'              => '9543',
+                    'slug'            => 'ecommercecustomizer',
+                    'premium_slug'    => 'ecommercecustomizer',
                     'type'            => 'plugin',
-                    'public_key'      => 'pk_b12a9cb6205ed1d8256a177af56b4',
+                    'public_key'      => 'pk_a9515a9346cb7b9873a6fb9ae8906',
                     'is_premium'      => false,
                     'premium_suffix'  => 'Pro',
                     'has_addons'      => false,
-                    'has_paid_plans'  => true,
+                    'has_paid_plans'  => false,
                     'trial'           => array(
                     'days'               => 14,
-                    'is_require_payment' => true,
+                    'is_require_payment' => false,
                 ),
                     'has_affiliation' => 'selected',
                     'menu'            => array(
-                    'slug'        => 'wcz_settings',
-                    'contact'     => false,
-                    'support'     => false,
-                    'affiliation' => false,
-                    'parent'      => array(
-                    'slug' => 'woocommerce',
-                ),
-                ),
+											'slug'        => 'wcz_settings',
+											'contact'     => false,
+											'support'     => false,
+											'affiliation' => false,
+											'parent'      => array(
+												'slug' => 'woocommerce',
+											),
+										),
                     'is_live'         => true,
                 ) );
             }
@@ -96,7 +90,7 @@ if ( function_exists( 'wcz_fs' ) ) {
             ?>
             <div class="error">
                 <p><?php 
-            esc_html_e( 'StoreCustomizer requires the WooCommerce plugin to be active to work', 'woocustomizer' );
+            esc_html_e( 'StoreCustomizer requires the WooCommerce plugin to be active to work', 'ecommercecustomizer' );
             ?></p>
             </div><?php 
         }
@@ -111,7 +105,7 @@ if ( function_exists( 'wcz_fs' ) ) {
      * @since  1.0.0
      * @return object WooCustomizer
      */
-    function woocustomizer()
+    function ecommercecustomizer()
     {
         $instance = WooCustomizer::instance( __FILE__, WCD_PLUGIN_VERSION );
         if ( is_null( $instance->settings ) ) {
@@ -120,5 +114,5 @@ if ( function_exists( 'wcz_fs' ) ) {
         return $instance;
     }
     
-    woocustomizer();
+    ecommercecustomizer();
 }

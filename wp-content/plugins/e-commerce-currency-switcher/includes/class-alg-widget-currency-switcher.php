@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Currency Switcher Widget
+ * PACMEC Currency Switcher Widget
  *
- * The WooCommerce Currency Switcher Widget class.
+ * The PACMEC Currency Switcher Widget class.
  *
  * @version 1.0.0
  * @since   1.0.0
@@ -24,11 +24,11 @@ class Alg_Widget_Currency_Switcher extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'alg_widget_currency_switcher',
-			'description' => __( 'WooCommerce Currency Switcher Widget', 'currency-switcher-woocommerce' ),
+			'description' => __( 'PACMEC Currency Switcher Widget', 'currency-switcher-woocommerce' ),
 		);
 		parent::__construct(
 			'alg_widget_currency_switcher',
-			__( 'WooCommerce Currency Switcher', 'currency-switcher-woocommerce' ),
+			__( 'PACMEC Currency Switcher', 'currency-switcher-woocommerce' ),
 			$widget_ops
 		);
 	}

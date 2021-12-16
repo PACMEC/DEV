@@ -1,23 +1,19 @@
 <?php
 /*
-Plugin Name: Currency Switcher for WooCommerce
-Plugin URI: https://wpwham.com/products/currency-switcher-for-woocommerce/
-Description: Currency Switcher for WooCommerce.
-Version: 2.15.0
-Author: WP Wham
-Author URI: https://wpwham.com
-Text Domain: currency-switcher-woocommerce
+Plugin Name: E-Commerce - Cambiador de moneda
+Plugin URI: #
+Description: Conmutador de moneda para PACMEC.
+Version: 1.0.0
+Author: PACMEC
+Author URI: #
+Text Domain: e-commerce-currency-switcher
 Domain Path: /langs
-WC tested up to: 5.7
-Copyright: © 2018-2021 WP Wham. All rights reserved.
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Check if WooCommerce is active
+// Check if PACMEC is active
 $plugin = 'woocommerce/woocommerce.php';
 if (
 	! in_array( $plugin, apply_filters( 'active_plugins', get_option( 'active_plugins', array() ) ) ) &&
@@ -114,7 +110,7 @@ final class Alg_WC_Currency_Switcher {
 			add_action( 'woocommerce_system_status_report', array( $this, 'add_settings_to_status_report' ) );
 		}
 		
-		// WooCommerce scheduled tasks
+		// PACMEC scheduled tasks
 		add_action( 'wc_after_products_ending_sales', array( $this, 'cleanup_ended_sales_prices' ) );
 		
 	}	
@@ -132,7 +128,7 @@ final class Alg_WC_Currency_Switcher {
 		$unlock_all_link = '<a target="_blank" href="' . esc_url( 'https://wpwham.com/products/currency-switcher-for-woocommerce/?utm_source=plugins_page&utm_campaign=free&utm_medium=currency_switcher' ) . '">' .
 			__( 'Unlock all', 'currency-switcher-woocommerce' ) . '</a>';
 		$custom_links    = ( PHP_INT_MAX === apply_filters( 'alg_wc_currency_switcher_plugin_option', 2 ) ) ?
-			array( $settings_link ) : array( $settings_link, $unlock_all_link );
+			array( $settings_link ) : array( $settings_link );
 		return array_merge( $custom_links, $links );
 	}
 	
@@ -282,7 +278,7 @@ final class Alg_WC_Currency_Switcher {
 	}
 
 	/**
-	 * Add Currency Switcher Plugin settings tab to WooCommerce settings.
+	 * Add Currency Switcher Plugin settings tab to PACMEC settings.
 	 *
 	 * @version 1.0.0
 	 * @since   1.0.0

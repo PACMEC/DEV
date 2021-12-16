@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * In this step the generation options of the coupon are shown.
  *
- * @author		Jeroen Sormani
- * @package		WooCommerce Coupon Generator
+ * @author		PACMEC
+ * @package		E-Commerce Coupon Generator
  * @version		1.0.0
  */
 

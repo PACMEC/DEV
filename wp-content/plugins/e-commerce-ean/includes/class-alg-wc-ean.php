@@ -65,8 +65,9 @@ final class Alg_WC_EAN {
 		add_action( 'init', array( $this, 'localize' ) );
 
 		// Pro
-		if ( 'ean-for-woocommerce-pro.php' === basename( ALG_WC_EAN_FILE ) ) {
-			$this->pro = require_once( 'pro/class-alg-wc-ean-pro.php' );
+		if ( 'e-commerce-ean.php' === basename( ALG_WC_EAN_FILE ) ) {
+			// $this->pro = require_once( 'pro/class-alg-wc-ean-pro.php' );
+			$this->pro = true;
 		}
 
 		// Include required files

@@ -5,7 +5,7 @@
  */
 ( function( $ ) {
 	jQuery( document ).ready( function ( e ) {
-        jQuery( 'ul#adminmenu li#toplevel_page_woocommerce ul.wp-submenu li a span.fs-submenu-item.woocustomizer' ).parent().css( 'display', 'none' );
+        jQuery( 'ul#adminmenu li#toplevel_page_woocommerce ul.wp-submenu li a span.fs-submenu-item.ecommercecustomizer' ).parent().css( 'display', 'none' );
 
         jQuery( '.wcz-notice-rating-click' ).on( 'click', function (e) {
             jQuery( this ).hide();

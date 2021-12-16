@@ -54,7 +54,7 @@ class Alg_WC_EAN_Settings_Barcodes extends Alg_WC_EAN_Settings_Section {
 				'id'       => "alg_wc_ean_barcode{$this->dim_suffix}",
 				'default'  => 'no',
 				'type'     => 'checkbox',
-				'custom_attributes' => apply_filters( 'alg_wc_ean_settings', array( 'disabled' => 'disabled' ) ),
+				
 			),
 			array(
 				'title'    => __( 'Admin product edit page', 'ean-for-woocommerce' ),

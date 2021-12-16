@@ -66,7 +66,7 @@ class Alg_WC_EAN_Settings_Print extends Alg_WC_EAN_Settings_Section {
 				'id'       => 'alg_wc_ean_print_barcodes_to_pdf',
 				'default'  => 'no',
 				'type'     => 'checkbox',
-				'custom_attributes' => apply_filters( 'alg_wc_ean_settings', array( 'disabled' => 'disabled' ) ),
+				
 			),
 			array(
 				'type'     => 'sectionend',

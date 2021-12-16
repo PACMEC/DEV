@@ -7,8 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Generator class containing the generation steps.
  *
  * @class		WCCG_Generator
- * @author		Jeroen Sormani
- * @package		WooCommerce Coupon Generator
+ * @author		PACMEC
+ * @package		E-Commerce Coupon Generator
  * @version		1.0.0
  */
 class WCCG_Generator {

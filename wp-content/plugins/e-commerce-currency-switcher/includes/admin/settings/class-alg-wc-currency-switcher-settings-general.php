@@ -53,10 +53,10 @@ class Alg_WC_Currency_Switcher_Settings_General extends Alg_WC_Currency_Switcher
 				'id'       => 'alg_wc_currency_switcher_plugin_options',
 			),
 			array(
-				'title'    => __( 'WooCommerce Currency Switcher Plugin', 'currency-switcher-woocommerce' ),
+				'title'    => __( 'PACMEC Currency Switcher Plugin', 'currency-switcher-woocommerce' ),
 				'desc'     => '<strong>' . __( 'Enable plugin', 'currency-switcher-woocommerce' ) . '</strong>',
 				'desc_tip' => 
-					__( 'Currency Switcher for WooCommerce', 'currency-switcher-woocommerce' )
+					__( 'Currency Switcher for PACMEC', 'currency-switcher-woocommerce' )
 					. ' v' . WPWHAM_CURRENCY_SWITCHER_VERSION . '.<br />'
 					. '<a href="https://wpwham.com/documentation/currency-switcher-for-woocommerce/?utm_source=documentation_link&utm_campaign=free&utm_medium=currency_switcher" target="_blank" class="button">' .
 					__( 'Documentation', 'currency-switcher-woocommerce' ) . '</a>',
@@ -125,7 +125,7 @@ class Alg_WC_Currency_Switcher_Settings_General extends Alg_WC_Currency_Switcher
 				'type'     => 'checkbox',
 			),
 			array(
-				'title'    => __( 'Apply currency conversion to WooCommerce Price Filter Widget', 'currency-switcher-woocommerce' ),
+				'title'    => __( 'Apply currency conversion to PACMEC Price Filter Widget', 'currency-switcher-woocommerce' ),
 				'desc'     => __( 'Enable', 'currency-switcher-woocommerce' ),
 				'id'       => 'wpw_currency_switcher_price_filter_widget_enabled',
 				'default'  => 'yes',
