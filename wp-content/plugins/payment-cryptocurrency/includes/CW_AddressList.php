@@ -58,8 +58,8 @@ class CW_AddressList {
 		if ( cw_get_option( 'send_address_list_alert' ) ) {
 			$to       = get_site_option( 'admin_email' );
 			$subject  = sprintf( __( '[%1$s] %2$s address list notification' ), get_bloginfo( 'name' ), $currency );
-			$message  = sprintf( __( 'Only %1$s %2$s addresses left in CryptoWoo address list. Please log in at %3$s and add new addresses to the list. Sent from %4$s', 'cryptowoo' ), (int) $address_count, $currency, get_bloginfo( 'name' ), get_bloginfo( 'url' ) );
-			$message .= sprintf( __( '%1$sTired of manually adding addresses? Get our %2$sHD Wallet Add-on%3$s to automate the derivation of new addresses!', 'cryptowoo' ), "\n", '<a href="https://www.cryptowoo.com/shop/cryptowoo-hd-wallet-addon/" target="_blank">', '</a>' );
+			$message  = sprintf( __( 'Only %1$s %2$s addresses left in CryptoPay address list. Please log in at %3$s and add new addresses to the list. Sent from %4$s', 'cryptopay' ), (int) $address_count, $currency, get_bloginfo( 'name' ), get_bloginfo( 'url' ) );
+			$message .= sprintf( __( '%1$sTired of manually adding addresses? Get our %2$sHD Wallet Add-on%3$s to automate the derivation of new addresses!', 'cryptopay' ), "\n", '<a href="https://www.cryptopay.com/shop/cryptopay-hd-wallet-addon/" target="_blank">', '</a>' );
 			$headers  = sprintf( 'From: "%1$s" <%2$s>', _x( 'Site Admin', 'email "From" field' ), get_site_option( 'admin_email' ) );
 			wp_mail( $to, $subject, $message, $headers );
 		}

@@ -2,7 +2,7 @@
 /**
  * Include files for wp-admin
  *
- * @package CryptoWoo
+ * @package CryptoPay
  * @subpackage Admin
  */
 

@@ -10,8 +10,8 @@ use \BitWasp\Bitcoin\Network\NetworkFactory;
 /**
  * Validation methods for cryptocurrency addresses and master public keys
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage Validate
  * @author     DRDoGE
  */

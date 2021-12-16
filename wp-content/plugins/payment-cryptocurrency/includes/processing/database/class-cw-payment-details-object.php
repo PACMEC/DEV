@@ -4,18 +4,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * Payment Details object for CryptoWoo Database rows
+ * Payment Details object for CryptoPay Database rows
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Database
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * CryptoWoo payments details table rows object
+	 * CryptoPay payments details table rows object
 	 *
 	 * @var stdClass|stdClass[]
 	 */
@@ -25,7 +25,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 	 *
 	 * CW_Payment_Details_Object constructor.
 	 *
-	 * @param stdClass[]|stdClass $payment_details CryptoWoo payments details table rows object.
+	 * @param stdClass[]|stdClass $payment_details CryptoPay payments details table rows object.
 	 */
 	public function __construct( $payment_details ) {
 		if ( ! is_array( $payment_details ) ) {
@@ -179,7 +179,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * Get the current CryptoWoo payment details object row.
+	 * Get the current CryptoPay payment details object row.
 	 *
 	 * @return stdClass
 	 */
@@ -198,7 +198,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * Get the current CryptoWoo Payment Details table row object.
+	 * Get the current CryptoPay Payment Details table row object.
 	 *
 	 * @return $this
 	 */
@@ -208,7 +208,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * Get the current CryptoWoo Payment Details table row key.
+	 * Get the current CryptoPay Payment Details table row key.
 	 *
 	 * @return string|int
 	 */
@@ -218,7 +218,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * Iterate to the next CryptoWoo Payment Details row.
+	 * Iterate to the next CryptoPay Payment Details row.
 	 *
 	 * @return $this|void
 	 */
@@ -230,7 +230,7 @@ class CW_Payment_Details_Object implements Countable, Iterator {
 
 	/**
 	 *
-	 * Check if the CryptoWoo Payment Details table object row is valid.
+	 * Check if the CryptoPay Payment Details table object row is valid.
 	 *
 	 * @return bool
 	 */

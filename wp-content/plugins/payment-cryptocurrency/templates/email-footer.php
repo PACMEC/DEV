@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 					<table border="0" cellpadding="10" cellspacing="0" width="100%">
 						<tr>
 							<td colspan="2" valign="middle" id="credit">
-								CryptoWoo - Seamless integration of digital currency payments in WooCommerce.
+								CryptoPay - Seamless integration of digital currency payments in WooCommerce.
 							</td>
 						</tr>
 					</table>

@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * CryptoWoo order processing
+ * CryptoPay order processing
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Processing
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Order_Processing extends CW_Singleton_Array {
 
@@ -30,7 +30,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 	public function complete_order() {
 		$cw_db_woocommerce = CW_Database_Woocommerce::instance( $this->get_id() );
 
-		// Complete CryptoWoo order.
+		// Complete CryptoPay order.
 		CW_Database_CryptoWoo::update_order_status_completed( $this->get_id() );
 
 		// Complete WooCommerce order.
@@ -39,7 +39,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 
 		// Maybe set final order status.
 		if ( 'disable' !== cw_get_option( 'final_order_status' ) && ! $cw_db_woocommerce->get_is_completed() ) {
-			$cw_db_woocommerce->update_status_completed( esc_html__( 'Payment Complete - ', 'cryptowoo' ) );
+			$cw_db_woocommerce->update_status_completed( esc_html__( 'Payment Complete - ', 'cryptopay' ) );
 		}
 	}
 
@@ -67,7 +67,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		$cw_db_woocommerce = CW_Database_Woocommerce::instance( $this->get_id() );
 
 		if ( ! $cw_db_woocommerce->get_is_failed() ) {
-			$cw_db_woocommerce->update_status_failed( 'CryptoWoo Error', true );
+			$cw_db_woocommerce->update_status_failed( 'CryptoPay Error', true );
 		}
 
 		// Decline order and redirect customer.
@@ -201,14 +201,14 @@ class CW_Order_Processing extends CW_Singleton_Array {
 	 */
 	public function add_customer_notice( $message, $message_type ) {
 		// translators: First %s is replaced with an error message, second %s is replaced with woocommerce order id.
-		wc_add_notice( esc_html( sprintf( __( 'ATTENTION: %s', 'cryptowoo' ), sprintf( __( "$message Reference: %s" ), $this->get_id(), 'cryptowoo' ) ) ), $message_type );
+		wc_add_notice( esc_html( sprintf( __( 'ATTENTION: %s', 'cryptopay' ), sprintf( __( "$message Reference: %s" ), $this->get_id(), 'cryptopay' ) ) ), $message_type );
 	}
 
 	/**
 	 *
 	 * Check basic order validity
 	 *
-	 * @param CW_Payment_Details_Object $payment_details CryptoWoo payment details object from DB.
+	 * @param CW_Payment_Details_Object $payment_details CryptoPay payment details object from DB.
 	 */
 	public function check_order_validity( $payment_details ) {
 		if ( $payment_details->get_crypto_amount_due() <= 0 ) {
@@ -233,7 +233,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 
 	/**
 	 *
-	 * Updates the Woocommerce order meta fields with the values from CryptoWoo Payments Table.
+	 * Updates the Woocommerce order meta fields with the values from CryptoPay Payments Table.
 	 *
 	 * @return false|int The Order ID if successful, false if unsuccessful.
 	 */
@@ -253,7 +253,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		if ( $payment_details->get_received_confirmed() >= $payment_details->get_crypto_amount_due() && ! $payment_details->get_received_unconfirmed() && $payment_details->get_is_paid() ) {
 			// Set tx confirmed meta and payment confirmed note.
 			// translators: %1$s is replaced with payment currency and %2$s is replaced with crypto amount confirmed.
-			$order_note = esc_html__( '%1$s Payment Complete - Amount Confirmed: %2$s', 'cryptowoo' );
+			$order_note = esc_html__( '%1$s Payment Complete - Amount Confirmed: %2$s', 'cryptopay' );
 			$cw_db_woocommerce
 				->set_tx_confirmed()
 				->add_order_note( sprintf( $order_note, $payment_details->get_payment_currency(), CW_Formatting::fbits( $payment_details->get_received_confirmed() ) ), 3 === $payment_details->get_timeout() );
@@ -284,7 +284,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		$db_was_updated = CW_Database_CryptoWoo::update_order_status_completed( $order_id );
 
 		// translators: %1$s is replaced with a date and %2$d is replaced by woocommerce order id.
-		$admin_note = sprintf( esc_html__( '%1$s: Order #%2$d has been completed - removing address from queue.', 'cryptowoo' ), date( 'Y-m-d H:i:s' ), $order_id );
+		$admin_note = sprintf( esc_html__( '%1$s: Order #%2$d has been completed - removing address from queue.', 'cryptopay' ), date( 'Y-m-d H:i:s' ), $order_id );
 		CW_Order_Processing_Tools::instance()->log_order_status_changed( __FUNCTION__, $admin_note, $db_was_updated );
 
 		// Add admin note to order.
@@ -314,7 +314,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		$updated = CW_Database_CryptoWoo::update_order_status_cancelled_timeout( $order_id );
 
 		// translators: %1$s is replaced with a date and %2$d is replaced by woocommerce order id.
-		$note = sprintf( esc_html__( '%1$s: Order #%2$d has been cancelled - removing address from queue.', 'cryptowoo' ), date( 'Y-m-d H:i:s' ), $order_id );
+		$note = sprintf( esc_html__( '%1$s: Order #%2$d has been cancelled - removing address from queue.', 'cryptopay' ), date( 'Y-m-d H:i:s' ), $order_id );
 		CW_Order_Processing_Tools::instance()->log_order_status_changed( __FUNCTION__, $note, $updated );
 
 		// Add note to order.
@@ -338,7 +338,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 	public static function force_update_payment_status( $order ) {
 
 		// Add an order note for information that payment status force-updating is in progress.
-		$message = __( 'Force update of payment status has been started', 'cryptowoo' );
+		$message = __( 'Force update of payment status has been started', 'cryptopay' );
 		CW_Database_Woocommerce::instance( $order->get_id() )->add_order_note( $message );
 
 		// Get payment details for the order.
@@ -348,12 +348,12 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		// Update payment status from blockchain.
 		CW_OrderProcessing::block_explorer()->update_tx_details( $order_batch );
 
-		// Update payment status in cryptowoo and add order note.
+		// Update payment status in cryptopay and add order note.
 		self::cw_force_process_unpaid_addresses( $order );
 	}
 
 	/**
-	 * Force process unpaid addresses for an order in cryptowoo
+	 * Force process unpaid addresses for an order in cryptopay
 	 * Add order notes with the payment status after update
 	 *
 	 * @param WC_Order $order Woocommerce order object.
@@ -371,11 +371,11 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		$confirmed   = CW_Formatting::fbits( $cwdb_wc->get_received_confirmed(), true );
 		$unconfirmed = CW_Formatting::fbits( $cwdb_wc->get_received_unconfirmed(), true );
 		$txids       = ! empty( $cwdb_wc->get_tx_ids() ) ? $cwdb_wc->get_tx_ids() : '';
-		$amounts     = sprintf( $format, __( 'Confirmed', 'cryptowoo' ), $confirmed, __( 'Unconfirmed', 'cryptowoo' ), $unconfirmed, print_r( $txids, true ) );
+		$amounts     = sprintf( $format, __( 'Confirmed', 'cryptopay' ), $confirmed, __( 'Unconfirmed', 'cryptopay' ), $unconfirmed, print_r( $txids, true ) );
 
 		// Add an order note for information that payment status was force updated.
 		// translators: %s is replaced with crypto amount unconfirmed and confirmed and txids.
-		$message = sprintf( __( 'Payment status for order was force updated.%s', 'cryptowoo' ), $amounts );
+		$message = sprintf( __( 'Payment status for order was force updated.%s', 'cryptopay' ), $amounts );
 		$order->add_order_note( $message );
 	}
 
@@ -408,7 +408,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 		$cwdb_woocommerce = CW_Database_Woocommerce::instance( $order->get_id() );
 
 		// Add an order note for information that payment status force-updating is in progress.
-		$message = sprintf( __( 'Force accept payment has been started', 'cryptowoo' ) );
+		$message = sprintf( __( 'Force accept payment has been started', 'cryptopay' ) );
 		$cwdb_woocommerce->add_order_note( $message );
 
 		// If total received confirmed is set to true, order is marked as paid in full.
@@ -451,7 +451,7 @@ class CW_Order_Processing extends CW_Singleton_Array {
 			->set_tx_ids( $tx_ids )
 			->update();
 
-		// Update payment status in cryptowoo and add order note.
+		// Update payment status in cryptopay and add order note.
 		self::cw_force_process_unpaid_addresses( $order );
 
 		// If the order for some reason is still not completed, we force accept it.

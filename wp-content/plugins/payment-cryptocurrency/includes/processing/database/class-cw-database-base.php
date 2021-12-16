@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Order processing database base class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Database
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Database_Base extends CW_Singleton_Array {
 
@@ -110,7 +110,7 @@ class CW_Database_Base extends CW_Singleton_Array {
 		$order = wc_get_order( $this->get_order_id() );
 		/**
 *
-	* Prevent updating of orders that aren't paid with CryptoWoo
+	* Prevent updating of orders that aren't paid with CryptoPay
 		 * maybe the customer switched to another method after submitting his order
 		 * and it did not get removed from the processing queue yet
 */
@@ -129,14 +129,14 @@ class CW_Database_Base extends CW_Singleton_Array {
 
 	/**
 	 *
-	 * Validate the order object from stored order id is CryptoWoo order.
+	 * Validate the order object from stored order id is CryptoPay order.
 	 *
 	 * @return bool
 	 */
 	public function payment_method_is_cryptowoo() {
 		/**
 *
-	* Prevent updating of orders that aren't paid with CryptoWoo
+	* Prevent updating of orders that aren't paid with CryptoPay
 		 * maybe the customer switched to another method after submitting his order
 		 * and it did not get removed from the processing queue yet
 */

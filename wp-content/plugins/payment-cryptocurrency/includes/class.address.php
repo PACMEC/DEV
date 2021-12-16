@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Address Creation Handler
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage Address
  */
 class CW_Address {
@@ -118,7 +118,7 @@ class CW_Address {
 		$unpaid_addresses = count( CW_Database_CryptoWoo::get_unpaid_orders_payment_details() );
 		if ( $unpaid_addresses > 0 ) {
 			$result['status']  = 'skipped';
-			$result['message'] = __( 'Skipped archiving addresses: We have open orders. Try again later.', 'cryptowoo' );
+			$result['message'] = __( 'Skipped archiving addresses: We have open orders. Try again later.', 'cryptopay' );
 
 			// Schedule single trigger in 2 hours
 			$schedule = time() + 7200;
@@ -148,7 +148,7 @@ class CW_Address {
 				$address_count = count( $addresses );
 				if ( $address_count < $address_threshold ) {
 					$result['status']               = 'skipped';
-					$result[ $currency ]['message'] = sprintf( __( 'Total %1$s address count: %2$d, Current threshold: %3$d -> skipping', 'cryptowoo' ), $currency, $address_count, $address_threshold );
+					$result[ $currency ]['message'] = sprintf( __( 'Total %1$s address count: %2$d, Current threshold: %3$d -> skipping', 'cryptopay' ), $currency, $address_count, $address_threshold );
 				} else {
 
 					// Prepare API argument
@@ -178,7 +178,7 @@ class CW_Address {
 					// Send a warning if we'll reach the free account limit soon
 					if ( $address_count > 80 ) {
 						$result['status']               = 'alert';
-						$result[ $currency ]['message'] = sprintf( __( 'Warning: We found %1$d %2$s addresses in your account at Block.io. The free plan limit is almost reached!', 'cryptowoo' ), $address_count, $currency );
+						$result[ $currency ]['message'] = sprintf( __( 'Warning: We found %1$d %2$s addresses in your account at Block.io. The free plan limit is almost reached!', 'cryptopay' ), $address_count, $currency );
 					} else {
 
 						// Archive max 100 addresses in one call

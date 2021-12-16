@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Array of Singleton classes.
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage Singleton
- * @author     Developer: CryptoWoo AS
+ * @author     Developer: CryptoPay AS
  */
 abstract class CW_Singleton {
 

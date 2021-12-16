@@ -2,11 +2,11 @@
 /**
  * Dependencies for Scripts and Styles functions
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage Dependencies
- * Author: CryptoWoo AS
- * Author URI: https://cryptowoo.com
+ * Author: CryptoPay AS
+ * Author URI: https://cryptopay.com
  */
 
 /**

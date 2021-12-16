@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<td align="center" valign="top">
 				<div id="template_header_image">
 					<?php
-					if ( $img =  CWOO_PLUGIN_DIR . 'assets/images/cryptowoo-redux.png' ) {
+					if ( $img =  CWOO_PLUGIN_DIR . 'assets/images/cryptopay-redux.png' ) {
 						echo '<p style="margin-top:0;"><img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" /></p>';
 					}
 					?>

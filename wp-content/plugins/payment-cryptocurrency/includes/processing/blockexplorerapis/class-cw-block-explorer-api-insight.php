@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Insight Block Explorer API Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 abstract class CW_Block_Explorer_API_Insight extends CW_Block_Explorer_Base {
 

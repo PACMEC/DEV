@@ -1,8 +1,8 @@
 <?php
 /**
- * CryptoWoo Google chart visualization of exchange rate errors on Database Maintenance page in wp-admin
+ * CryptoPay Google chart visualization of exchange rate errors on Database Maintenance page in wp-admin
  *
- * @package    CryptoWoo
+ * @package    CryptoPay
  * @subpackage Admin
  */
 
@@ -156,13 +156,13 @@ if ( $data && cw_get_option( 'rate_error_charts' ) ) {
 <?php } ?>
 <div class="wrap postbox cw-postbox">
 	<?php if ( ! isset( $counting_since ) ) { ?>
-	<h3><?php esc_html_e( 'Exchange rate error charts', 'cryptowoo' ); ?></h3>
-	<p><?php esc_html_e( 'No data available. Enable the error visualization on the "Debugging" tab in the settings to start collecting exchange rate error data.', 'cryptowoo' ); ?></p>
+	<h3><?php esc_html_e( 'Exchange rate error charts', 'cryptopay' ); ?></h3>
+	<p><?php esc_html_e( 'No data available. Enable the error visualization on the "Debugging" tab in the settings to start collecting exchange rate error data.', 'cryptopay' ); ?></p>
 	<?php } else { ?>
 	<h3>
 		<?php
 		/* translators: %s: date that counting was started */
-		echo esc_html( sprintf( esc_html__( 'Exchange rate errors since %s', 'cryptowoo' ), $counting_since ) );
+		echo esc_html( sprintf( esc_html__( 'Exchange rate errors since %s', 'cryptopay' ), $counting_since ) );
 		?>
 	</h3>
 	<p>We are keeping only the last 7 days worth of detailed exchange error data.</p>

@@ -6,7 +6,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // Must be required for the cw_get_option function to exist.
-require_once plugin_dir_path( __FILE__ ) . '/cryptowoo.php';
+require_once plugin_dir_path( __FILE__ ) . '/cryptopay.php';
 
 global $wpdb;
 
@@ -31,8 +31,8 @@ if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 		}
 		// Maybe clean up options table
 		if ( '1' !== cw_get_option( 'keep_options' ) ) {
-			// Get all options containing *cryptowoo*
-			$all_options = $wpdb->get_results( 'SELECT option_name FROM ' . $wpdb->prefix . "options WHERE option_name LIKE '%cryptowoo%'" );
+			// Get all options containing *cryptopay*
+			$all_options = $wpdb->get_results( 'SELECT option_name FROM ' . $wpdb->prefix . "options WHERE option_name LIKE '%cryptopay%'" );
 
 			// Delete options
 			foreach ( $all_options as $option ) {
@@ -57,8 +57,8 @@ if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 	}
 	// Maybe clean up options table
 	if ( '1' !== cw_get_option( 'keep_options' ) ) {
-		// Get all options containing *cryptowoo*
-		$all_options = $wpdb->get_results( 'SELECT option_name FROM ' . $wpdb->prefix . "options WHERE option_name LIKE '%cryptowoo%'" );
+		// Get all options containing *cryptopay*
+		$all_options = $wpdb->get_results( 'SELECT option_name FROM ' . $wpdb->prefix . "options WHERE option_name LIKE '%cryptopay%'" );
 
 		// Delete options
 		foreach ( $all_options as $option ) {

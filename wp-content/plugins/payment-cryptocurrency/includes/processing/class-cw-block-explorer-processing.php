@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly.
 
 /**
- * CryptoWoo Block Explorer Processing
+ * CryptoPay Block Explorer Processing
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Processing
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_Processing {
 
@@ -42,7 +42,7 @@ class CW_Block_Explorer_Processing {
 	 * Get the txs from block explorer api by currency and WC CW orders.
 	 *
 	 * @param string                    $batch_currency The currency code (e.g BTC).
-	 * @param CW_Payment_Details_Object $orders         WC CryptoWoo Orders array.
+	 * @param CW_Payment_Details_Object $orders         WC CryptoPay Orders array.
 	 * @param array|false               $processing     TX API config array.
 	 *
 	 * @return array|false|mixed|void|null
@@ -177,7 +177,7 @@ class CW_Block_Explorer_Processing {
 						$batch_data      = self::get_txs_from_api( $batch_currency, $payment_details );
 						// TODO: what to do with this? $last_tx_update[ $processing->tx_update_api ] = time();
 
-						// Analyse tx data from api and update cryptowoo and woocommerce database.
+						// Analyse tx data from api and update cryptopay and woocommerce database.
 						self::tx_analysis( $payment_details, $batch_data );
 					}
 				}
@@ -188,7 +188,7 @@ class CW_Block_Explorer_Processing {
 			);
 		} else {
 			// We don't have unpaid addresses.
-			$update_stats['info'] = esc_html__( 'No unpaid addresses found', 'cryptowoo' );
+			$update_stats['info'] = esc_html__( 'No unpaid addresses found', 'cryptopay' );
 		}
 		update_option( 'cryptowoo_last_tx_update', $last_tx_update );
 
@@ -266,7 +266,7 @@ class CW_Block_Explorer_Processing {
 				// Instant transactions (secure 0-conf, eg Dash instantSend).
 				if ( isset( $pc_conf['instant_send'] ) && $pc_conf['instant_send'] && isset( $transaction->instant ) && true === $transaction->instant ) {
 					$transaction->confirms += $pc_conf['instant_send_depth'];
-					$msg                    = sprintf( __( 'InstantSend detected: %1$d + %2$d %3$s', 'cryptowoo' ), $transaction->confirms, $pc_conf['instant_send_depth'], $transaction->hash );
+					$msg                    = sprintf( __( 'InstantSend detected: %1$d + %2$d %3$s', 'cryptopay' ), $transaction->confirms, $pc_conf['instant_send_depth'], $transaction->hash );
 					CW_AdminMain::cryptowoo_log_data( 0, __FUNCTION__, $msg, 'debug' );
 				}
 
@@ -428,7 +428,7 @@ class CW_Block_Explorer_Processing {
 			$pc_conf['min_conf'] ++;
 		}
 
-		// CW_AdminMain::cryptowoo_log_data(0, __FUNCTION__,  cw_get_option( $min_conf_key), 'cryptowoo-cron.log');
+		// CW_AdminMain::cryptowoo_log_data(0, __FUNCTION__,  cw_get_option( $min_conf_key), 'cryptopay-cron.log');
 		return $pc_conf;
 	}
 
@@ -577,19 +577,19 @@ class CW_Block_Explorer_Processing {
 
 	/**
 	 *
-	 * Check that order object is valid and payment method is CryptoWoo
+	 * Check that order object is valid and payment method is CryptoPay
 	 *
-	 * @param CW_Database_Woocommerce   $cw_db_woocommerce CryptoWoo Database Woocommerce object.
-	 * @param CW_Payment_Details_Object $info              CryptoWoo Payment Details Object.
+	 * @param CW_Database_Woocommerce   $cw_db_woocommerce CryptoPay Database Woocommerce object.
+	 * @param CW_Payment_Details_Object $info              CryptoPay Payment Details Object.
 	 */
 	private static function validate_order_and_payment_method( $cw_db_woocommerce, $info ) {
-		$status = __( 'Undefined Error', 'cryptowoo' );
+		$status = __( 'Undefined Error', 'cryptopay' );
 
 		if ( ! $cw_db_woocommerce ) {
-			$status = sprintf( esc_html__( 'Error: Order #%1$s with address %2$s not found', 'cryptowoo' ), (int) $info->get_order_id(), $info->get_address() );
+			$status = sprintf( esc_html__( 'Error: Order #%1$s with address %2$s not found', 'cryptopay' ), (int) $info->get_order_id(), $info->get_address() );
 			return false;
 		} elseif ( ! $cw_db_woocommerce->payment_method_is_cryptowoo() ) {
-			$status = sprintf( esc_html__( 'Payment method has been changed to %s - removing address from queue', 'cryptowoo' ), $payment_method );
+			$status = sprintf( esc_html__( 'Payment method has been changed to %s - removing address from queue', 'cryptopay' ), $payment_method );
 			// Add order note about the changed payment method.
 			if ( 4 !== $info->get_timeout() ) {
 				$cw_db_woocommerce->add_order_note( $status );
@@ -610,7 +610,7 @@ class CW_Block_Explorer_Processing {
 	 */
 	public static function process_unpaid_orders( $payment_details ) {
 		if ( ! count( $payment_details ) ) {
-			return esc_html__( 'No unpaid addresses found', 'cryptowoo' );
+			return esc_html__( 'No unpaid addresses found', 'cryptopay' );
 		}
 
 		$double_spend_detected = false;
@@ -627,7 +627,7 @@ class CW_Block_Explorer_Processing {
 			$cw_db_woocommerce = CW_Database_Woocommerce::instance( $info->get_order_id() );
 			$cw_db_cryptowoo   = CW_Database_CryptoWoo::instance( $info->get_order_id() );
 
-			// Skip if invalid order or CryptoWoo is not the payment method of this order.
+			// Skip if invalid order or CryptoPay is not the payment method of this order.
 			if ( ! self::validate_order_and_payment_method( $cw_db_woocommerce, $info ) ) {
 				$cw_db_cryptowoo->set_paid( false )->set_is_timeout_and_needs_quote_refresh()->update();
 				continue;
@@ -658,7 +658,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Process an unpaid order
 	 *
-	 * @param CW_Payment_Details_Object $info CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $info CryptoPay Payment Details Object.
 	 */
 	private static function process_unpaid_order( $info ) {
 		// Order expiration time in seconds.
@@ -716,8 +716,8 @@ class CW_Block_Explorer_Processing {
 			if ( $percentage_paid >= (float) cw_get_option( 'underpayment_notice_range' )[1] ) {
 
 				// Change the status to on-hold and add a note for the admin and order meta.
-				$cw_db_woocommerce->add_admin_note( sprintf( esc_html__( 'CryptoWoo payment failed - Percentage of order paid: %1$s%2$s. Manual interaction needed.', 'cryptowoo' ), $percentage_paid, '%' ) )
-					->update_status_on_hold( esc_html__( 'Payment timeout - ', 'cryptowoo' ) )
+				$cw_db_woocommerce->add_admin_note( sprintf( esc_html__( 'CryptoPay payment failed - Percentage of order paid: %1$s%2$s. Manual interaction needed.', 'cryptopay' ), $percentage_paid, '%' ) )
+					->update_status_on_hold( esc_html__( 'Payment timeout - ', 'cryptopay' ) )
 					->set_tx_confirmed( 'failed - timeout' )
 					->update();
 
@@ -729,7 +729,7 @@ class CW_Block_Explorer_Processing {
 				// or set to "quote-refresh"
 				// or use option value as custom order status.
 				$timeout_order_status = cw_get_option( 'timeout_action' ) ?: 'cancelled';
-				$order_status_note    = esc_html__( 'Payment timeout - ', 'cryptowoo' );
+				$order_status_note    = esc_html__( 'Payment timeout - ', 'cryptopay' );
 
 				if ( 'quote-refresh' === $timeout_order_status ) {
 					$payment_url = $cw_db_woocommerce->get_checkout_payment_url();
@@ -737,16 +737,16 @@ class CW_Block_Explorer_Processing {
 					CW_Database_CryptoWoo::instance( $info->get_order_id() )->set_is_timeout_and_needs_quote_refresh()->update();
 
 					// Change the status to quote refresh and add a note for the admin and order meta.
-					$note             = sprintf( esc_html__( 'The price quote for your order #%1$d has expired. Please visit your account orders section or use the link below to get a new quote for this order. %2$s', 'cryptowoo' ), $info->get_order_id(), $payment_url );
+					$note             = sprintf( esc_html__( 'The price quote for your order #%1$d has expired. Please visit your account orders section or use the link below to get a new quote for this order. %2$s', 'cryptopay' ), $info->get_order_id(), $payment_url );
 					$is_customer_note = cw_get_option( 'send_quote_refresh_customer_email' );
 					$cw_db_woocommerce->add_order_note( $note, $is_customer_note )->update_status_quote_refresh( $order_status_note );
 				} else {
 					if ( $address_in_use ) {
 						// Ask customer to contact merchant because if insufficient payment.
-						$txnreference = sprintf( esc_html__( 'This order has expired. Please contact us as insufficient payment has been sent. Reference: %d', 'cryptowoo' ), $info->get_order_id() );
+						$txnreference = sprintf( esc_html__( 'This order has expired. Please contact us as insufficient payment has been sent. Reference: %d', 'cryptopay' ), $info->get_order_id() );
 					} else {
 						// Default order note.
-						$txnreference = sprintf( esc_html__( 'This order has expired. Please try again or contact us if you have already sent a payment. Reference: %d', 'cryptowoo' ), $info->get_order_id() );
+						$txnreference = sprintf( esc_html__( 'This order has expired. Please try again or contact us if you have already sent a payment. Reference: %d', 'cryptopay' ), $info->get_order_id() );
 					}
 					// Add an order note to the customer or admin for the timeout.
 					$note             = apply_filters( 'cryptowoo_timeout_txnreference', $txnreference, wc_get_order( $info->get_order_id() ) );
@@ -786,11 +786,11 @@ class CW_Block_Explorer_Processing {
 
 				if ( $double_spend_detected ) {
 					// Add a note to the admin.
-					$cw_db_woocommerce->add_admin_note( sprintf( esc_html__( 'CryptoWoo detected a replace-by-fee or doublespend attempt. Old txid: %s', 'cryptowoo' ), $info->get_tx_ids_json_encoded() ) );
+					$cw_db_woocommerce->add_admin_note( sprintf( esc_html__( 'CryptoPay detected a replace-by-fee or doublespend attempt. Old txid: %s', 'cryptopay' ), $info->get_tx_ids_json_encoded() ) );
 				} else {
 					// Change the status to cancelled and add a note to the customer.
-					$customer_note = esc_html__( 'We detected an error and had to cancel this order. Please try again or contact us if you already sent a payment. Sorry for the inconvenience.', 'cryptowoo' );
-					$cw_db_woocommerce->add_customer_note( $customer_note )->update_status_cancelled( esc_html__( 'Payment error - ', 'cryptowoo' ) );
+					$customer_note = esc_html__( 'We detected an error and had to cancel this order. Please try again or contact us if you already sent a payment. Sorry for the inconvenience.', 'cryptopay' );
+					$cw_db_woocommerce->add_customer_note( $customer_note )->update_status_cancelled( esc_html__( 'Payment error - ', 'cryptopay' ) );
 				}
 
 				// Update order meta.
@@ -807,7 +807,7 @@ class CW_Block_Explorer_Processing {
 					$full_amount_pending = self::calculate_total_received( $info );
 
 					// Payment received notice.
-					$cw_db_woocommerce->add_order_note( sprintf( esc_html__( 'Incoming Payment: %1$s%2$s%3$s%4$s', 'cryptowoo' ), CW_Formatting::fbits( $full_amount_pending ), $info->get_payment_currency(), PHP_EOL, $info->get_tx_ids_json_encoded() ) );
+					$cw_db_woocommerce->add_order_note( sprintf( esc_html__( 'Incoming Payment: %1$s%2$s%3$s%4$s', 'cryptopay' ), CW_Formatting::fbits( $full_amount_pending ), $info->get_payment_currency(), PHP_EOL, $info->get_tx_ids_json_encoded() ) );
 
 					// Update order meta.
 					$cw_db_woocommerce
@@ -824,7 +824,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Calculate total received (confirmed + unconfirmed)
 	 *
-	 * @param CW_Payment_Details_Object $payment_details CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $payment_details CryptoPay Payment Details Object.
 	 *
 	 * @return int
 	 */
@@ -837,7 +837,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Calculate percentage paid of amount_due.
 	 *
-	 * @param CW_Payment_Details_Object $payment_details CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $payment_details CryptoPay Payment Details Object.
 	 *
 	 * @return float|int
 	 */
@@ -850,7 +850,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Calculate amount difference between paid and due.
 	 *
-	 * @param CW_Payment_Details_Object $payment_details CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $payment_details CryptoPay Payment Details Object.
 	 *
 	 * @return float|int
 	 */
@@ -862,7 +862,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Mark as overpayment and add order note.
 	 *
-	 * @param CW_Payment_Details_Object $info CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $info CryptoPay Payment Details Object.
 	 */
 	private static function order_overpayment( $info ) {
 		// Amounts.
@@ -929,7 +929,7 @@ class CW_Block_Explorer_Processing {
 */
 
 			// Prepare order note.
-			$note = sprintf( esc_html__( 'Your payment is incomplete. This order has not been paid in full. Please send the missing amount within the next %d minutes.', 'cryptowoo' ), round( ( ( $order_timeout + $times_out_in ) / 60 ), 2 ) );
+			$note = sprintf( esc_html__( 'Your payment is incomplete. This order has not been paid in full. Please send the missing amount within the next %d minutes.', 'cryptopay' ), round( ( ( $order_timeout + $times_out_in ) / 60 ), 2 ) );
 
 			// Add a note for the customer.
 			CW_Database_Woocommerce::instance( $order_id )->add_customer_note( $note );
@@ -956,7 +956,7 @@ class CW_Block_Explorer_Processing {
 	 *
 	 * Send overpayment notice email to admin.
 	 *
-	 * @param CW_Payment_Details_Object $info            CryptoWoo Payment Details Object.
+	 * @param CW_Payment_Details_Object $info            CryptoPay Payment Details Object.
 	 * @param float|int                 $percentage_paid Percentage paid.
 	 * @param int                       $amount_diff     Crypto amount difference (paid - due).
 	 * @param string                    $refund_address  Refund blockchain address.
@@ -965,26 +965,26 @@ class CW_Block_Explorer_Processing {
 
 		$to         = get_option( 'admin_email' );
 		$blogname   = get_bloginfo( 'name', 'raw' );
-		$subject    = sprintf( '%s %s%s', $blogname, esc_html__( ' - Overpayment for order #', 'cryptowoo' ), $info->get_order_id() );
+		$subject    = sprintf( '%s %s%s', $blogname, esc_html__( ' - Overpayment for order #', 'cryptopay' ), $info->get_order_id() );
 		$order_url  = admin_url( "post.php?post={$info->get_order_id()}&action=edit" );
-		$view_order = sprintf( '<p><a href="%s">%s #%s</a></p>', $order_url, esc_html__( 'View Order', 'cryptowoo' ), $info->get_order_id() );
+		$view_order = sprintf( '<p><a href="%s">%s #%s</a></p>', $order_url, esc_html__( 'View Order', 'cryptopay' ), $info->get_order_id() );
 
 		$message = CW_Formatting::cw_get_template_html( 'email-header', $subject );
 
-		$message .= sprintf( esc_html__( 'The customer paid %1$d%2$s (%3$s %4$s) too much.', 'cryptowoo' ), round( $percentage_paid - 100, 3 ), '%', CW_Formatting::fbits( $amount_diff ), $info->get_payment_currency() );
-		$message .= sprintf( '<p>%s: %s</p>%s', esc_html__( 'Customer e-Mail address', 'cryptowoo' ), CW_Database_Woocommerce::instance( $info->get_order_id() )->get_billing_email(), $view_order );
+		$message .= sprintf( esc_html__( 'The customer paid %1$d%2$s (%3$s %4$s) too much.', 'cryptopay' ), round( $percentage_paid - 100, 3 ), '%', CW_Formatting::fbits( $amount_diff ), $info->get_payment_currency() );
+		$message .= sprintf( '<p>%s: %s</p>%s', esc_html__( 'Customer e-Mail address', 'cryptopay' ), CW_Database_Woocommerce::instance( $info->get_order_id() )->get_billing_email(), $view_order );
 
 		// Maybe add refund address.
 		if ( $refund_address ) {
-			$message      .= sprintf( '<p>%s %s</p>', esc_html__( 'Refund address: ', 'cryptowoo' ), CW_Formatting::link_to_address( $info->get_payment_currency(), $refund_address, false, true ) );
-			$label         = rawurlencode( sprintf( '%s %s', esc_html__( 'Refund Overpayment for Order', 'cryptowoo' ), $info->get_order_id() ) );
+			$message      .= sprintf( '<p>%s %s</p>', esc_html__( 'Refund address: ', 'cryptopay' ), CW_Formatting::link_to_address( $info->get_payment_currency(), $refund_address, false, true ) );
+			$label         = rawurlencode( sprintf( '%s %s', esc_html__( 'Refund Overpayment for Order', 'cryptopay' ), $info->get_order_id() ) );
 			$wallet_config = CW_Address::get_wallet_config( $info->get_payment_currency(), $info->get_crypto_amount_due() );
 
 			$qr_data = sprintf( '%s:%s?amount=%s&label=%s', $wallet_config['coin_client'], $refund_address, CW_Formatting::fbits( $amount_diff, true, 8, true, true ), $label );
 
 			// Maybe create QR Code TODO always create QR code when library added support for PHP7.
 			if ( defined( 'CWOO_SHOW_REFUND_QR' ) ) {
-				$message .= esc_html__( 'Scan or click the QR code to refund the excess amount.', 'cryptowoo' );
+				$message .= esc_html__( 'Scan or click the QR code to refund the excess amount.', 'cryptopay' );
 				$qr       = QRCode::getMinimumQRCode( $qr_data, QR_ERROR_CORRECT_LEVEL_L );
 				$im       = $qr->createImage( 2, 4 );
 				ob_start();
@@ -994,16 +994,16 @@ class CW_Block_Explorer_Processing {
 				$rawImageBytes = ob_get_clean();
 				$qr_code       = "<img src='data:image/jpeg;base64," . base64_encode( $rawImageBytes ) . "' />";
 			} else {
-				$qr_code = esc_html__( 'Click here to open your wallet and refund the excess amount.', 'cryptowoo' );
+				$qr_code = esc_html__( 'Click here to open your wallet and refund the excess amount.', 'cryptopay' );
 			}
 			$message .= sprintf( '<br><br><a href="%s">%s</a>', esc_url( $qr_data, $wallet_config['coin_protocols'], false ), $qr_code );
 		} else {
-			$message .= sprintf( '<p>%s</p>', esc_html__( 'No refund address available.', 'cryptowoo' ) );
+			$message .= sprintf( '<p>%s</p>', esc_html__( 'No refund address available.', 'cryptopay' ) );
 		}
 		$message .= CW_Formatting::cw_get_template_html( 'email-footer' );
 
 		$headers = array(
-			"From: CryptoWoo Plugin <{$to}>",
+			"From: CryptoPay Plugin <{$to}>",
 			'Content-Type: text/html; charset=UTF-8',
 		);
 		wp_mail( $to, $subject, $message, $headers );
@@ -1022,14 +1022,14 @@ class CW_Block_Explorer_Processing {
 			// Send email to admin.
 			$to       = get_option( 'admin_email' );
 			$blogname = get_bloginfo( 'name', 'raw' );
-			$subject  = sprintf( '%s %s', $blogname, esc_html__( ' - Payment processing API error', 'cryptowoo' ) );
+			$subject  = sprintf( '%s %s', $blogname, esc_html__( ' - Payment processing API error', 'cryptopay' ) );
 
 			$message  = CW_Formatting::cw_get_template_html( 'email-header', $subject );
-			$message .= sprintf( esc_html__( 'CryptoWoo has detected an issue during payment processing%1$s %2$s', 'cryptowoo' ), '<br>', $error );
+			$message .= sprintf( esc_html__( 'CryptoPay has detected an issue during payment processing%1$s %2$s', 'cryptopay' ), '<br>', $error );
 			$message .= CW_Formatting::cw_get_template_html( 'email-footer' );
 
 			$headers = array(
-				"From: CryptoWoo Plugin <{$to}>",
+				"From: CryptoPay Plugin <{$to}>",
 				'Content-Type: text/html; charset=UTF-8',
 			);
 			wp_mail( $to, $subject, $message, $headers );

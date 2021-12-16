@@ -322,7 +322,7 @@ class CW_Blockcypher {
 		$payment_array = array();
 		/*
 		if(WP_DEBUG) {
-			file_put_contents(CW_LOG_DIR . 'cryptowoo-tx-update.log', date('Y-m-d H:i:s') . ' blockcypher tx analysis ' . var_export($api_data, true) . "\r\n", FILE_APPEND);
+			file_put_contents(CW_LOG_DIR . 'cryptopay-tx-update.log', date('Y-m-d H:i:s') . ' blockcypher tx analysis ' . var_export($api_data, true) . "\r\n", FILE_APPEND);
 		} */
 
 		foreach ( $batch_orders as $order_data ) {

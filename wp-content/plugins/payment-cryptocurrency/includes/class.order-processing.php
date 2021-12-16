@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Process orders
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage OrderProcessing
  * @todo       refactor: Remove backward compatibility
  */
@@ -133,7 +133,7 @@ class CW_OrderProcessing {
 
 	/**
 	 *
-	 * Update CryptoWoo orders payment details
+	 * Update CryptoPay orders payment details
 	 *
 	 * @param string $payment_address    Cryptocurrency blockchain payment address.
 	 * @param int    $amount             Order total in fiat value.

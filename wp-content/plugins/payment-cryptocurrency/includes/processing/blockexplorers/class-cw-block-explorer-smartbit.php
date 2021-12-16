@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * BitPay Insight Block Explorer API Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_Smartbit extends CW_Block_Explorer_API_Smartbit {
 

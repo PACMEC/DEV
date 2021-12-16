@@ -8,15 +8,15 @@ jQuery( document ).ready(
 
 		// Appends switch-button and qr_code
 		// TODO-Improvement: Refactor, more methods, DRY, etc.
-		if (jQuery( "#qrcode" ).length > 0 && CryptoWoo !== undefined ) {
-			var functionName = 'change_addr_' + CryptoWoo.currency;
+		if (jQuery( "#qrcode" ).length > 0 && CryptoPay !== undefined ) {
+			var functionName = 'change_addr_' + CryptoPay.currency;
 			if (typeof window[functionName] === "function") {
 				jQuery( "#check" ).parent().append( '<button class="btn-change-addr-format" id="change_addr_format" onclick="switchPaymentAddress()">Change to legacy-address</button>' );
 			}
-			if (CryptoWoo.currency == 'BCH' && bchaddr.isLegacyAddress( CryptoWoo.payment_address )) {
+			if (CryptoPay.currency == 'BCH' && bchaddr.isLegacyAddress( CryptoPay.payment_address )) {
 				jQuery( '#qrcode' ).empty();
 				var currentAddress          = jQuery( "#payment-address" ).text();
-				var cashAddressWithoutLabel = bchaddr.toCashAddress( CryptoWoo.payment_address ).replace( /bitcoincash:/g,'' );
+				var cashAddressWithoutLabel = bchaddr.toCashAddress( CryptoPay.payment_address ).replace( /bitcoincash:/g,'' );
 				var cashAddressWithLabel    = jQuery( "#cw-qr-wrap a" ).attr( "href" ).replace( currentAddress,cashAddressWithoutLabel );
 
 				jQuery( "#payment-address" ).text( cashAddressWithoutLabel );
@@ -47,8 +47,8 @@ function change_addr_BCH()
 	jQuery( '#qrcode' ).empty();
 
 	// TODO: Add REGEX to extract/edit only the address part of addressData?
-	// TODO: Use newly added "currency" data added in CryptoWoo JSON and make address format based on that
-	var currentPaymentAddress = bchaddr.toCashAddress( CryptoWoo.payment_address );
+	// TODO: Use newly added "currency" data added in CryptoPay JSON and make address format based on that
+	var currentPaymentAddress = bchaddr.toCashAddress( CryptoPay.payment_address );
 	var addr_format_button    = jQuery( "#change_addr_format" );
 	if (sessionStorage.qr_payment_address) {
 		currentPaymentAddress = sessionStorage.qr_payment_address;

@@ -1,8 +1,8 @@
 <?php
 /**
- * CryptoWoo debug info on Database Maintenance page in wp-admin
+ * CryptoPay debug info on Database Maintenance page in wp-admin
  *
- * @package    CryptoWoo
+ * @package    CryptoPay
  * @subpackage Admin
  */
 
@@ -16,13 +16,13 @@ if ( ! isset( $options ) ) {
 
 if ( CW_AdminMain::debug_is_enabled() ) { ?>
 	<div class="wrap postbox cw-postbox">
-		<h3><?php esc_html_e( 'Debug Information', 'cryptowoo' ); ?></h3>
-		<p><?php esc_html_e( 'Please copy/paste the information below into your ticket when contacting support.', 'cryptowoo' ); ?> </p>
+		<h3><?php esc_html_e( 'Debug Information', 'cryptopay' ); ?></h3>
+		<p><?php esc_html_e( 'Please copy/paste the information below into your ticket when contacting support.', 'cryptopay' ); ?> </p>
 <table>
 	<?php
 	echo wp_kses_post( sprintf( '<tr><td>PHP version</td><td>%s</td></tr>', phpversion() ) );
 	echo wp_kses_post( sprintf( '<tr><td>WooCommerce Version</td><td>%s</td></tr>', WC_VERSION ) );
-	echo wp_kses_post( sprintf( '<tr><td>CryptoWoo Version</td><td>%s</td></tr>', CWOO_VERSION ) );
+	echo wp_kses_post( sprintf( '<tr><td>CryptoPay Version</td><td>%s</td></tr>', CWOO_VERSION ) );
 
 	$unpaid_addresses = CW_Database_CryptoWoo::get_unpaid_orders_payment_details();
 	printf( '<tr><td>Unpaid addresses</td><td>%s</td></tr>', count( $unpaid_addresses ) );
@@ -36,15 +36,15 @@ if ( CW_AdminMain::debug_is_enabled() ) { ?>
 		if ( in_array( $required_extension, $loaded_extensions, true ) ) {
 			echo wp_kses_post( sprintf( '<tr><td>%s</td><td><span style="font-weight: bold; color: green;"><i class="fa fa-check"></i></span> enabled</td></tr>', $required_extension ) );
 		} else {
-			echo wp_kses_post( sprintf( '<tr><td>%s</td><td><span style="font-weight: bold; color: red;"><i class="fa fa-warning"></i></span> not found | <a href="https://www.cryptowoo.com/enable-required-php-extensions/?ref=cw_status" target="_blank">More Info</a></td></tr>', $required_extension ) );
+			echo wp_kses_post( sprintf( '<tr><td>%s</td><td><span style="font-weight: bold; color: red;"><i class="fa fa-warning"></i></span> not found | <a href="https://www.cryptopay.com/enable-required-php-extensions/?ref=cw_status" target="_blank">More Info</a></td></tr>', $required_extension ) );
 		}
 	}
 	// exchange rate update error info.
 	$error_transient = get_transient( 'cryptowoo_rate_errors' );
 	/* translators: %s: html <i> element inside a <span> element */
-	$rate_error_info = $error_transient ? str_replace( 'Array', '<span style="font-weight: bold; background-color: yellow;"><i class="fa fa-warning"></i></span> Errors:', print_r( $error_transient, true ) ) : sprintf( esc_html__( '%s None', 'cryptowoo' ), '<span style="font-weight: bold; color: green;"><i class="fa fa-check"></i></span>' ); // phpcs:disable WordPress.PHP.DevelopmentFunctions
+	$rate_error_info = $error_transient ? str_replace( 'Array', '<span style="font-weight: bold; background-color: yellow;"><i class="fa fa-warning"></i></span> Errors:', print_r( $error_transient, true ) ) : sprintf( esc_html__( '%s None', 'cryptopay' ), '<span style="font-weight: bold; color: green;"><i class="fa fa-check"></i></span>' ); // phpcs:disable WordPress.PHP.DevelopmentFunctions
 	/* translators: %1$s: <tr><td><b>, %2$s: </b></td><td><pre>, %3$s: rate error info , %4$s: </pre></td></tr> */
-	echo wp_kses_post( sprintf( esc_html__( '%1$sExchange rate errors%2$s%3$s%4$s', 'cryptowoo' ), '<tr><td><b>', '</b></td><td><pre>', $rate_error_info, '</pre></td></tr>' ) );
+	echo wp_kses_post( sprintf( esc_html__( '%1$sExchange rate errors%2$s%3$s%4$s', 'cryptopay' ), '<tr><td><b>', '</b></td><td><pre>', $rate_error_info, '</pre></td></tr>' ) );
 
 	CW_ExchangeRates::processing()->get_exchange_rates();
 
@@ -78,7 +78,7 @@ if ( CW_AdminMain::debug_is_enabled() ) { ?>
 	}
 	// print_r($debug_array);
 	// Maybe include HD Wallet Add-on Settings.
-	if ( file_exists( WP_PLUGIN_DIR . '/cryptowoo-hd-wallet-addon/cryptowoo-hd-wallet-addon.php' ) ) {
+	if ( file_exists( WP_PLUGIN_DIR . '/cryptopay-hd-wallet-addon/cryptopay-hd-wallet-addon.php' ) ) {
 
 		// Add HD wallet info.
 		$index_keys = array(
@@ -99,7 +99,7 @@ if ( CW_AdminMain::debug_is_enabled() ) { ?>
 		}
 	} else {
 		$hd_index_title                    = '<b>HD Wallet Index</b>';
-		$hd_wallet_info[ $hd_index_title ] = 'CryptoWoo HD Wallet Add-on not found. <a href="http://www.cryptowoo.com/shop/cryptowoo-hd-wallet-addon/?ref=cw_status" target="_blank">Get it here!</a>';
+		$hd_wallet_info[ $hd_index_title ] = 'CryptoPay HD Wallet Add-on not found. <a href="http://www.cryptopay.com/shop/cryptopay-hd-wallet-addon/?ref=cw_status" target="_blank">Get it here!</a>';
 	}
 	$debug_array = array_merge( $debug_array, $hd_wallet_info );
 	foreach ( $debug_array as $option_name => $option_value ) {

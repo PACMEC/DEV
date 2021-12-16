@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Blockstream Esplora Block Explorer API Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_Esplora_Blockstream extends CW_Block_Explorer_API_Esplora {
 

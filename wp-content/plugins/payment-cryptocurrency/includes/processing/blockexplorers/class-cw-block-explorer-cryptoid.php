@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * CryptoID Block Explorer API Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_CryptoID extends CW_Block_Explorer_API_CryptoID {
 

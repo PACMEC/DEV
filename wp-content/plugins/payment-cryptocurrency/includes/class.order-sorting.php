@@ -209,7 +209,7 @@ class CW_OrderSorting {
 	 * Low Frequency Update Interval filter
 	 * Update addresses less frequently if they are unpaid for a longer time
 	 *
-	 * @param CW_Payment_Details_Object $unpaid_addresses CryptoWoo payment details object for the unpaid addresses.
+	 * @param CW_Payment_Details_Object $unpaid_addresses CryptoPay payment details object for the unpaid addresses.
 	 *
 	 * @return CW_Payment_Details_Object
 	 */

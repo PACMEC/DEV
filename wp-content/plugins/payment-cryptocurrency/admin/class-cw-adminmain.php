@@ -1,8 +1,8 @@
 <?php
 /**
- * CryptoWoo Admin helper functions class
+ * CryptoPay Admin helper functions class
  *
- * @package CryptoWoo
+ * @package CryptoPay
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Admin helper functions
  *
- * @package    CryptoWoo
+ * @package    CryptoPay
  * @subpackage Admin
  */
 class CW_AdminMain {
@@ -71,22 +71,22 @@ class CW_AdminMain {
 			'seconds_15'  => array(
 				'interval' => 15,
 				/* translators: %s: number of seconds */
-				'display'  => sprintf( __( 'Once every %s seconds', 'cryptowoo' ), 15 ),
+				'display'  => sprintf( __( 'Once every %s seconds', 'cryptopay' ), 15 ),
 			),
 			'seconds_30'  => array(
 				'interval' => 30,
 				/* translators: %s: number of seconds */
-				'display'  => sprintf( __( 'Once every %s seconds', 'cryptowoo' ), 30 ),
+				'display'  => sprintf( __( 'Once every %s seconds', 'cryptopay' ), 30 ),
 			),
 			'seconds_60'  => array(
 				'interval' => 60,
 				/* translators: %s: number of minutes */
-				'display'  => sprintf( __( 'Once every %s minutes', 'cryptowoo' ), 1 ),
+				'display'  => sprintf( __( 'Once every %s minutes', 'cryptopay' ), 1 ),
 			),
 			'seconds_120' => array(
 				'interval' => 120,
 				/* translators: %s: number of minutes */
-				'display'  => sprintf( __( 'Once every %s minutes', 'cryptowoo' ), 2 ),
+				'display'  => sprintf( __( 'Once every %s minutes', 'cryptopay' ), 2 ),
 			),
 			'seconds_300' => array(
 				'interval' => 300,
@@ -137,10 +137,10 @@ class CW_AdminMain {
 				// Full logging.
 				$data['order-processing']['order-update'] = $processing_result;
 			} else {
-				$data['order-processing']['order-update'] = array( esc_html__( 'unpaid_addresses', 'cryptowoo' ) => $unpaid_addresses );
+				$data['order-processing']['order-update'] = array( esc_html__( 'unpaid_addresses', 'cryptopay' ) => $unpaid_addresses );
 			}
 		} else {
-			$data['order-processing']['order-update'] = esc_html__( 'Transaction data unchanged - processing skipped', 'cryptowoo' );
+			$data['order-processing']['order-update'] = esc_html__( 'Transaction data unchanged - processing skipped', 'cryptopay' );
 		}
 		$order_update_time = microtime( true );
 
@@ -183,7 +183,7 @@ class CW_AdminMain {
 	 * Check if debugging is enabled or not.
 	 */
 	public static function debug_is_enabled() {
-		// We will only log if debug logging is enabled in cryptowoo settings or WP_DEBUG is not enabled.
+		// We will only log if debug logging is enabled in cryptopay settings or WP_DEBUG is not enabled.
 		return ( cw_get_option( 'enable_debug_log' ) ) || defined( 'WP_DEBUG' ) && WP_DEBUG;
 	}
 
@@ -206,14 +206,14 @@ class CW_AdminMain {
 		}
 
 		$severity_levels = array(
-			'emergency' => __( 'Emergency: System is unusable.', 'cryptowoo' ),
-			'alert'     => __( 'Alert: Action must be taken immediately.', 'cryptowoo' ),
-			'critical'  => __( 'Critical: Critical conditions.', 'cryptowoo' ),
-			'error'     => __( 'Error: Error conditions.', 'cryptowoo' ),
-			'warning'   => __( 'Warning: Warning conditions.', 'cryptowoo' ),
-			'notice'    => __( 'Notice: Normal but significant condition.', 'cryptowoo' ),
-			'info'      => __( 'Info: Informational messages.', 'cryptowoo' ),
-			'debug'     => __( 'Debug: Debug-level messages.', 'cryptowoo' ),
+			'emergency' => __( 'Emergency: System is unusable.', 'cryptopay' ),
+			'alert'     => __( 'Alert: Action must be taken immediately.', 'cryptopay' ),
+			'critical'  => __( 'Critical: Critical conditions.', 'cryptopay' ),
+			'error'     => __( 'Error: Error conditions.', 'cryptopay' ),
+			'warning'   => __( 'Warning: Warning conditions.', 'cryptopay' ),
+			'notice'    => __( 'Notice: Normal but significant condition.', 'cryptopay' ),
+			'info'      => __( 'Info: Informational messages.', 'cryptopay' ),
+			'debug'     => __( 'Debug: Debug-level messages.', 'cryptopay' ),
 		);
 
 		$level_position_in_array = 1 + array_search( $level, array_keys( $severity_levels ), true );
@@ -235,7 +235,7 @@ class CW_AdminMain {
 	 *                      'debug': Debug-level messages.
 	 */
 	public static function logging_is_enabled( $level = 'error' ) {
-		// We will only log if debug logging is enabled in cryptowoo settings or WP_DEBUG is not enabled.
+		// We will only log if debug logging is enabled in cryptopay settings or WP_DEBUG is not enabled.
 		if ( false === self::debug_is_enabled() ) {
 			return false;
 		}
@@ -250,7 +250,7 @@ class CW_AdminMain {
 				cw_update_option( 'logging', 'error' );
 			}
 		}
-		// We will only log if the severity is equal or worse than the minimum severity in CryptoWoo settings.
+		// We will only log if the severity is equal or worse than the minimum severity in CryptoPay settings.
 		$log_severity_array = self::get_log_severity_array( cw_get_option( 'logging', 'error' ) );
 		return array_key_exists( $level, $log_severity_array );
 	}
@@ -288,10 +288,10 @@ class CW_AdminMain {
 			return;
 		}
 
-		$handle = 'cryptowoo';
+		$handle = 'cryptopay';
 
 		// TODO Remove after all calls of $filename have been replaced with $log_level.
-		$log_level = preg_replace( '/cryptowoo-|.log/', '', $log_level );
+		$log_level = preg_replace( '/cryptopay-|.log/', '', $log_level );
 
 		// Only log entries above selected level.
 		if ( self::logging_is_enabled( $log_level ) ) {
@@ -430,11 +430,11 @@ class CW_AdminMain {
 
 		$to       = get_option( 'admin_email' );
 		$blogname = get_bloginfo( 'name', 'raw' );
-		$subject  = sprintf( '%s: %s', $blogname, __( 'Block.io address archival warning', 'cryptowoo' ) );
+		$subject  = sprintf( '%s: %s', $blogname, __( 'Block.io address archival warning', 'cryptopay' ) );
 		/* translators: %1$s: new line, %2$s: website name, %3$s%: new line, %4$s: warning message. */
-		$message = sprintf( esc_html__( 'Hello Admin,%1$sCryptoWoo at %2$s has found an issue while archiving your addresses at Block.io:%3$s%4$s', 'cryptowoo' ), '<br>', $blogname, '<br>', $data['message'] );
+		$message = sprintf( esc_html__( 'Hello Admin,%1$sCryptoWoo at %2$s has found an issue while archiving your addresses at Block.io:%3$s%4$s', 'cryptopay' ), '<br>', $blogname, '<br>', $data['message'] );
 
-		$headers = array( "From: CryptoWoo Plugin <{$to}>", 'Content-Type: text/html; charset=UTF-8' );
+		$headers = array( "From: CryptoPay Plugin <{$to}>", 'Content-Type: text/html; charset=UTF-8' );
 
 		wp_mail( $to, $subject, $message, $headers );
 
@@ -498,7 +498,7 @@ class CW_AdminMain {
 	}
 
 	/**
-	 * Sort CryptoWoo columns on order edit page
+	 * Sort CryptoPay columns on order edit page
 	 *
 	 * @param array $columns Columns array.
 	 *
@@ -516,7 +516,7 @@ class CW_AdminMain {
 	}
 
 	/**
-	 * If WooCommerce is not active deactivate cronjobs and disable CryptoWoo payments.
+	 * If WooCommerce is not active deactivate cronjobs and disable CryptoPay payments.
 	 */
 	public function cw_is_woocommerce_active() {
 		if ( is_admin() ) {
@@ -553,7 +553,7 @@ class CW_AdminMain {
 				return;
 
 			}
-			if ( isset( $_SERVER['REQUEST_URI'] ) && false === strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptowoo' ) && ! cw_get_option( 'enabled' ) ) {
+			if ( isset( $_SERVER['REQUEST_URI'] ) && false === strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptopay' ) && ! cw_get_option( 'enabled' ) ) {
 
 				// Add "Gateway Disabled" notice.
 				add_action( 'admin_notices', array( $this, 'cryptowoo_cw_inactive_notice' ) );
@@ -567,12 +567,12 @@ class CW_AdminMain {
 				$filename = cw_get_option( 'cw_filename' );
 			}
 			$path = trailingslashit( wp_upload_dir()['basedir'] ) . sanitize_file_name( $filename );
-			if ( ! file_exists( $path ) && false === strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptowoo' ) ) {
+			if ( ! file_exists( $path ) && false === strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptopay' ) ) {
 				add_action( 'admin_notices', array( $this, 'cryptowoo_integrity_notice' ) );
 			}
 
 			// Maybe display cronjob setup info notice on options page.
-			if ( strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptowoo' ) && ! get_option( 'cryptowoo_cronjob_notice' ) ) {
+			if ( strpos( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'cryptopay' ) && ! get_option( 'cryptowoo_cronjob_notice' ) ) {
 				add_action( 'admin_notices', array( $this, 'create_cronjob_notice' ) );
 			}
 
@@ -625,7 +625,7 @@ class CW_AdminMain {
 	 */
 	public static function get_cronjob_info( $single = true ) {
 		/* translators: %1$s: html paragraph tag, %2$s: new line */
-		$cronjob_info  = sprintf( __( '%1$sWe recommend you use an external cron via cPanel/crontab/Task Scheduler to trigger WP Cron to make sure that the orders are being processed and the rates are updated.%2$s', 'cryptowoo' ), '<p>', '<br>' );
+		$cronjob_info  = sprintf( __( '%1$sWe recommend you use an external cron via cPanel/crontab/Task Scheduler to trigger WP Cron to make sure that the orders are being processed and the rates are updated.%2$s', 'cryptopay' ), '<p>', '<br>' );
 		$cronjob_info .= '<div style="padding: 1em; background-color: #ccc;">';
 		$url           = get_bloginfo( 'wpurl' );
 		if ( ! defined( 'CWOO_MULTISITE' ) || ( defined( 'CWOO_MULTISITE' ) && ! CWOO_MULTISITE ) ) {
@@ -633,7 +633,7 @@ class CW_AdminMain {
 			if ( ! $single ) {
 				$intervals = array( '15', '30', '45' );
 				/* translators: %1$s: html pre tag, %2$s: end html pre tag */
-				$cronjob_info .= sprintf( __( '%1$s# Additionally for intervals < 1 minute:%2$s', 'cryptowoo' ), '<pre>', '</pre>' );
+				$cronjob_info .= sprintf( __( '%1$s# Additionally for intervals < 1 minute:%2$s', 'cryptopay' ), '<pre>', '</pre>' );
 				foreach ( $intervals as $interval ) {
 					$cronjob_info .= sprintf( '<pre>* * * * * sleep %s; cd %s; php -q wp-cron.php > /dev/null 2>&1 # Sleep for %ssec before running </pre>', $interval, ABSPATH, $interval );
 				}
@@ -644,17 +644,17 @@ class CW_AdminMain {
 			if ( ! $single ) {
 				$intervals = array( '15', '30', '45' );
 				/* translators: %1$s: html pre tag, %2$s: end html pre tag */
-				$cronjob_info .= sprintf( __( '%1$s# Additionally for intervals < 1 minute:%2$s', 'cryptowoo' ), '<pre>', '</pre>' );
+				$cronjob_info .= sprintf( __( '%1$s# Additionally for intervals < 1 minute:%2$s', 'cryptopay' ), '<pre>', '</pre>' );
 				foreach ( $intervals as $interval ) {
 					$cronjob_info .= sprintf( '<pre>* * * * * sleep %s; wget -q -O - "https://%s/wp-cron-multisite.php" > /dev/null 2>&1 # Sleep for %ssec before running </pre>', $interval, DOMAIN_CURRENT_SITE, $interval );
 				}
 			}
 			/* translators: %1$s: html code tag, %2$s: end html code tag, %3$s: current website */
-			$cronjob_info .= sprintf( __( '# Make sure you create the file %1$swp-multisite-cron.php%2$s in %3$s as described at %4$s', 'cryptowoo' ), '<code>', '</code>', DOMAIN_CURRENT_SITE, 'https://www.cryptowoo.com/how-to-setup-cron-jobs-for-multisite-wordpress/' );
+			$cronjob_info .= sprintf( __( '# Make sure you create the file %1$swp-multisite-cron.php%2$s in %3$s as described at %4$s', 'cryptopay' ), '<code>', '</code>', DOMAIN_CURRENT_SITE, 'https://www.cryptopay.com/how-to-setup-cron-jobs-for-multisite-wordpress/' );
 		}
-		$cronjob_info .= $single ? '</div></p>' : __( '</div></p><p>Explanation:<br>The example above consists of <strong>4 crontasks that are each executed every minute</strong>.<br>The 2nd, 3rd, and 4th cronjob will sleep for 15, 30, and 45 seconds before they trigger WP cron.<br>This results in a <strong>15 second interval</strong> between each WP cron execution <strong>instead of the smallest possible interval of one minute</strong> when using only one crontask.</p>', 'cryptowoo' );
-		/* translators: %1$s: CryptoWoo Help Desk url, %2$s: html a tag */
-		$cronjob_info .= sprintf( __( '<p>The first crontask is enough if you set the cron interval to 60 seconds or higher. Refer to %1$sthe tutorial%2$s on our Help Desk for further information.</p><p><i class="fa fa-exclamation-triangle"></i> After setting up the crontask(s) add <code>define(\'DISABLE_WP_CRON\', true);</code> to your <code>/wp-config.php</code>.</p>', 'cryptowoo' ), '<a href="https://www.cryptowoo.com/cron-issues/?utm_source=plugin&utm_medium=link&utm_campaign=settings-tooltip" title="Visit CryptoWoo Help Desk" target="_blank">', '</a>' );
+		$cronjob_info .= $single ? '</div></p>' : __( '</div></p><p>Explanation:<br>The example above consists of <strong>4 crontasks that are each executed every minute</strong>.<br>The 2nd, 3rd, and 4th cronjob will sleep for 15, 30, and 45 seconds before they trigger WP cron.<br>This results in a <strong>15 second interval</strong> between each WP cron execution <strong>instead of the smallest possible interval of one minute</strong> when using only one crontask.</p>', 'cryptopay' );
+		/* translators: %1$s: CryptoPay Help Desk url, %2$s: html a tag */
+		$cronjob_info .= sprintf( __( '<p>The first crontask is enough if you set the cron interval to 60 seconds or higher. Refer to %1$sthe tutorial%2$s on our Help Desk for further information.</p><p><i class="fa fa-exclamation-triangle"></i> After setting up the crontask(s) add <code>define(\'DISABLE_WP_CRON\', true);</code> to your <code>/wp-config.php</code>.</p>', 'cryptopay' ), '<a href="https://www.cryptopay.com/cron-issues/?utm_source=plugin&utm_medium=link&utm_campaign=settings-tooltip" title="Visit CryptoPay Help Desk" target="_blank">', '</a>' );
 		return wp_kses_post( $cronjob_info );
 	}
 
@@ -673,13 +673,13 @@ class CW_AdminMain {
 	 */
 	public function cryptowoo_wc_inactive_notice() {
 		$update_actions = array(
-			'activate_plugin_wc' => '<a class="button" href="' . wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . rawurlencode( 'woocommerce/woocommerce.php' ), 'activate-plugin_woocommerce/woocommerce.php' ) . '" title="' . esc_attr__( 'Activate WooCommerce Plugin', 'cryptowoo' ) . '" target="_parent">' . __( 'Activate WooCommerce', 'cryptowoo' ) . '</a>',
-			'cw_settings'        => '<a class="button" href="' . self_admin_url( 'admin.php?page=cryptowoo' ) . '" title="' . esc_attr__( 'Go to CryptoWoo Checkout Settings' ) . '" target="_parent">' . __( 'Enable CryptoWoo Payment Gateway', 'cryptowoo' ) . '</a>',
+			'activate_plugin_wc' => '<a class="button" href="' . wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . rawurlencode( 'woocommerce/woocommerce.php' ), 'activate-plugin_woocommerce/woocommerce.php' ) . '" title="' . esc_attr__( 'Activate WooCommerce Plugin', 'cryptopay' ) . '" target="_parent">' . __( 'Activate WooCommerce', 'cryptopay' ) . '</a>',
+			'cw_settings'        => '<a class="button" href="' . self_admin_url( 'admin.php?page=cryptopay' ) . '" title="' . esc_attr__( 'Go to CryptoPay Checkout Settings' ) . '" target="_parent">' . __( 'Enable CryptoPay Payment Gateway', 'cryptopay' ) . '</a>',
 			/*'plugins_page' => '<a href="' . self_admin_url('plugins.php') . '" title="' . esc_attr__('Go to plugins page') . '" target="_parent">' . __('Return to Plugins page') . '</a>'*/
 		);
 		?>
 		<div class="error">
-			<p><?php echo wp_kses_post( __( '<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce has been deactivated or is not installed.<br>Go to the Plugins menu and make sure that the WooCommerce plugin is installed and activated. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway.', 'cryptowoo' ) ); ?></p>
+			<p><?php echo wp_kses_post( __( '<b>CryptoPay payment gateway has been disabled!</b> It seems like WooCommerce has been deactivated or is not installed.<br>Go to the Plugins menu and make sure that the WooCommerce plugin is installed and activated. Then visit the CryptoPay checkout settings to re-enable the CryptoPay payment gateway.', 'cryptopay' ) ); ?></p>
 		<?php
 		foreach ( $update_actions as $key => $value ) {
 			echo wp_kses_post( $value . ' ' );
@@ -690,29 +690,29 @@ class CW_AdminMain {
 	}
 
 	/**
-	 * CryptoWoo payment gateway disabled notice
+	 * CryptoPay payment gateway disabled notice
 	 */
 	public function cryptowoo_cw_inactive_notice() {
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_ERROR )
-			->add_message( esc_html__( 'CryptoWoo payment gateway has been disabled!', 'cryptowoo' ) )
-			->add_message( esc_html__( 'Go to the CryptoWoo checkout settings to make sure the settings are correct and re-enable the CryptoWoo payment gateway.', 'cryptowoo' ) )
-			->add_button_menu_link( esc_html__( 'Go to CryptoWoo Settings', 'cryptowoo' ), esc_html__( 'Go to CryptoWoo Settings', 'cryptowoo' ), 'cryptowoo' )
+			->add_message( esc_html__( 'CryptoPay payment gateway has been disabled!', 'cryptopay' ) )
+			->add_message( esc_html__( 'Go to the CryptoPay checkout settings to make sure the settings are correct and re-enable the CryptoPay payment gateway.', 'cryptopay' ) )
+			->add_button_menu_link( esc_html__( 'Go to CryptoPay Settings', 'cryptopay' ), esc_html__( 'Go to CryptoPay Settings', 'cryptopay' ), 'cryptopay' )
 			->make_dismissible( 'cw_inactive' )
 			->print_notice();
 	}
 
 	/**
-	 * CryptoWoo payment gateway disabled notice
+	 * CryptoPay payment gateway disabled notice
 	 */
 	public function cryptowoo_integrity_notice() {
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_ERROR )
-			->add_message( __( '<b>CryptoWoo can\'t find the integrity check file!</b><br>Go to the CryptoWoo checkout settings and click the "Save Changes" button to re-create it.', 'cryptowoo' ) )
-			->add_button_menu_link( esc_html__( 'Go to CryptoWoo Settings', 'cryptowoo' ), esc_html__( 'Go to CryptoWoo Settings', 'cryptowoo' ), 'cryptowoo' )
+			->add_message( __( '<b>CryptoPay can\'t find the integrity check file!</b><br>Go to the CryptoPay checkout settings and click the "Save Changes" button to re-create it.', 'cryptopay' ) )
+			->add_button_menu_link( esc_html__( 'Go to CryptoPay Settings', 'cryptopay' ), esc_html__( 'Go to CryptoPay Settings', 'cryptopay' ), 'cryptopay' )
 			->print_notice();
 	}
 
 	/**
-	 * CryptoWoo exchange rate error notice
+	 * CryptoPay exchange rate error notice
 	 */
 	public function cryptowoo_rate_notice() {
 		$rate_errors = get_transient( 'cryptowoo_rate_errors' );
@@ -723,11 +723,11 @@ class CW_AdminMain {
 		$counting_since_date = gmdate( 'l jS \of F Y h:i:s', $counter_start );
 
 		$buttons  = '<a class="button" href="' . self_admin_url( 'admin.php?page=cryptowoo_database_maintenance' ) . '" title="' . esc_attr__( 'Go to Database Maintenance Page' ) . '" target="_parent">1. ' . __( 'Go to Database Maintenance Page' ) . '</a>';
-		$buttons .= ' <a class="button" href="' . self_admin_url( 'admin.php?page=cryptowoo' ) . '" title="' . esc_attr__( 'Go to CryptoWoo Options' ) . '" target="_parent">2. ' . __( 'Go to CryptoWoo Options' ) . '</a>';
+		$buttons .= ' <a class="button" href="' . self_admin_url( 'admin.php?page=cryptopay' ) . '" title="' . esc_attr__( 'Go to CryptoPay Options' ) . '" target="_parent">2. ' . __( 'Go to CryptoPay Options' ) . '</a>';
 		?>
 		<div class="error redux-messageredux-notice notice is-dismissible redux-notice">
 			<?php /* translators: %1$s: error count, %2$s: gmdate since counting started, %3$s: buttons */ ?>
-			<p><?php echo wp_kses_post( sprintf( __( '<b>CryptoWoo has detected %1$s exchange rate update errors since %2$s.</b><br>Go to the CryptoWoo Database Maintenance page, reset the error counter and try to update the rates manually.<br>Generally, these errors may occur from time to time and the fallback solution will catch them, but if the exchange rate update constantly fails, please select a different Preferred Exchange API on the options page.<p>%3$s</p>', 'cryptowoo' ), $error_count, $counting_since_date, $buttons ) ); ?></p>
+			<p><?php echo wp_kses_post( sprintf( __( '<b>CryptoPay has detected %1$s exchange rate update errors since %2$s.</b><br>Go to the CryptoPay Database Maintenance page, reset the error counter and try to update the rates manually.<br>Generally, these errors may occur from time to time and the fallback solution will catch them, but if the exchange rate update constantly fails, please select a different Preferred Exchange API on the options page.<p>%3$s</p>', 'cryptopay' ), $error_count, $counting_since_date, $buttons ) ); ?></p>
 		</div>
 		<?php
 	}
@@ -738,12 +738,12 @@ class CW_AdminMain {
 	public function cryptowoo_wc_notinstalled_notice() {
 		$update_actions = array(
 			'activate_plugin_wc' => '<a class="button" href="' . wp_nonce_url( rawurlencode( 'update.php?action=install-plugin&plugin=woocommerce' ) ) . '" title="' . esc_attr__( 'Activate WooCommerce Plugin' ) . '" target="_parent">' . __( 'Install WooCommerce' ) . '</a>',
-			'cw_settings'        => '<a class="button" href="' . self_admin_url( 'admin.php?page=cryptowoo' ) . '" title="' . esc_attr__( 'Go to CryptoWoo Checkout Settings' ) . '" target="_parent">' . __( 'Enable CryptoWoo Payment Gateway' ) . '</a>',
+			'cw_settings'        => '<a class="button" href="' . self_admin_url( 'admin.php?page=cryptopay' ) . '" title="' . esc_attr__( 'Go to CryptoPay Checkout Settings' ) . '" target="_parent">' . __( 'Enable CryptoPay Payment Gateway' ) . '</a>',
 			/*'plugins_page' => '<a href="' . self_admin_url('plugins.php') . '" title="' . esc_attr__('Go to plugins page') . '" target="_parent">' . __('Return to Plugins page') . '</a>'*/
 		);
 		?>
 		<div class="error">
-			<p><?php echo wp_kses_post( __( '<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce is not installed.<br>Click here to install and activate the WooCommerce plugin. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway.', 'cryptowoo' ) ); ?></p>
+			<p><?php echo wp_kses_post( __( '<b>CryptoPay payment gateway has been disabled!</b> It seems like WooCommerce is not installed.<br>Click here to install and activate the WooCommerce plugin. Then visit the CryptoPay checkout settings to re-enable the CryptoPay payment gateway.', 'cryptopay' ) ); ?></p>
 		<?php
 		foreach ( $update_actions as $key => $value ) {
 			echo wp_kses_post( $value . ' ' );
@@ -759,11 +759,11 @@ class CW_AdminMain {
 	public function cryptowoo_license_expiration_notice() {
 		$expiration_info = get_option( 'cryptowoo_license_expiration' );
 		/* translators: %1$s: expiration gmdate, %2$s: discount code */
-		$message = wp_kses_post( sprintf( __( '<h4>Your CryptoWoo License Key will expire on <strong>%1$s</strong></h4> Renew your license now for a discount!<br>Your discount code: <strong>%2$s</strong>', 'cryptowoo' ), gmdate( 'l jS \of F Y', $expiration_info['access_expires'] ), $expiration_info['order_key'] ) );
+		$message = wp_kses_post( sprintf( __( '<h4>Your CryptoPay License Key will expire on <strong>%1$s</strong></h4> Renew your license now for a discount!<br>Your discount code: <strong>%2$s</strong>', 'cryptopay' ), gmdate( 'l jS \of F Y', $expiration_info['access_expires'] ), $expiration_info['order_key'] ) );
 
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_ERROR )
 			->add_message( $message )
-			->add_button_with_full_path_url( esc_html__( 'Renew CryptoWoo License Key', 'cryptowoo' ), esc_html__( 'Click to go to CryptoWoo website to renew the license key', 'cryptowoo' ), 'https://cryptowoo.com/' )
+			->add_button_with_full_path_url( esc_html__( 'Renew CryptoPay License Key', 'cryptopay' ), esc_html__( 'Click to go to CryptoPay website to renew the license key', 'cryptopay' ), 'https://cryptopay.com/' )
 			->make_dismissible( 'license_expired' )
 			->print_notice();
 	}
@@ -775,7 +775,7 @@ class CW_AdminMain {
 		$gap_limit_notice_coins = get_option( 'cryptowoo_gap_limit_notice_currencies' );
 		$currencies             = implode( ', ', $gap_limit_notice_coins );
 		/* translators: %1$s: html paragraph being tag, %2$s: currencies comma separated, %3$s: new line, %4$s: html paragraph end tag */
-		$format  = esc_html__( '%1$sGap limit may have been reached in your wallet for cryptocurrencies: %2$s%3$sSend a small payment to your latest wallet address to see more transactions.%4$s', 'cryptowoo' );
+		$format  = esc_html__( '%1$sGap limit may have been reached in your wallet for cryptocurrencies: %2$s%3$sSend a small payment to your latest wallet address to see more transactions.%4$s', 'cryptopay' );
 		$message = wp_kses_post( sprintf( $format, '<p>', $currencies, '<br>', '</p>' ) );
 
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_INFO )
@@ -788,7 +788,7 @@ class CW_AdminMain {
 	 * "Please save options" notice
 	 */
 	public function cryptowoo_please_save_options_notice() {
-		$message = printf( '<h4>%s</h4>', esc_html__( 'Thanks for updating CryptoWoo! Please verify that your settings are correct and click the "Save settings" button.', 'cryptowoo' ) );
+		$message = printf( '<h4>%s</h4>', esc_html__( 'Thanks for updating CryptoPay! Please verify that your settings are correct and click the "Save settings" button.', 'cryptopay' ) );
 
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_INFO )
 			->add_message( $message )
@@ -805,11 +805,11 @@ class CW_AdminMain {
 		$message = '';
 
 		/* translators: %s: name of missing extension */
-		$not_installed = __( '<b>%s extension</b> seems not to be installed.<br>', 'cryptowoo' );
+		$not_installed = __( '<b>%s extension</b> seems not to be installed.<br>', 'cryptopay' );
 
 		if ( version_compare( PHP_VERSION, '5.6.0', '<' ) ) {
 			/* translators: %s: php version */
-			$message .= sprintf( __( 'Your current <b>PHP Version is %s</b>.<br>', 'cryptowoo' ), $version );
+			$message .= sprintf( __( 'Your current <b>PHP Version is %s</b>.<br>', 'cryptopay' ), $version );
 		}
 		if ( ! extension_loaded( 'gmp' ) ) {
 			$message .= sprintf( $not_installed, 'GMP' );
@@ -827,7 +827,7 @@ class CW_AdminMain {
 			?>
 			<div class="error">
 				<?php /* translators: %s: an already translated message about missing php extension or invalid php version */ ?>
-				<p><?php echo wp_kses_post( sprintf( __( '%sYou need to have at least PHP version 5.6 with <a href="https://php.net/manual/en/gmp.installation.php" target="_blank">GMP</a>, and <a href="https://php.net/manual/en/curl.installation.php" target="_blank">cURL</a> extensions enabled to use CryptoWoo. <a href="https://www.cryptowoo.com/enable-required-php-extensions/?ref=cw_ext_error" target="_blank">More Info</a>', 'cryptowoo' ), $message ) ); ?></p>
+				<p><?php echo wp_kses_post( sprintf( __( '%sYou need to have at least PHP version 5.6 with <a href="https://php.net/manual/en/gmp.installation.php" target="_blank">GMP</a>, and <a href="https://php.net/manual/en/curl.installation.php" target="_blank">cURL</a> extensions enabled to use CryptoPay. <a href="https://www.cryptopay.com/enable-required-php-extensions/?ref=cw_ext_error" target="_blank">More Info</a>', 'cryptopay' ), $message ) ); ?></p>
 			</div>
 			<?php
 		}
@@ -837,10 +837,10 @@ class CW_AdminMain {
 	 * Cronjob setup info admin notice
 	 */
 	public function cryptowoo_option_reset_notice() {
-		/* translators: %1$s: html tag for url begin, %2$s: admin url to cryptowoo settings page, %3$s: html tag for url end, html tag for paragraph end */
-		$cw_settings = sprintf( esc_html__( '%1$s%2$s%3$sCryptoWoo settings page%4$s', 'cryptowoo' ), '<a href="', admin_url( 'admin.php?page=cryptowoo' ), '">', '</a>' );
+		/* translators: %1$s: html tag for url begin, %2$s: admin url to cryptopay settings page, %3$s: html tag for url end, html tag for paragraph end */
+		$cw_settings = sprintf( esc_html__( '%1$s%2$s%3$sCryptoWoo settings page%4$s', 'cryptopay' ), '<a href="', admin_url( 'admin.php?page=cryptopay' ), '">', '</a>' );
 		/* translators: %1$s: html tag for strong text begin, %2$s: html tag for strong text end and new line, %3$s: html tag for code begin, %4$s: html tag for url end, %5$s: html tag for new line, %6$s: already translated settings page url */
-		$message = sprintf( esc_html__( '%1$sImportant notice:%2$s During this CryptoWoo update we had to set the %3$s"Payment Processing" > "Order Expiration Time"%4$s back to the default value.%5$sIf you customized this setting before the update, please go to the %6$s and set it again.', 'cryptowoo' ), '<strong>', '</strong><br>', '<code>', '</code>', '<br>', $cw_settings );
+		$message = sprintf( esc_html__( '%1$sImportant notice:%2$s During this CryptoPay update we had to set the %3$s"Payment Processing" > "Order Expiration Time"%4$s back to the default value.%5$sIf you customized this setting before the update, please go to the %6$s and set it again.', 'cryptopay' ), '<strong>', '</strong><br>', '<code>', '</code>', '<br>', $cw_settings );
 
 		CW_Admin_Notice::generate( CW_Admin_Notice::NOTICE_INFO )
 			->add_message( $message )
@@ -863,11 +863,11 @@ class CW_AdminMain {
 			foreach ( $enabled as $currency => $status ) {
 				if ( $status ) {
 					/* translators: %1$s: html tag for paragraph and strong begin, %2$s: currency name, %3$s: html tag for paragraph and strong end */
-					$message .= sprintf( esc_html__( '%1$s%2$s payment processing configuration error%3$s', 'cryptowoo' ), '<p><strong>', $nicenames[ $currency ], '</strong></p>' );
+					$message .= sprintf( esc_html__( '%1$s%2$s payment processing configuration error%3$s', 'cryptopay' ), '<p><strong>', $nicenames[ $currency ], '</strong></p>' );
 				}
 			}
 			if ( ! empty( $message ) ) {
-				$message .= sprintf( '<p>%s</p>', esc_html__( 'Go to "Payment Processing" > "Blockchain Access" and select a "Processing API" provider. Otherwise CryptoWoo can not look up transactions in the block chain.', 'cryptowoo' ) );
+				$message .= sprintf( '<p>%s</p>', esc_html__( 'Go to "Payment Processing" > "Blockchain Access" and select a "Processing API" provider. Otherwise CryptoPay can not look up transactions in the block chain.', 'cryptopay' ) );
 				/* translators: %1$s: html tag for paragraph and strong begin, %2$s: currency name, %3$s: html tag for paragraph and strong end */
 				echo wp_kses_post( sprintf( '<div class="error redux-messageredux-notice notice is-dismissible redux-notice">%s</div>', $message ) );
 			}
@@ -914,7 +914,7 @@ class CW_AdminMain {
 	}
 
 
-	/** Do CryptoWoo integrity check
+	/** Do CryptoPay integrity check
 	 *
 	 * @return bool
 	 */
@@ -945,21 +945,21 @@ class CW_AdminMain {
 			$print_result = var_export( $api_keys_valid, true );
 			$to           = get_option( 'admin_email' );
 			$blogname     = get_bloginfo( 'name', 'raw' );
-			$subject      = sprintf( '%s: %s', $blogname, __( 'Unauthorized changes detected', 'cryptowoo' ) );
+			$subject      = sprintf( '%s: %s', $blogname, __( 'Unauthorized changes detected', 'cryptopay' ) );
 
 			/* translators: %1$s: new line, %2$s: gmdate with format l jS \of F Y h:i:s, %3$s: store name */
-			$message = sprintf( __( 'Hello Admin,%1$s on %2$s, CryptoWoo has detected an unauthorized change of your settings at %3$s.%1$s', 'cryptowoo' ), PHP_EOL, gmdate( 'l jS \of F Y h:i:s' ), $blogname );
+			$message = sprintf( __( 'Hello Admin,%1$s on %2$s, CryptoPay has detected an unauthorized change of your settings at %3$s.%1$s', 'cryptopay' ), PHP_EOL, gmdate( 'l jS \of F Y h:i:s' ), $blogname );
 
 			$message .= sprintf(
 				/* translators: %1$s: new line, %2$s: validation result */
-				__( 'The CryptoWoo payment gateway has been disabled. From now on, open WooCommerce orders using CryptoWoo will not be completed and the payment method will not be available for new orders.%1$s%1$sValidation result:%2$s%1$s', 'cryptowoo' ),
+				__( 'The CryptoPay payment gateway has been disabled. From now on, open WooCommerce orders using CryptoPay will not be completed and the payment method will not be available for new orders.%1$s%1$sValidation result:%2$s%1$s', 'cryptopay' ),
 				PHP_EOL,
 				$print_result
 			);
-			$message .= __( 'NOTE: This may be a false-positive if you recently migrated or reinstalled your site. In this case just save the CryptoWoo settings page to update the option checksum.', 'cryptowoo' );
-			$message .= __( 'If you need help, please submit a ticket at https://www.cryptowoo.com/contact', 'cryptowoo' );
+			$message .= __( 'NOTE: This may be a false-positive if you recently migrated or reinstalled your site. In this case just save the CryptoPay settings page to update the option checksum.', 'cryptopay' );
+			$message .= __( 'If you need help, please submit a ticket at https://www.cryptopay.com/contact', 'cryptopay' );
 
-				$headers = array( "From: CryptoWoo Plugin <{$to}>" );
+				$headers = array( "From: CryptoPay Plugin <{$to}>" );
 
 			wp_mail( $to, $subject, $message, $headers );
 
@@ -1020,7 +1020,7 @@ class CW_AdminMain {
 	}
 
 	/**
-	 * Display CryptoWoo Database Maintenance page
+	 * Display CryptoPay Database Maintenance page
 	 */
 	public function database_maintenance() {
 
@@ -1039,21 +1039,21 @@ class CW_AdminMain {
 	}
 
 	/**
-	 * Delete data from CryptoWoo payment table
+	 * Delete data from CryptoPay payment table
 	 */
 	public function delete_payment_data() {
 		global $wpdb;
 
 		$payments = $wpdb->get_results( 'DELETE FROM `' . $wpdb->prefix . 'cryptowoo_payments_temp` WHERE 1', ARRAY_A ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.DirectQuery
 
-		$message = (bool) $payments ? esc_html__( 'Payment data deleted', 'cryptowoo' ) : esc_html__( 'Error deleting payment data', 'cryptowoo' );
+		$message = (bool) $payments ? esc_html__( 'Payment data deleted', 'cryptopay' ) : esc_html__( 'Error deleting payment data', 'cryptopay' );
 
 		return $message;
 
 	}
 
 	/**
-	 * Create CryptoWoo table
+	 * Create CryptoPay table
 	 *
 	 * @param string $blog_id Blog ID.
 	 */
@@ -1232,7 +1232,7 @@ class CW_AdminMain {
 	public function cw_reset_error_counter_callback() {
 		// Reset transient.
 		delete_transient( 'cryptowoo_rate_errors' );
-		echo '<div id="message" class="success fade" style="color: green;"><i class="fa fa-check"></i>' . esc_html__( 'Rate error counter has been reset.', 'cryptowoo' ) . '</div>';
+		echo '<div id="message" class="success fade" style="color: green;"><i class="fa fa-check"></i>' . esc_html__( 'Rate error counter has been reset.', 'cryptopay' ) . '</div>';
 		wp_die(); // this is required to terminate immediately and return a proper response.
 	}
 
@@ -1245,9 +1245,9 @@ class CW_AdminMain {
 		echo wp_kses_post( 'Request time: ' . gmdate( 'Y-m-d H:i:s' ) . '<pre>' );
 		$truncate_success = $admin_main->recreate_table_exchange_rates( true );
 		if ( $truncate_success ) {
-			$message = esc_html__( 'Exchange rate table truncated successfully!', 'cryptowoo' );
+			$message = esc_html__( 'Exchange rate table truncated successfully!', 'cryptopay' );
 		} else {
-			$message = esc_html__( 'There was a problem preparing the plugin table. Please try again.', 'cryptowoo' );
+			$message = esc_html__( 'There was a problem preparing the plugin table. Please try again.', 'cryptopay' );
 		}
 		echo esc_html( $message );
 		echo '</pre><a class="button" href="javascript: window.location.reload(true)">Reload Page</a></div>';
@@ -1263,9 +1263,9 @@ class CW_AdminMain {
 		echo esc_html( 'Request time: ' . gmdate( 'Y-m-d H:i:s' ) );
 		$delete_success = $admin_main->recreate_table_payments( true );
 		if ( $delete_success ) {
-			$message = esc_html__( 'Payments table data has been reset!', 'cryptowoo' );
+			$message = esc_html__( 'Payments table data has been reset!', 'cryptopay' );
 		} else {
-			$message = esc_html__( 'There was a problem resetting the payments table. Please try again.', 'cryptowoo' );
+			$message = esc_html__( 'There was a problem resetting the payments table. Please try again.', 'cryptopay' );
 		}
 		echo esc_html( $message );
 		echo '</div>';
@@ -1442,8 +1442,8 @@ class CW_AdminMain {
 
 				// Upgrade to new filenames for integrity check file.
 				$old_filename = CW_Validate::check_if_unset( 'cw_filename' );
-				$cryptowoo    = new WC_CryptoWoo();
-				$cryptowoo->cryptowoo_hash_keys();
+				$cryptopay    = new WC_CryptoWoo();
+				$cryptopay->cryptowoo_hash_keys();
 
 				// Delete the old file if it exists.
 				$file_path = trailingslashit( wp_upload_dir()['basedir'] ) . sanitize_file_name( $old_filename );

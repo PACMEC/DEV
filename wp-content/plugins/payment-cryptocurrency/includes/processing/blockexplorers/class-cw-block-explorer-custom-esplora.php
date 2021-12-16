@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Custom Esplora Block Explorer API Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_Custom_Esplora extends CW_Block_Explorer_API_Esplora {
 
@@ -30,7 +30,7 @@ class CW_Block_Explorer_Custom_Esplora extends CW_Block_Explorer_API_Esplora {
 	/**
 	 *
 	 * Override base URL (custom URL).
-	 * Set before the custom base URL has been stored in CryptoWoo options or to override the url.
+	 * Set before the custom base URL has been stored in CryptoPay options or to override the url.
 	 *
 	 * @param string $custom_api_url The custom URL to use for order processing.
 	 *

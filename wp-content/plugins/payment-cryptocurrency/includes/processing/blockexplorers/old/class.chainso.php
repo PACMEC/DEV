@@ -70,7 +70,7 @@ class CW_ChainSo {
 				$is_rbf = (int)$transaction->confirmations < 1 ? CW_OrderProcessing::check_input_sequences($transaction) : false;
 				if ($is_rbf) {
 					$data = sprintf('replace by fee flag detected - ignoring %s', $transaction->txid);
-					CW_AdminMain::cryptowoo_log_data(0, __FUNCTION__, $data, 'cryptowoo-tx-update.log');
+					CW_AdminMain::cryptowoo_log_data(0, __FUNCTION__, $data, 'cryptopay-tx-update.log');
 					continue;
 				} */
 

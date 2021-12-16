@@ -7,10 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Exchange Rate tools
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage ExchangeRates
- * @author     Developer: CryptoWoo AS
+ * @author     Developer: CryptoPay AS
  */
 class CW_ExchangeRate_Tools {
 
@@ -82,7 +82,7 @@ class CW_ExchangeRate_Tools {
 	 * @return CW_Exchange_Base|null
 	 */
 	public function get_exchange_instance_by_name( string $exchange_class_name, string $coin_type ) {
-		// This lets CryptoWoo Add-ons override exchange class for a specific cryptocurrency.
+		// This lets CryptoPay Add-ons override exchange class for a specific cryptocurrency.
 		$exchange_class_name = apply_filters( 'cw_exchange_class_name', $exchange_class_name, $coin_type );
 		if ( class_exists( $exchange_class_name, false ) ) {
 			return new $exchange_class_name( $coin_type );
@@ -108,7 +108,7 @@ class CW_ExchangeRate_Tools {
 
 		$exchange_instance = $this->get_exchange_instance_by_id( $method, $currency );
 		if ( ! $exchange_instance instanceof CW_Exchange_Base ) {
-			return __( 'Could not get exchange api url ', 'cryptowoo' );
+			return __( 'Could not get exchange api url ', 'cryptopay' );
 		}
 
 		return $exchange_instance->get_exchange_url();

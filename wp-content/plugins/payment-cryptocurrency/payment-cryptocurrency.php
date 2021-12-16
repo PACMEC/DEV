@@ -1,54 +1,23 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+// Exit if accessed directly
 /**
- * Plugin Name: Cryptocurrency Payment Gateway
- * Plugin URI: https://www.cryptowoo.com/
- * Description: Digital Currency Payment Gateway for WooCommerce
+ * Plugin Name: Pasarela de pago - criptomonedas
+ * Plugin URI: #
+ * Description: Pasarela de pago de moneda digital para E-Commerce
  * Version: 1.0.0
- * Author: CryptoWoo AS
- * Author URI: https://www.cryptowoo.com
- * Developer: CryptoWoo AS
- * Developer URI: https://www.cryptowoo.com
- * Text Domain: cryptowoo
+ * Author: PACMEC
+ * Author URI: #
+ * Developer: PACMEC
+ * Developer URI: #
+ * Text Domain: payment-cryptocurrency
  * Domain Path: /lang
- *
- * Tested up to: 5.8.2
- * WC tested up to: 5.9.0
- * WC requires at least: 3.0
- *
- * License: GNU General Public License v2.0
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- */
-/*
-Copyright CryptoWoo AS
-
-CryptoWoo is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as
-published by the Free Software Foundation.
-
-CryptoWoo is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with CryptoWoo; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
-BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
-SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 define( 'CWOO_VERSION', '1.0.0' );
 define( 'CWOO_FILE', 'cryptocurrency-payment-gateway/cryptocurrency-payment-gateway.php' );
 define( 'CWOO_PLUGIN_PATH', plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) . '/' );
 define( 'CWOO_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'CW_PAYMENT_METHOD_ID', 'cryptowoo' ); // Lowercase, no special characters
+define( 'CW_PAYMENT_METHOD_ID', 'cryptopay' ); // Lowercase, no special characters
 
 // Determine log file directory
 $log_dir = defined( 'WC_LOG_DIR' ) ? WC_LOG_DIR : trailingslashit( wp_upload_dir()['basedir'] ) . 'wc-logs/';
@@ -88,7 +57,7 @@ function cw_multisite_activate( $networkwide ) {
 		if ( $networkwide ) {
 			// TODO maybe add multisite activation routine that honors CWOO_MULTISITE
 			deactivate_plugins( plugin_basename( __FILE__ ), true, true );
-			wp_die( esc_html__( 'Network Activation failed: You have to activate CryptoWoo on each site seperately.', 'cryptowoo' ) );
+			wp_die( esc_html__( 'Network Activation failed: You have to activate CryptoPay on each site seperately.', 'cryptopay' ) );
 		} else {
 			// Activated on a single site, in a multi-site
 			cryptowoo_plugin_activate( $wpdb->blogid );
@@ -139,7 +108,7 @@ register_deactivation_hook( __FILE__, 'cryptowoo_plugin_deactivate' );
 	// Hook into WooCommerce Multilingual (WCML)
 	add_filter( 'wcml_exchange_rates', 'cwwcml_filter_exchange_rates', 10, 1 );
 
-	// Add CryptoWoo supported currencies to woocommerce currencies list
+	// Add CryptoPay supported currencies to woocommerce currencies list
 	add_filter( 'woocommerce_currencies', 'cw_add_woocommerce_currencies' );
 	add_filter( 'woocommerce_sections_general', 'cw_remove_unsupported_woocommerce_currencies' );
 
@@ -262,12 +231,12 @@ function cw_handle_custom_query_var( $query, $query_vars ) {
 }
 
 	/**
-	 * Load cryptowoo textdomain.
+	 * Load cryptopay textdomain.
 	 *
 	 * @since 0.14.0
 	 */
 function cryptowoo_textdomain() {
-	load_plugin_textdomain( 'cryptowoo', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+	load_plugin_textdomain( 'cryptopay', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }
 
 	/**
@@ -303,7 +272,7 @@ function cryptowoo_plugin_activate( $blog_id ) {
 
 
 /**
- * Disable the woocommerce hold stock setting timeout when CryptoWoo is the payment gateway
+ * Disable the woocommerce hold stock setting timeout when CryptoPay is the payment gateway
  *
  * @param string   $payment_gateway
  * @param WC_Order $order
@@ -387,7 +356,7 @@ function cryptowoo_scripts() {
 	cw_register_script( 'cw_polling', CWOO_PLUGIN_PATH . 'assets/js/polling.js', array( 'jquery' ) );
 
 	// Plugin Styles
-	cw_enqueue_style( 'cryptowoo', CWOO_PLUGIN_PATH . 'assets/css/cryptowoo-plugin.css' );
+	cw_enqueue_style( 'cryptopay', CWOO_PLUGIN_PATH . 'assets/css/cryptopay-plugin.css' );
 
 	// Cryptocurrency icon font
 	cw_enqueue_style( 'cw-cryptocoins', CWOO_PLUGIN_PATH . 'assets/fonts/cw-coinfont.css' );
@@ -402,7 +371,7 @@ function cryptowoo_scripts() {
 
 	if ( is_checkout() ) {
 		wp_enqueue_script(
-			'cryptowoo-bch-addres-format',
+			'cryptopay-bch-addres-format',
 			plugins_url( 'assets/js/change-address-format.js', __FILE__ ),
 			array( 'wc-checkout', 'jquery' ),
 			1
@@ -421,7 +390,7 @@ function cw_enqueue_admin_scripts() {
 	cw_enqueue_script( 'cw_addr' );
 
 	// Plugin Styles
-	cw_enqueue_style( 'cryptowoo', CWOO_PLUGIN_PATH . 'assets/css/cryptowoo-plugin.css' );
+	cw_enqueue_style( 'cryptopay', CWOO_PLUGIN_PATH . 'assets/css/cryptopay-plugin.css' );
 
 	// Cryptocurrency icon font
 	cw_enqueue_style( 'cw-cryptocoins', CWOO_PLUGIN_PATH . 'assets/fonts/cw-coinfont.css' );
@@ -450,8 +419,8 @@ function woocommerce_cryptowoo_init() {
 
 		public function __construct() {
 			$this->id           = CW_PAYMENT_METHOD_ID;
-			$this->method_title = 'CryptoWoo Payment';
-			$this->title        = 'CryptoWoo';
+			$this->method_title = 'CryptoPay Payment';
+			$this->title        = 'CryptoPay';
 			$this->has_fields   = true;
 
 			// Load the form fields.
@@ -611,14 +580,14 @@ function woocommerce_cryptowoo_init() {
 				$wc_cw_options            = get_option( 'woocommerce_cryptowoo_settings' );
 				$wc_cw_options['enabled'] = false;
 				update_option( 'woocommerce_cryptowoo_settings', $wc_cw_options );
-				return esc_html__( 'Your current PHP Version is ' . $version . '.', 'cryptowoo' );
+				return esc_html__( 'Your current PHP Version is ' . $version . '.', 'cryptopay' );
 			}
 			if ( ! extension_loaded( 'gmp' ) ) {
 				cw_update_option( 'enabled', false );
 				$wc_cw_options            = get_option( 'woocommerce_cryptowoo_settings' );
 				$wc_cw_options['enabled'] = false;
 				update_option( 'woocommerce_cryptowoo_settings', $wc_cw_options );
-				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptowoo' ), 'GMP' );
+				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptopay' ), 'GMP' );
 			}
 
 			if ( ! extension_loaded( 'curl' ) ) {
@@ -626,7 +595,7 @@ function woocommerce_cryptowoo_init() {
 				$wc_cw_options            = get_option( 'woocommerce_cryptowoo_settings' );
 				$wc_cw_options['enabled'] = false;
 				update_option( 'woocommerce_cryptowoo_settings', $wc_cw_options );
-				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptowoo' ), 'cURL' );
+				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptopay' ), 'cURL' );
 			}
 
 			if ( ! extension_loaded( 'bcmath' ) ) {
@@ -634,7 +603,7 @@ function woocommerce_cryptowoo_init() {
 				$wc_cw_options['enabled'] = false;
 				update_option( 'woocommerce_cryptowoo_settings', $wc_cw_options );
 				cw_update_option( 'enabled', false );
-				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptowoo' ), 'bcmath' );
+				return sprintf( esc_html__( '%s extension seems not to be installed.', 'cryptopay' ), 'bcmath' );
 			}
 
 			return true;
@@ -648,14 +617,14 @@ function woocommerce_cryptowoo_init() {
 		 */
 		public function admin_options() {
 			?>
-			<h3>CryptoWoo</h3>
-			<span style="padding:1em;"><a class="button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=cryptowoo' ) ); ?>" title="<?php echo esc_html__( 'CryptoWoo Options', 'cryptowoo' ); ?>"><?php echo esc_html__( 'CryptoWoo Options', 'cryptowoo' ); ?></a></span>
-			<span style="padding:1em;"><a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=cryptowoo_database_maintenance' ) ); ?>" title="<?php echo esc_html__( 'CryptoWoo Database Maintenance', 'cryptowoo' ); ?>"><?php echo esc_html__( 'CryptoWoo Database Maintenance', 'cryptowoo' ); ?></a></span>
+			<h3>CryptoPay</h3>
+			<span style="padding:1em;"><a class="button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=cryptopay' ) ); ?>" title="<?php echo esc_html__( 'CryptoPay Options', 'cryptopay' ); ?>"><?php echo esc_html__( 'CryptoPay Options', 'cryptopay' ); ?></a></span>
+			<span style="padding:1em;"><a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=cryptowoo_database_maintenance' ) ); ?>" title="<?php echo esc_html__( 'CryptoPay Database Maintenance', 'cryptopay' ); ?>"><?php echo esc_html__( 'CryptoPay Database Maintenance', 'cryptopay' ); ?></a></span>
 			<?php
 			 $check_req = self::check_php_requirements();
 			if ( true !== $check_req ) {
 				?>
-				<div class="inline error"><p><strong><?php esc_html_e( 'Gateway Disabled', 'cryptowoo' ); ?></strong>: <?php wp_kses_post( $check_req . '<br>You need to have at least PHP version 5.6 with <a href="http://php.net/manual/en/gmp.installation.php" target="_blank">GMP</a>, and <a href="http://php.net/manual/en/curl.installation.php" target="_blank">cURL</a> extensions enabled to use CryptoWoo. <br>' ); // TODO: Add translation. ?></p></div>
+				<div class="inline error"><p><strong><?php esc_html_e( 'Gateway Disabled', 'cryptopay' ); ?></strong>: <?php wp_kses_post( $check_req . '<br>You need to have at least PHP version 5.6 with <a href="http://php.net/manual/en/gmp.installation.php" target="_blank">GMP</a>, and <a href="http://php.net/manual/en/curl.installation.php" target="_blank">cURL</a> extensions enabled to use CryptoPay. <br>' ); // TODO: Add translation. ?></p></div>
 				<?php
 			}
 			 wp_die();
@@ -675,30 +644,30 @@ function woocommerce_cryptowoo_init() {
 			/*
 			'general_section' => array
 			(
-			'title' => __('<i class="fa fa-wrench"></i> General Settings', 'cryptowoo'),
+			'title' => __('<i class="fa fa-wrench"></i> General Settings', 'cryptopay'),
 			'type' => 'title',
 			'class' => 'section-head',
 			),
 			'enabled' => array
 			(
-			'title' => __('Enable/Disable', 'cryptowoo'),
+			'title' => __('Enable/Disable', 'cryptopay'),
 			'type' => 'checkbox',
-			'label' => __('Enable CryptoWoo payment gateway.', 'cryptowoo'),
+			'label' => __('Enable CryptoPay payment gateway.', 'cryptopay'),
 			'default' => '0',
 			),
 			'title' => array
 			(
-			'title' => __('Title', 'cryptowoo'),
+			'title' => __('Title', 'cryptopay'),
 			'type' => 'text',
-			'description' => __('This is the title the customer can see when checking out.', 'cryptowoo'),
-			'default' => __('Digital Currencies', 'cryptowoo'),
+			'description' => __('This is the title the customer can see when checking out.', 'cryptopay'),
+			'default' => __('Digital Currencies', 'cryptopay'),
 			),
 			'description' => array
 			(
-			'title' => __('Description', 'cryptowoo'),
+			'title' => __('Description', 'cryptopay'),
 			'type' => 'textarea',
-			'description' => __('This is the description the customer can see when checking out. <strong>HTML</stong> markup allowed', 'cryptowoo'),
-			'default' => __("Pay with Bitcoin, Litecoin or Dogecoin?", 'cryptowoo'),
+			'description' => __('This is the description the customer can see when checking out. <strong>HTML</stong> markup allowed', 'cryptopay'),
+			'default' => __("Pay with Bitcoin, Litecoin or Dogecoin?", 'cryptopay'),
 			),
 			*/
 			);
@@ -841,7 +810,7 @@ function woocommerce_cryptowoo_init() {
 			$wallet_config = CW_Address::get_wallet_config( $payment_currency, 1, false );
 
 			if ( false !== strpos( $payment_currency, 'TEST' ) ) {
-				$message .= sprintf( esc_html__( '%1$s%2$s currency override enabled. This payment gateway is in testnet mode. No orders shall be fulfilled.%3$s', 'cryptowoo' ), '<p class="cryptowoo-warning">', $payment_currency, '</p>' );
+				$message .= sprintf( esc_html__( '%1$s%2$s currency override enabled. This payment gateway is in testnet mode. No orders shall be fulfilled.%3$s', 'cryptopay' ), '<p class="cryptopay-warning">', $payment_currency, '</p>' );
 			}
 
 			// Get payment details by order_id.
@@ -871,7 +840,7 @@ function woocommerce_cryptowoo_init() {
 
 				// Request a new payment address if the payment currency has changed.
 				if ( ( $cryptowoo_args['payment_currency'] != $payment_currency && ! $is_lightning ) || $switched_back_from_lightning ) {
-					$message .= sprintf( esc_html__( '%1$sMessage: Currency has changed from %2$s to %3$s. New address has been generated.%1$s', 'cryptowoo' ), '<br>', $payment_currency, $cryptowoo_args['payment_currency'] );
+					$message .= sprintf( esc_html__( '%1$sMessage: Currency has changed from %2$s to %3$s. New address has been generated.%1$s', 'cryptopay' ), '<br>', $payment_currency, $cryptowoo_args['payment_currency'] );
 					// delete_order_payment_request($order_id);
 					$payment_currency = $cryptowoo_args['payment_currency'];
 					$payment_address  = false;
@@ -880,7 +849,7 @@ function woocommerce_cryptowoo_init() {
 
 				// Update payment request from table payments if the order amount has changed.
 				if ( $amount_payments != $cryptowoo_args['amount'] ) {
-					$message .= sprintf( esc_html__( '%1$sMessage: Amount has changed. Order has been updated%2$s', 'cryptowoo' ), '<br>', '<br>' );
+					$message .= sprintf( esc_html__( '%1$sMessage: Amount has changed. Order has been updated%2$s', 'cryptopay' ), '<br>', '<br>' );
 					// delete_order_payment_request($order_id);
 					$updated = true;
 
@@ -1019,7 +988,7 @@ function woocommerce_cryptowoo_init() {
 							   CW_Block_Explorer_Processing::requeue_order( $order );
 
 							   // Make sure the order is set to "pending"
-							   $order->update_status( 'pending', __( 'Refreshed cryptocurrency order total.', 'cryptowoo' ) );
+							   $order->update_status( 'pending', __( 'Refreshed cryptocurrency order total.', 'cryptopay' ) );
 
 							   CW_AdminMain::cryptowoo_log_data( 0, __FUNCTION__, sprintf( 'Quote for order %d refreshed - setting order status to pending payment', $order->get_id() ), 'info' );
 
@@ -1063,7 +1032,7 @@ function woocommerce_cryptowoo_init() {
 			// Update the number of decimals
 			$wallet_config['decimals'] = CW_Formatting::count_coin_decimals( (int) $crypto_amount );
 
-			$label = rawurlencode( sprintf( '%s %s %s', get_bloginfo( 'name' ), esc_html__( 'Order', 'cryptowoo' ), $order_id ) );
+			$label = rawurlencode( sprintf( '%s %s %s', get_bloginfo( 'name' ), esc_html__( 'Order', 'cryptopay' ), $order_id ) );
 
 			$coin_protocols = $wallet_config['coin_protocols'];
 
@@ -1113,20 +1082,20 @@ function woocommerce_cryptowoo_init() {
 				'amount'          => CW_Formatting::fbits( $crypto_amount, true, $wallet_config['decimals'], true, true ),
 				'crypto_amount'   => $crypto_amount,
 				'qr_data'         => $qr_data,
-				'please_wait'     => esc_html__( 'Please wait...', 'cryptowoo' ),
+				'please_wait'     => esc_html__( 'Please wait...', 'cryptopay' ),
 				'wp_nonce'        => wp_create_nonce( 'cw_poll_callback' ),
 				'order_key'       => $order->get_order_key(),
 			);
-			wp_localize_script( 'cw_polling', 'CryptoWoo', $php_vars_array );
+			wp_localize_script( 'cw_polling', 'CryptoPay', $php_vars_array );
 
 			// Enqueued script with localized data.
 			cw_enqueue_script( 'cw_polling' );
 
 			// Then access all the vars like this
 			/**
-			 * CryptoWoo.payment_address;
-			 * CryptoWoo.time_left;
-			 * CryptoWoo.admin_url;
+			 * CryptoPay.payment_address;
+			 * CryptoPay.time_left;
+			 * CryptoPay.admin_url;
 			 * [...]
 			 */
 
@@ -1137,11 +1106,11 @@ function woocommerce_cryptowoo_init() {
 			$url = CW_Formatting::link_to_address( $payment_currency, $payment_address );
 
 			// JavaScipt disabled message
-			printf( esc_html__( '%1$sSome elements need JavaScript activated to work but the order will be processed regardless. You will receive an email when your payment is confirmed.%2$s', 'cryptowoo' ), '<noscript><p>', '</p><style>.nojs { display:none; }</style></noscript>' );
+			printf( esc_html__( '%1$sSome elements need JavaScript activated to work but the order will be processed regardless. You will receive an email when your payment is confirmed.%2$s', 'cryptopay' ), '<noscript><p>', '</p><style>.nojs { display:none; }</style></noscript>' );
 
 			// Maybe use custom payment page template
-			// Copy the file wp-content/plugins/cryptowoo/includes/payment.php to wp-content/themes/yourtheme/cryptowoo/payment.php
-			$custom_template = apply_filters( 'cw_payment_page_template_path', get_stylesheet_directory() . '/cryptowoo/payment.php' );
+			// Copy the file wp-content/plugins/cryptopay/includes/payment.php to wp-content/themes/yourtheme/cryptopay/payment.php
+			$custom_template = apply_filters( 'cw_payment_page_template_path', get_stylesheet_directory() . '/cryptopay/payment.php' );
 			if ( file_exists( $custom_template ) ) {
 				include_once $custom_template;
 			} else {
@@ -1152,7 +1121,7 @@ function woocommerce_cryptowoo_init() {
 	}//end class
 
 	/**
-	 * Add CryptoWoo to the available payment methods in WooCommerce
+	 * Add CryptoPay to the available payment methods in WooCommerce
 	 *
 	 * @param  $methods
 	 * @return array
@@ -1192,7 +1161,7 @@ function cw_get_woocommerce_default_currency() {
 }
 
 /**
- * Add digital currencies supported by CryptoWoo to woocommerce currency list
+ * Add digital currencies supported by CryptoPay to woocommerce currency list
  * File name: woocommerce/includes/wc-core-functions.php
  *
  * @return array
@@ -1202,7 +1171,7 @@ function cw_add_woocommerce_currencies( $currencies ) {
 }
 
 /**
- * Get full list of currency codes and names for digital currencies supported by CryptoWoo.
+ * Get full list of currency codes and names for digital currencies supported by CryptoPay.
  *
  * @return string[]
  */
@@ -1210,19 +1179,19 @@ function cw_get_cryptocurrencies() {
 	return apply_filters(
 		'cw_get_cryptocurrencies',
 		array(
-			'BTC'      => esc_html__( 'Bitcoin', 'cryptowoo' ),
-			'BCH'      => esc_html__( 'Bitcoin Cash', 'cryptowoo' ),
-			'LTC'      => esc_html__( 'Litecoin', 'cryptowoo' ),
-			'DOGE'     => esc_html__( 'Dogecoin', 'cryptowoo' ),
-			'BLK'      => esc_html__( 'BlackCoin', 'cryptowoo' ),
-			'BTCTEST'  => esc_html__( 'Testnet Bitcoin', 'cryptowoo' ),
-			'DOGETEST' => esc_html__( 'Testnet Dogecoin', 'cryptowoo' ),
+			'BTC'      => esc_html__( 'Bitcoin', 'cryptopay' ),
+			'BCH'      => esc_html__( 'Bitcoin Cash', 'cryptopay' ),
+			'LTC'      => esc_html__( 'Litecoin', 'cryptopay' ),
+			'DOGE'     => esc_html__( 'Dogecoin', 'cryptopay' ),
+			'BLK'      => esc_html__( 'BlackCoin', 'cryptopay' ),
+			'BTCTEST'  => esc_html__( 'Testnet Bitcoin', 'cryptopay' ),
+			'DOGETEST' => esc_html__( 'Testnet Dogecoin', 'cryptopay' ),
 		)
 	);
 }
 
 /**
- * Get full list of currency codes and names for digital currencies supported by CryptoWoo.
+ * Get full list of currency codes and names for digital currencies supported by CryptoPay.
  *
  * Currently only used by Dokan add-on. Important: do not use it, use cw_get_cryptocurrencies() instead!
  *
@@ -1237,9 +1206,9 @@ function cw_get_woocommerce_currencies() {
 }
 
 /**
- * Remove the digital currencies not supported by CryptoWoo as Woocommerce store currency (base currency)
+ * Remove the digital currencies not supported by CryptoPay as Woocommerce store currency (base currency)
  * Note that currently only fiat and Bitcoin is supported as base currencies.
- * So we simply remove the other cryptowoo currencies from woocommerce settings.
+ * So we simply remove the other cryptopay currencies from woocommerce settings.
  */
 function cw_remove_unsupported_woocommerce_currencies() {
 	remove_filter( 'woocommerce_currencies', 'cw_add_woocommerce_currencies' );
@@ -1500,7 +1469,7 @@ function add_currencies_to_woocs( $woocs_currencies ) {
 	});*/
 
 	// Maybe get currency settings from 10s transient
-	$cached = get_transient( 'cryptowoo-woocs' );
+	$cached = get_transient( 'cryptopay-woocs' );
 	if ( false !== $cached ) {
 		return $cached;
 	}
@@ -1585,7 +1554,7 @@ function add_currencies_to_woocs( $woocs_currencies ) {
 	}
 
 	$merged = array_merge( $woocs_currencies, $currencies );
-	set_transient( 'cryptowoo-woocs', $merged, 10 );
+	set_transient( 'cryptopay-woocs', $merged, 10 );
 	return $merged;
 }
 
@@ -1603,7 +1572,7 @@ function add_currencies_to_woocs( $woocs_currencies ) {
  * @return float
  */
 function format_woocs_crypto_amount( $crypto_amount ) {
-	// Bail if not cryptocurrency as we only want to affect cryptowoo woocs micropayments here.
+	// Bail if not cryptocurrency as we only want to affect cryptopay woocs micropayments here.
 	if ( ! CW_ExchangeRates::tools()->currency_is_crypto( cw_woocs_get_current_currency() ) ) {
 		return $crypto_amount;
 	}
@@ -1746,7 +1715,7 @@ function cwwcml_filter_exchange_rates( $exchange_rates ) {
 	$woocommerce_currency = cw_get_woocommerce_default_currency();
 
 	// Maybe get currency settings from 10s transient
-	$cached = get_transient( 'cryptowoo-wcml' );
+	$cached = get_transient( 'cryptopay-wcml' );
 	if ( false !== $cached ) {
 		return $cached;
 	}
@@ -1777,14 +1746,14 @@ function cwwcml_filter_exchange_rates( $exchange_rates ) {
 				}
 			}
 		}
-		set_transient( 'cryptowoo-wcml', $exchange_rates, 10 );
+		set_transient( 'cryptopay-wcml', $exchange_rates, 10 );
 	}
 	return $exchange_rates;
 }
 
 /**
  *
- * Get CryptoWoo options.
+ * Get CryptoPay options.
  *
  * @return array|false
  */
@@ -1794,7 +1763,7 @@ function cw_get_options() {
 
 /**
  *
- * Get a single CryptoWoo option.
+ * Get a single CryptoPay option.
  *
  * @param string $option_id     Option identifier.
  * @param string $default_value Default value to return if the option is missing.
@@ -1809,9 +1778,9 @@ function cw_get_option( $option_id, $default_value = false ) {
 
 /**
  *
- * Update all CryptoWoo options.
+ * Update all CryptoPay options.
  *
- * @param array $updated_options CryptoWoo options.
+ * @param array $updated_options CryptoPay options.
  *
  * @return bool
  */
@@ -1821,7 +1790,7 @@ function cw_update_all_options( $updated_options ) {
 
 /**
  *
- * Update a single CryptoWoo option.
+ * Update a single CryptoPay option.
  *
  * @param string $option_id    Option identifier.
  * @param mixed  $option_value The new option value.
@@ -1838,7 +1807,7 @@ function cw_update_option( string $option_id, $option_value ) {
 
 /**
  *
- * Update multiple CryptoWoo options.
+ * Update multiple CryptoPay options.
  *
  * @param array $new_options Options to update [option_id => option_value].
  *
@@ -1873,7 +1842,7 @@ function cw_add_currencies_to_aelia( $rates, $base_currency, $exchange_rates_mod
 	$woocommerce_currency = cw_get_woocommerce_default_currency();
 
 	// Maybe get currency settings from 10s transient
-	$cached = get_transient( 'cryptowoo-aelia' );
+	$cached = get_transient( 'cryptopay-aelia' );
 	if ( false !== $cached ) {
 		return $cached;
 	}
@@ -1917,7 +1886,7 @@ function cw_add_currencies_to_aelia( $rates, $base_currency, $exchange_rates_mod
 		}
 	}
 	$merged = array_merge( $rates, $add_rates );
-	set_transient( 'cryptowoo-aelia', $merged, 10 );
+	set_transient( 'cryptopay-aelia', $merged, 10 );
 
 	return $merged;
 }

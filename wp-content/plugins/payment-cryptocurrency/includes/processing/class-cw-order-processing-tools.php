@@ -4,23 +4,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * CryptoWoo order processing tools
+ * CryptoPay order processing tools
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Processing
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Order_Processing_Tools extends CW_Singleton {
 
 
 	/**
 	 *
-	 * Log order status changed action to CryptoWoo log file.
+	 * Log order status changed action to CryptoPay log file.
 	 *
 	 * @param string $function_name  Name of the function that is logging the message.
 	 * @param string $message        Message to log.
-	 * @param bool   $db_was_updated True if CryptoWoo DB was updated, default is true.
+	 * @param bool   $db_was_updated True if CryptoPay DB was updated, default is true.
 	 */
 	public function log_order_status_changed( $function_name, $message, $db_was_updated = true ) {
 		CW_AdminMain::cryptowoo_log_data(

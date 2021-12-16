@@ -17,7 +17,7 @@ The plugin was created to solve a solution that we and several merchants were fa
 
 ### Plugin Features:
 
-* Provide a list of your own Bitcoin, Bitcoin Cash, Dogecoin, Litecoin, and other cryptocurrency wallet addresses or use a Block.io premium account  (get our [HD Wallet Add-on](https://www.cryptowoo.com/shop/cryptowoo-hd-wallet-addon/) to receive payments directly to HD wallets such as Electrum, Mycelium, Trezor, or Ledger Wallet)
+* Provide a list of your own Bitcoin, Bitcoin Cash, Dogecoin, Litecoin, and other cryptocurrency wallet addresses or use a Block.io premium account  (get our [HD Wallet Add-on](https://www.cryptopay.com/shop/cryptopay-hd-wallet-addon/) to receive payments directly to HD wallets such as Electrum, Mycelium, Trezor, or Ledger Wallet)
 * Keep the customer on your website: No redirection to third-party websites or iframes during checkout.
 * Keep your data: No need to give customer data to a third party.
 * Optional payment completion at zero confirmations using transaction confidence metrics.
@@ -38,7 +38,7 @@ The plugin was created to solve a solution that we and several merchants were fa
 * Generates one address per order automatically.
 * The payments from your customers go straight into your own HD wallet such as Electrum, Trezor, Ledger Nano, or any other wallet with HD support.
 
-You can get the HD Wallet Add-on [on our website](https://www.cryptowoo.com/shop/cryptowoo-hd-wallet-addon/).
+You can get the HD Wallet Add-on [on our website](https://www.cryptopay.com/shop/cryptopay-hd-wallet-addon/).
 
 ### Ethereum and ERC-20 Add-on features [premium]
 
@@ -46,12 +46,12 @@ You can get the HD Wallet Add-on [on our website](https://www.cryptowoo.com/shop
 * Web3 wallet support allows your customers to easily pay with the click of a button from their wallets such as MetaMask, Brave Browser, WalletConnect, Torus, Fortmatic.
 * Ethereum fallback address allows you to receive all payments into a single Ethereum address.
 
-You can get the Ethereum and ERC-20 Add-on [on our website](https://www.cryptowoo.com/shop/cryptowoo-ethereum-add-on/).
+You can get the Ethereum and ERC-20 Add-on [on our website](https://www.cryptopay.com/shop/cryptopay-ethereum-add-on/).
 
 ### Pay for development to add support for additional cryptocurrencies:
 
-* [Make a Custom Cryptocurrency Add-on Request](https://www.cryptowoo.com/shop/add-a-coin/)
-* [Add Custom ERC-20 Token](https://www.cryptowoo.com/shop/add-erc-20-token/)
+* [Make a Custom Cryptocurrency Add-on Request](https://www.cryptopay.com/shop/add-a-coin/)
+* [Add Custom ERC-20 Token](https://www.cryptopay.com/shop/add-erc-20-token/)
 
 
 == Installation ==

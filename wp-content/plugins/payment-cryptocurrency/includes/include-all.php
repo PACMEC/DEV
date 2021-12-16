@@ -34,8 +34,8 @@ if ( version_compare( phpversion(), '7.0.0', '<' ) ) {
 require_once CWOO_PLUGIN_DIR . 'includes/class.address.php';
 
 // Maybe include HD Wallet Address class
-if ( file_exists( WP_PLUGIN_DIR . '/cryptowoo-hd-wallet-addon/class.hdwallet.php' ) ) {
-	include_once WP_PLUGIN_DIR . '/cryptowoo-hd-wallet-addon/class.hdwallet.php';
+if ( file_exists( WP_PLUGIN_DIR . '/cryptopay-hd-wallet-addon/class.hdwallet.php' ) ) {
+	include_once WP_PLUGIN_DIR . '/cryptopay-hd-wallet-addon/class.hdwallet.php';
 }
 
 // Exchange rates
@@ -47,7 +47,7 @@ require_once CWOO_PLUGIN_DIR . 'includes/pricing/class.exchange-base.php';
 spl_autoload_register( 'cw_exchange_autoloader' );
 /**
  *
- * Autoload CryptoWoo exchange rate classes
+ * Autoload CryptoPay exchange rate classes
  *
  * @param string $class_name Class name.
  */
@@ -76,7 +76,7 @@ require_once CWOO_PLUGIN_DIR . 'includes/factory/class-cw-singleton-array.php';
 
 // Database
 require_once CWOO_PLUGIN_DIR . 'includes/processing/database/class-cw-database-base.php';
-require_once CWOO_PLUGIN_DIR . 'includes/processing/database/class-cw-database-cryptowoo.php';
+require_once CWOO_PLUGIN_DIR . 'includes/processing/database/class-cw-database-cryptopay.php';
 require_once CWOO_PLUGIN_DIR . 'includes/processing/database/class-cw-database-woocommerce.php';
 require_once CWOO_PLUGIN_DIR . 'includes/processing/database/class-cw-payment-details-object.php';
 
@@ -91,7 +91,7 @@ require_once CWOO_PLUGIN_DIR . 'includes/processing/class-cw-block-explorer-base
 spl_autoload_register( 'cw_block_explorer_autoloader' );
 /**
  *
- * Autoload CryptoWoo block explorer classes
+ * Autoload CryptoPay block explorer classes
  *
  * @param string $class_name Class name.
  */
@@ -113,7 +113,7 @@ function cw_block_explorer_autoloader( $class_name ) {
 spl_autoload_register( 'cw_block_explorer_old_autoloader' );
 /**
  *
- * Autoload old CryptoWoo block explorer classes for backwards compatibility for addons
+ * Autoload old CryptoPay block explorer classes for backwards compatibility for addons
  *
  * @param string $class_name Class name.
  *

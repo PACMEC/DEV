@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * BlockIO Exchange Rates Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    Exchange
  * @subpackage ExchangeBase
- * Author: CryptoWoo AS
- * Author URI: https://cryptowoo.com
+ * Author: CryptoPay AS
+ * Author URI: https://cryptopay.com
  */
 class CW_Exchange_BlockIO extends CW_Exchange_Base {
 
@@ -103,7 +103,7 @@ class CW_Exchange_BlockIO extends CW_Exchange_Base {
 
 	/**
 	 *
-	 * Get Block.io API key from CryptoWoo options.
+	 * Get Block.io API key from CryptoPay options.
 	 *
 	 * @return string|false
 	 */

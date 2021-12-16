@@ -34,10 +34,10 @@ jQuery(document).ready(function ( $ ) {
 
 			var vars    = {
 				'action': 'check_receipt',
-				'order_key': CryptoWoo.order_key,
-				'wp_nonce': CryptoWoo.wp_nonce
+				'order_key': CryptoPay.order_key,
+				'wp_nonce': CryptoPay.wp_nonce
 		};
-			var ajaxurl = CryptoWoo.admin_url;
+			var ajaxurl = CryptoPay.admin_url;
 				jQuery.ajax({
 					type: 'POST',
 					url: ajaxurl,
@@ -57,10 +57,10 @@ jQuery(document).ready(function ( $ ) {
 		setTimeout(function () {
 			var vars    = {
 				'action': 'check_receipt',
-				'order_key': CryptoWoo.order_key,
-				'wp_nonce': CryptoWoo.wp_nonce
+				'order_key': CryptoPay.order_key,
+				'wp_nonce': CryptoPay.wp_nonce
 			};
-			var ajaxurl = CryptoWoo.admin_url;
+			var ajaxurl = CryptoPay.admin_url;
 			jQuery.ajax({
 				type: 'POST',
 				url: ajaxurl,
@@ -80,7 +80,7 @@ jQuery(document).ready(function ( $ ) {
 	jQuery.fn.cw_countdown = function (duration, message) {
 
 		// Maybe hide countdown and progress bar
-		if (CryptoWoo.show_countdown == 0) {
+		if (CryptoPay.show_countdown == 0) {
 			jQuery('#countdown-timer').hide();
 			jQuery('#progress').hide();
 		}
@@ -107,26 +107,26 @@ jQuery(document).ready(function ( $ ) {
 				if (duration < 2) {
 					clearInterval(countdown);
 					setTimeout(function () {
-						container.html("<span class='cryptowoo-warning'>" + CryptoWoo.please_wait + " <i class='fa fa-refresh fa-spin'></i>");
+						container.html("<span class='cryptopay-warning'>" + CryptoPay.please_wait + " <i class='fa fa-refresh fa-spin'></i>");
 					}, 3000);
 					// Wait 3 seconds to make sure the order has really timed out, then force processing of orders in database
 					var vars    = {
 						'action': 'cw_force_processing',
-						'wp_nonce': CryptoWoo.wp_nonce
+						'wp_nonce': CryptoPay.wp_nonce
 					};
-					var ajaxurl = CryptoWoo.admin_url;
+					var ajaxurl = CryptoPay.admin_url;
 					jQuery.ajax({
 						type: 'POST',
 						url: ajaxurl,
 						data: vars,
 						dataType: 'json',
 						success: function () {
-							window.location.href = CryptoWoo.redirect;
+							window.location.href = CryptoPay.redirect;
 						}
 					});
 				} else {
 					// Calculate percentage
-					var progress = (duration / CryptoWoo.total_time) * 100; //
+					var progress = (duration / CryptoPay.total_time) * 100; //
 					// Update progressbar with percentage
 					nanobar.go(progress);
 					// Update countdown time
@@ -151,14 +151,14 @@ jQuery(document).ready(function ( $ ) {
 	}
 
 	// Use .cw-countdown as container, duration, and optional message
-	jQuery(".cw-countdown").cw_countdown(CryptoWoo.time_left, '');
+	jQuery(".cw-countdown").cw_countdown(CryptoPay.time_left, '');
 
 	// Create QR code
 
 	//If a plugin exists with the javascript function-name for conversion logic, use that QR-code instead of this.
-	if (typeof window["change_addr_" + CryptoWoo.currency] !== "function") {
+	if (typeof window["change_addr_" + CryptoPay.currency] !== "function") {
 		var qrcode = new QRCode(document.getElementById("qrcode"), {
-			text: CryptoWoo.qr_data,
+			text: CryptoPay.qr_data,
 			width: 250,
 			height: 250,
 			colorDark : "#000000",
@@ -202,9 +202,9 @@ jQuery(document).ready(function ( $ ) {
 		function send_from_trezor() {
 			TrezorConnect.composeTransaction({
 				outputs: [
-					{amount: CryptoWoo.crypto_amount, address: CryptoWoo.payment_address}
+					{amount: CryptoPay.crypto_amount, address: CryptoPay.payment_address}
 				],
-				coin: CryptoWoo.lc_currency,
+				coin: CryptoPay.lc_currency,
 				push: true
 			}).then(function(response) {
 				console.log(response);
@@ -252,9 +252,9 @@ function copyToClipboard(element) {
 }
 
 function switchPaymentAddress(){
-	var functionName = "change_addr_" + CryptoWoo.currency;
+	var functionName = "change_addr_" + CryptoPay.currency;
 	if (typeof window[functionName] === "function") {
-		window["change_addr_" + CryptoWoo.currency]();
+		window["change_addr_" + CryptoPay.currency]();
 	}
 
 }

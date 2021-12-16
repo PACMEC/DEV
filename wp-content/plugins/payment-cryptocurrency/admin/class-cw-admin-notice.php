@@ -1,14 +1,14 @@
 <?php
 /**
- * CryptoWoo Admin Notice class
+ * CryptoPay Admin Notice class
  *
- * @package CryptoWoo
+ * @package CryptoPay
  */
 
 /**
  * Class for displaying admin notices.
  *
- * @package    CryptoWoo
+ * @package    CryptoPay
  * @subpackage Admin
  */
 class CW_Admin_Notice {
@@ -149,7 +149,7 @@ class CW_Admin_Notice {
 	 * @param string $label       Label for the button (button text).
 	 * @param string $hint        The hint for the button (on mouse hover text).
 	 * @param string $target_base The target base url when clicking the button (e.g. 'admin.php?page=').
-	 * @param string $target      The target when clicking the button (e.g. 'cryptowoo').
+	 * @param string $target      The target when clicking the button (e.g. 'cryptopay').
 	 * @param string $nonce       The nonce to add to the url.
 	 *
 	 * @return CW_Admin_Notice
@@ -165,7 +165,7 @@ class CW_Admin_Notice {
 	 *
 	 * @param string $label      Label for the button (button text).
 	 * @param string $hint       The hint for the button (on mouse hover text).
-	 * @param string $target_url The target website url when clicking the button (e.g. 'cryptowoo.com').
+	 * @param string $target_url The target website url when clicking the button (e.g. 'cryptopay.com').
 	 *
 	 * @return CW_Admin_Notice
 	 */
@@ -242,7 +242,7 @@ class CW_Admin_Notice {
 				<fieldset>
 					<input type="hidden" name="<?php esc_attr( $option_name ); ?>" value="<?php esc_attr( $option_name ); ?>"/>
 					<input id="<?php esc_attr( $option_name ); ?>" type="submit" name="submit" class="button"
-						value="<?php esc_html_e( 'Dismiss', 'cryptowoo' ); ?>" onClick=""/>
+						value="<?php esc_html_e( 'Dismiss', 'cryptopay' ); ?>" onClick=""/>
 				</fieldset>
 			</form>
 			</p>

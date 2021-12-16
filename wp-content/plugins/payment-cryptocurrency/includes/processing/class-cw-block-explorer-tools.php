@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * CryptoWoo Block Explorer tools
+ * CryptoPay Block Explorer tools
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Processing
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Block_Explorer_Tools {
 
@@ -115,7 +115,7 @@ class CW_Block_Explorer_Tools {
 	 * @throws InvalidArgumentException Throws exception if unsupported currency is supplied.
 	 */
 	public function get_block_explorer_instance_by_name( string $block_explorer_class_name, string $coin_type, $addresses = false ) {
-		// This lets CryptoWoo Add-ons override block explorer class for a specific cryptocurrency.
+		// This lets CryptoPay Add-ons override block explorer class for a specific cryptocurrency.
 		$block_explorer_class_name = apply_filters( 'cw_block_explorer_class_name', $block_explorer_class_name, $coin_type );
 		if ( class_exists( $block_explorer_class_name, false ) ) {
 			return new $block_explorer_class_name( $coin_type, $addresses );

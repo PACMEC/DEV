@@ -198,7 +198,7 @@ class CW_Insight {
 
 				if ( isset( $pc_conf['instant_send'] ) && $pc_conf['instant_send'] && isset( $transaction->txlock ) && $transaction->txlock === true ) {
 					$num_conf += $pc_conf['instant_send_depth'];
-					$msg       = sprintf( __( 'InstantSend detected: %1$d + %2$d %3$s', 'cryptowoo' ), (int) $num_conf, (int) $pc_conf['instant_send_depth'], $transaction->hash );
+					$msg       = sprintf( __( 'InstantSend detected: %1$d + %2$d %3$s', 'cryptopay' ), (int) $num_conf, (int) $pc_conf['instant_send_depth'], $transaction->hash );
 					CW_AdminMain::cryptowoo_log_data( 0, __FUNCTION__, $msg, 'debug' );
 				}
 

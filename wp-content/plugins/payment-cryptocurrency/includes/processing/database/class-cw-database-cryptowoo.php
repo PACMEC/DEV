@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * Order processing database handler for CryptoWoo Database
+ * Order processing database handler for CryptoPay Database
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Database
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Database_CryptoWoo extends CW_Database_Base {
 
@@ -238,7 +238,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Insert CryptoWoo Payments Table row.
+	 * Insert CryptoPay Payments Table row.
 	 *
 	 * @return int|false The number of rows inserted, or false on error.
 	 */
@@ -254,7 +254,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Update CryptoWoo Payments Table row.
+	 * Update CryptoPay Payments Table row.
 	 *
 	 * @return false|int
 	 */
@@ -270,7 +270,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Delete CryptoWoo Payments Table row.
+	 * Delete CryptoPay Payments Table row.
 	 *
 	 * @return false|int
 	 */
@@ -345,7 +345,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Return unpaid CryptoWoo orders.
+	 * Return unpaid CryptoPay orders.
 	 * Return all orders in table cryptowoo_payments_temp that
 	 *        - have not been paid yet
 	 *        - are older than min_order_age seconds
@@ -370,7 +370,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Get paid CryptoWoo orders.
+	 * Get paid CryptoPay orders.
 	 * Get orders from table cryptowoo_payments_temp for a specific currency that are marked as paid and contain only confirmed coins
 	 * Return orders for all currencies if $currency_name is not specified
 	 *
@@ -389,7 +389,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Get CryptoWoo orders pending blockchain confirms.
+	 * Get CryptoPay orders pending blockchain confirms.
 	 * Return orders from table cryptowoo_payments_temp that have been marked as paid but still contain unconfirmed transactions
 	 * Orders that weren't updated lately take priority
 	 *
@@ -480,7 +480,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Update CryptoWoo orders payment details
+	 * Update CryptoPay orders payment details
 	 *
 	 * @param string $payment_address    Cryptocurrency blockchain payment address.
 	 * @param int    $amount             Order total in fiat value.
@@ -550,7 +550,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Prepare wpdb cryptowoo payments table sql.
+	 * Prepare wpdb cryptopay payments table sql.
 	 *
 	 * @param string       $column    Column name in sql select condition.
 	 * @param string       $condition Where condition (eg "post_id = %s").
@@ -692,7 +692,7 @@ class CW_Database_CryptoWoo extends CW_Database_Base {
 
 	/**
 	 *
-	 * Get CryptoWoo payments table name
+	 * Get CryptoPay payments table name
 	 *
 	 * @return string
 	 */

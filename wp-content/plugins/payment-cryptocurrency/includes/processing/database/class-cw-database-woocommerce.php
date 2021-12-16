@@ -6,17 +6,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Order processing database handler for Woocommerce Database
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage Database
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  */
 class CW_Database_Woocommerce extends CW_Database_Base {
 
 
 	/**
 	 *
-	 * Get Woocommerce paid orders with CryptoWoo as payment method.
+	 * Get Woocommerce paid orders with CryptoPay as payment method.
 	 *
 	 * @param string $currency Payment currency code (eg BTC).
 	 * @param int    $limit    Max quantity of orders to get.
@@ -39,7 +39,7 @@ class CW_Database_Woocommerce extends CW_Database_Base {
 
 	/**
 	 *
-	 * Get Woocommerce last paid order with CryptoWoo as payment method.
+	 * Get Woocommerce last paid order with CryptoPay as payment method.
 	 *
 	 * @param string $currency Payment currency code (eg BTC).
 	 *
@@ -409,7 +409,7 @@ class CW_Database_Woocommerce extends CW_Database_Base {
 
 	/**
 	 *
-	 * Insert CryptoWoo Woocommerce Order Meta.
+	 * Insert CryptoPay Woocommerce Order Meta.
 	 * This is identical as update, just for nice code readability.
 	 *
 	 * @return int|false The Order ID if successful, 0 if unsuccessful.
@@ -420,7 +420,7 @@ class CW_Database_Woocommerce extends CW_Database_Base {
 
 	/**
 	 *
-	 * Update CryptoWoo Woocommerce Order Meta.
+	 * Update CryptoPay Woocommerce Order Meta.
 	 *
 	 * @return false|int The Order ID if successful, false if unsuccessful.
 	 */
@@ -430,7 +430,7 @@ class CW_Database_Woocommerce extends CW_Database_Base {
 
 	/**
 	 *
-	 * Delete CryptoWoo Woocommerce Order Meta.
+	 * Delete CryptoPay Woocommerce Order Meta.
 	 *
 	 * @return false|int
 	 */

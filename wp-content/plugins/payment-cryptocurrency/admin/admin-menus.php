@@ -2,7 +2,7 @@
 /**
  * Create the admin backend menus
  *
- * @package CryptoWoo
+ * @package CryptoPay
  * @subpackage Admin
  */
 
@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function cryptowoo_plugin_row_meta( $links, $file ) {
 	if ( CWOO_FILE === $file ) {
 		$row_meta = array(
-			'docs'    => '<a href="' . esc_url( 'https://www.cryptowoo.com/installation/' ) . '" title="' . esc_attr( esc_html__( 'View CryptoWoo Installation Tutorial', 'cryptowoo' ) ) . '" target="_blank">' . esc_html__( 'Getting Started', 'cryptowoo' ) . '</a>',
-			'support' => '<a href="' . esc_url( 'https://cryptowoo.zendesk.com/' ) . '" title="' . esc_attr( esc_html__( 'Visit Customer Help Desk', 'cryptowoo' ) ) . '" target="_blank">' . esc_html__( 'Knowledgebase & Support', 'cryptowoo' ) . '</a>',
+			'docs'    => '<a href="' . esc_url( 'https://www.cryptopay.com/installation/' ) . '" title="' . esc_attr( esc_html__( 'View CryptoPay Installation Tutorial', 'cryptopay' ) ) . '" target="_blank">' . esc_html__( 'Getting Started', 'cryptopay' ) . '</a>',
+			'support' => '<a href="' . esc_url( 'https://cryptopay.zendesk.com/' ) . '" title="' . esc_attr( esc_html__( 'Visit Customer Help Desk', 'cryptopay' ) ) . '" target="_blank">' . esc_html__( 'Knowledgebase & Support', 'cryptopay' ) . '</a>',
 		);
 		return array_merge( $links, $row_meta );
 	}
@@ -35,7 +35,7 @@ add_filter( 'plugin_row_meta', 'cryptowoo_plugin_row_meta', 10, 2 );
  */
 function cryptowoo_add_admin_menu_db() {
 	$admin_main = new CW_AdminMain();
-	add_submenu_page( 'cryptowoo', esc_html__( 'Database Actions', 'cryptowoo' ), esc_html__( 'Database Actions', 'cryptowoo' ), 'manage_woocommerce', 'cryptowoo_database_maintenance', array( $admin_main, 'database_maintenance' ) );
+	add_submenu_page( 'cryptopay', esc_html__( 'Database Actions', 'cryptopay' ), esc_html__( 'Database Actions', 'cryptopay' ), 'manage_woocommerce', 'cryptowoo_database_maintenance', array( $admin_main, 'database_maintenance' ) );
 }
 add_action( 'admin_menu', 'cryptowoo_add_admin_menu_db', 400 );
 
@@ -51,7 +51,7 @@ function cryptowoo_display_admin_order_meta( $order ) {
 	// Do we have a payment currency custom field?
 	$payment_currency = isset( $order_meta['payment_currency'][0] ) ? $order_meta['payment_currency'][0] : false;
 
-	// Return if we have no CryptoWoo payment currency field.
+	// Return if we have no CryptoPay payment currency field.
 	if ( ! (bool) $payment_currency ) {
 		return;
 	}
@@ -60,7 +60,7 @@ function cryptowoo_display_admin_order_meta( $order ) {
 
 	// Block chain link.
 	$url              = isset( $order_meta['payment_address'][0] ) ? CW_Formatting::link_to_address( $payment_currency, $order_meta['payment_address'][0] ) : '#';
-	$block_chain_link = '#' !== $url ? sprintf( '<a title="%s %s %s." target="_blank" href="%s" class="cw-crypto-address">%s</a><br>', esc_html__( 'View address on the', 'cryptowoo' ), $payment_currency, esc_html__( 'blockchain', 'cryptowoo' ), $url, $order_meta['payment_address'][0] ) : false;
+	$block_chain_link = '#' !== $url ? sprintf( '<a title="%s %s %s." target="_blank" href="%s" class="cw-crypto-address">%s</a><br>', esc_html__( 'View address on the', 'cryptopay' ), $payment_currency, esc_html__( 'blockchain', 'cryptopay' ), $url, $order_meta['payment_address'][0] ) : false;
 
 	// Which metadata do we want?
 	$cryptowoo_meta = array( 'crypto_amount', 'amount_difference', 'received_confirmed', 'received_unconfirmed', 'payment_address' );

@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Chain_So Exchange Rates Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    Exchange
  * @subpackage ExchangeBase
- * Author: CryptoWoo AS
- * Author URI: https://cryptowoo.com
+ * Author: CryptoPay AS
+ * Author URI: https://cryptopay.com
  */
 class CW_Exchange_SoChain extends CW_Exchange_Base {
 

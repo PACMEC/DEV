@@ -7,16 +7,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Process exchange rates
  *
  * Based on class.exchange-rates by author DRDoGE
- * Author: CryptoWoo AS
+ * Author: CryptoPay AS
  *
  * Some functions modified from "Bitcoin Payments for WooCommerce"
  * Author: BitcoinWay
  * URI: http://www.bitcoinway.com/
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage PriceProcessing
- * @author     Developer: CryptoWoo AS
+ * @author     Developer: CryptoPay AS
  */
 class CW_ExchangeRate_Processing {
 
@@ -68,7 +68,7 @@ class CW_ExchangeRate_Processing {
 	 * @see        update_coin_rates()
 	 *
 	 * @param string $coin    The coin name.
-	 * @param array  $options The CryptoWoo options.
+	 * @param array  $options The CryptoPay options.
 	 * @param bool   $force   If should be force updated.
 	 *
 	 * @return array|string|null
@@ -86,7 +86,7 @@ class CW_ExchangeRate_Processing {
 	 * @see        update_coin_rates()
 	 *
 	 * @param string $coin    The coin name.
-	 * @param array  $options The CryptoWoo options.
+	 * @param array  $options The CryptoPay options.
 	 * @param bool   $force   If should be force updated.
 	 *
 	 * @return array|string|null
@@ -99,7 +99,7 @@ class CW_ExchangeRate_Processing {
 
 	/**
 	 * Get the Coin/Fiat exchange_rate.
-	 * Backwards compatibility for CryptoWoo addons.
+	 * Backwards compatibility for CryptoPay addons.
 	 *
 	 * @package CW_ExchangeRates
 	 *
@@ -155,7 +155,7 @@ class CW_ExchangeRate_Processing {
 
 	/**
 	 * Get the Coin/Fiat exchange_rate.
-	 * Backwards compatibility for CryptoWoo addons.
+	 * Backwards compatibility for CryptoPay addons.
 	 *
 	 * @package CW_ExchangeRates
 	 *
@@ -467,7 +467,7 @@ class CW_ExchangeRate_Processing {
 		$rates              = $exchange_rate_data ? $exchange_rate_data[0] : array();
 
 		if ( isset( $rates['exchange_rate'] ) && is_numeric( $rates['exchange_rate'] ) ) {
-			wp_cache_set( $currency . $base_currency, $rates['exchange_rate'], 'cryptowoo-rates', 60 );
+			wp_cache_set( $currency . $base_currency, $rates['exchange_rate'], 'cryptopay-rates', 60 );
 			return (float) $rates['exchange_rate'];
 		}
 
@@ -498,7 +498,7 @@ class CW_ExchangeRate_Processing {
 
 		if ( 'BTC' !== $base_currency && ( 'BTC' !== $currency || $woo_default_currency !== $base_currency ) ) {
 			$coin_rate = $this->calculate_coin_pair_rate( $currency, $base_currency, $woo_default_currency );
-			wp_cache_set( $currency . $base_currency, $coin_rate, 'cryptowoo-rates', 60 );
+			wp_cache_set( $currency . $base_currency, $coin_rate, 'cryptopay-rates', 60 );
 
 			return $coin_rate;
 		}
@@ -529,7 +529,7 @@ class CW_ExchangeRate_Processing {
 		}
 		$coin_pair = $currency . $fiat_currency;
 
-		return wp_cache_get( $coin_pair, 'cryptowoo-rates' );
+		return wp_cache_get( $coin_pair, 'cryptopay-rates' );
 	}
 
 	/**
@@ -547,7 +547,7 @@ class CW_ExchangeRate_Processing {
 
 		global $wpdb;
 
-		$cached = wp_cache_get( 'all_rates', 'cryptowoo-rates' ); // get rates from WP object cache
+		$cached = wp_cache_get( 'all_rates', 'cryptopay-rates' ); // get rates from WP object cache
 
 		if ( ! $cached ) {
 
@@ -628,7 +628,7 @@ class CW_ExchangeRate_Processing {
 			}
 
 			// Save rate to WP object cache
-			wp_cache_set( 'all_rates', $rates, 'cryptowoo-rates', 60 );
+			wp_cache_set( 'all_rates', $rates, 'cryptopay-rates', 60 );
 			$cached = $rates;
 		}
 		return $cached;
@@ -664,7 +664,7 @@ class CW_ExchangeRate_Processing {
 		);
 
 		// Save rate to WP object cache
-		wp_cache_set( $coin, $coin_fiat, 'cryptowoo-rates', 60 ); // wp_cache_set( $currency, $rate, 'cryptowoo-rates', $expire );
+		wp_cache_set( $coin, $coin_fiat, 'cryptopay-rates', 60 ); // wp_cache_set( $currency, $rate, 'cryptopay-rates', $expire );
 
 		return $result;
 	}
@@ -698,7 +698,7 @@ class CW_ExchangeRate_Processing {
 			);// string
 			// s,f,s,s,s,s
 			// Save rate to WP object cache
-			wp_cache_set( $market, $coin_fiat, 'cryptowoo-rates', 60 ); // wp_cache_set( $currency, $rate, 'cryptowoo-rates', $expire );
+			wp_cache_set( $market, $coin_fiat, 'cryptopay-rates', 60 ); // wp_cache_set( $currency, $rate, 'cryptopay-rates', $expire );
 			$result += $wpdb->query( $sql );
 
 		}
@@ -720,7 +720,7 @@ class CW_ExchangeRate_Processing {
 	 */
 	public function maybe_warn_admin( $used_method, $update_success, $prices, $time, $coin, $coin_fiat ) {
 
-		// Do not proceed if merchant disabled exchange rate warnings in CryptoWoo settings.
+		// Do not proceed if merchant disabled exchange rate warnings in CryptoPay settings.
 		if ( cw_get_option( 'cryptowoo_exchange_rate_warning' ) ) {
 			return false;
 		}
@@ -787,30 +787,30 @@ class CW_ExchangeRate_Processing {
 
 				$to       = get_option( 'admin_email' );
 				$blogname = get_bloginfo( 'name', 'raw' );
-				$subject  = sprintf( __( '%s: CryptoWoo exchange rate update errors', 'cryptowoo' ), $blogname );
+				$subject  = sprintf( __( '%s: CryptoPay exchange rate update errors', 'cryptopay' ), $blogname );
 
 				// $error_count = isset( $prices['error_stats']['error_count'] ) ? $prices['error_stats']['error_count'] : '%undefined%';
 				$date = isset( $prices['error_stats']['counter_start_date'] ) ? $prices['error_stats']['counter_start_date'] : date( 'd. M Y H:i:s' );
 
 				$db_actions_page = sprintf( '<a href="%1$s">%1$s</a><br>', admin_url( 'admin.php?page=cryptowoo_database_maintenance' ) );
 				$text            = __(
-					'Hello Admin,<br>CryptoWoo has detected %1$s error(s) since %2$s while updating the exchange rates via %3$s:<br>
+					'Hello Admin,<br>CryptoPay has detected %1$s error(s) since %2$s while updating the exchange rates via %3$s:<br>
                 Please log in at %4$s, check your settings, reset the error counter via the button on the database maintenance page, and try to update the rates manually.<br>
                 Generally, these errors may occur from time to time, but if the exchange rate update fails constantly, please select a different preferred exchange API.<br>%5$s',
-					'cryptowoo'
+					'cryptopay'
 				);
 				$message         = sprintf( $text, $rate_errors['error_count'], $date, $preferred_exchange, $blogname, $db_actions_page );
 
 				$text_2   = _(
-					'If you continue to receive this e-Mail after selecting another exchange rate API, please submit a ticket at http://cryptowoo.zendesk.com <br>
+					'If you continue to receive this e-Mail after selecting another exchange rate API, please submit a ticket at http://cryptopay.zendesk.com <br>
                 Preferred method: %s <br>Used method: %s<br>Update Data: <br>%s<br>
                 <br>Update status: %s<br>',
-					'cryptowoo'
+					'cryptopay'
 				);
 				$message .= sprintf( $text_2, $preferred_exchange, $used_method, $status, $update_success );
 
 				$headers = array(
-					"From: CryptoWoo Plugin < {
+					"From: CryptoPay Plugin < {
 	$to} > ",
 					'Content-Type: text/html; charset=UTF-8',
 				);
@@ -860,7 +860,7 @@ class CW_ExchangeRate_Processing {
 			}
 		}
 		if(!$result['is_valid']) {
-			file_put_contents(CW_LOG_DIR . 'cryptowoo-rate-error.log', date("Y-m-d H:i:s") . " ==Rate validation error==\n". print_r($result, true) . "\r\n", FILE_APPEND);
+			file_put_contents(CW_LOG_DIR . 'cryptopay-rate-error.log', date("Y-m-d H:i:s") . " ==Rate validation error==\n". print_r($result, true) . "\r\n", FILE_APPEND);
 		}
 		return $result['is_valid'];
 		*/
@@ -875,7 +875,7 @@ class CW_ExchangeRate_Processing {
 		global $wpdb;
 		$query = $this->get_exchange_rate_data();
 
-		$rates = __( '<div id="message" class="error fade"><p class="flash_message">No exchange rates found in database. Please update manually.</p></div>', 'cryptowoo' );
+		$rates = __( '<div id="message" class="error fade"><p class="flash_message">No exchange rates found in database. Please update manually.</p></div>', 'cryptopay' );
 
 		// $currencies = array();
 		if ( ! empty( $query ) ) {

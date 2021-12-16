@@ -76,7 +76,7 @@ Improved: Better logging in get_coin_price()
 Improved: Remove unused file
 Improved: Add filter to override payment page template path:
 
-  $custom_template = apply_filters('cw_payment_page_template_path', get_stylesheet_directory().'/cryptowoo/payment.php');
+  $custom_template = apply_filters('cw_payment_page_template_path', get_stylesheet_directory().'/cryptopay/payment.php');
 
 Improved: Add "connect wallet" button action to payment page:
 
@@ -111,7 +111,7 @@ Improved: Verify wp_nonce and use wc_order_key instead of payment address to get
 Improved: Remove redundant function check_receipt_callback()
 
 = 0.25.12 2020-08-31 =
-Feature: Checkout page currency select field styling options. Read more: https://www.cryptowoo.com/cryptowoo-release-0-25-12/
+Feature: Checkout page currency select field styling options. Read more: https://www.cryptopay.com/cryptopay-release-0-25-12/
 Fixed: Missing argument in filter cryptowoo_valid_order_statuses_for_payment
 Fixed: CW_OrderProcessing::decline_order(): quote_refresh, amount_error and address_error should redirect to checkout instead of an empty cart
 
@@ -130,7 +130,7 @@ Fixed: Unable to add payment addresses to address list in WordPress 5.5
 Fixed: Undefined index multiplier_$currency in CW_Address::get_wallet_config()
 Improved: Add support for WooCommerce Multi Currency switcher plugin (https://villatheme.com/extensions/woo-multi-currency/)
 Improved: Add order meta field "txids" to custom WP_Query vars
-Improved: Rearrange CryptoWoo > General settings section
+Improved: Rearrange CryptoPay > General settings section
 Improved: Add more CSS selectors to the payment page template
 Improved: Add filter to allow single address validation for arbitrary currencies in Redux validation callback
 Improved: Allow adding exchange rates for base currencies in cw_base_currencies filter
@@ -254,10 +254,10 @@ Fixed: Make sure the payment_currency selection is validated and updated on the 
 Fixed: Fix undefined index $wallet_config['fwd_address_key']
 
 = 0.24.1 2019-08-05 =
-Feature: Add "Timeout Action": Select the behavior of CryptoWoo when the Order Expiration Time runs out.
+Feature: Add "Timeout Action": Select the behavior of CryptoPay when the Order Expiration Time runs out.
 Feature: Add "Quote Refresh": Refresh the cryptocurrency order total after the time expired and let the customer try again.
 Fixed: Only autoload CW_Exchange classes if they exist or log critical error
-Fixed: Remove force update order action when payment method is not cryptowoo
+Fixed: Remove force update order action when payment method is not cryptopay
 Improved: Add filter "cw_api_fallback_needed" to catch failing processing APIs without defined fallback option
 
 = 0.24.0 2019-06-24 =
@@ -323,7 +323,7 @@ Improved: Add action "cw_display_extra_details_$payment_currency" to display ext
 Improved: Update cryptocurrency icons aw-cryptocoins
 Improved: Move payment currency dropdown above gateway description
 Improved: Add log entry and order note if the currency or order total changes
-Improved: Create CryptoWoo Admin Notice class
+Improved: Create CryptoPay Admin Notice class
 Improved: Rename payment_currency select field on checkout to cw_payment_currency to prevent conflicts with other gateways
 Improved: Replace occurrences of file_put_contents() with CW_AdminMain::cryptowoo_log_data()
 Improved: Update fontawesome icon font to 5.4.1
@@ -345,12 +345,12 @@ Improved: Add filter for custom exchange rates
 Improved: Refactor class CW_OrderProcessing()
 Improved: Honor Blockcypher API limits for confidence requests
 Improved: Better error handling in blockcypher_safe_remote_get()
-Improved: Better cryptowoo validate address filter
+Improved: Better cryptopay validate address filter
 Improved: Updated dependencies
 Improved: Dismissable "license inactive" notice
 Fixed: Do not consider RBF transactions a doublespend-attack but wait for at least one confirmation on any output to the payment address instead
 Fixed: Do not choke on Blockcypher tx outputs with null in address field
-Fixed: Disable WooCommerce "Hold Stock" order timeout feature if CryptoWoo expiration time is longer
+Fixed: Disable WooCommerce "Hold Stock" order timeout feature if CryptoPay expiration time is longer
 Fixed: Address validation: Keep $address if validation via BitWasp fails
 Fixed: get_transaction uses blockcypher_safe_remote_get() and returns proper result
 Fixed: Missing colon in payment amount info
@@ -411,7 +411,7 @@ Add filter for coin icon html output
 Add more decimals if fiat currency rate is < 0.05
 
 = 0.20.2 2017-11-17 =
-Feature: Allow custom payment page templates: Copy the file wp-content/plugins/cryptowoo/includes/payment.php to wp-content/themes/YOURTHEME/cryptowoo/payment.php to modify it.
+Feature: Allow custom payment page templates: Copy the file wp-content/plugins/cryptopay/includes/payment.php to wp-content/themes/YOURTHEME/cryptopay/payment.php to modify it.
 Improved: Redirect to "order received" page if the WC order status is not "pending payment"
 Improved: Add order note on doublespend/RBF and keep the order open instead of just cancelling it.
 Improved: Remove unneeded file
@@ -510,7 +510,7 @@ Improved: WooCommerce 3.0 compatibility update
 
 = 0.17.1 = 2017-04-13
 Feature: Add payment method to searchable fields on WooCommerce order overview
-Improved: Remove "CryptoWoo Payments" page
+Improved: Remove "CryptoPay Payments" page
 
 = 0.17.0 = 2017-04-12
     Feature: Add CoinDesk Bitcoin Price Index exchange rates
@@ -609,7 +609,7 @@ Please visit the settings page and click on “Save Changes” after updating th
     Improved: Calculation of amount received for confirmed transactions
     Improved: Bitcoinaverage API v2 compatibility, cache rates for ~10 minutes to stay below request limits
     Improved: Tweak data lag color on database actions page
-    Improved: Display orders with status “processing” on CryptoWoo Payments admin page
+    Improved: Display orders with status “processing” on CryptoPay Payments admin page
     Fixed: Order prioritization not using prioritized array
     Fixed: Custom processing API validation not displaying WP_Error message
     Fixed: Pricing table not honoring multiplier
@@ -622,14 +622,14 @@ Please visit the settings page and click on “Save Changes” after updating th
 = 0.16.2 = 2016-10-13
 
 This update contains breaking changes!
-After updating the plugin, go to the CryptoWoo settings page (/wp-admin/admin.php?page=cryptowoo-options), refresh your browser cache (ctrl + F5), and make sure all settings are correct.
+After updating the plugin, go to the CryptoPay settings page (/wp-admin/admin.php?page=cryptopay-options), refresh your browser cache (ctrl + F5), and make sure all settings are correct.
 
 Please click on “Save Changes”, regardless if you modified any setting or not.
 
     Feature: Hide exchange rate provider on checkout page
     Feature: Hide countdown and progress bar on payment page
     Feature: Add Bitstamp, Coinbase, and Blockchain.info exchange rates
-    Feature: New action hook ‘cryptowoo_new_order’ that fires when a new CryptoWoo order is submitted.
+    Feature: New action hook ‘cryptowoo_new_order’ that fires when a new CryptoPay order is submitted.
     Improved: Allow maximum order expiration time of 72 hours
     Improved: Ignore slight underpayments
     Improved: Select underpayment notice trigger event

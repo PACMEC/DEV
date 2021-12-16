@@ -1,13 +1,11 @@
 <?php
 /**
- * Plugin Name: WPBakery Page Builder
- * Plugin URI: http://wpbakery.com
- * Description: Drag and drop page builder for WordPress. Take full control over your WordPress site, build any layout you can imagine – no programming knowledge required.
- * Version: 6.5.0
- * Author: Michael M - WPBakery.com
- * Author URI: http://wpbakery.com
- *
- * @package WPBakery Page Builder
+ * Plugin Name: Creador de páginas - JSComposer
+ * Plugin URI: #
+ * Description: Constructor de páginas de arrastrar y soltar para PACMEC. Tome el control total de su sitio de PACMEC, cree cualquier diseño que pueda imaginar, sin necesidad de conocimientos de programación.
+ * Version: 1.0.0
+ * Author: PACMEC
+ * Author URI: #
  */
 
 // don't load directly

@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }// Exit if accessed directly
 
 /**
- * CryptoWoo Base Block Explorer API Processing Class
+ * CryptoPay Base Block Explorer API Processing Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    OrderProcessing
  * @subpackage BlockExplorerAPI
- * @author     CryptoWoo AS
+ * @author     CryptoPay AS
  *
  * TODO: API limits
  */
@@ -41,7 +41,7 @@ abstract class CW_Block_Explorer_Base {
 
 	/**
 	 *
-	 * Custom base URL (Set before the custom base url has been stored in CryptoWoo options or to override the url).
+	 * Custom base URL (Set before the custom base url has been stored in CryptoPay options or to override the url).
 	 *
 	 * @var string
 	 */
@@ -349,7 +349,7 @@ abstract class CW_Block_Explorer_Base {
 
 	/**
 	 *
-	 * If api has an api key in CryptoWoo settings.
+	 * If api has an api key in CryptoPay settings.
 	 *
 	 * @return bool
 	 */
@@ -816,7 +816,7 @@ abstract class CW_Block_Explorer_Base {
 	/**
 	 *
 	 * Override base URL (custom URL).
-	 * Set before the custom base URL has been stored in CryptoWoo options or to override the url.
+	 * Set before the custom base URL has been stored in CryptoPay options or to override the url.
 	 *
 	 * @param string $custom_api_url The custom URL to use for order processing.
 	 *

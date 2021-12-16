@@ -1,9 +1,9 @@
-# Copyright (C) CryptoWoo AS
-# This file is distributed under the same license as the CryptoWoo plugin.
+# Copyright (C) CryptoPay AS
+# This file is distributed under the same license as the CryptoPay plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: CryptoWoo 0.25.2\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cryptowoo\n"
+"Project-Id-Version: CryptoPay 0.25.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cryptopay\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,15 +12,15 @@ msgstr ""
 "POT-Creation-Date: 2020-04-11T08:28:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.1.0\n"
-"X-Domain: cryptowoo\n"
+"X-Domain: cryptopay\n"
 
 #. Plugin Name of the plugin
 #: admin/options-init.php:848
-msgid "CryptoWoo"
+msgid "CryptoPay"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "https://www.cryptowoo.com/"
+msgid "https://www.cryptopay.com/"
 msgstr ""
 
 #. Description of the plugin
@@ -28,11 +28,11 @@ msgid "Digital Currency Payment Gateway for WooCommerce"
 msgstr ""
 
 #. Author of the plugin
-msgid "CryptoWoo AS"
+msgid "CryptoPay AS"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://www.cryptowoo.com"
+msgid "https://www.cryptopay.com"
 msgstr ""
 
 #: admin/class.cw-admin-notice.php:190
@@ -154,7 +154,7 @@ msgid "Database Maintenance"
 msgstr ""
 
 #: admin/options-init.php:842
-msgid "CryptoWoo Options"
+msgid "CryptoPay Options"
 msgstr ""
 
 #: admin/options-init.php:973
@@ -222,7 +222,7 @@ msgid "Timeout Action"
 msgstr ""
 
 #: admin/options-init.php:1036
-msgid "Select the behavior of CryptoWoo when the Order Expiration Time runs out."
+msgid "Select the behavior of CryptoPay when the Order Expiration Time runs out."
 msgstr ""
 
 #: admin/options-init.php:1038
@@ -234,7 +234,7 @@ msgid "Quote Refresh: Refresh the cryptocurrency order total and let the custome
 msgstr ""
 
 #: admin/options-init.php:1043
-msgid "CryptoWoo will set all orders to this status after they time out."
+msgid "CryptoPay will set all orders to this status after they time out."
 msgstr ""
 
 #: admin/options-init.php:1049
@@ -466,7 +466,7 @@ msgstr ""
 
 #: admin/options-init.php:1304
 msgid ""
-"<strong>Enable:</strong> Use only one instance of CryptoWoo settings for your whole multisite network.<br>\n"
+"<strong>Enable:</strong> Use only one instance of CryptoPay settings for your whole multisite network.<br>\n"
 "                              <strong>Disable:</strong> The plugin settings for each blog have to be configured seperately."
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr ""
 
 #: admin/options-init.php:1316
 msgid ""
-"To enable network wide CryptoWoo settings, follow the instructions at %1$s"
+"To enable network wide CryptoPay settings, follow the instructions at %1$s"
 msgstr ""
 
 #: admin/options-init.php:1326
@@ -530,16 +530,16 @@ msgstr ""
 #: admin/options-init.php:1423
 msgid ""
 "<p>Hierarchical deterministic (\"<a href=\"https://bitcoin.org/en/glossary/hd-protocol\" target=\"_blank\" title=\"Bitcoin.org Glossary: HD Protocol\">HD</a>\") wallets enable you to receive payments directly to addresses under your control without relying on any third party service.\n"
-"                            <br>You need to create an \"Extended Public Key\" with a <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki\" target=\"_blank\">BIP32</a> or <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki\" target=\"_blank\">BIP44</a> compatible client to use this feature. Check out the <a href=\"http://www.cryptowoo.com/hd-wallet-tutorials?utm_source=config\" target=\"_blank\" title=\"HD Wallet Tutorials\">HD wallet tutorial section</a> on our website to learn how to make the most out of CryptoWoo.</p>\n"
+"                            <br>You need to create an \"Extended Public Key\" with a <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki\" target=\"_blank\">BIP32</a> or <a href=\"https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki\" target=\"_blank\">BIP44</a> compatible client to use this feature. Check out the <a href=\"http://www.cryptopay.com/hd-wallet-tutorials?utm_source=config\" target=\"_blank\" title=\"HD Wallet Tutorials\">HD wallet tutorial section</a> on our website to learn how to make the most out of CryptoPay.</p>\n"
 "                                <table>\n"
 "                                    <tr><th>Compatible clients</th></tr>\n"
 "                                    <tr>\n"
 "                                        <td>Bitcoin</td>\n"
-"                                        <td><a href=\"https://electrum.org/\" title=\"Electrum\" target=\"_blank\">Electrum</a> | <a title=\"Mycelium Wallet\" href=\"https://mycelium.com/mycelium-wallet.html\" target=\"_blank\">Mycelium Wallet</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptowoo.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
+"                                        <td><a href=\"https://electrum.org/\" title=\"Electrum\" target=\"_blank\">Electrum</a> | <a title=\"Mycelium Wallet\" href=\"https://mycelium.com/mycelium-wallet.html\" target=\"_blank\">Mycelium Wallet</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptopay.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
 "                                    </tr>\n"
 "                                    <tr>\n"
 "                                        <td>Litecoin</td>\n"
-"                                        <td><a href=\"https://electrum-ltc.org/\" title=\"Electrum for Litecoin\" target=\"_blank\">Electrum-LTC</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptowoo.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://coinomi.com/\" title=\"Coinomi\" target=\"_blank\">Coinomi</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
+"                                        <td><a href=\"https://electrum-ltc.org/\" title=\"Electrum for Litecoin\" target=\"_blank\">Electrum-LTC</a> | <a href=\"https://trezor.io/\" target=\"_blank\">TREZOR</a> | <a href=\"https://www.cryptopay.com/ledger-wallet\" target=\"_blank\">Ledger Wallet</a> | <a href=\"https://coinomi.com/\" title=\"Coinomi\" target=\"_blank\">Coinomi</a> | <a href=\"https://github.com/dcpos/bip39\" target=\"_blank\">BIP39 Tool</a></td>\n"
 "                                    </tr>\n"
 "                                    <tr>\n"
 "                                        <td>Dogecoin</td>\n"
@@ -553,7 +553,7 @@ msgid ""
 msgstr ""
 
 #: admin/options-init.php:1452
-msgid "You need the CryptoWoo HD Wallet Add-on to use this feature. %sGet it now!%s"
+msgid "You need the CryptoPay HD Wallet Add-on to use this feature. %sGet it now!%s"
 msgstr ""
 
 #: admin/options-init.php:1460
@@ -565,11 +565,11 @@ msgid ""
 "<p>Use the Electrum daemon JSON-RPC interface to look up transactions or to create payment requests in your Electrum wallet.\n"
 "                  You have to configure your client before using this feature.\n"
 "                  Refer to the <a href=\"http://docs.electrum.org/en/latest/merchant.html#requirements\" target=\"_blank\">Electrum Documentation</a> for more information.</p>\n"
-"                  <p><span class=\"cryptowoo-warning\"><strong>Please note:</strong> This is an experimental feature. Proceed with caution!</span></p>"
+"                  <p><span class=\"cryptopay-warning\"><strong>Please note:</strong> This is an experimental feature. Proceed with caution!</span></p>"
 msgstr ""
 
 #: admin/options-init.php:1474
-msgid "You need the CryptoWoo Electrum Daemon Add-on to use this feature. %sGet it now!%s"
+msgid "You need the CryptoPay Electrum Daemon Add-on to use this feature. %sGet it now!%s"
 msgstr ""
 
 #: admin/options-init.php:1481
@@ -606,7 +606,7 @@ msgstr ""
 
 #: admin/options-init.php:1545
 msgid ""
-"CryptoWoo will archive up to 100 addresses with a zero balance once every 24 hours.\n"
+"CryptoPay will archive up to 100 addresses with a zero balance once every 24 hours.\n"
 "                                        <br>Archiving of Block.io wallet addresses helps you control account bloat and enhances the operational security by allowing you to move coins to new addresses without clogging your API call responses."
 msgstr ""
 
@@ -804,7 +804,7 @@ msgstr ""
 
 #: admin/options-init.php:2001
 msgid ""
-"To mitigate the risk of unconfirmed transactions, CryptoWoo only accepts transactions with a \"Transaction Confidence\" of or above the value set below. This rating is calculated by the API provider.\n"
+"To mitigate the risk of unconfirmed transactions, CryptoPay only accepts transactions with a \"Transaction Confidence\" of or above the value set below. This rating is calculated by the API provider.\n"
 "                            Transaction Confidence is basically a rating for the network's belief in the probability that a specific transaction will be included in the next block that is mined. More details can be found in the documentation of the respective providers BlockCypher or Block.io.\n"
 "                            If a double spend is detected for an unconfirmed transaction, its confidence rating falls to 0 and the order status changes to \"failed\"."
 msgstr ""
@@ -888,7 +888,7 @@ msgstr ""
 #: admin/options-init.php:2143
 #: admin/options-init.php:2200
 #: admin/options-init.php:2235
-msgid "If you use CryptoWoo with a Block.io account, we recommend you also select Block.io here."
+msgid "If you use CryptoPay with a Block.io account, we recommend you also select Block.io here."
 msgstr ""
 
 #: admin/options-init.php:2158
@@ -1186,7 +1186,7 @@ msgstr ""
 
 #: admin/options-init.php:2530
 msgid ""
-"If there is a problem with the preferred exchange's API, CryptoWoo uses the lowest exchange rate provided by chain.so\n"
+"If there is a problem with the preferred exchange's API, CryptoPay uses the lowest exchange rate provided by chain.so\n"
 "                                        (the rate that results in the highest amount of digital currency for the given price).\n"
 "                                        Additionally, if an error or has been detected, the plugin notifies the administrator by sending an e-mail to %s%s%s"
 msgstr ""
@@ -1294,11 +1294,11 @@ msgid "<p>Just install and enable the plugin and enable the option below to add 
 msgstr ""
 
 #: admin/options-init.php:2818
-msgid "Add CryptoWoo Rates to WooCommerce Currency Switcher"
+msgid "Add CryptoPay Rates to WooCommerce Currency Switcher"
 msgstr ""
 
 #: admin/options-init.php:2819
-msgid "CryptoWoo uses the rates of the \"Preferred Exchange\" provider to calculate the order amount in cryptocurrency. Enable this option to add the CryptoWoo rates to the WooCommerce Currency Switcher plugin."
+msgid "CryptoPay uses the rates of the \"Preferred Exchange\" provider to calculate the order amount in cryptocurrency. Enable this option to add the CryptoPay rates to the WooCommerce Currency Switcher plugin."
 msgstr ""
 
 #: admin/options-init.php:2820
@@ -1326,7 +1326,7 @@ msgid "Normally the customer has to select the payment currency in the checkout.
 msgstr ""
 
 #: admin/options-init.php:2837
-msgid "Enable to pre-select the CryptoWoo payment currency if the selected currency in the switcher is a cryptocurrency."
+msgid "Enable to pre-select the CryptoPay payment currency if the selected currency in the switcher is a cryptocurrency."
 msgstr ""
 
 #: admin/options-init.php:2883
@@ -1512,7 +1512,7 @@ msgid "Removing the tables will not have an influence on the payment details for
 msgstr ""
 
 #: admin/options-init.php:3115
-msgid "Keep CryptoWoo <strong>tables</strong> when uninstalling the plugin."
+msgid "Keep CryptoPay <strong>tables</strong> when uninstalling the plugin."
 msgstr ""
 
 #: admin/options-init.php:3121
@@ -1520,7 +1520,7 @@ msgid "Keep Settings"
 msgstr ""
 
 #: admin/options-init.php:3122
-msgid "Keep CryptoWoo <strong>settings</strong> when uninstalling the plugin."
+msgid "Keep CryptoPay <strong>settings</strong> when uninstalling the plugin."
 msgstr ""
 
 #: admin/error-charts.php:151
@@ -1532,7 +1532,7 @@ msgid "No data available. Enable the error visualization on the \"Debugging\" ta
 msgstr ""
 
 #: admin/admin-menus.php:19
-msgid "View CryptoWoo Installation Tutorial"
+msgid "View CryptoPay Installation Tutorial"
 msgstr ""
 
 #: admin/admin-menus.php:19
@@ -1560,7 +1560,7 @@ msgid "blockchain"
 msgstr ""
 
 #: admin/class-cw-versions.php:50
-msgid "%1$s%2$s has been disabled!%3$s Please install the latest version of the %2$s and re-enable the add-on on the WordPress plugins overview.%4$sNote: You will lose the settings for this add-on if you save the CryptoWoo plugin settings page while the add-on is disabled."
+msgid "%1$s%2$s has been disabled!%3$s Please install the latest version of the %2$s and re-enable the add-on on the WordPress plugins overview.%4$sNote: You will lose the settings for this add-on if you save the CryptoPay plugin settings page while the add-on is disabled."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:127
@@ -1610,40 +1610,40 @@ msgstr ""
 
 #: admin/class-cw-adminmain.php:680
 #: admin/class-cw-adminmain.php:701
-msgid "Enable CryptoWoo Payment Gateway"
+msgid "Enable CryptoPay Payment Gateway"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:685
-msgid "<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce has been deactivated or is not installed.<br>Go to the Plugins menu and make sure that the WooCommerce plugin is installed and activated. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway."
+msgid "<b>CryptoPay payment gateway has been disabled!</b> It seems like WooCommerce has been deactivated or is not installed.<br>Go to the Plugins menu and make sure that the WooCommerce plugin is installed and activated. Then visit the CryptoPay checkout settings to re-enable the CryptoPay payment gateway."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:699
-msgid "CryptoWoo payment gateway has been disabled!"
+msgid "CryptoPay payment gateway has been disabled!"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:700
-msgid "Go to the CryptoWoo checkout settings to make sure the settings are correct and re-enable the CryptoWoo payment gateway."
+msgid "Go to the CryptoPay checkout settings to make sure the settings are correct and re-enable the CryptoPay payment gateway."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:701
 #: admin/class-cw-adminmain.php:710
-msgid "Go to CryptoWoo Checkout Settings"
+msgid "Go to CryptoPay Checkout Settings"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:713
-msgid "<b>CryptoWoo can't find the integrity check file!</b><br>Go to the CryptoWoo checkout settings and click the \"Save Changes\" button to re-create it."
+msgid "<b>CryptoPay can't find the integrity check file!</b><br>Go to the CryptoPay checkout settings and click the \"Save Changes\" button to re-create it."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:738
-msgid "<b>CryptoWoo has detected %s exchange rate update errors since %s.</b><br>Go to the CryptoWoo Database Maintenance page, reset the error counter and try to update the rates manually.<br>Generally, these errors may occur from time to time and the fallback solution will catch them, but if the exchange rate update constantly fails, please select a different Preferred Exchange API on the options page.<p>%s</p>"
+msgid "<b>CryptoPay has detected %s exchange rate update errors since %s.</b><br>Go to the CryptoPay Database Maintenance page, reset the error counter and try to update the rates manually.<br>Generally, these errors may occur from time to time and the fallback solution will catch them, but if the exchange rate update constantly fails, please select a different Preferred Exchange API on the options page.<p>%s</p>"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:754
-msgid "<b>CryptoWoo payment gateway has been disabled!</b> It seems like WooCommerce is not installed.<br>Click here to install and activate the WooCommerce plugin. Then visit the CryptoWoo checkout settings to re-enable the CryptoWoo payment gateway."
+msgid "<b>CryptoPay payment gateway has been disabled!</b> It seems like WooCommerce is not installed.<br>Click here to install and activate the WooCommerce plugin. Then visit the CryptoPay checkout settings to re-enable the CryptoPay payment gateway."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:773
-msgid "<h4>Your CryptoWoo License Key will expire on <strong>%s</strong></h4> Renew your license now for a discount!<br>Your discount code: <strong>%s</strong>"
+msgid "<h4>Your CryptoPay License Key will expire on <strong>%s</strong></h4> Renew your license now for a discount!<br>Your discount code: <strong>%s</strong>"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:793
@@ -1651,7 +1651,7 @@ msgid "%1$sGap limit may have been reached in your wallet for cryptocurrencies: 
 msgstr ""
 
 #: admin/class-cw-adminmain.php:818
-msgid "Thanks for updating CryptoWoo! Please verify that your settings are correct and click the \"Save settings\" button."
+msgid "Thanks for updating CryptoPay! Please verify that your settings are correct and click the \"Save settings\" button."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:837
@@ -1663,7 +1663,7 @@ msgid "Your current <b>PHP Version is %s</b>.<br>"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:853
-msgid "%sYou need to have at least PHP version 5.6 with <a href=\"http://php.net/manual/en/gmp.installation.php\" target=\"_blank\">GMP</a>, and <a href=\"http://php.net/manual/en/curl.installation.php\" target=\"_blank\">cURL</a> extensions enabled to use CryptoWoo. <a href=\"https://www.cryptowoo.com/enable-required-php-extensions/?ref=cw_ext_error\" target=\"_blank\">More Info</a>"
+msgid "%sYou need to have at least PHP version 5.6 with <a href=\"http://php.net/manual/en/gmp.installation.php\" target=\"_blank\">GMP</a>, and <a href=\"http://php.net/manual/en/curl.installation.php\" target=\"_blank\">cURL</a> extensions enabled to use CryptoPay. <a href=\"https://www.cryptopay.com/enable-required-php-extensions/?ref=cw_ext_error\" target=\"_blank\">More Info</a>"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:866
@@ -1671,7 +1671,7 @@ msgid "%s%s%sCryptoWoo settings page%s"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:867
-msgid "%sImportant notice:%s During this CryptoWoo update we had to set the %s\"Payment Processing\" > \"Order Expiration Time\"%s back to the default value.%sIf you customized this setting before the update, please go to the %s and set it again."
+msgid "%sImportant notice:%s During this CryptoPay update we had to set the %s\"Payment Processing\" > \"Order Expiration Time\"%s back to the default value.%sIf you customized this setting before the update, please go to the %s and set it again."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:873
@@ -1683,7 +1683,7 @@ msgid "%s%s payment processing configuration error%s"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:900
-msgid "Go to \"Payment Processing\" > \"Block Chain Access\" and make sure you have selected a \"Processing API\" provider. Otherwise CryptoWoo can not look up transactions in the block chain."
+msgid "Go to \"Payment Processing\" > \"Block Chain Access\" and make sure you have selected a \"Processing API\" provider. Otherwise CryptoPay can not look up transactions in the block chain."
 msgstr ""
 
 #: admin/class-cw-adminmain.php:933
@@ -1691,15 +1691,15 @@ msgid "Unauthorized changes detected"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:936
-msgid "Hello Admin,%s on %s, CryptoWoo has detected an unauthorized change of your settings at %s.%s"
+msgid "Hello Admin,%s on %s, CryptoPay has detected an unauthorized change of your settings at %s.%s"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:939
-msgid "The CryptoWoo payment gateway has been disabled. From now on, open WooCommerce orders using CryptoWoo will not be completed and the payment method will not be available for new orders.%sPLEASE LOG IN AT %s TO CHANGE YOUR PASSWORDS AND API KEYS AS SOON AS POSSIBLE!%sSOMEONE ELSE MAY HAVE ACCESS TO THEM.%sValidation result:%s%s"
+msgid "The CryptoPay payment gateway has been disabled. From now on, open WooCommerce orders using CryptoPay will not be completed and the payment method will not be available for new orders.%sPLEASE LOG IN AT %s TO CHANGE YOUR PASSWORDS AND API KEYS AS SOON AS POSSIBLE!%sSOMEONE ELSE MAY HAVE ACCESS TO THEM.%sValidation result:%s%s"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:941
-msgid "If you need help, please submit a ticket at http://cryptowoo.zendesk.com"
+msgid "If you need help, please submit a ticket at http://cryptopay.zendesk.com"
 msgstr ""
 
 #: admin/class-cw-adminmain.php:1025
@@ -1755,7 +1755,7 @@ msgid "There was a problem inserting the live data. Please try again."
 msgstr ""
 
 #: admin/database-maintenance.php:21
-msgid "CryptoWoo Database Maintenance"
+msgid "CryptoPay Database Maintenance"
 msgstr ""
 
 #: admin/database-maintenance.php:23
@@ -1832,7 +1832,7 @@ msgid "Refund Address"
 msgstr ""
 
 #: includes/class.formatting.php:504
-msgid "powered by CryptoWoo"
+msgid "powered by CryptoPay"
 msgstr ""
 
 #: includes/class.formatting.php:516
@@ -2022,7 +2022,7 @@ msgid "I have sent the payment - please process my order"
 msgstr ""
 
 #: includes/CW_AddressList.php:61
-msgid "Only %1$s %2$s addresses left in CryptoWoo address list. Please log in at %3$s and add new addresses to the list. Sent from %4$s"
+msgid "Only %1$s %2$s addresses left in CryptoPay address list. Please log in at %3$s and add new addresses to the list. Sent from %4$s"
 msgstr ""
 
 #: includes/processing/class.insight.php:200
@@ -2056,7 +2056,7 @@ msgid "Payment timeout - "
 msgstr ""
 
 #: includes/class.order-processing.php:1056
-msgid "CryptoWoo payment failed - Percentage of order paid: %s%s. Manual interaction needed."
+msgid "CryptoPay payment failed - Percentage of order paid: %s%s. Manual interaction needed."
 msgstr ""
 
 #: includes/class.order-processing.php:1078
@@ -2072,7 +2072,7 @@ msgid "Doublespend detected - "
 msgstr ""
 
 #: includes/class.order-processing.php:1130
-msgid "CryptoWoo detected a replace-by-fee or doublespend attempt. Old txid: %s"
+msgid "CryptoPay detected a replace-by-fee or doublespend attempt. Old txid: %s"
 msgstr ""
 
 #: includes/class.order-processing.php:1136
@@ -2165,7 +2165,7 @@ msgid " - Payment processing API error"
 msgstr ""
 
 #: includes/class.order-processing.php:1804
-msgid "CryptoWoo has detected an issue during payment processing%s %s"
+msgid "CryptoPay has detected an issue during payment processing%s %s"
 msgstr ""
 
 #: includes/class.order-processing.php:1823
@@ -2189,12 +2189,12 @@ msgid "Payment status for order was force updated.%s"
 msgstr ""
 
 #: includes/pricing/class.exchange-rate-processing.php:839
-msgid "%s: CryptoWoo exchange rate update errors"
+msgid "%s: CryptoPay exchange rate update errors"
 msgstr ""
 
 #: includes/pricing/class.exchange-rate-processing.php:845
 msgid ""
-"Hello Admin,<br>CryptoWoo has detected %s error(s) since %s while updating the exchange rates via %s:<br>\n"
+"Hello Admin,<br>CryptoPay has detected %s error(s) since %s while updating the exchange rates via %s:<br>\n"
 "                Please log in at %s, check your settings, reset the error counter via the button on the database maintenance page, and try to update the rates manually.<br>\n"
 "                Generally, these errors may occur from time to time, but if the exchange rate update fails constantly, please select a different preferred exchange API.<br>%s"
 msgstr ""
@@ -2211,7 +2211,7 @@ msgstr ""
 msgid ""
 "All subsequent errors will be logged to %s until you log in and reset the error counter.<br>\n"
 "                If the manual update fails try to select a different exchange rate API.<br>\n"
-"                If you continue to receive this e-Mail after selecting another exchange rate API, please submit a ticket at http://cryptowoo.zendesk.com <br>\n"
+"                If you continue to receive this e-Mail after selecting another exchange rate API, please submit a ticket at http://cryptopay.zendesk.com <br>\n"
 "                Preferred method: %s <br>Used method: %s<br>Update Data: <br>%s<br>\n"
 "                <br>Update status: %s<br>"
 msgstr ""

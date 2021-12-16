@@ -1,8 +1,8 @@
 <?php
 /**
- * CryptoWoo Admin Notice class
+ * CryptoPay Admin Notice class
  *
- * @package CryptoWoo
+ * @package CryptoPay
  * @deprecated Use class-cw-admin-notice.php instead
  */
 

@@ -31,8 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Author: BitcoinWay
  * URI: http://www.bitcoinway.com/
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage ExchangeRates
  * @author     DRDoGE
  * @todo       refactor: Remove backward compatibility

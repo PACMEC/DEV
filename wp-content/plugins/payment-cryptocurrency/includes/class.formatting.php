@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WooCommerce template modifications and their processing functions
  *
- * @category   CryptoWoo
- * @package    CryptoWoo
+ * @category   CryptoPay
+ * @package    CryptoPay
  * @subpackage Address
  */
 class CW_Formatting {
@@ -80,7 +80,7 @@ class CW_Formatting {
 		$lc_currency = strtolower( $currency );
 		if ( $currency === 'BLK' ) {
 			$url = "https://chainz.cryptoid.info/blk/search.dws?q={$address}";
-			return $format ? sprintf( '<a href="%s" title="%s" target="_blank">%s</a>', $url, esc_html__( 'View address in block explorer', 'cryptowoo' ), $address ) : $url;
+			return $format ? sprintf( '<a href="%s" title="%s" target="_blank">%s</a>', $url, esc_html__( 'View address in block explorer', 'cryptopay' ), $address ) : $url;
 			// return "https://bitinfocharts.com/blackcoin/address/{$address}";
 		}
 
@@ -150,7 +150,7 @@ class CW_Formatting {
 					$wc_currencies = cw_get_woocommerce_currencies();
 					// Prepare network slug
 					$network = isset( $wc_currencies[ $currency ] ) ? str_replace( ' ', '-', strtolower( $wc_currencies[ $currency ] ) ) : $currency;
-					$url     = "https://blockchair.com/{$network}/address/{$address}?from=cryptowoo";
+					$url     = "https://blockchair.com/{$network}/address/{$address}?from=cryptopay";
 				}
 				break;
 		}
@@ -160,7 +160,7 @@ class CW_Formatting {
 			$url    = $address;
 			$format = false;
 		}
-		return $format ? sprintf( '<a href="%s" title="%s" target="_blank">%s</a>', $url, esc_html__( 'View address in block explorer', 'cryptowoo' ), $address ) : $url;
+		return $format ? sprintf( '<a href="%s" title="%s" target="_blank">%s</a>', $url, esc_html__( 'View address in block explorer', 'cryptopay' ), $address ) : $url;
 	}
 
 	/**
@@ -229,7 +229,7 @@ class CW_Formatting {
 			// Make currency unavailable on checkout if there are no rates. Keep for 30 seconds.
 			set_transient( 'cryptowoo_norates', $norates, 30 ); // TODO tweak transient time
 			if ( ! count( $rates ) ) {
-				$message = esc_html__( 'Exchange rates not found in database. Please refresh this page.', 'cryptowoo' );
+				$message = esc_html__( 'Exchange rates not found in database. Please refresh this page.', 'cryptopay' );
 			}
 		} else {
 			// Clear transient if we have rates
@@ -324,7 +324,7 @@ class CW_Formatting {
 			} else {
 				// Maybe add multiplier discount info
 				if ( $multiplier < 1 && cw_get_option( 'show_discounted_rate' ) ) {
-					$multiplier_discount_html = sprintf( __( '%1$s(discounted %2$s%3$s)%4$s', 'cryptowoo' ), '<span class="discountinfo cw-noselect">', number_format( ( 1 - $multiplier ) * 100, 0 ), '%', '</span>' );
+					$multiplier_discount_html = sprintf( __( '%1$s(discounted %2$s%3$s)%4$s', 'cryptopay' ), '<span class="discountinfo cw-noselect">', number_format( ( 1 - $multiplier ) * 100, 0 ), '%', '</span>' );
 				} else {
 					$multiplier_discount_html = '';
 				}
@@ -521,7 +521,7 @@ class CW_Formatting {
 		$default_payment_currency = '';
 		if ( count( $currencies ) > 1 ) {
 			if ( ( cw_get_option( 'default_payment_currency' ) === 'disabled' || $currencies === array() || ! isset( $currencies[ cw_get_option( 'default_payment_currency' ) ] ) ) ) {
-				$preselected['please_choose'] = esc_html__( 'Please select a currency', 'cryptowoo' );
+				$preselected['please_choose'] = esc_html__( 'Please select a currency', 'cryptopay' );
 			} else {
 				$default_payment_currency                 = cw_get_option( 'default_payment_currency' );
 				$preselected[ $default_payment_currency ] = $currencies[ $default_payment_currency ];
@@ -546,7 +546,7 @@ class CW_Formatting {
 			array(
 				'type'     => 'select',
 				'class'    => array( sprintf( 'payment-currency-select form-row-full%s', $hide ) ),
-				'label'    => esc_html__( 'Payment Currency', 'cryptowoo' ),
+				'label'    => esc_html__( 'Payment Currency', 'cryptopay' ),
 				'required' => true,
 				'options'  => $currencies,
 			)
@@ -575,7 +575,7 @@ class CW_Formatting {
 				array(
 					'type'        => 'text',
 					'class'       => array( 'refund-address form-row-full' ),
-					'label'       => esc_html__( 'Refund Address', 'cryptowoo' ),
+					'label'       => esc_html__( 'Refund Address', 'cryptopay' ),
 					'required'    => $required,
 					'placeholder' => '',
 					'clear'       => true,
@@ -583,8 +583,8 @@ class CW_Formatting {
 			);
 		}
 		if ( cw_get_option( 'display_checkout_branding' ) ) {
-			$cryptowoo_logo = self::get_coin_icon( 'cryptowoo', 'small' );
-			echo wp_kses_post( sprintf( '<p class="form-row form-row-full"><div class="cw-branding cryptowoo-smalltext"><a href="%s" class="about-cryptowoo" target="_blank" title="%s">%s</a></div></p>', esc_url( 'https://www.cryptowoo.com/' ), esc_html__( 'powered by CryptoWoo', 'cryptowoo' ), $cryptowoo_logo ) );
+			$cryptowoo_logo = self::get_coin_icon( 'cryptopay', 'small' );
+			echo wp_kses_post( sprintf( '<p class="form-row form-row-full"><div class="cw-branding cryptopay-smalltext"><a href="%s" class="about-cryptopay" target="_blank" title="%s">%s</a></div></p>', esc_url( 'https://www.cryptopay.com/' ), esc_html__( 'powered by CryptoPay', 'cryptopay' ), $cryptowoo_logo ) );
 		}
 		echo '</div>';
 	}
@@ -596,15 +596,15 @@ class CW_Formatting {
 		// Check if set, if its not set add an error.
 		if ( isset( $_POST['cw_payment_currency'] ) && $_POST['payment_method'] === CW_PAYMENT_METHOD_ID ) {
 			if ( $_POST['cw_payment_currency'] === 'please_choose' ) {
-				wc_add_notice( esc_html__( 'Please select your payment currency.', 'cryptowoo' ), 'error' );
+				wc_add_notice( esc_html__( 'Please select your payment currency.', 'cryptopay' ), 'error' );
 			}
 			// Is an address required or filled out?
 			if ( isset( $_POST['refund_address'] ) ) {
 				$validate = new CW_Validate();
 				if ( empty( $_POST['refund_address'] ) && cw_get_option( 'collect_refund_address' ) === 'required' ) {
-					wc_add_notice( esc_html__( 'Please enter a refund address.', 'cryptowoo' ), 'error' );
+					wc_add_notice( esc_html__( 'Please enter a refund address.', 'cryptopay' ), 'error' );
 				} elseif ( ! empty( $_POST['refund_address'] ) && ! $validate->offline_validate_address( sanitize_text_field( wp_unslash( $_POST['refund_address'] ) ), sanitize_text_field( wp_unslash( $_POST['cw_payment_currency'] ) ) ) ) {
-					wc_add_notice( esc_html__( 'Your refund address seems to be invalid. Make sure you copy and paste the whole address.', 'cryptowoo' ), 'error' );
+					wc_add_notice( esc_html__( 'Your refund address seems to be invalid. Make sure you copy and paste the whole address.', 'cryptopay' ), 'error' );
 				}
 			}
 		}
@@ -724,7 +724,7 @@ class CW_Formatting {
 
 		if ( ! $order->is_paid() ) {
 			if ( $timeout === 4 ) {
-				$txnreference = esc_html__( 'The price quote for your order has expired. Please click the PAY button below to get a new quote.', 'cryptowoo' );
+				$txnreference = esc_html__( 'The price quote for your order has expired. Please click the PAY button below to get a new quote.', 'cryptopay' );
 				wc_print_notice( $txnreference, 'error' );
 			} elseif ( $timeout === 1 ) {
 
@@ -743,22 +743,22 @@ class CW_Formatting {
 			// Get nice currency names
 			$wc_currencies = cw_get_woocommerce_currencies();
 
-			echo wp_kses_post( sprintf( esc_html__( '%1$s%2$s Payment Details%3$s', 'cryptowoo' ), '<div class="thankyou-cryptowoo"><h3>', $wc_currencies[ $payment_currency ], '</h3>' ) );
-			echo wp_kses_post( sprintf( esc_html__( 'Your order total: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $amount_due ), $payment_currency, '<br>' ) );
-			echo wp_kses_post( sprintf( esc_html__( 'Amount received: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $received_confirmed ), $payment_currency, '<br>' ) );
+			echo wp_kses_post( sprintf( esc_html__( '%1$s%2$s Payment Details%3$s', 'cryptopay' ), '<div class="thankyou-cryptopay"><h3>', $wc_currencies[ $payment_currency ], '</h3>' ) );
+			echo wp_kses_post( sprintf( esc_html__( 'Your order total: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $amount_due ), $payment_currency, '<br>' ) );
+			echo wp_kses_post( sprintf( esc_html__( 'Amount received: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $received_confirmed ), $payment_currency, '<br>' ) );
 
 			// Maybe display unconfirmed amount
 			if ( $amount_unconfirmed > 0 ) {
-				echo wp_kses_post( sprintf( esc_html__( 'Amount unconfirmed: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $amount_unconfirmed ), $payment_currency, '<br>' ) );
+				echo wp_kses_post( sprintf( esc_html__( 'Amount unconfirmed: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $amount_unconfirmed ), $payment_currency, '<br>' ) );
 			}
 
 			// Link to payment address on block chain
 			$url = self::link_to_address( $payment_currency, $payment_address );
 
 			if ( $url ) {
-				echo wp_kses_post( sprintf( '%s: <a title="%s" target="_blank" href="%s">%s</a><br>', esc_html__( 'Payment address', 'cryptowoo' ), sprintf( esc_html__( 'Payment address on the %s blockchain', 'cryptowoo' ), $wc_currencies[ $payment_currency ] ), $url, $payment_address ) );
+				echo wp_kses_post( sprintf( '%s: <a title="%s" target="_blank" href="%s">%s</a><br>', esc_html__( 'Payment address', 'cryptopay' ), sprintf( esc_html__( 'Payment address on the %s blockchain', 'cryptopay' ), $wc_currencies[ $payment_currency ] ), $url, $payment_address ) );
 			} else {
-				echo wp_kses_post( sprintf( '%s: %s<br>', esc_html__( 'Payment address', 'cryptowoo' ), $payment_address ) );
+				echo wp_kses_post( sprintf( '%s: %s<br>', esc_html__( 'Payment address', 'cryptopay' ), $payment_address ) );
 			}
 
 			do_action( "cw_display_extra_details_order_received_$payment_currency", $order );
@@ -768,28 +768,28 @@ class CW_Formatting {
 
 			// Amount missing
 			if ( $on_hold || ( $amount_missing > ( $amount_due * ( (float) cw_get_option( 'underpayment_notice_range' )[2] / 100 ) ) && $amount_due > 0 && ! $paid ) ) {
-				echo wp_kses_post( sprintf( esc_html__( 'Amount missing: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $amount_missing ), $payment_currency, '<br>' ) );
+				echo wp_kses_post( sprintf( esc_html__( 'Amount missing: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $amount_missing ), $payment_currency, '<br>' ) );
 
 				if ( $timeout !== 1 && ! $on_hold && ( $received_confirmed > 0 || $amount_unconfirmed > 0 ) ) {
 
 					// Request customer to send the missing amount
-					wc_print_notice( esc_html__( 'Please send the missing amount to the address above. You will receive an email when your payment is fully confirmed.', 'cryptowoo' ), 'notice' );
+					wc_print_notice( esc_html__( 'Please send the missing amount to the address above. You will receive an email when your payment is fully confirmed.', 'cryptopay' ), 'notice' );
 
 				} elseif ( $on_hold ) {
 
-					$hold_notice = $on_hold ? esc_html__( ' and has been put on hold. Please contact us.', 'cryptowoo' ) : esc_html__( '. Please try again or contact us if you need assistance.', 'cryptowoo' );
+					$hold_notice = $on_hold ? esc_html__( ' and has been put on hold. Please contact us.', 'cryptopay' ) : esc_html__( '. Please try again or contact us if you need assistance.', 'cryptopay' );
 					// Inform customer about timeout and maybe that his order is on hold.
-					wc_print_notice( sprintf( esc_html__( 'Your order is expired%s', 'cryptowoo' ), $hold_notice ), 'error' );
+					wc_print_notice( sprintf( esc_html__( 'Your order is expired%s', 'cryptopay' ), $hold_notice ), 'error' );
 
 				}
 			} elseif ( $paid && $amount_due >= 0 && $received_confirmed > 0 && $amount_unconfirmed <= 0 ) {
 				// Maybe use custom thank you page text
-				$text = cw_get_option( 'thankyou_page_text' ) ? do_shortcode( cw_get_option( 'thankyou_page_text' ) ) : esc_html__( 'Your payment has been received. Thank you for shopping with us!', 'cryptowoo' );
+				$text = cw_get_option( 'thankyou_page_text' ) ? do_shortcode( cw_get_option( 'thankyou_page_text' ) ) : esc_html__( 'Your payment has been received. Thank you for shopping with us!', 'cryptopay' );
 
 				wc_print_notice( $text, 'success' );
 
 			} elseif ( $amount_unconfirmed > 0 && $timeout !== 1 && $order->has_status( 'pending' ) ) {
-				wc_print_notice( esc_html__( 'You will receive an email when your payment is fully confirmed.', 'cryptowoo' ), 'notice' );
+				wc_print_notice( esc_html__( 'You will receive an email when your payment is fully confirmed.', 'cryptopay' ), 'notice' );
 			}
 			echo '</div>';
 		}
@@ -827,18 +827,18 @@ class CW_Formatting {
 				// Get currency nicenames
 				$wc_currencies = cw_get_woocommerce_currencies();
 
-				$data  = sprintf( esc_html__( '%1$s%2$s Payment Details%3$s', 'cryptowoo' ), '<div class="thankyou-cryptowoo"><h3>', $wc_currencies[ $payment_currency ], '</h3>' );
-				$data .= sprintf( esc_html__( 'Your order total: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $amount_due ), $payment_currency, '<br>' );
-				$data .= sprintf( esc_html__( 'Amount received: %1$s %2$s%3$s', 'cryptowoo' ), self::fbits( $full_amount ), $payment_currency, '<br>' );
+				$data  = sprintf( esc_html__( '%1$s%2$s Payment Details%3$s', 'cryptopay' ), '<div class="thankyou-cryptopay"><h3>', $wc_currencies[ $payment_currency ], '</h3>' );
+				$data .= sprintf( esc_html__( 'Your order total: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $amount_due ), $payment_currency, '<br>' );
+				$data .= sprintf( esc_html__( 'Amount received: %1$s %2$s%3$s', 'cryptopay' ), self::fbits( $full_amount ), $payment_currency, '<br>' );
 
 				// Maybe display unconfirmed amount
 				if ( $amount_unconfirmed > 0 ) {
-					$data .= sprintf( esc_html__( 'Unconfirmed: %1$s %2$s %3$s', 'cryptowoo' ), self::fbits( $amount_unconfirmed, true ), $payment_currency, '<br>' );
+					$data .= sprintf( esc_html__( 'Unconfirmed: %1$s %2$s %3$s', 'cryptopay' ), self::fbits( $amount_unconfirmed, true ), $payment_currency, '<br>' );
 				}
 
 				// Link to payment address on block chain
 				$url   = self::link_to_address( $payment_currency, $payment_address );
-				$data .= sprintf( '%s: <a title="%s" target="_blank" href="%s">%s</a><br>', esc_html__( 'Payment address', 'cryptowoo' ), sprintf( esc_html__( 'Payment address on the %s blockchain', 'cryptowoo' ), $wc_currencies[ $payment_currency ] ), $url, $payment_address );
+				$data .= sprintf( '%s: <a title="%s" target="_blank" href="%s">%s</a><br>', esc_html__( 'Payment address', 'cryptopay' ), sprintf( esc_html__( 'Payment address on the %s blockchain', 'cryptopay' ), $wc_currencies[ $payment_currency ] ), $url, $payment_address );
 
 				echo wp_kses_post( $data );
 				do_action( "cw_display_extra_details_order_received_$payment_currency", $order );
@@ -846,21 +846,21 @@ class CW_Formatting {
 
 				// Amount missing
 				if ( $amount_missing > ( $amount_due * ( (float) cw_get_option( 'underpayment_notice_range' )[2] / 100 ) ) && $amount_due > 0 && $paid !== 1 ) {
-					$data .= sprintf( esc_html__( '%1$sAmount missing: %2$s %3$s%4$s', 'cryptowoo' ), '<span style="font-weight: bold; color: red;">', self::fbits( $amount_missing ), $payment_currency, '</span><br>' );
+					$data .= sprintf( esc_html__( '%1$sAmount missing: %2$s %3$s%4$s', 'cryptopay' ), '<span style="font-weight: bold; color: red;">', self::fbits( $amount_missing ), $payment_currency, '</span><br>' );
 				}
 
 				// Status message
 				if ( $paid === 1 && $timeout !== 1 ) {
-					$data .= sprintf( esc_html__( '%1$sYour payment of %2$s %3$s has been received.%4$s', 'cryptowoo' ), '<p>', self::fbits( $full_amount ), $payment_currency, '</p>' );
+					$data .= sprintf( esc_html__( '%1$sYour payment of %2$s %3$s has been received.%4$s', 'cryptopay' ), '<p>', self::fbits( $full_amount ), $payment_currency, '</p>' );
 				} elseif ( $paid !== 1 && $timeout === 1 ) {
-					$data .= esc_html__( 'Your order is expired. Please try again or contact us if you need assistance.', 'cryptowoo' );
+					$data .= esc_html__( 'Your order is expired. Please try again or contact us if you need assistance.', 'cryptopay' );
 				} elseif ( $paid !== 1 && $timeout === 3 ) {
 					// Maybe tell customer to contact the shop owner
 					// $order = wc_get_order($order->get_id());
 					if ( $order->has_status( 'on-hold' ) ) {
-						$data .= sprintf( '<span style="font-weight: bold; color: red;">%s</span>', esc_html__( 'Your order has been put on hold. Please get in touch with us.', 'cryptowoo' ) );
+						$data .= sprintf( '<span style="font-weight: bold; color: red;">%s</span>', esc_html__( 'Your order has been put on hold. Please get in touch with us.', 'cryptopay' ) );
 					} else {
-						$data .= sprintf( '<p>%s</p>', esc_html__( 'You will receive another email when your payment is fully confirmed.', 'cryptowoo' ) );
+						$data .= sprintf( '<p>%s</p>', esc_html__( 'You will receive another email when your payment is fully confirmed.', 'cryptopay' ) );
 					}
 				}
 
@@ -878,7 +878,7 @@ class CW_Formatting {
 	 * @return string
 	 */
 	static function prepare_overpayment_message( $order_data, $refund_address ) {
-		$overpay_message = cw_get_option( 'overpayment_message' ) ?: esc_html__( 'You paid {{AMOUNT_DIFF}} {{PAYMENT_CURRENCY}} too much. Please get in touch with us.', 'cryptowoo' );
+		$overpay_message = cw_get_option( 'overpayment_message' ) ?: esc_html__( 'You paid {{AMOUNT_DIFF}} {{PAYMENT_CURRENCY}} too much. Please get in touch with us.', 'cryptopay' );
 		$cnote           = preg_replace_callback(
 			'/\{\{([a-zA-Z-0-9\ \_]+?)\}\}/',
 			function ( $match ) use ( $order_data, $refund_address ) {
@@ -958,7 +958,7 @@ class CW_Formatting {
 
 		// Some icons are split in different paths
 		$span_paths = '<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>';
-		if ( 'cryptowoo' === $currency ) {
+		if ( 'cryptopay' === $currency ) {
 			$span_paths .= '<span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span>';
 		}
 
@@ -992,7 +992,7 @@ class CW_Formatting {
 		if ( ! extension_loaded( 'gd' ) || ! function_exists( 'ImageTTFText' ) ) {
 			return '';
 		}
-		$text = sprintf( esc_html__( 'Please compare the destination address with the one below%1$sbefore you send the payment:%1$s', 'cryptowoo' ), PHP_EOL );
+		$text = sprintf( esc_html__( 'Please compare the destination address with the one below%1$sbefore you send the payment:%1$s', 'cryptopay' ), PHP_EOL );
 		$im   = imagecreate( 800, 120 );
 		ImageColorAllocate( $im, 0, 0, 0 ); // Black background // TODO maybe use pre-defined image that makes OCR more difficult
 		$white = ImageColorAllocate( $im, 255, 255, 255 );
@@ -1004,7 +1004,7 @@ class CW_Formatting {
 		$image_data = ob_get_clean();
 		ImageDestroy( $im );
 
-		return sprintf( '<h3><i class="fa fa-lock" aria-hidden="true"></i> %s</h3> <img src="data:image/gif;base64,%s" />', __( 'Security Check', 'cryptowoo' ), base64_encode( $image_data ) );
+		return sprintf( '<h3><i class="fa fa-lock" aria-hidden="true"></i> %s</h3> <img src="data:image/gif;base64,%s" />', __( 'Security Check', 'cryptopay' ), base64_encode( $image_data ) );
 
 	}
 
@@ -1016,7 +1016,7 @@ class CW_Formatting {
 	 * @return array - updated actions
 	 */
 	static function cw_add_order_meta_box_action_force_check_order( $actions ) {
-		return self::cw_add_order_meta_box_action( $actions, 'force_update_payment_status_action', __( 'Force update payment status', 'cryptowoo' ) );
+		return self::cw_add_order_meta_box_action( $actions, 'force_update_payment_status_action', __( 'Force update payment status', 'cryptopay' ) );
 	}
 
 	/**
@@ -1028,13 +1028,13 @@ class CW_Formatting {
 	 */
 	static function cw_add_order_meta_box_action_force_accept_payment( $actions ) {
 		if ( CW_Order_Processing_Tools::instance()->check_force_complete_permissions() ) {
-			return self::cw_add_order_meta_box_action( $actions, 'force_accept_payment_action', __( 'Force accept payment', 'cryptowoo' ) );
+			return self::cw_add_order_meta_box_action( $actions, 'force_accept_payment_action', __( 'Force accept payment', 'cryptopay' ) );
 		}
 	}
 
 	/**
 	 * Source: https://www.skyverge.com/blog/add-woocommerce-custom-order-actions/
-	 * Customized by CryptoWoo to our needs
+	 * Customized by CryptoPay to our needs
 	 *
 	 * Add a custom action to order actions select box on edit order page
 	 * Only added for unpaid orders
@@ -1050,7 +1050,7 @@ class CW_Formatting {
 */
 		global $theorder;
 
-		// bail if the order has been paid for or if CryptoWoo is not the payment method.
+		// bail if the order has been paid for or if CryptoPay is not the payment method.
 		if ( $theorder->is_paid() || CW_PAYMENT_METHOD_ID !== $theorder->get_payment_method() ) {
 			return $actions;
 		}
@@ -1063,7 +1063,7 @@ class CW_Formatting {
 	/**
 	 * Add a custom action to the Woocommerce Order Overview
 	 *
-	 * Only added for unpaid CryptoWoo orders
+	 * Only added for unpaid CryptoPay orders
 	 *
 	 * @param $actions
 	 * @param WC_Order $order
@@ -1074,8 +1074,8 @@ class CW_Formatting {
 		if ( ! $order->is_paid() && CW_PAYMENT_METHOD_ID === $order->get_payment_method() ) {
 			$actions['force_update'] = array(
 				'url'    => wp_nonce_url( admin_url( 'admin-ajax.php?action=cw_force_update_payment_status&order_id=' . $order->get_id() ), 'cw-force-update-payment-status' ),
-				'name'   => __( 'Force Update', 'cryptowoo' ),
-				'title'  => __( 'Force update payment status', 'cryptowoo' ),
+				'name'   => __( 'Force Update', 'cryptopay' ),
+				'title'  => __( 'Force update payment status', 'cryptopay' ),
 				'action' => 'refresh',
 			);
 		}
@@ -1098,9 +1098,9 @@ class CW_Formatting {
 			add_thickbox();
 			add_action( "admin_post_submit_cryptowoo_force_complete_form_order_{$order->get_id()}", array( self::class, 'submit_cryptowoo_force_accept_payment_form' ) );
 			$actions[ "force_accept_payment_{$order->get_id()}" ] = array(
-				'url'    => "#TB_inline&width=300&height=450&inlineId=cryptowoo-force-complete-form-order-{$order->get_id()}",
-				'name'   => __( 'Force accept', 'cryptowoo' ),
-				'title'  => __( 'Force accept payment', 'cryptowoo' ),
+				'url'    => "#TB_inline&width=300&height=450&inlineId=cryptopay-force-complete-form-order-{$order->get_id()}",
+				'name'   => __( 'Force accept', 'cryptopay' ),
+				'title'  => __( 'Force accept payment', 'cryptopay' ),
 				'action' => 'processing thickbox',
 			);
 
@@ -1151,7 +1151,7 @@ class CW_Formatting {
 
 	/**
 	 *
-	 * Add a cryptowoo force accept payment form ThickBox
+	 * Add a cryptopay force accept payment form ThickBox
 	 *
 	 * @param WC_Order $the_order Woocommerce order object.
 	 *
@@ -1178,10 +1178,10 @@ class CW_Formatting {
 		$crypto_amount = self::fbits( $crypto_amount, true, self::calculate_coin_decimals( $payment_currency, $crypto_amount ), true );
 		$nonce_html    = wp_nonce_field( 'cw-force-update-payment-status', '_wpnonce', true, false );
 		return // TODO: Let the user select the amount of each tx.
-		"<div id='cryptowoo-force-complete-form-order-$order_id' style='display:none;'>
+		"<div id='cryptopay-force-complete-form-order-$order_id' style='display:none;'>
                 <form id='form_cryptowoo_force_accept_payment_$order_id' name='form_cryptowoo_force_accept_payment_$order_id'  method='post' action='" . esc_url( admin_url( 'admin-post.php' ) ) . "?action=submit_cryptowoo_force_accept_payment_form'>
 					<div class='form_description'>
-						<h2>CryptoWoo Force accept payment #$order_id</h2>
+						<h2>CryptoPay Force accept payment #$order_id</h2>
 						<p>Enter the payment details and click submit to update the order.</p>
 					</div>
 					<ul >

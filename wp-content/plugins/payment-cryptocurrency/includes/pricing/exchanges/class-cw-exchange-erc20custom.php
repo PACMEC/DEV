@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Custom ERC-20 Exchange Rates Class
  *
- * @category   CryptoWoo
+ * @category   CryptoPay
  * @package    Exchange
  * @subpackage ExchangeBase
- * Author: CryptoWoo AS
- * Author URI: https://cryptowoo.com
+ * Author: CryptoPay AS
+ * Author URI: https://cryptopay.com
  */
 class CW_Exchange_ERC20Custom extends CW_Exchange_Base {
 
