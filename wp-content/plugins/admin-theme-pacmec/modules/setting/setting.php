@@ -123,7 +123,6 @@ class Admin_Theme_PACMEC_Setting{
 	// help
 	function admin_help() {
 		$current_screen = get_current_screen();
-
 		// Overview
 		$current_screen->add_help_tab(
 			array(
@@ -135,7 +134,6 @@ class Admin_Theme_PACMEC_Setting{
 					'<p>' . __( 'Have fun.', 'pacmec_admin_theme' ) . '</p>',
 			)
 		);
-
 		// Help Sidebar
 		$current_screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'pacmec_admin_theme' ) . '</strong></p>' .
@@ -145,17 +143,11 @@ class Admin_Theme_PACMEC_Setting{
 	}
 
 	function admin_scripts() {
-
 		wp_enqueue_style( 'admin-theme-variables', $this->plugin_url.( "theme/color.variables.css" ) );
-
 		$this->export_customize();
-
 		wp_enqueue_style( 'admin-theme-admin', $this->plugin_url.( "theme/admin.css" ) );
-		
 		wp_enqueue_style( 'admin-theme-color', $this->plugin_url.( "theme/color.css" ) );
-		
 		wp_enqueue_style( 'admin-theme-theme', $this->plugin_url.( "theme/theme.css" ) );
-
 		wp_add_inline_style('admin-theme-style', $this->get_setting('admin_css') );
 		wp_add_inline_script('admin-theme-main', $this->get_setting('admin_js') );
 	}

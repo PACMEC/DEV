@@ -6,7 +6,7 @@ Description: Cambiar la barra de administración, el menú, el inicio de sesión
 Version: 1.0.0
 Author: PACMEC
 Author URI: #
-Text Domain: admin-theme-pacmec
+Text Domain: pacmec-admin-theme
 */
 
 class Admin_Theme_PACMEC {

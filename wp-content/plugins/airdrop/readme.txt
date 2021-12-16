@@ -1,7 +1,7 @@
 === WP Airdrop Manager ===
 Contributors: phankimi, kadesthemes
 Donate link: https://paypal.me/phankimi
-Tags: airdrop, bounty hunt, ico, bitcoin, ethereum, crypto, cryptocurrency, cryptocurrencies, blockchain
+Tags: airdrops-manager, bounty hunt, ico, bitcoin, ethereum, crypto, cryptocurrency, cryptocurrencies, blockchain
 Requires at least: 4.0
 Tested up to: 4.9
 Requires PHP: 5.2
@@ -23,11 +23,11 @@ WP Airdrop Manager plugin will work with any theme, but it may require some styl
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/airdrop` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/airdrops-manager` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Use the Airdrops->Add new screen to create new Airdrop project
 
-Detail document here: https://kadesthemes.com/wordpress-plugins/airdrop/
+Detail document here: https://kadesthemes.com/wordpress-plugins/airdrops-manager/
 
 == Frequently Asked Questions ==
 
@@ -45,7 +45,7 @@ Detail document here: https://kadesthemes.com/wordpress-plugins/airdrop/
 * fix bug some users can't update plugin
 = 1.0.3 =
 * New: setting page for plugin basic config 
-* New: shortcode to display list of airdrops anywhere: [airdrop num=4]
+* New: shortcode to display list of airdrops anywhere: [airdrops-manager num=4]
 * Update: latest version of Font Awesome (5.0.13)
 * Update: latest version of Bootstrap (4.1.1)
 * Improved: code optimized

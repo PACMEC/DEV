@@ -3,51 +3,51 @@
  * Create plugin setting page
  */
 function airdrop_settings_init() {
-    // register a new setting for "airdrop" page
-    register_setting( 'airdrop', 'airdrop-settings', 'airdrop_settings_validate' );
+    // register a new setting for "airdrops-manager" page
+    register_setting( 'airdrops-manager', 'airdrops-manager-settings', 'airdrop_settings_validate' );
  
-    // register a new section in the "airdrop" page
+    // register a new section in the "airdrops-manager" page
      add_settings_section(
         'airdrop_section_basic',
-        __( 'Basic Settings', 'airdrop' ),
+        __( 'Basic Settings', 'airdrops-manager' ),
         'airdrop_section_basic_cb',
-        'airdrop'
+        'airdrops-manager'
      );
  
-    // register a new field in the "airdrop_section_basic" section, inside the "airdrop" page
+    // register a new field in the "airdrop_section_basic" section, inside the "airdrops-manager" page
     add_settings_field(
-        'airdrop-gettokentext', // as of WP 4.6 this value is used only internally
+        'airdrops-manager-gettokentext', // as of WP 4.6 this value is used only internally
         // use $args' label_for to populate the id inside the callback
-        __( 'Get token button text', 'airdrop' ),
+        __( 'Get token button text', 'airdrops-manager' ),
         'airdrop_gettokentext_cb',
-        'airdrop',
+        'airdrops-manager',
         'airdrop_section_basic',
         array(
-            'label_for' => 'airdrop-gettokentext',
+            'label_for' => 'airdrops-manager-gettokentext',
             'class' => 'airdrop_row',
             'airdrop_custom_data' => 'custom',
         )
     );
 
     add_settings_field( 
-        'airdrop-gettokenicon', 
-        __( 'Get token button icon', 'airdrop' ), 
+        'airdrops-manager-gettokenicon', 
+        __( 'Get token button icon', 'airdrops-manager' ), 
         'airdrop_gettokenicon_cb', 
-        'airdrop', 
+        'airdrops-manager', 
         'airdrop_section_basic', 
         array(
-            'label_for'     => 'airdrop-gettokenicon',
+            'label_for'     => 'airdrops-manager-gettokenicon',
             'class'         => 'airdrop_row',
     ) );
 
     add_settings_field( 
-        'airdrop-gettokenbackground', 
-        __( 'Button background color', 'airdrop' ), 
+        'airdrops-manager-gettokenbackground', 
+        __( 'Button background color', 'airdrops-manager' ), 
         'airdrop_gettokenbackground_cb', 
-        'airdrop', 
+        'airdrops-manager', 
         'airdrop_section_basic', 
         array(
-            'label_for'     => 'airdrop-gettokenbackground',
+            'label_for'     => 'airdrops-manager-gettokenbackground',
             'class'         => 'airdrop_row',
     ) );
 }
@@ -68,7 +68,7 @@ add_action( 'admin_init', 'airdrop_settings_init' );
 // $args have the following keys defined: title, id, callback.
 // the values are defined at the add_settings_section() function.
 function airdrop_section_basic_cb( $args ) {
-    esc_html__( 'Basic config for WP Airdrop Manager', 'airdrop' ); 
+    esc_html__( 'Basic config for WP Airdrop Manager', 'airdrops-manager' ); 
 }
 
 // submittext field cb
@@ -82,25 +82,25 @@ function airdrop_section_basic_cb( $args ) {
 function airdrop_gettokentext_cb( $args ) {
 
     // get the value of the setting we've registered with register_setting()
-    $settings = get_option( 'airdrop-settings' );
+    $settings = get_option( 'airdrops-manager-settings' );
     $gettokentext = esc_attr( $settings['gettokentext'] );
     
-    echo "<input id='$args[label_for]' type='text' name='airdrop-settings[gettokentext]' value='$gettokentext' />";
+    echo "<input id='$args[label_for]' type='text' name='airdrops-manager-settings[gettokentext]' value='$gettokentext' />";
 }
 
 function airdrop_gettokenicon_cb( $args ) {
-    $settings = get_option( 'airdrop-settings' );
+    $settings = get_option( 'airdrops-manager-settings' );
     $gettokenicon = esc_attr( $settings['gettokenicon'] );
    
-    echo "<input id='$args[label_for]' type='text' name='airdrop-settings[gettokenicon]' value='$gettokenicon' placeholder='". esc_attr__( 'name of icon', 'airdrop' ) ."' />";
+    echo "<input id='$args[label_for]' type='text' name='airdrops-manager-settings[gettokenicon]' value='$gettokenicon' placeholder='". esc_attr__( 'name of icon', 'airdrops-manager' ) ."' />";
     echo "<p>List name of icon here: <a target='_blank' href='https://fontawesome.com/icons?d=gallery&s=solid&m=free'>https://fontawesome.com/icons/</a></p>";
 }
 
 function airdrop_gettokenbackground_cb( $args ) {
-    $settings = get_option( 'airdrop-settings' );
+    $settings = get_option( 'airdrops-manager-settings' );
     $gettokenbackground = esc_attr( $settings['gettokenbackground'] );
  
-    echo "<input id='$args[label_for]' type='text' name='airdrop-settings[gettokenbackground]' value='$gettokenbackground' class='airdrop-color-picker' />";
+    echo "<input id='$args[label_for]' type='text' name='airdrops-manager-settings[gettokenbackground]' value='$gettokenbackground' class='airdrops-manager-color-picker' />";
 }
 
 /**
@@ -109,11 +109,11 @@ function airdrop_gettokenbackground_cb( $args ) {
 function airdrop_options_page() {
     // add top level menu page
     add_submenu_page(
-        'edit.php?post_type=airdrop',
-        esc_html__( 'WP Airdrop Manager Setting', 'airdrop' ),
-        esc_html__( 'Airdrop Settings', 'airdrop' ),
+        'edit.php?post_type=airdrops-manager',
+        esc_html__( 'WP Airdrop Manager Setting', 'airdrops-manager' ),
+        esc_html__( 'Airdrop Settings', 'airdrops-manager' ),
         'manage_options',
-        'airdrop',
+        'airdrops-manager',
         'airdrop_options_page_html'
     );
 }
@@ -144,7 +144,7 @@ function airdrop_options_page_html() {
     // wordpress will add the "settings-updated" $_GET parameter to the url
     if ( isset( $_GET['settings-updated'] ) ) {
     // add settings saved message with the class of "updated"
-    add_settings_error( 'airdrop_messages', 'airdrop_message', __( 'Settings Saved', 'airdrop' ), 'updated' );
+    add_settings_error( 'airdrop_messages', 'airdrop_message', __( 'Settings Saved', 'airdrops-manager' ), 'updated' );
     }
 
     // show error/update messages
@@ -153,16 +153,16 @@ function airdrop_options_page_html() {
 ?>
 <div class="wrap">
     <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
-    <div class="airdrop-content-wrapper">
+    <div class="airdrops-manager-content-wrapper">
         <div id="primary-container" class="airdrop_content_cell">
             <form action="options.php" method="post">
             <?php
-            // output security fields for the registered setting "airdrop"
-            settings_fields( 'airdrop' );
+            // output security fields for the registered setting "airdrops-manager"
+            settings_fields( 'airdrops-manager' );
 
             // output setting sections and their fields
-            // (sections are registered for "airdrop", each field is registered to a specific section)
-            do_settings_sections( 'airdrop' );
+            // (sections are registered for "airdrops-manager", each field is registered to a specific section)
+            do_settings_sections( 'airdrops-manager' );
 
             // output save settings button
             submit_button();
@@ -179,10 +179,10 @@ function airdrop_options_page_html() {
                 <img alt="Best Crypto WordPress Plugin 2018" src="<?php echo plugins_url( '/images/box-bestcryptoplugin.jpg', dirname(__FILE__) ); ?>">
             </a>
 
-            <a target="_blank" href="https://goo.gl/NWzNFG"><?php esc_html_e( 'Need help? Plugin document here', 'airdrop' ); ?></a>
+            <a target="_blank" href="https://goo.gl/NWzNFG"><?php esc_html_e( 'Need help? Plugin document here', 'airdrops-manager' ); ?></a>
         </div><!-- /#sidebar-container-->
 
-    </div><!-- /.airdrop-content-wrapper -->
+    </div><!-- /.airdrops-manager-content-wrapper -->
 </div>
 <?php
 }

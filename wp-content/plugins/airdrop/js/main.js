@@ -1,8 +1,8 @@
 (function( $ ) {
  
-    // Add Color Picker to all inputs that have 'airdrop-color-picker' class
+    // Add Color Picker to all inputs that have 'airdrops-manager-color-picker' class
     $(function() {
-        $('.airdrop-color-picker').wpColorPicker();
+        $('.airdrops-manager-color-picker').wpColorPicker();
     });
      
 })( jQuery );

@@ -2,7 +2,7 @@
 add_action( 'init', 'airdrop_register_shortcode' );
 function airdrop_register_shortcode() {
 
-    add_shortcode( 'airdrop', 'airdrop_shortcode' );
+    add_shortcode( 'airdrops-manager', 'airdrop_shortcode' );
     function airdrop_shortcode( $atts, $content ) {
     global $post;
     ob_start();
@@ -15,7 +15,7 @@ function airdrop_register_shortcode() {
  
     // define query parameters based on attributes
     $options = array(
-        'post_type' => 'airdrop',
+        'post_type' => 'airdrops-manager',
         'posts_per_page' => $num,
         'post_status'     => 'publish',
         'order'             => $order,
@@ -28,22 +28,22 @@ function airdrop_register_shortcode() {
         echo '<div class="row">';
         while( $airdroplist->have_posts() ) {
             $airdroplist->the_post(); ?>
-           <article id="post-<?php the_ID(); ?>" <?php post_class( 'airdrop-item col' ); ?> >
+           <article id="post-<?php the_ID(); ?>" <?php post_class( 'airdrops-manager-item col' ); ?> >
         <div class="row">
-            <div class="airdrop-thumbnail-wrap col-12">
-        <figure class="airdrop-thumbnail">
+            <div class="airdrops-manager-thumbnail-wrap col-12">
+        <figure class="airdrops-manager-thumbnail">
         <?php if( has_post_thumbnail() ) {
             echo '<a rel="bookmark" href="'.esc_url( get_permalink() ) . '">';
-            the_post_thumbnail( 'airdrop-main-thumbnail' );
+            the_post_thumbnail( 'airdrops-manager-main-thumbnail' );
             echo '</a>';    
         }
          ?>
         </figure>
     </div>
         <div class="col-12">    
-            <table class="airdrop-single-summary" style="width: 100%; border-collapse: collapse;">
+            <table class="airdrops-manager-single-summary" style="width: 100%; border-collapse: collapse;">
                 <tr>
-                    <td colspan="2"><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_title( '<h1 class="airdrop-name">', '</h1>' ); echo '<span class="airdrop-symbol">' . $airdrop_symbol =  get_post_meta( $post->ID, 'airdrop_symbol', true ) . '</span>'; ?></a></td>
+                    <td colspan="2"><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php the_title( '<h1 class="airdrops-manager-name">', '</h1>' ); echo '<span class="airdrops-manager-symbol">' . $airdrop_symbol =  get_post_meta( $post->ID, 'airdrop_symbol', true ) . '</span>'; ?></a></td>
                 </tr>
             </table>
         </div>

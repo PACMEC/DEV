@@ -1,23 +1,23 @@
 
 /*  SINGLE AIRDROP TEMPLATE  */
 
-#airdrop-wrapper {
+#airdrops-manager-wrapper {
 	padding-left: 30px;
 	padding-right: 30px;
 	margin: 0 0 2em;
 }
 
-#airdrop-secondary {
+#airdrops-manager-secondary {
 	margin-top: 0;
 }
 
-#airdrop-wrapper .navigation.pagination {
+#airdrops-manager-wrapper .navigation.pagination {
 	margin-top: 1.5em;
 	clear: both;
 	width: 100%;
 }
 
-.airdrop-item .airdrop-name {
+.airdrops-manager-item .airdrops-manager-name {
 	margin-top: 10px;
 	margin-bottom: 0;
 	font-size: 1rem;
@@ -26,25 +26,25 @@
 	display: inline-block;
 }
 
-.airdrop-name h2 {
+.airdrops-manager-name h2 {
 	font-size: 16px;
 	display: inline-block;
 	font-weight: 600;
 }
 
-.airdrop-name a:hover,
-.airdrop-name a:visited {
+.airdrops-manager-name a:hover,
+.airdrops-manager-name a:visited {
 	color: #f28c00;
 }
 
-body:not(.single-airdrop) .airdrop-symbol {
+body:not(.single-airdrops-manager) .airdrops-manager-symbol {
 	margin: 0 0 0 5px;
 	color: rgba(0,0,0,.7);
 	font-weight: 400;
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-body.single-airdrop .airdrop-name {
+body.single-airdrops-manager .airdrops-manager-name {
 	font-size: 24px;
 	font-weight: 600;
 	display: inline-block;
@@ -52,36 +52,36 @@ body.single-airdrop .airdrop-name {
 	margin-top: 0;
 }
 
-.airdrop-value {
+.airdrops-manager-value {
 	display: block;
 	width: auto;
 }
 
-.airdrop-value--number {
+.airdrops-manager-value--number {
 	font-weight: 700;
 	color: green;
 }
 
-.airdrop-thumbnail:hover {
+.airdrops-manager-thumbnail:hover {
 	opacity: 0.9;
 			transition: 200ms;
 	-webkit-transition: 200ms;
 }
 
-.airdrop-thumbnail img {
+.airdrops-manager-thumbnail img {
 	width: 100%;
 	height: auto;
 	-webkit-box-shadow: 0 0 5px rgba(189, 196, 203, 0.5);
 			box-shadow: 0 0 5px rgba(189, 196, 203, 0.5);
 }
 
-.airdrop-single-section {
+.airdrops-manager-single-section {
 	margin-bottom: 2rem;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 1.5em;
 }
 
-.airdrop-single-section p {
+.airdrops-manager-single-section p {
 	font-size: 16px;
 	line-height: 1.5;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -89,11 +89,11 @@ body.single-airdrop .airdrop-name {
 	margin-bottom: 1.2em;
 }
 
-.airdrop-single-section.description {
+.airdrops-manager-single-section.description {
 	margin-top: 2rem;
 }
 
-.airdrop-single-section > h4 {
+.airdrops-manager-single-section > h4 {
 	margin-bottom: 1rem;
 }
 
@@ -105,32 +105,32 @@ body.single-airdrop .airdrop-name {
 	margin: 0 auto 2em;
 }
 
-.airdrop-estimatevalue {
+.airdrops-manager-estimatevalue {
 	width: 100%;
 	margin-bottom: 1em;
 }
-.airdrop-single-section.estimatevalue > h4 {
+.airdrops-manager-single-section.estimatevalue > h4 {
 	display: inline-block;
 }
 
-.airdrop-single-section.requirement {
+.airdrops-manager-single-section.requirement {
 	border-bottom-width: 0;
 	margin-bottom: 1em;
 }
 
-section.airdrop-single-section ol,
-section.airdrop-single-section ul {
+section.airdrops-manager-single-section ol,
+section.airdrops-manager-single-section ul {
 	margin-left: 2em;
 }
 
-.airdrop-claim i {
+.airdrops-manager-claim i {
 	color: #fff;
 	display: inline-block;
 	margin-right: 8px;
 	font-size: 100%;
 }
 
-#claimtoken .airdrop-claim {
+#claimtoken .airdrops-manager-claim {
 	background-color: #ff5252;
 			border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -151,7 +151,7 @@ section.airdrop-single-section ul {
 	margin-top: 5px;
 }
 
-.airdrop-view {
+.airdrops-manager-view {
 	background-color: #ff5252;
 	color: #fff !important;
 	border-color: #c33;
@@ -165,7 +165,7 @@ section.airdrop-single-section ul {
 	
 }
 
-.airdrop-claim:hover {
+.airdrops-manager-claim:hover {
 	opacity: 0.9;
 	text-decoration: none;
 }
@@ -182,41 +182,41 @@ section.airdrop-single-section ul {
 	margin-bottom: 3em;
 }
 
-body.post-type-archive-airdrop .airdrop-item {
+body.post-type-archive-airdrops-manager .airdrops-manager-item {
 	background-color: #fff;
 	box-shadow: 0px 0px 2px #3333;
 	text-align: center;
 	margin-bottom: 0;
 }
 
-.airdrop-item:hover > .airdrop-thumbnail {
+.airdrops-manager-item:hover > .airdrops-manager-thumbnail {
 	opacity: 0.8;
 }
 
-body.post-type-archive-airdrop .airdrop-thumbnail-wrap {
+body.post-type-archive-airdrops-manager .airdrops-manager-thumbnail-wrap {
 	margin-top: 15px;
 }
 
-.airdrop-thumbnail {
+.airdrops-manager-thumbnail {
 	margin-top: 15px;
 	transition: .2s ease-out;
 	-webkit-transition: .2s ease-out;
 }
 
-body.post-type-archive-airdrop .airdrop-thumbnail {
+body.post-type-archive-airdrops-manager .airdrops-manager-thumbnail {
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-body.single-airdrop .airdrop-thumbnail {
+body.single-airdrops-manager .airdrops-manager-thumbnail {
 	margin-top: 0;
 }
 
-.airdrop-timeleft {
+.airdrops-manager-timeleft {
 	font-weight: 400;
 }
 
-#airdrops .airdrop-view:hover {
+#airdrops .airdrops-manager-view:hover {
 	padding: 3px 15px;
 	font-size: 14px;
 	text-decoration: none;
@@ -225,7 +225,7 @@ body.single-airdrop .airdrop-thumbnail {
 	margin-bottom: 5px;
 }
 
-.airdrop-view:before {
+.airdrops-manager-view:before {
 	font-family: 'Font Awesome 5 Free';
 	content: '\f06b';
 	color: #fff;
@@ -233,32 +233,32 @@ body.single-airdrop .airdrop-thumbnail {
 	display: inline-block;
 }
 
-body.post-type-archive-airdrop .airdrop-single-summary {
+body.post-type-archive-airdrops-manager .airdrops-manager-single-summary {
 	margin-bottom: 0;
 }
 
-.airdrop-single-summary tr {
+.airdrops-manager-single-summary tr {
 	
 }
 
-.airdrop-summary-published p {
+.airdrops-manager-summary-published p {
 	color: #727272;
 	font-size: .9rem;
 	font-weight: 400;
 }
 
-.airdrop-rating:not(body.single-airdrop .airdrop-rating) {
+.airdrops-manager-rating:not(body.single-airdrops-manager .airdrops-manager-rating) {
 	display: inline-block;
 	width: 90%;
 	margin-bottom: 10px;
 }
 
-.airdrop-rating i {
+.airdrops-manager-rating i {
 	color: #f6a123;
 	font-size: 16px;
 }
 
 /*  Airdrop Sidebar  */
-.widget-airdrop .widget-title {
+.widget-airdrops-manager .widget-title {
 	font-size: 1.5rem;
 }

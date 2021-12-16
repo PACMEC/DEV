@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Airdrop
-Plugin URI: https://kadesthemes.com/wordpress-plugins/airdrop/
-Description: WP Airdrop Manager is a plugin allows you add and manager Airdrop, Bounty Hunt and ICO projects. Best fit for Cryptocurrency Affiliate site or Magazine or blog about Crypto.
-Author: Kades Themes
-Author URI: https://kadesthemes.com/
-Version: 1.0.5
+Plugin Name: Administrador de Airdrops
+Plugin URI: #
+Description: Administrador de Airdrops es un complemento que le permite agregar y administrar proyectos de Airdrop, Bounty Hunt e ICO. Se adapta mejor al sitio web de criptomonedas, foro o blog sobre criptomonedas.
+Author: PACMEC
+Author URI: #
+Version: 1.0.0
 Text Domain: airdrop
 License: GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: #
 */
 ?>
 <?php 

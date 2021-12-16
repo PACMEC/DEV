@@ -1,10 +1,10 @@
-This theme or plugin is comprised of two parts.
+Este tema o complemento se compone de dos partes.
 
-(1) the PHP code and integrated HTML are licensed under the General Public
-License (GPL). You will find a copy of the GPL in the same directory as this
-text file.
+(1) el código PHP y el HTML integrado tienen licencia del Público en general
+Licencia (GPL). Encontrará una copia de la GPL en el mismo directorio que este.
+Archivo de texto.
 
-(2) All other parts, but not limited to the CSS code, images, and design are
-licensed according to the terms of your purchased license.
+(2) Todas las demás partes, pero no limitadas al código CSS, las imágenes y el diseño son
+licenciado de acuerdo con los términos de su licencia comprada.
 
-Read more about licensing here: http://themeforest.net/licenses
+Lea más sobre licencias aquí: http://pacmec.co/licencias
