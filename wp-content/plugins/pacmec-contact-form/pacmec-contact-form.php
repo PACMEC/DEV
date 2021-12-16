@@ -3,8 +3,8 @@
 Plugin Name: Formularios de contacto
 Plugin URI: #
 Description: Solo otro complemento de formulario de contacto. Sencillo pero flexible.
-Author: FelipheGomez
-Author URI: https://github.com/FelipheGomez
+Author: PACMEC
+Author URI: #
 Text Domain: pacmec-contact-form
 Domain Path: /languages/
 Version: 1.0.0
