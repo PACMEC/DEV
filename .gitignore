@@ -1,7 +1,7 @@
 .htaccess
 wp-config.php
 wp-content/languages/*
-wp-content/plugins/*
+!wp-content/plugins/*
 
 
 !wp-content/plugins/admin-theme-pacmec/*

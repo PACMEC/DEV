@@ -1,0 +1,12 @@
+span.pcf-not-valid-tip {
+	direction: rtl;
+}
+
+.use-floating-validation-tip span.pcf-not-valid-tip {
+	left: auto;
+	right: 20%;
+}
+
+span.pcf-list-item {
+	margin: 0 1em 0 0;
+}
