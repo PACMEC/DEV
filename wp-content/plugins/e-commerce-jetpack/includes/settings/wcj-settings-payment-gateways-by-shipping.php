@@ -14,15 +14,15 @@ $use_shipping_instance = ( 'yes' === wcj_get_option( 'wcj_payment_gateways_by_sh
 $shipping_methods = ( $use_shipping_instance ? wcj_get_shipping_methods_instances() : wcj_get_shipping_methods() );
 $settings = array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_payment_gateways_by_shipping_general_options',
 	),
 	array(
-		'title'    => __( 'Use Shipping Instances', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Use Shipping Instances', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_payment_gateways_by_shipping_use_shipping_instance',
 		'default'  => 'no',
@@ -34,9 +34,9 @@ $settings = array(
 );
 $settings = array_merge( $settings, array(
 	array(
-		'title' => __( 'Payment Gateways', 'woocommerce-jetpack' ),
+		'title' => __( 'Payment Gateways', 'e-commerce-jetpack' ),
 		'type'  => 'title',
-		'desc'  => __( 'If payment gateway is only available for certain methods, set it up here. Leave blank to enable for all methods.', 'woocommerce-jetpack' ),
+		'desc'  => __( 'If payment gateway is only available for certain methods, set it up here. Leave blank to enable for all methods.', 'e-commerce-jetpack' ),
 		'id'    => 'wcj_payment_gateways_by_shipping_options',
 	),
 ) );

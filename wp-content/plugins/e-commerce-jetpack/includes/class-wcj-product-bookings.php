@@ -22,10 +22,10 @@ class WCJ_Product_Bookings extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_bookings';
-		$this->short_desc = __( 'Bookings', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add bookings products to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Bookings', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add bookings products to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-bookings';
-		$this->extra_desc = __( 'When enabled, module will add new "Booster: Bookings" meta box to each product\'s edit page.', 'woocommerce-jetpack' );
+		$this->extra_desc = __( 'When enabled, module will add new "Booster: Bookings" meta box to each product\'s edit page.', 'e-commerce-jetpack' );
 		parent::__construct();
 
 		if ( $this->is_enabled() ) {
@@ -137,7 +137,7 @@ class WCJ_Product_Bookings extends WCJ_Module {
 		wp_localize_script( 'wcj-bookings', 'ajax_object', array(
 			'ajax_url'            => admin_url( 'admin-ajax.php' ),
 			'product_id'          => get_the_ID(),
-			'wrong_dates_message' => wcj_get_option( 'wcj_product_bookings_message_date_to_before_date_from', __( '"Date to" must be after "Date from"', 'woocommerce-jetpack' ) ),
+			'wrong_dates_message' => wcj_get_option( 'wcj_product_bookings_message_date_to_before_date_from', __( '"Date to" must be after "Date from"', 'e-commerce-jetpack' ) ),
 		) );
 	}
 
@@ -202,7 +202,7 @@ class WCJ_Product_Bookings extends WCJ_Module {
 		}
 		if ( isset( $item['wcj_bookings_price'] ) ) {
 			if ( $is_cart ) {
-				$name .= '<dt>' . wcj_get_option( 'wcj_product_bookings_label_period', __( 'Period', 'woocommerce-jetpack' ) ) . ':' . '</dt>';
+				$name .= '<dt>' . wcj_get_option( 'wcj_product_bookings_label_period', __( 'Period', 'e-commerce-jetpack' ) ) . ':' . '</dt>';
 				$name .= '<dd>' . $item['wcj_bookings_date_from'] . ' - ' . $item['wcj_bookings_date_to'] . '</dd>';
 			} else {
 				$name .= ' | ' . $item['wcj_bookings_date_from'] . ' - ' . $item['wcj_bookings_date_to'];
@@ -234,17 +234,17 @@ class WCJ_Product_Bookings extends WCJ_Module {
 		$the_product = wc_get_product( $product_id );
 		if ( $this->is_bookings_product( $the_product ) ) {
 			if ( ! isset( $_POST['wcj_product_bookings_date_from'] ) || '' == $_POST['wcj_product_bookings_date_from'] ) {
-				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_no_date_from', __( '"Date from" must be set', 'woocommerce-jetpack' ) ), 'error' );
+				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_no_date_from', __( '"Date from" must be set', 'e-commerce-jetpack' ) ), 'error' );
 				return false;
 			}
 			if ( ! isset( $_POST['wcj_product_bookings_date_to'] ) || '' == $_POST['wcj_product_bookings_date_to'] ) {
-				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_no_date_to', __( '"Date to" must be set', 'woocommerce-jetpack' ) ), 'error' );
+				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_no_date_to', __( '"Date to" must be set', 'e-commerce-jetpack' ) ), 'error' );
 				return false;
 			}
 			$date_to   = strtotime( $_POST['wcj_product_bookings_date_to'] );
 			$date_from = strtotime( $_POST['wcj_product_bookings_date_from'] );
 			if ( $date_from >= $date_to ) {
-				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_date_to_before_date_from', __( '"Date to" must be after "Date from"', 'woocommerce-jetpack' ) ), 'error' );
+				wc_add_notice( wcj_get_option( 'wcj_product_bookings_message_date_to_before_date_from', __( '"Date to" must be after "Date from"', 'e-commerce-jetpack' ) ), 'error' );
 				return false;
 			}
 		}
@@ -286,7 +286,7 @@ class WCJ_Product_Bookings extends WCJ_Module {
 				$cart_item_data['wcj_bookings_price']     = $the_price;
 				$cart_item_data['wcj_bookings_date_from'] = $_POST['wcj_product_bookings_date_from'];
 				$cart_item_data['wcj_bookings_date_to']   = $_POST['wcj_product_bookings_date_to'];
-//				wc_add_notice( sprintf( __( 'Price for %d days: %s', 'woocommerce-jetpack' ), $days_diff, wc_price( $the_price ) ), 'notice' );
+//				wc_add_notice( sprintf( __( 'Price for %d days: %s', 'e-commerce-jetpack' ), $days_diff, wc_price( $the_price ) ), 'notice' );
 			}
 		}
 		return $cart_item_data;
@@ -394,7 +394,7 @@ class WCJ_Product_Bookings extends WCJ_Module {
 		) {
 			return $price_html;
 		}
-		return ( $this->is_bookings_product( $_product ) ) ? $price_html . ' ' . wcj_get_option( 'wcj_product_bookings_label_per_day', __( '/ day', 'woocommerce-jetpack' ) ) : $price_html;
+		return ( $this->is_bookings_product( $_product ) ) ? $price_html . ' ' . wcj_get_option( 'wcj_product_bookings_label_per_day', __( '/ day', 'e-commerce-jetpack' ) ) : $price_html;
 	}
 
 	/**
@@ -468,7 +468,7 @@ class WCJ_Product_Bookings extends WCJ_Module {
 		}
 		?><div class="error"><p><?php
 			echo '<div class="message">'
-				. __( 'Booster: Free plugin\'s version is limited to only one bookings product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of bookings products.', 'woocommerce-jetpack' )
+				. __( 'Booster: Free plugin\'s version is limited to only one bookings product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of bookings products.', 'e-commerce-jetpack' )
 				. '</div>';
 		?></p></div><?php
 	}

@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'    => __( 'Invalidate for roles', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Invalidate coupon for selected user roles.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Invalidate for roles', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Invalidate coupon for selected user roles.', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_coupon_by_user_role_invalid',
 		'default'  => '',
 		'type'     => 'select',

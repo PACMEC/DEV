@@ -21,9 +21,9 @@ class WCJ_Product_Custom_info extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_custom_info';
-		$this->short_desc = __( 'Product Info', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add additional info to category and single product pages (1 block allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add additional info to category and single product pages.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Info', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add additional info to category and single product pages (1 block allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add additional info to category and single product pages.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-info';
 		parent::__construct();
 

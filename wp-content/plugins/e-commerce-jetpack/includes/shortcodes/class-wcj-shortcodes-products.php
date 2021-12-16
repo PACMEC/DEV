@@ -346,14 +346,14 @@ if (!class_exists('WCJ_Products_Shortcodes')) :
 						// Run through all order's items
 						if ($item['product_id'] == $atts['product_id']) {
 							// Found sale!
-							return sprintf(__('%s ago', 'woocommerce-jetpack'), human_time_diff(get_the_time('U', $order_id), current_time('timestamp')));
+							return sprintf(__('%s ago', 'e-commerce-jetpack'), human_time_diff(get_the_time('U', $order_id), current_time('timestamp')));
 						}
 					}
 				}
 				$offset += $block_size;
 			}
 			// No sales found
-			return ('yes' === $atts['hide_if_no_sales'] ? '' : __('No sales yet.', 'woocommerce-jetpack'));
+			return ('yes' === $atts['hide_if_no_sales'] ? '' : __('No sales yet.', 'e-commerce-jetpack'));
 		}
 
 		/**
@@ -373,7 +373,7 @@ if (!class_exists('WCJ_Products_Shortcodes')) :
 					$return_html .= '<tr>';
 					foreach ($variation['attributes'] as $attribute_slug => $attribute_name) {
 						if ('' == $attribute_name) {
-							$attribute_name = __('Any', 'woocommerce-jetpack');
+							$attribute_name = __('Any', 'e-commerce-jetpack');
 						}
 						$return_html .= '<td>' . $attribute_name . '</td>';
 					}
@@ -1113,7 +1113,7 @@ if (!class_exists('WCJ_Products_Shortcodes')) :
 				}
 
 				// Heading Format
-				$atts['heading_format'] = 'from %level_min_qty% pcs.' === $atts['heading_format'] ? wcj_get_option('wcj_wholesale_price_table_sc_title_format', __('from %level_min_qty% pcs.', 'woocommerce-jetpack')) : $atts['heading_format'];
+				$atts['heading_format'] = 'from %level_min_qty% pcs.' === $atts['heading_format'] ? wcj_get_option('wcj_wholesale_price_table_sc_title_format', __('from %level_min_qty% pcs.', 'e-commerce-jetpack')) : $atts['heading_format'];
 
 				$level_max_qty = (isset($wholesale_price_levels[$i + 1]['quantity'])) ?
 					$atts['before_level_max_qty'] . ($wholesale_price_levels[$i + 1]['quantity'] - 1) : $atts['last_level_max_qty'];

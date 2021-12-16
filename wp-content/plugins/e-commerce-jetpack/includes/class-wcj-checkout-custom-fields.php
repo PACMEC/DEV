@@ -21,16 +21,16 @@ class WCJ_Checkout_Custom_Fields extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'checkout_custom_fields';
-		$this->short_desc = __( 'Checkout Custom Fields', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add custom fields to the checkout page (1 field allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add custom fields to the checkout page.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Checkout Custom Fields', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add custom fields to the checkout page (1 field allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add custom fields to the checkout page.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-checkout-custom-fields';
-		$this->extra_desc = sprintf( __( 'After setting Checkout Custom Fields, you can use below shortcode with meta_key to display the Product Input Fields value: %s', 'woocommerce-jetpack' ),
+		$this->extra_desc = sprintf( __( 'After setting Checkout Custom Fields, you can use below shortcode with meta_key to display the Product Input Fields value: %s', 'e-commerce-jetpack' ),
 			'<ol>' .
-				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'e-commerce-jetpack' ),
 					'<code>[wcj_order_checkout_field meta_key = "billing_wcj_checkout_field_&lt;field_id&gt;"]</code><br>field_id is the key of your Checkout Custom Fields, You will find key from Option Custom Field' ) .
 				'</li>' .
-				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function,<br> e.g.: %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function,<br> e.g.: %s', 'e-commerce-jetpack' ),
 					'<code>do_shortcode()</code>',
 					'<code>echo&nbsp;do_shortcode(&nbsp;\'[wcj_order_checkout_field meta_key = "billing_wcj_checkout_field_1]\'&nbsp;);</code>' ) .
 				'</li>' .

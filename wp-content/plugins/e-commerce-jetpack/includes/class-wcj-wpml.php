@@ -26,8 +26,8 @@ class WCJ_WPML extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'wpml';
-		$this->short_desc = __( 'Booster WPML', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Booster for WooCommerce basic WPML support.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Booster WPML', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Booster for WooCommerce basic WPML support.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-wpml';
 		parent::__construct();
 
@@ -187,7 +187,7 @@ class WCJ_WPML extends WCJ_Module {
 			return;
 		}
 		$this->create_wpml_xml_file();
-		$this->notice = __( 'File wpml-config.xml successfully regenerated!', 'woocommerce-jetpack' );
+		$this->notice = __( 'File wpml-config.xml successfully regenerated!', 'e-commerce-jetpack' );
 	}
 
 	/**

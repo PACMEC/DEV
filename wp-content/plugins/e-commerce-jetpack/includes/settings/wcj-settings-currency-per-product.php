@@ -20,34 +20,34 @@ foreach ( $all_currencies as $currency_key => $currency_name ) {
 */
 $settings = array(
 	array(
-		'title'    => __( 'Cart and Checkout Behaviour Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Cart and Checkout Behaviour Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_cart_options',
 	),
 	array(
-		'title'    => __( 'Cart and Checkout Behaviour', 'woocommerce-jetpack' ),
+		'title'    => __( 'Cart and Checkout Behaviour', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_cart_checkout',
 		'default'  => 'convert_shop_default',
 		'type'     => 'select',
 		'options'  => array(
-			'convert_shop_default'  => __( 'Convert to shop default currency', 'woocommerce-jetpack' ),
-			'leave_one_product'     => __( 'Leave product currency (allow only one product to be added to cart)', 'woocommerce-jetpack' ),
-			'leave_same_currency'   => __( 'Leave product currency (allow only same currency products to be added to cart)', 'woocommerce-jetpack' ),
-			'convert_last_product'  => __( 'Convert to currency of last product in cart', 'woocommerce-jetpack' ),
-			'convert_first_product' => __( 'Convert to currency of first product in cart', 'woocommerce-jetpack' ),
+			'convert_shop_default'  => __( 'Convert to shop default currency', 'e-commerce-jetpack' ),
+			'leave_one_product'     => __( 'Leave product currency (allow only one product to be added to cart)', 'e-commerce-jetpack' ),
+			'leave_same_currency'   => __( 'Leave product currency (allow only same currency products to be added to cart)', 'e-commerce-jetpack' ),
+			'convert_last_product'  => __( 'Convert to currency of last product in cart', 'e-commerce-jetpack' ),
+			'convert_first_product' => __( 'Convert to currency of first product in cart', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'    => __( 'Message', 'woocommerce-jetpack' ) . ': ' . __( 'Leave product currency (allow only one product to be added to cart)', 'woocommerce-jetpack' ),
+		'title'    => __( 'Message', 'e-commerce-jetpack' ) . ': ' . __( 'Leave product currency (allow only one product to be added to cart)', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_cart_checkout_leave_one_product',
-		'default'  => __( 'Only one product can be added to the cart. Clear the cart or finish the order, before adding another product to the cart.', 'woocommerce-jetpack' ),
+		'default'  => __( 'Only one product can be added to the cart. Clear the cart or finish the order, before adding another product to the cart.', 'e-commerce-jetpack' ),
 		'type'     => 'textarea',
 		'css'      => 'min-width:300px;width:66%',
 	),
 	array(
-		'title'    => __( 'Message', 'woocommerce-jetpack' ) . ': ' . __( 'Leave product currency (allow only same currency products to be added to cart)', 'woocommerce-jetpack' ),
+		'title'    => __( 'Message', 'e-commerce-jetpack' ) . ': ' . __( 'Leave product currency (allow only same currency products to be added to cart)', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_cart_checkout_leave_same_currency',
-		'default'  => __( 'Only products with same currency can be added to the cart. Clear the cart or finish the order, before adding products with another currency to the cart.', 'woocommerce-jetpack' ),
+		'default'  => __( 'Only products with same currency can be added to the cart. Clear the cart or finish the order, before adding products with another currency to the cart.', 'e-commerce-jetpack' ),
 		'type'     => 'textarea',
 		'css'      => 'min-width:300px;width:66%',
 	),
@@ -56,14 +56,14 @@ $settings = array(
 		'id'       => 'wcj_currency_per_product_cart_options',
 	),
 	array(
-		'title'    => __( 'Per Product Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Per Product Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_per_product_options',
 	),
 	array(
-		'title'    => __( 'Currency per Product', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'This will add meta box to each product\'s edit page', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency per Product', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'This will add meta box to each product\'s edit page', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_per_product',
 		'default'  => 'yes',
 		'type'     => 'checkbox',
@@ -73,35 +73,35 @@ $settings = array(
 		'id'       => 'wcj_currency_per_product_per_product_options',
 	),
 	array(
-		'title'    => __( 'Additional Options', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Save module\'s settings after changing this options to see new settings fields.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Additional Options', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Save module\'s settings after changing this options to see new settings fields.', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_additional_options',
 	),
 	array(
-		'title'    => __( 'Currency per Product Authors', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency per Product Authors', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_by_users_enabled',
 		'default'  => 'no',
 		'type'     => 'checkbox',
 	),
 	array(
-		'title'    => __( 'Currency per Product Authors User Roles', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency per Product Authors User Roles', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_by_user_roles_enabled',
 		'default'  => 'no',
 		'type'     => 'checkbox',
 	),
 	array(
-		'title'    => __( 'Currency per Product Categories', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency per Product Categories', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_by_product_cats_enabled',
 		'default'  => 'no',
 		'type'     => 'checkbox',
 	),
 	array(
-		'title'    => __( 'Currency per Product Tags', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency per Product Tags', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_by_product_tags_enabled',
 		'default'  => 'no',
 		'type'     => 'checkbox',
@@ -111,21 +111,21 @@ $settings = array(
 		'id'       => 'wcj_currency_per_product_additional_options',
 	),
 	array(
-		'title'    => __( 'Exchange Rates Updates Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Exchange Rates Updates Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_exchange_rate_update_options',
 	),
 	array(
-		'title'    => __( 'Exchange Rates Updates', 'woocommerce-jetpack' ),
+		'title'    => __( 'Exchange Rates Updates', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_exchange_rate_update',
 		'default'  => 'manual',
 		'type'     => 'select',
 		'options'  => array(
-			'manual' => __( 'Enter Rates Manually', 'woocommerce-jetpack' ),
-			'auto'   => __( 'Automatically via Currency Exchange Rates module', 'woocommerce-jetpack' ),
+			'manual' => __( 'Enter Rates Manually', 'e-commerce-jetpack' ),
+			'auto'   => __( 'Automatically via Currency Exchange Rates module', 'e-commerce-jetpack' ),
 		),
 		'desc'     => ( '' == apply_filters( 'booster_message', '', 'desc' ) ) ?
-			__( 'Visit', 'woocommerce-jetpack' ) . ' <a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=prices_and_currencies&section=currency_exchange_rates' ) . '">' . __( 'Currency Exchange Rates module', 'woocommerce-jetpack' ) . '</a>'
+			__( 'Visit', 'e-commerce-jetpack' ) . ' <a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=prices_and_currencies&section=currency_exchange_rates' ) . '">' . __( 'Currency Exchange Rates module', 'e-commerce-jetpack' ) . '</a>'
 			:
 			apply_filters( 'booster_message', '', 'desc' ),
 		'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
@@ -135,13 +135,13 @@ $settings = array(
 		'id'       => 'wcj_currency_per_product_exchange_rate_update_options',
 	),
 	array(
-		'title'    => __( 'Currencies Options', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Exchange rates for currencies won\'t be used for products if "Cart and Checkout Behaviour" is set to one of "Leave product currency ..." options. However it may be used for shipping price conversion.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currencies Options', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Exchange rates for currencies won\'t be used for products if "Cart and Checkout Behaviour" is set to one of "Leave product currency ..." options. However it may be used for shipping price conversion.', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_currencies_options',
 	),
 	array(
-		'title'    => __( 'Total Currencies', 'woocommerce-jetpack' ),
+		'title'    => __( 'Total Currencies', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_total_number',
 		'default'  => 1,
 		'type'     => 'custom_number',
@@ -177,7 +177,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 	}
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => __( 'Currency', 'woocommerce-jetpack' ) . ' #' . $i,
+			'title'    => __( 'Currency', 'e-commerce-jetpack' ) . ' #' . $i,
 			'id'       => 'wcj_currency_per_product_currency_' . $i,
 			'default'  => $currency_from,
 			'type'     => 'select',
@@ -196,7 +196,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 	if ( 'yes' === wcj_get_option( 'wcj_currency_per_product_by_users_enabled', 'no' ) ) {
 		$settings = array_merge( $settings, array(
 			array(
-				'desc'     => __( 'Product Authors', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Product Authors', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_currency_per_product_users_' . $i,
 				'default'  => '',
 				'type'     => 'multiselect',
@@ -208,7 +208,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 	if ( 'yes' === wcj_get_option( 'wcj_currency_per_product_by_user_roles_enabled', 'no' ) ) {
 		$settings = array_merge( $settings, array(
 			array(
-				'desc'     => __( 'Product Authors User Roles', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Product Authors User Roles', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_currency_per_product_user_roles_' . $i,
 				'default'  => '',
 				'type'     => 'multiselect',
@@ -220,7 +220,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 	if ( 'yes' === wcj_get_option( 'wcj_currency_per_product_by_product_cats_enabled', 'no' ) ) {
 		$settings = array_merge( $settings, array(
 			array(
-				'desc'     => __( 'Product Categories', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Product Categories', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_currency_per_product_product_cats_' . $i,
 				'default'  => '',
 				'type'     => 'multiselect',
@@ -232,7 +232,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 	if ( 'yes' === wcj_get_option( 'wcj_currency_per_product_by_product_tags_enabled', 'no' ) ) {
 		$settings = array_merge( $settings, array(
 			array(
-				'desc'     => __( 'Product Tags', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Product Tags', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_currency_per_product_product_tags_' . $i,
 				'default'  => '',
 				'type'     => 'multiselect',
@@ -248,14 +248,14 @@ $settings = array_merge( $settings, array(
 		'id'       => 'wcj_currency_per_product_currencies_options',
 	),
 	array(
-		'title'    => __( 'Advanced Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Advanced Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_currency_per_product_advanced_options',
 	),
 	array(
-		'title'    => __( 'Advanced: Save Calculated Products Prices', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'This may help if you are experiencing compatibility issues with other plugins. If you are facing your price will not be displayed properly then enable this option.', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Advanced: Save Calculated Products Prices', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'This may help if you are experiencing compatibility issues with other plugins. If you are facing your price will not be displayed properly then enable this option.', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_per_product_save_prices',
 		'default'  => 'no',
 		'type'     => 'checkbox',

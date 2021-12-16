@@ -24,9 +24,9 @@ class WCJ_Stock extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'stock';
-		$this->short_desc = __( 'Stock', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Products stock display management. Custom Stock HTML (Plus). Remove Stock Display (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Products stock display management.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Stock', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Products stock display management. Custom Stock HTML (Plus). Remove Stock Display (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Products stock display management.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-stock';
 		parent::__construct();
 

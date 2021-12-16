@@ -26,17 +26,17 @@ if ( $_product->is_type( 'variable' ) ) {
 $options = array(
 	array(
 		'type'       => 'title',
-		'title'      => __( 'Per Product Settings (press Update after changing)', 'woocommerce-jetpack' ),
+		'title'      => __( 'Per Product Settings (press Update after changing)', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_price_by_user_role_per_product_settings_enabled',
 		'default'    => 'no',
 		'type'       => 'select',
 		'options'    => array(
-			'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-			'no'  => __( 'No', 'woocommerce-jetpack' ),
+			'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+			'no'  => __( 'No', 'e-commerce-jetpack' ),
 		),
-		'title'      => __( 'Enabled', 'woocommerce-jetpack' ),
+		'title'      => __( 'Enabled', 'e-commerce-jetpack' ),
 	),
 );
 if ( 'yes' === get_post_meta( wcj_get_product_id( $_product ), '_' . 'wcj_price_by_user_role_per_product_settings_enabled', true ) ) {
@@ -89,7 +89,7 @@ if ( 'yes' === get_post_meta( wcj_get_product_id( $_product ), '_' . 'wcj_price_
 						'name'       => 'wcj_price_by_user_role_regular_price_' . $role_key . '_' . $product_id,
 						'default'    => '',
 						'type'       => 'price',
-						'title'      => __( 'Regular Price', 'woocommerce-jetpack' ) . $copy_buttons_regular,
+						'title'      => __( 'Regular Price', 'e-commerce-jetpack' ) . $copy_buttons_regular,
 						'desc'       => $desc,
 						'product_id' => $product_id,
 						'meta_name'  => '_' . 'wcj_price_by_user_role_regular_price_' . $role_key,
@@ -98,7 +98,7 @@ if ( 'yes' === get_post_meta( wcj_get_product_id( $_product ), '_' . 'wcj_price_
 						'name'       => 'wcj_price_by_user_role_sale_price_' . $role_key . '_' . $product_id,
 						'default'    => '',
 						'type'       => 'price',
-						'title'      => __( 'Sale Price', 'woocommerce-jetpack' ) . $copy_buttons_sale,
+						'title'      => __( 'Sale Price', 'e-commerce-jetpack' ) . $copy_buttons_sale,
 						'desc'       => $desc,
 						'product_id' => $product_id,
 						'meta_name'  => '_' . 'wcj_price_by_user_role_sale_price_' . $role_key,
@@ -110,7 +110,7 @@ if ( 'yes' === get_post_meta( wcj_get_product_id( $_product ), '_' . 'wcj_price_
 						'name'       => 'wcj_price_by_user_role_multiplier_' . $role_key . '_' . $product_id,
 						'default'    => '',
 						'type'       => 'price',
-						'title'      => __( 'Multiplier', 'woocommerce-jetpack' ),
+						'title'      => __( 'Multiplier', 'e-commerce-jetpack' ),
 						'desc'       => $desc,
 						'product_id' => $product_id,
 						'meta_name'  => '_' . 'wcj_price_by_user_role_multiplier_' . $role_key,
@@ -130,10 +130,10 @@ if ( 'yes' === get_post_meta( wcj_get_product_id( $_product ), '_' . 'wcj_price_
 					'default'    => 'no',
 					'type'       => 'select',
 					'options'    => array(
-						'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-						'no'  => __( 'No', 'woocommerce-jetpack' ),
+						'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+						'no'  => __( 'No', 'e-commerce-jetpack' ),
 					),
-					'title'      => __( 'Make Empty Price', 'woocommerce-jetpack' ),
+					'title'      => __( 'Make Empty Price', 'e-commerce-jetpack' ),
 					'desc'       => $desc,
 					'product_id' => $product_id,
 					'meta_name'  => '_' . 'wcj_price_by_user_role_empty_price_' . $role_key,

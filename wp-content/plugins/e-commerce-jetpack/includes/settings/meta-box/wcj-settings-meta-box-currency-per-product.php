@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $currency_codes = array();
-$currency_codes['']                                     = __( 'Default', 'woocommerce-jetpack' );
+$currency_codes['']                                     = __( 'Default', 'e-commerce-jetpack' );
 $currency_codes[ wcj_get_option( 'woocommerce_currency' ) ] = wcj_get_option( 'woocommerce_currency' );
 $currency_codes[ get_woocommerce_currency() ]           = get_woocommerce_currency();
 $total_number = apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_currency_per_product_total_number', 1 ) );
@@ -22,9 +22,9 @@ $options = array(
 		'name'       => 'wcj_currency_per_product_currency',
 		'default'    => '',
 		'type'       => 'select',
-		'title'      => __( 'Product Currency', 'woocommerce-jetpack' ),
+		'title'      => __( 'Product Currency', 'e-commerce-jetpack' ),
 		'options'    => $currency_codes,
-		'tooltip'    => __( 'Update product after you change this field\'s value.', 'woocommerce-jetpack' ),
+		'tooltip'    => __( 'Update product after you change this field\'s value.', 'e-commerce-jetpack' ),
 	),
 );
 return $options;

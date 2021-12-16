@@ -23,11 +23,11 @@ class WCJ_Product_By_User extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_by_user';
-		$this->short_desc = __( 'User Products', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Let users add new products from the frontend. Image additional field (Plus). Custom Taxonomies (1 allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Let users add new products from the frontend.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'User Products', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Let users add new products from the frontend. Image additional field (Plus). Custom Taxonomies (1 allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Let users add new products from the frontend.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-by-user';
-		$this->extra_desc = __( 'Use <strong>[wcj_product_add_new]</strong> shortcode to add product upload form to frontend.', 'woocommerce-jetpack' );
+		$this->extra_desc = __( 'Use <strong>[wcj_product_add_new]</strong> shortcode to add product upload form to frontend.', 'e-commerce-jetpack' );
 		parent::__construct();
 
 		// My Products endpoint
@@ -94,7 +94,7 @@ class WCJ_Product_By_User extends WCJ_Module {
 		$is_endpoint = isset( $wp_query->query_vars['wcj-my-products'] );
 		if ( $is_endpoint && ! is_admin() && is_main_query() && in_the_loop() && is_account_page() ) {
 			// New page title.
-			$title = __( 'Products', 'woocommerce-jetpack' );
+			$title = __( 'Products', 'e-commerce-jetpack' );
 			remove_filter( 'the_title', array( $this, 'change_my_products_endpoint_title' ) );
 		}
 		return $title;
@@ -129,8 +129,8 @@ class WCJ_Product_By_User extends WCJ_Module {
 	 * @todo    check if any user's products exist
 	 */
 	function add_my_products_tab_my_account_page( $items ) {
-//		$items['wcj-my-products'] = __( 'My Products', 'woocommerce-jetpack' );
-		$new_items = array( 'wcj-my-products' => __( 'Products', 'woocommerce-jetpack' ) );
+//		$items['wcj-my-products'] = __( 'My Products', 'e-commerce-jetpack' );
+		$new_items = array( 'wcj-my-products' => __( 'Products', 'e-commerce-jetpack' ) );
 		return $this->insert_after_helper( $items, $new_items, 'orders' );
 	}
 
@@ -152,7 +152,7 @@ class WCJ_Product_By_User extends WCJ_Module {
 			$product_id = $_GET['wcj_delete_product'];
 			$post_author_id = get_post_field( 'post_author', $product_id );
 			if ( $user_ID != $post_author_id ) {
-				echo '<p>' . __( 'Wrong user ID!', 'woocommerce-jetpack' ) . '</p>';
+				echo '<p>' . __( 'Wrong user ID!', 'e-commerce-jetpack' ) . '</p>';
 			} else {
 				wp_delete_post( $product_id, true );
 			}
@@ -161,7 +161,7 @@ class WCJ_Product_By_User extends WCJ_Module {
 			$product_id = $_GET['wcj_edit_product'];
 			$post_author_id = get_post_field( 'post_author', $product_id );
 			if ( $user_ID != $post_author_id ) {
-				echo '<p>' . __( 'Wrong user ID!', 'woocommerce-jetpack' ) . '</p>';
+				echo '<p>' . __( 'Wrong user ID!', 'e-commerce-jetpack' ) . '</p>';
 			} else {
 				echo do_shortcode( '[wcj_product_add_new product_id="' . $product_id . '"]' );
 			}
@@ -193,9 +193,9 @@ class WCJ_Product_By_User extends WCJ_Module {
 			$offset += $block_size;
 		}
 		if ( 0 != count( $products ) ) {
-//			echo '<h2>' . __( 'My Products', 'woocommerce-jetpack' ) . '</h2>';
+//			echo '<h2>' . __( 'My Products', 'e-commerce-jetpack' ) . '</h2>';
 			$table_data = array();
-			$table_data[] = array( '', __( 'Status', 'woocommerce-jetpack' ), __( 'Title', 'woocommerce-jetpack' ), __( 'Actions', 'woocommerce-jetpack' ) );
+			$table_data[] = array( '', __( 'Status', 'e-commerce-jetpack' ), __( 'Title', 'e-commerce-jetpack' ), __( 'Actions', 'e-commerce-jetpack' ) );
 			$i = 0;
 			foreach ( $products as $_product_id => $_product_data ) {
 				$i++;
@@ -203,8 +203,8 @@ class WCJ_Product_By_User extends WCJ_Module {
 					/* $i . ' [' . $_product_id . ']' . */ get_the_post_thumbnail( $_product_id, array( 25, 25 ) ),
 					'<code>'. $_product_data['status'] . '</code>',
 					$_product_data['title'],
-					'<a class="button" href="' . add_query_arg( 'wcj_edit_product',   $_product_id, remove_query_arg( array( 'wcj_edit_product_image_delete', 'wcj_delete_product' ) ) ) . '">' . __( 'Edit', 'woocommerce-jetpack' ) . '</a>' . ' ' .
-					'<a class="button" href="' . add_query_arg( 'wcj_delete_product', $_product_id, remove_query_arg( array( 'wcj_edit_product_image_delete', 'wcj_edit_product' ) ) ) . '" onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')">' . __( 'Delete', 'woocommerce-jetpack' ) . '</a>',
+					'<a class="button" href="' . add_query_arg( 'wcj_edit_product',   $_product_id, remove_query_arg( array( 'wcj_edit_product_image_delete', 'wcj_delete_product' ) ) ) . '">' . __( 'Edit', 'e-commerce-jetpack' ) . '</a>' . ' ' .
+					'<a class="button" href="' . add_query_arg( 'wcj_delete_product', $_product_id, remove_query_arg( array( 'wcj_edit_product_image_delete', 'wcj_edit_product' ) ) ) . '" onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')">' . __( 'Delete', 'e-commerce-jetpack' ) . '</a>',
 				);
 			}
 			echo wcj_get_table_html( $table_data, array( 'table_class' => 'shop_table shop_table_responsive my_account_orders' ) );

@@ -35,9 +35,9 @@ class WCJ_Currency_Reports {
 			$args = array(
 				'parent' => false,
 				'id'     => $parent,
-				'title'  => __( 'Reports currency:', 'woocommerce-jetpack' ) . ' ' . $the_current_code,
+				'title'  => __( 'Reports currency:', 'e-commerce-jetpack' ) . ' ' . $the_current_code,
 				'href'   => false,
-				'meta'   => array( 'title' => __( 'Show reports only in', 'woocommerce-jetpack' ) . ' ' . $the_current_code, ),
+				'meta'   => array( 'title' => __( 'Show reports only in', 'e-commerce-jetpack' ) . ' ' . $the_current_code, ),
 			);
 			$wp_admin_bar->add_node( $args );
 
@@ -75,7 +75,7 @@ class WCJ_Currency_Reports {
 					'id'     => $parent . '_' . $code,
 					'title'  => $code,
 					'href'   => add_query_arg( 'currency', $code ),
-					'meta'   => array( 'title' => __( 'Show reports only in', 'woocommerce-jetpack' ) . ' ' . $code, ),
+					'meta'   => array( 'title' => __( 'Show reports only in', 'e-commerce-jetpack' ) . ' ' . $code, ),
 				);
 				$wp_admin_bar->add_node( $args );
 			}

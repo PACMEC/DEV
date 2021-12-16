@@ -21,17 +21,17 @@ if ( ! function_exists( 'wcj_crons_get_all_intervals' ) ) {
 	 */
 	function wcj_crons_get_all_intervals( $action = '', $skip_intervals = array() ) {
 		if ( '' === $action ) {
-			$action = __( 'Update', 'woocommerce-jetpack' );
+			$action = __( 'Update', 'e-commerce-jetpack' );
 		}
 		$return = array(
-			'minutely'   => sprintf( __( '%s every minute', 'woocommerce-jetpack' ), $action ),
-			'minute_5'   => sprintf( __( '%s every 5 minutes', 'woocommerce-jetpack' ), $action ),
-			'minute_15'  => sprintf( __( '%s every 15 minutes', 'woocommerce-jetpack' ), $action ),
-			'minute_30'  => sprintf( __( '%s every 30 minutes', 'woocommerce-jetpack' ), $action ),
-			'hourly'     => sprintf( __( '%s hourly', 'woocommerce-jetpack' ), $action ),
-			'twicedaily' => sprintf( __( '%s twice daily', 'woocommerce-jetpack' ), $action ),
-			'daily'      => sprintf( __( '%s daily', 'woocommerce-jetpack' ), $action ),
-			'weekly'     => sprintf( __( '%s weekly', 'woocommerce-jetpack' ), $action ),
+			'minutely'   => sprintf( __( '%s every minute', 'e-commerce-jetpack' ), $action ),
+			'minute_5'   => sprintf( __( '%s every 5 minutes', 'e-commerce-jetpack' ), $action ),
+			'minute_15'  => sprintf( __( '%s every 15 minutes', 'e-commerce-jetpack' ), $action ),
+			'minute_30'  => sprintf( __( '%s every 30 minutes', 'e-commerce-jetpack' ), $action ),
+			'hourly'     => sprintf( __( '%s hourly', 'e-commerce-jetpack' ), $action ),
+			'twicedaily' => sprintf( __( '%s twice daily', 'e-commerce-jetpack' ), $action ),
+			'daily'      => sprintf( __( '%s daily', 'e-commerce-jetpack' ), $action ),
+			'weekly'     => sprintf( __( '%s weekly', 'e-commerce-jetpack' ), $action ),
 		);
 		if ( ! empty( $skip_intervals ) ) {
 			foreach ( $skip_intervals as $skip_interval ) {
@@ -77,9 +77,9 @@ if ( ! function_exists( 'wcj_crons_get_next_event_time_message' ) ) {
 		if ( '' != wcj_get_option( $time_option_name, '' ) ) {
 			$scheduled_time_diff = wcj_get_option( $time_option_name, '' ) - time();
 			if ( $scheduled_time_diff > 60 ) {
-				return '<br><em>' . sprintf( __( '%s till next run.', 'woocommerce-jetpack' ), human_time_diff( 0, $scheduled_time_diff ) ) . '</em>';
+				return '<br><em>' . sprintf( __( '%s till next run.', 'e-commerce-jetpack' ), human_time_diff( 0, $scheduled_time_diff ) ) . '</em>';
 			} elseif ( $scheduled_time_diff > 0 ) {
-				return '<br><em>' . sprintf( __( '%s seconds till next run.', 'woocommerce-jetpack' ), $scheduled_time_diff ) . '</em>';
+				return '<br><em>' . sprintf( __( '%s seconds till next run.', 'e-commerce-jetpack' ), $scheduled_time_diff ) . '</em>';
 			}
 		}
 		return '';
@@ -96,23 +96,23 @@ if ( ! function_exists( 'wcj_crons_add_custom_intervals' ) ) {
 	function wcj_crons_add_custom_intervals( $schedules ) {
 		$schedules['weekly'] = array(
 			'interval' => 604800,
-			'display'  => __( 'Once weekly', 'woocommerce-jetpack' )
+			'display'  => __( 'Once weekly', 'e-commerce-jetpack' )
 		);
 		$schedules['minute_30'] = array(
 			'interval' => 1800,
-			'display'  => __( 'Once every 30 minutes', 'woocommerce-jetpack' )
+			'display'  => __( 'Once every 30 minutes', 'e-commerce-jetpack' )
 		);
 		$schedules['minute_15'] = array(
 			'interval' => 900,
-			'display'  => __( 'Once every 15 minutes', 'woocommerce-jetpack' )
+			'display'  => __( 'Once every 15 minutes', 'e-commerce-jetpack' )
 		);
 		$schedules['minute_5'] = array(
 			'interval' => 300,
-			'display'  => __( 'Once every 5 minutes', 'woocommerce-jetpack' )
+			'display'  => __( 'Once every 5 minutes', 'e-commerce-jetpack' )
 		);
 		$schedules['minutely'] = array(
 			'interval' => 60,
-			'display'  => __( 'Once a minute', 'woocommerce-jetpack' )
+			'display'  => __( 'Once a minute', 'e-commerce-jetpack' )
 		);
 		return $schedules;
 	}

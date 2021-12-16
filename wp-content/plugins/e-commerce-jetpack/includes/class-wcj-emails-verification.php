@@ -22,9 +22,9 @@ class WCJ_Email_Verification extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'emails_verification';
-		$this->short_desc = __( 'Email Verification', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add WooCommerce email verification. Customize verification email subject, content and template (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add WooCommerce email verification.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Email Verification', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add WooCommerce email verification. Customize verification email subject, content and template (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add WooCommerce email verification.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-email-verification';
 		parent::__construct();
 
@@ -114,7 +114,7 @@ class WCJ_Email_Verification extends WCJ_Module {
 	 * @todo    (maybe) add option to enable/disable the column
 	 */
 	function add_verified_email_column( $columns ) {
-		$columns['wcj_is_verified_email'] = __( 'Verified', 'woocommerce-jetpack' );
+		$columns['wcj_is_verified_email'] = __( 'Verified', 'e-commerce-jetpack' );
 		return $columns;
 	}
 
@@ -127,8 +127,8 @@ class WCJ_Email_Verification extends WCJ_Module {
 	function render_verified_email_column( $output, $column_name, $user_id ) {
 		if ( 'wcj_is_verified_email' === $column_name ) {
 			$replaced_values = array(
-				'1' => '<span title="' . __( 'Email verified', 'woocommerce-jetpack' ) . '">&#9745;</span>',
-				'0' => '<span title="' . __( 'Email not verified', 'woocommerce-jetpack' ) . '">&#10006;</span>',
+				'1' => '<span title="' . __( 'Email verified', 'e-commerce-jetpack' ) . '">&#9745;</span>',
+				'0' => '<span title="' . __( 'Email not verified', 'e-commerce-jetpack' ) . '">&#10006;</span>',
 			);
 			return str_replace( array_keys( $replaced_values ), array_values( $replaced_values ), get_user_meta( $user_id, 'wcj_is_activated', true ) );
 		}
@@ -166,7 +166,7 @@ class WCJ_Email_Verification extends WCJ_Module {
 				}
 			}
 			$error_message = do_shortcode( wcj_get_option( 'wcj_emails_verification_error_message',
-				__( 'Your account has to be activated before you can login. You can resend email with verification link by clicking <a href="%resend_verification_url%">here</a>.', 'woocommerce-jetpack' )
+				__( 'Your account has to be activated before you can login. You can resend email with verification link by clicking <a href="%resend_verification_url%">here</a>.', 'e-commerce-jetpack' )
 			) );
 			$error_message = str_replace( '%resend_verification_url%', add_query_arg( 'wcj_user_id', $userdata->ID, wc_get_page_permalink( 'myaccount' ) ), $error_message );
 			$userdata = new WP_Error( 'booster_email_verified_error', $error_message );
@@ -186,19 +186,19 @@ class WCJ_Email_Verification extends WCJ_Module {
 		$code          = mb_strtoupper(strval(bin2hex(openssl_random_pseudo_bytes(16))));
 		$url           = wp_nonce_url(add_query_arg( 'wcj_verify_email', base64_encode( json_encode( array( 'id' => $user_id, 'code' => $code  ) ) ), wc_get_page_permalink( 'myaccount' ) ));
 		$email_content = do_shortcode( apply_filters( 'booster_option',
-			__( 'Please click the following link to verify your email:<br><br><a href="%verification_url%">%verification_url%</a>', 'woocommerce-jetpack' ),
+			__( 'Please click the following link to verify your email:<br><br><a href="%verification_url%">%verification_url%</a>', 'e-commerce-jetpack' ),
 			get_option( 'wcj_emails_verification_email_content',
-				__( 'Please click the following link to verify your email:<br><br><a href="%verification_url%">%verification_url%</a>', 'woocommerce-jetpack' ) ) ) );
+				__( 'Please click the following link to verify your email:<br><br><a href="%verification_url%">%verification_url%</a>', 'e-commerce-jetpack' ) ) ) );
 		$email_content = str_replace( '%verification_url%', $url, $email_content );
 		$email_subject = do_shortcode( apply_filters( 'booster_option',
-			__( 'Please activate your account', 'woocommerce-jetpack' ),
+			__( 'Please activate your account', 'e-commerce-jetpack' ),
 			get_option( 'wcj_emails_verification_email_subject',
-				__( 'Please activate your account', 'woocommerce-jetpack' ) ) ) );
+				__( 'Please activate your account', 'e-commerce-jetpack' ) ) ) );
 		update_user_meta( $user_id, 'wcj_is_activated', '0' );
 		update_user_meta( $user_id, 'wcj_activation_code', $code );
 		if ( 'wc' === apply_filters( 'booster_option', 'plain', wcj_get_option( 'wcj_emails_verification_email_template', 'plain' ) ) ) {
 			$email_content = wcj_wrap_in_wc_email_template( $email_content,
-				get_option( 'wcj_emails_verification_email_template_wc_heading', __( 'Activate your account', 'woocommerce-jetpack' ) ) );
+				get_option( 'wcj_emails_verification_email_template_wc_heading', __( 'Activate your account', 'e-commerce-jetpack' ) ) );
 		}
 		wc_mail( $user_info->user_email, $email_subject, $email_content );
 	}
@@ -215,7 +215,7 @@ class WCJ_Email_Verification extends WCJ_Module {
 				$data = json_decode( base64_decode( $_GET['wcj_verified_email'] ), true );
 				if ( ! empty( $data['id'] ) && ! empty( $data['code'] ) && get_user_meta( $data['id'], 'wcj_activation_code', true ) == $data['code'] ) {
 					wc_add_notice( do_shortcode( wcj_get_option( 'wcj_emails_verification_success_message',
-						__( '<strong>Success:</strong> Your account has been activated!', 'woocommerce-jetpack' ) ) ) );
+						__( '<strong>Success:</strong> Your account has been activated!', 'e-commerce-jetpack' ) ) ) );
 				}
 			}
 		} elseif ( isset( $_GET['wcj_verify_email'] ) ) {
@@ -232,23 +232,23 @@ class WCJ_Email_Verification extends WCJ_Module {
 			} elseif ( ! empty( $data['id'] ) ) {
 				$_notice = do_shortcode(
 					get_option( 'wcj_emails_verification_failed_message',
-						__( '<strong>Error:</strong> Activation failed, please contact our administrator. You can resend email with verification link by clicking <a href="%resend_verification_url%">here</a>.', 'woocommerce-jetpack' )
+						__( '<strong>Error:</strong> Activation failed, please contact our administrator. You can resend email with verification link by clicking <a href="%resend_verification_url%">here</a>.', 'e-commerce-jetpack' )
 					)
 				);
 				$_notice = str_replace( '%resend_verification_url%', add_query_arg( 'wcj_user_id', $data['id'], wc_get_page_permalink( 'myaccount' ) ), $_notice );
 				wc_add_notice( $_notice, 'error' );
 			} else {
 				$_notice = wcj_get_option( 'wcj_emails_verification_failed_message_no_user_id',
-					__( '<strong>Error:</strong> Activation failed, please contact our administrator.', 'woocommerce-jetpack' ) );
+					__( '<strong>Error:</strong> Activation failed, please contact our administrator.', 'e-commerce-jetpack' ) );
 				wc_add_notice( $_notice, 'error' );
 			}
 		} elseif ( isset( $_GET['wcj_activate_account_message'] ) ) {
 			wc_add_notice( do_shortcode( wcj_get_option( 'wcj_emails_verification_activation_message',
-				__( 'Thank you for your registration. Your account has to be activated before you can login. Please check your email.', 'woocommerce-jetpack' ) ) ) );
+				__( 'Thank you for your registration. Your account has to be activated before you can login. Please check your email.', 'e-commerce-jetpack' ) ) ) );
 		} elseif ( isset( $_GET['wcj_user_id'] ) ) {
 			$this->reset_and_mail_activation_link( $_GET['wcj_user_id'] );
 			wc_add_notice( do_shortcode( wcj_get_option( 'wcj_emails_verification_email_resend_message',
-				__( '<strong>Success:</strong> Your activation email has been resent. Please check your email.', 'woocommerce-jetpack' ) ) ) );
+				__( '<strong>Success:</strong> Your activation email has been resent. Please check your email.', 'e-commerce-jetpack' ) ) ) );
 		}
 	}
 

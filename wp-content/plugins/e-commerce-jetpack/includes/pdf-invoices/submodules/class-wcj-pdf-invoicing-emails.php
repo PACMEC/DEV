@@ -21,7 +21,7 @@ class WCJ_PDF_Invoicing_Emails extends WCJ_Module {
 
 		$this->id         = 'pdf_invoicing_emails';
 		$this->parent_id  = 'pdf_invoicing';
-		$this->short_desc = __( 'Email Options', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Email Options', 'e-commerce-jetpack' );
 		$this->desc       = '';
 		parent::__construct( 'submodule' );
 

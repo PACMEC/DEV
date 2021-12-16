@@ -40,12 +40,12 @@ if (!class_exists('WCJ_Related_Products')) :
 		{
 
 			$this->id         = 'related_products';
-			$this->short_desc = __('Related Products', 'woocommerce-jetpack');
-			$this->desc       = __('Change displayed related products number, columns, order; relate by tag, category, product attribute or manually on per product basis (Plus). Hide related products completely.', 'woocommerce-jetpack');
-			$this->desc_pro   = __('Change displayed related products number, columns, order; relate by tag, category, product attribute or manually on per product basis. Hide related products completely.', 'woocommerce-jetpack');
+			$this->short_desc = __('Related Products', 'e-commerce-jetpack');
+			$this->desc       = __('Change displayed related products number, columns, order; relate by tag, category, product attribute or manually on per product basis (Plus). Hide related products completely.', 'e-commerce-jetpack');
+			$this->desc_pro   = __('Change displayed related products number, columns, order; relate by tag, category, product attribute or manually on per product basis. Hide related products completely.', 'e-commerce-jetpack');
 			$this->link_slug  = 'woocommerce-related-products';
 			$this->extra_desc = sprintf(
-				__('You may need to <a href="%s">clear all products transients</a> to immediately see results on frontend after changing module\'s settings. Alternatively you can just update each product individually to clear its transients.', 'woocommerce-jetpack'),
+				__('You may need to <a href="%s">clear all products transients</a> to immediately see results on frontend after changing module\'s settings. Alternatively you can just update each product individually to clear its transients.', 'e-commerce-jetpack'),
 				add_query_arg('wcj_clear_all_products_transients', 'yes')
 			);
 			parent::__construct();

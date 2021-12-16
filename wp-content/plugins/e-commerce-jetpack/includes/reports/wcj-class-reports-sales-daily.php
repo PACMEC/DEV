@@ -161,7 +161,7 @@ class WCJ_Reports_Product_Sales_Daily {
 	function output_report_header() {
 		// Settings link and dates menu
 		$settings_link = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=reports' ) . '">' .
-			'<< ' . __( 'Reports Settings', 'woocommerce-jetpack' ) . '</a>';
+			'<< ' . __( 'Reports Settings', 'e-commerce-jetpack' ) . '</a>';
 		$menu = '';
 		$menu .= '<ul class="subsubsub">';
 		foreach ( array_merge( wcj_get_reports_standard_ranges(), wcj_get_reports_custom_ranges() ) as $custom_range ) {
@@ -178,15 +178,15 @@ class WCJ_Reports_Product_Sales_Daily {
 		$filter_form .= '<input type="hidden" name="page" value="'       . $_GET['page']     . '" />';
 		$filter_form .= '<input type="hidden" name="tab" value="'        . $_GET['tab']      . '" />';
 		$filter_form .= '<input type="hidden" name="report" value="'     . $_GET['report']   . '" />';
-		$filter_form .= '<label style="font-style:italic;" for="start_date">' . __( 'From:', 'woocommerce-jetpack' ) . '</label>' . ' ' .
+		$filter_form .= '<label style="font-style:italic;" for="start_date">' . __( 'From:', 'e-commerce-jetpack' ) . '</label>' . ' ' .
 			'<input type="text" display="date" dateformat="' . wcj_date_format_php_to_js( 'Y-m-d' ) . '" name="start_date" title="" value="' . $this->start_date . '" />';
 		$filter_form .= ' ';
-		$filter_form .= '<label style="font-style:italic;" for="end_date">' . __( 'To:', 'woocommerce-jetpack' ) . '</label>' . ' ' .
+		$filter_form .= '<label style="font-style:italic;" for="end_date">' . __( 'To:', 'e-commerce-jetpack' ) . '</label>' . ' ' .
 			'<input type="text" display="date" dateformat="' . wcj_date_format_php_to_js( 'Y-m-d' ) . '" name="end_date" title="" value="' . $this->end_date . '" />';
 		$filter_form .= ' ';
-		$filter_form .= '<label style="font-style:italic;" for="product_title">' . __( 'Product:', 'woocommerce-jetpack' ) . '</label>' . ' ' .
+		$filter_form .= '<label style="font-style:italic;" for="product_title">' . __( 'Product:', 'e-commerce-jetpack' ) . '</label>' . ' ' .
 			'<input type="text" name="product_title" id="product_title" title="" value="' . $this->product_title . '" />';
-		$filter_form .= '<input type="submit" value="' . __( 'Filter', 'woocommerce-jetpack' ) . '" />';
+		$filter_form .= '<input type="submit" value="' . __( 'Filter', 'e-commerce-jetpack' ) . '" />';
 		$filter_form .= '</form>';
 		// Final result
 		return '<p>' . $settings_link . '</p>' . '<p>' . $menu . '</p>' . '<p>' . $filter_form . '</p>';
@@ -273,15 +273,15 @@ class WCJ_Reports_Product_Sales_Daily {
 		foreach ( $report_columns as $report_column ) {
 			switch ( $report_column ) {
 				case 'item_quantity':
-					$totals_row[] = '<strong>' . sprintf( __( 'Total: %d', 'woocommerce-jetpack' ), $totals['qty'] ) . '</strong>';
+					$totals_row[] = '<strong>' . sprintf( __( 'Total: %d', 'e-commerce-jetpack' ), $totals['qty'] ) . '</strong>';
 					$display_totals = true;
 					break;
 				case 'sum':
-					$totals_row[] = '<strong>' . sprintf( __( 'Total: %s', 'woocommerce-jetpack' ), wc_price( $totals['sum'] ) ) . '</strong>';
+					$totals_row[] = '<strong>' . sprintf( __( 'Total: %s', 'e-commerce-jetpack' ), wc_price( $totals['sum'] ) ) . '</strong>';
 					$display_totals = true;
 					break;
 				case 'profit':
-					$totals_row[] = '<strong>' . sprintf( __( 'Total: %s', 'woocommerce-jetpack' ), wc_price( $totals['profit'] ) ) . '</strong>';
+					$totals_row[] = '<strong>' . sprintf( __( 'Total: %s', 'e-commerce-jetpack' ), wc_price( $totals['profit'] ) ) . '</strong>';
 					$display_totals = true;
 					break;
 				default:
@@ -293,8 +293,8 @@ class WCJ_Reports_Product_Sales_Daily {
 		}
 		$result = ( ! empty( $this->sales_by_day ) ) ?
 			wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'none' ) ) .
-				'<p><em>' . sprintf( __( 'Total orders: %d', 'woocommerce-jetpack' ), $this->total_orders ) . '</em></p>' :
-			'<p><em>' . __( 'No sales data for current period.', 'woocommerce-jetpack' ) . '</em></p>';
+				'<p><em>' . sprintf( __( 'Total orders: %d', 'e-commerce-jetpack' ), $this->total_orders ) . '</em></p>' :
+			'<p><em>' . __( 'No sales data for current period.', 'e-commerce-jetpack' ) . '</em></p>';
 		return $result;
 	}
 }

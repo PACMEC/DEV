@@ -22,9 +22,9 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'admin_orders_list';
-		$this->short_desc = __( 'Admin Orders List', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize admin orders list: add custom columns (1 allowed in free version); add multiple status filtering (1 allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Customize admin orders list: add custom columns; add multiple status filtering.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Admin Orders List', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize admin orders list: add custom columns (1 allowed in free version); add multiple status filtering (1 allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Customize admin orders list: add custom columns; add multiple status filtering.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-admin-orders-list';
 		parent::__construct();
 
@@ -206,7 +206,7 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 		$class                               = ( isset( $wp_query->query['post_status'] ) && is_array( $wp_query->query['post_status'] ) && $all_not_completed_statuses === $wp_query->query['post_status'] ) ? 'current' : '';
 		$query_string                        = remove_query_arg( array( 'post_status', 'wcj_admin_filter_statuses' ) );
 		$query_string                        = add_query_arg( 'post_status', $all_not_completed_statuses_param, $query_string );
-		$views['wcj_statuses_not_completed'] = '<a href="' . esc_url( $query_string ) . '" class="' . esc_attr( $class ) . '">' . __( 'Not Completed', 'woocommerce-jetpack' ) . '</a>';
+		$views['wcj_statuses_not_completed'] = '<a href="' . esc_url( $query_string ) . '" class="' . esc_attr( $class ) . '">' . __( 'Not Completed', 'e-commerce-jetpack' ) . '</a>';
 		return $views;
 	}
 
@@ -241,7 +241,7 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 			'<span id="wcj_admin_filter_shop_order_statuses">' :
 			'<select multiple name="wcj_admin_filter_statuses[]" id="wcj_admin_filter_shop_order_statuses" class="chosen_select">';
 		$num_posts = wp_count_posts( 'shop_order', 'readable' );
-		foreach ( array_merge( wc_get_order_statuses(), array( 'trash' => __( 'Trash', 'woocommerce-jetpack' ) ) ) as $status_id => $status_title ) {
+		foreach ( array_merge( wc_get_order_statuses(), array( 'trash' => __( 'Trash', 'e-commerce-jetpack' ) ) ) as $status_id => $status_title ) {
 			$total_number = ( isset( $num_posts->{$status_id} ) ) ? $num_posts->{$status_id} : 0;
 			if ( $total_number > 0 ) {
 				$html .= ( 'checkboxes' === $type ) ?
@@ -324,7 +324,7 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 		if ( in_array( $typenow, wc_get_order_types( 'order-meta-boxes' ) ) ) {
 			if ( 'yes' === wcj_get_option( 'wcj_orders_list_custom_columns_country', 'no' ) ) {
 				$selected_coutry = isset( $_GET['country'] ) ? $_GET['country'] : 'all';
-				$countries = array_merge( array( 'all' => __( 'All countries', 'woocommerce-jetpack' ) ), wcj_get_countries() );
+				$countries = array_merge( array( 'all' => __( 'All countries', 'e-commerce-jetpack' ) ), wcj_get_countries() );
 				echo '<select id="country" name="country">';
 				foreach ( $countries as $code => $name ) {
 					echo '<option value="' . $code . '" ' . selected( $code, $selected_coutry, false ) . '>' . $name . '</option>';
@@ -333,7 +333,7 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 			}
 			if ( 'yes' === wcj_get_option( 'wcj_orders_list_custom_columns_currency', 'no' ) ) {
 				$selected_currency = isset( $_GET['currency'] ) ? $_GET['currency'] : 'all';
-				$currencies = array_merge( array( 'all' => __( 'All currencies', 'woocommerce-jetpack' ) ), wcj_get_woocommerce_currencies_and_symbols() );
+				$currencies = array_merge( array( 'all' => __( 'All currencies', 'e-commerce-jetpack' ) ), wcj_get_woocommerce_currencies_and_symbols() );
 				echo '<select id="currency" name="currency">';
 				foreach ( $currencies as $code => $name ) {
 					echo '<option value="' . $code . '" ' . selected( $code, $selected_currency, false ) . '>' . $name . '</option>';
@@ -373,10 +373,10 @@ class WCJ_Admin_Orders_List extends WCJ_Module {
 	 */
 	function add_order_columns( $columns ) {
 		if ( 'yes' === wcj_get_option( 'wcj_orders_list_custom_columns_country', 'no' ) ) {
-			$columns['country'] = __( 'Billing Country', 'woocommerce-jetpack' );
+			$columns['country'] = __( 'Billing Country', 'e-commerce-jetpack' );
 		}
 		if ( 'yes' === wcj_get_option( 'wcj_orders_list_custom_columns_currency', 'no' ) ) {
-			$columns['currency'] = __( 'Currency Code', 'woocommerce-jetpack' );
+			$columns['currency'] = __( 'Currency Code', 'e-commerce-jetpack' );
 		}
 		$total_number = apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_orders_list_custom_columns_total_number', 1 ) );
 		for ( $i = 1; $i <= $total_number; $i++ ) {

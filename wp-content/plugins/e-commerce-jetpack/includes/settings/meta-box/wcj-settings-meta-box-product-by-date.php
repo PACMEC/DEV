@@ -14,24 +14,24 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Enable/Disable per Product Settings', 'woocommerce-jetpack' ),
+		'title'    => __( 'Enable/Disable per Product Settings', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_product_by_date_enabled',
 		'default'  => 'no',
 		'type'     => 'select',
 		'options'  => array(
-			'no'  => __( 'Disabled', 'woocommerce-jetpack' ),
-			'yes' => __( 'Enabled', 'woocommerce-jetpack' ),
+			'no'  => __( 'Disabled', 'e-commerce-jetpack' ),
+			'yes' => __( 'Enabled', 'e-commerce-jetpack' ),
 		),
-//		'tooltip'  => __( 'Date formats:', 'woocommerce-jetpack' ) . ' ' . '<code>DD-DD</code>' . ', ' . '<code>DD-DD,DD-DD</code>' . ', ' . '<code>-</code>' . '.',
+//		'tooltip'  => __( 'Date formats:', 'e-commerce-jetpack' ) . ' ' . '<code>DD-DD</code>' . ', ' . '<code>DD-DD,DD-DD</code>' . ', ' . '<code>-</code>' . '.',
 	),
 	array(
-		'title'    => __( 'Direct Date', 'woocommerce-jetpack' ),
+		'title'    => __( 'Direct Date', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_product_by_date_direct_date',
 		'default'  => '',
 		'type'     => 'date',
-		'tooltip'  => __( 'Fill this if you want to set one date from which the product will be available.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'If this field is filled in, monthly settings fields are ignored.', 'woocommerce-jetpack' ) . '<br /><br />' .
-			__( 'If you are not using english, please set some numeric format like m/d/Y on "Direct Date Admin Input Date Format" option', 'woocommerce-jetpack' ),
+		'tooltip'  => __( 'Fill this if you want to set one date from which the product will be available.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'If this field is filled in, monthly settings fields are ignored.', 'e-commerce-jetpack' ) . '<br /><br />' .
+			__( 'If you are not using english, please set some numeric format like m/d/Y on "Direct Date Admin Input Date Format" option', 'e-commerce-jetpack' ),
 		'custom_attributes' => ( '' != ( $format = wcj_get_option( 'wcj_product_by_date_direct_date_format', 'm/d/Y' ) ) ?
 			'dateformat="' . wcj_date_format_php_to_js( $format ) . '"' : '' ),
 	),

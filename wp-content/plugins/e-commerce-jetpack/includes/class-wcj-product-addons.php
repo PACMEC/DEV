@@ -27,10 +27,10 @@ class WCJ_Product_Addons extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_addons';
-		$this->short_desc = __( 'Product Addons', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add (paid/free/discount) addons to products (1 addon allowed in free version).', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Addons', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add (paid/free/discount) addons to products (1 addon allowed in free version).', 'e-commerce-jetpack' );
 		$this->desc_pro   = __( 'Add (paid/free/discount) addons to products.<br>
-							You can add <code>item_product_addons</code> into columns parameter of <code>[wcj_order_items_table]</code> to show selected product addon in pdf.', 'woocommerce-jetpack' );
+							You can add <code>item_product_addons</code> into columns parameter of <code>[wcj_order_items_table]</code> to show selected product addon in pdf.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-addons';
 
 		parent::__construct();
@@ -277,7 +277,7 @@ class WCJ_Product_Addons extends WCJ_Module {
 			}
 			if ( 'yes' === $addon['is_required'] ) {
 				if ( ! isset( $_POST[ $addon['checkbox_key'] ] ) && empty( $addon['default'] ) ) {
-					wc_add_notice( __( 'Some of the required addons are not selected!', 'woocommerce-jetpack' ), 'error' );
+					wc_add_notice( __( 'Some of the required addons are not selected!', 'e-commerce-jetpack' ), 'error' );
 					return false;
 				}
 			}
@@ -292,7 +292,7 @@ class WCJ_Product_Addons extends WCJ_Module {
 	 * @since   2.5.3
 	 */
 	function get_the_notice() {
-		return __( 'Booster: Free plugin\'s version is limited to only three products with per product addons enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of products with per product addons.', 'woocommerce-jetpack' );
+		return __( 'Booster: Free plugin\'s version is limited to only three products with per product addons enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of products with per product addons.', 'e-commerce-jetpack' );
 	}
 
 	/**

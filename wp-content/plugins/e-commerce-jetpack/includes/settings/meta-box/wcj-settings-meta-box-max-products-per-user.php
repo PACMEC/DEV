@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'   => __( 'Max Qty', 'woocommerce-jetpack' ),
+		'title'   => __( 'Max Qty', 'e-commerce-jetpack' ),
 		'name'    => 'wcj_max_products_per_user_qty',
 		'default' => 0,
 		'type'    => 'number',
-		'tooltip' => __( 'If set to zero, and "All Products" section is enabled - global maximum quantity will be used; in case if "All Products" section is disabled - no maximum quantity will be used.', 'woocommerce-jetpack' ),
+		'tooltip' => __( 'If set to zero, and "All Products" section is enabled - global maximum quantity will be used; in case if "All Products" section is disabled - no maximum quantity will be used.', 'e-commerce-jetpack' ),
 		'custom_attributes' => 'min="0"',
 	),
 );

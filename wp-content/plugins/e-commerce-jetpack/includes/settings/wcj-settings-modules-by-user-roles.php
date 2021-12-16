@@ -25,8 +25,8 @@ foreach ( $user_roles as $role_id => $role_desc ) {
 			'id'        => 'wcj_modules_by_user_roles_' . $role_id,
 		),
 		array(
-			'title'     => __( 'Enable Modules', 'woocommerce-jetpack' ),
-			'desc_tip'  => __( 'Select modules which should be enabled for current user role. All other modules will be disabled. Ignored if left empty.', 'woocommerce-jetpack' ),
+			'title'     => __( 'Enable Modules', 'e-commerce-jetpack' ),
+			'desc_tip'  => __( 'Select modules which should be enabled for current user role. All other modules will be disabled. Ignored if left empty.', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_modules_by_user_roles_incl_' . $role_id,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -34,8 +34,8 @@ foreach ( $user_roles as $role_id => $role_desc ) {
 			'options'   => $modules,
 		),
 		array(
-			'title'     => __( 'Disable Modules', 'woocommerce-jetpack' ),
-			'desc_tip'  => __( 'Select modules which should be disabled for current user role. All other modules will be enabled. Ignored if left empty.', 'woocommerce-jetpack' ),
+			'title'     => __( 'Disable Modules', 'e-commerce-jetpack' ),
+			'desc_tip'  => __( 'Select modules which should be disabled for current user role. All other modules will be enabled. Ignored if left empty.', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_modules_by_user_roles_excl_' . $role_id,
 			'default'   => '',
 			'type'      => 'multiselect',

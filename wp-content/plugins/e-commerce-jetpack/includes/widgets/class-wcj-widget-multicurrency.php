@@ -24,9 +24,9 @@ class WCJ_Widget_Multicurrency extends WCJ_Widget {
 			case 'id_base':
 				return 'wcj_widget_multicurrency';
 			case 'name':
-				return __( 'Booster - Multicurrency Switcher', 'woocommerce-jetpack' );
+				return __( 'Booster - Multicurrency Switcher', 'e-commerce-jetpack' );
 			case 'description':
-				return __( 'Booster: Multicurrency Switcher Widget', 'woocommerce-jetpack' );
+				return __( 'Booster: Multicurrency Switcher Widget', 'e-commerce-jetpack' );
 		}
 	}
 
@@ -38,7 +38,7 @@ class WCJ_Widget_Multicurrency extends WCJ_Widget {
 	 */
 	function get_content( $instance ) {
 		if ( ! wcj_is_module_enabled( 'multicurrency' ) ) {
-			return __( 'Multicurrency module not enabled!', 'woocommerce-jetpack' );
+			return __( 'Multicurrency module not enabled!', 'e-commerce-jetpack' );
 		} else {
 			switch ( $instance['switcher_type'] ) {
 				case 'link_list':
@@ -66,47 +66,47 @@ class WCJ_Widget_Multicurrency extends WCJ_Widget {
 	function get_options() {
 		return array(
 			array(
-				'title'    => __( 'Title', 'woocommerce-jetpack' ),
+				'title'    => __( 'Title', 'e-commerce-jetpack' ),
 				'id'       => 'title',
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Type', 'woocommerce-jetpack' ),
+				'title'    => __( 'Type', 'e-commerce-jetpack' ),
 				'id'       => 'switcher_type',
 				'default'  => 'drop_down',
 				'type'     => 'select',
 				'options'  => array(
-					'drop_down'  => __( 'Drop down', 'woocommerce-jetpack' ),
-					'radio_list' => __( 'Radio list', 'woocommerce-jetpack' ),
-					'link_list'  => __( 'Link list', 'woocommerce-jetpack' ),
+					'drop_down'  => __( 'Drop down', 'e-commerce-jetpack' ),
+					'radio_list' => __( 'Radio list', 'e-commerce-jetpack' ),
+					'link_list'  => __( 'Link list', 'e-commerce-jetpack' ),
 				),
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Form Method', 'woocommerce-jetpack' ),
-				'desc'     => '* ' . __( 'HTML form method for "Drop down" and "Radio list" types.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Form Method', 'e-commerce-jetpack' ),
+				'desc'     => '* ' . __( 'HTML form method for "Drop down" and "Radio list" types.', 'e-commerce-jetpack' ),
 				'id'       => 'form_method',
 				'default'  => 'post',
 				'type'     => 'select',
 				'options'  => array(
-					'post'  => __( 'Post', 'woocommerce-jetpack' ),
-					'get'   => __( 'Get', 'woocommerce-jetpack' ),
+					'post'  => __( 'Post', 'e-commerce-jetpack' ),
+					'get'   => __( 'Get', 'e-commerce-jetpack' ),
 				),
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Class', 'woocommerce-jetpack' ),
-				'desc'     => '* ' . __( 'HTML class for "Drop down" type.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Class', 'e-commerce-jetpack' ),
+				'desc'     => '* ' . __( 'HTML class for "Drop down" type.', 'e-commerce-jetpack' ),
 				'id'       => 'class',
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Style', 'woocommerce-jetpack' ),
-				'desc'     => '* ' . __( 'HTML style for "Drop down" type.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Style', 'e-commerce-jetpack' ),
+				'desc'     => '* ' . __( 'HTML style for "Drop down" type.', 'e-commerce-jetpack' ),
 				'id'       => 'style',
 				'default'  => '',
 				'type'     => 'text',

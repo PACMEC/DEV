@@ -22,8 +22,8 @@ class WCJ_Product_Open_Pricing extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_open_pricing';
-		$this->short_desc = __( 'Product Open Pricing (Name Your Price)', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Let your store customers enter price for the product manually.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Open Pricing (Name Your Price)', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Let your store customers enter price for the product manually.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-open-pricing-name-your-price';
 		parent::__construct();
 
@@ -75,7 +75,7 @@ class WCJ_Product_Open_Pricing extends WCJ_Module {
 	 * @since   2.8.0
 	 */
 	function add_product_column_open_pricing( $columns ) {
-		$columns['wcj_open_pricing'] = __( 'Open Pricing', 'woocommerce-jetpack' );
+		$columns['wcj_open_pricing'] = __( 'Open Pricing', 'e-commerce-jetpack' );
 		return $columns;
 	}
 
@@ -219,7 +219,7 @@ class WCJ_Product_Open_Pricing extends WCJ_Module {
 		}
 		?><div class="error"><p><?php
 			echo '<div class="message">'
-				. __( 'Booster: Free plugin\'s version is limited to only one open pricing product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of open pricing products.', 'woocommerce-jetpack' )
+				. __( 'Booster: Free plugin\'s version is limited to only one open pricing product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of open pricing products.', 'e-commerce-jetpack' )
 				. '</div>';
 		?></p></div><?php
 	}
@@ -331,18 +331,18 @@ class WCJ_Product_Open_Pricing extends WCJ_Module {
 		if ( $this->is_open_price_product( $the_product ) ) {
 			// Empty price
 			if ( ! isset( $_POST['wcj_open_price'] ) || '' === $_POST['wcj_open_price'] ) {
-				wc_add_notice( wcj_get_option( 'wcj_product_open_price_messages_required', __( 'Price is required!', 'woocommerce-jetpack' ) ), 'error' );
+				wc_add_notice( wcj_get_option( 'wcj_product_open_price_messages_required', __( 'Price is required!', 'e-commerce-jetpack' ) ), 'error' );
 				return false;
 			}
 			// Min & Max
 			if ( ( $min_price = $this->maybe_convert_price_currency( get_post_meta( $product_id, '_' . 'wcj_product_open_price_min_price', true ) ) ) > 0 && $_POST['wcj_open_price'] < $min_price ) {
 				wc_add_notice( wcj_handle_replacements( array( '%price%' => $this->wc_price_shop_currency( $_POST['wcj_open_price'] ), '%min_price%' => $this->wc_price_shop_currency( $min_price ) ),
-					get_option( 'wcj_product_open_price_messages_to_small', __( 'Entered price is too small!', 'woocommerce-jetpack' ) ) ), 'error' );
+					get_option( 'wcj_product_open_price_messages_to_small', __( 'Entered price is too small!', 'e-commerce-jetpack' ) ) ), 'error' );
 				return false;
 			}
 			if ( ( $max_price = $this->maybe_convert_price_currency( get_post_meta( $product_id, '_' . 'wcj_product_open_price_max_price', true ) ) ) > 0 && $_POST['wcj_open_price'] > $max_price ) {
 				wc_add_notice( wcj_handle_replacements( array( '%price%' => $this->wc_price_shop_currency( $_POST['wcj_open_price'] ), '%max_price%' => $this->wc_price_shop_currency( $max_price ) ),
-					get_option( 'wcj_product_open_price_messages_to_big', __( 'Entered price is too big!', 'woocommerce-jetpack' ) ) ), 'error' );
+					get_option( 'wcj_product_open_price_messages_to_big', __( 'Entered price is too big!', 'e-commerce-jetpack' ) ) ), 'error' );
 				return false;
 			}
 		}
@@ -436,7 +436,7 @@ class WCJ_Product_Open_Pricing extends WCJ_Module {
 		$the_product = wc_get_product();
 		if ( $this->is_open_price_product( $the_product ) ) {
 			// Title
-			$title = wcj_get_option( 'wcj_product_open_price_label_frontend', __( 'Name Your Price', 'woocommerce-jetpack' ) );
+			$title = wcj_get_option( 'wcj_product_open_price_label_frontend', __( 'Name Your Price', 'e-commerce-jetpack' ) );
 			// Prices
 			$_product_id   = wcj_get_product_id_or_variation_parent_id( $the_product );
 			$min_price     = $this->maybe_convert_price_currency( get_post_meta( $_product_id, '_' . 'wcj_product_open_price_min_price', true ) );

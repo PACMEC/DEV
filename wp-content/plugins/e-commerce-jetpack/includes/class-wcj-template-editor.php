@@ -22,8 +22,8 @@ class WCJ_Template_Editor extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'template_editor';
-		$this->short_desc = __( 'Template Editor', 'woocommerce-jetpack' );
-		$this->desc       = __( 'WooCommerce template editor.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Template Editor', 'e-commerce-jetpack' );
+		$this->desc       = __( 'WooCommerce template editor.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-template-editor';
 		parent::__construct();
 

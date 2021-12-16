@@ -16,7 +16,7 @@ foreach ( $invoice_types as $invoice_type ) {
 	// Font family
 	$font_family_option = ( $is_full_fonts ?
 		array(
-			'title'    => __( 'Font Family', 'woocommerce-jetpack' ),
+			'title'    => __( 'Font Family', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_general_font_family',
 			'default'  => 'helvetica',
 			'type'     => 'select',
@@ -34,7 +34,7 @@ foreach ( $invoice_types as $invoice_type ) {
 			) ),
 		) :
 		array(
-			'title'    => __( 'Font Family', 'woocommerce-jetpack' ),
+			'title'    => __( 'Font Family', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_general_font_family_fallback',
 			'default'  => 'helvetica',
 			'type'     => 'select',
@@ -53,7 +53,7 @@ foreach ( $invoice_types as $invoice_type ) {
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_styling_options',
 		),
 		array(
-			'title'    => __( 'CSS', 'woocommerce-jetpack' ),
+			'title'    => __( 'CSS', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_css',
 			'default'  => $this->get_default_css_template( $invoice_type['id'] ),
 			'type'     => 'textarea',
@@ -63,14 +63,14 @@ foreach ( $invoice_types as $invoice_type ) {
 	array( $font_family_option ),
 	array(
 		array(
-			'title'    => __( 'Font Size', 'woocommerce-jetpack' ),
+			'title'    => __( 'Font Size', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_general_font_size',
 			'default'  => 8,
 			'type'     => 'number',
 		),
 		array(
-			'title'    => __( 'Make Font Shadowed', 'woocommerce-jetpack' ),
-			'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+			'title'    => __( 'Make Font Shadowed', 'e-commerce-jetpack' ),
+			'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_general_font_shadowed',
 			'default'  => 'no',
 			'type'     => 'checkbox',

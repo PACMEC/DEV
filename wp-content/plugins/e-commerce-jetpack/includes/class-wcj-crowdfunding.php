@@ -22,32 +22,32 @@ class WCJ_Crowdfunding extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'crowdfunding';
-		$this->short_desc = __( 'Crowdfunding', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add crowdfunding products to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Crowdfunding', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add crowdfunding products to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-crowdfunding';
-		$this->extra_desc = __( 'When enabled, module will add Crowdfunding metabox to product edit.', 'woocommerce-jetpack' ) . '<br>' .
+		$this->extra_desc = __( 'When enabled, module will add Crowdfunding metabox to product edit.', 'e-commerce-jetpack' ) . '<br>' .
 		'<ol>' .
 			'<li>' .
 			sprintf(
-				__( 'To add crowdfunding info to the product, use <a href="%s" target="_blank">Booster\'s crowdfunding shortcodes</a>.', 'woocommerce-jetpack' ),
+				__( 'To add crowdfunding info to the product, use <a href="%s" target="_blank">Booster\'s crowdfunding shortcodes</a>.', 'e-commerce-jetpack' ),
 				'https://booster.io/category/shortcodes/products-crowdfunding/'
 			) .
 			'</li>' .
 			'<li>' .
 			sprintf(
-				__( 'Shortcodes could be used for example in <a href="%s">Product Info module</a>.', 'woocommerce-jetpack' ),
+				__( 'Shortcodes could be used for example in <a href="%s">Product Info module</a>.', 'e-commerce-jetpack' ),
 				admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=products&section=product_custom_info' )
 			) .
 			'</li>' .
 			'<li>' .
 			sprintf(
-				__( 'To change add to cart button labels use <a href="%s">Add to Cart Labels module</a>.', 'woocommerce-jetpack' ),
+				__( 'To change add to cart button labels use <a href="%s">Add to Cart Labels module</a>.', 'e-commerce-jetpack' ),
 				admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=labels&section=add_to_cart' )
 			).
 			'</li>' .
 			'<li>' .
 			sprintf(
-				__( 'If you want to allow customers to choose dynamic price, Use <a href="%s">Product Open Pricing (Name Your Price) module</a>.', 'woocommerce-jetpack' ),
+				__( 'If you want to allow customers to choose dynamic price, Use <a href="%s">Product Open Pricing (Name Your Price) module</a>.', 'e-commerce-jetpack' ),
 				admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=prices_and_currencies&section=product_open_pricing' )
 			).
 			'</li>' .

@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-$tip = sprintf( __( 'For the list of available shortcodes, please visit %s.', 'woocommerce-jetpack' ),
+$tip = sprintf( __( 'For the list of available shortcodes, please visit %s.', 'e-commerce-jetpack' ),
 	'<a target="_blank" href="https://booster.io/category/shortcodes/?utm_source=shortcodes_list&utm_medium=module_button&utm_campaign=booster_documentation">' .
 		'https://booster.io/category/shortcodes/' .
 	'</a>'
@@ -25,7 +25,7 @@ foreach ( $invoice_types as $invoice_type ) {
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_templates_options',
 		),
 		array(
-			'title'    => __( 'HTML Template', 'woocommerce-jetpack' ),
+			'title'    => __( 'HTML Template', 'e-commerce-jetpack' ),
 			'desc'     => $tip,
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_template',
 			'default'  => $this->get_default_template( $invoice_type['id'] ),
@@ -33,7 +33,7 @@ foreach ( $invoice_types as $invoice_type ) {
 			'css'      => 'width:100%;height:500px;',
 		),
 		array(
-			'title'    => __( 'Save all templates', 'woocommerce-jetpack' ),
+			'title'    => __( 'Save all templates', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_template_save_all',
 			'type'     => 'wcj_save_settings_button',
 		),

@@ -38,8 +38,8 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 		 */
 		function init( $instance_id ) {
 			$this->id                 = 'booster_custom_shipping_w_zones';
-			$this->method_title       = wcj_get_option( 'wcj_shipping_custom_shipping_w_zones_admin_title', __( 'Booster: Custom Shipping', 'woocommerce-jetpack' ) );
-			$this->method_description = __( 'Booster: Custom Shipping Method', 'woocommerce-jetpack' );
+			$this->method_title       = wcj_get_option( 'wcj_shipping_custom_shipping_w_zones_admin_title', __( 'Booster: Custom Shipping', 'e-commerce-jetpack' ) );
+			$this->method_description = __( 'Booster: Custom Shipping Method', 'e-commerce-jetpack' );
 
 			$this->instance_id = absint( $instance_id );
 			$this->supports    = array(
@@ -178,28 +178,28 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 		 */
 		function init_instance_form_fields() {
 			$type_options = array(
-				'flat_rate'                    => __( 'Flat rate', 'woocommerce-jetpack' ),
-				'by_total_cart_weight'         => __( 'By total cart weight', 'woocommerce-jetpack' ),
-				'by_total_cart_weight_table'   => __( 'By total cart weight table', 'woocommerce-jetpack' ),
-				'by_total_cart_quantity'       => __( 'By total cart quantity', 'woocommerce-jetpack' ),
+				'flat_rate'                    => __( 'Flat rate', 'e-commerce-jetpack' ),
+				'by_total_cart_weight'         => __( 'By total cart weight', 'e-commerce-jetpack' ),
+				'by_total_cart_weight_table'   => __( 'By total cart weight table', 'e-commerce-jetpack' ),
+				'by_total_cart_quantity'       => __( 'By total cart quantity', 'e-commerce-jetpack' ),
 			);
 			$type_options = apply_filters( 'booster_option', $type_options, array_merge( $type_options, array(
-				'by_total_cart_quantity_table' => __( 'By total cart quantity table', 'woocommerce-jetpack' ),
+				'by_total_cart_quantity_table' => __( 'By total cart quantity table', 'e-commerce-jetpack' ),
 			) ) );
 			$this->instance_form_fields = array(
 				'title' => array(
 					'title'       => __( 'Title', 'woocommerce' ),
 					'type'        => 'text',
 					'description' => __( 'This controls the title which the user sees during checkout.', 'woocommerce' ),
-					'default'     => __( 'Custom Shipping', 'woocommerce-jetpack' ),
+					'default'     => __( 'Custom Shipping', 'e-commerce-jetpack' ),
 					'desc_tip'    => true,
 					'css'         => 'width:100%',
 				),
 				'type' => array(
 					'title'       => __( 'Type', 'woocommerce' ),
 					'type'        => 'select',
-					'description' => __( 'Cost calculation type.', 'woocommerce-jetpack' ) . ' ' .
-					                 apply_filters( 'booster_message', '', 'desc_advanced_no_link', array( 'option' => __( 'By Total Cart Quantity Table', 'woocommerce-jetpack' ) ) ),
+					'description' => __( 'Cost calculation type.', 'e-commerce-jetpack' ) . ' ' .
+					                 apply_filters( 'booster_message', '', 'desc_advanced_no_link', array( 'option' => __( 'By Total Cart Quantity Table', 'e-commerce-jetpack' ) ) ),
 					'default'     => 'flat_rate',
 					'desc_tip'    => true,
 					'options'     => $type_options,
@@ -208,28 +208,28 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 				'cost' => array(
 					'title'       => __( 'Cost', 'woocommerce' ),
 					'type'        => 'text',
-					'description' => __( 'Cost. If calculating by weight - then cost per one weight unit. If calculating by quantity - then cost per one piece.', 'woocommerce-jetpack' ),
+					'description' => __( 'Cost. If calculating by weight - then cost per one weight unit. If calculating by quantity - then cost per one piece.', 'e-commerce-jetpack' ),
 					'default'     => 0,
 					'desc_tip'    => true,
 					'css'         => 'width:100%',
 				),
 				'cost_rounding' => array(
-					'title'       => __( 'Cost Rounding', 'woocommerce-jetpack' ),
-					'desc_tip'    => __( 'How the final cost will be rounded.', 'woocommerce-jetpack' ),
+					'title'       => __( 'Cost Rounding', 'e-commerce-jetpack' ),
+					'desc_tip'    => __( 'How the final cost will be rounded.', 'e-commerce-jetpack' ),
 					'css'         => 'width:100%',
 					'default'     => 'no_round',
 					'type'        => 'select',
 					'options'     => array(
-						'no_round'   => __( 'No rounding', 'woocommerce-jetpack' ),
-						'round'      => __( 'Round', 'woocommerce-jetpack' ),
-						'round_up'   => __( 'Round up', 'woocommerce-jetpack' ),
-						'round_down' => __( 'Round down', 'woocommerce-jetpack' ),
+						'no_round'   => __( 'No rounding', 'e-commerce-jetpack' ),
+						'round'      => __( 'Round', 'e-commerce-jetpack' ),
+						'round_up'   => __( 'Round up', 'e-commerce-jetpack' ),
+						'round_down' => __( 'Round down', 'e-commerce-jetpack' ),
 					),
 				),
 				'min_weight' => array(
 					'title'       => __( 'Min Weight', 'woocommerce' ),
 					'type'        => 'number',
-					'description' => __( 'Minimum total cart weight. Set zero to disable.', 'woocommerce-jetpack' ),
+					'description' => __( 'Minimum total cart weight. Set zero to disable.', 'e-commerce-jetpack' ),
 					'default'     => 0,
 					'desc_tip'    => true,
 					'css'         => 'width:100%',
@@ -238,7 +238,7 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 				'max_weight' => array(
 					'title'       => __( 'Max Weight', 'woocommerce' ),
 					'type'        => 'number',
-					'description' => __( 'Maximum total cart weight. Set zero to disable.', 'woocommerce-jetpack' ),
+					'description' => __( 'Maximum total cart weight. Set zero to disable.', 'e-commerce-jetpack' ),
 					'default'     => 0,
 					'desc_tip'    => true,
 					'css'         => 'width:100%',
@@ -246,7 +246,7 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 				),
 				'apply_formula' => array(
 					'title'       => __( 'Apply Formula and Shortcodes to Costs', 'woocommerce' ),
-					'description' => sprintf( __( 'You can use %s and %s params in formula, e.g.: %s. Also you can use shortcodes, e.g.: %s.', 'woocommerce-jetpack' ),
+					'description' => sprintf( __( 'You can use %s and %s params in formula, e.g.: %s. Also you can use shortcodes, e.g.: %s.', 'e-commerce-jetpack' ),
 							'<em>weight</em>', '<em>quantity</em>', '<em>2.5+weight</em>', '<em>[wcj_shipping_costs_table prop="weight" table="25-12.25|50-14.50|9999-29.148"]</em>' ) . '<br>' .
 					                 apply_filters( 'booster_message', '', 'desc_no_link' ),
 					'desc_tip'    => true,
@@ -257,7 +257,7 @@ if ( ! class_exists( 'WC_Shipping_WCJ_Custom_W_Zones' ) ) :
 				'weight_table_total_rows' => array( // mislabeled, should be 'table_total_rows'
 					'title'       => __( 'Table Total Rows', 'woocommerce' ),
 					'type'        => 'number',
-					'description' => __( 'Press "Save changes" and reload the page after you change this number.', 'woocommerce-jetpack' ),
+					'description' => __( 'Press "Save changes" and reload the page after you change this number.', 'e-commerce-jetpack' ),
 					'default'     => 0,
 					'desc_tip'    => true,
 					'css'         => 'width:100%',

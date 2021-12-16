@@ -264,7 +264,7 @@ abstract class WCJ_Module_Product_By_Condition extends WCJ_Module {
 		if ( 'invisible' != apply_filters( 'booster_option', 'visible', wcj_get_option( 'wcj_' . $this->id . '_visibility_method', 'visible' ) ) ) {
 			?><br class="clear" />
 			<label>
-				<span class="title"><?php echo $this->title . ': ' . esc_html_e( 'Visible', 'woocommerce-jetpack' ); ?></span>
+				<span class="title"><?php echo $this->title . ': ' . esc_html_e( 'Visible', 'e-commerce-jetpack' ); ?></span>
 				<select multiple id="wcj_<?php echo $this->id; ?>_visible" name="wcj_<?php echo $this->id; ?>_visible[]">
 					<?php echo $all_options; ?>
 				</select>
@@ -273,7 +273,7 @@ abstract class WCJ_Module_Product_By_Condition extends WCJ_Module {
 		if ( 'visible' != apply_filters( 'booster_option', 'visible', wcj_get_option( 'wcj_' . $this->id . '_visibility_method', 'visible' ) ) ) {
 			?><br class="clear" />
 			<label>
-				<span class="title"><?php echo $this->title . ': ' . esc_html_e( 'Invisible', 'woocommerce-jetpack' ); ?></span>
+				<span class="title"><?php echo $this->title . ': ' . esc_html_e( 'Invisible', 'e-commerce-jetpack' ); ?></span>
 				<select multiple id="wcj_<?php echo $this->id; ?>_invisible" name="wcj_<?php echo $this->id; ?>_invisible[]">
 					<?php echo $all_options; ?>
 				</select>

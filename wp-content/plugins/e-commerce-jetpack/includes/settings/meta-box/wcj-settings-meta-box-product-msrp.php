@@ -34,7 +34,7 @@ if ( 'yes' === wcj_get_option( 'wcj_product_msrp_archive_page_field', 'no' ) ) {
 		'name'       => 'wcj_msrp_archive_' . $main_product_id,
 		'default'    => 0,
 		'type'       => 'price',
-		'title'      => __( 'MSRP - Archive', 'woocommerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+		'title'      => __( 'MSRP - Archive', 'e-commerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
 		'product_id' => $main_product_id,
 		'meta_name'  => '_' . 'wcj_msrp_archive',
 	);
@@ -45,7 +45,7 @@ foreach ( $products as $product_id => $desc ) {
 		'name'       => 'wcj_msrp_' . $product_id,
 		'default'    => 0,
 		'type'       => 'price',
-		'title'      => __( 'MSRP', 'woocommerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+		'title'      => __( 'MSRP', 'e-commerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
 		'desc'       => $desc,
 		'product_id' => $product_id,
 		'meta_name'  => '_' . 'wcj_msrp',

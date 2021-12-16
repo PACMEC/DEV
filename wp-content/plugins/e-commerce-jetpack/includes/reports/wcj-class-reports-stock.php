@@ -20,8 +20,8 @@ class WCJ_Reports_Stock {
 	 *
 	 * @version 3.9.0
 	 * @todo    (maybe) `most_stock_price`, `sales_up`, `good_sales_low_stock`
-	 * @todo    (maybe) `echo __( 'Here you can generate reports. Some reports are generated using all your orders and products, so if you have a lot of them - it may take a while.', 'woocommerce-jetpack' );`
-	 * @todo    (maybe) wcj_get_option( 'woocommerce_manage_stock' ) -> `echo __( 'Please enable stock management in <strong>WooCommerce > Settings > Products > Inventory</strong> to generate stock based reports.', 'woocommerce-jetpack' );`
+	 * @todo    (maybe) `echo __( 'Here you can generate reports. Some reports are generated using all your orders and products, so if you have a lot of them - it may take a while.', 'e-commerce-jetpack' );`
+	 * @todo    (maybe) wcj_get_option( 'woocommerce_manage_stock' ) -> `echo __( 'Please enable stock management in <strong>WooCommerce > Settings > Products > Inventory</strong> to generate stock based reports.', 'e-commerce-jetpack' );`
 	 */
 	function __construct( $args = null ) {
 		$this->ranges_in_days             = array( 7, 14, 30, 60, 90, 180, 360 );
@@ -30,19 +30,19 @@ class WCJ_Reports_Stock {
 		$this->reports_info               = array(
 			'on_stock' => array(
 				'id'        => 'on_stock',
-				'title'     => __( 'All Products on Stock', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Report shows all products that are on stock and some sales info.', 'woocommerce-jetpack' ),
+				'title'     => __( 'All Products on Stock', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Report shows all products that are on stock and some sales info.', 'e-commerce-jetpack' ),
 			),
 			'understocked' => array(
 				'id'        => 'understocked',
-				'title'     => __( 'Understocked', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Report shows all products that are low in stock calculated on product\'s sales data.', 'woocommerce-jetpack' ) . ' ' .
-					__( 'Threshold for minimum stock is equal to half of the sales in selected days range.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Understocked', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Report shows all products that are low in stock calculated on product\'s sales data.', 'e-commerce-jetpack' ) . ' ' .
+					__( 'Threshold for minimum stock is equal to half of the sales in selected days range.', 'e-commerce-jetpack' ),
 			),
 			'overstocked' => array(
 				'id'        => 'overstocked',
-				'title'     => __( 'Overstocked', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Report shows all products that are on stock, but have no sales in selected period. Only products added before the start date of selected period are accounted.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Overstocked', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Report shows all products that are on stock, but have no sales in selected period. Only products added before the start date of selected period are accounted.', 'e-commerce-jetpack' ),
 			),
 		);
 		$this->product_type               = wcj_get_option( 'wcj_reports_stock_product_type', 'product' );
@@ -105,7 +105,7 @@ class WCJ_Reports_Stock {
 				$the_title          = get_the_title( $product_id );
 				if ( '' === $the_title ) {
 					if ( $this->include_deleted_products ) {
-						$the_title  = __( 'N/A', 'woocommerce-jetpack' );
+						$the_title  = __( 'N/A', 'e-commerce-jetpack' );
 					} else {
 						continue;
 					}
@@ -180,7 +180,7 @@ class WCJ_Reports_Stock {
 						// Deleted product
 						$products_info[ $product_id ] = array(
 							'ID'              => $product_id,
-							'title'           => $item['name'] . ' (' . __( 'N/A', 'woocommerce-jetpack' ) . ')',
+							'title'           => $item['name'] . ' (' . __( 'N/A', 'e-commerce-jetpack' ) . ')',
 							'category'        => '',
 							'permalink'       => '',
 							'price'           => '',
@@ -266,17 +266,17 @@ class WCJ_Reports_Stock {
 		$html .= '<table class="widefat"><tbody>';
 		$html .= '<tr>';
 		$html .= '<th>#</th>';
-		$html .= '<th>' . __( 'Product', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th>' . __( 'Category', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th>' . __( 'Price', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th>' . __( 'Stock', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th>' . __( 'Stock price', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th>' . __( 'Total stock price', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th class="wcj_report_table_sales_columns">' . __( 'Last sale', 'woocommerce-jetpack' ) . '</th>';
-		$html .= '<th class="wcj_report_table_sales_columns">' . sprintf( __( 'Sales in last %s days', 'woocommerce-jetpack' ), $this->range_days ) . '</th>';
-		$html .= '<th class="wcj_report_table_sales_columns">' . __( 'Total sales', 'woocommerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Product', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Category', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Price', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Stock', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Stock price', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th>' . __( 'Total stock price', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th class="wcj_report_table_sales_columns">' . __( 'Last sale', 'e-commerce-jetpack' ) . '</th>';
+		$html .= '<th class="wcj_report_table_sales_columns">' . sprintf( __( 'Sales in last %s days', 'e-commerce-jetpack' ), $this->range_days ) . '</th>';
+		$html .= '<th class="wcj_report_table_sales_columns">' . __( 'Total sales', 'e-commerce-jetpack' ) . '</th>';
 		if ( 'understocked' === $this->report_id ) {
-			$html .= '<th>' . __( 'Stock to minimum', 'woocommerce-jetpack' ) . '</th>';
+			$html .= '<th>' . __( 'Stock to minimum', 'e-commerce-jetpack' ) . '</th>';
 		}
 		$html .= '</tr>';
 		// Products table - info loop
@@ -305,19 +305,19 @@ class WCJ_Reports_Stock {
 				$html .= '<th>' . '<a href='. $product_info['permalink'] . '>' . $product_info['title'] . '</a>' . '</th>';
 				$html .= '<th>' . '<a href='. $product_info['permalink'] . '>' . $product_info['category'] . '</a>' . '</th>';
 				$purchase_price_html = ( $product_info['purchase_price'] > 0 ) ?
-					'<br><em>' . __( 'purchase price:', 'woocommerce-jetpack' ) . '</em>' . ' ' . wc_price( $product_info['purchase_price'] ) : '';
+					'<br><em>' . __( 'purchase price:', 'e-commerce-jetpack' ) . '</em>' . ' ' . wc_price( $product_info['purchase_price'] ) : '';
 				$html .= '<td>' . wc_price( $product_info['price'] ) . $purchase_price_html . '</td>';
 				$html .= '<td>' . $product_info['stock'] . '</td>';
 				$purchase_stock_price_html = ( $product_info['purchase_price'] > 0 ) ?
-					'<br><em>' . __( 'stock purchase price:', 'woocommerce-jetpack' ) . '</em>' . ' ' . wc_price( $product_info['purchase_price'] * $product_info['stock'] ) : '';
+					'<br><em>' . __( 'stock purchase price:', 'e-commerce-jetpack' ) . '</em>' . ' ' . wc_price( $product_info['purchase_price'] * $product_info['stock'] ) : '';
 				$total_current_stock_purchase_price += ( $product_info['purchase_price'] > 0 ? $product_info['purchase_price'] * $product_info['stock'] : 0 );
 				$html .= '<td>' . wc_price( $product_info['stock_price'] ) . $purchase_stock_price_html . '</td>';
 				$html .= '<td>' . wc_price( $total_current_stock_price ) . '</td>';
 				$html .= '<td class="wcj_report_table_sales_columns">';
-				$html .= ( 0 == $product_info['last_sale'] ? __( 'No sales yet', 'woocommerce-jetpack' ) : date_i18n( wcj_get_option( 'date_format' ), $product_info['last_sale'] ) );
+				$html .= ( 0 == $product_info['last_sale'] ? __( 'No sales yet', 'e-commerce-jetpack' ) : date_i18n( wcj_get_option( 'date_format' ), $product_info['last_sale'] ) );
 				$html .= '</td>';
 				$profit_html = ( $product_info['purchase_price'] > 0 && $product_info['sales_in_period'][ $this->range_days ] > 0 ) ?
-					'<br><em>' . __( 'profit:', 'woocommerce-jetpack' ) . '</em>' . ' '
+					'<br><em>' . __( 'profit:', 'e-commerce-jetpack' ) . '</em>' . ' '
 						. wc_price( ( $product_info['price'] - $product_info['purchase_price'] ) * $product_info['sales_in_period'][ $this->range_days ] ) :
 					'';
 				$html .= '<td class="wcj_report_table_sales_columns">' . $product_info['sales_in_period'][ $this->range_days ] . $profit_html . '</td>';
@@ -337,16 +337,16 @@ class WCJ_Reports_Stock {
 		$html .= '</tbody></table>';
 		$html_header = '<h4>' . $report_info['title'] . ': ' . $report_info['desc'] . '</h4>';
 		$html_header .= '<table class="widefat" style="width:30% !important;"><tbody>';
-		$html_header .= '<tr>' . '<th>' . __( 'Total current stock value', 'woocommerce-jetpack' ) . '</th>' . '<td>' . wc_price( $total_current_stock_price ) . '</td>' . '</tr>';
-		$html_header .= '<tr>' . '<th>' . __( 'Total stock value', 'woocommerce-jetpack' ) . '</th>' . '<td>' . wc_price( $info['total_stock_price'] ) . '</td>' . '</tr>';
-		$html_header .= '<tr>' . '<th>' . __( 'Product stock value average', 'woocommerce-jetpack' ) . '</th>' . '<td>' . wc_price( $info['stock_price_average'] ) . '</td>' . '</tr>';
-		$html_header .= '<tr>' . '<th>' . __( 'Product stock average', 'woocommerce-jetpack' ) . '</th>' . '<td>' . number_format( $info['stock_average'], 2, '.', '' ) . '</td>' . '</tr>';
+		$html_header .= '<tr>' . '<th>' . __( 'Total current stock value', 'e-commerce-jetpack' ) . '</th>' . '<td>' . wc_price( $total_current_stock_price ) . '</td>' . '</tr>';
+		$html_header .= '<tr>' . '<th>' . __( 'Total stock value', 'e-commerce-jetpack' ) . '</th>' . '<td>' . wc_price( $info['total_stock_price'] ) . '</td>' . '</tr>';
+		$html_header .= '<tr>' . '<th>' . __( 'Product stock value average', 'e-commerce-jetpack' ) . '</th>' . '<td>' . wc_price( $info['stock_price_average'] ) . '</td>' . '</tr>';
+		$html_header .= '<tr>' . '<th>' . __( 'Product stock average', 'e-commerce-jetpack' ) . '</th>' . '<td>' . number_format( $info['stock_average'], 2, '.', '' ) . '</td>' . '</tr>';
 		if ( 0 != $total_current_stock_purchase_price ) {
-			$html_header .= '<tr>' . '<th>' . __( 'Total current stock purchase price', 'woocommerce-jetpack' ) . '</th>' . '<td>' . wc_price( $total_current_stock_purchase_price ) . '</td>' . '</tr>';
+			$html_header .= '<tr>' . '<th>' . __( 'Total current stock purchase price', 'e-commerce-jetpack' ) . '</th>' . '<td>' . wc_price( $total_current_stock_purchase_price ) . '</td>' . '</tr>';
 		}
 		$html_header .= '</tbody></table>';
 		$html_header .= '<br class="clear">';
-		$time_elapsed_html = '<p><em>' . __( 'Report was generated in: ', 'woocommerce-jetpack' ) . intval( microtime( true ) - $this->start_time ) . ' s' . '</em></p>';
+		$time_elapsed_html = '<p><em>' . __( 'Report was generated in: ', 'e-commerce-jetpack' ) . intval( microtime( true ) - $this->start_time ) . ' s' . '</em></p>';
 		return $this->get_submenu_html() . $html_header . $html . $time_elapsed_html;
 	}
 }

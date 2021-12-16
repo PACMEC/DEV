@@ -23,9 +23,9 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'checkout_files_upload';
-		$this->short_desc = __( 'Checkout Files Upload', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Let customers upload files on (or after) the checkout (1 file allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Let customers upload files on (or after) the checkout.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Checkout Files Upload', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Let customers upload files on (or after) the checkout (1 file allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Let customers upload files on (or after) the checkout.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-checkout-files-upload';
 		parent::__construct();
 
@@ -67,11 +67,11 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 		$this->templates_settings = wcj_get_option( 'wcj_checkout_files_upload_templates', array() );
 		$this->templates_settings = wp_parse_args( $this->templates_settings, array(
 			'order_before'       => '',
-			'order_item'         => sprintf( __( 'File: %s', 'woocommerce-jetpack' ), '%file_name%' ) . '<br>',
+			'order_item'         => sprintf( __( 'File: %s', 'e-commerce-jetpack' ), '%file_name%' ) . '<br>',
 			'order_after'        => '',
 			'order_image_style'  => 'width:64px;',
 			'email_before'       => '',
-			'email_item'         => sprintf( __( 'File: %s', 'woocommerce-jetpack' ), '%file_name%' ) . '<br>',
+			'email_item'         => sprintf( __( 'File: %s', 'e-commerce-jetpack' ), '%file_name%' ) . '<br>',
 			'email_after'        => '',
 		) );
 		$this->additional_admin_emails_settings = wcj_get_option( 'wcj_checkout_files_upload_additional_admin_emails', array() );
@@ -178,7 +178,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 			) {
 				if ( 'yes' === wcj_get_option( 'wcj_checkout_files_upload_required_' . $i, 'no' ) && null === wcj_session_get( 'wcj_checkout_files_upload_' . $i ) ) {
 					// Is required
-					$this->add_notice( wcj_get_option( 'wcj_checkout_files_upload_notice_required_' . $i, __( 'File is required!', 'woocommerce-jetpack' ) ), 'error' );
+					$this->add_notice( wcj_get_option( 'wcj_checkout_files_upload_notice_required_' . $i, __( 'File is required!', 'e-commerce-jetpack' ) ), 'error' );
 				}
 				if ( null === wcj_session_get( 'wcj_checkout_files_upload_' . $i ) ) {
 					continue;
@@ -192,13 +192,13 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 					if ( is_array( $file_accept ) && ! empty( $file_accept ) ) {
 						if ( ! in_array( $file_type, $file_accept ) ) {
 							$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_wrong_file_type_' . $i,
-								__( 'Wrong file type: "%s"!', 'woocommerce-jetpack' ) ), $file_name ), 'error' );
+								__( 'Wrong file type: "%s"!', 'e-commerce-jetpack' ) ), $file_name ), 'error' );
 						}
 					}
 				}
 				if ( $this->is_extension_blocked( $file_type ) ) {
 					$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_wrong_file_type_' . $i,
-						__( 'Wrong file type: "%s"!', 'woocommerce-jetpack' ) ), $file_name ), 'error' );
+						__( 'Wrong file type: "%s"!', 'e-commerce-jetpack' ) ), $file_name ), 'error' );
 				}
 			}
 		}
@@ -216,7 +216,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 		$priority = 'high';
 		add_meta_box(
 			'wc-jetpack-' . $this->id,
-			__( 'Booster', 'woocommerce-jetpack' ) . ': ' . __( 'Uploaded Files', 'woocommerce-jetpack' ),
+			__( 'Booster', 'e-commerce-jetpack' ) . ': ' . __( 'Uploaded Files', 'e-commerce-jetpack' ),
 			array( $this, 'create_file_admin_order_meta_box' ),
 			$screen,
 			$context,
@@ -248,10 +248,10 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 			}
 		}
 		if ( ! $files_exists ) {
-			$html .= '<p><em>' . __( 'No files uploaded.', 'woocommerce-jetpack' ) . '</em></p>';
+			$html .= '<p><em>' . __( 'No files uploaded.', 'e-commerce-jetpack' ) . '</em></p>';
 		} else {
 			$html .= '<p><a style="color:#a00;" href="' . add_query_arg( 'wcj_download_checkout_file_admin_delete_all', $order_id ) . '"' . wcj_get_js_confirmation() . '>' .
-				__( 'Delete all files', 'woocommerce-jetpack' ) . '</a></p>';
+				__( 'Delete all files', 'e-commerce-jetpack' ) . '</a></p>';
 		}
 		echo $html;
 	}
@@ -330,7 +330,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 				}
 			}
 			if ( $any_files_removed && 'yes' === wcj_get_option( 'wcj_checkout_files_upload_remove_on_empty_cart_add_notice', 'no' ) ) {
-				$this->add_notice( wcj_get_option( 'wcj_checkout_files_upload_notice_remove_on_empty_cart', __( 'Files were successfully removed.', 'woocommerce-jetpack' ) ) );
+				$this->add_notice( wcj_get_option( 'wcj_checkout_files_upload_notice_remove_on_empty_cart', __( 'Files were successfully removed.', 'e-commerce-jetpack' ) ) );
 			}
 		}
 	}
@@ -357,8 +357,8 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 	function process_checkout_files_upload() {
 		wcj_session_maybe_start();
 		$admin_email             = wcj_get_option( 'admin_email' );
-		$admin_email_subject     = __( 'Booster for WooCommerce: Checkout Files Upload: %action%', 'woocommerce-jetpack' );
-		$admin_email_content     = __( 'Order ID: %order_id%; File name: %file_name%', 'woocommerce-jetpack' );
+		$admin_email_subject     = __( 'Booster for WooCommerce: Checkout Files Upload: %action%', 'e-commerce-jetpack' );
+		$admin_email_content     = __( 'Order ID: %order_id%; File name: %file_name%', 'e-commerce-jetpack' );
 		$total_number            = apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_checkout_files_upload_total_number', 1 ) );
 		// Remove file
 		for ( $i = 1; $i <= $total_number; $i++ ) {
@@ -371,14 +371,14 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 						unlink( $file_path );
 						$file_name = get_post_meta( $order_id, '_' . 'wcj_checkout_files_upload_real_name_' . $i, true );
 						$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_success_remove_' . $i,
-							__( 'File "%s" was successfully removed.', 'woocommerce-jetpack' ) ), $file_name ) );
+							__( 'File "%s" was successfully removed.', 'e-commerce-jetpack' ) ), $file_name ) );
 						delete_post_meta( $order_id, '_' . 'wcj_checkout_files_upload_' . $i );
 						delete_post_meta( $order_id, '_' . 'wcj_checkout_files_upload_real_name_' . $i );
 						if ( in_array( 'remove_file', $this->additional_admin_emails_settings['actions'] ) ) {
 							wp_mail(
 								$admin_email,
 								wcj_handle_replacements( array(
-									'%action%'    => __( 'File Removed', 'woocommerce-jetpack' ),
+									'%action%'    => __( 'File Removed', 'e-commerce-jetpack' ),
 								), $admin_email_subject ),
 								wcj_handle_replacements( array(
 									'%order_id%'  => $_POST[ 'wcj_checkout_files_upload_order_id_' . $i ],
@@ -394,7 +394,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 					unlink( $session_data['tmp_name'] );
 					wcj_session_set( 'wcj_checkout_files_upload_' . $i, null );
 					$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_success_remove_' . $i,
-						__( 'File "%s" was successfully removed.', 'woocommerce-jetpack' ) ), $file_name ) );
+						__( 'File "%s" was successfully removed.', 'e-commerce-jetpack' ) ), $file_name ) );
 					do_action( 'wcj_checkout_files_upload', 'remove_file', false, $file_name );
 				}
 			}
@@ -414,14 +414,14 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 						if ( is_array( $file_accept ) && ! empty( $file_accept ) ) {
 							if ( ! in_array( $file_type, $file_accept ) ) {
 								$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_wrong_file_type_' . $i,
-									__( 'Wrong file type: "%s"!', 'woocommerce-jetpack' ) ), $real_file_name ), 'error' );
+									__( 'Wrong file type: "%s"!', 'e-commerce-jetpack' ) ), $real_file_name ), 'error' );
 								$is_valid = false;
 							}
 						}
 					}
 					if ( $this->is_extension_blocked( $file_type ) ) {
 						$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_wrong_file_type_' . $i,
-							__( 'Wrong file type: "%s"!', 'woocommerce-jetpack' ) ), $real_file_name ), 'error' );
+							__( 'Wrong file type: "%s"!', 'e-commerce-jetpack' ) ), $real_file_name ), 'error' );
 						$is_valid = false;
 					}
 					if ( $is_valid ) {
@@ -432,7 +432,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 						$session_data['tmp_name'] = $tmp_dest_file;
 						wcj_session_set( $file_name, $session_data );
 						$this->add_notice( sprintf( wcj_get_option( 'wcj_checkout_files_upload_notice_success_upload_' . $i,
-							__( 'File "%s" was successfully uploaded.', 'woocommerce-jetpack' ) ), $_FILES[ $file_name ]['name'] ) );
+							__( 'File "%s" was successfully uploaded.', 'e-commerce-jetpack' ) ), $_FILES[ $file_name ]['name'] ) );
 						// To order
 						if ( isset( $_POST[ 'wcj_checkout_files_upload_order_id_' . $i ] ) ) {
 							$this->add_files_to_order( $_POST[ 'wcj_checkout_files_upload_order_id_' . $i ], null );
@@ -442,7 +442,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 								wp_mail(
 									$admin_email,
 									wcj_handle_replacements( array(
-										'%action%'    => __( 'File Uploaded', 'woocommerce-jetpack' ),
+										'%action%'    => __( 'File Uploaded', 'e-commerce-jetpack' ),
 									), $admin_email_subject ),
 									wcj_handle_replacements( array(
 										'%order_id%'  => $_POST[ 'wcj_checkout_files_upload_order_id_' . $i ],
@@ -460,7 +460,7 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 					}
 				} else {
 					$this->add_notice( wcj_get_option( 'wcj_checkout_files_upload_notice_upload_no_file_' . $i,
-						__( 'Please select file to upload!', 'woocommerce-jetpack' ) ), 'notice' );
+						__( 'Please select file to upload!', 'e-commerce-jetpack' ) ), 'notice' );
 				}
 			}
 		}
@@ -734,8 +734,8 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 				' style="width:100%;"' .
 				' name="wcj_upload_checkout_file_' . $i . '"' .
 				' id="wcj_upload_checkout_file_' . $i . '"' .
-				' value="'      . wcj_get_option( 'wcj_checkout_files_upload_label_upload_button_' . $i, __( 'Upload', 'woocommerce-jetpack' ) ) . '"' .
-				' data-value="' . wcj_get_option( 'wcj_checkout_files_upload_label_upload_button_' . $i, __( 'Upload', 'woocommerce-jetpack' ) ) . '">';
+				' value="'      . wcj_get_option( 'wcj_checkout_files_upload_label_upload_button_' . $i, __( 'Upload', 'e-commerce-jetpack' ) ) . '"' .
+				' data-value="' . wcj_get_option( 'wcj_checkout_files_upload_label_upload_button_' . $i, __( 'Upload', 'e-commerce-jetpack' ) ) . '">';
 		} else {
 			$link        = add_query_arg( array( 'wcj_download_checkout_file' => $i, '_wpnonce' => wp_create_nonce( 'wcj_download_checkout_file' ), 'wcj_download_checkout_file_order_id' => $order_id ) );
 			$field_html  = '<a href="' . $link . '">' . $this->maybe_get_image( $link, $i, $order_id ) . $file_name . '</a>';
@@ -744,8 +744,8 @@ class WCJ_Checkout_Files_Upload extends WCJ_Module {
 				' style="width:100%;"' .
 				' name="wcj_remove_checkout_file_' . $i . '"' .
 				' id="wcj_remove_checkout_file_' . $i . '"' .
-				' value="'      . wcj_get_option( 'wcj_checkout_files_upload_label_remove_button_' . $i, __( 'Remove', 'woocommerce-jetpack' ) ) . '"' .
-				' data-value="' . wcj_get_option( 'wcj_checkout_files_upload_label_remove_button_' . $i, __( 'Remove', 'woocommerce-jetpack' ) ) . '">';
+				' value="'      . wcj_get_option( 'wcj_checkout_files_upload_label_remove_button_' . $i, __( 'Remove', 'e-commerce-jetpack' ) ) . '"' .
+				' data-value="' . wcj_get_option( 'wcj_checkout_files_upload_label_remove_button_' . $i, __( 'Remove', 'e-commerce-jetpack' ) ) . '">';
 		}
 		$template = wcj_get_option( 'wcj_checkout_files_upload_form_template_field',
 			'<tr><td style="width:50%;max-width:50vw;">%field_html%</td><td style="width:50%;">%button_html%</td></tr>' );

@@ -20,9 +20,9 @@ class WCJ_Emails extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'emails';
-		$this->short_desc = __( 'Custom Emails', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add custom emails to WooCommerce (1 custom email allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add custom emails to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom Emails', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add custom emails to WooCommerce (1 custom email allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add custom emails to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-custom-emails';
 		parent::__construct();
 
@@ -55,8 +55,8 @@ class WCJ_Emails extends WCJ_Module {
 			WC()->shipping();
 			WC()->mailer()->emails[ 'WC_Email_WCJ_Custom_' . $email_nr ]->trigger( $order->get_id(), $order );
 			$order->add_order_note(
-				sprintf( __( 'Booster: Emails: %s manually sent.', 'woocommerce-jetpack' ),
-					get_option( 'wcj_emails_custom_emails_admin_title_' . $email_nr, __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $email_nr ) ),
+				sprintf( __( 'Booster: Emails: %s manually sent.', 'e-commerce-jetpack' ),
+					get_option( 'wcj_emails_custom_emails_admin_title_' . $email_nr, __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $email_nr ) ),
 				false,
 				true
 			);
@@ -73,8 +73,8 @@ class WCJ_Emails extends WCJ_Module {
 	function add_custom_emails_order_actions( $actions ) {
 		for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_emails_custom_emails_total_number', 1 ) ); $i++ ) {
 			$actions[ 'wcj_send_email_custom' . '_' . $i ] = sprintf( apply_filters( 'wcj_emails_custom_emails_order_action_text',
-				__( 'Booster: Send Email: %s', 'woocommerce-jetpack' ), $i ),
-					get_option( 'wcj_emails_custom_emails_admin_title_' . $i, __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $i )
+				__( 'Booster: Send Email: %s', 'e-commerce-jetpack' ), $i ),
+					get_option( 'wcj_emails_custom_emails_admin_title_' . $i, __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $i )
 			);
 		}
 		return $actions;

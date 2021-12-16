@@ -24,12 +24,12 @@ class WCJ_Custom_PHP extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'custom_php';
-		$this->short_desc = __( 'Custom PHP', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Custom PHP tool.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom PHP', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Custom PHP tool.', 'e-commerce-jetpack' );
 		$this->extra_desc = sprintf(
-			__( 'Please note that if you enable the module and enter non-valid PHP code here, your site will become unavailable. To fix this you will have to add %s attribute to the URL (you must be logged as shop manager or admin (for this reason custom PHP code is not executed on %s page)).', 'woocommerce-jetpack' ),
+			__( 'Please note that if you enable the module and enter non-valid PHP code here, your site will become unavailable. To fix this you will have to add %s attribute to the URL (you must be logged as shop manager or admin (for this reason custom PHP code is not executed on %s page)).', 'e-commerce-jetpack' ),
 				'<code>wcj_disable_custom_php</code>', '<strong>wp-login.php</strong>' ) . ' ' .
-			sprintf( __( 'E.g.: %s', 'woocommerce-jetpack' ),
+			sprintf( __( 'E.g.: %s', 'e-commerce-jetpack' ),
 				'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=custom_php&wcj_disable_custom_php' ) . '">' .
 					admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=custom_php&wcj_disable_custom_php' ) . '</a>' );
 		$this->link_slug  = 'woocommerce-booster-custom-php';

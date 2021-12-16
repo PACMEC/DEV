@@ -14,22 +14,22 @@ foreach ( $available_gateways as $key => $gateway ) {
 	$available_gateways_options_array[ $key ] = $gateway->title;
 }
 /* $available_emails = array(
-	'new_order'                         => __( 'Admin - New Order', 'woocommerce-jetpack' ),
-	'cancelled_order'                   => __( 'Admin - Cancelled Order', 'woocommerce-jetpack' ),
-	'failed_order'                      => __( 'Admin - Failed Order', 'woocommerce-jetpack' ),
-	'customer_processing_order'         => __( 'Customer - Processing Order', 'woocommerce-jetpack' ),
-	'customer_on_hold_order'            => __( 'Customer - On-Hold Order', 'woocommerce-jetpack' ),
-	'customer_completed_order'          => __( 'Customer - Completed Order', 'woocommerce-jetpack' ),
-	'customer_invoice'                  => __( 'Customer - Invoice', 'woocommerce-jetpack' ),
-	'customer_refunded_order'           => __( 'Customer - Refunded Order', 'woocommerce-jetpack' ),
-	'customer_partially_refunded_order' => __( 'Customer - Partially Refunded Order', 'woocommerce-jetpack' ),
-	'customer_note'                     => __( 'Customer - Note', 'woocommerce-jetpack' ),
-	'customer_new_account'              => __( 'Customer - New Account', 'woocommerce-jetpack' ),
-	'customer_reset_password'           => __( 'Customer - Reset Password', 'woocommerce-jetpack' ),
+	'new_order'                         => __( 'Admin - New Order', 'e-commerce-jetpack' ),
+	'cancelled_order'                   => __( 'Admin - Cancelled Order', 'e-commerce-jetpack' ),
+	'failed_order'                      => __( 'Admin - Failed Order', 'e-commerce-jetpack' ),
+	'customer_processing_order'         => __( 'Customer - Processing Order', 'e-commerce-jetpack' ),
+	'customer_on_hold_order'            => __( 'Customer - On-Hold Order', 'e-commerce-jetpack' ),
+	'customer_completed_order'          => __( 'Customer - Completed Order', 'e-commerce-jetpack' ),
+	'customer_invoice'                  => __( 'Customer - Invoice', 'e-commerce-jetpack' ),
+	'customer_refunded_order'           => __( 'Customer - Refunded Order', 'e-commerce-jetpack' ),
+	'customer_partially_refunded_order' => __( 'Customer - Partially Refunded Order', 'e-commerce-jetpack' ),
+	'customer_note'                     => __( 'Customer - Note', 'e-commerce-jetpack' ),
+	'customer_new_account'              => __( 'Customer - New Account', 'e-commerce-jetpack' ),
+	'customer_reset_password'           => __( 'Customer - Reset Password', 'e-commerce-jetpack' ),
 );
 if ( wcj_is_module_enabled( 'emails' ) ) {
 	for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_emails_custom_emails_total_number', 1 ) ); $i++ ) {
-		$available_emails[ 'wcj_custom' . '_' . $i ] = __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $i;
+		$available_emails[ 'wcj_custom' . '_' . $i ] = __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $i;
 	}
 } */
 $available_emails = array();
@@ -67,7 +67,7 @@ foreach ( $invoice_types as $invoice_type ) {
 			'css'      => 'width: 450px;',
 			'default'  => '',
 			'options'  => $available_gateways_options_array,
-			'custom_attributes' => array( 'data-placeholder' => __( 'Select some gateways. Leave blank to include all.', 'woocommerce-jetpack' ) ),
+			'custom_attributes' => array( 'data-placeholder' => __( 'Select some gateways. Leave blank to include all.', 'e-commerce-jetpack' ) ),
 		),
 		array(
 			'type'     => 'sectionend',

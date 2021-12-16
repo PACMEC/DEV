@@ -30,7 +30,7 @@ if ( ! function_exists( 'wcj_get_invoicing_current_image_path_desc' ) ) {
 			if ( false !== ( $default_images_directory = wcj_get_invoicing_default_images_directory() ) ) {
 				$image_path = $default_images_directory . parse_url( $current_image, PHP_URL_PATH );
 				$style      = ( file_exists( $image_path ) ? ' style="color:green;"' : '' );
-				$current_image = '<br>' . sprintf( __( 'Current image path: %s.', 'woocommerce-jetpack' ), '<code' . $style . '>' . $image_path . '</code>' );
+				$current_image = '<br>' . sprintf( __( 'Current image path: %s.', 'e-commerce-jetpack' ), '<code' . $style . '>' . $image_path . '</code>' );
 			} else {
 				$current_image = '';
 			}
@@ -263,25 +263,25 @@ if ( ! function_exists( 'wcj_get_invoice_types' ) ) {
 		$invoice_types = array(
 			array(
 				'id'       => 'invoice',
-				'title'    => wcj_get_option( 'wcj_invoicing_' . 'invoice' . '_admin_title', __( 'Invoice', 'woocommerce-jetpack' ) ),
+				'title'    => wcj_get_option( 'wcj_invoicing_' . 'invoice' . '_admin_title', __( 'Invoice', 'e-commerce-jetpack' ) ),
 				'defaults' => array( 'init' => 'disabled' ),
 				'color'    => 'green',
 			),
 			array(
 				'id'       => 'proforma_invoice',
-				'title'    => wcj_get_option( 'wcj_invoicing_' . 'proforma_invoice' . '_admin_title', __( 'Proforma Invoice', 'woocommerce-jetpack' ) ),
+				'title'    => wcj_get_option( 'wcj_invoicing_' . 'proforma_invoice' . '_admin_title', __( 'Proforma Invoice', 'e-commerce-jetpack' ) ),
 				'defaults' => array( 'init' => 'disabled' ),
 				'color'    => 'orange',
 			),
 			array(
 				'id'       => 'packing_slip',
-				'title'    => wcj_get_option( 'wcj_invoicing_' . 'packing_slip' . '_admin_title', __( 'Packing Slip', 'woocommerce-jetpack' ) ),
+				'title'    => wcj_get_option( 'wcj_invoicing_' . 'packing_slip' . '_admin_title', __( 'Packing Slip', 'e-commerce-jetpack' ) ),
 				'defaults' => array( 'init' => 'disabled' ),
 				'color'    => 'blue',
 			),
 			array(
 				'id'       => 'credit_note',
-				'title'    => wcj_get_option( 'wcj_invoicing_' . 'credit_note' . '_admin_title', __( 'Credit Note', 'woocommerce-jetpack' ) ),
+				'title'    => wcj_get_option( 'wcj_invoicing_' . 'credit_note' . '_admin_title', __( 'Credit Note', 'e-commerce-jetpack' ) ),
 				'defaults' => array( 'init' => 'disabled' ),
 				'color'    => 'red',
 			),
@@ -291,7 +291,7 @@ if ( ! function_exists( 'wcj_get_invoice_types' ) ) {
 			$invoice_types[] = array(
 				'id'       => ( 1 == $i ? 'custom_doc' : 'custom_doc' . '_' . $i ),
 				'title'    => wcj_get_option( 'wcj_invoicing_' . ( 1 == $i ? 'custom_doc' : 'custom_doc' . '_' . $i ) . '_admin_title',
-					__( 'Custom Document', 'woocommerce-jetpack' ) . ' #' . $i ),
+					__( 'Custom Document', 'e-commerce-jetpack' ) . ' #' . $i ),
 				'defaults' => array( 'init' => 'disabled' ),
 				'color'    => 'gray',
 				'is_custom_doc' => true,

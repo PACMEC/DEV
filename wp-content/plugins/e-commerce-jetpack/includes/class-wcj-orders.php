@@ -23,9 +23,9 @@ class WCJ_Orders extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'orders';
-		$this->short_desc = __( 'Orders', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Orders auto-complete; admin order currency; admin order navigation; bulk regenerate download permissions for orders (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Orders auto-complete; admin order currency; admin order navigation; bulk regenerate download permissions for orders.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Orders', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Orders auto-complete; admin order currency; admin order navigation; bulk regenerate download permissions for orders (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Orders auto-complete; admin order currency; admin order navigation; bulk regenerate download permissions for orders.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-orders';
 		parent::__construct();
 
@@ -122,7 +122,7 @@ class WCJ_Orders extends WCJ_Module {
 	function add_orders_navigation_meta_box() {
 		add_meta_box(
 			'wc-jetpack-' . $this->id . '-navigation',
-			__( 'Booster', 'woocommerce-jetpack' ) . ': ' . __( 'Order Navigation', 'woocommerce-jetpack' ),
+			__( 'Booster', 'e-commerce-jetpack' ) . ': ' . __( 'Order Navigation', 'e-commerce-jetpack' ),
 			array( $this, 'create_orders_navigation_meta_box' ),
 			'shop_order',
 			'side',
@@ -138,8 +138,8 @@ class WCJ_Orders extends WCJ_Module {
 	 * @todo    this will output the link, even if there no prev/next orders available
 	 */
 	function create_orders_navigation_meta_box() {
-		echo '<a href="' . add_query_arg( 'wcj_orders_navigation', 'prev' ) . '">' . '&lt;&lt; ' . __( 'Previous order', 'woocommerce-jetpack' ) . '</a>' .
-			 '<a href="' . add_query_arg( 'wcj_orders_navigation', 'next' ) . '" style="float:right;">' . __( 'Next order', 'woocommerce-jetpack' ) . ' &gt;&gt;' . '</a>';
+		echo '<a href="' . add_query_arg( 'wcj_orders_navigation', 'prev' ) . '">' . '&lt;&lt; ' . __( 'Previous order', 'e-commerce-jetpack' ) . '</a>' .
+			 '<a href="' . add_query_arg( 'wcj_orders_navigation', 'next' ) . '" style="float:right;">' . __( 'Next order', 'e-commerce-jetpack' ) . ' &gt;&gt;' . '</a>';
 	}
 
 	/**
@@ -151,7 +151,7 @@ class WCJ_Orders extends WCJ_Module {
 	function add_country_by_ip_meta_box() {
 		add_meta_box(
 			'wc-jetpack-' . $this->id . '-country-by-ip',
-			__( 'Booster', 'woocommerce-jetpack' ) . ': ' . __( 'Country by IP', 'woocommerce-jetpack' ),
+			__( 'Booster', 'e-commerce-jetpack' ) . ': ' . __( 'Country by IP', 'e-commerce-jetpack' ),
 			array( $this, 'create_country_by_ip_meta_box' ),
 			'shop_order',
 			'side',
@@ -178,7 +178,7 @@ class WCJ_Orders extends WCJ_Module {
 				' (' . $location['country'] . ')' .
 				' [' . $customer_ip . ']';
 		} else {
-			echo '<em>' . __( 'No data.', 'woocommerce-jetpack' ) . '</em>';
+			echo '<em>' . __( 'No data.', 'e-commerce-jetpack' ) . '</em>';
 		}
 	}
 
@@ -223,7 +223,7 @@ class WCJ_Orders extends WCJ_Module {
 	 * @since   3.2.0
 	 */
 	function register_bulk_actions_regenerate_download_permissions( $bulk_actions ) {
-		$bulk_actions['wcj_regenerate_download_permissions'] = __( 'Regenerate download permissions', 'woocommerce-jetpack' );
+		$bulk_actions['wcj_regenerate_download_permissions'] = __( 'Regenerate download permissions', 'e-commerce-jetpack' );
 		return $bulk_actions;
 	}
 
@@ -237,7 +237,7 @@ class WCJ_Orders extends WCJ_Module {
 		if ( ! empty( $_REQUEST['wcj_bulk_regenerated_download_permissions'] ) ) {
 			$orders_count = intval( $_REQUEST['wcj_bulk_regenerated_download_permissions'] );
 			$message = sprintf(
-				_n( 'Download permissions regenerated for %s order.', 'Download permissions regenerated for %s orders.', $orders_count, 'woocommerce-jetpack' ),
+				_n( 'Download permissions regenerated for %s order.', 'Download permissions regenerated for %s orders.', $orders_count, 'e-commerce-jetpack' ),
 				'<strong>' . $orders_count . '</strong>'
 			);
 			echo '<div class="notice notice-success is-dismissible"><p>' . $message . '</p></div>';

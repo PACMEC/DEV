@@ -20,8 +20,8 @@ if ( ! class_exists( 'WCJ_Shipping' ) ) :
 		 */
 		function __construct() {
 			$this->id         = 'shipping';
-			$this->short_desc = __( 'Custom Shipping', 'woocommerce-jetpack' );
-			$this->desc       = __( 'Add multiple custom shipping methods to WooCommerce.', 'woocommerce-jetpack' );
+			$this->short_desc = __( 'Custom Shipping', 'e-commerce-jetpack' );
+			$this->desc       = __( 'Add multiple custom shipping methods to WooCommerce.', 'e-commerce-jetpack' );
 			$this->link_slug  = 'woocommerce-custom-shipping';
 			parent::__construct();
 

@@ -12,39 +12,39 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'     => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'     => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'      => 'title',
 		'id'        => 'wcj_gateways_by_location_general_options',
 	),
 	array(
-		'title'     => __( 'Detect Country by', 'woocommerce-jetpack' ),
+		'title'     => __( 'Detect Country by', 'e-commerce-jetpack' ),
 		'id'        => 'wcj_gateways_by_location_country_type',
 		'type'      => 'select',
 		'default'   => 'billing',
 		'options'   => array(
-			'billing'  => __( 'Billing country', 'woocommerce-jetpack' ),
-			'shipping' => __( 'Shipping country', 'woocommerce-jetpack' ),
-			'by_ip'    => __( 'Country by IP', 'woocommerce-jetpack' ),
+			'billing'  => __( 'Billing country', 'e-commerce-jetpack' ),
+			'shipping' => __( 'Shipping country', 'e-commerce-jetpack' ),
+			'by_ip'    => __( 'Country by IP', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'     => __( 'Detect State by', 'woocommerce-jetpack' ),
+		'title'     => __( 'Detect State by', 'e-commerce-jetpack' ),
 		'id'        => 'wcj_gateways_by_location_state_type',
 		'type'      => 'select',
 		'default'   => 'billing',
 		'options'   => array(
-			'billing'  => __( 'Billing state', 'woocommerce-jetpack' ),
-			'shipping' => __( 'Shipping state', 'woocommerce-jetpack' ),
+			'billing'  => __( 'Billing state', 'e-commerce-jetpack' ),
+			'shipping' => __( 'Shipping state', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'     => __( 'Detect Postcode by', 'woocommerce-jetpack' ),
+		'title'     => __( 'Detect Postcode by', 'e-commerce-jetpack' ),
 		'id'        => 'wcj_gateways_by_location_postcodes_type',
 		'type'      => 'select',
 		'default'   => 'billing',
 		'options'   => array(
-			'billing'  => __( 'Billing postcode', 'woocommerce-jetpack' ),
-			'shipping' => __( 'Shipping postcode', 'woocommerce-jetpack' ),
+			'billing'  => __( 'Billing postcode', 'e-commerce-jetpack' ),
+			'shipping' => __( 'Shipping postcode', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
@@ -52,9 +52,9 @@ $settings = array(
 		'id'        => 'wcj_gateways_by_location_general_options',
 	),
 	array(
-		'title'     => __( 'Payment Gateways', 'woocommerce-jetpack' ),
+		'title'     => __( 'Payment Gateways', 'e-commerce-jetpack' ),
 		'type'      => 'title',
-		'desc'      => __( 'If any field is left empty - it\'s ignored.', 'woocommerce-jetpack' ),
+		'desc'      => __( 'If any field is left empty - it\'s ignored.', 'e-commerce-jetpack' ),
 		'id'        => 'wcj_payment_gateways_by_country_gateways_options',
 	),
 );
@@ -77,7 +77,7 @@ foreach ( $gateways as $key => $gateway ) {
 		array(
 			'title'     => $gateway->title,
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Include Countries', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Include Countries', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_countries_include_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -87,7 +87,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Exclude Countries', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Exclude Countries', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_countries_exclude_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -97,7 +97,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Include States (Base Country)', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Include States (Base Country)', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_states_include_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -107,7 +107,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Exclude States (Base Country)', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Exclude States (Base Country)', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_states_exclude_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -117,7 +117,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Include Postcodes (one per line)', 'woocommerce-jetpack' ) . '<br>' .
+			'desc'      => __( 'Include Postcodes (one per line)', 'e-commerce-jetpack' ) . '<br>' .
 				'<em>' . __( 'Postcodes containing wildcards (e.g. CB23*) and fully numeric ranges (e.g. <code>90210...99000</code>) are also supported.', 'woocommerce' ) . '</em>',
 			'id'        => 'wcj_gateways_postcodes_include_' . $key,
 			'default'   => '',
@@ -127,7 +127,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Exclude Postcodes (one per line)', 'woocommerce-jetpack' ) . '<br>' .
+			'desc'      => __( 'Exclude Postcodes (one per line)', 'e-commerce-jetpack' ) . '<br>' .
 				'<em>' . __( 'Postcodes containing wildcards (e.g. CB23*) and fully numeric ranges (e.g. <code>90210...99000</code>) are also supported.', 'woocommerce' ) . '</em>',
 			'id'        => 'wcj_gateways_postcodes_exclude_' . $key,
 			'default'   => '',

@@ -22,9 +22,9 @@ class WCJ_Checkout_Customization extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'checkout_customization';
-		$this->short_desc = __( 'Checkout Customization', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize WooCommerce checkout - restrict countries by customer\'s IP (Plus); hide "Order Again" button; disable selected fields on checkout for logged users and more (Custom fields available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Customize WooCommerce checkout - restrict countries by customer\'s IP; hide "Order Again" button; disable selected fields on checkout for logged users and more.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Checkout Customization', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize WooCommerce checkout - restrict countries by customer\'s IP (Plus); hide "Order Again" button; disable selected fields on checkout for logged users and more (Custom fields available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Customize WooCommerce checkout - restrict countries by customer\'s IP; hide "Order Again" button; disable selected fields on checkout for logged users and more.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-checkout-customization';
 		parent::__construct();
 
@@ -238,7 +238,7 @@ class WCJ_Checkout_Customization extends WCJ_Module {
 			if ( ! empty( $fields_to_disable ) ) {
 				if ( in_array( $key, $fields_to_disable ) ) {
 					$desc = wcj_get_option( 'wcj_checkout_customization_disable_fields_for_logged_message',
-						'<em>' . __( 'This field can not be changed', 'woocommerce-jetpack' ) . '</em>' );
+						'<em>' . __( 'This field can not be changed', 'e-commerce-jetpack' ) . '</em>' );
 					if ( '' != $desc ) {
 						$field = str_replace( '__WCJ_TEMPORARY_VALUE_TO_REPLACE__', $desc, $field );
 					}
@@ -268,7 +268,7 @@ class WCJ_Checkout_Customization extends WCJ_Module {
 			$fields_to_disable          = array_merge( $fields_to_disable, $fields_to_disable_custom_r, $fields_to_disable_custom_d );
 			$disable_type_fields        = array_merge( array( 'billing_country', 'shipping_country' ), $fields_to_disable_custom_d );
 			$do_add_desc_placeholder    = ( '' != wcj_get_option( 'wcj_checkout_customization_disable_fields_for_logged_message',
-				'<em>' . __( 'This field can not be changed', 'woocommerce-jetpack' ) . '</em>' ) );
+				'<em>' . __( 'This field can not be changed', 'e-commerce-jetpack' ) . '</em>' ) );
 			if ( ! empty( $fields_to_disable ) ) {
 				foreach ( $fields_to_disable as $field_to_disable ) {
 					$section = explode( '_', $field_to_disable );

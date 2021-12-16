@@ -22,8 +22,8 @@ class WCJ_Modules_By_User_Roles extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'modules_by_user_roles';
-		$this->short_desc = __( 'Modules By User Roles', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Enable/disable Booster for WooCommerce modules by user roles.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Modules By User Roles', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Enable/disable Booster for WooCommerce modules by user roles.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-modules-by-user-roles';
 		parent::__construct();
 

@@ -21,9 +21,9 @@ class WCJ_Currency_Exchange_Rates extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'currency_exchange_rates';
-		$this->short_desc = __( 'Currency Exchange Rates', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Automatic currency exchange rates for WooCommerce (1 allowed in free version). If you want to change the currency rate with real conversion then enable it', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Automatic currency exchange rates for WooCommerce. If you want to change the currency rate with real conversion then enable it', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Currency Exchange Rates', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Automatic currency exchange rates for WooCommerce (1 allowed in free version). If you want to change the currency rate with real conversion then enable it', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Automatic currency exchange rates for WooCommerce. If you want to change the currency rate with real conversion then enable it', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-currency-exchange-rates';
 		parent::__construct();
 
@@ -198,12 +198,12 @@ class WCJ_Currency_Exchange_Rates extends WCJ_Module {
 				}
 			}
 			$settings[] = array(
-				'desc'     => __( 'Exchange Rates Server', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Exchange Rates Server', 'e-commerce-jetpack' ),
 				'id'       => $field_id,
 				'default'  => 'default_server',
 				'type'     => 'select',
 				'options'  => array_merge(
-					array( 'default_server' => sprintf( __( 'Use default: %s', 'woocommerce-jetpack' ), $default_server ) ),
+					array( 'default_server' => sprintf( __( 'Use default: %s', 'e-commerce-jetpack' ), $default_server ) ),
 					wcj_get_currency_exchange_rate_servers()
 				),
 			);
@@ -226,18 +226,18 @@ class WCJ_Currency_Exchange_Rates extends WCJ_Module {
 				}
 			}
 			$settings[] = array(
-				'desc'     => __( 'Exchange Rates Offset (Percent)', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Exchange Rates Offset (Percent)', 'e-commerce-jetpack' ),
 				'id'       => $field_id,
 				'default'  => 'default_offset',
 				'type'     => 'select',
 				'options'  => array(
-					'default_offset' => sprintf( __( 'Use default: %s%%', 'woocommerce-jetpack' ), $default_offset ),
-					'custom_offset'  => __( 'Custom offset', 'woocommerce-jetpack' ),
+					'default_offset' => sprintf( __( 'Use default: %s%%', 'e-commerce-jetpack' ), $default_offset ),
+					'custom_offset'  => __( 'Custom offset', 'e-commerce-jetpack' ),
 				),
 			);
 			$settings[] = array(
-				'desc'     => __( 'Custom offset (Percent)', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Used when "Custom offset" option is selected above.', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Custom offset (Percent)', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Used when "Custom offset" option is selected above.', 'e-commerce-jetpack' ),
 				'id'       => $field_id . '_' . 'custom_offset',
 				'default'  => 0,
 				'type'     => 'number',

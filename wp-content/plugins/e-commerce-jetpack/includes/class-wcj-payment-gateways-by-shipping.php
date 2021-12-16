@@ -23,8 +23,8 @@ class WCJ_Payment_Gateways_By_Shipping extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways_by_shipping';
-		$this->short_desc = __( 'Gateways by Shipping', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set "enable for shipping methods" for payment gateways.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Gateways by Shipping', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set "enable for shipping methods" for payment gateways.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-payment-gateways-by-shipping';
 		parent::__construct();
 

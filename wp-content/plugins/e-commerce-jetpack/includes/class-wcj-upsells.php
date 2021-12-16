@@ -26,10 +26,10 @@ class WCJ_Upsells extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'upsells';
-		$this->short_desc = __( 'Upsells', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Upsells', 'e-commerce-jetpack' );
 		$this->extra_desc = __( 'Upsells are products which you recommend instead of the currently viewed product, for example, products that are more profitable or better quality or more expensive.', 'woocommerce' );
-		$this->desc       = __( 'Customize upsells products display. Global upsells (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Customize upsells products display.', 'woocommerce-jetpack' );
+		$this->desc       = __( 'Customize upsells products display. Global upsells (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Customize upsells products display.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-upsells';
 		parent::__construct();
 

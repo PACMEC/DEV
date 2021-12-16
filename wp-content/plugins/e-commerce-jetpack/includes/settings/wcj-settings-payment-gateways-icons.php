@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
-		'desc'     => __( 'If you want to show an image next to the gateway\'s name on the frontend, enter a URL to an image.', 'woocommerce-jetpack' ),
+		'desc'     => __( 'If you want to show an image next to the gateway\'s name on the frontend, enter a URL to an image.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_payment_gateways_icons_options',
 	),
 );
@@ -32,7 +32,7 @@ foreach ( $available_gateways as $key => $gateway ) {
 	$settings = array_merge( $settings, array(
 		array(
 			'title'    => $gateway->title,
-			'desc_tip' => __( 'Leave blank to set WooCommerce default value', 'woocommerce-jetpack' ),
+			'desc_tip' => __( 'Leave blank to set WooCommerce default value', 'e-commerce-jetpack' ),
 			'desc'     => ( '' != $desc_tip ) ? $desc_tip : $desc,
 			'id'       => 'wcj_gateways_icons_' . $key . '_icon',
 			'default'  => '',
@@ -43,7 +43,7 @@ foreach ( $available_gateways as $key => $gateway ) {
 		array(
 			'title'    => '',
 			'desc_tip' => $desc_tip,
-			'desc'     => __( 'Remove Icon', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Remove Icon', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_gateways_icons_' . $key . '_icon_remove',
 			'default'  => 'no',
 			'type'     => 'checkbox',

@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'    => __( 'Enabled', 'woocommerce-jetpack' ),
+		'title'    => __( 'Enabled', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_product_bookings_enabled',
 		'default'  => 'no',
 		'type'     => 'select',
 		'options'  => array(
-			'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-			'no'  => __( 'No', 'woocommerce-jetpack' ),
+			'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+			'no'  => __( 'No', 'e-commerce-jetpack' ),
 		),
 	),
 );

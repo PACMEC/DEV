@@ -22,8 +22,8 @@ class WCJ_Product_Images extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_images';
-		$this->short_desc = __( 'Product Images', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize products images and thumbnails.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Images', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize products images and thumbnails.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-images';
 		parent::__construct();
 

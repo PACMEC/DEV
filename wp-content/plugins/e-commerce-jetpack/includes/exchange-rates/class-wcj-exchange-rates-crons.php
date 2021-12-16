@@ -19,11 +19,11 @@ class WCJ_Exchange_Rates_Crons {
 	 */
 	function __construct() {
 		$this->update_intervals  = array(
-			'minutely'   => __( 'Update Every Minute', 'woocommerce-jetpack' ),
-			'hourly'     => __( 'Update Hourly', 'woocommerce-jetpack' ),
-			'twicedaily' => __( 'Update Twice Daily', 'woocommerce-jetpack' ),
-			'daily'      => __( 'Update Daily', 'woocommerce-jetpack' ),
-			'weekly'     => __( 'Update Weekly', 'woocommerce-jetpack' ),
+			'minutely'   => __( 'Update Every Minute', 'e-commerce-jetpack' ),
+			'hourly'     => __( 'Update Hourly', 'e-commerce-jetpack' ),
+			'twicedaily' => __( 'Update Twice Daily', 'e-commerce-jetpack' ),
+			'daily'      => __( 'Update Daily', 'e-commerce-jetpack' ),
+			'weekly'     => __( 'Update Weekly', 'e-commerce-jetpack' ),
 		);
 		add_action( 'init',                            array( $this, 'schedule_the_events' ) );
 		add_action( 'admin_init',                      array( $this, 'schedule_the_events' ) );
@@ -182,12 +182,12 @@ class WCJ_Exchange_Rates_Crons {
 					}
 					$field_id = 'wcj_currency_exchange_rates_' . sanitize_title( $currency_from . $currency_to );
 					update_option( $field_id, $the_rate );
-					$result_message = __( 'Cron job: exchange rates successfully updated', 'woocommerce-jetpack' );
+					$result_message = __( 'Cron job: exchange rates successfully updated', 'e-commerce-jetpack' );
 				} else {
-					$result_message = __( 'Cron job: exchange rates not updated, as currency_from == currency_to', 'woocommerce-jetpack' );
+					$result_message = __( 'Cron job: exchange rates not updated, as currency_from == currency_to', 'e-commerce-jetpack' );
 				}
 			} else {
-				$result_message = __( 'Cron job: exchange rates update failed', 'woocommerce-jetpack' );
+				$result_message = __( 'Cron job: exchange rates update failed', 'e-commerce-jetpack' );
 			}
 			/* if ( 'yes' === wcj_get_option( 'wcj_currency_exchange_logging_enabled', 'no' ) ) {
 				wcj_log( $result_message . ': ' . $currency_from . $currency_to . ': ' . $the_rate . ': ' . 'update_the_exchange_rates: ' . $interval );
@@ -207,11 +207,11 @@ class WCJ_Exchange_Rates_Crons {
 	function cron_add_custom_intervals( $schedules ) {
 		$schedules['weekly'] = array(
 			'interval' => 604800,
-			'display'  => __( 'Once Weekly', 'woocommerce-jetpack' )
+			'display'  => __( 'Once Weekly', 'e-commerce-jetpack' )
 		);
 		$schedules['minutely'] = array(
 			'interval' => 60,
-			'display'  => __( 'Once a Minute', 'woocommerce-jetpack' )
+			'display'  => __( 'Once a Minute', 'e-commerce-jetpack' )
 		);
 		return $schedules;
 	}

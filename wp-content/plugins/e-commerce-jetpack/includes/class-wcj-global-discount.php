@@ -26,9 +26,9 @@ class WCJ_Global_Discount extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'global_discount';
-		$this->short_desc = __( 'Global Discount', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add global discount to all products (1 discount group allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add global discount to all products.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Global Discount', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add global discount to all products (1 discount group allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add global discount to all products.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shop-global-discount';
 		parent::__construct();
 

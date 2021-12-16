@@ -24,30 +24,30 @@ update_option( 'wcj_template_editor_templates_by_path', $templates_by_path );
 
 $settings = array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_template_editor_options',
 	),
 	array(
-		'title'    => __( 'Paths', 'woocommerce-jetpack' ),
+		'title'    => __( 'Paths', 'e-commerce-jetpack' ),
 		'type'     => 'textarea',
 		'default'  => '/woocommerce/templates/',
 		'css'      => 'width:100%;',
 		'id'       => 'wcj_template_editor_paths',
-		'desc_tip' => __( 'One path per line relative to: ' . WP_PLUGIN_DIR . '', 'woocommerce-jetpack' ),
+		'desc_tip' => __( 'One path per line relative to: ' . WP_PLUGIN_DIR . '', 'e-commerce-jetpack' ),
 	),
 	array(
 		'type'     => 'sectionend',
 		'id'       => 'wcj_template_editor_options',
 	),
 	array(
-		'title'    => __( 'Templates', 'woocommerce-jetpack' ),
+		'title'    => __( 'Templates', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_template_editor_templates_options',
 	),
 	array(
-		'title'    => __( 'Templates to Edit', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Save changes after you set this option to see new options fields.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Templates to Edit', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Save changes after you set this option to see new options fields.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_template_editor_templates_to_edit',
 		'type'     => 'multiselect',
 		'class'    => 'chosen_select',
@@ -64,10 +64,10 @@ foreach ( wcj_get_option( 'wcj_template_editor_templates_to_edit', array() ) as 
 			'title'    => $template,
 			'desc'     =>
 				'<details>' .
-					'<summary>' . __( 'Info', 'woocommerce-jetpack' ) . '</summary>' .
+					'<summary>' . __( 'Info', 'e-commerce-jetpack' ) . '</summary>' .
 					wcj_get_table_html( array(
-						array( __( 'Default template path', 'woocommerce-jetpack' ),  '<span>' .                $default_template_path  . '</span>' ),
-						array( __( 'Replaced template path', 'woocommerce-jetpack' ), '<span ' . $style . '>' . $replaced_template_path . '</span>' ),
+						array( __( 'Default template path', 'e-commerce-jetpack' ),  '<span>' .                $default_template_path  . '</span>' ),
+						array( __( 'Replaced template path', 'e-commerce-jetpack' ), '<span ' . $style . '>' . $replaced_template_path . '</span>' ),
 					), array( 'table_class' => 'widefat striped', 'table_heading_type' => 'none', 'columns_styles' => array( 'padding:0', 'padding:0' ) ) ) .
 				'</details>',
 			'id'       => "wcj_template_editor_templates_content[{$template}]",

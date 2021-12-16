@@ -104,7 +104,7 @@ if (!class_exists('WCJ_Shortcodes')) :
 				'before'                           => '',
 				'after'                            => '',
 				'visibility'                       => '', // user_visibility
-				'wrong_user_text'                  => '', // '<p>' . __( 'Wrong user role!', 'woocommerce-jetpack' ) . '</p>',
+				'wrong_user_text'                  => '', // '<p>' . __( 'Wrong user role!', 'e-commerce-jetpack' ) . '</p>',
 				'wrong_user_text_not_logged_in'    => '',
 				'site_visibility'                  => '',
 				'location'                         => '', // user_location
@@ -140,7 +140,7 @@ if (!class_exists('WCJ_Shortcodes')) :
 
 			// Check for module enabled
 			if ('' != $atts['module'] && !wcj_is_module_enabled($atts['module'])) {
-				return '<p>' . sprintf(__('"%s" module is not enabled!', 'woocommerce-jetpack'), $atts['module_name']) . '</p>';
+				return '<p>' . sprintf(__('"%s" module is not enabled!', 'e-commerce-jetpack'), $atts['module_name']) . '</p>';
 			}
 
 			// Check if time is ok

@@ -59,7 +59,7 @@ class WCJ_Settings_Manager {
 	function manage_options_import() {
 		global $wcj_notice;
 		if( ! isset( $_FILES['booster_import_settings_file']['tmp_name'] ) || '' == $_FILES['booster_import_settings_file']['tmp_name'] ) {
-			$wcj_notice .= __( 'Please upload a file to import!', 'woocommerce-jetpack' );
+			$wcj_notice .= __( 'Please upload a file to import!', 'e-commerce-jetpack' );
 			$import_settings = array();
 			unset( $_POST['booster_import_settings'] );
 		} else {
@@ -69,12 +69,12 @@ class WCJ_Settings_Manager {
 			$import_settings = preg_replace( "/^$bom/", '', $import_settings );
 			$import_settings = explode( PHP_EOL, preg_replace( '~(*BSR_ANYCRLF)\R~', PHP_EOL, $import_settings ) );
 			if ( ! is_array( $import_settings ) || 2 !== count( $import_settings ) ) {
-				$wcj_notice .= __( 'Wrong file format!', 'woocommerce-jetpack' );
+				$wcj_notice .= __( 'Wrong file format!', 'e-commerce-jetpack' );
 			} else {
 				$import_header = $import_settings[0];
 				$required_header = 'Booster for WooCommerce';
 				if ( $required_header !== substr( $import_header, 0, strlen( $required_header ) ) ) {
-					$wcj_notice .= __( 'Wrong file format!', 'woocommerce-jetpack' );
+					$wcj_notice .= __( 'Wrong file format!', 'e-commerce-jetpack' );
 				} else {
 					$import_settings = json_decode( $import_settings[1], true );
 					foreach ( $import_settings as $import_key => $import_setting ) {
@@ -83,7 +83,7 @@ class WCJ_Settings_Manager {
 							$import_counter++;
 						}
 					}
-					$wcj_notice .= sprintf( __( '%d options successfully imported.', 'woocommerce-jetpack' ), $import_counter );
+					$wcj_notice .= sprintf( __( '%d options successfully imported.', 'e-commerce-jetpack' ), $import_counter );
 				}
 			}
 		}
@@ -137,7 +137,7 @@ class WCJ_Settings_Manager {
 			delete_post_meta( $meta->post_id, $meta->meta_key );
 			$delete_counter_meta++;
 		}
-		$wcj_notice .= sprintf( __( '%d meta successfully deleted.', 'woocommerce-jetpack' ), $delete_counter_meta );
+		$wcj_notice .= sprintf( __( '%d meta successfully deleted.', 'e-commerce-jetpack' ), $delete_counter_meta );
 	}
 
 	/**
@@ -155,7 +155,7 @@ class WCJ_Settings_Manager {
 			delete_site_option( $option->option_name );
 			$delete_counter_options++;
 		}
-		$wcj_notice .= sprintf( __( '%d options successfully deleted.', 'woocommerce-jetpack' ), $delete_counter_options );
+		$wcj_notice .= sprintf( __( '%d options successfully deleted.', 'e-commerce-jetpack' ), $delete_counter_options );
 	}
 
 }

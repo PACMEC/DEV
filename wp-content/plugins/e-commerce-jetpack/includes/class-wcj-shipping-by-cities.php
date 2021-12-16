@@ -22,22 +22,22 @@ class WCJ_Shipping_By_Cities extends WCJ_Module_Shipping_By_Condition {
 	function __construct() {
 
 		$this->id         = 'shipping_by_cities';
-		$this->short_desc = __( 'Shipping Methods by City or Postcode', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set shipping cities or postcodes to include/exclude for shipping methods to show up. (Free shipping available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set shipping cities or postcodes to include/exclude for shipping methods to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Methods by City or Postcode', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set shipping cities or postcodes to include/exclude for shipping methods to show up. (Free shipping available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set shipping cities or postcodes to include/exclude for shipping methods to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-methods-by-cities';
 
 		$this->condition_options = array(
 			'cities' => array(
-				'title' => __( 'Cities', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Otherwise enter cities one per line.', 'woocommerce-jetpack' ),
+				'title' => __( 'Cities', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Otherwise enter cities one per line.', 'e-commerce-jetpack' ),
 				'type'  => 'textarea',
 				'class' => '',
 				'css'   => 'height:200px;',
 			),
 			'postcodes' => array(
-				'title' => __( 'Postcodes', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Otherwise enter postcodes one per line.', 'woocommerce-jetpack' ) . '<br>' .
+				'title' => __( 'Postcodes', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Otherwise enter postcodes one per line.', 'e-commerce-jetpack' ) . '<br>' .
 					'<em>' . __( 'Postcodes containing wildcards (e.g. CB23*) and fully numeric ranges (e.g. <code>90210...99000</code>) are also supported.', 'woocommerce' ) . '</em>',
 				'type'  => 'textarea',
 				'class' => '',

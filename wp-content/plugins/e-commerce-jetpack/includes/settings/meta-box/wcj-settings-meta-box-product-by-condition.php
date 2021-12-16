@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $option_styling = ( 'standard' === wcj_get_option( 'wcj_' . $this->id . '_select_style', 'chosen_select' ) ?
 	array(
-		'tooltip'    => __( 'Use "Control" key to select/deselect multiple options. Hold "Control" and "A" to select all options. Leave empty to disable.', 'woocommerce-jetpack' ),
+		'tooltip'    => __( 'Use "Control" key to select/deselect multiple options. Hold "Control" and "A" to select all options. Leave empty to disable.', 'e-commerce-jetpack' ),
 		'css'        => 'height:200px;',
 		'class'      => 'widefat',
 		'show_value' => true,
@@ -26,7 +26,7 @@ $options = array();
 if ( 'invisible' != apply_filters( 'booster_option', 'visible', wcj_get_option( 'wcj_' . $this->id . '_visibility_method', 'visible' ) ) ) {
 	$options = array_merge( $options, array( array_merge(
 		array(
-			'title'    => __( 'Visible', 'woocommerce-jetpack' ),
+			'title'    => __( 'Visible', 'e-commerce-jetpack' ),
 			'name'     => 'wcj_' . $this->id . '_visible',
 			'default'  => '',
 			'type'     => 'select',
@@ -38,7 +38,7 @@ if ( 'invisible' != apply_filters( 'booster_option', 'visible', wcj_get_option( 
 if ( 'visible' != apply_filters( 'booster_option', 'visible', wcj_get_option( 'wcj_' . $this->id . '_visibility_method', 'visible' ) ) ) {
 	$options = array_merge( $options, array( array_merge(
 		array(
-			'title'    => __( 'Invisible', 'woocommerce-jetpack' ),
+			'title'    => __( 'Invisible', 'e-commerce-jetpack' ),
 			'name'     => 'wcj_' . $this->id . '_invisible',
 			'default'  => '',
 			'type'     => 'select',

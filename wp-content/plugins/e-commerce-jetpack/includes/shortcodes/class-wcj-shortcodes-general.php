@@ -93,8 +93,8 @@ class WCJ_General_Shortcodes extends WCJ_Shortcodes {
 			'selector_type'         => 'country',
 			'option'                => '',
 			'company'               => '',
-			'label_incl'            => __( 'Tax toggle (incl.)', 'woocommerce-jetpack' ),
-			'label_excl'            => __( 'Tax toggle (excl.)', 'woocommerce-jetpack' ),
+			'label_incl'            => __( 'Tax toggle (incl.)', 'e-commerce-jetpack' ),
+			'label_excl'            => __( 'Tax toggle (excl.)', 'e-commerce-jetpack' ),
 			'slug'                  => '',
 			'code'                  => '',
 			'type'                  => '',
@@ -544,7 +544,7 @@ class WCJ_General_Shortcodes extends WCJ_Shortcodes {
 	 */
 	function wcj_empty_cart_button( $atts ) {
 		if ( ! wcj_is_module_enabled( 'empty_cart' ) ) {
-			return '<p>' . sprintf( __( '"%s" module is not enabled!', 'woocommerce-jetpack' ), __( 'Empty Cart Button', 'woocommerce-jetpack' ) ) . '</p>';
+			return '<p>' . sprintf( __( '"%s" module is not enabled!', 'e-commerce-jetpack' ), __( 'Empty Cart Button', 'e-commerce-jetpack' ) ) . '</p>';
 		}
 		return wcj_empty_cart_button_html();
 	}

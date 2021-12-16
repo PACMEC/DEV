@@ -11,16 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Currency Symbol Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Currency Symbol Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
-		'desc'     => sprintf( __( 'You can use shortcodes in currency symbols, e.g.: %s.', 'woocommerce-jetpack' ),
+		'desc'     => sprintf( __( 'You can use shortcodes in currency symbols, e.g.: %s.', 'e-commerce-jetpack' ),
 			'<code>[wcj_wpml lang="EN"]$[/wcj_wpml][wcj_wpml not_lang="EN"]USD[/wcj_wpml]</code>' ),
 		'id'       => 'wcj_all_currencies_list_options',
 	),
 	array(
-		'title'    => __( 'Hide Currency Symbol', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Hide', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Hides currency symbol completely.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Hide Currency Symbol', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Hide', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Hides currency symbol completely.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_currency_hide_symbol',
 		'default'  => 'no',
 		'type'     => 'checkbox',
@@ -53,12 +53,12 @@ $settings = array_merge( $settings, array(
 			'id'       => 'wcj_all_currencies_list_options',
 	),
 	array(
-			'title'    => __( 'Custom Currencies', 'woocommerce-jetpack' ),
+			'title'    => __( 'Custom Currencies', 'e-commerce-jetpack' ),
 			'type'     => 'title',
 			'id'       => 'wcj_currency_custom_currency_options',
 	),
 	array(
-			'title'    => __( 'Total Custom Currencies', 'woocommerce-jetpack' ),
+			'title'    => __( 'Total Custom Currencies', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_currency_custom_currency_total_number',
 			'default'  => 1,
 			'type'     => 'custom_number',
@@ -70,20 +70,20 @@ $custom_currency_total_number = apply_filters( 'booster_option', 1, wcj_get_opti
 for ( $i = 1; $i <= $custom_currency_total_number; $i++ ) {
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => __( 'Custom Currency', 'woocommerce-jetpack' ) . ' #' . $i,
-			'desc'     => __( 'Currency Name (required)', 'woocommerce-jetpack' ),
+			'title'    => __( 'Custom Currency', 'e-commerce-jetpack' ) . ' #' . $i,
+			'desc'     => __( 'Currency Name (required)', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_currency_custom_currency_name_' . $i,
 			'default'  => '',
 			'type'     => 'text',
 		),
 		array(
-			'desc'     => __( 'Currency Code (required)', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Currency Code (required)', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_currency_custom_currency_code_' . $i,
 			'default'  => '',
 			'type'     => 'text',
 		),
 		array(
-			'desc'     => __( 'Currency Symbol', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Currency Symbol', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_currency_custom_currency_symbol_' . $i,
 			'default'  => '',
 			'type'     => 'text',

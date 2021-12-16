@@ -252,7 +252,7 @@ class WCJ_Order_Items_Shortcodes extends WCJ_Shortcodes {
 	 * @todo    `sort_by_column` - fix `item_number`
 	 * @todo    `$item['is_custom']` may be defined only if WCJ_IS_WC_VERSION_BELOW_3
 	 * @todo    `if ( '' !== $column_cell_data )` - this may be optional?
-	 * @todo    (maybe) `if ( $columns_total_number !== count( $columns_titles ) || $columns_total_number !== count( $columns_styles ) ) { return __( 'Please recheck that there is the same number of columns in "columns", "columns_titles" and "columns_styles" attributes.', 'woocommerce-jetpack' ); }`
+	 * @todo    (maybe) `if ( $columns_total_number !== count( $columns_titles ) || $columns_total_number !== count( $columns_styles ) ) { return __( 'Please recheck that there is the same number of columns in "columns", "columns_titles" and "columns_styles" attributes.', 'e-commerce-jetpack' ); }`
 	 */
 	function wcj_order_items_table( $atts, $content = '' ) {
 

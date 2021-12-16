@@ -25,8 +25,8 @@ class WCJ_Custom_CSS extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'custom_css';
-		$this->short_desc = __( 'Custom CSS', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Separate custom CSS for front and back end. Per product CSS.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom CSS', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Separate custom CSS for front and back end. Per product CSS.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-custom-css';
 		parent::__construct();
 

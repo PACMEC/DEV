@@ -48,7 +48,7 @@ class WCJ_Input_Field_Shortcodes extends WCJ_Shortcodes {
 	 */
 	function wcj_input_field( $atts, $content ) {
 		if ( '' == $atts['name'] ) {
-			return __( 'Attribute "name" is required!', 'woocommerce-jetpack' );
+			return __( 'Attribute "name" is required!', 'e-commerce-jetpack' );
 		}
 
 		// Custom data attributes

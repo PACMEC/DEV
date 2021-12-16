@@ -20,21 +20,21 @@ class WCJ_PDF_Invoicing extends WCJ_Module {
 	function __construct() {
 
 		$this->id            = 'pdf_invoicing';
-		$this->short_desc    = __( 'PDF Invoicing', 'woocommerce-jetpack' );
-		$this->section_title = __( 'General', 'woocommerce-jetpack' );
-		$this->desc          = __( 'Invoices, Proforma Invoices (Plus), Credit Notes (Plus) and Packing Slips (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro      = __( 'Invoices, Proforma Invoices, Credit Notes and Packing Slips.', 'woocommerce-jetpack' );
+		$this->short_desc    = __( 'PDF Invoicing', 'e-commerce-jetpack' );
+		$this->section_title = __( 'General', 'e-commerce-jetpack' );
+		$this->desc          = __( 'Invoices, Proforma Invoices (Plus), Credit Notes (Plus) and Packing Slips (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro      = __( 'Invoices, Proforma Invoices, Credit Notes and Packing Slips.', 'e-commerce-jetpack' );
 		$this->link_slug     = 'woocommerce-pdf-invoicing-and-packing-slips';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'renumerate_invoices' => array(
-				'title' => __( 'Invoices Renumerate', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Tool renumerates all invoices, proforma invoices, credit notes and packing slips.', 'woocommerce-jetpack' ),
+				'title' => __( 'Invoices Renumerate', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Tool renumerates all invoices, proforma invoices, credit notes and packing slips.', 'e-commerce-jetpack' ),
 			),
 			'invoices_report' => array(
-				'title' => __( 'Invoices Report', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Invoices Monthly Reports.', 'woocommerce-jetpack' ),
+				'title' => __( 'Invoices Report', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Invoices Monthly Reports.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -91,9 +91,9 @@ class WCJ_PDF_Invoicing extends WCJ_Module {
 	function bulk_actions_register( $actions ) {
 		$invoice_types      = wcj_get_enabled_invoice_types();
 		$new_actions_source = array(
-			'generate' => __( 'Generate', 'woocommerce-jetpack' ),
-			'download' => __( 'Download (Zip)', 'woocommerce-jetpack' ),
-			'merge'    => __( 'Merge (Print)', 'woocommerce-jetpack' ),
+			'generate' => __( 'Generate', 'e-commerce-jetpack' ),
+			'download' => __( 'Download (Zip)', 'e-commerce-jetpack' ),
+			'merge'    => __( 'Merge (Print)', 'e-commerce-jetpack' ),
 		);
 		$new_actions        = array();
 		foreach ( $new_actions_source as $source_key => $source_value ) {
@@ -122,28 +122,28 @@ class WCJ_PDF_Invoicing extends WCJ_Module {
 				switch ( $_GET['wcj_notice'] ) {
 					case 'ziparchive_class_missing':
 						echo '<div class="notice notice-error"><p><strong>' .
-							sprintf( __( 'Booster: %s class is not accessible on your server. Please contact your hosting provider.', 'woocommerce-jetpack' ),
+							sprintf( __( 'Booster: %s class is not accessible on your server. Please contact your hosting provider.', 'e-commerce-jetpack' ),
 								'<a target="_blank" href="http://php.net/manual/en/class.ziparchive.php">PHP ZipArchive</a>' ) .
 						'</strong></p></div>';
 						break;
 					case 'ziparchive_error':
 						echo '<div class="notice notice-error"><p>' .
-							__( 'Booster: ZipArchive error.', 'woocommerce-jetpack' ) .
+							__( 'Booster: ZipArchive error.', 'e-commerce-jetpack' ) .
 						'</p></div>';
 						break;
 					case 'merge_pdfs_no_files':
 						echo '<div class="notice notice-error"><p>' .
-							__( 'Booster: Merge PDFs: No files.', 'woocommerce-jetpack' ) .
+							__( 'Booster: Merge PDFs: No files.', 'e-commerce-jetpack' ) .
 						'</p></div>';
 						break;
 					case 'merge_pdfs_php_version':
 						echo '<div class="notice notice-error"><p>' .
-							sprintf( __( 'Booster: Merge PDFs: Command requires PHP version 5.3.0 at least. You have PHP version %s installed.', 'woocommerce-jetpack' ), PHP_VERSION ) .
+							sprintf( __( 'Booster: Merge PDFs: Command requires PHP version 5.3.0 at least. You have PHP version %s installed.', 'e-commerce-jetpack' ), PHP_VERSION ) .
 						'</p></div>';
 						break;
 					default:
 						echo '<div class="notice notice-error"><p>' .
-							sprintf( __( 'Booster: %s.', 'woocommerce-jetpack' ), '<code>' . sanitize_text_field($_GET['wcj_notice']) . '</code>' ) .
+							sprintf( __( 'Booster: %s.', 'e-commerce-jetpack' ), '<code>' . sanitize_text_field($_GET['wcj_notice']) . '</code>' ) .
 						'</p></div>';
 						break;
 				}
@@ -436,7 +436,7 @@ class WCJ_PDF_Invoicing extends WCJ_Module {
 	 * @since   2.9.0
 	 */
 	function wrong_user_role_notice() {
-		echo '<div class="notice notice-error is-dismissible"><p>' . __( 'You are not allowed to view the invoice.', 'woocommerce-jetpack' ) . '</p></div>';
+		echo '<div class="notice notice-error is-dismissible"><p>' . __( 'You are not allowed to view the invoice.', 'e-commerce-jetpack' ) . '</p></div>';
 	}
 
 	/**

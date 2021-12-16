@@ -26,9 +26,9 @@ if (!class_exists('WCJ_Currency_Per_Product')) :
 		{
 
 			$this->id         = 'currency_per_product';
-			$this->short_desc = __('Currency per Product', 'woocommerce-jetpack');
-			$this->desc       = __('Display prices for products in different currencies (1 currency allowed in free version).', 'woocommerce-jetpack');
-			$this->desc_pro   = __('Display prices for products in different currencies.', 'woocommerce-jetpack');
+			$this->short_desc = __('Currency per Product', 'e-commerce-jetpack');
+			$this->desc       = __('Display prices for products in different currencies (1 currency allowed in free version).', 'e-commerce-jetpack');
+			$this->desc_pro   = __('Display prices for products in different currencies.', 'e-commerce-jetpack');
 			$this->link_slug  = 'woocommerce-currency-per-product';
 			parent::__construct();
 
@@ -176,7 +176,7 @@ if (!class_exists('WCJ_Currency_Per_Product')) :
 					if ($cart_item['product_id'] != $product_id) {
 						wc_add_notice(get_option(
 							'wcj_currency_per_product_cart_checkout_leave_one_product',
-							__('Only one product can be added to the cart. Clear the cart or finish the order, before adding another product to the cart.', 'woocommerce-jetpack')
+							__('Only one product can be added to the cart. Clear the cart or finish the order, before adding another product to the cart.', 'e-commerce-jetpack')
 						), 'error');
 						return false;
 					}
@@ -193,7 +193,7 @@ if (!class_exists('WCJ_Currency_Per_Product')) :
 					if ($cart_product_currency != $product_currency) {
 						wc_add_notice(get_option(
 							'wcj_currency_per_product_cart_checkout_leave_same_currency',
-							__('Only products with same currency can be added to the cart. Clear the cart or finish the order, before adding products with another currency to the cart.', 'woocommerce-jetpack')
+							__('Only products with same currency can be added to the cart. Clear the cart or finish the order, before adding products with another currency to the cart.', 'e-commerce-jetpack')
 						), 'error');
 						return false;
 					}

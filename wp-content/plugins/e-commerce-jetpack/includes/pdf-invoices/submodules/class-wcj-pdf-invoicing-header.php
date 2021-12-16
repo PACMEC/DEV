@@ -20,7 +20,7 @@ class WCJ_PDF_Invoicing_Header extends WCJ_Module {
 	function __construct() {
 		$this->id         = 'pdf_invoicing_header';
 		$this->parent_id  = 'pdf_invoicing';
-		$this->short_desc = __( 'Header', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Header', 'e-commerce-jetpack' );
 		$this->desc       = '';
 		parent::__construct( 'submodule' );
 	}

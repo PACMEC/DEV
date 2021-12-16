@@ -41,7 +41,7 @@ foreach ( $single_or_archive_array as $single_or_archive ) {
 		$extra_filters = $extra_filters_result;
 	}
 
-	$single_or_archive_desc = ( 'single' === $single_or_archive ? __( 'Single Product Pages', 'woocommerce-jetpack' ) : __( 'Archives', 'woocommerce-jetpack' ) );
+	$single_or_archive_desc = ( 'single' === $single_or_archive ? __( 'Single Product Pages', 'e-commerce-jetpack' ) : __( 'Archives', 'e-commerce-jetpack' ) );
 	$settings = array_merge( $settings, array(
 		array(
 			'title'    => $single_or_archive_desc,
@@ -49,7 +49,7 @@ foreach ( $single_or_archive_array as $single_or_archive ) {
 			'id'       => 'wcj_product_custom_info_options_' . $single_or_archive,
 		),
 		array(
-			'title'    => __( 'Total Blocks', 'woocommerce-jetpack' ),
+			'title'    => __( 'Total Blocks', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_product_custom_info_total_number_' . $single_or_archive,
 			'default'  => 1,
 			'type'     => 'custom_number',
@@ -80,95 +80,95 @@ foreach ( $single_or_archive_array as $single_or_archive ) {
 
 		$settings = array_merge( $settings, array(
 			array(
-				'title'    => sprintf( __( 'Block #%s', 'woocommerce-jetpack' ), $i ),
+				'title'    => sprintf( __( 'Block #%s', 'e-commerce-jetpack' ), $i ),
 				'type'     => 'title',
 				'id'       => 'wcj_product_custom_info_options_' . $single_or_archive . '_' . $i,
 			),
 			array(
-				'title'    => __( 'Content', 'woocommerce-jetpack' ),
+				'title'    => __( 'Content', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_content_' . $single_or_archive . '_' . $i,
 				'default'  => '[wcj_product_total_sales before="Total sales: " after=" pcs."]',
 				'type'     => 'custom_textarea',
-				'desc_tip' => __( 'You can use shortcodes here.', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'You can use shortcodes here.', 'e-commerce-jetpack' ),
 				'css'      => 'width:100%;height:200px;',
 			),
 			array(
-				'title'    => __( 'Position', 'woocommerce-jetpack' ),
+				'title'    => __( 'Position', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_hook_' . $single_or_archive . '_' . $i,
 				'default'  => ( 'single' === $single_or_archive ) ? 'woocommerce_after_single_product_summary' : 'woocommerce_after_shop_loop_item_title',
 				'type'     => 'select',
 				'options'  => array_merge( ( 'single' === $single_or_archive ?
 					array(
-						'woocommerce_before_single_product'         => __( 'Before single product', 'woocommerce-jetpack' ),
-						'woocommerce_before_single_product_summary' => __( 'Before single product summary', 'woocommerce-jetpack' ),
-						'woocommerce_single_product_summary'        => __( 'Inside single product summary', 'woocommerce-jetpack' ),
-						'woocommerce_after_single_product_summary'  => __( 'After single product summary', 'woocommerce-jetpack' ),
-						'woocommerce_after_single_product'          => __( 'After single product', 'woocommerce-jetpack' ),
-						'woocommerce_before_add_to_cart_form'       => __( 'Before add to cart form', 'woocommerce-jetpack' ),
-						'woocommerce_before_add_to_cart_button'     => __( 'Before add to cart button', 'woocommerce-jetpack' ),
-						'woocommerce_after_add_to_cart_button'      => __( 'After add to cart button', 'woocommerce-jetpack' ),
-						'woocommerce_after_add_to_cart_form'        => __( 'After add to cart form', 'woocommerce-jetpack' ),
-						'woocommerce_product_meta_start'            => __( 'Product meta start', 'woocommerce-jetpack' ),
-						'woocommerce_product_meta_end'              => __( 'Product meta end', 'woocommerce-jetpack' ),
+						'woocommerce_before_single_product'         => __( 'Before single product', 'e-commerce-jetpack' ),
+						'woocommerce_before_single_product_summary' => __( 'Before single product summary', 'e-commerce-jetpack' ),
+						'woocommerce_single_product_summary'        => __( 'Inside single product summary', 'e-commerce-jetpack' ),
+						'woocommerce_after_single_product_summary'  => __( 'After single product summary', 'e-commerce-jetpack' ),
+						'woocommerce_after_single_product'          => __( 'After single product', 'e-commerce-jetpack' ),
+						'woocommerce_before_add_to_cart_form'       => __( 'Before add to cart form', 'e-commerce-jetpack' ),
+						'woocommerce_before_add_to_cart_button'     => __( 'Before add to cart button', 'e-commerce-jetpack' ),
+						'woocommerce_after_add_to_cart_button'      => __( 'After add to cart button', 'e-commerce-jetpack' ),
+						'woocommerce_after_add_to_cart_form'        => __( 'After add to cart form', 'e-commerce-jetpack' ),
+						'woocommerce_product_meta_start'            => __( 'Product meta start', 'e-commerce-jetpack' ),
+						'woocommerce_product_meta_end'              => __( 'Product meta end', 'e-commerce-jetpack' ),
 					) :
 					array(
-						'woocommerce_before_shop_loop_item'       => __( 'Before product', 'woocommerce-jetpack' ),
-						'woocommerce_before_shop_loop_item_title' => __( 'Before product title', 'woocommerce-jetpack' ),
-						'woocommerce_shop_loop_item_title'        => __( 'Inside product title', 'woocommerce-jetpack' ),
-						'woocommerce_after_shop_loop_item_title'  => __( 'After product title', 'woocommerce-jetpack' ),
-						'woocommerce_after_shop_loop_item'        => __( 'After product', 'woocommerce-jetpack' ),
+						'woocommerce_before_shop_loop_item'       => __( 'Before product', 'e-commerce-jetpack' ),
+						'woocommerce_before_shop_loop_item_title' => __( 'Before product title', 'e-commerce-jetpack' ),
+						'woocommerce_shop_loop_item_title'        => __( 'Inside product title', 'e-commerce-jetpack' ),
+						'woocommerce_after_shop_loop_item_title'  => __( 'After product title', 'e-commerce-jetpack' ),
+						'woocommerce_after_shop_loop_item'        => __( 'After product', 'e-commerce-jetpack' ),
 					) ),
 					$extra_filters ),
 			),
 			array(
-				'title'    => __( 'Position Order (i.e. Priority)', 'woocommerce-jetpack' ),
+				'title'    => __( 'Position Order (i.e. Priority)', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_priority_' . $single_or_archive . '_' . $i,
 				'default'  => 10,
 				'type'     => 'number',
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Product Categories to Include', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Product Categories to Include', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_product_cats_to_include_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				$product_cats,
 				$is_multiselect_cats
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Product Categories to Exclude', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Product Categories to Exclude', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_product_cats_to_exclude_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				$product_cats,
 				$is_multiselect_cats
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Product Tags to Include', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Product Tags to Include', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_product_tags_to_include_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				$product_tags,
 				$is_multiselect_tags
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Product Tags to Exclude', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Product Tags to Exclude', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_product_tags_to_exclude_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				$product_tags,
 				$is_multiselect_tags
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Products to Include', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Products to Include', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_products_to_include_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				'',
 				$is_multiselect_products
 			),
 			wcj_get_settings_as_multiselect_or_text( array(
-				'title'    => __( 'Products to Exclude', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Products to Exclude', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_info_products_to_exclude_' . $single_or_archive . '_' . $i,
 				'default'  => '' ),
 				'',
@@ -182,15 +182,15 @@ foreach ( $single_or_archive_array as $single_or_archive ) {
 	}
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => $single_or_archive_desc . ': ' . __( 'Advanced Options', 'woocommerce-jetpack' ),
+			'title'    => $single_or_archive_desc . ': ' . __( 'Advanced Options', 'e-commerce-jetpack' ),
 			'type'     => 'title',
 			'id'       => 'wcj_product_custom_info_advanced_options_' . $single_or_archive,
 		),
 		array(
-			'title'    => __( 'Extra Filters', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Leave blank to disable.', 'woocommerce-jetpack' ),
-			'desc'     => __( 'You can add custom filters here (one per line, in filter|title format).', 'woocommerce-jetpack' ) . '<br>' .
-				sprintf( __( 'E.g.: %s.', 'woocommerce-jetpack' ), '<code>rehub_woo_after_compact_grid_title|Rehub: After title</code>' ),
+			'title'    => __( 'Extra Filters', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Leave blank to disable.', 'e-commerce-jetpack' ),
+			'desc'     => __( 'You can add custom filters here (one per line, in filter|title format).', 'e-commerce-jetpack' ) . '<br>' .
+				sprintf( __( 'E.g.: %s.', 'e-commerce-jetpack' ), '<code>rehub_woo_after_compact_grid_title|Rehub: After title</code>' ),
 			'id'       => 'wcj_product_custom_info_extra_filters_' . $single_or_archive,
 			'default'  => '',
 			'type'     => 'custom_textarea',

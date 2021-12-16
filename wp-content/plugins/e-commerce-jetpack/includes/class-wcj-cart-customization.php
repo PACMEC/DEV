@@ -22,8 +22,8 @@ class WCJ_Cart_Customization extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'cart_customization';
-		$this->short_desc = __( 'Cart Customization', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize WooCommerce cart - hide coupon field; item remove link; change empty cart "Return to shop" button text.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Cart Customization', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize WooCommerce cart - hide coupon field; item remove link; change empty cart "Return to shop" button text.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-cart-customization';
 		parent::__construct();
 

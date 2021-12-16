@@ -11,16 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Custom Emails', 'woocommerce-jetpack' ),
+		'title'    => __( 'Custom Emails', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_emails_custom_emails_options',
 		'desc'     => sprintf(
-			__( 'This section lets you set number of custom emails to add. After setting the number, visit <a href="%s">WooCommerce > Settings > Emails</a> to set each email options.', 'woocommerce-jetpack' ),
+			__( 'This section lets you set number of custom emails to add. After setting the number, visit <a href="%s">WooCommerce > Settings > Emails</a> to set each email options.', 'e-commerce-jetpack' ),
 			admin_url( 'admin.php?page=wc-settings&tab=email' )
 		),
 	),
 	array(
-		'title'    => __( 'Custom Emails Number', 'woocommerce-jetpack' ),
+		'title'    => __( 'Custom Emails Number', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_emails_custom_emails_total_number',
 		'default'  => 1,
 		'type'     => 'custom_number',
@@ -32,9 +32,9 @@ $total_number = apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_emails_
 for ( $i = 1; $i <= $total_number; $i++ ) {
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => __( 'Admin Title Custom Email', 'woocommerce-jetpack' ) . ' #' . $i,
+			'title'    => __( 'Admin Title Custom Email', 'e-commerce-jetpack' ) . ' #' . $i,
 			'id'       => 'wcj_emails_custom_emails_admin_title_' . $i,
-			'default'  => __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $i,
+			'default'  => __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $i,
 			'type'     => 'text',
 		),
 	) );

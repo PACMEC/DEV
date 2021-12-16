@@ -78,7 +78,7 @@ class WCJ_Add_To_Cart_Per_Product {
 	function add_custom_add_to_cart_meta_box() {
 		add_meta_box(
 			'wc-jetpack-custom-add-to-cart',
-			__( 'Booster: Custom Add to Cart', 'woocommerce-jetpack' ),
+			__( 'Booster: Custom Add to Cart', 'e-commerce-jetpack' ),
 			array( $this, 'create_custom_add_to_cart_meta_box' ),
 			'product',
 			'normal',
@@ -94,8 +94,8 @@ class WCJ_Add_To_Cart_Per_Product {
 		$current_post_id = get_the_ID();
 
 		$options = array(
-			'single'  => __( 'Single product view', 'woocommerce-jetpack' ),
-			'archive' => __( 'Product category (archive) view', 'woocommerce-jetpack' ),
+			'single'  => __( 'Single product view', 'e-commerce-jetpack' ),
+			'archive' => __( 'Product category (archive) view', 'e-commerce-jetpack' ),
 		);
 
 		$html = '<table style="width:50%;min-width:300px;">';

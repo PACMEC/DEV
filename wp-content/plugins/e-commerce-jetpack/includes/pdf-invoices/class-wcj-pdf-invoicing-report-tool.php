@@ -66,7 +66,7 @@ class WCJ_PDF_Invoicing_Report_Tool {
 		if ( isset( $_POST['get_invoices_report_zip'] ) ) {
 			if ( 'yes' === wcj_get_option( 'wcj_general_advanced_disable_save_sys_temp_dir', 'no' ) ) {
 				$this->notice = '<div class="error"><p><strong>' . sprintf(
-					__( 'This option is disabled with "Disable Saving PDFs in PHP directory for temporary files" checkbox in <a href="%s" target="_blank">WooCommerce > Settings > Booster > PDF Invoicing & Packing Slips > Advanced</a>.', 'woocommerce-jetpack' ),
+					__( 'This option is disabled with "Disable Saving PDFs in PHP directory for temporary files" checkbox in <a href="%s" target="_blank">WooCommerce > Settings > Booster > PDF Invoicing & Packing Slips > Advanced</a>.', 'e-commerce-jetpack' ),
 					admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=pdf_invoicing&section=pdf_invoicing_advanced' ) ) .
 				'</strong></p></div>';
 			} else {
@@ -77,13 +77,13 @@ class WCJ_PDF_Invoicing_Report_Tool {
 					if ( $this->check_user_roles( $_invoice_type ) ) {
 						$result = $this->get_invoices_report_zip( $_year, $_month, $_invoice_type );
 						if ( false === $result ) {
-							$this->notice = '<div class="error"><p><strong>' . __( 'Sorry, but something went wrong...', 'woocommerce-jetpack' ) . '</strong></p></div>';
+							$this->notice = '<div class="error"><p><strong>' . __( 'Sorry, but something went wrong...', 'e-commerce-jetpack' ) . '</strong></p></div>';
 						} elseif ( true !== $result ) {
 							$this->notice = '<div class="error"><p><strong>' . $result . '</strong></p></div>';
 						}
 					}
 				} else {
-					$this->notice = '<div class="error"><p><strong>' . __( 'Please fill year and month values.', 'woocommerce-jetpack' ) . '</strong></p></div>';
+					$this->notice = '<div class="error"><p><strong>' . __( 'Please fill year and month values.', 'e-commerce-jetpack' ) . '</strong></p></div>';
 				}
 			}
 		}
@@ -104,7 +104,7 @@ class WCJ_PDF_Invoicing_Report_Tool {
 			if ( ! empty( $the_year ) && ! empty( $the_month ) && ! empty( $the_invoice_type ) ) {
 				$result_message = $this->get_invoices_report( $the_year, $the_month, $the_invoice_type );
 			} else {
-				$result_message = '<div class="error"><p><strong>' . __( 'Please fill year and month values.', 'woocommerce-jetpack' ) . '</strong></p></div>';
+				$result_message = '<div class="error"><p><strong>' . __( 'Please fill year and month values.', 'e-commerce-jetpack' ) . '</strong></p></div>';
 			}
 		}
 		$html = '';
@@ -122,36 +122,36 @@ class WCJ_PDF_Invoicing_Report_Tool {
 		$data = array(
 			// Year
 			array(
-				__( 'Year', 'woocommerce-jetpack' ),
+				__( 'Year', 'e-commerce-jetpack' ),
 				'<input class="input-text widefat" type="number" min="2000" max="2100" step="1" name="report_year" value="' . $the_year . '">',
 			),
 			// Month
 			array(
-				__( 'Month', 'woocommerce-jetpack' ),
+				__( 'Month', 'e-commerce-jetpack' ),
 				'<input class="input-text widefat" type="number" min="1" max="12" step="1" name="report_month" value="' . $the_month . '">',
 			),
 			// Type
 			array(
-				__( 'Document Type', 'woocommerce-jetpack' ),
+				__( 'Document Type', 'e-commerce-jetpack' ),
 				$invoice_type_select_html,
 			),
 			// Get Report Button
 			array(
 				'',
 				'<input class="button-primary" style="background-color:#006799;" type="submit" name="get_invoices_report" value="' .
-					__( 'Display monthly documents table', 'woocommerce-jetpack' ) . '">',
+					__( 'Display monthly documents table', 'e-commerce-jetpack' ) . '">',
 			),
 			// Get Report Zip Button
 			array(
 				'',
 				'<input class="button-primary" type="submit" name="get_invoices_report_zip" value="' .
-					__( 'Download all monthly documents PDFs in single ZIP file', 'woocommerce-jetpack' ) . '">',
+					__( 'Download all monthly documents PDFs in single ZIP file', 'e-commerce-jetpack' ) . '">',
 			),
 			// Get Report CSV Button
 			array(
 				'',
 				'<input class="button-primary" type="submit" name="get_invoices_report_csv" value="' .
-					__( 'Download monthly documents CSV', 'woocommerce-jetpack' ) . '">',
+					__( 'Download monthly documents CSV', 'e-commerce-jetpack' ) . '">',
 			),
 		);
 		$html .= wcj_get_table_html( $data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'vertical' ) );
@@ -169,7 +169,7 @@ class WCJ_PDF_Invoicing_Report_Tool {
 	 */
 	function get_invoices_report_zip( $year, $month, $invoice_type_id ) {
 		if ( ! class_exists( 'ZipArchive' ) ) {
-			return sprintf( __( 'Booster: %s class is not accessible on your server. Please contact your hosting provider.', 'woocommerce-jetpack' ),
+			return sprintf( __( 'Booster: %s class is not accessible on your server. Please contact your hosting provider.', 'e-commerce-jetpack' ),
 				'<a target="_blank" href="http://php.net/manual/en/class.ziparchive.php">PHP ZipArchive</a>' );
 		}
 		$zip           = new ZipArchive();
@@ -242,7 +242,7 @@ class WCJ_PDF_Invoicing_Report_Tool {
 			fclose( $fp );
 			exit();
 		} else {
-			die( __( 'Unexpected error', 'woocommerce-jetpack' ) );
+			die( __( 'Unexpected error', 'e-commerce-jetpack' ) );
 		}
 		return true;
 	}
@@ -254,7 +254,7 @@ class WCJ_PDF_Invoicing_Report_Tool {
 	 * @since   3.1.0
 	 */
 	function get_no_documents_found_message( $year, $month, $invoice_type_id ) {
-		return sprintf( __( 'No documents (%s) found for %d-%02d.', 'woocommerce-jetpack' ), $invoice_type_id, $year, $month );
+		return sprintf( __( 'No documents (%s) found for %d-%02d.', 'e-commerce-jetpack' ), $invoice_type_id, $year, $month );
 	}
 
 	/**

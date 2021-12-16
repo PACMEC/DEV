@@ -24,9 +24,9 @@ class WCJ_Widget_Selector extends WCJ_Widget {
 			case 'id_base':
 				return 'wcj_widget_selector';
 			case 'name':
-				return __( 'Booster - Selector', 'woocommerce-jetpack' );
+				return __( 'Booster - Selector', 'e-commerce-jetpack' );
 			case 'description':
-				return __( 'Booster: Selector Widget', 'woocommerce-jetpack' ) . ' (' . __( 'currently for "Product Visibility by Country" module only', 'woocommerce-jetpack' ) . ')';
+				return __( 'Booster: Selector Widget', 'e-commerce-jetpack' ) . ' (' . __( 'currently for "Product Visibility by Country" module only', 'e-commerce-jetpack' ) . ')';
 		}
 	}
 
@@ -49,20 +49,20 @@ class WCJ_Widget_Selector extends WCJ_Widget {
 	function get_options() {
 		return array(
 			array(
-				'title'    => __( 'Title', 'woocommerce-jetpack' ),
+				'title'    => __( 'Title', 'e-commerce-jetpack' ),
 				'id'       => 'title',
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Selector Type', 'woocommerce-jetpack' ),
+				'title'    => __( 'Selector Type', 'e-commerce-jetpack' ),
 				'id'       => 'selector_type',
 				'default'  => 'country',
 				'type'     => 'select',
 				'options'  => array(
-					'country'                   => __( 'Countries', 'woocommerce-jetpack' ),
-					'product_custom_visibility' => __( 'Product custom visibility', 'woocommerce-jetpack' ),
+					'country'                   => __( 'Countries', 'e-commerce-jetpack' ),
+					'product_custom_visibility' => __( 'Product custom visibility', 'e-commerce-jetpack' ),
 				),
 				'class'    => 'widefat',
 			),

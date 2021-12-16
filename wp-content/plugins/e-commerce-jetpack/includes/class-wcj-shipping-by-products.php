@@ -23,26 +23,26 @@ class WCJ_Shipping_By_Products extends WCJ_Module_Shipping_By_Condition {
 	function __construct() {
 
 		$this->id         = 'shipping_by_products';
-		$this->short_desc = __( 'Shipping Methods by Products', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set products, product categories, tags or shipping classes to include/exclude for shipping methods to show up (Free shipping available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set products, product categories, tags or shipping classes to include/exclude for shipping methods to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Methods by Products', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set products, product categories, tags or shipping classes to include/exclude for shipping methods to show up (Free shipping available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set products, product categories, tags or shipping classes to include/exclude for shipping methods to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-methods-by-products';
 
 		$this->condition_options = array(
 			'products' => array(
-				'title' => __( 'Products', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Shipping methods by <strong>products</strong>.', 'woocommerce-jetpack' ),
+				'title' => __( 'Products', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Shipping methods by <strong>products</strong>.', 'e-commerce-jetpack' ),
 			),
 			'product_cats' => array(
-				'title' => __( 'Product Categories', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Shipping methods by <strong>products categories</strong>.', 'woocommerce-jetpack' ),
+				'title' => __( 'Product Categories', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Shipping methods by <strong>products categories</strong>.', 'e-commerce-jetpack' ),
 			),
 			'product_tags' => array(
-				'title' => __( 'Product Tags', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Shipping methods by <strong>products tags</strong>.', 'woocommerce-jetpack' ),
+				'title' => __( 'Product Tags', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Shipping methods by <strong>products tags</strong>.', 'e-commerce-jetpack' ),
 			),
 			'classes' => array(
-				'title' => __( 'Product Shipping Classes', 'woocommerce-jetpack' ),
+				'title' => __( 'Product Shipping Classes', 'e-commerce-jetpack' ),
 				'desc'  => '',
 			),
 		);
@@ -183,17 +183,17 @@ class WCJ_Shipping_By_Products extends WCJ_Module_Shipping_By_Condition {
 	function get_additional_section_settings( $options_id ) {
 		$return = array(
 			array(
-				'title'    => __( '"Include" Options', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Enable this checkbox if you want all products in cart to be valid (instead of at least one).', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Validate all', 'woocommerce-jetpack' ),
+				'title'    => __( '"Include" Options', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Enable this checkbox if you want all products in cart to be valid (instead of at least one).', 'e-commerce-jetpack' ),
+				'desc'     => __( 'Validate all', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_shipping_by_' . $options_id . '_validate_all_enabled',
 				'type'     => 'checkbox',
 				'default'  => 'no',
 			),
 			array(
-				'title'    => __( 'Cart instead of Package', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Enable this checkbox if you want to check all cart products instead of package.', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+				'title'    => __( 'Cart instead of Package', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Enable this checkbox if you want to check all cart products instead of package.', 'e-commerce-jetpack' ),
+				'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_shipping_by_' . $options_id . '_cart_not_package',
 				'type'     => 'checkbox',
 				'default'  => 'yes',
@@ -201,10 +201,10 @@ class WCJ_Shipping_By_Products extends WCJ_Module_Shipping_By_Condition {
 		);
 		if ( 'products' === $options_id ) {
 			$return[] = array(
-				'title'    => __( 'Add Products Variations', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Enable this checkbox if you want to add products variations to the products list.', 'woocommerce-jetpack' ) . ' ' .
-					__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Add', 'woocommerce-jetpack' ),
+				'title'    => __( 'Add Products Variations', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Enable this checkbox if you want to add products variations to the products list.', 'e-commerce-jetpack' ) . ' ' .
+					__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ),
+				'desc'     => __( 'Add', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_shipping_by_' . $options_id . '_add_variations_enabled',
 				'type'     => 'checkbox',
 				'default'  => 'no',

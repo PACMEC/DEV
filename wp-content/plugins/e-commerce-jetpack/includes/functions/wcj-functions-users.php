@@ -161,7 +161,7 @@ if ( ! function_exists( 'wcj_get_user_roles' ) ) {
 		}
 		$all_roles = array_merge( array(
 			'guest' => array(
-				'name'         => __( 'Guest', 'woocommerce-jetpack' ),
+				'name'         => __( 'Guest', 'e-commerce-jetpack' ),
 				'capabilities' => array(),
 			) ), $all_roles );
 		if ( ! empty( $current_user_roles ) ) {
@@ -189,7 +189,7 @@ if ( ! function_exists( 'wcj_get_user_roles_options' ) ) {
 		}
 		$all_roles = array_merge( array(
 			'guest' => array(
-				'name'         => __( 'Guest', 'woocommerce-jetpack' ),
+				'name'         => __( 'Guest', 'e-commerce-jetpack' ),
 				'capabilities' => array(),
 			) ), $all_roles );
 		$all_roles_options = array();

@@ -1,29 +1,16 @@
 <?php
 
 /**
- * Plugin Name: Repeat Order for Woocommerce
- * Plugin URI: https://poly-res.com/plugins/repeat-order-for-woocommerce/
- * Description: Add an "order again" button in Recent Orders list
- * Version: 1.2.0
- * Author: polyres
- * Author URI: https://poly-res.com/
- * Text Domain: repeat-order-for-woocommerce
+ * Plugin Name: E-Commerce - Repita el pedido
+ * Plugin URI: #
+ * Description: Agregar un botón "volver a pedir" en la lista de pedidos recientes
+ * Version: 1.0.0
+ * Author: PACMEC
+ * Author URI: #
+ * Text Domain: e-commerce-repeat-order
  * Domain Path: /languages
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * GitHub Plugin URI: https://github.com/PolyRes/repeat-order-for-woocommerce
- * GitHub Branch:     master
- * Requires WP:       4.8
  * Requires PHP:      5.3
- * Tested up to: 5.8.1
- * WC requires at least: 3.4.0
- * WC tested up to: 5.7.0
  *
- * @link      https://poly-res.com
- * @author    Frank Neumann-Staude
- * @license   GPL-2.0+
- *
- * CodeRisk Maintainer: http://coderisk.com/wp/plugin/repeat-order-for-woocommerce/RIPS-sWgOoMX8XN
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

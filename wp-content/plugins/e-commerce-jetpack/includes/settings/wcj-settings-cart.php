@@ -13,15 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $settings = array(
 	// Cart Custom Info Options
 	array(
-		'title'    => __( 'Cart Custom Info Blocks', 'woocommerce-jetpack' ),
+		'title'    => __( 'Cart Custom Info Blocks', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_cart_custom_info_options',
-		'desc'     => __( 'This feature allows you to add a final checkpoint for your customers before they proceed to payment.', 'woocommerce-jetpack' ) . '<br>' .
-			__( 'Show custom information at on the cart page using Booster\'s various shortcodes and give your customers a seamless cart experience.', 'woocommerce-jetpack' ) . '<br>' .
-			__( 'For example, show them the total weight of their items, any additional fees or taxes, or a confirmation of the address their products are being sent to.', 'woocommerce-jetpack' ),
+		'desc'     => __( 'This feature allows you to add a final checkpoint for your customers before they proceed to payment.', 'e-commerce-jetpack' ) . '<br>' .
+			__( 'Show custom information at on the cart page using Booster\'s various shortcodes and give your customers a seamless cart experience.', 'e-commerce-jetpack' ) . '<br>' .
+			__( 'For example, show them the total weight of their items, any additional fees or taxes, or a confirmation of the address their products are being sent to.', 'e-commerce-jetpack' ),
 	),
 	array(
-		'title'    => __( 'Total Blocks', 'woocommerce-jetpack' ),
+		'title'    => __( 'Total Blocks', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_cart_custom_info_total_number',
 		'default'  => 1,
 		'type'     => 'custom_number',
@@ -36,26 +36,26 @@ $settings = array(
 for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_cart_custom_info_total_number', 1 ) ); $i++ ) {
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => __( 'Info Block', 'woocommerce-jetpack' ) . ' #' . $i,
+			'title'    => __( 'Info Block', 'e-commerce-jetpack' ) . ' #' . $i,
 			'type'     => 'title',
 			'id'       => 'wcj_cart_custom_info_options_' . $i,
 		),
 		array(
-			'title'    => __( 'Content', 'woocommerce-jetpack' ),
+			'title'    => __( 'Content', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_cart_custom_info_content_' . $i,
 			'default'  => '[wcj_cart_items_total_weight before="Total weight: " after=" kg"]',
 			'type'     => 'textarea',
 			'css'      => 'width:100%;height:200px;',
 		),
 		array(
-			'title'    => __( 'Position', 'woocommerce-jetpack' ),
+			'title'    => __( 'Position', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_cart_custom_info_hook_' . $i,
 			'default'  => 'woocommerce_after_cart_totals',
 			'type'     => 'select',
 			'options'  => wcj_get_cart_filters(),
 		),
 		array(
-			'title'    => __( 'Position Order (i.e. Priority)', 'woocommerce-jetpack' ),
+			'title'    => __( 'Position Order (i.e. Priority)', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_cart_custom_info_priority_' . $i,
 			'default'  => 10,
 			'type'     => 'number',
@@ -69,14 +69,14 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_car
 $settings = array_merge( $settings, array(
 	// Cart Items Table Custom Info Options
 	array(
-		'title'    => __( 'Cart Items Table Custom Info', 'woocommerce-jetpack' ),
+		'title'    => __( 'Cart Items Table Custom Info', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_cart_custom_info_item_options',
 		'desc'     => '',
 	),
 	array(
-		'title'    => __( 'Add to Each Item Name', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'You can use shortcodes here. E.g.: [wcj_product_sku]. Leave blank to disable.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Add to Each Item Name', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'You can use shortcodes here. E.g.: [wcj_product_sku]. Leave blank to disable.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_cart_custom_info_item',
 		'default'  => '',
 		'type'     => 'textarea',

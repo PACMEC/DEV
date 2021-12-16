@@ -11,15 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Enable/Disable per Product Settings', 'woocommerce-jetpack' ),
+		'title'    => __( 'Enable/Disable per Product Settings', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_product_by_time_enabled',
 		'default'  => 'no',
 		'type'     => 'select',
 		'options'  => array(
-			'no'  => __( 'Disabled', 'woocommerce-jetpack' ),
-			'yes' => __( 'Enabled', 'woocommerce-jetpack' ),
+			'no'  => __( 'Disabled', 'e-commerce-jetpack' ),
+			'yes' => __( 'Enabled', 'e-commerce-jetpack' ),
 		),
-//		'tooltip'  => __( 'Time formats:', 'woocommerce-jetpack' ) . ' ' . '<code>HH:MM-HH:MM</code>' . ', ' . '<code>HH:MM-HH:MM,HH:MM-HH:MM</code>' . ', ' . '<code>-</code>' . '.',
+//		'tooltip'  => __( 'Time formats:', 'e-commerce-jetpack' ) . ' ' . '<code>HH:MM-HH:MM</code>' . ', ' . '<code>HH:MM-HH:MM,HH:MM-HH:MM</code>' . ', ' . '<code>-</code>' . '.',
 	),
 );
 $_timestamp = strtotime( 'next Sunday' );

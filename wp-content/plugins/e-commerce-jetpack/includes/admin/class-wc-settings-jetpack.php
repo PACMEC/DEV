@@ -27,7 +27,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
         {
 
             $this->id = 'jetpack';
-            $this->label = __('Booster', 'woocommerce-jetpack');
+            $this->label = __('Booster', 'e-commerce-jetpack');
 
             $this->cats = include 'wcj-modules-cats.php';
 
@@ -60,21 +60,21 @@ if (!class_exists('WC_Settings_Jetpack')) :
          */
         public function create_free_version_notice_about_reasons_to_upgrade()
         {
-            if ('woocommerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
+            if ('e-commerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
                 return;
             }
             $notice_class = 'notice notice-info inline';
             $texts = array(
-                'title' => __('Upgrade today to unlock these popular premium features:', 'woocommerce-jetpack'),
+                'title' => __('Upgrade today to unlock these popular premium features:', 'e-commerce-jetpack'),
                 'reasons' => array(
-                    __('Add ability to create Proforma Invoices, Credit Notes and Packing slips', 'woocommerce-jetpack'),
-                    __('<strong>Cart and checkout</strong> – add multiple – custom fields, custom info blocks, check out file uploads', 'woocommerce-jetpack'),
-                    __('<strong>Prices and currencies</strong> – add more unlimited number of currencies to WooCommerce', 'woocommerce-jetpack'),
-                    __('<strong>Add to cart</strong> – customize add to cart messages, Button labels - multiple category groups allowed', 'woocommerce-jetpack'),
-                    __('<strong>Empty Cart</strong> – customize empty cart button text, different button positions on cart page', 'woocommerce-jetpack'),
-                    __('<strong>Mini cart</strong> – More custom information options', 'woocommerce-jetpack'),
-                    __('<strong>Export options</strong> – more fields enabled', 'woocommerce-jetpack'),
-                    __('More configuration options for payments and shipping', 'woocommerce-jetpack'),
+                    __('Add ability to create Proforma Invoices, Credit Notes and Packing slips', 'e-commerce-jetpack'),
+                    __('<strong>Cart and checkout</strong> – add multiple – custom fields, custom info blocks, check out file uploads', 'e-commerce-jetpack'),
+                    __('<strong>Prices and currencies</strong> – add more unlimited number of currencies to WooCommerce', 'e-commerce-jetpack'),
+                    __('<strong>Add to cart</strong> – customize add to cart messages, Button labels - multiple category groups allowed', 'e-commerce-jetpack'),
+                    __('<strong>Empty Cart</strong> – customize empty cart button text, different button positions on cart page', 'e-commerce-jetpack'),
+                    __('<strong>Mini cart</strong> – More custom information options', 'e-commerce-jetpack'),
+                    __('<strong>Export options</strong> – more fields enabled', 'e-commerce-jetpack'),
+                    __('More configuration options for payments and shipping', 'e-commerce-jetpack'),
                 ),
             );
             $reasons_left = array_slice($texts['reasons'], 0, ceil(count($texts['reasons']) / 2));
@@ -84,7 +84,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 '{title}' => '<h3 class="wcj-notice-title">' . $texts['title'] . '</h3>',
                 '{reasons_left}' => '<ul class="wcj-list wcj-list-left">' . '<li>' . implode('</li><li>', $reasons_left) . '</ul>',
                 '{reasons_right}' => '<ul class="wcj-list wcj-list-right">' . '<li>' . implode('</li><li>', $reasons_right) . '</ul>',
-                '{upgrade_btn}' => '<a class="wcj-button button" href="https://booster.io/buy-booster/" target="_blank">' . __('Upgrade Booster to unlock this feature', 'woocommerce-jetpack') . '</a>',
+                '{upgrade_btn}' => '<a class="wcj-button button" href="https://booster.io/buy-booster/" target="_blank">' . __('Upgrade Booster to unlock this feature', 'e-commerce-jetpack') . '</a>',
             );
             $html = str_replace(array_keys($array_from_to), $array_from_to, $template);
 ?>
@@ -144,11 +144,11 @@ if (!class_exists('WC_Settings_Jetpack')) :
          */
         public function create_free_version_notice_about_plus()
         {
-            if ('woocommerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
+            if ('e-commerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
                 return;
             }
             $class = 'notice notice-info';
-            $message = sprintf(__('You\'re using Booster free version. To unlock more features please consider <a target="_blank" href="%s">Upgrade Booster to unlock this feature</a>.', 'woocommerce-jetpack'), 'https://booster.io/buy-booster/');
+            $message = sprintf(__('You\'re using Booster free version. To unlock more features please consider <a target="_blank" href="%s">Upgrade Booster to unlock this feature</a>.', 'e-commerce-jetpack'), 'https://booster.io/buy-booster/');
             $booster_icon = '<span class="wcj-booster-logo"></span>';
         ?>
             <style>
@@ -156,7 +156,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                     width: 19px;
                     height: 19px;
                     display: inline-block;
-                    background: url('https://ps.w.org/woocommerce-jetpack/assets/icon-128x128.png?rev=1813426') center/cover;
+                    background: url('https://ps.w.org/e-commerce-jetpack/assets/icon-128x128.png?rev=1813426') center/cover;
                     vertical-align: middle;
                     position: relative;
                     top: -1px;
@@ -175,14 +175,14 @@ if (!class_exists('WC_Settings_Jetpack')) :
          */
         public function create_free_version_footer_review_notice()
         {
-            if ('woocommerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
+            if ('e-commerce-jetpack.php' !== basename(WCJ_PLUGIN_FILE)) {
                 return;
             }
             $class = 'notice notice-info inline';
-            $link = 'https://wordpress.org/support/plugin/woocommerce-jetpack/reviews/?filter=5#new-post';
+            $link = 'https://wordpress.org/support/plugin/e-commerce-jetpack/reviews/?filter=5#new-post';
             $star = '<span class="wcj-review-icon dashicons dashicons-star-filled"></span>';
             $stars_link = '<a href="' . $link . '" target="_blank">' . $star . $star . $star . $star . $star . '</a>';
-            $message = sprintf(__('Please rate <strong>Booster for WooCommerce</strong> %s on <a href="%s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from Booster team!', 'woocommerce-jetpack'), $stars_link, $link);
+            $message = sprintf(__('Please rate <strong>Booster for WooCommerce</strong> %s on <a href="%s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from Booster team!', 'e-commerce-jetpack'), $stars_link, $link);
         ?>
             <style>
                 .wcj-review-icon {
@@ -219,7 +219,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                         </div>
                     </div>
                     <div class="sub-circle">
-                        <a href="https://wordpress.org/support/plugin/woocommerce-jetpack/#new-topic-0" target="_blank">
+                        <a href="https://wordpress.org/support/plugin/e-commerce-jetpack/#new-topic-0" target="_blank">
                             <div class="form_label">
                                 <label>Booster Free Support (72 business hours response)</label>
                                 <div class="ic_list"><img src="<?php echo $sec_link ?>/assets/images/support-3d-w.png"></div>
@@ -241,10 +241,10 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 return;
             }
             $class = 'notice notice-info inline';
-            $link = 'https://wordpress.org/support/plugin/woocommerce-jetpack/reviews/?filter=5#new-post';
+            $link = 'https://wordpress.org/support/plugin/e-commerce-jetpack/reviews/?filter=5#new-post';
             $star = '<span class="wcj-review-icon dashicons dashicons-star-filled"></span>';
             $stars_link = '<a href="' . $link . '" target="_blank">' . $star . $star . $star . $star . $star . '</a>';
-            $message = sprintf(__('Please rate <strong>Booster for WooCommerce</strong> %s on  <a href="%s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from Booster team!', 'woocommerce-jetpack'), $stars_link, $link);
+            $message = sprintf(__('Please rate <strong>Booster for WooCommerce</strong> %s on  <a href="%s" target="_blank">WordPress.org</a> to help us spread the word. Thank you from Booster team!', 'e-commerce-jetpack'), $stars_link, $link);
             ?>
             <style>
                 .wcj-review-icon {
@@ -314,10 +314,10 @@ if (!class_exists('WC_Settings_Jetpack')) :
                     }
                 }
 
-                $sections['alphabetically'] = __('Alphabetically', 'woocommerce-jetpack') . ' <span class="count">(' . $all . ')</span>';
-                $sections['by_category'] = __('By Category', 'woocommerce-jetpack') . ' <span class="count">(' . $all . ')</span>';
-                $sections['active'] = __('Active', 'woocommerce-jetpack') . ' <span class="count">(' . $active . ')</span>';
-                $sections['manager'] = __('Manage Settings', 'woocommerce-jetpack');
+                $sections['alphabetically'] = __('Alphabetically', 'e-commerce-jetpack') . ' <span class="count">(' . $all . ')</span>';
+                $sections['by_category'] = __('By Category', 'e-commerce-jetpack') . ' <span class="count">(' . $all . ')</span>';
+                $sections['active'] = __('Active', 'e-commerce-jetpack') . ' <span class="count">(' . $active . ')</span>';
+                $sections['manager'] = __('Manage Settings', 'e-commerce-jetpack');
                 if (!empty($this->custom_dashboard_modules)) {
                     foreach ($this->custom_dashboard_modules as $custom_dashboard_module_id => $custom_dashboard_module_data) {
                         $sections[$custom_dashboard_module_id] = $custom_dashboard_module_data['title'];
@@ -379,7 +379,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
          */
         public function get_sections()
         {
-            return apply_filters('wcj_settings_sections', array('' => __('Dashboard', 'woocommerce-jetpack')));
+            return apply_filters('wcj_settings_sections', array('' => __('Dashboard', 'e-commerce-jetpack')));
         }
 
         /**
@@ -426,12 +426,12 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 echo '<p>';
                 echo '<strong>';
                 echo sprintf(
-                    __('Please note that current <em>%s</em> module is deprecated and will be removed in future updates. Please use <em>%s</em> module instead.', 'woocommerce-jetpack'),
+                    __('Please note that current <em>%s</em> module is deprecated and will be removed in future updates. Please use <em>%s</em> module instead.', 'e-commerce-jetpack'),
                     WCJ()->modules[$current_section]->short_desc,
                     '<a href="' . admin_url('admin.php?page=wc-settings&tab=jetpack&wcj-cat=' . $replacement_module['cat'] . '&section=' . $replacement_module['module']) . '">' .
                         $replacement_module['title'] . '</a>'
                 );
-                echo ' <span style="color:red;">' . __('Module will be removed from the module\'s list as soon as you disable it.', 'woocommerce-jetpack') . '</span>';
+                echo ' <span style="color:red;">' . __('Module will be removed from the module\'s list as soon as you disable it.', 'e-commerce-jetpack') . '</span>';
                 echo '</strong>';
                 echo '</p>';
                 echo '</div>';
@@ -442,7 +442,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 echo '<div id="wcj_message" class="error">';
                 echo '<p>';
                 echo '<strong>';
-                echo sprintf(__('Please note that <em>%s</em> module is currently under development. Until stable module version is released, options can be changed or some options can be moved to paid plugin version.', 'woocommerce-jetpack'), WCJ()->modules[$current_section]->short_desc);
+                echo sprintf(__('Please note that <em>%s</em> module is currently under development. Until stable module version is released, options can be changed or some options can be moved to paid plugin version.', 'e-commerce-jetpack'), WCJ()->modules[$current_section]->short_desc);
                 echo '</strong>';
                 echo '</p>';
                 echo '</div>';
@@ -453,11 +453,11 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 $breadcrumbs_html = '';
                 $breadcrumbs_html .= '<p>';
                 $breadcrumbs_html .= '<code>';
-                $breadcrumbs_html .= __('WooCommerce', 'woocommerce-jetpack');
+                $breadcrumbs_html .= __('WooCommerce', 'e-commerce-jetpack');
                 $breadcrumbs_html .= ' > ';
-                $breadcrumbs_html .= __('Settings', 'woocommerce-jetpack');
+                $breadcrumbs_html .= __('Settings', 'e-commerce-jetpack');
                 $breadcrumbs_html .= ' > ';
-                $breadcrumbs_html .= __('Booster', 'woocommerce-jetpack');
+                $breadcrumbs_html .= __('Booster', 'e-commerce-jetpack');
                 $breadcrumbs_html .= ' > ';
                 foreach ($this->cats as $id => $label_info) {
                     if ($this->get_cat_by_section($current_section) === $id) {
@@ -507,7 +507,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
             } elseif ('manager' != $current_section) {
                 echo '<p>' . $the_settings[0]['desc'] . '</p>';
             } else {
-                echo '<p>' . __('This section lets you export, import or reset all Booster\'s modules settings.', 'woocommerce-jetpack') . '</p>';
+                echo '<p>' . __('This section lets you export, import or reset all Booster\'s modules settings.', 'e-commerce-jetpack') . '</p>';
             }
 
             if ('alphabetically' === $current_section) {
@@ -531,25 +531,25 @@ if (!class_exists('WC_Settings_Jetpack')) :
             } elseif ('manager' === $current_section) {
                 $table_data = array(
                     array(
-                        '<button style="width:100px;" class="button-primary" type="submit" name="booster_export_settings">' . __('Export', 'woocommerce-jetpack') . '</button>',
-                        '<em>' . __('Export all Booster\'s options to a file.', 'woocommerce-jetpack') . '</em>',
+                        '<button style="width:100px;" class="button-primary" type="submit" name="booster_export_settings">' . __('Export', 'e-commerce-jetpack') . '</button>',
+                        '<em>' . __('Export all Booster\'s options to a file.', 'e-commerce-jetpack') . '</em>',
                     ),
                     array(
-                        '<button style="width:100px;" class="button-primary" type="submit" name="booster_import_settings">' . __('Import', 'woocommerce-jetpack') . '</button>' .
+                        '<button style="width:100px;" class="button-primary" type="submit" name="booster_import_settings">' . __('Import', 'e-commerce-jetpack') . '</button>' .
                             ' ' . '<input type="file" name="booster_import_settings_file">',
-                        '<em>' . __('Import all Booster\'s options from a file.', 'woocommerce-jetpack') . '</em>',
+                        '<em>' . __('Import all Booster\'s options from a file.', 'e-commerce-jetpack') . '</em>',
                     ),
                     array(
                         '<button style="width:100px;" class="button-primary" type="submit" name="booster_reset_settings"' .
-                            wcj_get_js_confirmation(__('This will reset settings to defaults for all Booster modules. Are you sure?', 'woocommerce-jetpack')) . '>' .
-                            __('Reset', 'woocommerce-jetpack') . '</button>',
-                        '<em>' . __('Reset all Booster\'s options.', 'woocommerce-jetpack') . '</em>',
+                            wcj_get_js_confirmation(__('This will reset settings to defaults for all Booster modules. Are you sure?', 'e-commerce-jetpack')) . '>' .
+                            __('Reset', 'e-commerce-jetpack') . '</button>',
+                        '<em>' . __('Reset all Booster\'s options.', 'e-commerce-jetpack') . '</em>',
                     ),
                     array(
                         '<button style="width:100px;" class="button-primary" type="submit" name="booster_reset_settings_meta"' .
-                            wcj_get_js_confirmation(__('This will delete all Booster meta. Are you sure?', 'woocommerce-jetpack')) . '>' .
-                            __('Reset meta', 'woocommerce-jetpack') . '</button>',
-                        '<em>' . __('Reset all Booster\'s meta.', 'woocommerce-jetpack') . '</em>',
+                            wcj_get_js_confirmation(__('This will delete all Booster meta. Are you sure?', 'e-commerce-jetpack')) . '>' .
+                            __('Reset meta', 'e-commerce-jetpack') . '</button>',
+                        '<em>' . __('Reset all Booster\'s meta.', 'e-commerce-jetpack') . '</em>',
                     ),
                 );
                 $manager_settings = $this->get_manager_settings();
@@ -587,7 +587,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
             $plugin_data = get_plugin_data(WCJ_PLUGIN_FILE);
             $plugin_title = (isset($plugin_data['Name']) ? '[' . $plugin_data['Name'] . '] ' : '');
             echo '<p style="text-align:right;color:gray;font-size:x-small;font-style:italic;">' . $plugin_title .
-                __('Version', 'woocommerce-jetpack') . ': ' . wcj_get_option(WCJ_VERSION_OPTION, 'N/A') . '</p>';
+                __('Version', 'e-commerce-jetpack') . ': ' . wcj_get_option(WCJ_VERSION_OPTION, 'N/A') . '</p>';
         }
 
         /**
@@ -609,20 +609,20 @@ if (!class_exists('WC_Settings_Jetpack')) :
             <table class="wp-list-table widefat plugins">
                 <thead>
                     <tr>
-                        <th scope="col" id="cb" class="manage-column column-cb check-column" style=""><label class="screen-reader-text" for="cb-select-all-1"><?php _e('Select All', 'woocommerce-jetpack'); ?></label><input id="cb-select-all-1" type="checkbox" style="margin-top:15px;"></th>
+                        <th scope="col" id="cb" class="manage-column column-cb check-column" style=""><label class="screen-reader-text" for="cb-select-all-1"><?php _e('Select All', 'e-commerce-jetpack'); ?></label><input id="cb-select-all-1" type="checkbox" style="margin-top:15px;"></th>
                         <th scope="col" id="name" class="manage-column column-name" style="">
-                            <?php _e('Module', 'woocommerce-jetpack'); ?></th>
+                            <?php _e('Module', 'e-commerce-jetpack'); ?></th>
                         <th scope="col" id="description" class="manage-column column-description" style="">
-                            <?php _e('Description', 'woocommerce-jetpack'); ?></th>
+                            <?php _e('Description', 'e-commerce-jetpack'); ?></th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th scope="col" class="manage-column column-cb check-column" style=""><label class="screen-reader-text" for="cb-select-all-2"><?php _e('Select All', 'woocommerce-jetpack'); ?></label><input id="cb-select-all-2" type="checkbox" style="margin-top:15px;"></th>
-                        <th scope="col" class="manage-column column-name" style=""><?php _e('Module', 'woocommerce-jetpack'); ?>
+                        <th scope="col" class="manage-column column-cb check-column" style=""><label class="screen-reader-text" for="cb-select-all-2"><?php _e('Select All', 'e-commerce-jetpack'); ?></label><input id="cb-select-all-2" type="checkbox" style="margin-top:15px;"></th>
+                        <th scope="col" class="manage-column column-name" style=""><?php _e('Module', 'e-commerce-jetpack'); ?>
                         </th>
                         <th scope="col" class="manage-column column-description" style="">
-                            <?php _e('Description', 'woocommerce-jetpack'); ?></th>
+                            <?php _e('Description', 'e-commerce-jetpack'); ?></th>
                     </tr>
                 </tfoot>
                 <tbody id="the-list"><?php
@@ -669,7 +669,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                                         }
                                         echo $html;
                                         if (0 == $total_modules && 'active_modules_only' === $cat_id) {
-                                            echo '<tr><td colspan="3">' . '<em>' . __('No active modules found.', 'woocommerce-jetpack') . '</em>' . '</td></tr>';
+                                            echo '<tr><td colspan="3">' . '<em>' . __('No active modules found.', 'e-commerce-jetpack') . '</em>' . '</td></tr>';
                                         }
                                         ?></tbody>
             </table>
@@ -739,47 +739,47 @@ if (!class_exists('WC_Settings_Jetpack')) :
             {
                 return array(
                     array(
-                        'title' => __('Autoload Booster\'s Options', 'woocommerce-jetpack'),
+                        'title' => __('Autoload Booster\'s Options', 'e-commerce-jetpack'),
                         'type' => 'checkbox',
-                        'desc' => __('Choose if you want Booster\'s options to be autoloaded when calling add_option. After saving this option, you need to Reset all Booster\'s settings. Leave default value (i.e. Enabled) if not sure.', 'woocommerce-jetpack'),
+                        'desc' => __('Choose if you want Booster\'s options to be autoloaded when calling add_option. After saving this option, you need to Reset all Booster\'s settings. Leave default value (i.e. Enabled) if not sure.', 'e-commerce-jetpack'),
                         'id' => 'wcj_autoload_options',
                         'default' => 'yes',
                     ),
                     array(
-                        'title' => __('Load Modules on Init Hook', 'woocommerce-jetpack'),
+                        'title' => __('Load Modules on Init Hook', 'e-commerce-jetpack'),
                         'type' => 'checkbox',
-                        'desc' => __('Choose if you want to load Booster Modules on Init hook.', 'woocommerce-jetpack') . ' ' . __('It will load the locale appropriately if users change it from the profile page.', 'woocommerce-jetpack'),
+                        'desc' => __('Choose if you want to load Booster Modules on Init hook.', 'e-commerce-jetpack') . ' ' . __('It will load the locale appropriately if users change it from the profile page.', 'e-commerce-jetpack'),
                         'id' => 'wcj_load_modules_on_init',
                         'default' => 'no',
                     ),
                     array(
-                        'title' => __('Use List Instead of Comma Separated Text for Products in Settings', 'woocommerce-jetpack'),
+                        'title' => __('Use List Instead of Comma Separated Text for Products in Settings', 'e-commerce-jetpack'),
                         'type' => 'checkbox',
-                        'desc' => sprintf(__('Supported modules: %s.', 'woocommerce-jetpack'), implode(', ', array(
-                            __('Gateways per Product or Category', 'woocommerce-jetpack'),
-                            __('Global Discount', 'woocommerce-jetpack'),
-                            __('Product Info', 'woocommerce-jetpack'),
-                            __('Product Input Fields', 'woocommerce-jetpack'),
-                            __('Products XML', 'woocommerce-jetpack'),
-                            __('Related Products', 'woocommerce-jetpack'),
+                        'desc' => sprintf(__('Supported modules: %s.', 'e-commerce-jetpack'), implode(', ', array(
+                            __('Gateways per Product or Category', 'e-commerce-jetpack'),
+                            __('Global Discount', 'e-commerce-jetpack'),
+                            __('Product Info', 'e-commerce-jetpack'),
+                            __('Product Input Fields', 'e-commerce-jetpack'),
+                            __('Products XML', 'e-commerce-jetpack'),
+                            __('Related Products', 'e-commerce-jetpack'),
                         ))),
                         'id' => 'wcj_list_for_products',
                         'default' => 'yes',
                     ),
                     array(
-                        'title' => __('Use List Instead of Comma Separated Text for Products Categories in Settings', 'woocommerce-jetpack'),
+                        'title' => __('Use List Instead of Comma Separated Text for Products Categories in Settings', 'e-commerce-jetpack'),
                         'type' => 'checkbox',
-                        'desc' => sprintf(__('Supported modules: %s.', 'woocommerce-jetpack'), implode(', ', array(
-                            __('Product Info', 'woocommerce-jetpack'),
+                        'desc' => sprintf(__('Supported modules: %s.', 'e-commerce-jetpack'), implode(', ', array(
+                            __('Product Info', 'e-commerce-jetpack'),
                         ))),
                         'id' => 'wcj_list_for_products_cats',
                         'default' => 'yes',
                     ),
                     array(
-                        'title' => __('Use List Instead of Comma Separated Text for Products Tags in Settings', 'woocommerce-jetpack'),
+                        'title' => __('Use List Instead of Comma Separated Text for Products Tags in Settings', 'e-commerce-jetpack'),
                         'type' => 'checkbox',
-                        'desc' => sprintf(__('Supported modules: %s.', 'woocommerce-jetpack'), implode(', ', array(
-                            __('Product Info', 'woocommerce-jetpack'),
+                        'desc' => sprintf(__('Supported modules: %s.', 'e-commerce-jetpack'), implode(', ', array(
+                            __('Product Info', 'e-commerce-jetpack'),
                         ))),
                         'id' => 'wcj_list_for_products_tags',
                         'default' => 'yes',
@@ -804,7 +804,7 @@ if (!class_exists('WC_Settings_Jetpack')) :
                 } else {
                     $cat_id = (isset($_GET['wcj-cat']) && '' != $_GET['wcj-cat']) ? $_GET['wcj-cat'] : 'dashboard';
                     $settings[] = array(
-                        'title' => __('Booster for WooCommerce', 'woocommerce-jetpack') . ' - ' . $this->cats[$cat_id]['label'],
+                        'title' => __('Booster for WooCommerce', 'e-commerce-jetpack') . ' - ' . $this->cats[$cat_id]['label'],
                         'type' => 'title',
                         'desc' => $this->cats[$cat_id]['desc'],
                         'id' => 'wcj_' . $cat_id . '_options',

@@ -15,10 +15,10 @@ return array(
 		'default'    => 'no',
 		'type'       => 'select',
 		'options'    => array(
-			'yes' => __( 'Hide', 'woocommerce-jetpack' ),
-			'no'  => __( 'Show', 'woocommerce-jetpack' ),
+			'yes' => __( 'Hide', 'e-commerce-jetpack' ),
+			'no'  => __( 'Show', 'e-commerce-jetpack' ),
 		),
-		'title'      => __( 'Single Product Page', 'woocommerce-jetpack' ),
+		'title'      => __( 'Single Product Page', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_add_to_cart_button_disable_content',
@@ -26,18 +26,18 @@ return array(
 		'type'       => 'textarea',
 		'title'      => '',
 		'css'        => 'width:100%;',
-		'tooltip'    => __( 'Content to replace add to cart button on single product page.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'You can use HTML and/or shortcodes here.', 'woocommerce-jetpack' ),
+		'tooltip'    => __( 'Content to replace add to cart button on single product page.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'You can use HTML and/or shortcodes here.', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_add_to_cart_button_loop_disable',
 		'default'    => 'no',
 		'type'       => 'select',
 		'options'    => array(
-			'yes' => __( 'Hide', 'woocommerce-jetpack' ),
-			'no'  => __( 'Show', 'woocommerce-jetpack' ),
+			'yes' => __( 'Hide', 'e-commerce-jetpack' ),
+			'no'  => __( 'Show', 'e-commerce-jetpack' ),
 		),
-		'title'      => __( 'Category/Archives', 'woocommerce-jetpack' ),
+		'title'      => __( 'Category/Archives', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_add_to_cart_button_loop_disable_content',
@@ -45,7 +45,7 @@ return array(
 		'type'       => 'textarea',
 		'title'      => '',
 		'css'        => 'width:100%;',
-		'tooltip'    => __( 'Content to replace add to cart button on category/archives.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'You can use HTML and/or shortcodes here.', 'woocommerce-jetpack' ),
+		'tooltip'    => __( 'Content to replace add to cart button on category/archives.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'You can use HTML and/or shortcodes here.', 'e-commerce-jetpack' ),
 	),
 );

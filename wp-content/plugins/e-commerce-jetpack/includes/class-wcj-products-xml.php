@@ -23,9 +23,9 @@ class WCJ_Products_XML extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'products_xml';
-		$this->short_desc = __( 'Products XML Feeds', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Products XML feeds (1 file allowed in free version.).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Products XML feeds.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Products XML Feeds', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Products XML feeds (1 file allowed in free version.).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Products XML feeds.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-products-xml-feeds';
 		parent::__construct();
 
@@ -93,11 +93,11 @@ class WCJ_Products_XML extends WCJ_Module {
 	function cron_add_custom_intervals( $schedules ) {
 		$schedules['weekly'] = array(
 			'interval' => 604800,
-			'display' => __( 'Once Weekly', 'woocommerce-jetpack' )
+			'display' => __( 'Once Weekly', 'e-commerce-jetpack' )
 		);
 		$schedules['minutely'] = array(
 			'interval' => 60,
-			'display' => __( 'Once a Minute', 'woocommerce-jetpack' )
+			'display' => __( 'Once a Minute', 'e-commerce-jetpack' )
 		);
 		return $schedules;
 	}
@@ -112,10 +112,10 @@ class WCJ_Products_XML extends WCJ_Module {
 		if ( isset( $_GET['wcj_create_products_xml_result'] ) ) {
 			if ( 0 == $_GET['wcj_create_products_xml_result'] ) {
 				$class   = 'notice notice-error';
-				$message = __( 'An error has occurred while creating products XML file.', 'woocommerce-jetpack' );
+				$message = __( 'An error has occurred while creating products XML file.', 'e-commerce-jetpack' );
 			} else {
 				$class   = 'notice notice-success is-dismissible';
-				$message = sprintf( __( 'Products XML file #%s created successfully.', 'woocommerce-jetpack' ), sanitize_text_field($_GET['wcj_create_products_xml_result'] ));
+				$message = sprintf( __( 'Products XML file #%s created successfully.', 'e-commerce-jetpack' ), sanitize_text_field($_GET['wcj_create_products_xml_result'] ));
 			}
 			echo '<div class="' . $class . '"><p>' . $message . '</p></div>';
 		}

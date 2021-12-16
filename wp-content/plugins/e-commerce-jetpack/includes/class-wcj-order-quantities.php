@@ -27,8 +27,8 @@ class WCJ_Order_Quantities extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'order_quantities';
-		$this->short_desc = __( 'Order Quantities', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Manage product quantities in WooCommerce order: set min, max, step; enable decimal quantities etc.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Order Quantities', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Manage product quantities in WooCommerce order: set min, max, step; enable decimal quantities etc.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-order-min-max-quantities';
 		parent::__construct();
 
@@ -263,7 +263,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 				return $passed;
 			} else {
 				wc_add_notice( wcj_get_option( 'wcj_order_quantities_single_item_cart_message',
-					__( 'Only one item can be added to the cart. Clear the cart or finish the order, before adding another item to the cart.', 'woocommerce-jetpack' ) ), 'error' );
+					__( 'Only one item can be added to the cart. Clear the cart or finish the order, before adding another item to the cart.', 'e-commerce-jetpack' ) ), 'error' );
 				return false;
 			}
 		}
@@ -435,7 +435,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 					'%cart_total_quantity%'     => $total_quantity,
 				);
 				$message_template = wcj_get_option( 'wcj_order_quantities_max_cart_total_message',
-					__( 'Maximum allowed order quantity is %max_cart_total_quantity%. Your current order quantity is %cart_total_quantity%.', 'woocommerce-jetpack' ) );
+					__( 'Maximum allowed order quantity is %max_cart_total_quantity%. Your current order quantity is %cart_total_quantity%.', 'e-commerce-jetpack' ) );
 				break;
 			case 'min_cart_total_quantity':
 				$replaced_values = array(
@@ -443,7 +443,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 					'%cart_total_quantity%'     => $total_quantity,
 				);
 				$message_template = wcj_get_option( 'wcj_order_quantities_min_cart_total_message',
-					__( 'Minimum allowed order quantity is %min_cart_total_quantity%. Your current order quantity is %cart_total_quantity%.', 'woocommerce-jetpack' ) );
+					__( 'Minimum allowed order quantity is %min_cart_total_quantity%. Your current order quantity is %cart_total_quantity%.', 'e-commerce-jetpack' ) );
 				break;
 			case 'max_per_item_quantity':
 				$_product = wc_get_product( $_product_id );
@@ -453,7 +453,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 					'%product_title%'         => $_product->get_title(),
 				);
 				$message_template = wcj_get_option( 'wcj_order_quantities_max_per_item_message',
-					__( 'Maximum allowed quantity for %product_title% is %max_per_item_quantity%. Your current item quantity is %item_quantity%.', 'woocommerce-jetpack' ) );
+					__( 'Maximum allowed quantity for %product_title% is %max_per_item_quantity%. Your current item quantity is %item_quantity%.', 'e-commerce-jetpack' ) );
 				break;
 			case 'min_per_item_quantity':
 				if( "yes" === wcj_get_option( 'wcj_product_quantities_lower_than_min_cart_total_quantity' ) ) {
@@ -466,7 +466,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 					'%product_title%'         => $_product->get_title(),
 				);
 				$message_template = wcj_get_option( 'wcj_order_quantities_min_per_item_message',
-					__( 'Minimum allowed quantity for %product_title% is %min_per_item_quantity%. Your current item quantity is %item_quantity%.', 'woocommerce-jetpack' ) );
+					__( 'Minimum allowed quantity for %product_title% is %min_per_item_quantity%. Your current item quantity is %item_quantity%.', 'e-commerce-jetpack' ) );
 				break;
 			case 'step':
 				$_product = wc_get_product( $_product_id );
@@ -476,7 +476,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 					'%product_title%'         => $_product->get_title(),
 				);
 				$message_template = wcj_get_option( 'wcj_order_quantities_step_message',
-					__( 'Required step for %product_title% is %required_step%. Your current item quantity is %item_quantity%.', 'woocommerce-jetpack' ) );
+					__( 'Required step for %product_title% is %required_step%. Your current item quantity is %item_quantity%.', 'e-commerce-jetpack' ) );
 				break;
 		}
 		$_notice = str_replace( array_keys( $replaced_values ), array_values( $replaced_values ), $message_template );

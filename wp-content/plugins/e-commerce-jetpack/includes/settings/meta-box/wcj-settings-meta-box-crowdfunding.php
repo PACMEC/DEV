@@ -14,18 +14,18 @@ return array(
 		'name'    => 'wcj_crowdfunding_goal_sum',
 		'default' => 0,
 		'type'    => 'price',
-		'title'   => __( 'Goal', 'woocommerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+		'title'   => __( 'Goal', 'e-commerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
 	),
 	array(
 		'name'    => 'wcj_crowdfunding_startdate',
 		'default' => '',
 		'type'    => 'date',
-		'title'   => __( 'Start Date', 'woocommerce-jetpack' )
+		'title'   => __( 'Start Date', 'e-commerce-jetpack' )
 	),
 	array(
 		'name'    => 'wcj_crowdfunding_deadline',
 		'default' => '',
 		'type'    => 'date',
-		'title'   => __( 'Deadline', 'woocommerce-jetpack' )
+		'title'   => __( 'Deadline', 'e-commerce-jetpack' )
 	),
 );

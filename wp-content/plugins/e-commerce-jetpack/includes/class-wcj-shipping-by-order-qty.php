@@ -23,9 +23,9 @@ class WCJ_Shipping_By_Order_Qty extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'shipping_by_order_qty';
-		$this->short_desc = __( 'Shipping Methods by Min/Max Order Quantity', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set minimum and/or maximum order quantity for shipping methods to show up (Local pickup available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set minimum and/or maximum order quantity for shipping methods to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Methods by Min/Max Order Quantity', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set minimum and/or maximum order quantity for shipping methods to show up (Local pickup available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set minimum and/or maximum order quantity for shipping methods to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-methods-by-min-max-order-quantity';
 		parent::__construct();
 

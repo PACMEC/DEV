@@ -25,9 +25,9 @@ if (!class_exists('WCJ_Payment_Gateways_Fees')) :
 		{
 
 			$this->id         = 'payment_gateways_fees';
-			$this->short_desc = __('Gateways Fees and Discounts', 'woocommerce-jetpack');
-			$this->desc       = __('Enable extra fees or discounts for payment gateways. Force Default Payment Gateway (Plus). Apply fees depending on specific products (Plus).', 'woocommerce-jetpack');
-			$this->desc_pro   = __('Enable extra fees or discounts for payment gateways.', 'woocommerce-jetpack');
+			$this->short_desc = __('Gateways Fees and Discounts', 'e-commerce-jetpack');
+			$this->desc       = __('Enable extra fees or discounts for payment gateways. Force Default Payment Gateway (Plus). Apply fees depending on specific products (Plus).', 'e-commerce-jetpack');
+			$this->desc_pro   = __('Enable extra fees or discounts for payment gateways.', 'e-commerce-jetpack');
 			$this->link_slug  = 'woocommerce-payment-gateways-fees-and-discounts';
 			parent::__construct();
 

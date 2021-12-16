@@ -16,8 +16,8 @@ if ( ! $_order ) {
 }
 $options = array(
 	array(
-		'title'    => __( 'Order Currency', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Save order after you change this field.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Order Currency', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Save order after you change this field.', 'e-commerce-jetpack' ),
 		'name'     => ( 'filter' === wcj_get_option( 'wcj_order_admin_currency_method', 'filter' ) ? 'wcj_order_currency' : 'order_currency' ),
 		'default'  => wcj_get_order_currency( $_order ),
 		'type'     => 'select',

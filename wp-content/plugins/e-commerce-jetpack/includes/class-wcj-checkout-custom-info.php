@@ -21,9 +21,9 @@ class WCJ_Checkout_Custom_Info extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'checkout_custom_info';
-		$this->short_desc = __( 'Checkout Custom Info', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add custom info to the checkout page (1 block allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add custom info to the checkout page.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Checkout Custom Info', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add custom info to the checkout page (1 block allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add custom info to the checkout page.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-checkout-custom-info';
 		parent::__construct();
 

@@ -98,8 +98,8 @@ class WCJ_Product_Info extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_info';
-		$this->short_desc = __( 'Product Info V1', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add additional info to category and single product pages.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Info V1', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add additional info to category and single product pages.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-info';
 		parent::__construct();
 
@@ -120,10 +120,10 @@ class WCJ_Product_Info extends WCJ_Module {
 	 */
 	private function get_product_info_on_archive_filters_array() {
 		return array(
-			'woocommerce_before_shop_loop_item'       => __( 'Before product', 'woocommerce-jetpack' ),
-			'woocommerce_before_shop_loop_item_title' => __( 'Before product title', 'woocommerce-jetpack' ),
-			'woocommerce_after_shop_loop_item'        => __( 'After product', 'woocommerce-jetpack' ),
-			'woocommerce_after_shop_loop_item_title'  => __( 'After product title', 'woocommerce-jetpack' ),
+			'woocommerce_before_shop_loop_item'       => __( 'Before product', 'e-commerce-jetpack' ),
+			'woocommerce_before_shop_loop_item_title' => __( 'Before product title', 'e-commerce-jetpack' ),
+			'woocommerce_after_shop_loop_item'        => __( 'After product', 'e-commerce-jetpack' ),
+			'woocommerce_after_shop_loop_item_title'  => __( 'After product title', 'e-commerce-jetpack' ),
 		);
 	}
 
@@ -135,9 +135,9 @@ class WCJ_Product_Info extends WCJ_Module {
 	 */
 	private function get_product_info_on_single_filters_array() {
 		return array(
-			'woocommerce_single_product_summary'        => __( 'Inside single product summary', 'woocommerce-jetpack' ),
-			'woocommerce_before_single_product_summary' => __( 'Before single product summary', 'woocommerce-jetpack' ),
-			'woocommerce_after_single_product_summary'  => __( 'After single product summary', 'woocommerce-jetpack' ),
+			'woocommerce_single_product_summary'        => __( 'Inside single product summary', 'e-commerce-jetpack' ),
+			'woocommerce_before_single_product_summary' => __( 'Before single product summary', 'e-commerce-jetpack' ),
+			'woocommerce_after_single_product_summary'  => __( 'After single product summary', 'e-commerce-jetpack' ),
 		);
 	}
 
@@ -232,14 +232,14 @@ class WCJ_Product_Info extends WCJ_Module {
 		$settings = array_merge( $settings, array(
 			array(
 				'title'    => $title,
-				'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_more_product_info_on_' . $single_or_archive . '_enabled',
 				'default'  => 'no',
 				'type'     => 'checkbox',
 			),
 			array(
 				'title'    => '',
-				'desc'     => __( 'Position', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Position', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_more_product_info_on_' . $single_or_archive . '_filter',
 				'css'      => 'min-width:350px;',
 				'class'    => 'chosen_select',
@@ -250,14 +250,14 @@ class WCJ_Product_Info extends WCJ_Module {
 			),
 			array(
 				'title'    => '',
-				'desc_tip' => __( 'Priority (i.e. Order)', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'Priority (i.e. Order)', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_more_product_info_on_' . $single_or_archive . '_filter_priority',
 				'default'  => 10,
 				'type'     => 'number',
 			),
 			array(
 				'title'    => '',
-				'desc_tip' => __( 'Number of product info fields. Click "Save changes" after you change this number.', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'Number of product info fields. Click "Save changes" after you change this number.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_more_product_info_on_' . $single_or_archive . '_fields_total',
 				'default'  => 4,
 				'type'     => 'number',
@@ -279,8 +279,8 @@ class WCJ_Product_Info extends WCJ_Module {
 			$default_value = '';
 			switch ( $i ) {
 				case 1: $default_value = '<ul>'; break;
-				case 2: $default_value = '<li>' . __( '[wcj_product_you_save before="You save: <strong>" hide_if_zero="yes" after="</strong>"][wcj_product_you_save_percent hide_if_zero="yes" before=" (" after="%)"]', 'woocommerce-jetpack' ) . '</li>'; break;
-				case 3: $default_value = '<li>' . __( '[wcj_product_total_sales before="Total sales: "]', 'woocommerce-jetpack' ) . '</li>'; break;
+				case 2: $default_value = '<li>' . __( '[wcj_product_you_save before="You save: <strong>" hide_if_zero="yes" after="</strong>"][wcj_product_you_save_percent hide_if_zero="yes" before=" (" after="%)"]', 'e-commerce-jetpack' ) . '</li>'; break;
+				case 3: $default_value = '<li>' . __( '[wcj_product_total_sales before="Total sales: "]', 'e-commerce-jetpack' ) . '</li>'; break;
 				case 4: $default_value = '</ul>'; break;
 			}
 			$settings[] = array(

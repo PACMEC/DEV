@@ -87,7 +87,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 				$the_logo,
 				$the_logo_width_mm,
 				do_shortcode( wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_header_title_text', $invoice_title ) ),
-				do_shortcode( wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_header_text'      , __( 'Company Name', 'woocommerce-jetpack' ) ) ),
+				do_shortcode( wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_header_text'      , __( 'Company Name', 'e-commerce-jetpack' ) ) ),
 				wcj_hex2rgb(  wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_header_text_color', '#cccccc' ) ),
 				wcj_hex2rgb(  wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_header_line_color', '#cccccc' ) ) );
 		} else {
@@ -259,7 +259,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 					}
 					fclose( $fp );
 				} else {
-					die( __( 'Unexpected error', 'woocommerce-jetpack' ) );
+					die( __( 'Unexpected error', 'e-commerce-jetpack' ) );
 				}
 			}
 		}

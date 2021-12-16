@@ -23,14 +23,14 @@ class WCJ_Cross_Sells extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'cross_sells';
-		$this->short_desc = __( 'Cross-sells', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Cross-sells', 'e-commerce-jetpack' );
 		$this->extra_desc = __( 'Cross-sells are products which you promote in the cart, based on the current product.', 'woocommerce' ) . '<br>' .
-			sprintf( __( 'You can also use %s shortcode to display cross-sells anywhere on your site, for example on checkout page with %s module.', 'woocommerce-jetpack' ),
+			sprintf( __( 'You can also use %s shortcode to display cross-sells anywhere on your site, for example on checkout page with %s module.', 'e-commerce-jetpack' ),
 				'<code>[wcj_cross_sell_display]</code>',
 				'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=cart_and_checkout&section=checkout_custom_info' ) . '">' .
-					__( 'Checkout Custom Info', 'woocommerce-jetpack' ) . '</a>' );
-		$this->desc       = __( 'Customize cross-sells products display. Global Cross-sells (Plus); Exclude "Not in Stock" Products (Plus); Replace Cart Products with Cross-sells (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Customize cross-sells products display. Global Cross-sells; Exclude "Not in Stock" Products; Replace Cart Products with Cross-sells.', 'woocommerce-jetpack' );
+					__( 'Checkout Custom Info', 'e-commerce-jetpack' ) . '</a>' );
+		$this->desc       = __( 'Customize cross-sells products display. Global Cross-sells (Plus); Exclude "Not in Stock" Products (Plus); Replace Cart Products with Cross-sells (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Customize cross-sells products display. Global Cross-sells; Exclude "Not in Stock" Products; Replace Cart Products with Cross-sells.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-cross-sells';
 		parent::__construct();
 

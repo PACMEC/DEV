@@ -19,24 +19,24 @@ class WCJ_Shipping_By_Time extends WCJ_Module_Shipping_By_Condition {
 	 * @version 5.2.0
 	 * @since   4.0.0
 	 * @todo    [dev] add more "Valid time input" examples
-	 * @todo    [feature] multiple time values (i.e. `__( 'Otherwise enter time one per line.', 'woocommerce-jetpack' )`)
+	 * @todo    [feature] multiple time values (i.e. `__( 'Otherwise enter time one per line.', 'e-commerce-jetpack' )`)
 	 */
 	function __construct() {
 
 		$this->id         = 'shipping_by_time';
-		$this->short_desc = __( 'Shipping Methods by Current Date/Time', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set date and/or time to include/exclude for shipping methods to show up. (Free shipping available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set date and/or time to include/exclude for shipping methods to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Methods by Current Date/Time', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set date and/or time to include/exclude for shipping methods to show up. (Free shipping available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set date and/or time to include/exclude for shipping methods to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-methods-by-current-date-time';
 
 		$this->condition_options = array(
 			'time' => array(
-				'title' => __( 'Current Date/Time', 'woocommerce-jetpack' ),
-				'desc'  => '<br>' . sprintf( __( 'Current time: %s.', 'woocommerce-jetpack' ), '<code>' . current_time( 'Y-m-d H:i:s' ) . '</code>' ) . '<br>' .
-					sprintf( __( 'Time <em>from</em> and time <em>to</em> must be separated with %s symbol.', 'woocommerce-jetpack' ), '<code>~</code>' ) . ' ' .
-					sprintf( __( 'Each time input must be set in format that is parsable by PHP %s function.', 'woocommerce-jetpack' ),
+				'title' => __( 'Current Date/Time', 'e-commerce-jetpack' ),
+				'desc'  => '<br>' . sprintf( __( 'Current time: %s.', 'e-commerce-jetpack' ), '<code>' . current_time( 'Y-m-d H:i:s' ) . '</code>' ) . '<br>' .
+					sprintf( __( 'Time <em>from</em> and time <em>to</em> must be separated with %s symbol.', 'e-commerce-jetpack' ), '<code>~</code>' ) . ' ' .
+					sprintf( __( 'Each time input must be set in format that is parsable by PHP %s function.', 'e-commerce-jetpack' ),
 						'<a href="http://php.net/manual/en/function.strtotime.php" target="_blank"><code>strtotime()</code></a>' ) . ' ' .
-					sprintf( __( 'Valid time input examples are: %s', 'woocommerce-jetpack' ), '<ul><li><code>' . implode( '</code></li><li><code>', array(
+					sprintf( __( 'Valid time input examples are: %s', 'e-commerce-jetpack' ), '<ul><li><code>' . implode( '</code></li><li><code>', array(
 							'this week Thursday 4:30pm ~ this week Friday 4:30pm',
 							'this year September 1 ~ this year September 30',
 						) ) . '</code></li></ul>' ),
@@ -110,10 +110,10 @@ class WCJ_Shipping_By_Time extends WCJ_Module_Shipping_By_Condition {
 		$values = wcj_get_option( $option_id, '' );
 		if ( ! empty( $values ) ) {
 			if ( $parsed_time = $this->parse_time( $values ) ) {
-				return '. ' . sprintf( __( 'According to current time, your time input will be parsed as: from %s to %s.', 'woocommerce-jetpack' ),
+				return '. ' . sprintf( __( 'According to current time, your time input will be parsed as: from %s to %s.', 'e-commerce-jetpack' ),
 					'<code>' . date( 'Y-m-d H:i:s', $parsed_time['time_from'] ) . '</code>', '<code>' . date( 'Y-m-d H:i:s', $parsed_time['time_to'] ) . '</code>' );
 			} else {
-				return '. <strong>' . sprintf( __( 'Error: %s', 'woocommerce-jetpack' ), __( 'Time input is not parsable!', 'woocommerce-jetpack' ) ) . '</strong>';
+				return '. <strong>' . sprintf( __( 'Error: %s', 'e-commerce-jetpack' ), __( 'Time input is not parsable!', 'e-commerce-jetpack' ) ) . '</strong>';
 			}
 		}
 		return '';

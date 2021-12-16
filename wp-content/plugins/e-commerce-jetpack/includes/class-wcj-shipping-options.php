@@ -23,14 +23,14 @@ class WCJ_Shipping_Options extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'shipping_options';
-		$this->short_desc = __( 'Shipping Options', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Hide shipping when free is available.', 'woocommerce-jetpack' ) . ' ' .
-		                    __( 'Grant free shipping on per product basis (In free version, all products in cart must grant free shipping).', 'woocommerce-jetpack' ) . ' ' .
-		                    __( 'Show only the most expensive shipping (In free version, only free shipping is allowed to be ignored).', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Options', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Hide shipping when free is available.', 'e-commerce-jetpack' ) . ' ' .
+		                    __( 'Grant free shipping on per product basis (In free version, all products in cart must grant free shipping).', 'e-commerce-jetpack' ) . ' ' .
+		                    __( 'Show only the most expensive shipping (In free version, only free shipping is allowed to be ignored).', 'e-commerce-jetpack' );
 
-		$this->desc_pro   = __( 'Hide shipping when free is available.', 'woocommerce-jetpack' ) . ' ' .
-		                    __( 'Grant free shipping on per product basis.', 'woocommerce-jetpack' ) . ' ' .
-		                    __( 'Show only the most expensive shipping.', 'woocommerce-jetpack' );
+		$this->desc_pro   = __( 'Hide shipping when free is available.', 'e-commerce-jetpack' ) . ' ' .
+		                    __( 'Grant free shipping on per product basis.', 'e-commerce-jetpack' ) . ' ' .
+		                    __( 'Show only the most expensive shipping.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-options';
 		parent::__construct();
 
@@ -167,21 +167,21 @@ class WCJ_Shipping_Options extends WCJ_Module {
 			if ( isset( $section['id'] ) && 'woocommerce_ship_to_destination' === $section['id'] ) {
 				$updated_settings = array_merge( $updated_settings, array(
 					array(
-						'title'    => __( 'Booster: Hide when free is available', 'woocommerce-jetpack' ),
-						'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+						'title'    => __( 'Booster: Hide when free is available', 'e-commerce-jetpack' ),
+						'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 						'id'       => 'wcj_shipping_hide_if_free_available_all',
 						'default'  => 'no',
 						'type'     => 'checkbox',
 					),
 					array(
 						'id'       => 'wcj_shipping_hide_if_free_available_type',
-						'desc_tip' => sprintf( __( 'Available options: hide all; hide all except "Local Pickup"; hide "Flat Rate" only.', 'woocommerce-jetpack' ) ),
+						'desc_tip' => sprintf( __( 'Available options: hide all; hide all except "Local Pickup"; hide "Flat Rate" only.', 'e-commerce-jetpack' ) ),
 						'default'  => 'hide_all',
 						'type'     => 'select',
 						'options'  => array(
-							'hide_all'            => __( 'Hide all', 'woocommerce-jetpack' ),
-							'except_local_pickup' => __( 'Hide all except "Local Pickup"', 'woocommerce-jetpack' ),
-							'flat_rate_only'      => __( 'Hide "Flat Rate" only', 'woocommerce-jetpack' ),
+							'hide_all'            => __( 'Hide all', 'e-commerce-jetpack' ),
+							'except_local_pickup' => __( 'Hide all except "Local Pickup"', 'e-commerce-jetpack' ),
+							'flat_rate_only'      => __( 'Hide "Flat Rate" only', 'e-commerce-jetpack' ),
 						),
 						'desc'     => apply_filters( 'booster_message', '', 'desc' ),
 						'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),

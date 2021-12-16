@@ -34,11 +34,11 @@ class WCJ_Reports_Monthly_Sales {
 		if ( isset( $_POST['wcj_save_currency_rates'] ) && isset( $_POST['wcj_save_currency_rates_array'] ) && is_array( $_POST['wcj_save_currency_rates_array'] ) ) {
 			// Save rates
 			update_option( 'wcj_reports_currency_rates', array_replace_recursive( wcj_get_option( 'wcj_reports_currency_rates', array() ), $_POST['wcj_save_currency_rates_array'] ) );
-			$html .= '<div class="notice notice-success is-dismissible"><p><strong>' . __( 'Currency rates saved.', 'woocommerce-jetpack' ) . '</strong></p></div>';
+			$html .= '<div class="notice notice-success is-dismissible"><p><strong>' . __( 'Currency rates saved.', 'e-commerce-jetpack' ) . '</strong></p></div>';
 		} elseif ( isset( $_POST['wcj_reset_currency_rates'] ) ) {
 			// Delete rates
 			delete_option( 'wcj_reports_currency_rates' );
-			$html .= '<div class="notice notice-success is-dismissible"><p><strong>' . __( 'Currency rates deleted.', 'woocommerce-jetpack' ) . '</strong></p></div>';
+			$html .= '<div class="notice notice-success is-dismissible"><p><strong>' . __( 'Currency rates deleted.', 'e-commerce-jetpack' ) . '</strong></p></div>';
 		}
 		// Show report
 		$this->year = isset( $_GET['year'] ) ? $_GET['year'] : date( 'Y' );
@@ -81,15 +81,15 @@ class WCJ_Reports_Monthly_Sales {
 		$execution_time_start = microtime( true );
 
 		$months_array                          = array( '' );
-		$months_days_array                     = array( __( 'Days', 'woocommerce-jetpack' ) );
-		$total_orders_array                    = array( __( 'Total Orders', 'woocommerce-jetpack' ) );
-		$total_orders_average_array            = array( __( 'Orders Average / Day', 'woocommerce-jetpack' ) );
-		$total_orders_sum_array                = array( __( 'Total Sum', 'woocommerce-jetpack' ) );
-		$total_orders_sum_excl_tax_array       = array( __( 'Total Sum (excl. TAX)', 'woocommerce-jetpack' ) );
-		$total_orders_sum_average_order_array  = array( __( 'Average / Order (excl. TAX)', 'woocommerce-jetpack' ) );
-		$total_orders_sum_average_array        = array( __( 'Average / Day (excl. TAX)', 'woocommerce-jetpack' ) );
-		$currency_rates_array                  = array( __( 'Currency Rates', 'woocommerce-jetpack' ) );
-		$orders_by_currency_array              = array( __( 'Orders by Currency', 'woocommerce-jetpack' ) );
+		$months_days_array                     = array( __( 'Days', 'e-commerce-jetpack' ) );
+		$total_orders_array                    = array( __( 'Total Orders', 'e-commerce-jetpack' ) );
+		$total_orders_average_array            = array( __( 'Orders Average / Day', 'e-commerce-jetpack' ) );
+		$total_orders_sum_array                = array( __( 'Total Sum', 'e-commerce-jetpack' ) );
+		$total_orders_sum_excl_tax_array       = array( __( 'Total Sum (excl. TAX)', 'e-commerce-jetpack' ) );
+		$total_orders_sum_average_order_array  = array( __( 'Average / Order (excl. TAX)', 'e-commerce-jetpack' ) );
+		$total_orders_sum_average_array        = array( __( 'Average / Day (excl. TAX)', 'e-commerce-jetpack' ) );
+		$currency_rates_array                  = array( __( 'Currency Rates', 'e-commerce-jetpack' ) );
+		$orders_by_currency_array              = array( __( 'Orders by Currency', 'e-commerce-jetpack' ) );
 
 		$total_months_days               = 0;
 		$total_orders_total              = 0;
@@ -197,7 +197,7 @@ class WCJ_Reports_Monthly_Sales {
 				$forecast_total_orders = ( $average_sales_result ) * ( date( 't', strtotime( $this->year . '-' . sprintf( '%02d', $i ) . '-' . '01' ) ) );
 			}
 			$total_orders_array[] = ( $total_orders > 0 ? $total_orders . ( $is_current_month && $do_forecast ?
-				wc_help_tip( sprintf( __( 'Forecast: %s', 'woocommerce-jetpack' ), round( $forecast_total_orders ) ), true ) : ''
+				wc_help_tip( sprintf( __( 'Forecast: %s', 'e-commerce-jetpack' ), round( $forecast_total_orders ) ), true ) : ''
 				) : ''
 			);
 			$total_orders_total  += $total_orders;
@@ -210,7 +210,7 @@ class WCJ_Reports_Monthly_Sales {
 			// Sum excl. Tax
 			$total_orders_sum_excl_tax_array[] = ( $total_orders_sum_excl_tax > 0 ?
 				$report_currency . ' ' . number_format( $total_orders_sum_excl_tax, 2, '.', ',' ) . ( $is_current_month && $do_forecast ?
-					wc_help_tip( sprintf( __( 'Forecast: %s', 'woocommerce-jetpack' ), $report_currency . ' ' .
+					wc_help_tip( sprintf( __( 'Forecast: %s', 'e-commerce-jetpack' ), $report_currency . ' ' .
 						number_format( $forecast_total_orders * $total_orders_sum_excl_tax / $total_orders, 2 ) ), true ) : ''
 				) : ''
 			);
@@ -230,7 +230,7 @@ class WCJ_Reports_Monthly_Sales {
 				foreach ( $currencies_to as $currency_to => $rate ) {
 					if ( $currency_from != $currency_to ) {
 						$input_id = sanitize_title( $currency_from . '_' . $currency_to . '_' . $start_date . '_' . $end_date );
-						$currency_rates_html .= '<a class="wcj_grab_average_currency_exchange_rate" href="#" title="' . __( 'Grab average rate', 'woocommerce-jetpack' ) .
+						$currency_rates_html .= '<a class="wcj_grab_average_currency_exchange_rate" href="#" title="' . __( 'Grab average rate', 'e-commerce-jetpack' ) .
 							'" currency_from="' . $currency_from .
 							'" currency_to="' . $currency_to .
 							'" start_date="' . $start_date .
@@ -277,12 +277,12 @@ class WCJ_Reports_Monthly_Sales {
 		if ( $do_forecast ) {
 			$part_of_the_year_for_forecast            = ( $total_months_days > 0 ? ( date( 'z', strtotime( date( 'Y-12-31' ) ) ) + 1 ) / $total_months_days : 0 );
 			$forecast_total_orders_year               = ( $part_of_the_year_for_forecast > 0 && date( 'Y' ) == $this->year ?
-				wc_help_tip( sprintf( __( 'Forecast: %s', 'woocommerce-jetpack' ), round( $part_of_the_year_for_forecast * $total_orders_total ) ), true ) : '' );
+				wc_help_tip( sprintf( __( 'Forecast: %s', 'e-commerce-jetpack' ), round( $part_of_the_year_for_forecast * $total_orders_total ) ), true ) : '' );
 			$forecast_total_orders_sum_excl_tax_total = ( $part_of_the_year_for_forecast > 0 && date( 'Y' ) == $this->year ?
-				wc_help_tip( sprintf( __( 'Forecast: %s', 'woocommerce-jetpack' ),
+				wc_help_tip( sprintf( __( 'Forecast: %s', 'e-commerce-jetpack' ),
 					$report_currency . ' ' . number_format( $part_of_the_year_for_forecast * $total_orders_sum_excl_tax_total, 2, '.', ',' ) ), true ) : '' );
 		}
-		$months_array[]                          = __( 'Totals', 'woocommerce-jetpack' );
+		$months_array[]                          = __( 'Totals', 'e-commerce-jetpack' );
 		$months_days_array[]                     = $total_months_days;
 		$total_orders_array[]                    = $total_orders_total .
 			( $do_forecast ? $forecast_total_orders_year : '' );
@@ -326,7 +326,7 @@ class WCJ_Reports_Monthly_Sales {
 		$menu .= '</p>';
 		$menu .= '<br class="clear">';
 		$html .= $menu;
-		$html .= '<h4>' . __( 'Report currency', 'woocommerce-jetpack' ) . ': ' . $report_currency . '</h4>';
+		$html .= '<h4>' . __( 'Report currency', 'e-commerce-jetpack' ) . ': ' . $report_currency . '</h4>';
 		$months_styles = array();
 		for ( $i = 1; $i <= 12; $i++ ) {
 			$months_styles[] = ( $i == date( 'm' ) && $this->year == date( 'Y' ) ? 'width:8%;' : 'width:6%;' );
@@ -341,14 +341,14 @@ class WCJ_Reports_Monthly_Sales {
 					array( ( $this->year == date( 'Y' ) ? 'width:10%;' : 'width:12%;' ) . 'font-weight:bold;' )
 				),
 		) );
-		$html .= '<p style="font-size:x-small;"><em>' . sprintf( __( 'Report generated in: %s s', 'woocommerce-jetpack' ),
+		$html .= '<p style="font-size:x-small;"><em>' . sprintf( __( 'Report generated in: %s s', 'e-commerce-jetpack' ),
 			number_format( ( $execution_time_end - $execution_time_start ), 2, '.', ',' ) ) . '</em></p>';
 		$html .= '<p><input name="wcj_save_currency_rates" type="submit" class="button button-primary" value="' .
-			__( 'Save Currency Rates', 'woocommerce-jetpack' ) . '"></p>';
+			__( 'Save Currency Rates', 'e-commerce-jetpack' ) . '"></p>';
 		$html .= '</form>';
 		$html .= '<form method="post" action="">' .
 			'<input name="wcj_reset_currency_rates" type="submit" class="button button-primary" value="' .
-				__( 'Reset Currency Rates', 'woocommerce-jetpack' ) . '" onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')">' .
+				__( 'Reset Currency Rates', 'e-commerce-jetpack' ) . '" onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')">' .
 		'</form>';
 		return $html;
 	}

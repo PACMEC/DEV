@@ -20,15 +20,15 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'bulk_price_converter';
-		$this->short_desc = __( 'Bulk Price Converter', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Multiply all products prices by set value.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Bulk Price Converter', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Multiply all products prices by set value.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-bulk-price-converter';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'bulk_price_converter' => array(
-				'title' => __( 'Bulk Price Converter', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Bulk Price Converter Tool.', 'woocommerce-jetpack' ),
+				'title' => __( 'Bulk Price Converter', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Bulk Price Converter Tool.', 'e-commerce-jetpack' ),
 			),
 		) );
 	}
@@ -145,11 +145,11 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 
 		echo '<table class="widefat striped" style="margin-top: 10px;">';
 		echo '<tr>' .
-				'<th>' . __( 'Product', 'woocommerce-jetpack' )        . '</th>' .
-				'<th>' . __( 'Categories', 'woocommerce-jetpack' )     . '</th>' .
-				'<th>' . __( 'Price Type', 'woocommerce-jetpack' )     . '</th>' .
-				'<th>' . __( 'Original Price', 'woocommerce-jetpack' ) . '</th>' .
-				'<th>' . __( 'Modified Price', 'woocommerce-jetpack' ) . '</th>' .
+				'<th>' . __( 'Product', 'e-commerce-jetpack' )        . '</th>' .
+				'<th>' . __( 'Categories', 'e-commerce-jetpack' )     . '</th>' .
+				'<th>' . __( 'Price Type', 'e-commerce-jetpack' )     . '</th>' .
+				'<th>' . __( 'Original Price', 'e-commerce-jetpack' ) . '</th>' .
+				'<th>' . __( 'Modified Price', 'e-commerce-jetpack' ) . '</th>' .
 			'</tr>';
 
 		$offset     = 0;
@@ -204,14 +204,14 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 		$result_changing_prices = '';
 
 		if ( $multiply_prices_by <= 0 ) {
-			$result_message = '<p><div class="error"><p><strong>' . __( 'Multiply value must be above zero.', 'woocommerce-jetpack' ) . '</strong></p></div></p>';
+			$result_message = '<p><div class="error"><p><strong>' . __( 'Multiply value must be above zero.', 'e-commerce-jetpack' ) . '</strong></p></div></p>';
 			$multiply_prices_by = 1;
 		}
 		else {
 			if ( isset( $_POST['bulk_change_prices'] ) || isset( $_POST['bulk_change_prices_preview'] ) ) {
 				$result_changing_prices = $this->change_all_products_prices( $multiply_prices_by, $is_preview );
 				if ( ! $is_preview ) {
-					$result_message = '<p><div class="updated"><p><strong>' . __( 'Prices changed successfully!', 'woocommerce-jetpack' ) .
+					$result_message = '<p><div class="updated"><p><strong>' . __( 'Prices changed successfully!', 'e-commerce-jetpack' ) .
 						'</strong></p></div></p>';
 					$multiply_prices_by = 1;
 				}
@@ -236,7 +236,7 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 			echo '<form method="post" action="">';
 				$data_table = array();
 				$data_table[] = array(
-					__( 'Multiply all product prices by', 'woocommerce-jetpack' ),
+					__( 'Multiply all product prices by', 'e-commerce-jetpack' ),
 					'<input class="" style="width:100%;" type="number" step="0.000001" min="0.000001" name="multiply_prices_by" id="multiply_prices_by" value="' .
 						$multiply_prices_by . '">',
 					'',
@@ -244,33 +244,33 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 
 				$selected_option_price_types = ( isset( $_POST['wcj_price_types'] ) ) ? $_POST['wcj_price_types'] : '';
 				$data_table[] = array(
-					__( 'Price type to modify', 'woocommerce-jetpack' ),
+					__( 'Price type to modify', 'e-commerce-jetpack' ),
 					'<select style="width:100%;" name="wcj_price_types">' .
-						'<option value="wcj_both">' . __( 'Both', 'woocommerce-jetpack' ) . '</option>' .
+						'<option value="wcj_both">' . __( 'Both', 'e-commerce-jetpack' ) . '</option>' .
 						'<option value="wcj_sale_prices"'    . selected( 'wcj_sale_prices',    $selected_option_price_types, false ) . '>'
-							. __( 'Sale prices only', 'woocommerce-jetpack' )    . '</option>' .
+							. __( 'Sale prices only', 'e-commerce-jetpack' )    . '</option>' .
 						'<option value="wcj_regular_prices"' . selected( 'wcj_regular_prices', $selected_option_price_types, false ) . '>'
-							. __( 'Regular prices only', 'woocommerce-jetpack' ) . '</option>' .
+							. __( 'Regular prices only', 'e-commerce-jetpack' ) . '</option>' .
 					'</select>',
 					'',
 				);
 
 				if ( '' != $select_options_html ) {
 					$data_table[] = array(
-						__( 'Products category', 'woocommerce-jetpack' ),
+						__( 'Products category', 'e-commerce-jetpack' ),
 						'<select style="width:100%;" name="wcj_product_cat" ' . apply_filters( 'booster_option', 'disabled', '' ) . '>' .
-							'<option value="wcj_any">' . __( 'Any', 'woocommerce-jetpack' ) . '</option>' .
+							'<option value="wcj_any">' . __( 'Any', 'e-commerce-jetpack' ) . '</option>' .
 							$select_options_html .
-							'<option value="wcj_none"' . selected( 'wcj_none', $selected_option, false ) . '>' . __( 'None', 'woocommerce-jetpack' ) . '</option>' .
+							'<option value="wcj_none"' . selected( 'wcj_none', $selected_option, false ) . '>' . __( 'None', 'e-commerce-jetpack' ) . '</option>' .
 						'</select>',
 						'<em>' . apply_filters( 'booster_message', '', 'desc' ) . '</em>',
 					);
 				}
 				$make_pretty_prices_threshold = isset( $_POST['make_pretty_prices_threshold'] ) ? $_POST['make_pretty_prices_threshold'] : 0;
 				$data_table[] = array(
-					__( '"Pretty prices" threshold', 'woocommerce-jetpack' ) . wcj_help_tip( __( 'Leave zero to disable.', 'woocommerce-jetpack' ) . ' ' .
-						__( 'Otherwise - all prices below "threshold" will end with 0,99 and all prices above or equal to "threshold" will end with 9,00.', 'woocommerce-jetpack' ) . ' ' .
-						__( 'E.g.: if you set "threshold" to 100, then all prices below 100 will be like 45,99 and all other prices will be like 109,00.', 'woocommerce-jetpack' )
+					__( '"Pretty prices" threshold', 'e-commerce-jetpack' ) . wcj_help_tip( __( 'Leave zero to disable.', 'e-commerce-jetpack' ) . ' ' .
+						__( 'Otherwise - all prices below "threshold" will end with 0,99 and all prices above or equal to "threshold" will end with 9,00.', 'e-commerce-jetpack' ) . ' ' .
+						__( 'E.g.: if you set "threshold" to 100, then all prices below 100 will be like 45,99 and all other prices will be like 109,00.', 'e-commerce-jetpack' )
 					),
 					'<input style="width:100%;" class="" type="number" step="0.000001" min="0" name="make_pretty_prices_threshold" id="make_pretty_prices_threshold" value="' .
 						$make_pretty_prices_threshold . '"' . apply_filters( 'booster_option', 'disabled', '' ) . '>',
@@ -278,14 +278,14 @@ class WCJ_Bulk_Price_Converter extends WCJ_Module {
 				);
 				$data_table[] = array(
 					'<input class="button-primary" type="submit" name="bulk_change_prices_preview" id="bulk_change_prices_preview" value="' .
-						__( 'Preview Prices', 'woocommerce-jetpack' ) . '">',
+						__( 'Preview Prices', 'e-commerce-jetpack' ) . '">',
 					'',
 					'',
 				);
 				if ( isset( $_POST['bulk_change_prices_preview'] ) ) {
 					$data_table[] = array(
 						'<input class="button-primary" type="submit" name="bulk_change_prices" id="bulk_change_prices" value="' .
-							__( 'Change Prices', 'woocommerce-jetpack' ) . '">',
+							__( 'Change Prices', 'e-commerce-jetpack' ) . '">',
 						'',
 						'',
 					);

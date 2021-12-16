@@ -22,16 +22,16 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_bulk_meta_editor';
-		$this->short_desc = __( 'Product Bulk Meta Editor', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set products meta with bulk editor (Variations available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set products meta with bulk editor.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Bulk Meta Editor', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set products meta with bulk editor (Variations available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set products meta with bulk editor.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-bulk-meta-editor';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'product_bulk_meta_editor' => array(
-				'title' => __( 'Product Bulk Meta Editor', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Product Bulk Meta Editor Tool.', 'woocommerce-jetpack' ),
+				'title' => __( 'Product Bulk Meta Editor', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Product Bulk Meta Editor Tool.', 'e-commerce-jetpack' ),
 			),
 		) );
 	}
@@ -162,7 +162,7 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 			$result_message = $this->get_result_message( $success, $fail );
 		} elseif ( isset( $_POST['wcj_product_bulk_meta_editor_show'] ) ) {
 			if ( '' === $_POST['wcj_product_bulk_meta_editor_show_meta'] ) {
-				$result_message = '<p><div class="error"><p>' . __( 'Please enter meta key.', 'woocommerce-jetpack' ) . '</p></div></p>';
+				$result_message = '<p><div class="error"><p>' . __( 'Please enter meta key.', 'e-commerce-jetpack' ) . '</p></div></p>';
 			}
 			$meta_name = $_POST['wcj_product_bulk_meta_editor_show_meta'];
 		}
@@ -182,10 +182,10 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	function get_result_message( $success, $fail ) {
 		$result_message = '';
 		if ( $success > 0 ) {
-			$result_message .= '<p><div class="notice notice-success is-dismissible"><p>' . sprintf( __( 'Meta for <strong>%d</strong> product(s) was updated.', 'woocommerce-jetpack' ), $success ) . '</p></div></p>';
+			$result_message .= '<p><div class="notice notice-success is-dismissible"><p>' . sprintf( __( 'Meta for <strong>%d</strong> product(s) was updated.', 'e-commerce-jetpack' ), $success ) . '</p></div></p>';
 		}
 		if ( $fail > 0 ) {
-			$result_message .= '<p><div class="notice notice-warning is-dismissible"><p>' . sprintf( __( 'Meta for <strong>%d</strong> product(s) was not updated.', 'woocommerce-jetpack' ), $fail ) . '</p></div></p>';
+			$result_message .= '<p><div class="notice notice-warning is-dismissible"><p>' . sprintf( __( 'Meta for <strong>%d</strong> product(s) was not updated.', 'e-commerce-jetpack' ), $fail ) . '</p></div></p>';
 		}
 		return $result_message;
 	}
@@ -222,19 +222,19 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 		$meta_html = '';
 		$meta_html .= '<p>';
 		$meta_html .= '<label for="wcj_product_bulk_meta_editor_show_meta">';
-		$meta_html .= __( 'Meta key', 'woocommerce-jetpack' );
+		$meta_html .= __( 'Meta key', 'e-commerce-jetpack' );
 		if ( '' == $meta_name ) {
-			$meta_html .= ', ' . sprintf( __( 'for example %s', 'woocommerce-jetpack' ), '<code>_sku</code>' );
+			$meta_html .= ', ' . sprintf( __( 'for example %s', 'e-commerce-jetpack' ), '<code>_sku</code>' );
 		}
 		$meta_html .= '</label>';
 		$meta_html .= '<input required class="widefat" type="text" id="wcj_product_bulk_meta_editor_show_meta" name="wcj_product_bulk_meta_editor_show_meta" value="' . $meta_name . '">';
 		$meta_html .= '</p>';
 		$meta_html .= '<p>';
-		$meta_html .= '<button class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_show" value="show">' . __( 'Show', 'woocommerce-jetpack' ) . '</button>';
+		$meta_html .= '<button class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_show" value="show">' . __( 'Show', 'e-commerce-jetpack' ) . '</button>';
 		$meta_html .= '</p>';
 		$table_data = array();
 		$table_data[] = array(
-			__( 'Meta', 'woocommerce-jetpack' ),
+			__( 'Meta', 'e-commerce-jetpack' ),
 		);
 		$table_data[] = array(
 			$meta_html,
@@ -257,11 +257,11 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 		}
 		$products_html .= '</select>';
 		$tip = '<p style="font-style:italic;color:gray;">' . '* ' .
-			__( 'Hold <strong>Control</strong> key to select multiple products. Press <strong>Control</strong> + <strong>A</strong> to select all products.', 'woocommerce-jetpack' ) .
+			__( 'Hold <strong>Control</strong> key to select multiple products. Press <strong>Control</strong> + <strong>A</strong> to select all products.', 'e-commerce-jetpack' ) .
 		'</p>';
 		$table_data = array();
 		$table_data[] = array(
-			__( 'Products', 'woocommerce-jetpack' ),
+			__( 'Products', 'e-commerce-jetpack' ),
 		);
 		$table_data[] = array(
 			$products_html . $tip,
@@ -277,7 +277,7 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	 */
 	function get_html_meta_table( $meta_name, $_products, $selected_products, $set_meta ) {
 		$html = '';
-		$js_confirmation = ' onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')"';
+		$js_confirmation = ' onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')"';
 		$html .= $this->get_html_meta_table_set_single_value( $set_meta, $js_confirmation );
 		$html .= $this->get_html_meta_table_buttons( $meta_name, $js_confirmation );
 		$html .= $this->get_html_meta_table_content( $meta_name, $_products, $selected_products, $js_confirmation );
@@ -292,16 +292,16 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	 */
 	function get_html_meta_table_set_single_value( $set_meta, $js_confirmation ) {
 		$single_value_html = '<p>' .
-			'<label for="wcj_product_bulk_meta_editor_set_meta">' . __( 'Value', 'woocommerce-jetpack' ) . '</label>' .
+			'<label for="wcj_product_bulk_meta_editor_set_meta">' . __( 'Value', 'e-commerce-jetpack' ) . '</label>' .
 			'<input type="text" class="widefat" id="wcj_product_bulk_meta_editor_set_meta" name="wcj_product_bulk_meta_editor_set_meta" value="' . $set_meta . '">' .
 		'</p>' .
 		'<p>' .
 			'<button class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_set" value="set"' . $js_confirmation . '>' .
-				__( 'Set', 'woocommerce-jetpack' ) . '</button>' .
+				__( 'Set', 'e-commerce-jetpack' ) . '</button>' .
 		'</p>';
 		$table_data = array();
 		$table_data[] = array(
-			__( 'Set Meta for All Products', 'woocommerce-jetpack' ),
+			__( 'Set Meta for All Products', 'e-commerce-jetpack' ),
 		);
 		$table_data[] = array(
 			$single_value_html,
@@ -318,10 +318,10 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	function get_html_meta_table_buttons( $meta_name, $js_confirmation ) {
 		$html = '';
 		$html .= '<p>';
-		$html .= '<input class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_save_all" value="' . __( 'Save all', 'woocommerce-jetpack' ) . '"' .
+		$html .= '<input class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_save_all" value="' . __( 'Save all', 'e-commerce-jetpack' ) . '"' .
 			$js_confirmation . '>';
 		$html .= ' ';
-		$html .= '<input class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_delete_all" value="' . __( 'Delete all', 'woocommerce-jetpack' ) . '"' .
+		$html .= '<input class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_delete_all" value="' . __( 'Delete all', 'e-commerce-jetpack' ) . '"' .
 			$js_confirmation . '>';
 		$html .= '</p>';
 		$html .= '<input type="hidden" name="wcj_product_bulk_meta_editor_meta" value="' . $meta_name . '">';
@@ -337,8 +337,8 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	function get_html_meta_table_content( $meta_name, $_products, $selected_products, $js_confirmation ) {
 		$table_data = array();
 		$table_headings = array(
-			__( 'Product', 'woocommerce-jetpack' ),
-			__( 'Meta', 'woocommerce-jetpack' ) . ': <code>' . $meta_name . '</code>',
+			__( 'Product', 'e-commerce-jetpack' ),
+			__( 'Meta', 'e-commerce-jetpack' ) . ': <code>' . $meta_name . '</code>',
 			'',
 		);
 		$additional_columns = wcj_get_option( 'wcj_product_bulk_meta_editor_additional_columns', '' );
@@ -362,10 +362,10 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 						$_post_meta . '">';
 				}
 				$save_button = '<button class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_save_single" value="' . $product_id . '">'
-					. __( 'Save', 'woocommerce-jetpack' ) . '</button>';
+					. __( 'Save', 'e-commerce-jetpack' ) . '</button>';
 				$delete_button = ( metadata_exists( 'post', $product_id, $meta_name ) ?
 					'<button class="button-primary" type="submit" name="wcj_product_bulk_meta_editor_delete_single" value="' . $product_id . '"' . $js_confirmation . '>'
-						. __( 'Delete', 'woocommerce-jetpack' ) . '</button>' : '' );
+						. __( 'Delete', 'e-commerce-jetpack' ) . '</button>' : '' );
 			}
 			$row = array(
 				'<a href="/?p=' . $product_id . '"> ' . $product_title . '</a>',
@@ -387,13 +387,13 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 	function maybe_add_additional_columns_headings( $table_headings, $additional_columns ) {
 		if ( ! empty( $additional_columns ) ) {
 			if ( in_array( 'product_id', $additional_columns ) ) {
-				$table_headings[] = __( 'Product ID', 'woocommerce-jetpack' );
+				$table_headings[] = __( 'Product ID', 'e-commerce-jetpack' );
 			}
 			if ( in_array( 'product_status', $additional_columns ) ) {
-				$table_headings[] = __( 'Product status', 'woocommerce-jetpack' );
+				$table_headings[] = __( 'Product status', 'e-commerce-jetpack' );
 			}
 			if ( in_array( 'product_all_meta_keys', $additional_columns ) ) {
-				$table_headings[] = __( 'Meta keys', 'woocommerce-jetpack' );
+				$table_headings[] = __( 'Meta keys', 'e-commerce-jetpack' );
 			}
 		}
 		return $table_headings;
@@ -415,7 +415,7 @@ class WCJ_Product_Bulk_Meta_Editor extends WCJ_Module {
 			}
 			if ( in_array( 'product_all_meta_keys', $additional_columns ) ) {
 				$row[] = '<details style="color:gray;">' .
-					'<summary><em>' . __( 'Show all', 'woocommerce-jetpack' ) . '</em></summary>' .
+					'<summary><em>' . __( 'Show all', 'e-commerce-jetpack' ) . '</em></summary>' .
 					'<p>' . implode( '<br>', array_keys( get_post_meta( $product_id ) ) ) . '</p>' .
 				'</details>';
 			}

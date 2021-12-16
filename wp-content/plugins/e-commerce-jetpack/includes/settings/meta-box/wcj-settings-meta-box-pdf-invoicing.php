@@ -21,13 +21,13 @@ if ( ! empty( $invoice_types ) ) {
 		if ( wcj_is_invoice_created( $order_id, $invoice_type['id'] ) ) {
 			$options = array_merge( $options, array(
 				array(
-					'title'    => sprintf( __( '%s number', 'woocommerce-jetpack' ), $invoice_type['title'] ),
+					'title'    => sprintf( __( '%s number', 'e-commerce-jetpack' ), $invoice_type['title'] ),
 					'name'     => 'wcj_invoicing_' . $invoice_type['id'] . '_number_id',
 					'default'  => '',
 					'type'     => 'number',
 				),
 				array(
-					'title'    => sprintf( __( '%s date', 'woocommerce-jetpack' ), $invoice_type['title'] ),
+					'title'    => sprintf( __( '%s date', 'e-commerce-jetpack' ), $invoice_type['title'] ),
 					'name'     => 'wcj_invoicing_' . $invoice_type['id'] . '_date',
 					'default'  => '',
 					'type'     => 'number',

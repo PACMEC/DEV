@@ -22,9 +22,9 @@ if ( ! class_exists( 'WCJ_Multicurrency_Base_Price' ) ) :
 		function __construct() {
 
 			$this->id         = 'multicurrency_base_price';
-			$this->short_desc = __( 'Multicurrency Product Base Price', 'woocommerce-jetpack' );
-			$this->desc       = __( 'Enter prices for products in different currencies (1 currency allowed in free version).', 'woocommerce-jetpack' );
-			$this->desc_pro   = __( 'Enter prices for products in different currencies.', 'woocommerce-jetpack' );
+			$this->short_desc = __( 'Multicurrency Product Base Price', 'e-commerce-jetpack' );
+			$this->desc       = __( 'Enter prices for products in different currencies (1 currency allowed in free version).', 'e-commerce-jetpack' );
+			$this->desc_pro   = __( 'Enter prices for products in different currencies.', 'e-commerce-jetpack' );
 			$this->link_slug  = 'woocommerce-multicurrency-product-base-price';
 			parent::__construct();
 

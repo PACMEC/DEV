@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'     => __( 'Force Base Country Display', 'woocommerce-jetpack' ),
+		'title'     => __( 'Force Base Country Display', 'e-commerce-jetpack' ),
 		'type'      => 'title',
 		'id'        => 'wcj_address_formats_force_country_display_options',
 	),
 	array(
-		'title'     => __( 'Force Base Country Display', 'woocommerce-jetpack' ),
-		'desc'      => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'     => __( 'Force Base Country Display', 'e-commerce-jetpack' ),
+		'desc'      => __( 'Enable', 'e-commerce-jetpack' ),
 		'id'        => 'wcj_address_formats_force_country_display',
 		'default'   => 'no',
 		'type'      => 'checkbox',
@@ -27,7 +27,7 @@ $settings = array(
 		'id'        => 'wcj_address_formats_force_country_display_options',
 	),
 	array(
-		'title'     => __( 'Address Formats by Country', 'woocommerce-jetpack' ),
+		'title'     => __( 'Address Formats by Country', 'e-commerce-jetpack' ),
 		'type'      => 'title',
 		'id'        => 'wcj_address_formats_country_options',
 	),

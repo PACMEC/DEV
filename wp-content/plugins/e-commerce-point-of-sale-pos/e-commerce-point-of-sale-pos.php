@@ -1,33 +1,23 @@
 <?php
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
+ * El archivo de arranque del complemento
  *
  * @link              https://makewebbetter.com/
  * @since             1.0.0
  * @package           MWB_Point_Of_Sale_Woocommerce
  *
  * @wordpress-plugin
- * Plugin Name:       MWB Point of Sale (POS) for WooCommerce
- * Plugin URI:        https://wordpress.org/plugins/mwb-point-of-sale-pos-for-woocommerce/
- * Description:       Point of Sale (POS) System for WooCommerce Plugin helps the merchants to provide a better way check orders and provide an easy way to track their orders both online and local stores.
- * Version:           1.0.2
- * Author:            MakeWebBetter
- * Author URI:           https://makewebbetter.com/?utm_source=MWB-POS-org&utm_medium=MWB-org-backen&utm_campaign=MWB-POS-site
- * Text Domain:       mwb-point-of-sale-woocommerce
+ * Plugin Name:       E-Commerce - Punto de venta (POS) MWB
+ * Plugin URI:        #
+ * Description:       El sistema de punto de venta (POS) para el complemento E-Commerce ayuda a los comerciantes a proporcionar una mejor manera de verificar los pedidos y proporcionar una manera fácil de rastrear sus pedidos tanto en línea como en las tiendas locales.
+ * Version:           1.0.0
+ * Author:            PACMEC
+ * Author URI:        #
+ * Text Domain:       e-commerce-point-of-sale-pos
  * Domain Path:       /languages
  *
  * Requires at least: 4.6
- * Tested up to:      5.8
- * WC requires at least:     4.0
- * WC tested up to:          5.6.0
  *
- * License:           GNU General Public License v3.0
- * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 // If this file is called directly, abort.

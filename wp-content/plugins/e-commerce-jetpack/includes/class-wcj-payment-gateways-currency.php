@@ -22,9 +22,9 @@ class WCJ_Payment_Gateways_Currency extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways_currency';
-		$this->short_desc = __( 'Gateways Currency Converter', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Currency converter for payment gateways. Update exchange rates automatically (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Currency converter for payment gateways.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Gateways Currency Converter', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Currency converter for payment gateways. Update exchange rates automatically (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Currency converter for payment gateways.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-payment-gateways-currency-converter';
 		parent::__construct();
 

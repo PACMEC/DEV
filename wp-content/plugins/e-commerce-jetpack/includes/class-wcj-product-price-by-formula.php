@@ -23,9 +23,9 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_price_by_formula';
-		$this->short_desc = __( 'Product Price by Formula', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set formula for automatic product price calculation (Available per product in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set formula for automatic product price calculation.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Price by Formula', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set formula for automatic product price calculation (Available per product in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set formula for automatic product price calculation.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-price-formula';
 		parent::__construct();
 
@@ -105,7 +105,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 						$display_price = $math->evaluate( $the_formula );
 					} catch ( Exception $e ) {
 						if ( $output_errors ) {
-							echo '<p style="color:red;">' . __( 'Error in formula', 'woocommerce-jetpack' ) . ': ' . $e->getMessage() . '</p>';
+							echo '<p style="color:red;">' . __( 'Error in formula', 'e-commerce-jetpack' ) . ': ' . $e->getMessage() . '</p>';
 						}
 					}
 					if ( 'no_rounding' != $this->rounding ) {
@@ -116,7 +116,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 			}
 		}
 
-		$output = apply_filters( 'woocommerce_bookings_booking_cost_string', __( 'Booking cost', 'woocommerce-jetpack' ), $_product ) . ': <strong>' . wc_price( $display_price ) . $price_suffix . '</strong>';
+		$output = apply_filters( 'woocommerce_bookings_booking_cost_string', __( 'Booking cost', 'e-commerce-jetpack' ), $_product ) . ': <strong>' . wc_price( $display_price ) . $price_suffix . '</strong>';
 		return 	$output;
 	}
 
@@ -128,7 +128,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 	 */
 	function promotional_price_showing($price, $_product){
 		$price_html=$_product->get_price();
-		$price_html = sprintf( __( 'From: %s', 'woocommerce-jetpack' ), wc_price( $price_html ) );
+		$price_html = sprintf( __( 'From: %s', 'e-commerce-jetpack' ), wc_price( $price_html ) );
 		return $price_html;
 	 }
 
@@ -148,13 +148,13 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 		if ( is_array( $results ) && $results > 0 ) {
 			$new_settings = array(
 				array(
-					'title'             => __( 'Reset products', 'woocommerce-jetpack' ),
-					'desc'              => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'woocommerce-jetpack' ) : $message,
+					'title'             => __( 'Reset products', 'e-commerce-jetpack' ),
+					'desc'              => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'e-commerce-jetpack' ) : $message,
 					'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 					'type'              => 'checkbox',
 					'id'                => 'wcj_product_price_by_formula_reset_products',
 					'default'           => 'no',
-					'desc_tip'          => __( 'If enabled will also reset formula related settings on products when <code>Reset Settings</code> button is pressed.', 'woocommerce-jetpack' ) . '<br />' . __( 'It\'s necessary to <code>Save changes</code> first with the option enabled so the <code>Reset settings</code> can be pressed.', 'woocommerce-jetpack' ),
+					'desc_tip'          => __( 'If enabled will also reset formula related settings on products when <code>Reset Settings</code> button is pressed.', 'e-commerce-jetpack' ) . '<br />' . __( 'It\'s necessary to <code>Save changes</code> first with the option enabled so the <code>Reset settings</code> can be pressed.', 'e-commerce-jetpack' ),
 				),
 			);
 			reset( $results );
@@ -324,7 +324,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 						$price = $math->evaluate( $the_formula );
 					} catch ( Exception $e ) {
 						if ( $output_errors ) {
-							echo '<p style="color:red;">' . __( 'Error in formula', 'woocommerce-jetpack' ) . ': ' . $e->getMessage() . '</p>';
+							echo '<p style="color:red;">' . __( 'Error in formula', 'e-commerce-jetpack' ) . ': ' . $e->getMessage() . '</p>';
 						}
 					}
 					if ( 'no_rounding' != $this->rounding ) {
@@ -417,7 +417,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 		}
 		?><div class="error"><p><?php
 			echo '<div class="message">'
-				. __( 'Booster: Free plugin\'s version is limited to only one price by formula product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of price by formula products.', 'woocommerce-jetpack' )
+				. __( 'Booster: Free plugin\'s version is limited to only one price by formula product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of price by formula products.', 'e-commerce-jetpack' )
 				. '</div>';
 		?></p></div><?php
 	}
@@ -451,7 +451,7 @@ class WCJ_Product_Price_by_Formula extends WCJ_Module {
 			if ( "yes" === wcj_get_option( 'wcj_product_price_by_formula_admin_scope', 'yes' ) ) {
 				$the_price = $this->change_price( $the_price, $the_product, true );
 			}
-			echo '<h4>' . __( 'Final Price Preview', 'woocommerce-jetpack' ) . '</h4>';
+			echo '<h4>' . __( 'Final Price Preview', 'e-commerce-jetpack' ) . '</h4>';
 			echo wc_price( $the_price );
 		}
 	}

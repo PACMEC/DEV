@@ -24,9 +24,9 @@ class WCJ_Currencies extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'currency';
-		$this->short_desc = __( 'Currencies', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add all world currencies and cryptocurrencies to your store; change currency symbol (Plus); add custom currencies (1 allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add all world currencies and cryptocurrencies to your store; change currency symbol; add custom currencies.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Currencies', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add all world currencies and cryptocurrencies to your store; change currency symbol (Plus); add custom currencies (1 allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add all world currencies and cryptocurrencies to your store; change currency symbol; add custom currencies.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-all-currencies';
 		parent::__construct();
 
@@ -65,38 +65,38 @@ class WCJ_Currencies extends WCJ_Module {
 	function get_additional_currencies() {
 		return array(
 			// Crypto
-			'AUR' => __( 'Auroracoin', 'woocommerce-jetpack' ),
-			'BCC' => __( 'BitConnect', 'woocommerce-jetpack' ),
-			'BCH' => __( 'Bitcoin Cash', 'woocommerce-jetpack' ),
-			'KOI' => __( 'Coinye', 'woocommerce-jetpack' ),
-			'XDN' => __( 'DigitalNote', 'woocommerce-jetpack' ),
-			'EMC' => __( 'Emercoin', 'woocommerce-jetpack' ),
-			'ETC' => __( 'Ethereum Classic', 'woocommerce-jetpack' ),
-			'ETH' => __( 'Ethereum', 'woocommerce-jetpack' ),
-			'FMC' => __( 'Freemasoncoin', 'woocommerce-jetpack' ),
-			'GRC' => __( 'Gridcoin', 'woocommerce-jetpack' ),
-			'IOT' => __( 'IOTA', 'woocommerce-jetpack' ),
-			'LTC' => __( 'Litecoin', 'woocommerce-jetpack' ),
-			'MZC' => __( 'MazaCoin', 'woocommerce-jetpack' ),
-			'XMR' => __( 'Monero', 'woocommerce-jetpack' ),
-			'NMC' => __( 'Namecoin', 'woocommerce-jetpack' ),
-			'XEM' => __( 'NEM', 'woocommerce-jetpack' ),
-			'NXT' => __( 'Nxt', 'woocommerce-jetpack' ),
-			'MSC' => __( 'Omni', 'woocommerce-jetpack' ),
-			'PPC' => __( 'Peercoin', 'woocommerce-jetpack' ),
-			'POT' => __( 'PotCoin', 'woocommerce-jetpack' ),
-			'XPM' => __( 'Primecoin', 'woocommerce-jetpack' ),
-			'XRP' => __( 'Ripple', 'woocommerce-jetpack' ),
-			'SIL' => __( 'SixEleven', 'woocommerce-jetpack' ),
-			'AMP' => __( 'Synereo AMP', 'woocommerce-jetpack' ),
-			'TIT' => __( 'Titcoin', 'woocommerce-jetpack' ),
-			'UBQ' => __( 'Ubiq', 'woocommerce-jetpack' ),
-			'VTC' => __( 'Vertcoin', 'woocommerce-jetpack' ),
-			'ZEC' => __( 'Zcash', 'woocommerce-jetpack' ),
+			'AUR' => __( 'Auroracoin', 'e-commerce-jetpack' ),
+			'BCC' => __( 'BitConnect', 'e-commerce-jetpack' ),
+			'BCH' => __( 'Bitcoin Cash', 'e-commerce-jetpack' ),
+			'KOI' => __( 'Coinye', 'e-commerce-jetpack' ),
+			'XDN' => __( 'DigitalNote', 'e-commerce-jetpack' ),
+			'EMC' => __( 'Emercoin', 'e-commerce-jetpack' ),
+			'ETC' => __( 'Ethereum Classic', 'e-commerce-jetpack' ),
+			'ETH' => __( 'Ethereum', 'e-commerce-jetpack' ),
+			'FMC' => __( 'Freemasoncoin', 'e-commerce-jetpack' ),
+			'GRC' => __( 'Gridcoin', 'e-commerce-jetpack' ),
+			'IOT' => __( 'IOTA', 'e-commerce-jetpack' ),
+			'LTC' => __( 'Litecoin', 'e-commerce-jetpack' ),
+			'MZC' => __( 'MazaCoin', 'e-commerce-jetpack' ),
+			'XMR' => __( 'Monero', 'e-commerce-jetpack' ),
+			'NMC' => __( 'Namecoin', 'e-commerce-jetpack' ),
+			'XEM' => __( 'NEM', 'e-commerce-jetpack' ),
+			'NXT' => __( 'Nxt', 'e-commerce-jetpack' ),
+			'MSC' => __( 'Omni', 'e-commerce-jetpack' ),
+			'PPC' => __( 'Peercoin', 'e-commerce-jetpack' ),
+			'POT' => __( 'PotCoin', 'e-commerce-jetpack' ),
+			'XPM' => __( 'Primecoin', 'e-commerce-jetpack' ),
+			'XRP' => __( 'Ripple', 'e-commerce-jetpack' ),
+			'SIL' => __( 'SixEleven', 'e-commerce-jetpack' ),
+			'AMP' => __( 'Synereo AMP', 'e-commerce-jetpack' ),
+			'TIT' => __( 'Titcoin', 'e-commerce-jetpack' ),
+			'UBQ' => __( 'Ubiq', 'e-commerce-jetpack' ),
+			'VTC' => __( 'Vertcoin', 'e-commerce-jetpack' ),
+			'ZEC' => __( 'Zcash', 'e-commerce-jetpack' ),
 			// Other
-			'XDR' => __( 'Special Drawing Rights', 'woocommerce-jetpack' ),
+			'XDR' => __( 'Special Drawing Rights', 'e-commerce-jetpack' ),
 			// Virtual
-			'MYC' => __( 'myCred', 'woocommerce-jetpack' ),
+			'MYC' => __( 'myCred', 'e-commerce-jetpack' ),
 		);
 	}
 
@@ -172,8 +172,8 @@ class WCJ_Currencies extends WCJ_Module {
 		foreach ( $settings as $section ) {
 			if ( isset( $section['id'] ) && 'woocommerce_currency_pos' == $section['id'] ) {
 				$updated_settings[] = array(
-					'name'     => __( 'Booster: Currency Symbol', 'woocommerce-jetpack' ),
-					'desc_tip' => __( 'This sets the currency symbol.', 'woocommerce-jetpack' ),
+					'name'     => __( 'Booster: Currency Symbol', 'e-commerce-jetpack' ),
+					'desc_tip' => __( 'This sets the currency symbol.', 'e-commerce-jetpack' ),
 					'id'       => 'wcj_currency_' . get_woocommerce_currency(),
 					'type'     => 'text',
 					'default'  => get_woocommerce_currency_symbol(),

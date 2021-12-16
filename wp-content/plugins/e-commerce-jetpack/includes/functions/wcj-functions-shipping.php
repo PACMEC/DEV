@@ -219,7 +219,7 @@ if ( ! function_exists( 'wcj_get_left_to_free_shipping' ) ) {
 					foreach ( $available_shipping_methods as $available_shipping_method ) {
 						$method_id = ( WCJ_IS_WC_VERSION_BELOW_3_2_0 ? $available_shipping_method->method_id : $available_shipping_method->get_method_id() );
 						if ( 'free_shipping' === $method_id ) {
-							return do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_reached', __( 'You have Free delivery', 'woocommerce-jetpack' ) ) );
+							return do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_reached', __( 'You have Free delivery', 'e-commerce-jetpack' ) ) );
 						}
 					}
 				}
@@ -276,13 +276,13 @@ if ( ! function_exists( 'wcj_get_left_to_free_shipping' ) ) {
 				}
 				// Final message
 				if ( $total >= $min_free_shipping_amount ) {
-					return do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_reached', __( 'You have Free delivery', 'woocommerce-jetpack' ) ) );
+					return do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_reached', __( 'You have Free delivery', 'e-commerce-jetpack' ) ) );
 				} else {
 					return wcj_handle_replacements( array(
 						'%left_to_free%'             => wc_price( ( $min_free_shipping_amount - $total ) * $multiply_by ),
 						'%free_shipping_min_amount%' => wc_price( ( $min_free_shipping_amount )          * $multiply_by ),
 						'%cart_total%'               => wc_price( ( $total )                             * $multiply_by ),
-					), ( '' == $content ? __( '%left_to_free% left to free shipping', 'woocommerce-jetpack' ) : $content ) );
+					), ( '' == $content ? __( '%left_to_free% left to free shipping', 'e-commerce-jetpack' ) : $content ) );
 				}
 			}
 		}

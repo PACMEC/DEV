@@ -20,9 +20,9 @@ class WCJ_Payment_Gateways extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways';
-		$this->short_desc = __( 'Custom Gateways', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add multiple custom payment gateways to WooCommerce (1 custom gateway allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add multiple custom payment gateways to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom Gateways', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add multiple custom payment gateways to WooCommerce (1 custom gateway allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add multiple custom payment gateways to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-custom-payment-gateways';
 		parent::__construct();
 
@@ -65,7 +65,7 @@ class WCJ_Payment_Gateways extends WCJ_Module {
 						$is_required_set = ( isset( $_POST[ $key . '_required' ] ) && 'yes' === $_POST[ $key . '_required' ] );
 						if ( $is_required_set && '' == $value ) {
 							$label = ( isset( $_POST[ 'label_for_' . $key ] ) ? $_POST[ 'label_for_' . $key ] : substr( $key, 16 ) );
-							$errors->add( 'booster', sprintf( __( '<strong>%s</strong> is a required field.', 'woocommerce-jetpack' ), $label ) );
+							$errors->add( 'booster', sprintf( __( '<strong>%s</strong> is a required field.', 'e-commerce-jetpack' ), $label ) );
 						}
 					}
 				}
@@ -89,7 +89,7 @@ class WCJ_Payment_Gateways extends WCJ_Module {
 			$priority = 'high';
 			add_meta_box(
 				'wc-jetpack-' . $this->id,
-				__( 'Booster', 'woocommerce-jetpack' ) . ': ' . sprintf( __( '%s Fields', 'woocommerce-jetpack' ), $payment_method_title ),
+				__( 'Booster', 'e-commerce-jetpack' ) . ': ' . sprintf( __( '%s Fields', 'e-commerce-jetpack' ), $payment_method_title ),
 				array( $this, 'create_custom_payment_gateways_fields_admin_order_meta_box' ),
 				$screen,
 				$context,
@@ -115,7 +115,7 @@ class WCJ_Payment_Gateways extends WCJ_Module {
 		$html .= wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'vertical', ) );
 		if ( 'yes' === wcj_get_option( 'wcj_custom_payment_gateways_input_fields_delete_button', 'no' ) ) {
 			$html .= '<p><a style="color:#a00;" href="' . add_query_arg( 'wcj_delete_payment_gateway_input_fields', $order_id ) . '"' . wcj_get_js_confirmation() . '>' .
-				__( 'Delete', 'woocommerce-jetpack' ) . '</a></p>';
+				__( 'Delete', 'e-commerce-jetpack' ) . '</a></p>';
 		}
 		echo $html;
 	}

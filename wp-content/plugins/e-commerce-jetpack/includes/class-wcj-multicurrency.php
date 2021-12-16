@@ -27,19 +27,19 @@ class WCJ_Multicurrency extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'multicurrency';
-		$this->short_desc = __( 'Multicurrency (Currency Switcher)', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add multiple currencies (currency switcher) to WooCommerce (2 currencies allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add multiple currencies (currency switcher) to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Multicurrency (Currency Switcher)', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add multiple currencies (currency switcher) to WooCommerce (2 currencies allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add multiple currencies (currency switcher) to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-multicurrency-currency-switcher';
-		$this->extra_desc = sprintf( __( 'After setting currencies in the Currencies Options section below, you can add switcher to the frontend with: %s', 'woocommerce-jetpack' ),
+		$this->extra_desc = sprintf( __( 'After setting currencies in the Currencies Options section below, you can add switcher to the frontend with: %s', 'e-commerce-jetpack' ),
 			'<ol>' .
-				'<li>' . sprintf( __( '<strong>Widget:</strong> "%s"', 'woocommerce-jetpack' ),
-					__( 'Booster - Multicurrency Switcher', 'woocommerce-jetpack' ) ) .
+				'<li>' . sprintf( __( '<strong>Widget:</strong> "%s"', 'e-commerce-jetpack' ),
+					__( 'Booster - Multicurrency Switcher', 'e-commerce-jetpack' ) ) .
 				'</li>' .
-				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'e-commerce-jetpack' ),
 					'<code>[wcj_currency_select_drop_down_list]</code>, <code>[wcj_currency_select_radio_list]</code>, <code>[wcj_currency_select_link_list]</code>' ) .
 				'</li>' .
-				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function, e.g.: %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function, e.g.: %s', 'e-commerce-jetpack' ),
 					'<code>do_shortcode()</code>',
 					'<code>echo&nbsp;do_shortcode(&nbsp;\'[wcj_currency_select_drop_down_list]\'&nbsp;);</code>' ) .
 				'</li>' .

@@ -69,8 +69,8 @@ class WCJ_Settings_Custom_Fields {
 		$tip                   = '';
 		$description           = '';
 		$exchange_rate_server  = wcj_get_currency_exchange_rate_server_name( $value['custom_attributes_button']['currency_from'], $value['custom_attributes_button']['currency_to'] );
-		$value_title           = sprintf( __( 'Grab raw %s rate from %s.', 'woocommerce-jetpack' ), $value['value'], $exchange_rate_server ) .
-			' ' . __( 'Doesn\'t apply rounding, offset etc.', 'woocommerce-jetpack' );
+		$value_title           = sprintf( __( 'Grab raw %s rate from %s.', 'e-commerce-jetpack' ), $value['value'], $exchange_rate_server ) .
+			' ' . __( 'Doesn\'t apply rounding, offset etc.', 'e-commerce-jetpack' );
 		?>
 		<tr valign="top">
 			<th scope="row" class="titledesc">
@@ -264,7 +264,7 @@ class WCJ_Settings_Custom_Fields {
 		?><tr valign="top">
 			<th scope="row" class="titledesc">
 				<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
-				<span class="woocommerce-help-tip" data-tip="<?php echo __( 'To use tools, module must be enabled.', 'woocommerce-jetpack' ); ?>"></span>
+				<span class="woocommerce-help-tip" data-tip="<?php echo __( 'To use tools, module must be enabled.', 'e-commerce-jetpack' ); ?>"></span>
 			</th>
 			<td class="forminp forminp-<?php echo sanitize_title( $value['type'] ) ?>">
 				<?php if ( isset( $_GET['section'] ) ) do_action( 'wcj_module_tools_' . $_GET['section'] ); ?>

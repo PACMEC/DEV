@@ -28,11 +28,11 @@ class WC_Email_WCJ_Custom extends WC_Email {
 		$this->id               = 'wcj_custom' . '_' . $id;
 		$this->customer_email   = ( '%customer%' === $this->get_option( 'recipient' ) );
 		$this->original_recipient = $this->get_option( 'recipient' );
-		$this->title            = wcj_get_option( 'wcj_emails_custom_emails_admin_title_' . $id, __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $id );
-		$this->description      = __( 'Custom emails are sent to the recipient list when selected triggers are called.', 'woocommerce-jetpack' );
+		$this->title            = wcj_get_option( 'wcj_emails_custom_emails_admin_title_' . $id, __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $id );
+		$this->description      = __( 'Custom emails are sent to the recipient list when selected triggers are called.', 'e-commerce-jetpack' );
 
 		$this->heading          = __( 'Custom Heading', 'woocommerce' );
-		$this->subject          = __( '[{site_title}] Custom Subject - Order ({order_number}) - {order_date}', 'woocommerce-jetpack' );
+		$this->subject          = __( '[{site_title}] Custom Subject - Order ({order_number}) - {order_date}', 'e-commerce-jetpack' );
 
 		// Triggers for this email
 		$trigger_hooks = $this->get_option( 'trigger' );
@@ -222,11 +222,11 @@ class WC_Email_WCJ_Custom extends WC_Email {
 		$status_triggers        = array();
 		$order_statuses         = wcj_get_order_statuses();
 		foreach ( $order_statuses as $slug => $name ) {
-			$new_order_triggers[ 'woocommerce_new_order_notification_' . $slug ] = sprintf( __( 'New order (%s)', 'woocommerce-jetpack' ), $name );
-			$status_triggers[ 'woocommerce_order_status_' . $slug . '_notification' ] = sprintf( __( 'Order status updated to %s', 'woocommerce-jetpack' ), $name );
+			$new_order_triggers[ 'woocommerce_new_order_notification_' . $slug ] = sprintf( __( 'New order (%s)', 'e-commerce-jetpack' ), $name );
+			$status_triggers[ 'woocommerce_order_status_' . $slug . '_notification' ] = sprintf( __( 'Order status updated to %s', 'e-commerce-jetpack' ), $name );
 			foreach ( $order_statuses as $slug2 => $name2 ) {
 				if ( $slug != $slug2 ) {
-					$status_change_triggers[ 'woocommerce_order_status_' . $slug . '_to_' . $slug2 . '_notification' ] = sprintf( __( 'Order status %s to %s', 'woocommerce-jetpack' ), $name, $name2 );
+					$status_change_triggers[ 'woocommerce_order_status_' . $slug . '_to_' . $slug2 . '_notification' ] = sprintf( __( 'Order status %s to %s', 'e-commerce-jetpack' ), $name, $name2 );
 				}
 			}
 		}
@@ -239,27 +239,27 @@ class WC_Email_WCJ_Custom extends WC_Email {
 				'default'       => 'no',
 			),
 			'trigger' => array(
-				'title'         => __( 'Trigger(s)', 'woocommerce-jetpack' ),
+				'title'         => __( 'Trigger(s)', 'e-commerce-jetpack' ),
 				'type'          => 'multiselect',
 				'placeholder'   => '',
 				'default'       => array(),
-				'desc_tip'      => __( 'Please note, that all new orders in WooCommerce by default are created with Pending Payment status. If you want to change the default order status - you can use Booster\'s "Order Custom Statuses" module (in WooCommerce > Settings > Booster > Shipping & Orders > Order Custom Statuses).', 'woocommerce-jetpack' ),
-				'description'   => __( 'Hold the <code>ctrl</code> key and select the options if you want to trigger mail on more than one option.', 'woocommerce-jetpack' ),
+				'desc_tip'      => __( 'Please note, that all new orders in WooCommerce by default are created with Pending Payment status. If you want to change the default order status - you can use Booster\'s "Order Custom Statuses" module (in WooCommerce > Settings > Booster > Shipping & Orders > Order Custom Statuses).', 'e-commerce-jetpack' ),
+				'description'   => __( 'Hold the <code>ctrl</code> key and select the options if you want to trigger mail on more than one option.', 'e-commerce-jetpack' ),
 				'options'       => array_merge(
 					array(
-						'woocommerce_new_order_notification_wcj_any_status'           => __( 'New order (Any status)', 'woocommerce-jetpack' ),
+						'woocommerce_new_order_notification_wcj_any_status'           => __( 'New order (Any status)', 'e-commerce-jetpack' ),
 					),
 					$new_order_triggers,
 					$status_triggers,
 					array(
-						'woocommerce_reset_password_notification'                     => __( 'Reset password notification', 'woocommerce-jetpack' ),
-						'woocommerce_order_fully_refunded_notification'               => __( 'Order fully refunded notification', 'woocommerce-jetpack' ),
-						'woocommerce_order_partially_refunded_notification'           => __( 'Order partially refunded notification', 'woocommerce-jetpack' ),
-						'woocommerce_new_customer_note_notification'                  => __( 'New customer note notification', 'woocommerce-jetpack' ),
-						'woocommerce_low_stock_notification'                          => __( 'Low stock notification', 'woocommerce-jetpack' ),
-						'woocommerce_no_stock_notification'                           => __( 'No stock notification', 'woocommerce-jetpack' ),
-						'woocommerce_product_on_backorder_notification'               => __( 'Product on backorder notification', 'woocommerce-jetpack' ),
-						'woocommerce_created_customer_notification'                   => __( 'Created customer notification', 'woocommerce-jetpack' ),
+						'woocommerce_reset_password_notification'                     => __( 'Reset password notification', 'e-commerce-jetpack' ),
+						'woocommerce_order_fully_refunded_notification'               => __( 'Order fully refunded notification', 'e-commerce-jetpack' ),
+						'woocommerce_order_partially_refunded_notification'           => __( 'Order partially refunded notification', 'e-commerce-jetpack' ),
+						'woocommerce_new_customer_note_notification'                  => __( 'New customer note notification', 'e-commerce-jetpack' ),
+						'woocommerce_low_stock_notification'                          => __( 'Low stock notification', 'e-commerce-jetpack' ),
+						'woocommerce_no_stock_notification'                           => __( 'No stock notification', 'e-commerce-jetpack' ),
+						'woocommerce_product_on_backorder_notification'               => __( 'Product on backorder notification', 'e-commerce-jetpack' ),
+						'woocommerce_created_customer_notification'                   => __( 'Created customer notification', 'e-commerce-jetpack' ),
 					),
 					$status_change_triggers
 				),
@@ -269,7 +269,7 @@ class WC_Email_WCJ_Custom extends WC_Email {
 				'title'         => __( 'Recipient(s)', 'woocommerce' ),
 				'type'          => 'text',
 				'description'   => sprintf( __( 'Enter recipients (comma separated) for this email. Defaults to <code>%s</code>.', 'woocommerce' ), esc_attr( get_option( 'admin_email' ) ) ) . ' ' .
-					__( 'Or enter <code>%customer%</code> to send to customer billing email.', 'woocommerce-jetpack' ),
+					__( 'Or enter <code>%customer%</code> to send to customer billing email.', 'e-commerce-jetpack' ),
 				'placeholder'   => '',
 				'default'       => '',
 				'css'           => 'width:100%;',
@@ -297,7 +297,7 @@ class WC_Email_WCJ_Custom extends WC_Email {
 			),
 			'heading' => array(
 				'type'          => 'text',
-				'desc_tip'      =>__( 'WC Email Heading. Used only if "Wrap in WC Email Template" is enabled and only for HTML templates.', 'woocommerce-jetpack' ),
+				'desc_tip'      =>__( 'WC Email Heading. Used only if "Wrap in WC Email Template" is enabled and only for HTML templates.', 'e-commerce-jetpack' ),
 				'description'   => sprintf( __( 'This controls the main heading contained within the email notification. Leave blank to use the default heading: <code>%s</code>.', 'woocommerce' ), $this->heading ),
 				'placeholder'   => '',
 				'default'       => '',

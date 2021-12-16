@@ -23,8 +23,8 @@ class WCJ_Payment_Gateways_Per_Category extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways_per_category';
-		$this->short_desc = __( 'Gateways per Product or Category', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Show payment gateway only if there is selected product or product category in cart.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Gateways per Product or Category', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Show payment gateway only if there is selected product or product category in cart.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-payment-gateways-per-product-or-category';
 		parent::__construct();
 

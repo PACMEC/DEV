@@ -23,33 +23,33 @@ class WCJ_Export_Import extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'export';
-		$this->short_desc = __( 'Export', 'woocommerce-jetpack' );
-		$this->desc       = __( 'WooCommerce export tools. Additional export fields (1 field allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = sprintf( __( 'WooCommerce export tools. Check and use the shortcodes from <a href="%s" target=\'blank\'>here</a>', 'woocommerce-jetpack' ), 'https://booster.io/category/shortcodes/' );
+		$this->short_desc = __( 'Export', 'e-commerce-jetpack' );
+		$this->desc       = __( 'WooCommerce export tools. Additional export fields (1 field allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = sprintf( __( 'WooCommerce export tools. Check and use the shortcodes from <a href="%s" target=\'blank\'>here</a>', 'e-commerce-jetpack' ), 'https://booster.io/category/shortcodes/' );
 		$this->link_slug  = 'woocommerce-export-tools';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'export_customers' => array(
-				'title'     => __( 'Export Customers', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Export Customers.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Export Customers', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Export Customers.', 'e-commerce-jetpack' ),
 			),
 			'export_customers_from_orders' => array(
-				'title'     => __( 'Export Customers from Orders', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Export Customers (extracted from orders).', 'woocommerce-jetpack' ) . ' ' .
-					__( 'Customers are identified by billing email.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Export Customers from Orders', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Export Customers (extracted from orders).', 'e-commerce-jetpack' ) . ' ' .
+					__( 'Customers are identified by billing email.', 'e-commerce-jetpack' ),
 			),
 			'export_orders' => array(
-				'title'     => __( 'Export Orders', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Export Orders.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Export Orders', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Export Orders.', 'e-commerce-jetpack' ),
 			),
 			'export_orders_items' => array(
-				'title'     => __( 'Export Orders Items', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Export Orders Items.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Export Orders Items', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Export Orders Items.', 'e-commerce-jetpack' ),
 			),
 			'export_products' => array(
-				'title'     => __( 'Export Products', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Export Products.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Export Products', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Export Products.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -220,13 +220,13 @@ class WCJ_Export_Import extends WCJ_Module {
 		switch ( $tool_id ) {
 			case 'orders':
 				$fields = array(
-					'wcj_filter_by_order_billing_country' => __( 'Filter by Billing Country', 'woocommerce-jetpack' ),
-					'wcj_filter_by_product_title'         => __( 'Filter by Product Title', 'woocommerce-jetpack' ),
+					'wcj_filter_by_order_billing_country' => __( 'Filter by Billing Country', 'e-commerce-jetpack' ),
+					'wcj_filter_by_product_title'         => __( 'Filter by Product Title', 'e-commerce-jetpack' ),
 				);
 				break;
 			case 'orders_items':
 				$fields = array(
-					'wcj_filter_by_order_billing_country' => __( 'Filter by Billing Country', 'woocommerce-jetpack' ),
+					'wcj_filter_by_order_billing_country' => __( 'Filter by Billing Country', 'e-commerce-jetpack' ),
 				);
 				break;
 		}
@@ -240,7 +240,7 @@ class WCJ_Export_Import extends WCJ_Module {
 				);
 			}
 			$data[] = array(
-				'<button class="button-primary" type="submit" name="wcj_export_filter" value="' . $tool_id . '">' . __( 'Filter', 'woocommerce-jetpack' ) . '</button>',
+				'<button class="button-primary" type="submit" name="wcj_export_filter" value="' . $tool_id . '">' . __( 'Filter', 'e-commerce-jetpack' ) . '</button>',
 				'',
 			);
 			return wcj_get_table_html( $data, array( 'table_class' => 'widefat', 'table_style' => 'width:50%;min-width:300px;', 'table_heading_type' => 'vertical' ) );
@@ -260,7 +260,7 @@ class WCJ_Export_Import extends WCJ_Module {
 		$current_end_date   = ( isset( $_GET['end_date'] )   ? $_GET['end_date']   : '' );
 		$predefined_ranges = array();
 		$predefined_ranges[] = '<a href="' . add_query_arg( 'range', 'all_time', remove_query_arg( array( 'start_date', 'end_date' ) ) ) . '">' .
-			__( 'All time', 'woocommerce-jetpack' ) . '</a>';
+			__( 'All time', 'e-commerce-jetpack' ) . '</a>';
 		foreach ( array_merge( wcj_get_reports_standard_ranges(), wcj_get_reports_custom_ranges() ) as $range_id => $range_data ) {
 			$link = add_query_arg( array(
 				'start_date' => $range_data['start_date'],
@@ -274,12 +274,12 @@ class WCJ_Export_Import extends WCJ_Module {
 		$date_input_fields = '<form method="get" action="">' .
 			'<input type="hidden" name="page" value="wcj-tools">' .
 			'<input type="hidden" name="tab" value="export_' . $tool_id . '">' .
-			'<strong>' . __( 'Custom:', 'woocommerce-jetpack' ) . '</strong>' . ' ' .
+			'<strong>' . __( 'Custom:', 'e-commerce-jetpack' ) . '</strong>' . ' ' .
 			'<input name="start_date" id="start_date" type="text" display="date"' . $dateformat . ' value="' . $current_start_date . '">' .
 			'<strong>' . ' - ' . '</strong>' .
 			'<input name="end_date" id="end_date" type="text" display="date"' . $dateformat . ' value="' . $current_end_date . '">' .
 			' ' .
-			'<button class="button-primary" name="range" id="range" type="submit" value="custom">' . __( 'Go', 'woocommerce-jetpack' ) . '</button>' .
+			'<button class="button-primary" name="range" id="range" type="submit" value="custom">' . __( 'Go', 'e-commerce-jetpack' ) . '</button>' .
 		'</form>';
 		return $predefined_ranges . '<br>' . $date_input_fields;
 	}
@@ -299,12 +299,12 @@ class WCJ_Export_Import extends WCJ_Module {
 		echo '<form method="post" action="">';
 		echo '<p>' . $this->export_filter_fields( $tool_id ) . '</p>';
 		echo '<p>';
-		echo '<button class="button-primary" type="submit" name="wcj_export" value="' . $tool_id . '">' . __( 'Download CSV', 'woocommerce-jetpack' ) . '</button>';
+		echo '<button class="button-primary" type="submit" name="wcj_export" value="' . $tool_id . '">' . __( 'Download CSV', 'e-commerce-jetpack' ) . '</button>';
 		echo ' ';
 		echo '<button class="button-primary" type="submit" name="wcj_export_xml" value="' . $tool_id . '">' .
-			__( 'Download XML', 'woocommerce-jetpack' ) . '</button>';
+			__( 'Download XML', 'e-commerce-jetpack' ) . '</button>';
 		echo '<button style="float:right;margin-right:10px;" class="button-primary" type="submit" name="wcj_export_filter" value="' . $tool_id . '">' .
-			__( 'Filter by All Fields', 'woocommerce-jetpack' ) . '</button>';
+			__( 'Filter by All Fields', 'e-commerce-jetpack' ) . '</button>';
 		echo '<input style="float:right;margin-right:10px;" type="text" name="wcj_export_filter_all_columns" value="' .
 			( isset( $_POST['wcj_export_filter_all_columns'] ) ? $_POST['wcj_export_filter_all_columns'] : '' ) . '">';
 		echo '</p>';

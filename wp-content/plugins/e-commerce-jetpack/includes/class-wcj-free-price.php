@@ -23,9 +23,9 @@ class WCJ_Free_Price extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'free_price';
-		$this->short_desc = __( 'Free Price Labels', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set free price labels (Variable products allowed in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set free price labels.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Free Price Labels', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set free price labels (Variable products allowed in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set free price labels.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-free-price-labels';
 		parent::__construct();
 

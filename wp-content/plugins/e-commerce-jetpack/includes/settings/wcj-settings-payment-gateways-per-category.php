@@ -16,14 +16,14 @@ $products                    = ( $is_multiselect_products ? wcj_get_products( ar
 $available_gateways          = WC()->payment_gateways->payment_gateways();
 $settings = array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_gateways_per_category_general_options',
 	),
 	array(
-		'title'    => __( 'Use Variations', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Will use variations instead of main product for variable type products.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Use Variations', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Will use variations instead of main product for variable type products.', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_gateways_per_category_use_variations',
 		'default'  => 'no',
@@ -33,7 +33,7 @@ $settings = array(
 		'id'       => 'wcj_gateways_per_category_general_options',
 	),
 	array(
-		'title'    => __( 'Gateways', 'woocommerce-jetpack' ),
+		'title'    => __( 'Gateways', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_gateways_per_category_options',
 	),
@@ -46,8 +46,8 @@ foreach ( $available_gateways as $gateway_id => $gateway ) {
 	$settings = array_merge( $settings, array(
 		array(
 			'title'    => $gateway->title,
-			'desc'     => __( 'Product Categories - Include', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Show gateway only if there is product of selected category in cart. Leave blank to disable the option.', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Product Categories - Include', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Show gateway only if there is product of selected category in cart. Leave blank to disable the option.', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_gateways_per_category_' . $gateway_id,
 			'default'  => '',
 			'type'     => 'multiselect',
@@ -57,8 +57,8 @@ foreach ( $available_gateways as $gateway_id => $gateway ) {
 		),
 		array(
 			'title'    => '',
-			'desc'     => __( 'Product Categories - Exclude', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Hide gateway if there is product of selected category in cart. Leave blank to disable the option.', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Product Categories - Exclude', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Hide gateway if there is product of selected category in cart. Leave blank to disable the option.', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_gateways_per_category_excl_' . $gateway_id,
 			'default'  => '',
 			'type'     => 'multiselect',
@@ -69,8 +69,8 @@ foreach ( $available_gateways as $gateway_id => $gateway ) {
 		wcj_get_settings_as_multiselect_or_text(
 			array(
 				'title'    => '',
-				'desc'     => __( 'Products - Include', 'woocommerce-jetpack' ) . '<br>' . apply_filters( 'booster_message', '', 'desc' ),
-				'desc_tip' => __( 'Show gateway only if there is selected products in cart. Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Products - Include', 'e-commerce-jetpack' ) . '<br>' . apply_filters( 'booster_message', '', 'desc' ),
+				'desc_tip' => __( 'Show gateway only if there is selected products in cart. Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_gateways_per_products_' . $gateway_id,
 				'default'  => '',
 				'css'      => 'width: 450px;',
@@ -82,8 +82,8 @@ foreach ( $available_gateways as $gateway_id => $gateway ) {
 		wcj_get_settings_as_multiselect_or_text(
 			array(
 				'title'    => '',
-				'desc'     => __( 'Products - Exclude', 'woocommerce-jetpack' ) . '<br>' . apply_filters( 'booster_message', '', 'desc' ),
-				'desc_tip' => __( 'Hide gateway if there is selected products in cart. Leave blank to disable the option.', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Products - Exclude', 'e-commerce-jetpack' ) . '<br>' . apply_filters( 'booster_message', '', 'desc' ),
+				'desc_tip' => __( 'Hide gateway if there is selected products in cart. Leave blank to disable the option.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_gateways_per_products_excl_' . $gateway_id,
 				'default'  => '',
 				'css'      => 'width: 450px;',

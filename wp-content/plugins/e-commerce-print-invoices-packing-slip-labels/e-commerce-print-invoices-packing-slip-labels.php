@@ -1,42 +1,31 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- *
- * @link              https://www.webtoffee.com/
- * @since             2.5.0
- * @package           Wf_Woocommerce_Packing_List
  *
  * @wordpress-plugin
- * Plugin Name:       WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels
- * Plugin URI:        https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/
- * Description:       Prints Packing List,Invoice,Delivery Note & Shipping Label.
- * Version:           2.8.6
- * Author:            WebToffee
- * Author URI:        https://www.webtoffee.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       print-invoices-packing-slip-labels-for-woocommerce
+ * Plugin Name:       E-Commerce - Facturas en PDF de su tienda, albaranes, notas de entrega y etiquetas de envío.
+ * Plugin URI:        #
+ * Description:       Imprime la lista de empaque, la factura, la nota de entrega y la etiqueta de envío.
+ * Version:           1.0.0
+ * Author:            PACMEC
+ * Author URI:        #
+ * Text Domain:       e-commerce-print-invoices-packing-slip-labels
  * Domain Path:       /languages
- * WC tested up to:   5.9
  */
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-
 include_once(ABSPATH.'wp-admin/includes/plugin.php');
 
-
-$current_plugin_name='WooCommerce PDF Invoices, Packing Slips, Delivery Notes & Shipping Labels (Basic)';
+$current_plugin_name='E-Commerce - Facturas en PDF de su tienda, albaranes, notas de entrega y etiquetas de envío.';
 $wt_pklist_no_plugin_conflict=true;
 
 //check if premium version is there
 if(is_plugin_active('wt-woocommerce-packing-list/wf-woocommerce-packing-list.php')) 
 {
-    $active_plugin_name='WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels (Pro)';
+    $active_plugin_name='E-Commerce - Facturas en PDF de su tienda, albaranes, notas de entrega y etiquetas de envío.';
     $wt_pklist_no_plugin_conflict=false;
 
 }else if (is_plugin_active('shipping-labels-for-woo/wf-woocommerce-packing-list.php'))

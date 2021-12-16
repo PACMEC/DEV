@@ -22,24 +22,24 @@ $shipping_classes_data  = ( $use_shipping_classes ? wcj_get_shipping_classes() :
 $settings = array();
 $settings = array_merge( $settings, array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_shipping_time_general_options',
 	),
 	array(
-		'title'    => __( 'Use Shipping Instances', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Use Shipping Instances', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_shipping_time_use_shipping_instance',
 		'default'  => 'no',
 	),
 	array(
-		'title'    => __( 'Use Product Shipping Classes', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you want to set options for each shipping class separately.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ) . ' ' . apply_filters( 'booster_message', '', 'desc' ),
+		'title'    => __( 'Use Product Shipping Classes', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you want to set options for each shipping class separately.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ) . ' ' . apply_filters( 'booster_message', '', 'desc' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_shipping_time_use_shipping_classes',
 		'default'  => 'no',
@@ -52,8 +52,8 @@ $settings = array_merge( $settings, array(
 ) );
 $settings = array_merge( $settings, array(
 	array(
-		'title'    => __( 'Shipping Time Options', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Set estimated shipping time in <strong>days</strong>.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Shipping Time Options', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Set estimated shipping time in <strong>days</strong>.', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_shipping_time_options',
 	),

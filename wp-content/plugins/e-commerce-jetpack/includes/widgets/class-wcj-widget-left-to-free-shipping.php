@@ -24,9 +24,9 @@ class WCJ_Widget_Left_to_Free_Shipping extends WCJ_Widget {
 			case 'id_base':
 				return 'wcj_widget_left_to_free_shipping';
 			case 'name':
-				return __( 'Booster - Left to Free Shipping', 'woocommerce-jetpack' );
+				return __( 'Booster - Left to Free Shipping', 'e-commerce-jetpack' );
 			case 'description':
-				return __( 'Booster: Left to Free Shipping Widget', 'woocommerce-jetpack' );
+				return __( 'Booster: Left to Free Shipping Widget', 'e-commerce-jetpack' );
 		}
 	}
 
@@ -49,16 +49,16 @@ class WCJ_Widget_Left_to_Free_Shipping extends WCJ_Widget {
 	function get_options() {
 		return array(
 			array(
-				'title'    => __( 'Title', 'woocommerce-jetpack' ),
+				'title'    => __( 'Title', 'e-commerce-jetpack' ),
 				'id'       => 'title',
-				'default'  => '', // __( 'Left to Free Shipping', 'woocommerce-jetpack' ),
+				'default'  => '', // __( 'Left to Free Shipping', 'e-commerce-jetpack' ),
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Content', 'woocommerce-jetpack' ),
+				'title'    => __( 'Content', 'e-commerce-jetpack' ),
 				'id'       => 'content',
-				'default'  => __( '%left_to_free% left to free shipping', 'woocommerce-jetpack' ),
+				'default'  => __( '%left_to_free% left to free shipping', 'e-commerce-jetpack' ),
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),

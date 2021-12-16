@@ -24,9 +24,9 @@ class WCJ_Widget_Country_Switcher extends WCJ_Widget {
 			case 'id_base':
 				return 'wcj_widget_country_switcher';
 			case 'name':
-				return __( 'Booster - Country Switcher', 'woocommerce-jetpack' );
+				return __( 'Booster - Country Switcher', 'e-commerce-jetpack' );
 			case 'description':
-				return __( 'Booster: Country Switcher Widget', 'woocommerce-jetpack' );
+				return __( 'Booster: Country Switcher Widget', 'e-commerce-jetpack' );
 		}
 	}
 
@@ -38,9 +38,9 @@ class WCJ_Widget_Country_Switcher extends WCJ_Widget {
 	 */
 	function get_content( $instance ) {
 		if ( ! wcj_is_module_enabled( 'price_by_country' ) ) {
-			return __( 'Prices and Currencies by Country module not enabled!', 'woocommerce-jetpack' );
+			return __( 'Prices and Currencies by Country module not enabled!', 'e-commerce-jetpack' );
 		} elseif ( 'by_ip' === wcj_get_option( 'wcj_price_by_country_customer_country_detection_method', 'by_ip' ) ) {
-			return __( 'Customer Country Detection Method must include "by user selection"!', 'woocommerce-jetpack' );
+			return __( 'Customer Country Detection Method must include "by user selection"!', 'e-commerce-jetpack' );
 		} else {
 			if ( ! isset( $instance['replace_with_currency'] ) ) {
 				$instance['replace_with_currency'] = 'no';
@@ -61,39 +61,39 @@ class WCJ_Widget_Country_Switcher extends WCJ_Widget {
 	function get_options() {
 		return array(
 			array(
-				'title'    => __( 'Title', 'woocommerce-jetpack' ),
+				'title'    => __( 'Title', 'e-commerce-jetpack' ),
 				'id'       => 'title',
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Countries', 'woocommerce-jetpack' ),
+				'title'    => __( 'Countries', 'e-commerce-jetpack' ),
 				'id'       => 'countries',
 				'default'  => '',
 				'type'     => 'text',
 				'class'    => 'widefat',
 			),
 			array(
-				'title'    => __( 'Replace with currency', 'woocommerce-jetpack' ),
+				'title'    => __( 'Replace with currency', 'e-commerce-jetpack' ),
 				'id'       => 'replace_with_currency',
 				'default'  => 'no',
 				'type'     => 'select',
 				'class'    => 'widefat',
 				'options'  => array(
-					'no'  => __( 'No', 'woocommerce-jetpack' ),
-					'yes' => __( 'Yes', 'woocommerce-jetpack' ),
+					'no'  => __( 'No', 'e-commerce-jetpack' ),
+					'yes' => __( 'Yes', 'e-commerce-jetpack' ),
 				),
 			),
 			array(
-				'title'    => __( 'Form Method', 'woocommerce-jetpack' ),
-				'desc'     => '* ' . __( 'HTML form method for "Drop down" and "Radio list" types.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Form Method', 'e-commerce-jetpack' ),
+				'desc'     => '* ' . __( 'HTML form method for "Drop down" and "Radio list" types.', 'e-commerce-jetpack' ),
 				'id'       => 'form_method',
 				'default'  => 'post',
 				'type'     => 'select',
 				'options'  => array(
-					'post'  => __( 'Post', 'woocommerce-jetpack' ),
-					'get'   => __( 'Get', 'woocommerce-jetpack' ),
+					'post'  => __( 'Post', 'e-commerce-jetpack' ),
+					'get'   => __( 'Get', 'e-commerce-jetpack' ),
 				),
 				'class'    => 'widefat',
 			),

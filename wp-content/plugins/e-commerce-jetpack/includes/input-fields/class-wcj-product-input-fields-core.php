@@ -165,7 +165,7 @@ class WCJ_Product_Input_Fields_Core {
 	function add_local_product_input_fields_meta_box_to_product_edit() {
 		add_meta_box(
 			'wc-jetpack-product-input-fields',
-			__( 'Booster: Product Input Fields', 'woocommerce-jetpack' ),
+			__( 'Booster: Product Input Fields', 'e-commerce-jetpack' ),
 			array( $this, 'create_local_product_input_fields_meta_box' ),
 			'product',
 			'normal',
@@ -182,7 +182,7 @@ class WCJ_Product_Input_Fields_Core {
 	function create_local_product_input_fields_meta_box() {
 
 		$meta_box_id   = 'product_input_fields';
-		$meta_box_desc =  __( 'Product Input Fields', 'woocommerce-jetpack' );
+		$meta_box_desc =  __( 'Product Input Fields', 'e-commerce-jetpack' );
 
 		$options = $this->get_options();
 
@@ -204,13 +204,13 @@ class WCJ_Product_Input_Fields_Core {
 		$html .= '<table>';
 		$html .= '<tr>';
 		$html .= '<th>';
-		$html .= __( 'Total number of ', 'woocommerce-jetpack' ) . $meta_box_desc;
+		$html .= __( 'Total number of ', 'e-commerce-jetpack' ) . $meta_box_desc;
 		$html .= '</th>';
 		$html .= '<td>';
 		$html .= '<input type="number" id="' . $option_name . '" name="' . $option_name . '" value="' . $total_number . '" ' . $is_disabled . '>';
 		$html .= '</td>';
 		$html .= '<td>';
-		$html .= __( 'Click "Update" product after you change this number.', 'woocommerce-jetpack' ) . '<br>' . $is_disabled_message;
+		$html .= __( 'Click "Update" product after you change this number.', 'e-commerce-jetpack' ) . '<br>' . $is_disabled_message;
 		$html .= '</td>';
 		$html .= '</td>';
 		$html .= '</tr>';
@@ -220,7 +220,7 @@ class WCJ_Product_Input_Fields_Core {
 		for ( $i = 1; $i <= $total_number; $i++ ) {
 			$data = array();
 			$html .= '<hr>';
-			$html .= '<h3>' . __( 'Product Input Field', 'woocommerce-jetpack' ) . ' #' . $i . '</h3>';
+			$html .= '<h3>' . __( 'Product Input Field', 'e-commerce-jetpack' ) . ' #' . $i . '</h3>';
 			foreach ( $options as $option ) {
 				$option_id    = $option['id'] . $i;
 				$option_value = $this->get_value( $option_id, $current_post_id, $option['default'] );
@@ -395,7 +395,7 @@ class WCJ_Product_Input_Fields_Core {
 			}
 			if ( '' != $value ) {
 				if ( '' == ( $nice_name = $this->get_value( 'wcj_product_input_fields_title_' . $this->scope . '_' . $i, $_product_id, '' ) ) ) {
-					$nice_name = __( 'Product Input Field', 'woocommerce-jetpack' ) . ' (' . $this->scope . ') #' . $i;
+					$nice_name = __( 'Product Input Field', 'e-commerce-jetpack' ) . ' (' . $this->scope . ') #' . $i;
 				}
 				echo '<tr><th>' . $nice_name . ':</th><td>' . $value . '</td></tr>';
 			}
@@ -466,7 +466,7 @@ class WCJ_Product_Input_Fields_Core {
 						$file_type = '.' . pathinfo( $_FILES[ $field_name ]['name'], PATHINFO_EXTENSION );
 						if ( ! in_array( $file_type, $file_accept ) ) {
 							$passed = false;
-							wc_add_notice( __( 'Wrong file type!', 'woocommerce-jetpack' ), 'error' );
+							wc_add_notice( __( 'Wrong file type!', 'e-commerce-jetpack' ), 'error' );
 						}
 					}
 				}
@@ -474,7 +474,7 @@ class WCJ_Product_Input_Fields_Core {
 				if ( ( $max_file_size = $this->get_value( 'wcj_product_input_fields_type_file_max_size_' . $this->scope . '_' . $i, $product_id, '' ) ) > 0 ) {
 					if ( $_FILES[ $field_name ]['size'] > $max_file_size ) {
 						$passed = false;
-						wc_add_notice( __( 'File is too big!', 'woocommerce-jetpack' ), 'error' );
+						wc_add_notice( __( 'File is too big!', 'e-commerce-jetpack' ), 'error' );
 					}
 				}
 			}

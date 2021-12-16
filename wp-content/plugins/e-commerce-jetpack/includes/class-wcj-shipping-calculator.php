@@ -20,9 +20,9 @@ class WCJ_Shipping_Calculator extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'shipping_calculator';
-		$this->short_desc = __( 'Shipping Calculator', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize WooCommerce shipping calculator on cart page. Calculate shipping label (Plus). Update totals label (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Customize WooCommerce shipping calculator on cart page.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Calculator', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize WooCommerce shipping calculator on cart page. Calculate shipping label (Plus). Update totals label (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Customize WooCommerce shipping calculator on cart page.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-calculator-customizer';
 		parent::__construct();
 

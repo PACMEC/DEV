@@ -29,9 +29,9 @@ class WCJ_Payment_Gateways_Min_Max extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways_min_max';
-		$this->short_desc = __( 'Gateways Min/Max Amounts', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add min/max amounts for payment gateways to show up (Only Direct bank transfer allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add min/max amounts for payment gateways to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Gateways Min/Max Amounts', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add min/max amounts for payment gateways to show up (Only Direct bank transfer allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add min/max amounts for payment gateways to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-payment-gateways-min-max-amounts';
 		parent::__construct();
 
@@ -85,8 +85,8 @@ class WCJ_Payment_Gateways_Min_Max extends WCJ_Module {
 			$total_in_cart += WC()->cart->shipping_total;
 		}
 		$notices              = array();
-		$notices_template_min = wcj_get_option( 'wcj_payment_gateways_min_max_notices_template_min', __( 'Minimum amount for %gateway_title% is %min_amount%', 'woocommerce-jetpack' ) );
-		$notices_template_max = wcj_get_option( 'wcj_payment_gateways_min_max_notices_template_max', __( 'Maximum amount for %gateway_title% is %max_amount%', 'woocommerce-jetpack' ) );
+		$notices_template_min = wcj_get_option( 'wcj_payment_gateways_min_max_notices_template_min', __( 'Minimum amount for %gateway_title% is %min_amount%', 'e-commerce-jetpack' ) );
+		$notices_template_max = wcj_get_option( 'wcj_payment_gateways_min_max_notices_template_max', __( 'Maximum amount for %gateway_title% is %max_amount%', 'e-commerce-jetpack' ) );
 		foreach ( $_available_gateways as $key => $gateway ) {
 			$min = wcj_get_option( 'wcj_payment_gateways_min_' . $key, 0 );
 			$max = wcj_get_option( 'wcj_payment_gateways_max_' . $key, 0 );

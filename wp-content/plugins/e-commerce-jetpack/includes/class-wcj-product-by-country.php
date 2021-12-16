@@ -22,13 +22,13 @@ class WCJ_Product_By_Country extends WCJ_Module_Product_By_Condition {
 	function __construct() {
 
 		$this->id         = 'product_by_country';
-		$this->short_desc = __( 'Product Visibility by Country', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Display products by customer\'s country. User Country Selection Method (Plus); Admin country list options (Plus); Visibility method options (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Display products by customer\'s country.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Visibility by Country', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Display products by customer\'s country. User Country Selection Method (Plus); Admin country list options (Plus); Visibility method options (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Display products by customer\'s country.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-visibility-by-country';
-		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Visibility by Country" meta box to each product\'s edit page.', 'woocommerce-jetpack' );
+		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Visibility by Country" meta box to each product\'s edit page.', 'e-commerce-jetpack' );
 
-		$this->title      = __( 'Countries', 'woocommerce-jetpack' );
+		$this->title      = __( 'Countries', 'e-commerce-jetpack' );
 
 		parent::__construct();
 
@@ -145,49 +145,49 @@ class WCJ_Product_By_Country extends WCJ_Module_Product_By_Condition {
 	function maybe_add_extra_settings() {
 		return array(
 			array(
-				'title'    => __( 'User Country Selection Options', 'woocommerce-jetpack' ),
+				'title'    => __( 'User Country Selection Options', 'e-commerce-jetpack' ),
 				'type'     => 'title',
 				'id'       => 'wcj_product_by_country_selection_options',
 			),
 			array(
-				'title'    => __( 'User Country Selection Method', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Possible values: "Automatically by IP" or "Manually".', 'woocommerce-jetpack' ),
+				'title'    => __( 'User Country Selection Method', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Possible values: "Automatically by IP" or "Manually".', 'e-commerce-jetpack' ),
 				'desc'     => sprintf(
-					'<p>' . __( 'If "Manually" option is selected, you can add country selection drop box to frontend with "%s" widget or %s shortcode.', 'woocommerce-jetpack' ),
-						__( 'Booster - Selector', 'woocommerce-jetpack' ),
+					'<p>' . __( 'If "Manually" option is selected, you can add country selection drop box to frontend with "%s" widget or %s shortcode.', 'e-commerce-jetpack' ),
+						__( 'Booster - Selector', 'e-commerce-jetpack' ),
 						'<code>' . '[wcj_selector selector_type="country"]' . '</code>' ) .
 					'<br>' . apply_filters( 'booster_message', '', 'desc' ) . '</p>',
 				'id'       => 'wcj_product_by_country_selection_method',
 				'default'  => 'by_ip',
 				'type'     => 'select',
 				'options'  => array(
-					'by_ip'  => __( 'Automatically by IP', 'woocommerce-jetpack' ),
-					'manual' => __( 'Manually', 'woocommerce-jetpack' ),
+					'by_ip'  => __( 'Automatically by IP', 'e-commerce-jetpack' ),
+					'manual' => __( 'Manually', 'e-commerce-jetpack' ),
 				),
 				'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 				'css'      => 'min-width:250px;',
 			),
 			array(
-				'title'    => __( 'Country List', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'This option sets which countries will be added to the list in [wcj_selector selector_type="country"] shortcode. Possible values: "All countries" or "WooCommerce selling locations".', 'woocommerce-jetpack' ),
+				'title'    => __( 'Country List', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'This option sets which countries will be added to the list in [wcj_selector selector_type="country"] shortcode. Possible values: "All countries" or "WooCommerce selling locations".', 'e-commerce-jetpack' ),
 				'desc'     => sprintf(
-					'<p>' . __( 'If "WooCommerce selling locations" option is selected, country list will be set by <a href="%s">WooCommerce > Settings > General > Selling location(s)</a>.', 'woocommerce-jetpack' ),
+					'<p>' . __( 'If "WooCommerce selling locations" option is selected, country list will be set by <a href="%s">WooCommerce > Settings > General > Selling location(s)</a>.', 'e-commerce-jetpack' ),
 						admin_url( 'admin.php?page=wc-settings' ) ) .
 					'<br>' . apply_filters( 'booster_message', '', 'desc' ) . '</p>',
 				'id'       => 'wcj_product_by_country_country_list_shortcode',
 				'default'  => 'all',
 				'type'     => 'select',
 				'options'  => array(
-					'all' => __( 'All countries', 'woocommerce-jetpack' ),
-					'wc'  => __( 'WooCommerce selling locations', 'woocommerce-jetpack' ),
+					'all' => __( 'All countries', 'e-commerce-jetpack' ),
+					'wc'  => __( 'WooCommerce selling locations', 'e-commerce-jetpack' ),
 				),
 				'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 				'css'      => 'min-width:250px;',
 			),
 			array(
-				'title'    => __( 'Overwrite by Billing Country', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Tries to overwrite Country by User Billing Country on Checkout Page.', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+				'title'    => __( 'Overwrite by Billing Country', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Tries to overwrite Country by User Billing Country on Checkout Page.', 'e-commerce-jetpack' ),
+				'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_by_country_selection_billing_country_overwrite',
 				'default'  => 'no',
 				'type'     => 'checkbox',
@@ -197,23 +197,23 @@ class WCJ_Product_By_Country extends WCJ_Module_Product_By_Condition {
 				'id'       => 'wcj_product_by_country_selection_options',
 			),
 			array(
-				'title'    => __( 'Admin Country List Options', 'woocommerce-jetpack' ),
+				'title'    => __( 'Admin Country List Options', 'e-commerce-jetpack' ),
 				'type'     => 'title',
 				'id'       => 'wcj_product_by_country_admin_country_list_options',
 			),
 			array(
-				'title'    => __( 'Country List', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'This option sets which countries will be added to list in product\'s edit page. Possible values: "All countries" or "WooCommerce selling locations".', 'woocommerce-jetpack' ),
+				'title'    => __( 'Country List', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'This option sets which countries will be added to list in product\'s edit page. Possible values: "All countries" or "WooCommerce selling locations".', 'e-commerce-jetpack' ),
 				'desc'     => sprintf(
-					'<p>' . __( 'If "WooCommerce selling locations" option is selected, country list will be set by <a href="%s">WooCommerce > Settings > General > Selling location(s)</a>.', 'woocommerce-jetpack' ),
+					'<p>' . __( 'If "WooCommerce selling locations" option is selected, country list will be set by <a href="%s">WooCommerce > Settings > General > Selling location(s)</a>.', 'e-commerce-jetpack' ),
 						admin_url( 'admin.php?page=wc-settings' ) ) .
 					'<br>' . apply_filters( 'booster_message', '', 'desc' ) . '</p>',
 				'id'       => 'wcj_product_by_country_country_list',
 				'default'  => 'all',
 				'type'     => 'select',
 				'options'  => array(
-					'all' => __( 'All countries', 'woocommerce-jetpack' ),
-					'wc'  => __( 'WooCommerce selling locations', 'woocommerce-jetpack' ),
+					'all' => __( 'All countries', 'e-commerce-jetpack' ),
+					'wc'  => __( 'WooCommerce selling locations', 'e-commerce-jetpack' ),
 				),
 				'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 				'css'      => 'min-width:250px;',

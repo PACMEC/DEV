@@ -12,15 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $use_shipping_instances = ( 'yes' === wcj_get_option( 'wcj_shipping_by_order_amount_use_shipping_instance', 'no' ) );
 $settings = array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_shipping_by_order_amount_general_options',
 	),
 	array(
-		'title'    => __( 'Use Shipping Instances', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Use Shipping Instances', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_shipping_by_order_amount_use_shipping_instance',
 		'default'  => 'no',
@@ -30,9 +30,9 @@ $settings = array(
 		'id'       => 'wcj_shipping_by_order_amount_general_options',
 	),
 	array(
-		'title'   => __( 'Shipping Methods by Min/Max Order Amount', 'woocommerce-jetpack' ),
+		'title'   => __( 'Shipping Methods by Min/Max Order Amount', 'e-commerce-jetpack' ),
 		'type'    => 'title',
-		'desc'    => __( 'Set to zero to disable. Allows only non-decimal value.', 'woocommerce-jetpack' ),
+		'desc'    => __( 'Set to zero to disable. Allows only non-decimal value.', 'e-commerce-jetpack' ),
 		'id'      => 'wcj_shipping_by_order_amount_options',
 	),
 );
@@ -54,7 +54,7 @@ foreach ( $shipping_methods as $method ) {
 		array(
 			'title'     => ( $use_shipping_instances ? $method['zone_name'] . ': ' . $method['shipping_method_title']: $method->get_method_title() ),
 			'desc_tip'  => $desc_tip,
-			'desc'      => '<br>' . __( 'Minimum order amount', 'woocommerce-jetpack' ),
+			'desc'      => '<br>' . __( 'Minimum order amount', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_shipping_by_order_amount_min_' . ( $use_shipping_instances ? 'instance_' . $method['shipping_method_instance_id'] : $method->id ),
 			'default'   => 0,
 			'type'      => 'number',
@@ -62,7 +62,7 @@ foreach ( $shipping_methods as $method ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => '<br>' . __( 'Maximum order amount', 'woocommerce-jetpack' ),
+			'desc'      => '<br>' . __( 'Maximum order amount', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_shipping_by_order_amount_max_' . ( $use_shipping_instances ? 'instance_' . $method['shipping_method_instance_id'] : $method->id ),
 			'default'   => 0,
 			'type'      => 'number',

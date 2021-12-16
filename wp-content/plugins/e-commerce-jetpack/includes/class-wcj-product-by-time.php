@@ -26,9 +26,9 @@ class WCJ_Product_By_Time extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_by_time';
-		$this->short_desc = __( 'Product Availability by Time', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set product availability by time (Custom frontend messages available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set product availability by time.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Availability by Time', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set product availability by time (Custom frontend messages available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set product availability by time.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-availability-by-time';
 		parent::__construct();
 
@@ -89,12 +89,12 @@ class WCJ_Product_By_Time extends WCJ_Module {
 				'%product_title%' => $_product->get_title(),
 			);
 			$message = ( ( '-' === $_time ) ?
-				apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is not available today.</p>', 'woocommerce-jetpack' ),
+				apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is not available today.</p>', 'e-commerce-jetpack' ),
 					get_option( 'wcj_product_by_time_unavailable_message_day_off',
-						__( '<p style="color:red;">%product_title% is not available today.</p>', 'woocommerce-jetpack' ) ) ) :
-				apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is available only at %time_today% today.</p>', 'woocommerce-jetpack' ),
+						__( '<p style="color:red;">%product_title% is not available today.</p>', 'e-commerce-jetpack' ) ) ) :
+				apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is available only at %time_today% today.</p>', 'e-commerce-jetpack' ),
 					get_option( 'wcj_product_by_time_unavailable_message',
-						__( '<p style="color:red;">%product_title% is available only at %time_today% today.</p>', 'woocommerce-jetpack' ) ) )
+						__( '<p style="color:red;">%product_title% is available only at %time_today% today.</p>', 'e-commerce-jetpack' ) ) )
 			);
 			echo str_replace(
 				array_keys( $replaceable_values ),

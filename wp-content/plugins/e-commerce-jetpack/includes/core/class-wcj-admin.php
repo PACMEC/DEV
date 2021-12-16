@@ -28,7 +28,7 @@ class WCJ_Admin {
 				add_filter( 'plugin_action_links_' . plugin_basename( WCJ_PLUGIN_FILE ), array( $this, 'action_links' ) );
 				add_action( 'admin_menu',                                                array( $this, 'booster_menu' ), 100 );
 				add_filter( 'admin_footer_text',                                         array( $this, 'admin_footer_text' ), 2 );
-				if ( 'woocommerce-jetpack.php' === basename( WCJ_PLUGIN_FILE ) ) {
+				if ( 'e-commerce-jetpack.php' === basename( WCJ_PLUGIN_FILE ) ) {
 					add_action( 'admin_notices',                                         array( $this, 'check_plus_version' ) );
 				}
 			}
@@ -50,20 +50,20 @@ class WCJ_Admin {
 			if ( isset( $active_plugin[1] ) ) {
 				if ( 'booster-plus-for-woocommerce.php' === $active_plugin[1] ) {
 					return;
-				} elseif ( 'woocommerce-jetpack-plus.php' === $active_plugin[1] || 'woocommerce-booster-plus.php' === $active_plugin[1] ) {
+				} elseif ( 'e-commerce-jetpack-plus.php' === $active_plugin[1] || 'woocommerce-booster-plus.php' === $active_plugin[1] ) {
 					$is_deprecated_plus_active = true; // can't `brake` because of possible active `booster-plus-for-woocommerce.php`
 				}
 			}
 		}
 		if ( $is_deprecated_plus_active ) {
 			$class   = 'notice notice-error';
-			$message = __( 'Please update <strong>Booster Plus for WooCommerce</strong> plugin.', 'woocommerce-jetpack' ) . ' ' .
+			$message = __( 'Please update <strong>Booster Plus for WooCommerce</strong> plugin.', 'e-commerce-jetpack' ) . ' ' .
 				sprintf(
-					__( 'Visit <a target="_blank" href="%s">your account page</a> on booster.io to download the latest Booster Plus version.', 'woocommerce-jetpack' ),
+					__( 'Visit <a target="_blank" href="%s">your account page</a> on booster.io to download the latest Booster Plus version.', 'e-commerce-jetpack' ),
 					'https://booster.io/my-account/?utm_source=plus_update'
 				) . ' ' .
 				sprintf(
-					__( 'Click <a target="_blank" href="%s">here</a> for more info.', 'woocommerce-jetpack' ),
+					__( 'Click <a target="_blank" href="%s">here</a> for more info.', 'e-commerce-jetpack' ),
 					'https://booster.io/booster-plus-for-woocommerce-update/'
 				);
 			echo '<div class="' . $class . '"><p>' . $message . '</p></div>';
@@ -79,9 +79,9 @@ class WCJ_Admin {
 		if ( isset( $_GET['page'] ) ) {
 			if ( 'wcj-tools' === $_GET['page'] || ( 'wc-settings' === $_GET['page'] && isset( $_GET['tab'] ) && 'jetpack' === $_GET['tab'] ) ) {
 				$rocket_icons = wcj_get_5_rocket_image();
-				$rating_link = '<a href="https://wordpress.org/support/plugin/woocommerce-jetpack/reviews/?rate=5#new-post" target="_blank">' . $rocket_icons . '</a>';
+				$rating_link = '<a href="https://wordpress.org/support/plugin/e-commerce-jetpack/reviews/?rate=5#new-post" target="_blank">' . $rocket_icons . '</a>';
 				return sprintf(
-					__( 'If you like <strong>Booster for WooCommerce</strong> please leave us a %s rating. Thank you, we couldn\'t have done it without you!', 'woocommerce-jetpack' ),
+					__( 'If you like <strong>Booster for WooCommerce</strong> please leave us a %s rating. Thank you, we couldn\'t have done it without you!', 'e-commerce-jetpack' ),
 					$rating_link
 				);
 			}
@@ -97,8 +97,8 @@ class WCJ_Admin {
 	function booster_menu() {
 		add_submenu_page(
 			'woocommerce',
-			__( 'Booster for WooCommerce', 'woocommerce-jetpack' ),
-			__( 'Booster Settings', 'woocommerce-jetpack' ) ,
+			__( 'Booster for WooCommerce', 'e-commerce-jetpack' ),
+			__( 'Booster Settings', 'e-commerce-jetpack' ) ,
 			( 'yes' === wcj_get_option( 'wcj_' . 'admin_tools' . '_enabled', 'no' ) && 'yes' === wcj_get_option( 'wcj_admin_tools_show_menus_to_admin_only', 'no' ) ? 'manage_options' : 'manage_woocommerce' ),
 			'admin.php?page=wc-settings&tab=jetpack'
 		);
@@ -114,12 +114,12 @@ class WCJ_Admin {
 	function action_links( $links ) {
 		$custom_links = array(
 			'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack' ) . '">' . __( 'Settings', 'woocommerce' ) . '</a>',
-			'<a href="' . esc_url( 'https://booster.io/' ) . '">' . __( 'Docs', 'woocommerce-jetpack' ) . '</a>',
+			'<a href="' . esc_url( 'https://booster.io/' ) . '">' . __( 'Docs', 'e-commerce-jetpack' ) . '</a>',
 		);
-		if ( 'woocommerce-jetpack.php' === basename( WCJ_PLUGIN_FILE ) ) {
-			$custom_links[] = '<a target="_blank" href="' . esc_url( 'https://booster.io/plus/' ) . '">' . __( 'Unlock all', 'woocommerce-jetpack' ) . '</a>';
+		if ( 'e-commerce-jetpack.php' === basename( WCJ_PLUGIN_FILE ) ) {
+			$custom_links[] = '<a target="_blank" href="' . esc_url( 'https://booster.io/plus/' ) . '">' . __( 'Unlock all', 'e-commerce-jetpack' ) . '</a>';
 		} else {
-			$custom_links[] = '<a target="_blank" href="' . esc_url( 'https://booster.io/my-account/booster-contact/' ) . '">' . __( 'Support', 'woocommerce-jetpack' ) . '</a>';
+			$custom_links[] = '<a target="_blank" href="' . esc_url( 'https://booster.io/my-account/booster-contact/' ) . '">' . __( 'Support', 'e-commerce-jetpack' ) . '</a>';
 		}
 		return array_merge( $custom_links, $links );
 	}

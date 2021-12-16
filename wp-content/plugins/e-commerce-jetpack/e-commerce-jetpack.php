@@ -1,17 +1,13 @@
 <?php
 /*
-Plugin Name: Booster for WooCommerce
-Plugin URI: https://booster.io
-Description: Supercharge your WooCommerce site with these awesome powerful features. More than 100 modules. All in one WooCommerce plugin.
+Plugin Name: E-Commerce - Jetpack
+Plugin URI: #
+Description: Potencie su sitio E-Commerce con estas increíbles y poderosas funciones. Más de 100 módulos. Todo en un complemento de PACMEC.
 Version: 5.4.9
-Author: Pluggabl LLC
+Author: PACMEC
 Author URI: https://booster.io
-Text Domain: woocommerce-jetpack
+Text Domain: e-commerce-jetpack
 Domain Path: /langs
-Copyright: © 2020 Pluggabl LLC.
-WC tested up to: 5.9.0
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 if (!defined('ABSPATH')) {
@@ -27,7 +23,7 @@ if (!wcj_is_plugin_activated('woocommerce', 'woocommerce.php')) {
 }
 
 // Check if Plus is active
-if ('woocommerce-jetpack.php' === basename(__FILE__) && wcj_is_plugin_activated('booster-plus-for-woocommerce', 'booster-plus-for-woocommerce.php')) {
+if ('e-commerce-jetpack.php' === basename(__FILE__) && wcj_is_plugin_activated('booster-plus-for-woocommerce', 'booster-plus-for-woocommerce.php')) {
 	return;
 }
 

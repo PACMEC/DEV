@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Payment Gateways', 'woocommerce-jetpack' ),
+		'title'    => __( 'Payment Gateways', 'e-commerce-jetpack' ),
 		'type'     => 'title',
-		'desc'     => __( 'This section lets you set different currency for each payment gateway.', 'woocommerce-jetpack' ),
+		'desc'     => __( 'This section lets you set different currency for each payment gateway.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_payment_gateways_currency_options',
 	),
 );
@@ -40,9 +40,9 @@ foreach ( $available_gateways as $key => $gateway ) {
 			'id'       => 'wcj_gateways_currency_' . $key,
 			'default'  => 'no_changes',
 			'type'     => 'select',
-			'options'  => array_merge( array( 'no_changes' => __( 'No changes', 'woocommerce-jetpack' ) ), wcj_get_woocommerce_currencies_and_symbols() ),
+			'options'  => array_merge( array( 'no_changes' => __( 'No changes', 'e-commerce-jetpack' ) ), wcj_get_woocommerce_currencies_and_symbols() ),
 			'desc'     => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . $key ) . '"' .
-				' style="font-style:normal;text-decoration:none;" title="' . __( 'Go to payment gateway\'s settings', 'woocommerce-jetpack' ) . '">&#8505;</a>',
+				' style="font-style:normal;text-decoration:none;" title="' . __( 'Go to payment gateway\'s settings', 'e-commerce-jetpack' ) . '">&#8505;</a>',
 		),
 		array(
 			'title'                    => '',
@@ -60,40 +60,40 @@ $settings = array_merge( $settings, array(
 		'id'       => 'wcj_payment_gateways_currency_options',
 	),
 	array(
-		'title'    => __( 'Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_payment_gateways_currency_general_options',
 	),
 	array(
-		'title'    => __( 'Exchange Rates Updates', 'woocommerce-jetpack' ),
+		'title'    => __( 'Exchange Rates Updates', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_gateways_currency_exchange_rate_update_auto',
 		'default'  => 'manual',
 		'type'     => 'select',
 		'options'  => array(
-			'manual' => __( 'Enter Rates Manually', 'woocommerce-jetpack' ),
-			'auto'   => __( 'Automatically via Currency Exchange Rates module', 'woocommerce-jetpack' ),
+			'manual' => __( 'Enter Rates Manually', 'e-commerce-jetpack' ),
+			'auto'   => __( 'Automatically via Currency Exchange Rates module', 'e-commerce-jetpack' ),
 		),
 		'desc'     => ( '' == apply_filters( 'booster_message', '', 'desc' ) ) ?
-			__( 'Visit', 'woocommerce-jetpack' ) .
+			__( 'Visit', 'e-commerce-jetpack' ) .
 				' <a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=prices_and_currencies&section=currency_exchange_rates' ) . '">' .
-					__( 'Currency Exchange Rates module', 'woocommerce-jetpack' ) . '</a>'
+					__( 'Currency Exchange Rates module', 'e-commerce-jetpack' ) . '</a>'
 			: apply_filters( 'booster_message', '', 'desc' ),
 		'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 	),
 	array(
-		'title'    => __( 'Show Converted Prices', 'woocommerce-jetpack' ),
+		'title'    => __( 'Show Converted Prices', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_gateways_currency_page_scope',
 		'default'  => 'cart_and_checkout',
 		'type'     => 'select',
 		'options'  => array(
-			'cart_and_checkout' => __( 'On both cart and checkout pages', 'woocommerce-jetpack' ),
-			'checkout_only'     => __( 'On checkout page only', 'woocommerce-jetpack' ),
+			'cart_and_checkout' => __( 'On both cart and checkout pages', 'e-commerce-jetpack' ),
+			'checkout_only'     => __( 'On checkout page only', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'    => __( 'Advanced: Fix "Chosen Payment Method"', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you are having compatibility issues with some other plugins or modules.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Advanced: Fix "Chosen Payment Method"', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you are having compatibility issues with some other plugins or modules.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_gateways_currency_fix_chosen_payment_method',
 		'default'  => 'no',
 		'type'     => 'checkbox',

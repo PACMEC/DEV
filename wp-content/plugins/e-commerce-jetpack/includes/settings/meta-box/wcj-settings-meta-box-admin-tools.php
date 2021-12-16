@@ -16,7 +16,7 @@ foreach ( $products as $product_id => $desc ) {
 	$settings = array_merge( $settings, array(
 		array(
 			'type'       => 'title',
-			'title'      => sprintf( __( 'Product ID: %s', 'woocommerce-jetpack' ), $product_id ) . $desc,
+			'title'      => sprintf( __( 'Product ID: %s', 'e-commerce-jetpack' ), $product_id ) . $desc,
 			'css'        => 'background-color:#cddc39;color:black;',
 		),
 		array(

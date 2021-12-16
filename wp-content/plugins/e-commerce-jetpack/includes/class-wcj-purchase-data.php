@@ -25,16 +25,16 @@ class WCJ_Purchase_Data extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'purchase_data';
-		$this->short_desc = __( 'Cost of Goods', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Save product purchase costs data for admin reports (1 custom field allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Save product purchase costs data for admin reports.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Cost of Goods', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Save product purchase costs data for admin reports (1 custom field allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Save product purchase costs data for admin reports.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-cost-of-goods';
-		$this->extra_desc = sprintf( __( 'After setting cost of goods section below, Admin can export the Cost & Profit column from admin order list: %s', 'woocommerce-jetpack' ),
+		$this->extra_desc = sprintf( __( 'After setting cost of goods section below, Admin can export the Cost & Profit column from admin order list: %s', 'e-commerce-jetpack' ),
 		'<ol>' .
-			'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'woocommerce-jetpack' ),
+			'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'e-commerce-jetpack' ),
 				'Profit: <code>[wcj_order_profit]</code>, Item Cost: <code>[wcj_order_items_cost]</code>' ) .
 			'</li>' .
-			'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function, e.g.: %s', 'woocommerce-jetpack' ),
+			'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function, e.g.: %s', 'e-commerce-jetpack' ),
 				'<code>do_shortcode()</code>',
 				'<code>echo&nbsp;do_shortcode(&nbsp;\'[wcj_order_profit]\'&nbsp;);</code>' ) .
 			'</li>' .
@@ -43,8 +43,8 @@ class WCJ_Purchase_Data extends WCJ_Module {
 
 		$this->add_tools( array(
 			'import_from_wc_cog' => array(
-				'title'     => __( '"WooCommerce Cost of Goods" Data Import', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Import products costs from "WooCommerce Cost of Goods".', 'woocommerce-jetpack' ),
+				'title'     => __( '"WooCommerce Cost of Goods" Data Import', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Import products costs from "WooCommerce Cost of Goods".', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -85,10 +85,10 @@ class WCJ_Purchase_Data extends WCJ_Module {
 		$perform_import = ( isset( $_POST['wcj_import_from_wc_cog'] ) );
 		$table_data = array();
 		$table_data[] = array(
-			__( 'Product ID', 'woocommerce-jetpack' ),
-			__( 'Product Title', 'woocommerce-jetpack' ),
-			__( 'WooCommerce Cost of Goods (source)', 'woocommerce-jetpack' ),
-			__( 'Booster: Product cost (destination)', 'woocommerce-jetpack' ),
+			__( 'Product ID', 'e-commerce-jetpack' ),
+			__( 'Product Title', 'e-commerce-jetpack' ),
+			__( 'WooCommerce Cost of Goods (source)', 'e-commerce-jetpack' ),
+			__( 'Booster: Product cost (destination)', 'e-commerce-jetpack' ),
 		);
 		foreach ( wcj_get_products( array(), 'any', 512, true  ) as $product_id => $product_title ) {
 			$wc_cog_cost = get_post_meta( $product_id, '_wc_cog_cost', true );
@@ -101,8 +101,8 @@ class WCJ_Purchase_Data extends WCJ_Module {
 		// Button form
 		$button_form = '';
 		$button_form .= '<form method="post" action="">';
-		$button_form .= '<input type="submit" name="wcj_import_from_wc_cog" class="button-primary" value="' . __( 'Import', 'woocommerce-jetpack' ) . '"' .
-			' onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')">';
+		$button_form .= '<input type="submit" name="wcj_import_from_wc_cog" class="button-primary" value="' . __( 'Import', 'e-commerce-jetpack' ) . '"' .
+			' onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')">';
 		$button_form .= '</form>';
 		// Output
 		$html = '';
@@ -123,10 +123,10 @@ class WCJ_Purchase_Data extends WCJ_Module {
 	 */
 	function add_product_columns( $columns ) {
 		if ( 'yes' === apply_filters( 'booster_option', 'no', wcj_get_option( 'wcj_purchase_data_custom_products_columns_purchase_cost', 'no' ) ) ) {
-			$columns['purchase_cost'] = __( 'Cost', 'woocommerce-jetpack' );
+			$columns['purchase_cost'] = __( 'Cost', 'e-commerce-jetpack' );
 		}
 		if ( 'yes' === apply_filters( 'booster_option', 'no', wcj_get_option( 'wcj_purchase_data_custom_products_columns_profit', 'no' ) ) ) {
-			$columns['profit'] = __( 'Profit', 'woocommerce-jetpack' );
+			$columns['profit'] = __( 'Profit', 'e-commerce-jetpack' );
 		}
 		return $columns;
 	}
@@ -189,10 +189,10 @@ class WCJ_Purchase_Data extends WCJ_Module {
 	 */
 	function add_order_columns( $columns ) {
 		if ( 'yes' === wcj_get_option( 'wcj_purchase_data_custom_columns_profit', 'yes' ) ) {
-			$columns['profit'] = __( 'Profit', 'woocommerce-jetpack' );
+			$columns['profit'] = __( 'Profit', 'e-commerce-jetpack' );
 		}
 		if ( 'yes' === wcj_get_option( 'wcj_purchase_data_custom_columns_purchase_cost', 'no' ) ) {
-			$columns['purchase_cost'] = __( 'Purchase Cost', 'woocommerce-jetpack' );
+			$columns['purchase_cost'] = __( 'Purchase Cost', 'e-commerce-jetpack' );
 		}
 		return $columns;
 	}
@@ -274,16 +274,16 @@ class WCJ_Purchase_Data extends WCJ_Module {
 				if ( 0 != $the_price ) {
 					$the_profit = $the_price - $purchase_price;
 					$table_data = array();
-					$table_data[] = array( __( 'Selling', 'woocommerce-jetpack' ), wc_price( $the_price ) );
-					$table_data[] = array( __( 'Buying', 'woocommerce-jetpack' ),  wc_price( $purchase_price ) );
-					$table_data[] = array( __( 'Profit', 'woocommerce-jetpack' ),  wc_price( $the_profit )
+					$table_data[] = array( __( 'Selling', 'e-commerce-jetpack' ), wc_price( $the_price ) );
+					$table_data[] = array( __( 'Buying', 'e-commerce-jetpack' ),  wc_price( $purchase_price ) );
+					$table_data[] = array( __( 'Profit', 'e-commerce-jetpack' ),  wc_price( $the_profit )
 						. sprintf( ' (%0.2f %%)', ( $this->get_profit_percentage(array(
 							'profit'         => $the_profit,
 							'purchase_price' => $purchase_price,
 							'selling_price'  => $the_price
 						)) ) ) );
 					$html = '';
-					$html .= '<h5>' . __( 'Report', 'woocommerce-jetpack' ) . $desc . '</h5>';
+					$html .= '<h5>' . __( 'Report', 'e-commerce-jetpack' ) . $desc . '</h5>';
 					$html .= wcj_get_table_html( $table_data, array(
 						'table_heading_type' => 'none',
 						'table_class'        => 'widefat striped',

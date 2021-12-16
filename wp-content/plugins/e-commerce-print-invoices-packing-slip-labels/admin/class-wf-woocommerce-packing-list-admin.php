@@ -382,9 +382,9 @@ class Wf_Woocommerce_Packing_List_Admin {
 	public function plugin_action_links($links) 
 	{
 	   $links[] = '<a href="'.admin_url('admin.php?page='.WF_PKLIST_POST_TYPE).'">'.__('Settings', 'print-invoices-packing-slip-labels-for-woocommerce').'</a>';
-	   $links[] = '<a href="https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/?utm_source=free_plugin_listing&utm_medium=pdf_basic&utm_campaign=PDF_invoice&utm_content='.WF_PKLIST_VERSION.'" target="_blank" style="color:#3db634;">'.__('Upgrade to premium','print-invoices-packing-slip-labels-for-woocommerce').'</a>';
-	   $links[] = '<a href="https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce" target="_blank">'.__('Support','print-invoices-packing-slip-labels-for-woocommerce').'</a>';
-	   $links[] = '<a href="https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce/reviews/?rate=5#new-post" target="_blank">' . __('Review','print-invoices-packing-slip-labels-for-woocommerce') . '</a>';
+	   // $links[] = '<a href="https://www.webtoffee.com/product/woocommerce-pdf-invoices-packing-slips/?utm_source=free_plugin_listing&utm_medium=pdf_basic&utm_campaign=PDF_invoice&utm_content='.WF_PKLIST_VERSION.'" target="_blank" style="color:#3db634;">'.__('Upgrade to premium','print-invoices-packing-slip-labels-for-woocommerce').'</a>';
+	   // $links[] = '<a href="https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce" target="_blank">'.__('Support','print-invoices-packing-slip-labels-for-woocommerce').'</a>';
+	   // $links[] = '<a href="https://wordpress.org/support/plugin/print-invoices-packing-slip-labels-for-woocommerce/reviews/?rate=5#new-post" target="_blank">' . __('Review','print-invoices-packing-slip-labels-for-woocommerce') . '</a>';
 	   return $links;
 	}
 
@@ -442,7 +442,6 @@ class Wf_Woocommerce_Packing_List_Admin {
 			WF_PKLIST_POST_TYPE.'_document_settings_page',
 			array($this,'admin_document_settings_page')
 		);
-
 
 		if(count($menus)>0)
 		{

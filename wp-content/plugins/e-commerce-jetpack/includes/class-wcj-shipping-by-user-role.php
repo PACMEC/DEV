@@ -22,27 +22,27 @@ class WCJ_Shipping_By_User_Role extends WCJ_Module_Shipping_By_Condition {
 	function __construct() {
 
 		$this->id         = 'shipping_by_user_role';
-		$this->short_desc = __( 'Shipping Methods by Users', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set user roles, users or membership plans to include/exclude for shipping methods to show up (Free shipping available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set user roles, users or membership plans to include/exclude for shipping methods to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Shipping Methods by Users', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set user roles, users or membership plans to include/exclude for shipping methods to show up (Free shipping available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set user roles, users or membership plans to include/exclude for shipping methods to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-shipping-methods-by-users';
 
 		$this->condition_options = array(
 			'user_roles' => array(
-				'title' => __( 'User Roles', 'woocommerce-jetpack' ),
+				'title' => __( 'User Roles', 'e-commerce-jetpack' ),
 				'desc'  => sprintf(
-					__( 'Custom roles can be added via "Add/Manage Custom Roles" tool in Booster\'s <a href="%s">General</a> module.', 'woocommerce-jetpack' ),
+					__( 'Custom roles can be added via "Add/Manage Custom Roles" tool in Booster\'s <a href="%s">General</a> module.', 'e-commerce-jetpack' ),
 					admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=general' )
 				),
 			),
 			'user_id' => array(
-				'title' => __( 'Users', 'woocommerce-jetpack' ),
+				'title' => __( 'Users', 'e-commerce-jetpack' ),
 				'desc'  => '',
 			),
 			'user_membership' => array(
-				'title' => __( 'User Membership Plans', 'woocommerce-jetpack' ),
+				'title' => __( 'User Membership Plans', 'e-commerce-jetpack' ),
 				'desc'  => sprintf(
-					__( 'This section requires <a target="_blank" href="%s">WooCommerce Memberships</a> plugin.', 'woocommerce-jetpack' ),
+					__( 'This section requires <a target="_blank" href="%s">WooCommerce Memberships</a> plugin.', 'e-commerce-jetpack' ),
 					'https://woocommerce.com/products/woocommerce-memberships/'
 				),
 			),

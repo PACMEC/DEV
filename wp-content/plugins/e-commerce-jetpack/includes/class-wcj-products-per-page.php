@@ -25,9 +25,9 @@ class WCJ_Products_Per_Page extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'products_per_page';
-		$this->short_desc = __( 'Products per Page', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add "products per page" selector to WooCommerce (Select options available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add "products per page" selector to WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Products per Page', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add "products per page" selector to WooCommerce (Select options available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add "products per page" selector to WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-products-per-page';
 		parent::__construct();
 
@@ -83,7 +83,7 @@ class WCJ_Products_Per_Page extends WCJ_Module {
 		$html .= wcj_get_option( 'wcj_products_per_page_text_before', '<div class="clearfix"></div><div>' );
 		$html .= '<form action="' . esc_url( remove_query_arg( 'paged' ) ) . '" method="' . $form_method . '">';
 		$_text = wcj_get_option( 'wcj_products_per_page_text',
-			__( 'Products <strong>%from% - %to%</strong> from <strong>%total%</strong>. Products on page %select_form%', 'woocommerce-jetpack' ) );
+			__( 'Products <strong>%from% - %to%</strong> from <strong>%total%</strong>. Products on page %select_form%', 'e-commerce-jetpack' ) );
 		$html .= str_replace( array( '%from%', '%to%', '%total%', '%select_form%' ), array( $products_from, $products_to, $products_total, $select_form ), $_text );
 		$html .= '</form>';
 		$html .= wcj_get_option( 'wcj_products_per_page_text_after', '</div>' );

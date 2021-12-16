@@ -12,13 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_price_formats_general_options',
 	),
 	array(
-		'title'    => __( 'Trim Zeros in Prices', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'    => __( 'Trim Zeros in Prices', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_price_formats_general_trim_zeros',
 		'default'  => 'no',
@@ -28,19 +28,19 @@ $settings = array(
 		'id'       => 'wcj_price_formats_general_options',
 	),
 	array(
-		'title'    => __( 'Price Formats by Currency (or WPML)', 'woocommerce-jetpack' ),
+		'title'    => __( 'Price Formats by Currency (or WPML)', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_price_formats_options',
 	),
 	array(
-		'title'    => __( 'Price Formats by Currency (or WPML)', 'woocommerce-jetpack' ),
-		'desc'     => '<strong>' . __( 'Enable section', 'woocommerce-jetpack' ) . '</strong>',
+		'title'    => __( 'Price Formats by Currency (or WPML)', 'e-commerce-jetpack' ),
+		'desc'     => '<strong>' . __( 'Enable section', 'e-commerce-jetpack' ) . '</strong>',
 		'type'     => 'checkbox',
 		'id'       => 'wcj_price_formats_by_currency_enabled',
 		'default'  => 'yes',
 	),
 	array(
-		'title'    => __( 'Total Number', 'woocommerce-jetpack' ),
+		'title'    => __( 'Total Number', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_price_formats_total_number',
 		'default'  => 1,
 		'type'     => 'custom_number',
@@ -55,8 +55,8 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 	$currency_symbol = get_woocommerce_currency_symbol( wcj_get_option( 'wcj_price_formats_currency_' . $i, get_woocommerce_currency() ) );
 	$settings = array_merge( $settings, array(
 		array(
-			'title'    => __( 'Format', 'woocommerce-jetpack' ) . ' #' . $i,
-			'desc'     => __( 'Currency', 'woocommerce-jetpack' ),
+			'title'    => __( 'Format', 'e-commerce-jetpack' ) . ' #' . $i,
+			'desc'     => __( 'Currency', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_currency_' . $i,
 			'default'  => get_woocommerce_currency(),
 			'type'     => 'select',
@@ -64,7 +64,7 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			'css'      => 'width:300px;',
 		),
 		array(
-			'desc'     => __( 'Currency Position', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Currency Position', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_currency_position_' . $i,
 			'default'  => wcj_get_option( 'woocommerce_currency_pos' ),
 			'type'     => 'select',
@@ -77,12 +77,12 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			'css'      => 'width:300px;',
 		),
 		array(
-			'desc'     => __( 'Additional Currency Code Position', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Additional Currency Code Position', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_currency_code_position_' . $i,
 			'default'  => 'none',
 			'type'     => 'select',
 			'options'  => array(
-				'none'        => __( 'Do not add currency code', 'woocommerce-jetpack' ),
+				'none'        => __( 'Do not add currency code', 'e-commerce-jetpack' ),
 				'left'        => __( 'Left', 'woocommerce' ),
 				'right'       => __( 'Right', 'woocommerce' ),
 				'left_space'  => __( 'Left with space', 'woocommerce' ),
@@ -90,7 +90,7 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			),
 		),
 		array(
-			'desc'     => __( 'Thousand Separator', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Thousand Separator', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_thousand_separator_' . $i,
 			'default'  => wc_get_price_thousand_separator(),
 			'type'     => 'text',
@@ -98,7 +98,7 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			'wcj_raw'  => true,
 		),
 		array(
-			'desc'     => __( 'Decimal Separator', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Decimal Separator', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_decimal_separator_' . $i,
 			'default'  => wc_get_price_decimal_separator(),
 			'type'     => 'text',
@@ -106,7 +106,7 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			'wcj_raw'  => true,
 		),
 		array(
-			'desc'     => __( 'Number of Decimals', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Number of Decimals', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_number_of_decimals_' . $i,
 			'default'  => wcj_get_option( 'woocommerce_price_num_decimals', 2 ),
 			'type'     => 'number',
@@ -114,8 +114,8 @@ for ( $i = 1; $i <= apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_pri
 			'css'      => 'width:300px;',
 		),
 		array(
-			'desc'     => __( 'WPML Language Code', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Option to set different price formats for different WPML languages. Can be comma separated list. Leave empty to disable.', 'woocommerce-jetpack' ),
+			'desc'     => __( 'WPML Language Code', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Option to set different price formats for different WPML languages. Can be comma separated list. Leave empty to disable.', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_price_formats_wpml_language_' . $i,
 			'default'  => '',
 			'type'     => 'text',

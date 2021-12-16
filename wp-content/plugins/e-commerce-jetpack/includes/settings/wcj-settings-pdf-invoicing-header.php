@@ -20,64 +20,64 @@ foreach ( $invoice_types as $invoice_type ) {
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_options',
 		),
 		array(
-			'title'    => __( 'Enable Header', 'woocommerce-jetpack' ),
-			'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+			'title'    => __( 'Enable Header', 'e-commerce-jetpack' ),
+			'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_enabled',
 			'default'  => 'yes',
 			'type'     => 'checkbox',
 		),
 		array(
-			'title'    => __( 'Header Image', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Image', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_image',
 			'default'  => '',
 			'type'     => 'text',
 			'desc'     => sprintf(
-				__( 'Enter a local URL to an image you want to show in the invoice\'s header. Upload your image using the <a href="%s">media uploader</a>.', 'woocommerce-jetpack' ),
+				__( 'Enter a local URL to an image you want to show in the invoice\'s header. Upload your image using the <a href="%s">media uploader</a>.', 'e-commerce-jetpack' ),
 					admin_url( 'media-new.php' ) ) .
 				wcj_get_invoicing_current_image_path_desc( 'wcj_invoicing_' . $invoice_type['id'] . '_header_image' ) . '<br>' .
-				sprintf( __( 'If you are experiencing issues with displaying header image, please try setting different values for the "Advanced: Default Images Directory" option in %s.', 'woocommerce-jetpack' ),
+				sprintf( __( 'If you are experiencing issues with displaying header image, please try setting different values for the "Advanced: Default Images Directory" option in %s.', 'e-commerce-jetpack' ),
 					'<a target="_blank" href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=pdf_invoicing&section=pdf_invoicing_advanced' ) . '">' .
-						__( 'PDF Invoicing & Packing Slips > Advanced', 'woocommerce-jetpack' ) .
+						__( 'PDF Invoicing & Packing Slips > Advanced', 'e-commerce-jetpack' ) .
 					'</a>' ),
-			'desc_tip' => __( 'Leave blank to disable', 'woocommerce-jetpack' ),
+			'desc_tip' => __( 'Leave blank to disable', 'e-commerce-jetpack' ),
 			'class'    => 'widefat',
 		),
 		array(
-			'title'    => __( 'Header Image Width in mm', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Image Width in mm', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_image_width_mm',
 			'default'  => 50,
 			'type'     => 'number',
 		),
 		array(
-			'title'    => __( 'Header Title', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Title', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_title_text',
 			'default'  => $invoice_type['title'],
 			'type'     => 'text',
 			'class'    => 'widefat',
 		),
 		array(
-			'title'    => __( 'Header Text', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Text', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_text',
-			'default'  => __( 'Company Name', 'woocommerce-jetpack' ),
+			'default'  => __( 'Company Name', 'e-commerce-jetpack' ),
 			'type'     => 'text',
 			'class'    => 'widefat',
 		),
 		array(
-			'title'    => __( 'Header Text Color', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Text Color', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_text_color',
 			'default'  => '#cccccc',
 			'type'     => 'color',
 			'css'      => 'width:6em;',
 		),
 		array(
-			'title'    => __( 'Header Line Color', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Line Color', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_header_line_color',
 			'default'  => '#cccccc',
 			'type'     => 'color',
 			'css'      => 'width:6em;',
 		),
 		array(
-			'title'    => __( 'Header Margin', 'woocommerce-jetpack' ),
+			'title'    => __( 'Header Margin', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_margin_header',
 			'default'  => 10, // PDF_MARGIN_HEADER
 			'type'     => 'number',

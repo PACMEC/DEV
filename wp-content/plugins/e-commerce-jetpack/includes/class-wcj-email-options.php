@@ -23,8 +23,8 @@ class WCJ_Email_Options extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'email_options';
-		$this->short_desc = __( 'Email Options', 'woocommerce-jetpack' );
-		$this->desc       = __( 'WooCommerce email options. E.g.: add another email recipient(s) to all WooCommerce emails.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Email Options', 'e-commerce-jetpack' );
+		$this->desc       = __( 'WooCommerce email options. E.g.: add another email recipient(s) to all WooCommerce emails.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-email-options';
 		parent::__construct();
 
@@ -107,30 +107,30 @@ class WCJ_Email_Options extends WCJ_Module {
 		return array(
 			array(
 				'title'    => ( $extended_title ) ?
-					__( 'Booster: Email Forwarding Options', 'woocommerce-jetpack' ) :
-					__( 'Email Forwarding Options', 'woocommerce-jetpack' ),
+					__( 'Booster: Email Forwarding Options', 'e-commerce-jetpack' ) :
+					__( 'Email Forwarding Options', 'e-commerce-jetpack' ),
 				'type'     => 'title',
-				'desc'     => __( 'This section lets you add another email recipient(s) to all WooCommerce emails. Leave blank to disable.', 'woocommerce-jetpack' ),
+				'desc'     => __( 'This section lets you add another email recipient(s) to all WooCommerce emails. Leave blank to disable.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_emails_forwarding_options',
 			),
 			array(
-				'title'    => __( 'Cc Email', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Cc to email, e.g. youremail@yourdomain.com. Leave blank to disable.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Cc Email', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Cc to email, e.g. youremail@yourdomain.com. Leave blank to disable.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_emails_cc_email',
 				'default'  => '',
 				'type'     => 'text',
 			),
 			array(
-				'title'    => __( 'Bcc Email', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Bcc to email, e.g. youremail@yourdomain.com. Leave blank to disable.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Bcc Email', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Bcc to email, e.g. youremail@yourdomain.com. Leave blank to disable.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_emails_bcc_email',
 				'default'  => '',
 				'type'     => 'text',
 			),
 			array(
-				'title'    => __( 'Orders Emails: Enable for Statuses', 'woocommerce-jetpack' ),
+				'title'    => __( 'Orders Emails: Enable for Statuses', 'e-commerce-jetpack' ),
 				'desc'     => apply_filters( 'booster_message', '', 'desc' ),
-				'desc_tip' => __( 'If you want to forward emails for certain orders only, set order statuses here. Leave blank to send for all orders statuses.', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'If you want to forward emails for certain orders only, set order statuses here. Leave blank to send for all orders statuses.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_emails_forwarding_enable_order_status',
 				'default'  => '',
 				'type'     => 'multiselect',

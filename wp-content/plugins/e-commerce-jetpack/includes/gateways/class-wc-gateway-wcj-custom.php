@@ -69,7 +69,7 @@ if ( ! function_exists( 'init_wc_gateway_wcj_custom_class' ) ) {
 						'instructions' => array(
 							'title'             => __( 'Instructions', 'woocommerce' ),
 							'type'              => 'textarea',
-							'description'       => __( 'Instructions that will be added to the thank you page.', 'woocommerce-jetpack' ),
+							'description'       => __( 'Instructions that will be added to the thank you page.', 'e-commerce-jetpack' ),
 							'default'           => '',
 							'desc_tip'          => true,
 						),
@@ -77,24 +77,24 @@ if ( ! function_exists( 'init_wc_gateway_wcj_custom_class' ) ) {
 						'instructions_in_email' => array(
 							'title'             => __( 'Email Instructions', 'woocommerce' ),
 							'type'              => 'textarea',
-							'description'       => __( 'Instructions that will be added to the emails.', 'woocommerce-jetpack' ),
+							'description'       => __( 'Instructions that will be added to the emails.', 'e-commerce-jetpack' ),
 							'default'           => '',
 							'desc_tip'          => true,
 						),
 
 						'icon' => array(
-							'title'             => __( 'Icon', 'woocommerce-jetpack' ),
+							'title'             => __( 'Icon', 'e-commerce-jetpack' ),
 							'type'              => 'text',
-							'desc_tip'          => __( 'If you want to show an image next to the gateway\'s name on the frontend, enter a URL to an image.', 'woocommerce-jetpack' ),
+							'desc_tip'          => __( 'If you want to show an image next to the gateway\'s name on the frontend, enter a URL to an image.', 'e-commerce-jetpack' ),
 							'default'           => '',
 							'description'       => $desc,
 							'css'               => 'min-width:300px;width:50%;',
 						),
 
 						'min_amount' => array(
-							'title'             => __( 'Minimum order amount', 'woocommerce-jetpack' ),
+							'title'             => __( 'Minimum order amount', 'e-commerce-jetpack' ),
 							'type'              => 'number',
-							'desc_tip'          => __( 'If you want to set minimum order amount (excluding fees) to show this gateway on frontend, enter a number here. Set to 0 to disable.', 'woocommerce-jetpack' ),
+							'desc_tip'          => __( 'If you want to set minimum order amount (excluding fees) to show this gateway on frontend, enter a number here. Set to 0 to disable.', 'e-commerce-jetpack' ),
 							'default'           => 0,
 							'description'       => apply_filters( 'booster_message', '', 'desc' ),
 							'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
@@ -106,7 +106,7 @@ if ( ! function_exists( 'init_wc_gateway_wcj_custom_class' ) ) {
 							'class'             => 'chosen_select',
 							'css'               => 'width: 450px;',
 							'default'           => '',
-							'description'       => __( 'If gateway is only available for certain shipping methods, set it up here. Leave blank to enable for all methods.', 'woocommerce-jetpack' ),
+							'description'       => __( 'If gateway is only available for certain shipping methods, set it up here. Leave blank to enable for all methods.', 'e-commerce-jetpack' ),
 							'options'           => $shipping_methods,
 							'desc_tip'          => true,
 							'custom_attributes' => array( 'data-placeholder' => __( 'Select shipping methods', 'woocommerce' ) ),
@@ -114,38 +114,38 @@ if ( ! function_exists( 'init_wc_gateway_wcj_custom_class' ) ) {
 
 						'enable_for_virtual' => array(
 							'title'             => __( 'Enable for virtual orders', 'woocommerce' ),
-							'label'             => __( 'Enable gateway if the order is virtual', 'woocommerce-jetpack' ),
+							'label'             => __( 'Enable gateway if the order is virtual', 'e-commerce-jetpack' ),
 							'type'              => 'checkbox',
 							'default'           => 'yes'
 						),
 
 						'default_order_status' => array(
-							'title'             => __( 'Default Order Status', 'woocommerce-jetpack' ),
-							'description'       => __( 'Enable Custom Statuses feature to add custom statuses to the list.', 'woocommerce-jetpack' ),
+							'title'             => __( 'Default Order Status', 'e-commerce-jetpack' ),
+							'description'       => __( 'Enable Custom Statuses feature to add custom statuses to the list.', 'e-commerce-jetpack' ),
 							'default'           => apply_filters( 'woocommerce_default_order_status', 'pending' ),
 							'type'              => 'select',
 							'options'           => $this->get_order_statuses(),
 						),
 
 						'send_email_to_admin' => array(
-							'title'             => __( 'Send Additional Emails', 'woocommerce-jetpack' ),
-							'label'             => __( 'Send to Admin', 'woocommerce-jetpack' ),
+							'title'             => __( 'Send Additional Emails', 'e-commerce-jetpack' ),
+							'label'             => __( 'Send to Admin', 'e-commerce-jetpack' ),
 							'default'           => 'no',
 							'type'              => 'checkbox',
 						),
 
 						'send_email_to_customer' => array(
-							'label'             => __( 'Send to Customer', 'woocommerce-jetpack' ),
-							'description'       => __( 'This may help if you are using pending or custom default status and not getting new order emails.', 'woocommerce-jetpack' ),
+							'label'             => __( 'Send to Customer', 'e-commerce-jetpack' ),
+							'description'       => __( 'This may help if you are using pending or custom default status and not getting new order emails.', 'e-commerce-jetpack' ),
 							'default'           => 'no',
 							'type'              => 'checkbox',
 						),
 
 						'custom_return_url' => array(
-							'title'             => __( 'Custom Return URL (Thank You Page)', 'woocommerce-jetpack' ),
-							'label'             => __( 'URL', 'woocommerce-jetpack' ),
-							'desc_tip'          => __( 'Enter full URL with http(s).', 'woocommerce-jetpack' ),
-							'description'       => __( 'Optional. Leave blank to use default URL.', 'woocommerce-jetpack' ),
+							'title'             => __( 'Custom Return URL (Thank You Page)', 'e-commerce-jetpack' ),
+							'label'             => __( 'URL', 'e-commerce-jetpack' ),
+							'desc_tip'          => __( 'Enter full URL with http(s).', 'e-commerce-jetpack' ),
+							'description'       => __( 'Optional. Leave blank to use default URL.', 'e-commerce-jetpack' ),
 							'default'           => '',
 							'type'              => 'text',
 						),
@@ -345,8 +345,8 @@ if ( ! function_exists( 'init_wc_gateway_wcj_custom_class' ) ) {
 					$this->id                       = ( 1 === $id_count ) ? 'jetpack_custom_gateway' : 'jetpack_custom_gateway_' . $id_count;
 					$this->has_fields               = false;
 					$this->method_title             = get_option( 'wcj_custom_payment_gateways_admin_title_' . $id_count,
-						__( 'Custom Gateway', 'woocommerce-jetpack' ) . ' #' . $id_count );
-					$this->method_description       = __( 'Booster for WooCommerce: Custom Payment Gateway', 'woocommerce-jetpack' ) . ' #' . $id_count;
+						__( 'Custom Gateway', 'e-commerce-jetpack' ) . ' #' . $id_count );
+					$this->method_description       = __( 'Booster for WooCommerce: Custom Payment Gateway', 'e-commerce-jetpack' ) . ' #' . $id_count;
 					$this->id_count = $id_count;
 					// Load the settings.
 					$this->init_form_fields();

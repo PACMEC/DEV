@@ -11,16 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title' => __( 'General Options', 'woocommerce-jetpack' ),
+		'title' => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'  => 'title',
 		'id'    => 'wcj_payment_gateways_by_user_role_general_options',
 	),
 	array(
-		'title'    => __( 'Multiple Role Checking', 'woocommerce-jetpack' ),
+		'title'    => __( 'Multiple Role Checking', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'default'  => 'no',
-		'desc_tip' => __( 'Enable if you have some plugin that allows users with multiple roles like "User Role Editor".', 'woocommerce-jetpack' ),
-		'desc'     => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'woocommerce-jetpack' ) : $message,
+		'desc_tip' => __( 'Enable if you have some plugin that allows users with multiple roles like "User Role Editor".', 'e-commerce-jetpack' ),
+		'desc'     => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'e-commerce-jetpack' ) : $message,
 		'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 		'id'       => 'wcj_payment_gateways_by_user_role_multi_role_check',
 	),
@@ -29,10 +29,10 @@ $settings = array(
 		'id'    => 'wcj_payment_gateways_by_user_role_general_options',
 	),
 	array(
-		'title' => __( 'Payment Gateways', 'woocommerce-jetpack' ),
+		'title' => __( 'Payment Gateways', 'e-commerce-jetpack' ),
 		'type'  => 'title',
-		'desc'  => __( 'Leave empty to disable.', 'woocommerce-jetpack' ) . ' ' .
-			sprintf( __( 'Custom roles can be added via "Add/Manage Custom Roles" tool in Booster\'s <a href="%s">General</a> module', 'woocommerce-jetpack' ),
+		'desc'  => __( 'Leave empty to disable.', 'e-commerce-jetpack' ) . ' ' .
+			sprintf( __( 'Custom roles can be added via "Add/Manage Custom Roles" tool in Booster\'s <a href="%s">General</a> module', 'e-commerce-jetpack' ),
 				admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=general' ) ),
 		'id'    => 'wcj_payment_gateways_by_user_role_gateways_options',
 	),
@@ -55,7 +55,7 @@ foreach ( $gateways as $key => $gateway ) {
 		array(
 			'title'     => $gateway->title,
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Include User Roles', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Include User Roles', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_user_roles_include_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -66,7 +66,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Exclude User Roles', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Exclude User Roles', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_user_roles_exclude_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',

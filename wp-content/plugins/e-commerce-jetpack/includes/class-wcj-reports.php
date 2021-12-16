@@ -30,8 +30,8 @@ class WCJ_Reports extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'reports';
-		$this->short_desc = __( 'Reports', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Stock, sales, customers etc. reports.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Reports', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Stock, sales, customers etc. reports.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-reports';
 		parent::__construct();
 
@@ -71,9 +71,9 @@ class WCJ_Reports extends WCJ_Module {
 			$args = array(
 				'parent' => false,
 				'id'     => $parent,
-				'title'  => __( 'Booster: More Ranges - Months', 'woocommerce-jetpack' ),
+				'title'  => __( 'Booster: More Ranges - Months', 'e-commerce-jetpack' ),
 				'href'   => false,
-				'meta'   => array( 'title' => __( 'Select Range', 'woocommerce-jetpack' ) ),
+				'meta'   => array( 'title' => __( 'Select Range', 'e-commerce-jetpack' ) ),
 			);
 			$wp_admin_bar->add_node( $args );
 
@@ -116,9 +116,9 @@ class WCJ_Reports extends WCJ_Module {
 			$args = array(
 				'parent' => false,
 				'id'     => $parent,
-				'title'  => __( 'Booster: More Ranges', 'woocommerce-jetpack' ),
+				'title'  => __( 'Booster: More Ranges', 'e-commerce-jetpack' ),
 				'href'   => false,
-				'meta'   => array( 'title' => __( 'Select Range', 'woocommerce-jetpack' ) ),
+				'meta'   => array( 'title' => __( 'Select Range', 'e-commerce-jetpack' ) ),
 			);
 			$wp_admin_bar->add_node( $args );
 
@@ -219,28 +219,28 @@ class WCJ_Reports extends WCJ_Module {
 	function add_sales_reports( $reports ) {
 
 		$reports['orders']['reports']['booster_products_sales_daily'] = array(
-			'title'       => __( 'Booster: Product Sales (Daily)', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Product Sales (Daily)', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => false,
 			'callback'    => array( $this, 'get_report_products_sales_daily' ),
 		);
 
 		$reports['orders']['reports']['booster_products_sales'] = array(
-			'title'       => __( 'Booster: Product Sales (Monthly)', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Product Sales (Monthly)', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => false,
 			'callback'    => array( $this, 'get_report_sales' ),
 		);
 
 		$reports['orders']['reports']['booster_monthly_sales'] = array(
-			'title'       => __( 'Booster: Monthly Sales (with Currency Conversion)', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Monthly Sales (with Currency Conversion)', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => false,
 			'callback'    => array( $this, 'get_report_monthly_sales' ),
 		);
 
 		$reports['orders']['reports']['booster_gateways'] = array(
-			'title'       => __( 'Booster: Payment Gateways', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Payment Gateways', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => false,
 			'callback'    => array( $this, 'get_report_orders_gateways' ),
@@ -255,21 +255,21 @@ class WCJ_Reports extends WCJ_Module {
 	function add_stock_reports( $reports ) {
 
 		$reports['stock']['reports']['on_stock'] = array(
-			'title'       => __( 'Booster: All in stock', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: All in stock', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => true,
 			'callback'    => array( $this, 'get_report_stock' ),
 		);
 
 		$reports['stock']['reports']['understocked'] = array(
-			'title'       => __( 'Booster: Understocked', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Understocked', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => true,
 			'callback'    => array( $this, 'get_report_stock' ),
 		);
 
 		$reports['stock']['reports']['overstocked'] = array(
-			'title'       => __( 'Booster: Overstocked', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Overstocked', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => true,
 			'callback'    => array( $this, 'get_report_stock' ),
@@ -284,14 +284,14 @@ class WCJ_Reports extends WCJ_Module {
 	function add_customers_by_country_report( $reports ) {
 
 		$reports['customers']['reports']['customers_by_country'] = array(
-			'title'       => __( 'Booster: Customers by Country', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Customers by Country', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => true,
 			'callback'    => array( $this, 'get_report_customers' ),
 		);
 
 		$reports['customers']['reports']['customers_by_country_sets'] = array(
-			'title'       => __( 'Booster: Customers by Country Sets', 'woocommerce-jetpack' ),
+			'title'       => __( 'Booster: Customers by Country Sets', 'e-commerce-jetpack' ),
 			'description' => '',
 			'hide_title'  => true,
 			'callback'    => array( $this, 'get_report_customers' ),

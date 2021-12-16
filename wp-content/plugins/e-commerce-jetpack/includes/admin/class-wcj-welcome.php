@@ -40,8 +40,8 @@ class WCJ_Welcome {
 	 */
 	public function wcj_register_welcome_page() {
 		add_dashboard_page(
-			esc_html__( 'Welcome to Booster', 'woocommerce-jetpack' ),
-			esc_html__( 'Welcome to Booster', 'woocommerce-jetpack' ),
+			esc_html__( 'Welcome to Booster', 'e-commerce-jetpack' ),
+			esc_html__( 'Welcome to Booster', 'e-commerce-jetpack' ),
 			apply_filters( 'wcj_welcome_screen_filter', 'manage_options' ),
 			'jetpack-getting-started',
 			array( $this, 'wcj_welcome_screen_content' )

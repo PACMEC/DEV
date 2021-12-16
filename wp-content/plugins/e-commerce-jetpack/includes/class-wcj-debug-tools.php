@@ -22,15 +22,15 @@ class WCJ_Debug_Tools extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'debug_tools';
-		$this->short_desc = __( 'Debug Tools', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Booster for WooCommerce debug and log tools.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Debug Tools', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Booster for WooCommerce debug and log tools.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-debug-tools';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'debug_tools' => array(
-				'title'     => __( 'Log', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Log.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Log', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Log.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -52,14 +52,14 @@ class WCJ_Debug_Tools extends WCJ_Module {
 		// Header
 		$the_tools = '';
 		$the_tools .= $this->get_tool_header_html( 'debug_tools' );
-		$the_tools .= '<p><a href="' . add_query_arg( 'wcj_delete_log', '1' ) . '">' . __( 'Delete Log', 'woocommerce-jetpack' ) . '</a></p>';
+		$the_tools .= '<p><a href="' . add_query_arg( 'wcj_delete_log', '1' ) . '">' . __( 'Delete Log', 'e-commerce-jetpack' ) . '</a></p>';
 		// Log
 		$the_log = '';
-		$the_log .= '<p style="font-style:italic;color:gray;">' . sprintf( __( 'Now: %s', 'woocommerce-jetpack' ), date( 'Y-m-d H:i:s' ) ) . '</p>';
+		$the_log .= '<p style="font-style:italic;color:gray;">' . sprintf( __( 'Now: %s', 'e-commerce-jetpack' ), date( 'Y-m-d H:i:s' ) ) . '</p>';
 		if ( '' != ( $log = wcj_get_option( 'wcj_log', '' ) ) ) {
 			$the_log .= '<pre style="color:green;background-color:black;padding:5px;">' . $log . '</pre>';
 		} else {
-			$the_log .= '<p style="font-style:italic;color:gray;">' . __( 'Log is empty.', 'woocommerce-jetpack' ) . '</p>';
+			$the_log .= '<p style="font-style:italic;color:gray;">' . __( 'Log is empty.', 'e-commerce-jetpack' ) . '</p>';
 		}
 		// Final output
 		$html = '';
@@ -90,7 +90,7 @@ class WCJ_Debug_Tools extends WCJ_Module {
 			'WCJ_SESSION_TYPE',
 		);
 		foreach ( $constants_array as $the_constant ) {
-			$system_info[] = array( $the_constant, ( defined( $the_constant ) ? constant( $the_constant ) : __( 'NOT DEFINED', 'woocommerce-jetpack' ) ) );
+			$system_info[] = array( $the_constant, ( defined( $the_constant ) ? constant( $the_constant ) : __( 'NOT DEFINED', 'e-commerce-jetpack' ) ) );
 		}
 		if ( isset( $_GET['wcj_debug'] ) ) {
 			foreach ( $_SERVER as $server_var_id => $server_var_value ) {

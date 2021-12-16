@@ -142,7 +142,7 @@ if ( ! function_exists( 'wcj_send_file' ) ) {
 			}
 			exit();
 		} else {
-			die( __( 'Unexpected error', 'woocommerce-jetpack' ) );
+			die( __( 'Unexpected error', 'e-commerce-jetpack' ) );
 		}
 	}
 }
@@ -186,7 +186,7 @@ if ( ! function_exists( 'wcj_get_js_confirmation' ) ) {
 	 */
 	function wcj_get_js_confirmation( $confirmation_message = '' ) {
 		if ( '' === $confirmation_message ) {
-			$confirmation_message = __( 'Are you sure?', 'woocommerce-jetpack' );
+			$confirmation_message = __( 'Are you sure?', 'e-commerce-jetpack' );
 		}
 		return ' onclick="return confirm(\'' . $confirmation_message . '\')"';
 	}
@@ -446,7 +446,7 @@ if ( ! function_exists( 'wcj_is_module_deprecated' ) ) {
 			'product_info' => array(
 				'cat'    => 'products',
 				'module' => 'product_custom_info',
-				'title'  => __( 'Product Info', 'woocommerce-jetpack' ),
+				'title'  => __( 'Product Info', 'e-commerce-jetpack' ),
 			),
 		);
 		if ( ! array_key_exists( $module_id, $deprecated_and_replacement_modules ) ) {
@@ -649,29 +649,29 @@ if ( ! function_exists( 'wcj_get_cart_filters' ) ) {
 	 */
 	function wcj_get_cart_filters() {
 		return array(
-			'woocommerce_before_cart'                    => __( 'Before cart', 'woocommerce-jetpack' ),
-			'woocommerce_before_cart_table'              => __( 'Before cart table', 'woocommerce-jetpack' ),
-			'woocommerce_before_cart_contents'           => __( 'Before cart contents', 'woocommerce-jetpack' ),
-			'woocommerce_cart_contents'                  => __( 'Cart contents', 'woocommerce-jetpack' ),
-			'woocommerce_cart_coupon'                    => __( 'Cart coupon', 'woocommerce-jetpack' ),
-			'woocommerce_cart_actions'                   => __( 'Cart actions', 'woocommerce-jetpack' ),
-			'woocommerce_after_cart_contents'            => __( 'After cart contents', 'woocommerce-jetpack' ),
-			'woocommerce_after_cart_table'               => __( 'After cart table', 'woocommerce-jetpack' ),
-			'woocommerce_cart_collaterals'               => __( 'Cart collaterals', 'woocommerce-jetpack' ),
-			'woocommerce_after_cart'                     => __( 'After cart', 'woocommerce-jetpack' ),
+			'woocommerce_before_cart'                    => __( 'Before cart', 'e-commerce-jetpack' ),
+			'woocommerce_before_cart_table'              => __( 'Before cart table', 'e-commerce-jetpack' ),
+			'woocommerce_before_cart_contents'           => __( 'Before cart contents', 'e-commerce-jetpack' ),
+			'woocommerce_cart_contents'                  => __( 'Cart contents', 'e-commerce-jetpack' ),
+			'woocommerce_cart_coupon'                    => __( 'Cart coupon', 'e-commerce-jetpack' ),
+			'woocommerce_cart_actions'                   => __( 'Cart actions', 'e-commerce-jetpack' ),
+			'woocommerce_after_cart_contents'            => __( 'After cart contents', 'e-commerce-jetpack' ),
+			'woocommerce_after_cart_table'               => __( 'After cart table', 'e-commerce-jetpack' ),
+			'woocommerce_cart_collaterals'               => __( 'Cart collaterals', 'e-commerce-jetpack' ),
+			'woocommerce_after_cart'                     => __( 'After cart', 'e-commerce-jetpack' ),
 
-			'woocommerce_before_cart_totals'             => __( 'Before cart totals', 'woocommerce-jetpack' ),
-			'woocommerce_cart_totals_before_shipping'    => __( 'Cart totals: Before shipping', 'woocommerce-jetpack' ),
-			'woocommerce_cart_totals_after_shipping'     => __( 'Cart totals: After shipping', 'woocommerce-jetpack' ),
-			'woocommerce_cart_totals_before_order_total' => __( 'Cart totals: Before order total', 'woocommerce-jetpack' ),
-			'woocommerce_cart_totals_after_order_total'  => __( 'Cart totals: After order total', 'woocommerce-jetpack' ),
-			'woocommerce_proceed_to_checkout'            => __( 'Proceed to checkout', 'woocommerce-jetpack' ),
-			'woocommerce_after_cart_totals'              => __( 'After cart totals', 'woocommerce-jetpack' ),
+			'woocommerce_before_cart_totals'             => __( 'Before cart totals', 'e-commerce-jetpack' ),
+			'woocommerce_cart_totals_before_shipping'    => __( 'Cart totals: Before shipping', 'e-commerce-jetpack' ),
+			'woocommerce_cart_totals_after_shipping'     => __( 'Cart totals: After shipping', 'e-commerce-jetpack' ),
+			'woocommerce_cart_totals_before_order_total' => __( 'Cart totals: Before order total', 'e-commerce-jetpack' ),
+			'woocommerce_cart_totals_after_order_total'  => __( 'Cart totals: After order total', 'e-commerce-jetpack' ),
+			'woocommerce_proceed_to_checkout'            => __( 'Proceed to checkout', 'e-commerce-jetpack' ),
+			'woocommerce_after_cart_totals'              => __( 'After cart totals', 'e-commerce-jetpack' ),
 
-			'woocommerce_before_shipping_calculator'     => __( 'Before shipping calculator', 'woocommerce-jetpack' ),
-			'woocommerce_after_shipping_calculator'      => __( 'After shipping calculator', 'woocommerce-jetpack' ),
+			'woocommerce_before_shipping_calculator'     => __( 'Before shipping calculator', 'e-commerce-jetpack' ),
+			'woocommerce_after_shipping_calculator'      => __( 'After shipping calculator', 'e-commerce-jetpack' ),
 
-			'woocommerce_cart_is_empty'                  => __( 'If cart is empty', 'woocommerce-jetpack' ),
+			'woocommerce_cart_is_empty'                  => __( 'If cart is empty', 'e-commerce-jetpack' ),
 		);
 	}
 }

@@ -34,7 +34,7 @@ foreach ( $products as $product_id => $desc ) {
 		'name'       => 'wcj_multicurrency_base_price_currency_' . $product_id,
 		'default'    => '',
 		'type'       => 'select',
-		'title'      => __( 'Product Currency', 'woocommerce-jetpack' ),
+		'title'      => __( 'Product Currency', 'e-commerce-jetpack' ),
 		'desc'       => $desc,
 		'product_id' => $product_id,
 		'meta_name'  => '_' . 'wcj_multicurrency_base_price_currency',
@@ -54,7 +54,7 @@ $options = array(
 		'name'       => 'wcj_multicurrency_base_price_currency',
 		'default'    => get_woocommerce_currency(),
 		'type'       => 'select',
-		'title'      => __( 'Product Currency', 'woocommerce-jetpack' ),
+		'title'      => __( 'Product Currency', 'e-commerce-jetpack' ),
 		'options'    => $currency_codes,
 	),
 );

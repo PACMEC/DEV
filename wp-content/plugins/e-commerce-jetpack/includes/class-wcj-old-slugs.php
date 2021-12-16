@@ -20,15 +20,15 @@ class WCJ_Old_Slugs extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'old_slugs';
-		$this->short_desc = __( 'Old Slugs', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Remove old products slugs.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Old Slugs', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Remove old products slugs.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-remove-old-products-slugs';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'old_slugs' => array(
-				'title' => __( 'Remove Old Slugs', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Tool removes old slugs/permalinks from database.', 'woocommerce-jetpack' ),
+				'title' => __( 'Remove Old Slugs', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Tool removes old slugs/permalinks from database.', 'e-commerce-jetpack' ),
 			),
 		) );
 	}
@@ -45,11 +45,11 @@ class WCJ_Old_Slugs extends WCJ_Module {
 		$num_old_slugs      = count( $all_old_slugs );
 		$remove_result_html = '';
 		$headings = array(
-			__( 'Old slug', 'woocommerce-jetpack' ),
-			__( 'Post title', 'woocommerce-jetpack' ),
-			__( 'Post id', 'woocommerce-jetpack' ),
-			__( 'Post type', 'woocommerce-jetpack' ),
-			__( 'Current slug', 'woocommerce-jetpack' ),
+			__( 'Old slug', 'e-commerce-jetpack' ),
+			__( 'Post title', 'e-commerce-jetpack' ),
+			__( 'Post id', 'e-commerce-jetpack' ),
+			__( 'Post type', 'e-commerce-jetpack' ),
+			__( 'Current slug', 'e-commerce-jetpack' ),
 		);
 		$multi_table_data   = array(
 			'products'     => array( $headings ),
@@ -82,9 +82,9 @@ class WCJ_Old_Slugs extends WCJ_Module {
 				$recheck_result_count = count( $recheck_result );
 				$remove_result_html   = '<div class="updated"><p>' .
 					sprintf(
-						__( 'Removing old slugs from database finished! <strong>%d</strong> old slug(s) deleted.', 'woocommerce-jetpack' ),
+						__( 'Removing old slugs from database finished! <strong>%d</strong> old slug(s) deleted.', 'e-commerce-jetpack' ),
 						( $num_old_slugs - $recheck_result_count )
-					) . ' ' . __( 'Please <a href="">refresh</a> the page.', 'woocommerce-jetpack' ) .
+					) . ' ' . __( 'Please <a href="">refresh</a> the page.', 'e-commerce-jetpack' ) .
 				'</p></div>';
 			}
 		}
@@ -104,16 +104,16 @@ class WCJ_Old_Slugs extends WCJ_Module {
 		$html .= $remove_result_html;
 		$types = array(
 			'products' => array(
-				'table_heading' => __( 'Old products slugs found:', 'woocommerce-jetpack' ),
+				'table_heading' => __( 'Old products slugs found:', 'e-commerce-jetpack' ),
 				'table_content' => wcj_get_table_html( $multi_table_data['products'], array( 'table_class' => 'widefat striped' ) ),
 				'button_name'   => 'remove_old_products_slugs',
-				'button_label'  => __( 'Remove all old product slugs', 'woocommerce-jetpack' ),
+				'button_label'  => __( 'Remove all old product slugs', 'e-commerce-jetpack' ),
 			),
 			'non_products' => array(
-				'table_heading' => __( 'Old non-products slugs found:', 'woocommerce-jetpack' ),
+				'table_heading' => __( 'Old non-products slugs found:', 'e-commerce-jetpack' ),
 				'table_content' => wcj_get_table_html( $multi_table_data['non_products'], array( 'table_class' => 'widefat striped' ) ),
 				'button_name'   => 'remove_old_non_products_slugs',
-				'button_label'  => __( 'Remove all old non-product slugs', 'woocommerce-jetpack' ),
+				'button_label'  => __( 'Remove all old non-product slugs', 'e-commerce-jetpack' ),
 			),
 		);
 		foreach ( $types as $type_id => $type ) {
@@ -127,7 +127,7 @@ class WCJ_Old_Slugs extends WCJ_Module {
 			}
 		}
 		if ( $num_old_slugs == 0 ) {
-			$html .= '<div class="updated"><p><strong>' . __( 'No old slugs found.', 'woocommerce-jetpack' ) . '</strong></p></div>';
+			$html .= '<div class="updated"><p><strong>' . __( 'No old slugs found.', 'e-commerce-jetpack' ) . '</strong></p></div>';
 		}
 		$html .= '</div>';
 		echo $html;

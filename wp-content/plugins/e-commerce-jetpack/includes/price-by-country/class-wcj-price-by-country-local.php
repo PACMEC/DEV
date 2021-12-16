@@ -108,7 +108,7 @@ class WCJ_Price_by_Country_Local {
 
 			array(
 				'id'      => 'wcj_' . $meta_box_id . '_make_empty_price_' . $this->scope . '_',
-				'title'   => __( 'Make empty price', 'woocommerce-jetpack' ),
+				'title'   => __( 'Make empty price', 'e-commerce-jetpack' ),
 				'type'    => 'checkbox',
 				'default' => 'off',
 			),
@@ -212,7 +212,7 @@ class WCJ_Price_by_Country_Local {
 					$countries .= ( '' != ( $group = wcj_get_option( 'wcj_price_by_country_countries_group_chosen_select_' . $i, '' ) ) ? implode( ',', $group ) : '' );
 					break;
 			}
-			$admin_title = wcj_get_option( 'wcj_price_by_country_countries_group_admin_title_' . $i, __( 'Group', 'woocommerce-jetpack' ) . ' #' . $i );
+			$admin_title = wcj_get_option( 'wcj_price_by_country_countries_group_admin_title_' . $i, __( 'Group', 'e-commerce-jetpack' ) . ' #' . $i );
 			$html .= '<details style="float: left; border-top: 1px dashed #cccccc; width: 100%; padding-top: 10px;">' .
 				'<summary style="font-weight:bold;">' . $admin_title . '</summary><p>' . $countries . '</p>' .
 			'</details>';

@@ -32,9 +32,9 @@ class WCJ_Price_By_Country extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'price_by_country';
-		$this->short_desc = __( 'Prices and Currencies by Country', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Change product price and currency automatically by customer\'s country (1 country group allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Change product price and currency automatically by customer\'s country.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Prices and Currencies by Country', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Change product price and currency automatically by customer\'s country (1 country group allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Change product price and currency automatically by customer\'s country.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-prices-and-currencies-by-country';
 		parent::__construct();
 
@@ -150,7 +150,7 @@ class WCJ_Price_By_Country extends WCJ_Module {
 		if ( isset( $_GET['recalculate_price_filter_products_prices'] ) && ( wcj_is_user_role( 'administrator' ) || is_shop_manager() ) ) {
 			wcj_update_products_price_by_country();
 			global $wcj_notice;
-			$wcj_notice = __( 'Price filter widget product prices recalculated.', 'woocommerce-jetpack' );
+			$wcj_notice = __( 'Price filter widget product prices recalculated.', 'e-commerce-jetpack' );
 		}
 	}
 

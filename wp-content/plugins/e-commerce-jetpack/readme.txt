@@ -261,7 +261,7 @@ To unlock all Booster for WooCommerce features, please install additional paid B
 == Feedback ==
 * We are open to your suggestions and feedback - thank you for using or trying out one of our plugins!
 * If you have any ideas how to upgrade the plugin to make it better, or if you have ideas about the features that are missing from our plugin, please [fill the form](https://booster.io/submit-idea/).
-* For support please visit the [Plugin Support Forum](https://wordpress.org/support/plugin/woocommerce-jetpack/).
+* For support please visit the [Plugin Support Forum](https://wordpress.org/support/plugin/e-commerce-jetpack/).
 
 == Changelog ==
 
@@ -3230,7 +3230,7 @@ To unlock all Booster for WooCommerce features, please install additional paid B
 * Dev - PDF Invoicing - Footer - Customization options added. Code changes also include adding `WCJ_TCPDF` class and defining `K_PATH_IMAGES` in `tcpdf_config.php`.
 * Fix - PDF Invoicing - Emails - Tweak: "New order" label fixed.
 * Dev - PDF Invoicing - **Credit Note** document type added.
-* Dev - PDF Invoicing - Datepicker script moved from Invoices Renumerate tool to global `woocommerce-jetpack.php`.
+* Dev - PDF Invoicing - Datepicker script moved from Invoices Renumerate tool to global `e-commerce-jetpack.php`.
 * Fix - PDF Invoicing - Enable "Save as" bug fixed.
 * Dev - PDF Invoicing - Option for `item_variation` column added to `[wcj_order_items_table]` shortcode. Suggested by Brad.
 * Dev - PDF Invoicing - Shop manager (not only admin) now is also allowed to see the invoices (`is_shop_manager` function). Also added to PDF Invoices (V1).

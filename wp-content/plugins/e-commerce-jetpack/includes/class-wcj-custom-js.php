@@ -24,8 +24,8 @@ class WCJ_Custom_JS extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'custom_js';
-		$this->short_desc = __( 'Custom JS', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Separate custom JS for front and back end.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom JS', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Separate custom JS for front and back end.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-custom-js';
 		parent::__construct();
 

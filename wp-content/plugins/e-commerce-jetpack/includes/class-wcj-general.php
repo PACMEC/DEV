@@ -21,16 +21,16 @@ class WCJ_General extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'general';
-		$this->short_desc = __( 'General', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Booster for WooCommerce general front-end tools.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'General', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Booster for WooCommerce general front-end tools.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-general-tools';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'custom_roles' => array(
-				'title'     => __( 'Add/Manage Custom Roles', 'woocommerce-jetpack' ),
-				'tab_title' => __( 'Custom Roles', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Manage Custom Roles.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Add/Manage Custom Roles', 'e-commerce-jetpack' ),
+				'tab_title' => __( 'Custom Roles', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Manage Custom Roles.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -43,13 +43,13 @@ class WCJ_General extends WCJ_Module {
 			if ( 0 != ( $php_memory_limit = wcj_get_option( 'wcj_admin_tools_php_memory_limit', 0 ) ) ) {
 				ini_set( 'memory_limit', $php_memory_limit . 'M' );
 			}
-			$this->current_php_memory_limit = sprintf( ' ' . __( 'Current PHP memory limit: %s.', 'woocommerce-jetpack' ), ini_get( 'memory_limit' ) );
+			$this->current_php_memory_limit = sprintf( ' ' . __( 'Current PHP memory limit: %s.', 'e-commerce-jetpack' ), ini_get( 'memory_limit' ) );
 
 			// PHP Time Limit
 			if ( 0 != ( $php_time_limit = wcj_get_option( 'wcj_admin_tools_php_time_limit', 0 ) ) ) {
 				set_time_limit( $php_time_limit );
 			}
-			$this->current_php_time_limit = sprintf( ' ' . __( 'Current PHP time limit: %s seconds.', 'woocommerce-jetpack' ), ini_get( 'max_execution_time' ) );
+			$this->current_php_time_limit = sprintf( ' ' . __( 'Current PHP time limit: %s seconds.', 'e-commerce-jetpack' ), ini_get( 'max_execution_time' ) );
 
 			// Recalculate cart totals
 			if ( 'yes' === wcj_get_option( 'wcj_general_advanced_recalculate_cart_totals', 'no' ) ) {
@@ -120,7 +120,7 @@ class WCJ_General extends WCJ_Module {
 		$args = array(
 			'parent' => false,
 			'id'     => 'booster-user-role-changer',
-			'title'  => __( 'Booster User Role', 'woocommerce-jetpack' ) . $current_booster_user_role,
+			'title'  => __( 'Booster User Role', 'e-commerce-jetpack' ) . $current_booster_user_role,
 			'href'   => false,
 		);
 		$wp_admin_bar->add_node( $args );
@@ -181,11 +181,11 @@ class WCJ_General extends WCJ_Module {
 	function create_custom_roles_tool() {
 		if ( isset( $_POST['wcj_add_new_role'] ) ) {
 			if ( empty( $_POST['wcj_custom_role_id'] ) || empty( $_POST['wcj_custom_role_name'] ) || empty( $_POST['wcj_custom_role_caps'] ) ) {
-				echo '<p style="color:red;font-weight:bold;">' . __( 'All fields are required!', 'woocommerce-jetpack') . '</p>';
+				echo '<p style="color:red;font-weight:bold;">' . __( 'All fields are required!', 'e-commerce-jetpack') . '</p>';
 			} else {
 				$role_id = sanitize_key( $_POST['wcj_custom_role_id'] );
 				if ( is_numeric( $role_id ) ) {
-					echo '<p style="color:red;font-weight:bold;">' . __( 'Role ID must not be numbers only!', 'woocommerce-jetpack') . '</p>';
+					echo '<p style="color:red;font-weight:bold;">' . __( 'Role ID must not be numbers only!', 'e-commerce-jetpack') . '</p>';
 				} else {
 					$caps_role = get_role( $_POST['wcj_custom_role_caps'] );
 					$caps      = ( ! empty( $caps_role->capabilities ) && is_array( $caps_role->capabilities ) ? $caps_role->capabilities : array() );
@@ -194,9 +194,9 @@ class WCJ_General extends WCJ_Module {
 						$custom_roles = wcj_get_option( 'wcj_custom_roles', array() ); // `wcj_custom_roles` option added since Booster v4.0.0
 						$custom_roles[ $role_id ] = array( 'display_name' => $_POST['wcj_custom_role_name'], 'caps_role' => $_POST['wcj_custom_role_caps'] );
 						update_option( 'wcj_custom_roles', $custom_roles );
-						echo '<p style="color:green;font-weight:bold;">' . __( 'Role successfully added!', 'woocommerce-jetpack') . '</p>';
+						echo '<p style="color:green;font-weight:bold;">' . __( 'Role successfully added!', 'e-commerce-jetpack') . '</p>';
 					} else {
-						echo '<p style="color:red;font-weight:bold;">' . __( 'Role already exists!', 'woocommerce-jetpack') . '</p>';
+						echo '<p style="color:red;font-weight:bold;">' . __( 'Role already exists!', 'e-commerce-jetpack') . '</p>';
 					}
 				}
 			}
@@ -209,34 +209,34 @@ class WCJ_General extends WCJ_Module {
 				unset( $custom_roles[ $_GET['wcj_delete_role'] ] );
 				update_option( 'wcj_custom_roles', $custom_roles );
 			}
-			echo '<p style="color:green;font-weight:bold;">' . sprintf( __( 'Role %s successfully deleted!', 'woocommerce-jetpack'), sanitize_text_field($_GET['wcj_delete_role'] )) . '</p>';
+			echo '<p style="color:green;font-weight:bold;">' . sprintf( __( 'Role %s successfully deleted!', 'e-commerce-jetpack'), sanitize_text_field($_GET['wcj_delete_role'] )) . '</p>';
 		}
 
 		echo $this->get_tool_header_html( 'custom_roles' );
 
 		$table_data = array();
-		$table_data[] = array( __( 'ID', 'woocommerce-jetpack'), __( 'Name', 'woocommerce-jetpack'), __( 'Capabilities', 'woocommerce-jetpack'), __( 'Actions', 'woocommerce-jetpack') );
+		$table_data[] = array( __( 'ID', 'e-commerce-jetpack'), __( 'Name', 'e-commerce-jetpack'), __( 'Capabilities', 'e-commerce-jetpack'), __( 'Actions', 'e-commerce-jetpack') );
 		$existing_roles = wcj_get_user_roles();
 		$default_wp_wc_roles = array( 'guest', 'administrator', 'editor', 'author', 'contributor', 'subscriber', 'customer', 'shop_manager' );
 		$custom_roles = wcj_get_option( 'wcj_custom_roles', array() );
 		foreach ( $existing_roles as $role_key => $role_data ) {
 			$delete_html = ( in_array( $role_key, $default_wp_wc_roles ) )
 				? ''
-				: '<a href="' . add_query_arg( 'wcj_delete_role', $role_key ). '"' . wcj_get_js_confirmation() . '>' . __( 'Delete', 'woocommerce-jetpack') . '</a>';
+				: '<a href="' . add_query_arg( 'wcj_delete_role', $role_key ). '"' . wcj_get_js_confirmation() . '>' . __( 'Delete', 'e-commerce-jetpack') . '</a>';
 			$caps = ( ! empty( $custom_roles[ $role_key ]['caps_role'] ) ? $custom_roles[ $role_key ]['caps_role'] : $role_key );
 			$table_data[] = array( $role_key, $role_data['name'], $caps, $delete_html );
 		}
-		echo '<h3>' . __( 'Existing Roles', 'woocommerce-jetpack') . '</h3>';
+		echo '<h3>' . __( 'Existing Roles', 'e-commerce-jetpack') . '</h3>';
 		echo wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped' ) );
 
 		$table_data = array();
-		$table_data[] = array( __( 'ID', 'woocommerce-jetpack'),   '<input style="width:100%" required type="text" name="wcj_custom_role_id">' );
-		$table_data[] = array( __( 'Name', 'woocommerce-jetpack'), '<input style="width:100%" required type="text" name="wcj_custom_role_name">' );
-		$table_data[] = array( __( 'Capabilities', 'woocommerce-jetpack'), wcj_get_select_html( 'wcj_custom_role_caps', wcj_get_user_roles_options(), 'width:100%' ) );
-		echo '<h3>' . __( 'Add New Role', 'woocommerce-jetpack') . '</h3>';
+		$table_data[] = array( __( 'ID', 'e-commerce-jetpack'),   '<input style="width:100%" required type="text" name="wcj_custom_role_id">' );
+		$table_data[] = array( __( 'Name', 'e-commerce-jetpack'), '<input style="width:100%" required type="text" name="wcj_custom_role_name">' );
+		$table_data[] = array( __( 'Capabilities', 'e-commerce-jetpack'), wcj_get_select_html( 'wcj_custom_role_caps', wcj_get_user_roles_options(), 'width:100%' ) );
+		echo '<h3>' . __( 'Add New Role', 'e-commerce-jetpack') . '</h3>';
 		echo '<form method="post" action="' . remove_query_arg( 'wcj_delete_role' ) . '">' .
 			wcj_get_table_html( $table_data, array( 'table_class' => 'widefat', 'table_heading_type' => 'vertical', 'table_style' => 'width:20%;min-width:300px;', ) )
-			. '<p>' . '<input type="submit" name="wcj_add_new_role" class="button-primary" value="' . __( 'Add', 'woocommerce-jetpack' ) . '">' . '</p>'
+			. '<p>' . '<input type="submit" name="wcj_add_new_role" class="button-primary" value="' . __( 'Add', 'e-commerce-jetpack' ) . '">' . '</p>'
 			. '</form>';
 	}
 

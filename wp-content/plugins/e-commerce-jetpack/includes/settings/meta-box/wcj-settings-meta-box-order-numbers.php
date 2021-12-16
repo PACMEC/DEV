@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'   => __( 'Number', 'woocommerce-jetpack' ),
+		'title'   => __( 'Number', 'e-commerce-jetpack' ),
 		'name'    => 'wcj_order_number',
 		'default' => '',
 		'type'    => 'number',

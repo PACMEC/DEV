@@ -66,12 +66,12 @@ if ( ! function_exists( 'wcj_get_currency_exchange_rate_servers' ) ) {
 	 */
 	function wcj_get_currency_exchange_rate_servers() {
 		return apply_filters( 'wcj_currency_exchange_rates_servers', array(
-			'ecb'                    => __( 'European Central Bank (ECB)', 'woocommerce-jetpack' ) . ' [' . __( 'recommended', 'woocommerce-jetpack' ) . ']',
-			'currencyconverterapi'   => __( 'The Free Currency Converter API', 'woocommerce-jetpack' ),
-			'boe'                    => __( 'Bank of England (BOE)', 'woocommerce-jetpack' ),
-			'tcmb'                   => __( 'TCMB', 'woocommerce-jetpack' ),
-			'coinbase'               => __( 'Coinbase', 'woocommerce-jetpack' ),
-			'coinmarketcap'          => __( 'CoinMarketCap', 'woocommerce-jetpack' ),
+			'ecb'                    => __( 'European Central Bank (ECB)', 'e-commerce-jetpack' ) . ' [' . __( 'recommended', 'e-commerce-jetpack' ) . ']',
+			'currencyconverterapi'   => __( 'The Free Currency Converter API', 'e-commerce-jetpack' ),
+			'boe'                    => __( 'Bank of England (BOE)', 'e-commerce-jetpack' ),
+			'tcmb'                   => __( 'TCMB', 'e-commerce-jetpack' ),
+			'coinbase'               => __( 'Coinbase', 'e-commerce-jetpack' ),
+			'coinmarketcap'          => __( 'CoinMarketCap', 'e-commerce-jetpack' ),
 		) );
 	}
 }

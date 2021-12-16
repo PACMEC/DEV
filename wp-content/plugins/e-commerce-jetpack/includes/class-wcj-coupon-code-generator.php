@@ -25,9 +25,9 @@ class WCJ_Coupon_Code_Generator extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'coupon_code_generator';
-		$this->short_desc = __( 'Coupon Code Generator', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Coupon code generator (Multiple generation algorithms available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Coupon code generator.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Coupon Code Generator', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Coupon code generator (Multiple generation algorithms available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Coupon code generator.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-coupon-code-generator';
 		parent::__construct();
 

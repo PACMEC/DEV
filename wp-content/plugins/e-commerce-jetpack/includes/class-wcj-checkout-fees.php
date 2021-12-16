@@ -23,9 +23,9 @@ class WCJ_Checkout_Fees extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'checkout_fees';
-		$this->short_desc = __( 'Checkout Fees', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add fees to WooCommerce cart & checkout (1 fee allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add fees to WooCommerce cart & checkout.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Checkout Fees', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add fees to WooCommerce cart & checkout (1 fee allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add fees to WooCommerce cart & checkout.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-checkout-fees';
 		parent::__construct();
 
@@ -229,7 +229,7 @@ class WCJ_Checkout_Fees extends WCJ_Module {
 
 		foreach ( $valid_fees as $fee_id ) {
 			// Adding the fee
-			$title = ( isset( $titles[ $fee_id ] ) ? $titles[ $fee_id ] : __( 'Fee', 'woocommerce-jetpack' ) . ' #' . $fee_id );
+			$title = ( isset( $titles[ $fee_id ] ) ? $titles[ $fee_id ] : __( 'Fee', 'e-commerce-jetpack' ) . ' #' . $fee_id );
 			$value = isset( $values[ $fee_id ] ) ? $values[ $fee_id ] : 0;
 			if ( isset( $types[ $fee_id ] ) && 'percent' === $types[ $fee_id ] ) {
 				$value = $cart->get_cart_contents_total() * $value / 100;

@@ -140,7 +140,7 @@ if (!function_exists('wcj_admin_notices_version_updated')) {
 	{
 		if (wcj_get_option(WCJ_VERSION_OPTION) === WCJ()->version) {
 			$class   = 'notice notice-success is-dismissible';
-			$message = sprintf(__('<strong>Booster for WooCommerce</strong> plugin was successfully updated to version <strong>%s</strong>.', 'woocommerce-jetpack'), WCJ()->version);
+			$message = sprintf(__('<strong>Booster for WooCommerce</strong> plugin was successfully updated to version <strong>%s</strong>.', 'e-commerce-jetpack'), WCJ()->version);
 			echo sprintf('<div class="%1$s"><p>%2$s</p></div>', $class, $message);
 		}
 	}
@@ -188,7 +188,7 @@ if (!function_exists('wcj_get_ajax_settings')) {
 				$options[$term_id] = wp_kses_post($user->display_name);
 			}
 		}
-		$placeholder = isset($values['placeholder']) ? isset($values['placeholder']) : __("Search&hellip;", 'woocommerce-jetpack');
+		$placeholder = isset($values['placeholder']) ? isset($values['placeholder']) : __("Search&hellip;", 'e-commerce-jetpack');
 		return array_merge($values, array(
 			'custom_attributes'            => array(
 				'data-action'      => $search_type,
@@ -229,7 +229,7 @@ if (!function_exists('wcj_get_settings_as_multiselect_or_text')) {
 		} else {
 			return array_merge($values, array(
 				'type' => 'text',
-				'desc' => $prev_desc . __('Enter comma separated list of IDs.', 'woocommerce-jetpack'),
+				'desc' => $prev_desc . __('Enter comma separated list of IDs.', 'e-commerce-jetpack'),
 			));
 		}
 	}
@@ -307,7 +307,7 @@ if (!function_exists('wcj_message_replaced_values')) {
 	 */
 	function wcj_message_replaced_values($values)
 	{
-		$message_template = (1 == count($values) ? __('Replaced value: %s', 'woocommerce-jetpack') : __('Replaced values: %s', 'woocommerce-jetpack'));
+		$message_template = (1 == count($values) ? __('Replaced value: %s', 'e-commerce-jetpack') : __('Replaced values: %s', 'e-commerce-jetpack'));
 		return sprintf($message_template, '<code>' . implode('</code>, <code>', $values) . '</code>');
 	}
 }
@@ -338,34 +338,34 @@ if (!function_exists('wcj_get_plus_message')) {
 
 			case 'global':
 				return '<div class="notice notice-warning">' .
-					'<p><strong>' . __('Upgrade Booster to unlock this feature', 'woocommerce-jetpack') . '</strong></p>' .
+					'<p><strong>' . __('Upgrade Booster to unlock this feature', 'e-commerce-jetpack') . '</strong></p>' .
 					'<p><span>' . sprintf(
-						__('Some settings fields are locked and you will need %s to modify all locked fields.', 'woocommerce-jetpack'),
+						__('Some settings fields are locked and you will need %s to modify all locked fields.', 'e-commerce-jetpack'),
 						'<a href="https://booster.io/plus/" target="_blank">Booster for WooCommerce </a>'
 					) . '</span></p>' .
 					'<p>' .
-					'<a href="https://booster.io/plus/" target="_blank" class="button button-primary">' . __('Buy now', 'woocommerce-jetpack') . '</a>' . ' ' .
-					'<a href="https://booster.io" target="_blank" class="button">' . __('Visit Booster Site', 'woocommerce-jetpack') . '</a>' .
+					'<a href="https://booster.io/plus/" target="_blank" class="button button-primary">' . __('Buy now', 'e-commerce-jetpack') . '</a>' . ' ' .
+					'<a href="https://booster.io" target="_blank" class="button">' . __('Visit Booster Site', 'e-commerce-jetpack') . '</a>' .
 					'</p>' .
 					'</div>';
 
 			case 'desc':
-				return sprintf(__('Upgrade <a href="%s" target="_blank">Booster</a> to change value.', 'woocommerce-jetpack'), 'https://booster.io/plus/');
+				return sprintf(__('Upgrade <a href="%s" target="_blank">Booster</a> to change value.', 'e-commerce-jetpack'), 'https://booster.io/plus/');
 
 			case 'desc_advanced':
-				return sprintf(__('Upgrade <a href="%s" target="_blank">Booster to unlock this feature</a> to enable "%s" option.', 'woocommerce-jetpack'), 'https://booster.io/plus/', $args['option']);
+				return sprintf(__('Upgrade <a href="%s" target="_blank">Booster to unlock this feature</a> to enable "%s" option.', 'e-commerce-jetpack'), 'https://booster.io/plus/', $args['option']);
 
 			case 'desc_advanced_no_link':
-				return sprintf(__('Upgrade Booster to to enable "%s" option.', 'woocommerce-jetpack'), $args['option']);
+				return sprintf(__('Upgrade Booster to to enable "%s" option.', 'e-commerce-jetpack'), $args['option']);
 
 			case 'desc_below':
-				return sprintf(__('Upgrade  <a href="%s" target="_blank">Booster</a> to change values below.', 'woocommerce-jetpack'), 'https://booster.io/plus/');
+				return sprintf(__('Upgrade  <a href="%s" target="_blank">Booster</a> to change values below.', 'e-commerce-jetpack'), 'https://booster.io/plus/');
 
 			case 'desc_above':
-				return sprintf(__('Upgrade  <a href="%s" target="_blank">Booster </a> to change values above.', 'woocommerce-jetpack'), 'https://booster.io/plus/');
+				return sprintf(__('Upgrade  <a href="%s" target="_blank">Booster </a> to change values above.', 'e-commerce-jetpack'), 'https://booster.io/plus/');
 
 			case 'desc_no_link':
-				return __('Upgrade Booster to change value.', 'woocommerce-jetpack');
+				return __('Upgrade Booster to change value.', 'e-commerce-jetpack');
 
 			case 'readonly':
 				return array('readonly' => 'readonly');

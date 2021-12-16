@@ -24,9 +24,9 @@ if ( ! class_exists( 'WCJ_My_Account' ) ) :
 		function __construct() {
 
 			$this->id         = 'my_account';
-			$this->short_desc = __( 'My Account', 'woocommerce-jetpack' );
-			$this->desc       = __( 'WooCommerce "My Account" page customization. Customize Menu Order (Plus). Add Custom Menu Items (Plus). Custom Pages (1 allowed in free version). Custom Info Blocks (1 allowed in free version).', 'woocommerce-jetpack' );
-			$this->desc_pro   = __( 'WooCommerce "My Account" page customization.', 'woocommerce-jetpack' );
+			$this->short_desc = __( 'My Account', 'e-commerce-jetpack' );
+			$this->desc       = __( 'WooCommerce "My Account" page customization. Customize Menu Order (Plus). Add Custom Menu Items (Plus). Custom Pages (1 allowed in free version). Custom Info Blocks (1 allowed in free version).', 'e-commerce-jetpack' );
+			$this->desc_pro   = __( 'WooCommerce "My Account" page customization.', 'e-commerce-jetpack' );
 			$this->link_slug  = 'woocommerce-my-account';
 			parent::__construct();
 
@@ -413,7 +413,7 @@ if ( ! class_exists( 'WCJ_My_Account' ) ) :
 				                            ( isset( $all_user_roles[ $user_role_id ] ) ? $all_user_roles[ $user_role_id ] : $user_role_id ) . '</option>';
 			}
 			?><p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="reg_wcj_user_role"><?php esc_html_e( 'User role', 'woocommerce-jetpack' ); ?></label>
+			<label for="reg_wcj_user_role"><?php esc_html_e( 'User role', 'e-commerce-jetpack' ); ?></label>
 			<select name="wcj_user_role" id="reg_wcj_user_role"><?php echo $user_roles_options_html; ?></select>
 			</p><?php
 		}
@@ -493,7 +493,7 @@ if ( ! class_exists( 'WCJ_My_Account' ) ) :
 				echo '<script>';
 				foreach ( $statuses_to_add as $status_to_add ) {
 					echo 'jQuery("a.wcj_mark_' . $status_to_add . '_by_customer").each( function() { jQuery(this).attr("onclick", "return confirm(\'' .
-					     __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')") } );';
+					     __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')") } );';
 				}
 				echo '</script>';
 			}

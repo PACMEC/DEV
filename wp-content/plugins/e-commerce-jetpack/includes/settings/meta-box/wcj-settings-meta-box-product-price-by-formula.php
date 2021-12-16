@@ -15,33 +15,33 @@ $options = array(
 		'default'    => 'no',
 		'type'       => 'select',
 		'options'    => array(
-			'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-			'no'  => __( 'No', 'woocommerce-jetpack' ),
+			'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+			'no'  => __( 'No', 'e-commerce-jetpack' ),
 		),
-		'title'      => __( 'Enabled', 'woocommerce-jetpack' ),
-		'tooltip'    => __( '\'Enabled\' option is ignored if \'Enable Price Calculation By Formula For All Products\' option is checked in module\'s settings.', 'woocommerce-jetpack' ),
+		'title'      => __( 'Enabled', 'e-commerce-jetpack' ),
+		'tooltip'    => __( '\'Enabled\' option is ignored if \'Enable Price Calculation By Formula For All Products\' option is checked in module\'s settings.', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_product_price_by_formula_calculation',
 		'default'    => 'per_product',
 		'type'       => 'select',
 		'options'    => array(
-			'per_product' => __( 'Use values below', 'woocommerce-jetpack' ),
-			'global'      => __( 'Use default values', 'woocommerce-jetpack' ),
+			'per_product' => __( 'Use values below', 'e-commerce-jetpack' ),
+			'global'      => __( 'Use default values', 'e-commerce-jetpack' ),
 		),
-		'title'      => __( 'Calculation', 'woocommerce-jetpack' ),
+		'title'      => __( 'Calculation', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_product_price_by_formula_eval',
 		'default'    => wcj_get_option( 'wcj_product_price_by_formula_eval', '' ),
 		'type'       => 'text',
-		'title'      => __( 'Formula', 'woocommerce-jetpack' ),
+		'title'      => __( 'Formula', 'e-commerce-jetpack' ),
 	),
 	array(
 		'name'       => 'wcj_product_price_by_formula_total_params',
 		'default'    => wcj_get_option( 'wcj_product_price_by_formula_total_params', 1 ),
 		'type'       => 'number',
-		'title'      => __( 'Number of Parameters', 'woocommerce-jetpack' ),
+		'title'      => __( 'Number of Parameters', 'e-commerce-jetpack' ),
 	),
 );
 $total_params = get_post_meta( get_the_ID(), '_' . 'wcj_product_price_by_formula_total_params', false );

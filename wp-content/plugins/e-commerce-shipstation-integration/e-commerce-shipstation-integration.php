@@ -1,16 +1,13 @@
 <?php
 /**
- * Plugin Name: WooCommerce - ShipStation Integration
- * Plugin URI: https://woocommerce.com/products/shipstation-integration/
- * Version: 4.1.48
- * Description: Adds ShipStation label printing support to WooCommerce. Requires server DomDocument support.
- * Author: WooCommerce
- * Author URI: https://woocommerce.com/
- * Text Domain: woocommerce-shipstation-integration
+ * Plugin Name: E-Commerce - Integración ShipStation
+ * Plugin URI: #
+ * Version: 1.0.0
+ * Description: Agrega soporte de impresión de etiquetas ShipStation a E-Commerce. Requiere soporte de servidor DomDocument.
+ * Author: PACMEC
+ * Author URI: #
+ * Text Domain: e-commerce-shipstation-integration
  * Domain Path: /languages
- * Tested up to: 5.8
- * WC tested up to: 5.6
- * WC requires at least: 3.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -95,8 +92,8 @@ function woocommerce_shipstation_api_plugin_action_links( $links ) {
 	$setting_link = admin_url( 'admin.php?page=wc-settings&tab=integration&section=shipstation' );
 	$plugin_links = array(
 		'<a href="' . $setting_link . '">' . __( 'Settings', 'woocommerce-shipstation-integration' ) . '</a>',
-		'<a href="https://woocommerce.com/my-account/tickets">' . __( 'Support', 'woocommerce-shipstation-integration' ) . '</a>',
-		'<a href="https://docs.woocommerce.com/document/shipstation-for-woocommerce/">' . __( 'Docs', 'woocommerce-shipstation-integration' ) . '</a>',
+		// '<a href="https://woocommerce.com/my-account/tickets">' . __( 'Support', 'woocommerce-shipstation-integration' ) . '</a>',
+		// '<a href="https://docs.woocommerce.com/document/shipstation-for-woocommerce/">' . __( 'Docs', 'woocommerce-shipstation-integration' ) . '</a>',
 	);
 
 	return array_merge( $plugin_links, $links );

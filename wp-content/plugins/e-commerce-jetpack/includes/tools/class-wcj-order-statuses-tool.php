@@ -32,20 +32,20 @@ class WCJ_Order_Statuses_Tool {
 	function add_custom_status( $new_status, $new_status_label, $new_status_icon_content, $new_status_icon_color, $new_status_text_color ) {
 		// Checking function arguments
 		if ( '' == $new_status ) {
-			return '<div class="error"><p>' . __( 'Status slug is empty. Status was not added!', 'woocommerce-jetpack' ) . '</p></div>';
+			return '<div class="error"><p>' . __( 'Status slug is empty. Status was not added!', 'e-commerce-jetpack' ) . '</p></div>';
 		}
 		if ( strlen( $new_status ) > 17 ) {
-			return '<div class="error"><p>' . __( 'The length of status slug must be 17 or less characters (excluding prefix). Status was not added!', 'woocommerce-jetpack' ) .
+			return '<div class="error"><p>' . __( 'The length of status slug must be 17 or less characters (excluding prefix). Status was not added!', 'e-commerce-jetpack' ) .
 				'</p></div>';
 		}
 		if ( '' == $new_status_label ) {
-			return '<div class="error"><p>' . __( 'Status label is empty. Status was not added!', 'woocommerce-jetpack' ) . '</p></div>';
+			return '<div class="error"><p>' . __( 'Status label is empty. Status was not added!', 'e-commerce-jetpack' ) . '</p></div>';
 		}
 		// Checking status for duplicates
 		$new_key      = 'wc-' . $new_status;
 		$all_statuses = wcj_get_order_statuses( false );
 		if ( isset( $all_statuses[ $new_key ] ) ) {
-			return '<div class="error"><p>' . __( 'Duplicate slug. Status was not added!', 'woocommerce-jetpack' ) . '</p></div>';
+			return '<div class="error"><p>' . __( 'Duplicate slug. Status was not added!', 'e-commerce-jetpack' ) . '</p></div>';
 		}
 		// Adding custom status
 		$statuses_updated = $this->module->get_custom_order_statuses();
@@ -57,9 +57,9 @@ class WCJ_Order_Statuses_Tool {
 			'text_color' => $new_status_text_color,
 		) );
 		return ( true === $result ?
-			'<div class="updated"><p>' . sprintf( __( '%s status has been successfully added.', 'woocommerce-jetpack' ),
+			'<div class="updated"><p>' . sprintf( __( '%s status has been successfully added.', 'e-commerce-jetpack' ),
 				'<code>' . $new_status . '</code>' ) . '</p></div>' :
-			'<div class="error"><p>' . sprintf( __( '%s status was not added!', 'woocommerce-jetpack' ),
+			'<div class="error"><p>' . sprintf( __( '%s status was not added!', 'e-commerce-jetpack' ),
 				'<code>' . $new_status . '</code>' ) . '</p></div>'
 		);
 	}
@@ -72,7 +72,7 @@ class WCJ_Order_Statuses_Tool {
 	 */
 	function edit_custom_status( $new_status, $new_status_label, $new_status_icon_content, $new_status_icon_color, $new_status_text_color ) {
 		if ( '' == $new_status_label ) {
-			return '<div class="error"><p>' . __( 'Status label is empty. Status was not edited!', 'woocommerce-jetpack' ) . '</p></div>';
+			return '<div class="error"><p>' . __( 'Status label is empty. Status was not edited!', 'e-commerce-jetpack' ) . '</p></div>';
 		} else {
 			$statuses_updated = $this->module->get_custom_order_statuses();
 			$statuses_updated[ 'wc-' . $new_status ] = $new_status_label;
@@ -83,9 +83,9 @@ class WCJ_Order_Statuses_Tool {
 				'text_color' => $new_status_text_color,
 			) );
 			return ( $result || $result_icon_data ?
-				'<div class="updated"><p>' . sprintf( __( '%s status has been successfully edited!', 'woocommerce-jetpack' ),
+				'<div class="updated"><p>' . sprintf( __( '%s status has been successfully edited!', 'e-commerce-jetpack' ),
 					'<code>' . $new_status . '</code>' ) . '</p></div>' :
-				'<div class="error"><p>' . sprintf( __( '%s status was not edited!', 'woocommerce-jetpack' ),
+				'<div class="error"><p>' . sprintf( __( '%s status was not edited!', 'e-commerce-jetpack' ),
 					'<code>' . $new_status . '</code>' ) . '</p></div>'
 			);
 		}
@@ -105,9 +105,9 @@ class WCJ_Order_Statuses_Tool {
 		$result = update_option( 'wcj_orders_custom_statuses_array', $statuses_updated );
 		delete_option( 'wcj_orders_custom_status_icon_data_' . substr( $status, 3 ) );
 		return ( true === $result ?
-			'<div class="updated"><p>' . sprintf( __( '%s status has been successfully deleted.', 'woocommerce-jetpack' ),
+			'<div class="updated"><p>' . sprintf( __( '%s status has been successfully deleted.', 'e-commerce-jetpack' ),
 				'<code>' . $status . '</code>' ) . '</p></div>' :
-			'<div class="error"><p>' . sprintf( __( '%s status delete failed!', 'woocommerce-jetpack' ),
+			'<div class="error"><p>' . sprintf( __( '%s status delete failed!', 'e-commerce-jetpack' ),
 				'<code>' . $status . '</code>' ) . '</p></div>'
 		);
 	}
@@ -137,12 +137,12 @@ class WCJ_Order_Statuses_Tool {
 	function get_custom_statuses_table() {
 		$table_data   = array();
 		$table_header = array(
-			__( 'Slug', 'woocommerce-jetpack' ),
-			__( 'Label', 'woocommerce-jetpack' ),
-			__( 'Icon Code', 'woocommerce-jetpack' ),
-			__( 'Color', 'woocommerce-jetpack' ),
-			__( 'Text Color', 'woocommerce-jetpack' ),
-			__( 'Actions', 'woocommerce-jetpack' ),
+			__( 'Slug', 'e-commerce-jetpack' ),
+			__( 'Label', 'e-commerce-jetpack' ),
+			__( 'Icon Code', 'e-commerce-jetpack' ),
+			__( 'Color', 'e-commerce-jetpack' ),
+			__( 'Text Color', 'e-commerce-jetpack' ),
+			__( 'Actions', 'e-commerce-jetpack' ),
 		);
 		$all_statuses    = wcj_get_order_statuses( false );
 		$custom_statuses = $this->module->get_custom_order_statuses();
@@ -158,10 +158,10 @@ class WCJ_Order_Statuses_Tool {
 				$color_html      = '<input disabled type="color" value="' . $icon_data['color'] . '">';
 				$text_color_html = '<input disabled type="color" value="' . $icon_data['text_color'] . '">';
 				$delete_button   = '<a class="button-primary" href="' . add_query_arg( 'delete', $status, remove_query_arg( 'edit' ) ) .
-					'" onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')">' . __( 'Delete', 'woocommerce-jetpack' ) . '</a>';
+					'" onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')">' . __( 'Delete', 'e-commerce-jetpack' ) . '</a>';
 				$edit_button     = '<a class="button-primary"' . ( '' != apply_filters( 'booster_message', '', 'desc' ) ?
-					' disabled title="' . __( 'Get Booster Plus to enable.', 'woocommerce-jetpack' ) . '"' :
-					' href="' . add_query_arg( 'edit', $status, remove_query_arg( 'delete' ) ) . '"' ) . '>' . __( 'Edit', 'woocommerce-jetpack' ) . '</a>';
+					' disabled title="' . __( 'Get Booster Plus to enable.', 'e-commerce-jetpack' ) . '"' :
+					' href="' . add_query_arg( 'edit', $status, remove_query_arg( 'delete' ) ) . '"' ) . '>' . __( 'Edit', 'e-commerce-jetpack' ) . '</a>';
 				$row = array_merge( $row, array(
 					$icon_data['content'],
 					$color_html,
@@ -176,7 +176,7 @@ class WCJ_Order_Statuses_Tool {
 			$columns_styles[] = 'width:16%;';
 		}
 		return ( ! empty( $table_data ) ?
-			'<h4>' . __( 'Statuses', 'woocommerce-jetpack' ) . '</h4>' .
+			'<h4>' . __( 'Statuses', 'e-commerce-jetpack' ) . '</h4>' .
 				wcj_get_table_html( array_merge( array( $table_header ), $table_data ), array(
 					'table_class'        => 'widefat striped',
 					'table_heading_type' => 'horizontal',
@@ -203,22 +203,22 @@ class WCJ_Order_Statuses_Tool {
 		$slug_html             = '<input type="text" name="new_status" style="width:100%;"' . ( $is_editing ? ' value="' . substr( $edit_slug, 3 ) . '" readonly' : '' ) . '>';
 		$label_html            = '<input type="text" name="new_status_label" style="width:100%;"' . ( $is_editing ? ' value="' . $edit_label . '"' : '' ) . '>';
 		$icon_code_input_html  = '<input type="text" name="new_status_icon_content" value="' . ( $is_editing ? $edit_icon_data['content'] : 'e011' )    . '">';
-		$icon_code_tip         = '<em>' . sprintf( __( 'You can check icon codes <a target="_blank" href="%s">here</a>.', 'woocommerce-jetpack' ),
+		$icon_code_tip         = '<em>' . sprintf( __( 'You can check icon codes <a target="_blank" href="%s">here</a>.', 'e-commerce-jetpack' ),
 			'https://rawgit.com/woothemes/woocommerce-icons/master/demo.html' ) . '</em>';
 		$icon_color_input_html = '<input type="color" name="new_status_icon_color" value="'  . ( $is_editing ? $edit_icon_data['color']      : '#999999' ) . '">';
 		$text_color_input_html = '<input type="color" name="new_status_text_color" value="'  . ( $is_editing ? $edit_icon_data['text_color'] : '#000000' ) . '">';
 		$action_button         = '<input class="button-primary" type="submit" name="' . ( $is_editing ? 'edit_custom_status' : 'add_custom_status' ) . '"' .
-			' value="' . ( $is_editing ? __( 'Edit custom status', 'woocommerce-jetpack' ) : __( 'Add new custom status', 'woocommerce-jetpack' ) ) . '">';
+			' value="' . ( $is_editing ? __( 'Edit custom status', 'e-commerce-jetpack' ) : __( 'Add new custom status', 'e-commerce-jetpack' ) ) . '">';
 		$clear_button          = ( $is_editing ?
-			' <a class="button-primary" href="' . remove_query_arg( array( 'delete', 'edit' ) ) . '">' . __( 'Clear', 'woocommerce-jetpack' ) . '</a>' : '' );
+			' <a class="button-primary" href="' . remove_query_arg( array( 'delete', 'edit' ) ) . '">' . __( 'Clear', 'e-commerce-jetpack' ) . '</a>' : '' );
 		$table_data = array(
 			array(
-				__( 'Slug (without <code>wc-</code> prefix)', 'woocommerce-jetpack' ),
-				__( 'Label', 'woocommerce-jetpack' ),
-				__( 'Icon Code', 'woocommerce-jetpack' ),
-				__( 'Color', 'woocommerce-jetpack' ),
-				__( 'Text Color', 'woocommerce-jetpack' ),
-				__( 'Actions', 'woocommerce-jetpack' ),
+				__( 'Slug (without <code>wc-</code> prefix)', 'e-commerce-jetpack' ),
+				__( 'Label', 'e-commerce-jetpack' ),
+				__( 'Icon Code', 'e-commerce-jetpack' ),
+				__( 'Color', 'e-commerce-jetpack' ),
+				__( 'Text Color', 'e-commerce-jetpack' ),
+				__( 'Actions', 'e-commerce-jetpack' ),
 			),
 			array(
 				$slug_html,
@@ -233,7 +233,7 @@ class WCJ_Order_Statuses_Tool {
 		for ( $i = 1; $i <= 6; $i++ ) {
 			$columns_styles[] = 'width:16%;';
 		}
-		return '<h4>' . ( $is_editing ? __( 'Edit', 'woocommerce-jetpack' ) : __( 'Add', 'woocommerce-jetpack' ) ) . '</h4>' .
+		return '<h4>' . ( $is_editing ? __( 'Edit', 'e-commerce-jetpack' ) : __( 'Add', 'e-commerce-jetpack' ) ) . '</h4>' .
 			'<form method="post" action="' . remove_query_arg( 'delete' ) . '">' .
 				wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'horizontal', 'columns_styles' => $columns_styles ) ) .
 			'</form>';
@@ -266,7 +266,7 @@ class WCJ_Order_Statuses_Tool {
 	 */
 	function get_delete_all_custom_statuses_button() {
 		return '<p>' . '<a class="button-primary" href="' . add_query_arg( 'delete_all', '1', remove_query_arg( array( 'edit', 'delete' ) ) ) .
-			'" onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')">' . __( 'Delete All Custom Statuses', 'woocommerce-jetpack' ) . '</a>' .
+			'" onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')">' . __( 'Delete All Custom Statuses', 'e-commerce-jetpack' ) . '</a>' .
 		'</p>';
 	}
 

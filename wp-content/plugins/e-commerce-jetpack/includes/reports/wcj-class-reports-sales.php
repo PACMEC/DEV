@@ -125,7 +125,7 @@ class WCJ_Reports_Sales {
 									$products_data[ $product_id ][ 'title' ] .= '<br><em>' . wcj_get_product_formatted_variation( $_product, true ) . '</em>';
 								} elseif ( 'WC_Product_Variation' === get_class( $_product ) ) {
 									// Parent product deleted
-									$products_data[ $product_id ][ 'title' ] .= $item['name'] . '<br><em>' . __( 'Variation', 'woocommerce-jetpack' ) . '</em>';
+									$products_data[ $product_id ][ 'title' ] .= $item['name'] . '<br><em>' . __( 'Variation', 'e-commerce-jetpack' ) . '</em>';
 									$products_data[ $product_id ][ 'title' ] = '<del>' . $products_data[ $product_id ][ 'title' ] . '</del>';
 								}
 							} else {
@@ -193,10 +193,10 @@ class WCJ_Reports_Sales {
 		// Output report table
 		$table_data = array();
 		$the_header = array(
-			__( 'ID', 'woocommerce-jetpack' ),
-			__( 'Product', 'woocommerce-jetpack' ),
-			__( 'Last Sale', 'woocommerce-jetpack' ),
-			__( 'Total', 'woocommerce-jetpack' ),
+			__( 'ID', 'e-commerce-jetpack' ),
+			__( 'Product', 'e-commerce-jetpack' ),
+			__( 'Last Sale', 'e-commerce-jetpack' ),
+			__( 'Total', 'e-commerce-jetpack' ),
 		);
 		foreach ( $years as $year => $value ) {
 			if ( $year != $this->year ) continue;
@@ -308,20 +308,20 @@ class WCJ_Reports_Sales {
 			}
 		}
 		if ( 'yes' === wcj_get_option( 'wcj_reports_products_sales_display_sales', 'yes' ) ) {
-			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Items', 'woocommerce-jetpack' ) . '</strong>',
+			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Items', 'e-commerce-jetpack' ) . '</strong>',
 				'<strong>' . $totals_sales_by_month . '</strong>' ), $totals_row );
 		}
 		if ( 'yes' === wcj_get_option( 'wcj_reports_products_sales_display_sales_sum', 'yes' ) ) {
-			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Sum', 'woocommerce-jetpack' ) . '</strong>',
+			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Sum', 'e-commerce-jetpack' ) . '</strong>',
 				'<strong>' . wc_price( $totals_sales_by_month_sum . '</strong>' ) ), $totals_row2 );
 		}
 		if ( 'yes' === wcj_get_option( 'wcj_reports_products_sales_display_profit', 'no' ) ) {
-			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Profit', 'woocommerce-jetpack' ) .
+			$table_data[] = array_merge( array( '', '', '<strong>' . __( 'Total Profit', 'e-commerce-jetpack' ) .
 				'</strong>', '<strong>' . wc_price( $total_profit . '</strong>' ) ), $totals_row3 );
 		}
 
 		$settings_link = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=reports' ) . '">' .
-			'<< ' . __( 'Reports Settings', 'woocommerce-jetpack' ) . '</a>';
+			'<< ' . __( 'Reports Settings', 'e-commerce-jetpack' ) . '</a>';
 
 		$menu = '';
 		$menu .= '<ul class="subsubsub">';
@@ -341,7 +341,7 @@ class WCJ_Reports_Sales {
 		$filter_form .= '<input type="hidden" name="report" value="' . $_GET['report'] . '" />';
 		$filter_form .= '<input type="hidden" name="year" value="'   . $this->year     . '" />';
 		$filter_form .= '<input type="text" name="product_title" title="" value="' . $this->product_title . '" />' .
-			'<input type="submit" value="' . __( 'Filter products', 'woocommerce-jetpack' ) . '" />';
+			'<input type="submit" value="' . __( 'Filter products', 'e-commerce-jetpack' ) . '" />';
 		$filter_form .= '</form>';
 
 		$the_results = ( ! empty( $products_data ) ) ?

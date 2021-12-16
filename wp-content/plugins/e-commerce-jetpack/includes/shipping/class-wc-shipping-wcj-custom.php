@@ -34,8 +34,8 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 	function init( $id_count ) {
 
 		$this->id                 = 'booster_custom_shipping_' . $id_count;
-		$this->method_title       = wcj_get_option( 'wcj_shipping_custom_shipping_admin_title_' . $id_count, __( 'Custom', 'woocommerce-jetpack' ) . ' #' . $id_count );
-		$this->method_description = __( 'Booster: Custom Shipping Method', 'woocommerce-jetpack' ) . ' #' . $id_count;
+		$this->method_title       = wcj_get_option( 'wcj_shipping_custom_shipping_admin_title_' . $id_count, __( 'Custom', 'e-commerce-jetpack' ) . ' #' . $id_count );
+		$this->method_description = __( 'Booster: Custom Shipping Method', 'e-commerce-jetpack' ) . ' #' . $id_count;
 
 		// Load the settings.
 		$this->init_form_fields();
@@ -88,32 +88,32 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 	 */
 	function init_form_fields() {
 		$type_options = array(
-			'flat_rate'                    => __( 'Flat Rate', 'woocommerce-jetpack' ),
-			'by_total_cart_weight'         => __( 'By Total Cart Weight', 'woocommerce-jetpack' ),
-			'by_total_cart_weight_table'   => __( 'By Total Cart Weight Table', 'woocommerce-jetpack' ),
-			'by_total_cart_quantity'       => __( 'By Total Cart Quantity', 'woocommerce-jetpack' ),
+			'flat_rate'                    => __( 'Flat Rate', 'e-commerce-jetpack' ),
+			'by_total_cart_weight'         => __( 'By Total Cart Weight', 'e-commerce-jetpack' ),
+			'by_total_cart_weight_table'   => __( 'By Total Cart Weight Table', 'e-commerce-jetpack' ),
+			'by_total_cart_quantity'       => __( 'By Total Cart Quantity', 'e-commerce-jetpack' ),
 		);
 		$type_options = apply_filters( 'booster_option', $type_options, array_merge( $type_options, array(
-			'by_total_cart_quantity_table' => __( 'By Total Cart Quantity Table', 'woocommerce-jetpack' ),
+			'by_total_cart_quantity_table' => __( 'By Total Cart Quantity Table', 'e-commerce-jetpack' ),
 		) ) );
 		$this->form_fields = array(
 			'enabled' => array(
 				'title'       => __( 'Enable/Disable', 'woocommerce' ),
 				'type'        => 'checkbox',
-				'label'       => __( 'Enable Custom Shipping', 'woocommerce-jetpack' ),
+				'label'       => __( 'Enable Custom Shipping', 'e-commerce-jetpack' ),
 				'default'     => 'no',
 			),
 			'title' => array(
 				'title'       => __( 'Title', 'woocommerce' ),
 				'type'        => 'text',
 				'description' => __( 'This controls the title which the user sees during checkout.', 'woocommerce' ),
-				'default'     => __( 'Custom Shipping', 'woocommerce-jetpack' ),
+				'default'     => __( 'Custom Shipping', 'e-commerce-jetpack' ),
 				'desc_tip'    => true,
 			),
 			'type' => array(
 				'title'       => __( 'Type', 'woocommerce' ),
 				'type'        => 'select',
-				'description' => __( 'Cost calculation type.', 'woocommerce-jetpack' ) . ' ' . apply_filters( 'booster_message', '', 'desc_advanced_no_link', array( 'option' => __( 'By Total Cart Quantity Table', 'woocommerce-jetpack' ) ) ),
+				'description' => __( 'Cost calculation type.', 'e-commerce-jetpack' ) . ' ' . apply_filters( 'booster_message', '', 'desc_advanced_no_link', array( 'option' => __( 'By Total Cart Quantity Table', 'e-commerce-jetpack' ) ) ),
 				'default'     => 'flat_rate',
 				'desc_tip'    => true,
 				'options'     => $type_options,
@@ -121,7 +121,7 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 			'cost' => array(
 				'title'       => __( 'Cost', 'woocommerce' ),
 				'type'        => 'number',
-				'description' => __( 'Cost. If calculating by weight - then cost per one weight unit. If calculating by quantity - then cost per one piece.', 'woocommerce-jetpack' ),
+				'description' => __( 'Cost. If calculating by weight - then cost per one weight unit. If calculating by quantity - then cost per one piece.', 'e-commerce-jetpack' ),
 				'default'     => 0,
 				'desc_tip'    => true,
 				'custom_attributes' => array( 'step' => '0.000001', 'min'  => '0', ),
@@ -129,7 +129,7 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 			'min_weight' => array(
 				'title'       => __( 'Min Weight', 'woocommerce' ),
 				'type'        => 'number',
-				'description' => __( 'Minimum total cart weight. Set zero to disable.', 'woocommerce-jetpack' ),
+				'description' => __( 'Minimum total cart weight. Set zero to disable.', 'e-commerce-jetpack' ),
 				'default'     => 0,
 				'desc_tip'    => true,
 				'custom_attributes' => array( 'step' => '0.000001', 'min'  => '0', ),
@@ -137,7 +137,7 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 			'max_weight' => array(
 				'title'       => __( 'Max Weight', 'woocommerce' ),
 				'type'        => 'number',
-				'description' => __( 'Maximum total cart weight. Set zero to disable.', 'woocommerce-jetpack' ),
+				'description' => __( 'Maximum total cart weight. Set zero to disable.', 'e-commerce-jetpack' ),
 				'default'     => 0,
 				'desc_tip'    => true,
 				'custom_attributes' => array( 'step' => '0.000001', 'min'  => '0', ),
@@ -145,7 +145,7 @@ class WC_Shipping_WCJ_Custom_Template extends WC_Shipping_Method {
 			'weight_table_total_rows' => array(
 				'title'       => __( 'Table Total Rows', 'woocommerce' ),
 				'type'        => 'number',
-				'description' => __( 'Press Save changes after you change this number.', 'woocommerce-jetpack' ),
+				'description' => __( 'Press Save changes after you change this number.', 'e-commerce-jetpack' ),
 				'default'     => 0,
 				'desc_tip'    => true,
 				'custom_attributes' => array( 'min'  => '0', ),

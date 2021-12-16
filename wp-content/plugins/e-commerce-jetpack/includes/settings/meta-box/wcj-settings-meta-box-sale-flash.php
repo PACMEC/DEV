@@ -11,17 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'   => __( 'Enable', 'woocommerce-jetpack' ),
+		'title'   => __( 'Enable', 'e-commerce-jetpack' ),
 		'name'    => 'wcj_sale_flash_enabled',
 		'default' => 'no',
 		'type'    => 'select',
 		'options' => array(
-			'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-			'no'  => __( 'No', 'woocommerce-jetpack' ),
+			'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+			'no'  => __( 'No', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'   => __( 'HTML', 'woocommerce-jetpack' ),
+		'title'   => __( 'HTML', 'e-commerce-jetpack' ),
 		'name'    => 'wcj_sale_flash',
 		'default' => '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>',
 		'type'    => 'textarea',

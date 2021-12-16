@@ -11,18 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 return array(
 	array(
-		'title'    => __( 'Enable Offer Price', 'woocommerce-jetpack' ),
+		'title'    => __( 'Enable Offer Price', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_offer_price_enabled',
 		'default'  => 'no',
 		'type'     => 'select',
 		'options'  => array(
-			'yes' => __( 'Yes', 'woocommerce-jetpack' ),
-			'no'  => __( 'No', 'woocommerce-jetpack' ),
+			'yes' => __( 'Yes', 'e-commerce-jetpack' ),
+			'no'  => __( 'No', 'e-commerce-jetpack' ),
 		),
 	),
 	array(
-		'title'    => __( 'Price Step', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Number of decimals', 'woocommerce' ) . '. ' . __( 'Leave blank to use global value.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Price Step', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Number of decimals', 'woocommerce' ) . '. ' . __( 'Leave blank to use global value.', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_offer_price_price_step',
 		'default'  => '',
 		'type'     => 'number',
@@ -30,8 +30,8 @@ return array(
 		'custom_attributes' => 'min="0"',
 	),
 	array(
-		'title'    => __( 'Minimal Price', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Leave blank to use global value.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Minimal Price', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Leave blank to use global value.', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_offer_price_min_price',
 		'default'  => '',
 		'type'     => 'number',
@@ -39,8 +39,8 @@ return array(
 		'custom_attributes' => 'min="0"',
 	),
 	array(
-		'title'    => __( 'Maximal Price', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Set zero to disable.', 'woocommerce-jetpack' ) . ' ' . __( 'Leave blank to use global value.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Maximal Price', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Set zero to disable.', 'e-commerce-jetpack' ) . ' ' . __( 'Leave blank to use global value.', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_offer_price_max_price',
 		'default'  => '',
 		'type'     => 'number',
@@ -48,8 +48,8 @@ return array(
 		'custom_attributes' => 'min="0"',
 	),
 	array(
-		'title'    => __( 'Default Price', 'woocommerce-jetpack' ),
-		'tooltip'  => __( 'Set zero to disable.', 'woocommerce-jetpack' ) . ' ' . __( 'Leave blank to use global value.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Default Price', 'e-commerce-jetpack' ),
+		'tooltip'  => __( 'Set zero to disable.', 'e-commerce-jetpack' ) . ' ' . __( 'Leave blank to use global value.', 'e-commerce-jetpack' ),
 		'name'     => 'wcj_offer_price_default_price',
 		'default'  => '',
 		'type'     => 'number',

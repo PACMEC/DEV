@@ -20,9 +20,9 @@ class WCJ_Price_Labels extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'price_labels';
-		$this->short_desc = __( 'Custom Price Labels', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Create any custom price label for any product (Just a few positions allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Create any custom price label for any product.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Custom Price Labels', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Create any custom price label for any product (Just a few positions allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Create any custom price label for any product.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-custom-price-labels';
 		parent::__construct();
 
@@ -30,22 +30,22 @@ class WCJ_Price_Labels extends WCJ_Module {
 		$this->custom_tab_group_name                  = 'wcj_price_labels';
 		$this->custom_tab_sections                    = array( '_instead', '_before', '_between', '_after', );
 		$this->custom_tab_sections_titles             = array(
-			'_instead' => __( 'Instead of the price', 'woocommerce-jetpack' ),
-			'_before'  => __( 'Before the price', 'woocommerce-jetpack' ),
-			'_between' => __( 'Between regular and sale prices', 'woocommerce-jetpack' ),
-			'_after'   => __( 'After the price', 'woocommerce-jetpack' ),
+			'_instead' => __( 'Instead of the price', 'e-commerce-jetpack' ),
+			'_before'  => __( 'Before the price', 'e-commerce-jetpack' ),
+			'_between' => __( 'Between regular and sale prices', 'e-commerce-jetpack' ),
+			'_after'   => __( 'After the price', 'e-commerce-jetpack' ),
 		);
 		$this->custom_tab_section_variations          = array( '_text', '_enabled', '_home', '_products', '_single', '_page', '_cart', '_variable', '_variation' );
 		$this->custom_tab_section_variations_titles   = array(
 			'_text'      => '', // 'The label',
-			'_enabled'   => __( 'Enable', 'woocommerce-jetpack' ),
-			'_home'      => __( 'Hide on home page', 'woocommerce-jetpack' ),
-			'_products'  => __( 'Hide on products page', 'woocommerce-jetpack' ),
-			'_single'    => __( 'Hide on single', 'woocommerce-jetpack' ),
-			'_page'      => __( 'Hide on all pages', 'woocommerce-jetpack' ),
-			'_cart'      => __( 'Hide on cart page only', 'woocommerce-jetpack' ),
-			'_variable'  => __( 'Hide for main price', 'woocommerce-jetpack' ),
-			'_variation' => __( 'Hide for all variations', 'woocommerce-jetpack' ),
+			'_enabled'   => __( 'Enable', 'e-commerce-jetpack' ),
+			'_home'      => __( 'Hide on home page', 'e-commerce-jetpack' ),
+			'_products'  => __( 'Hide on products page', 'e-commerce-jetpack' ),
+			'_single'    => __( 'Hide on single', 'e-commerce-jetpack' ),
+			'_page'      => __( 'Hide on all pages', 'e-commerce-jetpack' ),
+			'_cart'      => __( 'Hide on cart page only', 'e-commerce-jetpack' ),
+			'_variable'  => __( 'Hide for main price', 'e-commerce-jetpack' ),
+			'_variation' => __( 'Hide for all variations', 'e-commerce-jetpack' ),
 		);
 
 		if ( $this->is_enabled() ) {
@@ -132,7 +132,7 @@ class WCJ_Price_Labels extends WCJ_Module {
 	function add_price_label_meta_box() {
 		add_meta_box(
 			'wc-jetpack-price-labels',
-			__( 'Booster: Custom Price Labels', 'woocommerce-jetpack' ),
+			__( 'Booster: Custom Price Labels', 'e-commerce-jetpack' ),
 			array( $this, 'create_price_label_meta_box' ),
 			'product',
 			'normal',

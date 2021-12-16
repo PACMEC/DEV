@@ -21,16 +21,16 @@ class WCJ_Admin_Tools extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'admin_tools';
-		$this->short_desc = __( 'Admin Tools', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Booster for WooCommerce general back-end tools. Enable interface by user roles (Plus). Custom shop manager editable roles (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Booster for WooCommerce general back-end tools.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Admin Tools', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Booster for WooCommerce general back-end tools. Enable interface by user roles (Plus). Custom shop manager editable roles (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Booster for WooCommerce general back-end tools.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-booster-admin-tools';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'products_atts'    => array(
-				'title'     => __( 'Products Attributes', 'woocommerce-jetpack' ),
-				'desc'      => __( 'All Products and All Attributes.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Products Attributes', 'e-commerce-jetpack' ),
+				'desc'      => __( 'All Products and All Attributes.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -170,7 +170,7 @@ class WCJ_Admin_Tools extends WCJ_Module {
 	function add_product_meta_meta_box() {
 		add_meta_box(
 			'wcj-admin-tools-product-meta',
-			__( 'Product Meta', 'woocommerce-jetpack' ),
+			__( 'Product Meta', 'e-commerce-jetpack' ),
 			array( $this, 'create_meta_meta_box' ),
 			'product',
 			'normal',
@@ -187,7 +187,7 @@ class WCJ_Admin_Tools extends WCJ_Module {
 	function add_order_meta_meta_box() {
 		add_meta_box(
 			'wcj-admin-tools-order-meta',
-			__( 'Order Meta', 'woocommerce-jetpack' ),
+			__( 'Order Meta', 'e-commerce-jetpack' ),
 			array( $this, 'create_meta_meta_box' ),
 			'shop_order',
 			'normal',
@@ -221,9 +221,9 @@ class WCJ_Admin_Tools extends WCJ_Module {
 				}
 			}
 			if ( ! empty( $table_data ) ) {
-				$html .= '<h3>' . __( 'Order Items Meta', 'woocommerce-jetpack' ) . '</h3>';
+				$html .= '<h3>' . __( 'Order Items Meta', 'e-commerce-jetpack' ) . '</h3>';
 				$table_data = array_merge(
-					array( array( __( 'Item Key', 'woocommerce-jetpack' ), __( 'Item Meta Key', 'woocommerce-jetpack' ), __( 'Item Meta Value', 'woocommerce-jetpack' ) ) ),
+					array( array( __( 'Item Key', 'e-commerce-jetpack' ), __( 'Item Meta Key', 'e-commerce-jetpack' ), __( 'Item Meta Value', 'e-commerce-jetpack' ) ) ),
 					$table_data
 				);
 				$html .= wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'horizontal' ) );
@@ -258,8 +258,8 @@ class WCJ_Admin_Tools extends WCJ_Module {
 
 		$products_attributes = array();
 		$attributes_names = array();
-		$attributes_names['wcj_title']    = __( 'Product', 'woocommerce-jetpack' );
-		$attributes_names['wcj_category'] = __( 'Category', 'woocommerce-jetpack' );
+		$attributes_names['wcj_title']    = __( 'Product', 'e-commerce-jetpack' );
+		$attributes_names['wcj_category'] = __( 'Category', 'e-commerce-jetpack' );
 
 		$offset = 0;
 		$block_size = 96;
@@ -300,8 +300,8 @@ class WCJ_Admin_Tools extends WCJ_Module {
 		$table_data = array();
 		if ( isset( $_GET['wcj_attribute'] ) && '' != $_GET['wcj_attribute'] ) {
 			$table_data[] = array(
-				__( 'Product', 'woocommerce-jetpack' ),
-				__( 'Category', 'woocommerce-jetpack' ),
+				__( 'Product', 'e-commerce-jetpack' ),
+				__( 'Category', 'e-commerce-jetpack' ),
 				$_GET['wcj_attribute'],
 			);
 		} else {
@@ -309,8 +309,8 @@ class WCJ_Admin_Tools extends WCJ_Module {
 			unset( $header['wcj_title'] );
 			unset( $header['wcj_category'] );
 			$table_data[] = array_merge( array(
-				__( 'Product', 'woocommerce-jetpack' ),
-				__( 'Category', 'woocommerce-jetpack' ),
+				__( 'Product', 'e-commerce-jetpack' ),
+				__( 'Category', 'e-commerce-jetpack' ),
 				), array_keys( $header ) );
 		}
 		foreach ( $attributes_names as $attributes_name => $attribute_title ) {
@@ -326,7 +326,7 @@ class WCJ_Admin_Tools extends WCJ_Module {
 			}
 		}
 
-		return '<p>' . __( 'Total Products:', 'woocommerce-jetpack' ) . ' ' . $total_products . '</p>' . wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped' ) );
+		return '<p>' . __( 'Total Products:', 'e-commerce-jetpack' ) . ' ' . $total_products . '</p>' . wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped' ) );
 	}
 
 }

@@ -24,9 +24,9 @@ class WCJ_Coupon_By_User_Role extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'coupon_by_user_role';
-		$this->short_desc = __( 'Coupon by User Role', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Coupons by user roles. Invalidate per Coupon (Plus). Custom coupon invalid messages (Plus)', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Coupons by user roles.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Coupon by User Role', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Coupons by user roles. Invalidate per Coupon (Plus). Custom coupon invalid messages (Plus)', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Coupons by user roles.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-coupon-by-user-role';
 		parent::__construct();
 
@@ -77,8 +77,8 @@ class WCJ_Coupon_By_User_Role extends WCJ_Module {
 			}
 		}
 		if ( ! empty( $invalid_user_roles ) && in_array( wcj_get_current_user_first_role(), $invalid_user_roles ) ) {
-			throw new Exception( apply_filters( 'booster_option', __( 'Coupon is not valid for your user role.', 'woocommerce-jetpack' ),
-				get_option( 'wcj_coupon_by_user_role_invalid_message', __( 'Coupon is not valid for your user role.', 'woocommerce-jetpack' ) ) ), 10000 );
+			throw new Exception( apply_filters( 'booster_option', __( 'Coupon is not valid for your user role.', 'e-commerce-jetpack' ),
+				get_option( 'wcj_coupon_by_user_role_invalid_message', __( 'Coupon is not valid for your user role.', 'e-commerce-jetpack' ) ) ), 10000 );
 			return false;
 		}
 		return $valid;
@@ -92,8 +92,8 @@ class WCJ_Coupon_By_User_Role extends WCJ_Module {
 	 */
 	function coupon_not_valid_message( $message, $code, $coupon ) {
 		if ( 10000 === $code ) {
-			return apply_filters( 'booster_option', __( 'Coupon is not valid for your user role.', 'woocommerce-jetpack' ),
-				get_option( 'wcj_coupon_by_user_role_invalid_message', __( 'Coupon is not valid for your user role.', 'woocommerce-jetpack' ) ) );
+			return apply_filters( 'booster_option', __( 'Coupon is not valid for your user role.', 'e-commerce-jetpack' ),
+				get_option( 'wcj_coupon_by_user_role_invalid_message', __( 'Coupon is not valid for your user role.', 'e-commerce-jetpack' ) ) );
 		}
 		return $message;
 	}

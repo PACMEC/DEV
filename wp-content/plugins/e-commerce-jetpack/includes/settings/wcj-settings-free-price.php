@@ -10,17 +10,17 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $product_types = array(
-	'simple'   => __( 'Simple and Custom Products', 'woocommerce-jetpack' ),
-	'variable' => __( 'Variable Products', 'woocommerce-jetpack' ),
-	'grouped'  => __( 'Grouped Products', 'woocommerce-jetpack' ),
-	'external' => __( 'External Products', 'woocommerce-jetpack' ),
+	'simple'   => __( 'Simple and Custom Products', 'e-commerce-jetpack' ),
+	'variable' => __( 'Variable Products', 'e-commerce-jetpack' ),
+	'grouped'  => __( 'Grouped Products', 'e-commerce-jetpack' ),
+	'external' => __( 'External Products', 'e-commerce-jetpack' ),
 );
 $views = array(
-	'single'   => __( 'Single Product Page', 'woocommerce-jetpack' ),
-	'related'  => __( 'Related Products', 'woocommerce-jetpack' ),
-	'home'     => __( 'Homepage', 'woocommerce-jetpack' ),
-	'page'     => __( 'Pages (e.g. Shortcodes)', 'woocommerce-jetpack' ),
-	'archive'  => __( 'Archives (Product Categories)', 'woocommerce-jetpack' ),
+	'single'   => __( 'Single Product Page', 'e-commerce-jetpack' ),
+	'related'  => __( 'Related Products', 'e-commerce-jetpack' ),
+	'home'     => __( 'Homepage', 'e-commerce-jetpack' ),
+	'page'     => __( 'Pages (e.g. Shortcodes)', 'e-commerce-jetpack' ),
+	'archive'  => __( 'Archives (Product Categories)', 'e-commerce-jetpack' ),
 );
 $settings = array();
 foreach ( $product_types as $product_type => $product_type_desc ) {
@@ -28,14 +28,14 @@ foreach ( $product_types as $product_type => $product_type_desc ) {
 	$settings = array_merge( $settings, array(
 		array(
 			'title'    => $product_type_desc,
-			'desc'     => __( 'Labels can contain shortcodes.', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Labels can contain shortcodes.', 'e-commerce-jetpack' ),
 			'type'     => 'title',
 			'id'       => 'wcj_free_price_' . $product_type . 'options',
 		),
 	) );
 	$current_views = $views;
 	if ( 'variable' === $product_type ) {
-		$current_views['variation'] = __( 'Variations', 'woocommerce-jetpack' );
+		$current_views['variation'] = __( 'Variations', 'e-commerce-jetpack' );
 	}
 	foreach ( $current_views as $view => $view_desc ) {
 		$settings = array_merge( $settings, array(

@@ -31,10 +31,10 @@ class WCJ_Price_By_Country_Group_Generator {
 	 */
 	function create_all_countries_groups_notices() {
 		if ( isset( $_GET['wcj_generate_country_groups_finished'] ) ) {
-			echo '<div class="notice notice-success is-dismissible"><p>' . __( 'Country groups successfully generated.', 'woocommerce-jetpack' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . __( 'Country groups successfully generated.', 'e-commerce-jetpack' ) . '</p></div>';
 		}
 		if ( isset( $_GET['wcj_generate_country_groups_error'] ) ) {
-			echo '<div class="notice notice-error"><p>'                  . __( 'Country groups generation failed.', 'woocommerce-jetpack' )      . '</p></div>';
+			echo '<div class="notice notice-error"><p>'                  . __( 'Country groups generation failed.', 'e-commerce-jetpack' )      . '</p></div>';
 		}
 	}
 

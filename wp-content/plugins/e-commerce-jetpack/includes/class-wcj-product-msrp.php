@@ -28,11 +28,11 @@ class WCJ_Product_MSRP extends WCJ_Module {
 	 */
 	function __construct() {
 		$this->id         = 'product_msrp';
-		$this->short_desc = __( 'Product MSRP', 'woocommerce-jetpack' );
-		$this->extra_desc = __( 'The <strong>manufacturer\'s suggested retail price</strong> (<strong>MSRP</strong>), also known as the <strong>list price</strong>, or the <strong>recommended retail price</strong> (<strong>RRP</strong>), or the <strong>suggested retail price</strong> (<strong>SRP</strong>), of a product is the price at which the manufacturer recommends that the retailer sell the product.', 'woocommerce-jetpack' ) . '<br>' .
-			sprintf( __( 'Booster stores MSRP as product meta with %s key.', 'woocommerce-jetpack' ), '<code>_wcj_msrp</code>' );
-		$this->desc       = __( 'Save and display product MSRP in WooCommerce (Custom template available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Save and display product MSRP in WooCommerce.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product MSRP', 'e-commerce-jetpack' );
+		$this->extra_desc = __( 'The <strong>manufacturer\'s suggested retail price</strong> (<strong>MSRP</strong>), also known as the <strong>list price</strong>, or the <strong>recommended retail price</strong> (<strong>RRP</strong>), or the <strong>suggested retail price</strong> (<strong>SRP</strong>), of a product is the price at which the manufacturer recommends that the retailer sell the product.', 'e-commerce-jetpack' ) . '<br>' .
+			sprintf( __( 'Booster stores MSRP as product meta with %s key.', 'e-commerce-jetpack' ), '<code>_wcj_msrp</code>' );
+		$this->desc       = __( 'Save and display product MSRP in WooCommerce (Custom template available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Save and display product MSRP in WooCommerce.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-msrp';
 		parent::__construct();
 
@@ -110,7 +110,7 @@ class WCJ_Product_MSRP extends WCJ_Module {
 			'id'            => "variable_wcj_msrp_{$loop}",
 			'name'          => "variable_wcj_msrp[{$loop}]",
 			'value'         => wc_format_localized_price( isset( $variation_data['_wcj_msrp'][0] ) ? $variation_data['_wcj_msrp'][0] : '' ),
-			'label'         => __( 'MSRP', 'woocommerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+			'label'         => __( 'MSRP', 'e-commerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
 			'data_type'     => 'price',
 			'wrapper_class' => 'form-row form-row-full',
 		) );
@@ -141,7 +141,7 @@ class WCJ_Product_MSRP extends WCJ_Module {
 			'id'          => '_wcj_msrp',
 			'value'       => get_post_meta( $product_id, '_' . 'wcj_msrp', true ),
 			'data_type'   => 'price',
-			'label'       => __( 'MSRP', 'woocommerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+			'label'       => __( 'MSRP', 'e-commerce-jetpack' ) . ' (' . get_woocommerce_currency_symbol() . ')',
 		) );
 	}
 

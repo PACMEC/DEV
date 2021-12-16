@@ -20,7 +20,7 @@ class WCJ_PDF_Invoicing_Templates extends WCJ_Module {
 	function __construct() {
 		$this->id         = 'pdf_invoicing_templates';
 		$this->parent_id  = 'pdf_invoicing';
-		$this->short_desc = __( 'Templates', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Templates', 'e-commerce-jetpack' );
 		$this->desc       = '';
 		parent::__construct( 'submodule' );
 	}

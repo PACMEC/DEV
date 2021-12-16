@@ -20,7 +20,7 @@ class WCJ_PDF_Invoicing_Styling extends WCJ_Module {
 	function __construct() {
 		$this->id         = 'pdf_invoicing_styling';
 		$this->parent_id  = 'pdf_invoicing';
-		$this->short_desc = __( 'Styling', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Styling', 'e-commerce-jetpack' );
 		$this->desc       = '';
 		parent::__construct( 'submodule' );
 		add_action( 'init',                          array( $this, 'manually_download_fonts' ) );

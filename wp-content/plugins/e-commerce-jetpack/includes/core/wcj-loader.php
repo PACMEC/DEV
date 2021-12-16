@@ -28,10 +28,10 @@ if ( ! defined( 'WCJ_PLUGIN_PATH' ) ) {
 
 // Set up localisation
 if ( 'no' === wcj_get_option( 'wcj_load_modules_on_init', 'no' ) ) {
-	load_plugin_textdomain( 'woocommerce-jetpack', false, dirname( plugin_basename( WCJ_PLUGIN_FILE ) ) . '/langs/' );
+	load_plugin_textdomain( 'e-commerce-jetpack', false, dirname( plugin_basename( WCJ_PLUGIN_FILE ) ) . '/langs/' );
 } else {
 	add_action( 'init', function () {
-		load_plugin_textdomain( 'woocommerce-jetpack', false, dirname( plugin_basename( WCJ_PLUGIN_FILE ) ) . '/langs/' );
+		load_plugin_textdomain( 'e-commerce-jetpack', false, dirname( plugin_basename( WCJ_PLUGIN_FILE ) ) . '/langs/' );
 	}, 9 );
 }
 

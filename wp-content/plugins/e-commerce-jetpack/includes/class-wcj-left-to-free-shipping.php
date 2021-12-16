@@ -22,8 +22,8 @@ class WCJ_Left_To_Free_Shipping extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'left_to_free_shipping';
-		$this->short_desc = __( 'Left to Free Shipping', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Display "left to free shipping" info.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Left to Free Shipping', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Display "left to free shipping" info.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-left-to-free-shipping';
 		parent::__construct();
 
@@ -59,7 +59,7 @@ class WCJ_Left_To_Free_Shipping extends WCJ_Module {
 	 * @since   2.4.4
 	 */
 	function show_left_to_free_shipping_info_checkout() {
-		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_checkout', __( '%left_to_free% left to free shipping', 'woocommerce-jetpack' ) ) ) );
+		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_checkout', __( '%left_to_free% left to free shipping', 'e-commerce-jetpack' ) ) ) );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class WCJ_Left_To_Free_Shipping extends WCJ_Module {
 	 * @since   2.4.4
 	 */
 	function show_left_to_free_shipping_info_mini_cart() {
-		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_mini_cart', __( '%left_to_free% left to free shipping', 'woocommerce-jetpack' ) ) ) );
+		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_mini_cart', __( '%left_to_free% left to free shipping', 'e-commerce-jetpack' ) ) ) );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class WCJ_Left_To_Free_Shipping extends WCJ_Module {
 	 * @since   2.4.4
 	 */
 	function show_left_to_free_shipping_info_cart() {
-		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_cart', __( '%left_to_free% left to free shipping', 'woocommerce-jetpack' ) ) ) );
+		$this->show_left_to_free_shipping_info( do_shortcode( wcj_get_option( 'wcj_shipping_left_to_free_info_content_cart', __( '%left_to_free% left to free shipping', 'e-commerce-jetpack' ) ) ) );
 	}
 
 	/**

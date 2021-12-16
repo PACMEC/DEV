@@ -20,16 +20,16 @@ class WCJ_SKU extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'sku';
-		$this->short_desc = __( 'SKU', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Generate SKUs automatically. Search by SKU on frontend. Number Generation Method (Plus); Sequential Number Generation (Plus); Variable Products Variations (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Generate SKUs automatically. Search by SKU on frontend.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'SKU', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Generate SKUs automatically. Search by SKU on frontend. Number Generation Method (Plus); Sequential Number Generation (Plus); Variable Products Variations (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Generate SKUs automatically. Search by SKU on frontend.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-sku';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'sku' => array(
-				'title' => __( 'Autogenerate SKUs', 'woocommerce-jetpack' ),
-				'desc'  => __( 'The tool generates and sets product SKUs for existing products.', 'woocommerce-jetpack' ),
+				'title' => __( 'Autogenerate SKUs', 'e-commerce-jetpack' ),
+				'desc'  => __( 'The tool generates and sets product SKUs for existing products.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -665,17 +665,17 @@ class WCJ_SKU extends WCJ_Module {
 			$preview_html .=
 				'<tr>' .
 					'<th></th>' .
-					'<th>' . __( 'ID', 'woocommerce-jetpack' )         . '</th>' .
-					'<th>' . __( 'Product', 'woocommerce-jetpack' )    . '</th>' .
-					'<th>' . __( 'Categories', 'woocommerce-jetpack' ) . '</th>' .
-					'<th>' . __( 'SKU', 'woocommerce-jetpack' )        . '</th>' .
-					'<th>' . __( 'Old SKU', 'woocommerce-jetpack' )    . '</th>' .
+					'<th>' . __( 'ID', 'e-commerce-jetpack' )         . '</th>' .
+					'<th>' . __( 'Product', 'e-commerce-jetpack' )    . '</th>' .
+					'<th>' . __( 'Categories', 'e-commerce-jetpack' ) . '</th>' .
+					'<th>' . __( 'SKU', 'e-commerce-jetpack' )        . '</th>' .
+					'<th>' . __( 'Old SKU', 'e-commerce-jetpack' )    . '</th>' .
 				'</tr>';
 			$this->preview_buffer = '';
 			$this->set_all_products_skus( $is_preview );
 			$preview_html .= $this->preview_buffer;
 			$preview_html .= '</table>';
-			$result_message = '<p><div class="updated"><p><strong>' . __( 'SKUs generated and set successfully!', 'woocommerce-jetpack' ) . '</strong></p></div></p>';
+			$result_message = '<p><div class="updated"><p><strong>' . __( 'SKUs generated and set successfully!', 'e-commerce-jetpack' ) . '</strong></p></div></p>';
 		}
 		$html = '';
 		$html .= '<div class="wrap">';
@@ -685,17 +685,17 @@ class WCJ_SKU extends WCJ_Module {
 		}
 		$html .= '<form method="post" action="">';
 		$html .= '<p>';
-		$html .= '<input class="button-primary" type="submit" name="preview_sku" id="preview_sku" value="' . __( 'Preview SKUs', 'woocommerce-jetpack' ) . '">';
+		$html .= '<input class="button-primary" type="submit" name="preview_sku" id="preview_sku" value="' . __( 'Preview SKUs', 'e-commerce-jetpack' ) . '">';
 		$html .= ' ';
-		$html .= '<input class="button-primary" type="submit" name="set_sku" id="set_sku" value="' . __( 'Set SKUs', 'woocommerce-jetpack' ) . '">';
+		$html .= '<input class="button-primary" type="submit" name="set_sku" id="set_sku" value="' . __( 'Set SKUs', 'e-commerce-jetpack' ) . '">';
 		$html .= '</p>';
 		$html .= '<p>';
-		$html .= '<em>' . __( 'You can optionally limit affected products by main product\'s ID (set option to zero to ignore):', 'woocommerce-jetpack' ) . '</em>';
+		$html .= '<em>' . __( 'You can optionally limit affected products by main product\'s ID (set option to zero to ignore):', 'e-commerce-jetpack' ) . '</em>';
 		$html .= '<br>';
-		$html .= '<label for="wcj_sku_start_id">' . __( 'Min ID', 'woocommerce-jetpack' ) . ': ' . '</label>';
+		$html .= '<label for="wcj_sku_start_id">' . __( 'Min ID', 'e-commerce-jetpack' ) . ': ' . '</label>';
 		$html .= '<input type="number" name="wcj_sku_start_id" id="wcj_sku_start_id" min="0" value="' . ( isset( $_POST['wcj_sku_start_id'] ) ? $_POST['wcj_sku_start_id'] : 0 ) . '">';
 		$html .= ' ';
-		$html .= '<label for="wcj_sku_end_id">' . __( 'Max ID', 'woocommerce-jetpack' ) . ': ' . '</label>';
+		$html .= '<label for="wcj_sku_end_id">' . __( 'Max ID', 'e-commerce-jetpack' ) . ': ' . '</label>';
 		$html .= '<input type="number" name="wcj_sku_end_id" id="wcj_sku_end_id" min="0" value="' . ( isset( $_POST['wcj_sku_end_id'] ) ? $_POST['wcj_sku_end_id'] : 0 ) . '">';
 		$html .= '</p>';
 		$html .= '</form>';

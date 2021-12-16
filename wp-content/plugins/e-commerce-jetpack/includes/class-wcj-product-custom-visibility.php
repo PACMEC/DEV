@@ -22,17 +22,17 @@ class WCJ_Product_Custom_Visibility extends WCJ_Module_Product_By_Condition {
 	function __construct() {
 
 		$this->id         = 'product_custom_visibility';
-		$this->short_desc = __( 'Product Custom Visibility', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Display products by custom param (Bulk actions available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Display products by custom param.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Custom Visibility', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Display products by custom param (Bulk actions available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Display products by custom param.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-custom-visibility';
-		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Custom Visibility" meta box to each product\'s edit page.', 'woocommerce-jetpack' ) . '<br>' .
+		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Custom Visibility" meta box to each product\'s edit page.', 'e-commerce-jetpack' ) . '<br>' .
 			sprintf(
-				__( 'You can add selection drop box to frontend with "%s" widget (set "Product custom visibility" as "Selector Type") or %s shortcode.', 'woocommerce-jetpack' ),
-					__( 'Booster - Selector', 'woocommerce-jetpack' ),
+				__( 'You can add selection drop box to frontend with "%s" widget (set "Product custom visibility" as "Selector Type") or %s shortcode.', 'e-commerce-jetpack' ),
+					__( 'Booster - Selector', 'e-commerce-jetpack' ),
 					'<code>' . '[wcj_selector selector_type="product_custom_visibility"]' . '</code>' );
 
-		$this->title      = __( 'Custom Visibility', 'woocommerce-jetpack' );
+		$this->title      = __( 'Custom Visibility', 'e-commerce-jetpack' );
 
 		parent::__construct();
 
@@ -90,14 +90,14 @@ class WCJ_Product_Custom_Visibility extends WCJ_Module_Product_By_Condition {
 	function maybe_add_extra_settings() {
 		return array(
 			array(
-				'title'    => __( 'Options List', 'woocommerce-jetpack' ),
+				'title'    => __( 'Options List', 'e-commerce-jetpack' ),
 				'type'     => 'title',
 				'id'       => 'wcj_product_custom_visibility_options_list_options',
 			),
 			array(
-				'title'    => __( 'Options', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'One per line.', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Can not be empty. Options will be added to each product\'s admin edit page and to the selection drop box on frontend.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Options', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'One per line.', 'e-commerce-jetpack' ),
+				'desc'     => __( 'Can not be empty. Options will be added to each product\'s admin edit page and to the selection drop box on frontend.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_product_custom_visibility_options_list',
 				'default'  => '',
 				'type'     => 'textarea',

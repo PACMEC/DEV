@@ -1,16 +1,13 @@
 <?php
 /**
- * Plugin Name: WooCommerce PDF Invoices & Packing Slips
- * Plugin URI: http://www.wpovernight.com
- * Description: Create, print & email PDF invoices & packing slips for WooCommerce orders.
- * Version: 2.11.1
- * Author: Ewout Fernhout
- * Author URI: http://www.wpovernight.com
- * License: GPLv2 or later
- * License URI: http://www.opensource.org/licenses/gpl-license.php
- * Text Domain: woocommerce-pdf-invoices-packing-slips
- * WC requires at least: 2.2.0
- * WC tested up to: 5.9.0
+ * Plugin Name: E-Commerce - Facturas en PDF y albaranes
+ * Plugin URI: #
+ * Description: Cree, imprima y envíe por correo electrónico facturas en PDF y albaranes para pedidos de E-Commerce.
+ * Version: 1.0.0
+ * Author: PACMEC
+ * Author URI: #
+ * Text Domain: e-commerce-pdf-invoices-packing-slips
+ * Domain Path: /langs
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

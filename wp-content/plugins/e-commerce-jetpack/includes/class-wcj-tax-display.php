@@ -22,8 +22,8 @@ class WCJ_Tax_Display extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'tax_display';
-		$this->short_desc = __( 'Tax Display', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Customize WooCommerce tax display.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Tax Display', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Customize WooCommerce tax display.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-tax-display';
 		parent::__construct();
 

@@ -27,8 +27,8 @@ class WCJ_Admin_Bar extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'admin_bar';
-		$this->short_desc = __( 'Admin Bar', 'woocommerce-jetpack' );
-		$this->desc       = __( 'WooCommerce admin bar.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Admin Bar', 'e-commerce-jetpack' );
+		$this->desc       = __( 'WooCommerce admin bar.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-admin-bar';
 		parent::__construct();
 
@@ -137,19 +137,19 @@ class WCJ_Admin_Bar extends WCJ_Module {
 			if ( 'dashboard' === $id ) {
 				$nodes[ $id ]['nodes'] = apply_filters( 'wcj_admin_bar_dashboard_nodes', array(
 					'alphabetically' => array(
-						'title'  => __( 'Alphabetically', 'woocommerce-jetpack' ),
+						'title'  => __( 'Alphabetically', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=dashboard&section=alphabetically' ),
 					),
 					'by_category' => array(
-						'title'  => __( 'By Category', 'woocommerce-jetpack' ),
+						'title'  => __( 'By Category', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=dashboard&section=by_category' ),
 					),
 					'active' => array(
-						'title'  => __( 'Active', 'woocommerce-jetpack' ),
+						'title'  => __( 'Active', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=dashboard&section=active' ),
 					),
 					'manager' => array(
-						'title'  => __( 'Manage Settings', 'woocommerce-jetpack' ),
+						'title'  => __( 'Manage Settings', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=dashboard&section=manager' ),
 					),
 				) );
@@ -165,11 +165,11 @@ class WCJ_Admin_Bar extends WCJ_Module {
 						'meta'   => array( 'title' => WCJ()->modules[ $link_id ]->desc ),
 						'nodes'  => array(
 							'settings' => array(
-								'title'  => __( 'Settings', 'woocommerce-jetpack' ),
+								'title'  => __( 'Settings', 'e-commerce-jetpack' ),
 								'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=' . $id . '&section=' . $link_id ),
 							),
 							'docs' => array(
-								'title'  => __( 'Documentation', 'woocommerce-jetpack' ),
+								'title'  => __( 'Documentation', 'e-commerce-jetpack' ),
 								'href'   => WCJ()->modules[ $link_id ]->link . '?utm_source=module_documentation&utm_medium=admin_bar_link&utm_campaign=booster_documentation',
 								'meta'   => array( 'target' => '_blank' ),
 							),
@@ -211,8 +211,8 @@ class WCJ_Admin_Bar extends WCJ_Module {
 		$tools = apply_filters( 'wcj_tools_tabs', array(
 			array(
 				'id'    => 'dashboard',
-				'title' => __( 'Dashboard', 'woocommerce-jetpack' ),
-				'desc'  => __( 'This dashboard lets you check statuses and short descriptions of all available Booster for WooCommerce tools. Tools can be enabled through WooCommerce > Settings > Booster.', 'woocommerce-jetpack' ),
+				'title' => __( 'Dashboard', 'e-commerce-jetpack' ),
+				'desc'  => __( 'This dashboard lets you check statuses and short descriptions of all available Booster for WooCommerce tools. Tools can be enabled through WooCommerce > Settings > Booster.', 'e-commerce-jetpack' ),
 			),
 		) );
 		foreach ( $tools as $tool ) {
@@ -242,7 +242,7 @@ class WCJ_Admin_Bar extends WCJ_Module {
 		}
 		$tools = array(
 			'tools' => array(
-				'title'  => __( 'Tools', 'woocommerce-jetpack' ),
+				'title'  => __( 'Tools', 'e-commerce-jetpack' ),
 				'href'   => admin_url( 'admin.php?page=wcj-tools' ),
 				'nodes'  => $this->get_nodes_booster_tools(),
 			),
@@ -250,10 +250,10 @@ class WCJ_Admin_Bar extends WCJ_Module {
 		unset( $tools['tools']['nodes']['dashboard'] );
 		$nodes = array(
 			'booster-active' => array(
-				'title'  => '<span class="ab-icon"></span>' . __( 'Booster: Active', 'woocommerce-jetpack' ),
+				'title'  => '<span class="ab-icon"></span>' . __( 'Booster: Active', 'e-commerce-jetpack' ),
 				'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=dashboard&section=active' ),
 				'meta'   => array(
-					'title'  => __( 'Booster - Active', 'woocommerce-jetpack' ),
+					'title'  => __( 'Booster - Active', 'e-commerce-jetpack' ),
 				),
 				'nodes'  => array_merge( $this->active_modules, $tools ),
 			),
@@ -273,19 +273,19 @@ class WCJ_Admin_Bar extends WCJ_Module {
 		}
 		$nodes = array(
 			'booster' => array(
-				'title'  => '<span class="ab-icon"></span>' . __( 'Booster', 'woocommerce-jetpack' ),
+				'title'  => '<span class="ab-icon"></span>' . __( 'Booster', 'e-commerce-jetpack' ),
 				'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack' ),
 				'meta'   => array(
-					'title'  => __( 'Booster - Settings', 'woocommerce-jetpack' ),
+					'title'  => __( 'Booster - Settings', 'e-commerce-jetpack' ),
 				),
 				'nodes'  => array(
 					'modules' => array(
-						'title'  => __( 'Modules', 'woocommerce-jetpack' ),
+						'title'  => __( 'Modules', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wc-settings&tab=jetpack' ),
 						'nodes'  => $this->get_nodes_booster_modules(),
 					),
 					'tools' => array(
-						'title'  => __( 'Tools', 'woocommerce-jetpack' ),
+						'title'  => __( 'Tools', 'e-commerce-jetpack' ),
 						'href'   => admin_url( 'admin.php?page=wcj-tools' ),
 						'nodes'  => $this->get_nodes_booster_tools(),
 					),

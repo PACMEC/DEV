@@ -11,20 +11,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Product Info in Item Name', 'woocommerce-jetpack' ),
+		'title'    => __( 'Product Info in Item Name', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_product_info_in_email_order_item_name_options',
 	),
 	array(
-		'title'    => __( 'Add Product Info to Item Name', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Add', 'woocommerce-jetpack' ),
+		'title'    => __( 'Add Product Info to Item Name', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Add', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_product_info_in_email_order_item_name_enabled',
 		'default'  => 'no',
 	),
 	array(
-		'title'    => __( 'Info', 'woocommerce-jetpack' ),
-		'desc'     => sprintf( __( 'You can use <a target="_blank" href="%s">Booster\'s products shortcodes</a> here.', 'woocommerce-jetpack' ), 'https://booster.io/category/shortcodes/products-shortcodes/' ),
+		'title'    => __( 'Info', 'e-commerce-jetpack' ),
+		'desc'     => sprintf( __( 'You can use <a target="_blank" href="%s">Booster\'s products shortcodes</a> here.', 'e-commerce-jetpack' ), 'https://booster.io/category/shortcodes/products-shortcodes/' ),
 		'type'     => 'custom_textarea',
 		'id'       => 'wcj_product_info_in_email_order_item_name',
 		'default'  => '[wcj_product_categories strip_tags="yes" before="<hr><em>" after="</em>"]',

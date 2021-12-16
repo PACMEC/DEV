@@ -35,7 +35,7 @@ class WCJ_Reports_Customers {
 		$customers = get_users( 'role=customer&orderby=registered&order=DESC' );
 		$total_customers = count( $customers );
 		if ( $total_customers < 1 ) {
-			return '<h5>' . __( 'No customers found.', 'woocommerce-jetpack' ) . '</h5>';
+			return '<h5>' . __( 'No customers found.', 'e-commerce-jetpack' ) . '</h5>';
 		}
 
 		// Count data
@@ -76,7 +76,7 @@ class WCJ_Reports_Customers {
 			}
 			// N/A
 			if ( '' == $customer_country ) {
-				$customer_country = __( 'Non Available', 'woocommerce-jetpack' );
+				$customer_country = __( 'Non Available', 'e-commerce-jetpack' );
 			}
 
 			if ( 'all_countries' === $report_type ) {
@@ -89,10 +89,10 @@ class WCJ_Reports_Customers {
 				if ( ! isset( $result[ $customer_country ]['total_spent'] ) ) {
 					$result[ $customer_country ]['total_spent'] = array(
 						array(
-							__( 'Customer Name', 'woocommerce-jetpack' ),
-							__( 'Email', 'woocommerce-jetpack' ),
-							__( 'Total Spent', 'woocommerce-jetpack' ),
-							__( 'Registered', 'woocommerce-jetpack' ),
+							__( 'Customer Name', 'e-commerce-jetpack' ),
+							__( 'Email', 'e-commerce-jetpack' ),
+							__( 'Total Spent', 'e-commerce-jetpack' ),
+							__( 'Registered', 'e-commerce-jetpack' ),
 						),
 					);
 				}
@@ -131,13 +131,13 @@ class WCJ_Reports_Customers {
 	function get_html( $data, $total_customers, $report_type = 'all_countries' ) {
 		$html = '';
 		if ( 'all_countries' === $report_type ) {
-			$html .= '<h5>' . __( 'Total customers', 'woocommerce-jetpack' ) . ': ' . $total_customers . '</h5>';
+			$html .= '<h5>' . __( 'Total customers', 'e-commerce-jetpack' ) . ': ' . $total_customers . '</h5>';
 			$html .= '<table class="widefat" style="width:100% !important;"><tbody>';
 			$html .= '<tr>';
 			$html .= '<th></th>';
-			$html .= '<th>' . __( 'Country Code', 'woocommerce-jetpack' ) . '</th>';
-			$html .= '<th>' . __( 'Customers Count', 'woocommerce-jetpack' ) . '</th>';
-			$html .= '<th>' . __( 'Percent of total', 'woocommerce-jetpack' ) . '</th>';
+			$html .= '<th>' . __( 'Country Code', 'e-commerce-jetpack' ) . '</th>';
+			$html .= '<th>' . __( 'Customers Count', 'e-commerce-jetpack' ) . '</th>';
+			$html .= '<th>' . __( 'Percent of total', 'e-commerce-jetpack' ) . '</th>';
 			$html .= '<th></th>';
 			$html .= '<th></th>';
 			$html .= '</tr>';
@@ -159,7 +159,7 @@ class WCJ_Reports_Customers {
 			$html .= '</tbody></table>';
 		} else { // single country
 			$country_code = $report_type;
-			$html .= '<h5>' . __( 'Report for:', 'woocommerce-jetpack' ) . ' ' . wcj_get_country_name_by_code( $country_code ) . ' [' . $country_code .  ']' . '</h5>';
+			$html .= '<h5>' . __( 'Report for:', 'e-commerce-jetpack' ) . ' ' . wcj_get_country_name_by_code( $country_code ) . ' [' . $country_code .  ']' . '</h5>';
 			$html .= ( 2 == strlen( $country_code ) ) ? wcj_get_table_html( $data[ $country_code ]['total_spent'], array( 'table_class' => 'widefat', ) ) : '';
 		}
 		return $html;

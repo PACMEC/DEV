@@ -20,7 +20,7 @@ class WCJ_PDF_Invoicing_Numbering extends WCJ_Module {
 	function __construct() {
 		$this->id         = 'pdf_invoicing_numbering';
 		$this->parent_id  = 'pdf_invoicing';
-		$this->short_desc = __( 'Numbering', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Numbering', 'e-commerce-jetpack' );
 		parent::__construct( 'submodule' );
 
 		if ( 'yes' === wcj_get_option( 'wcj_invoicing_admin_search_by_invoice', 'no' ) ) {

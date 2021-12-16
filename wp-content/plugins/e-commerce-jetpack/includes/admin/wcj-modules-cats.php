@@ -11,8 +11,8 @@
 return apply_filters( 'wcj_modules', array(
 
 	'dashboard' => array(
-		'label'          => __( 'Dashboard', 'woocommerce-jetpack' ),
-		'desc'           => __( 'This dashboard lets you enable/disable any Booster\'s module. Each checkbox comes with short module\'s description. Please visit <a href="https://booster.io" target="_blank">https://booster.io</a> for detailed info on each feature.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Dashboard', 'e-commerce-jetpack' ),
+		'desc'           => __( 'This dashboard lets you enable/disable any Booster\'s module. Each checkbox comes with short module\'s description. Please visit <a href="https://booster.io" target="_blank">https://booster.io</a> for detailed info on each feature.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'alphabetically',
 			'by_category',
@@ -22,8 +22,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'prices_and_currencies' => array(
-		'label'          => __( 'Prices & Currencies', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Multicurrency, Price Converter, Wholesale Pricing, Name You Price, Price based on User Role and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Prices & Currencies', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Multicurrency, Price Converter, Wholesale Pricing, Name You Price, Price based on User Role and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'price_by_country',
 			'multicurrency',
@@ -43,8 +43,8 @@ return apply_filters( 'wcj_modules', array(
 		),
 	),
 	'labels' => array(
-		'label'          => __( 'Button & Price Labels', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Add to Cart Labels, Call for Price, Custom Price Labels and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Button & Price Labels', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Add to Cart Labels, Call for Price, Custom Price Labels and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'price_labels',
 			'call_for_price',
@@ -55,8 +55,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'products' => array(
-		'label'          => __( 'Products', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Bookings, Crowdfunding Products, Product Addons and Input Fields, Product Listings, Product Tabs and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Products', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Bookings, Crowdfunding Products, Product Addons and Input Fields, Product Listings, Product Tabs and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'product_listings',
 			'tax_display',
@@ -92,8 +92,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'cart_and_checkout' => array(
-		'label'          => __( 'Cart & Checkout', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Cart and Checkout Customization, Empty Cart Button, Mini Cart, Coupons and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Cart & Checkout', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Cart and Checkout Customization, Empty Cart Button, Mini Cart, Coupons and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'cart',
 			'cart_customization',
@@ -113,8 +113,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'payment_gateways' => array(
-		'label'          => __( 'Payment Gateways', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Custom Payment Gateways, Gateways Currency, Gateways Fees and Discounts and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Payment Gateways', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Custom Payment Gateways, Gateways Currency, Gateways Fees and Discounts and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'payment_gateways',
 			'payment_gateways_icons',
@@ -130,8 +130,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'shipping_and_orders' => array(
-		'label'          => __( 'Shipping & Orders', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Order Custom Statuses, Order Minimum Amount, Order Numbers, Custom Shipping Methods and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Shipping & Orders', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Order Custom Statuses, Order Minimum Amount, Order Numbers, Custom Shipping Methods and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'shipping',
 			'shipping_options',
@@ -158,8 +158,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'pdf_invoicing' => array(
-		'label'          => __( 'PDF Invoicing & Packing Slips', 'woocommerce-jetpack' ),
-		'desc'           => __( 'PDF Documents', 'woocommerce-jetpack' ),
+		'label'          => __( 'PDF Invoicing & Packing Slips', 'e-commerce-jetpack' ),
+		'desc'           => __( 'PDF Documents', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'pdf_invoicing',
 			'pdf_invoicing_numbering',
@@ -175,8 +175,8 @@ return apply_filters( 'wcj_modules', array(
 	),
 
 	'emails_and_misc' => array(
-		'label'          => __( 'Emails & Misc.', 'woocommerce-jetpack' ),
-		'desc'           => __( 'Emails, Reports, Export, Admin Tools, General Options and more.', 'woocommerce-jetpack' ),
+		'label'          => __( 'Emails & Misc.', 'e-commerce-jetpack' ),
+		'desc'           => __( 'Emails, Reports, Export, Admin Tools, General Options and more.', 'e-commerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'general',
 			'breadcrumbs',

@@ -1,17 +1,13 @@
 <?php
 /**
  * Plugin Family Id: dangoodman/wc-weight-based-shipping
- * Plugin Name: WooCommerce Weight Based Shipping
- * Plugin URI: https://wordpress.org/plugins/weight-based-shipping-for-woocommerce/
- * Description: Simple yet flexible shipping method for WooCommerce.
+ * Plugin Name: E-Commerce - Envío basado en peso
+ * Plugin URI: #
+ * Description: Método de envío simple pero flexible para E-Commerce.
  * Version: 5.3.16
- * Author: weightbasedshipping.com
- * Author URI: https://weightbasedshipping.com
+ * Author: PACMEC
+ * Author URI: #
  * Requires PHP: 7.1
- * Requires at least: 4.0
- * Tested up to: 5.8
- * WC requires at least: 3.2
- * WC tested up to: 5.8
  */
 
 if (!class_exists('WbsVendors_DgmWpPluginBootstrapGuard', false)) {

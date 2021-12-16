@@ -23,16 +23,16 @@ class WCJ_Order_Custom_Statuses extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'order_custom_statuses';
-		$this->short_desc = __( 'Order Custom Statuses', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Custom statuses for WooCommerce orders. Make Custom Status Orders Editable (Plus). Add Custom Statuses to Admin Order List Action Buttons (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Custom statuses for WooCommerce orders.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Order Custom Statuses', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Custom statuses for WooCommerce orders. Make Custom Status Orders Editable (Plus). Add Custom Statuses to Admin Order List Action Buttons (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Custom statuses for WooCommerce orders.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-order-custom-statuses';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'custom_statuses' => array(
-				'title' => __( 'Custom Statuses', 'woocommerce-jetpack' ),
-				'desc'  => __( 'Tool lets you add, edit or delete any custom status for WooCommerce orders.', 'woocommerce-jetpack' ),
+				'title' => __( 'Custom Statuses', 'e-commerce-jetpack' ),
+				'desc'  => __( 'Tool lets you add, edit or delete any custom status for WooCommerce orders.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -164,7 +164,7 @@ class WCJ_Order_Custom_Statuses extends WCJ_Module {
 				$status_actions[ $custom_order_status ] = array(
 					'url'       => $this->get_custom_order_statuses_action_url( $custom_order_status, $order_id ),
 					'name'      => $label,
-					'title'     => sprintf( __( 'Change order status to %s', 'woocommerce-jetpack' ), $custom_order_status ),
+					'title'     => sprintf( __( 'Change order status to %s', 'e-commerce-jetpack' ), $custom_order_status ),
 					'action'    => $custom_order_status,
 				);
 			}
@@ -439,9 +439,9 @@ class WCJ_Order_Custom_Statuses extends WCJ_Module {
 			foreach( wcj_get_order_statuses() as $key => $order_status ) {
 				if ( in_array( $key, array( 'processing', 'on-hold', 'completed', ) ) ) continue;
 				?>jQuery(function() {
-					jQuery('<option>').val('mark_<?php echo $key; ?>').text('<?php echo __( 'Mark', 'woocommerce-jetpack' ) . ' ' .
+					jQuery('<option>').val('mark_<?php echo $key; ?>').text('<?php echo __( 'Mark', 'e-commerce-jetpack' ) . ' ' .
 						$order_status; ?>').appendTo('select[name="action"]');
-					jQuery('<option>').val('mark_<?php echo $key; ?>').text('<?php echo __( 'Mark', 'woocommerce-jetpack' ) . ' ' .
+					jQuery('<option>').val('mark_<?php echo $key; ?>').text('<?php echo __( 'Mark', 'e-commerce-jetpack' ) . ' ' .
 						$order_status; ?>').appendTo('select[name="action2"]');
 				});<?php
 			}

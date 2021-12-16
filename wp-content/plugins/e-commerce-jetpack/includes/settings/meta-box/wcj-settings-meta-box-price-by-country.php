@@ -14,7 +14,7 @@ $groups       = array();
 $total_number = apply_filters( 'booster_option', 1, wcj_get_option( 'wcj_price_by_country_total_groups_number', 1 ) );
 for ( $i = 1; $i <= $total_number; $i++ ) {
 	$group_currency_code = wcj_get_option( 'wcj_price_by_country_exchange_rate_currency_group_' . $i );
-	$admin_title = wcj_get_option( 'wcj_price_by_country_countries_group_admin_title_' . $i, __( 'Group', 'woocommerce-jetpack' ) . ' #' . $i );
+	$admin_title = wcj_get_option( 'wcj_price_by_country_countries_group_admin_title_' . $i, __( 'Group', 'e-commerce-jetpack' ) . ' #' . $i );
 	$countries = '';
 	switch ( wcj_get_option( 'wcj_price_by_country_selection', 'comma_list' ) ) {
 		case 'comma_list':
@@ -42,7 +42,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 				'name'       => 'wcj_price_by_country_regular_price_local_' . $i . '_' . $product_id,
 				'default'    => 0,
 				'type'       => 'price',
-				'title'      => __( 'Regular price', 'woocommerce-jetpack' ),
+				'title'      => __( 'Regular price', 'e-commerce-jetpack' ),
 				'desc'       => $desc,
 				'product_id' => $product_id,
 				'meta_name'  => '_' . 'wcj_price_by_country_regular_price_local_' . $i,
@@ -51,7 +51,7 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 				'name'       => 'wcj_price_by_country_sale_price_local_' . $i . '_' . $product_id,
 				'default'    => '',
 				'type'       => 'price',
-				'title'      => __( 'Sale price', 'woocommerce-jetpack' ),
+				'title'      => __( 'Sale price', 'e-commerce-jetpack' ),
 				'desc'       => $desc,
 				'product_id' => $product_id,
 				'meta_name'  => '_' . 'wcj_price_by_country_sale_price_local_' . $i,
@@ -61,10 +61,10 @@ for ( $i = 1; $i <= $total_number; $i++ ) {
 				'default'    => 'off',
 				'type'       => 'select',
 				'options'    => array(
-					'off' => __( 'No', 'woocommerce-jetpack' ),
-					'on'  => __( 'Yes', 'woocommerce-jetpack' ),
+					'off' => __( 'No', 'e-commerce-jetpack' ),
+					'on'  => __( 'Yes', 'e-commerce-jetpack' ),
 				),
-				'title'      => __( 'Make empty price', 'woocommerce-jetpack' ),
+				'title'      => __( 'Make empty price', 'e-commerce-jetpack' ),
 				'desc'       => $desc,
 				'product_id' => $product_id,
 				'meta_name'  => '_' . 'wcj_price_by_country_make_empty_price_local_' . $i,

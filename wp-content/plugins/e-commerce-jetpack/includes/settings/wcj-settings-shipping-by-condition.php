@@ -18,26 +18,26 @@ $settings = array();
 
 // Multiple Roles Option
 $check_multiple_roles_option = array(
-	'title'    => __( 'Multiple Role Checking', 'woocommerce-jetpack' ),
+	'title'    => __( 'Multiple Role Checking', 'e-commerce-jetpack' ),
 	'type'     => 'checkbox',
 	'default'  => 'no',
-	'desc_tip' => __( 'Enable if you have some plugin that allows users with multiple roles like "User Role Editor".', 'woocommerce-jetpack' ),
-	'desc'     => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'woocommerce-jetpack' ) : $message,
+	'desc_tip' => __( 'Enable if you have some plugin that allows users with multiple roles like "User Role Editor".', 'e-commerce-jetpack' ),
+	'desc'     => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'e-commerce-jetpack' ) : $message,
 	'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 	'id'       => 'wcj_' . $this->id . '_check_multiple_roles',
 );
 
 $settings = array_merge( $settings, array(
 	array(
-		'title'    => __( 'General Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'General Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_' . $this->id . '_general_options',
 	),
 	array(
-		'title'    => __( 'Use Shipping Instances', 'woocommerce-jetpack' ),
-		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'woocommerce-jetpack' ) . ' ' .
-			__( 'Save changes after enabling this option.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Use Shipping Instances', 'e-commerce-jetpack' ),
+		'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Enable this if you want to use shipping methods instances instead of shipping methods.', 'e-commerce-jetpack' ) . ' ' .
+			__( 'Save changes after enabling this option.', 'e-commerce-jetpack' ),
 		'type'     => 'checkbox',
 		'id'       => 'wcj_' . $this->id . '_use_shipping_instance',
 		'default'  => 'no',
@@ -52,14 +52,14 @@ $settings = array_merge( $settings, array(
 foreach ( $this->condition_options as $options_id => $options_data ) {
 	$settings = array_merge( $settings, array(
 		array(
-			'title'   => sprintf( __( 'Shipping Methods by %s', 'woocommerce-jetpack' ), $options_data['title'] ),
+			'title'   => sprintf( __( 'Shipping Methods by %s', 'e-commerce-jetpack' ), $options_data['title'] ),
 			'type'    => 'title',
-			'desc'    => __( 'Leave empty to disable.', 'woocommerce-jetpack' )  . ' ' . $options_data['desc'],
+			'desc'    => __( 'Leave empty to disable.', 'e-commerce-jetpack' )  . ' ' . $options_data['desc'],
 			'id'      => 'wcj_shipping_by_' . $options_id . '_options',
 		),
 		array(
-			'title'   => sprintf( __( 'Shipping Methods by %s', 'woocommerce-jetpack' ), $options_data['title'] ),
-			'desc'    => '<strong>' . __( 'Enable section', 'woocommerce-jetpack' ) . '</strong>',
+			'title'   => sprintf( __( 'Shipping Methods by %s', 'e-commerce-jetpack' ), $options_data['title'] ),
+			'desc'    => '<strong>' . __( 'Enable section', 'e-commerce-jetpack' ) . '</strong>',
 			'id'      => 'wcj_shipping_by_' . $options_id . '_section_enabled',
 			'type'    => 'checkbox',
 			'default' => 'yes',
@@ -90,7 +90,7 @@ foreach ( $this->condition_options as $options_id => $options_data ) {
 				wcj_get_ajax_settings( array(
 					'title'             => ( $use_shipping_instances ? $method['zone_name'] . ': ' . $method['shipping_method_title'] : $method->get_method_title() ),
 					'desc_tip'          => $desc_tip,
-					'desc'              => '<br>' . sprintf( __( 'Include %s', 'woocommerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $include_id ),
+					'desc'              => '<br>' . sprintf( __( 'Include %s', 'e-commerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $include_id ),
 					'id'                => $include_id,
 					'default'           => '',
 					'css'               => $css,
@@ -98,7 +98,7 @@ foreach ( $this->condition_options as $options_id => $options_data ) {
 				),true, 'woocommerce_json_search_customers' ),
 				wcj_get_ajax_settings( array(
 					'desc_tip'          => $desc_tip,
-					'desc'              => '<br>' . sprintf( __( 'Exclude %s', 'woocommerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $exclude_id ),
+					'desc'              => '<br>' . sprintf( __( 'Exclude %s', 'e-commerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $exclude_id ),
 					'id'                => $exclude_id,
 					'default'           => '',
 					'css'               => $css,
@@ -110,7 +110,7 @@ foreach ( $this->condition_options as $options_id => $options_data ) {
 				array(
 					'title'             => ( $use_shipping_instances ? $method['zone_name'] . ': ' . $method['shipping_method_title'] : $method->get_method_title() ),
 					'desc_tip'          => $desc_tip,
-					'desc'              => '<br>' . sprintf( __( 'Include %s', 'woocommerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $include_id ),
+					'desc'              => '<br>' . sprintf( __( 'Include %s', 'e-commerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $include_id ),
 					'id'                => $include_id,
 					'default'           => '',
 					'type'              => $type,
@@ -121,7 +121,7 @@ foreach ( $this->condition_options as $options_id => $options_data ) {
 				),
 				array(
 					'desc_tip'          => $desc_tip,
-					'desc'              => '<br>' . sprintf( __( 'Exclude %s', 'woocommerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $exclude_id ),
+					'desc'              => '<br>' . sprintf( __( 'Exclude %s', 'e-commerce-jetpack' ), $options_data['title'] ) . $this->get_extra_option_desc( $exclude_id ),
 					'id'                => $exclude_id,
 					'default'           => '',
 					'type'              => $type,
@@ -143,17 +143,17 @@ foreach ( $this->condition_options as $options_id => $options_data ) {
 }
 $settings = array_merge( $settings, array(
 	array(
-		'title'    => __( 'Advanced Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Advanced Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_' . $this->id . '_advanced_options',
 	),
 	array(
-		'title'    => __( 'Filter Priority', 'woocommerce-jetpack' ),
-		'desc_tip' => __( 'Set to zero to use the default priority.', 'woocommerce-jetpack' ),
+		'title'    => __( 'Filter Priority', 'e-commerce-jetpack' ),
+		'desc_tip' => __( 'Set to zero to use the default priority.', 'e-commerce-jetpack' ),
 		'id'       => 'wcj_' . $this->id . '_filter_priority',
 		'default'  => 0,
 		'type'     => 'number',
-		'desc'    => __( 'Change the Priority of the current module\'s execution, Greater value for late execution & Lower value for early execution.', 'woocommerce-jetpack' ),
+		'desc'    => __( 'Change the Priority of the current module\'s execution, Greater value for late execution & Lower value for early execution.', 'e-commerce-jetpack' ),
 	),
 	array(
 		'type'     => 'sectionend',

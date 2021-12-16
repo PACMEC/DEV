@@ -37,7 +37,7 @@ class WCJ_TCPDF extends TCPDF {
 	 */
 	function Footer() {
 		$invoice_type = $this->invoice_type;
-		$footer_text = wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_footer_text', __( 'Page %page_number% / %total_pages%', 'woocommerce-jetpack' ) );
+		$footer_text = wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_footer_text', __( 'Page %page_number% / %total_pages%', 'e-commerce-jetpack' ) );
 		$footer_text = str_replace( '%page_number%', $this->getAliasNumPage(), $footer_text );
 		$footer_text = str_replace( '%total_pages%', $this->getAliasNbPages(), $footer_text );
 		$border_desc = array(

@@ -155,9 +155,9 @@ class WCJ_Module {
 	 */
 	function get_wpml_terms_in_all_languages_setting() {
 		return array(
-			'title'    => __( 'WPML: Get Terms in All Languages', 'woocommerce-jetpack' ),
-			'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Get tags and taxonomies in all languages', 'woocommerce-jetpack' ),
+			'title'    => __( 'WPML: Get Terms in All Languages', 'e-commerce-jetpack' ),
+			'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Get tags and taxonomies in all languages', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_' . $this->id . '_wpml_get_terms_all_lang',
 			'default'  => 'no',
 			'type'     => 'checkbox',
@@ -176,9 +176,9 @@ class WCJ_Module {
 	 */
 	function get_wpml_products_in_all_languages_setting() {
 		return array(
-			'title'    => __( 'WPML: Get Products in All Languages', 'woocommerce-jetpack' ),
-			'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
-			'desc_tip' => __( 'Get products in all languages', 'woocommerce-jetpack' ),
+			'title'    => __( 'WPML: Get Products in All Languages', 'e-commerce-jetpack' ),
+			'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
+			'desc_tip' => __( 'Get products in all languages', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_' . $this->id . '_wpml_get_products_all_lang',
 			'default'  => 'no',
 			'type'     => 'checkbox',
@@ -309,7 +309,7 @@ class WCJ_Module {
 		}
 		echo '<div class="error">' . '<p>' . '<div class="message">' .
 			sprintf(
-				__( 'Booster: Free plugin\'s version is limited to only one "%1$s" product with settings on per product basis enabled at a time. You will need to get <a href="%2$s" target="_blank">Booster Plus</a> to add unlimited number of "%1$s" products.', 'woocommerce-jetpack' ),
+				__( 'Booster: Free plugin\'s version is limited to only one "%1$s" product with settings on per product basis enabled at a time. You will need to get <a href="%2$s" target="_blank">Booster Plus</a> to add unlimited number of "%1$s" products.', 'e-commerce-jetpack' ),
 				$this->short_desc, 'https://booster.io/plus/'
 			) .
 		'</div>' . '</p>' . '</div>';
@@ -520,7 +520,7 @@ class WCJ_Module {
 	 * @return array
 	 */
 	function handle_hide_on_free_parameter( $settings ) {
-		if ( 'woocommerce-jetpack.php' !== basename( WCJ_PLUGIN_FILE ) ) {
+		if ( 'e-commerce-jetpack.php' !== basename( WCJ_PLUGIN_FILE ) ) {
 			return $settings;
 		}
 		$settings = wp_list_filter( $settings, array( 'hide_on_free' => true ), 'NOT' );
@@ -579,7 +579,7 @@ class WCJ_Module {
 		$priority = ( isset( $this->meta_box_priority ) ) ? $this->meta_box_priority : 'high';
 		add_meta_box(
 			'wc-jetpack-' . $this->id,
-			__( 'Booster', 'woocommerce-jetpack' ) . ': ' . $this->short_desc,
+			__( 'Booster', 'e-commerce-jetpack' ) . ': ' . $this->short_desc,
 			array( $this, 'create_meta_box' ),
 			$screen,
 			$context,
@@ -671,7 +671,7 @@ class WCJ_Module {
 						case 'select':
 							$field_html = '<select' . $custom_attributes . ' class="' . $class . '" style="' . $css . '" id="' . $option['name'] . '" name="' .
 								$option_name . '">' . $options . '</select>' .
-								( $show_value && ! empty( $option_value ) ? sprintf( '<em>' . __( 'Selected: %s.', 'woocommerce-jetpack' ), implode( ', ', $option_value ) ) . '</em>' : '' );
+								( $show_value && ! empty( $option_value ) ? sprintf( '<em>' . __( 'Selected: %s.', 'e-commerce-jetpack' ), implode( ', ', $option_value ) ) . '</em>' : '' );
 							break;
 						default:
 							$field_html = '<input style="' . $css . '" class="short" type="' . $option['type'] . '"' . $input_ending;
@@ -740,7 +740,7 @@ class WCJ_Module {
 	function get_back_to_settings_link_html() {
 		$cat_id = $this->get_cat_by_section( $this->id );
 		$the_link = admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=' . $cat_id . '&section=' . $this->id );
-		return '<a href="' .  $the_link . '"><< ' . __( 'Back to Module Settings', 'woocommerce-jetpack' ) . '</a>';
+		return '<a href="' .  $the_link . '"><< ' . __( 'Back to Module Settings', 'e-commerce-jetpack' ) . '</a>';
 	}
 
 	/**
@@ -752,13 +752,13 @@ class WCJ_Module {
 	function add_tools_list( $settings ) {
 		return array_merge( $settings, array(
 			array(
-				'title'    => __( 'Tools', 'woocommerce-jetpack' ),
+				'title'    => __( 'Tools', 'e-commerce-jetpack' ),
 				'type'     => 'title',
 				'desc'     => '',
 				'id'       => 'wcj_' . $this->id . '_tools_options'
 			),
 			array(
-				'title'    => __( 'Module Tools', 'woocommerce-jetpack' ),
+				'title'    => __( 'Module Tools', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_' . $this->id . '_module_tools',
 				'type'     => 'module_tools',
 			),
@@ -779,7 +779,7 @@ class WCJ_Module {
 		$html = '';
 		if ( isset( $this->tools_array[ $tool_id ] ) ) {
 			$html .= '<p>' .  $this->get_back_to_settings_link_html() . '</p>';
-			$html .= '<h3>' . __( 'Booster', 'woocommerce-jetpack' ) . ' - ' . $this->tools_array[ $tool_id ]['title'] . '</h3>';
+			$html .= '<h3>' . __( 'Booster', 'e-commerce-jetpack' ) . ' - ' . $this->tools_array[ $tool_id ]['title'] . '</h3>';
 			$html .= '<p style="font-style:italic;">' . $this->tools_array[ $tool_id ]['desc']  . '</p>';
 		}
 		return $html;
@@ -831,8 +831,8 @@ class WCJ_Module {
 	 */
 	function add_module_tools_info_to_tools_dashboard() {
 		$is_enabled_html = ( $this->is_enabled() ) ?
-			'<span style="color:green;font-style:italic;">' . __( 'enabled', 'woocommerce-jetpack' )  . '</span>' :
-			'<span style="color:gray;font-style:italic;">'  . __( 'disabled', 'woocommerce-jetpack' ) . '</span>';
+			'<span style="color:green;font-style:italic;">' . __( 'enabled', 'e-commerce-jetpack' )  . '</span>' :
+			'<span style="color:gray;font-style:italic;">'  . __( 'disabled', 'e-commerce-jetpack' ) . '</span>';
 		foreach ( $this->tools_array as $tool_id => $tool_data ) {
 			$tool_title = $tool_data['title'];
 			$tool_desc  = $tool_data['desc'];
@@ -840,7 +840,7 @@ class WCJ_Module {
 			$additional_info_html = '';
 			if ( isset( $tool_data['deprecated'] ) && true === $tool_data['deprecated'] ) {
 				$additional_style_html = 'color:gray;font-style:italic;';
-				$additional_info_html  = ' - ' . __( 'Deprecated', 'woocommerce-jetpack' );
+				$additional_info_html  = ' - ' . __( 'Deprecated', 'e-commerce-jetpack' );
 			}
 			echo '<tr>';
 			echo '<td style="' . $additional_style_html . '">' . $tool_title . $additional_info_html . '</td>';
@@ -878,18 +878,18 @@ class WCJ_Module {
 		$reset_button_style = "background: red; border-color: red; box-shadow: 0 1px 0 red; text-shadow: 0 -1px 1px #a00,1px 0 1px #a00,0 1px 1px #a00,-1px 0 1px #a00;";
 		$reset_settings_setting = array(
 			array(
-				'title' => __( 'Reset Settings', 'woocommerce-jetpack' ),
+				'title' => __( 'Reset Settings', 'e-commerce-jetpack' ),
 				'type'  => 'title',
 				'id'    => 'wcj_' . $this->id . '_reset_settings_options',
 			),
 			array(
 				'title'    => ( 'module' === $this->type ) ?
-					__( 'Reset Module to Default Settings', 'woocommerce-jetpack' ) :
-					__( 'Reset Submodule to Default Settings', 'woocommerce-jetpack' ),
+					__( 'Reset Module to Default Settings', 'e-commerce-jetpack' ) :
+					__( 'Reset Submodule to Default Settings', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_' . $this->id . '_reset_settings',
 				'type'     => 'custom_link',
-				'link'     => '<a onclick="return confirm(\'' . __( 'Are you sure?', 'woocommerce-jetpack' ) . '\')" class="button-primary" style="' .
-					$reset_button_style . '" href="' . add_query_arg( 'wcj_reset_settings', $this->id ) . '">' . __( 'Reset settings', 'woocommerce-jetpack' ) . '</a>',
+				'link'     => '<a onclick="return confirm(\'' . __( 'Are you sure?', 'e-commerce-jetpack' ) . '\')" class="button-primary" style="' .
+					$reset_button_style . '" href="' . add_query_arg( 'wcj_reset_settings', $this->id ) . '">' . __( 'Reset settings', 'e-commerce-jetpack' ) . '</a>',
 			),
 			array(
 				'type' => 'sectionend',
@@ -926,18 +926,18 @@ class WCJ_Module {
 		if ( isset( $this->link ) && '' != $this->link ) {
 			$the_link = '<p><a class="button-primary"' .
 				' style="background: green; border-color: green; box-shadow: 0 1px 0 green; text-shadow: 0 -1px 1px #0a0,1px 0 1px #0a0,0 1px 1px #0a0,-1px 0 1px #0a0;"' .
-				' href="' . $this->link . '?utm_source=module_documentation&utm_medium=module_button&utm_campaign=booster_documentation" target="_blank">' . __( 'Documentation', 'woocommerce-jetpack' ) . '</a></p>';
+				' href="' . $this->link . '?utm_source=module_documentation&utm_medium=module_button&utm_campaign=booster_documentation" target="_blank">' . __( 'Documentation', 'e-commerce-jetpack' ) . '</a></p>';
 		}
 		$enable_module_setting = array(
 			array(
-				'title' => $this->short_desc . ' ' . __( 'Module Options', 'woocommerce-jetpack' ),
+				'title' => $this->short_desc . ' ' . __( 'Module Options', 'e-commerce-jetpack' ),
 				'type'  => 'title',
 				'desc'  => $module_desc,
 				'id'    => 'wcj_' . $this->id . '_module_options',
 			),
 			array(
 				'title'    => $this->short_desc,
-				'desc'     => '<strong>' . __( 'Enable Module', 'woocommerce-jetpack' ) . '</strong>',
+				'desc'     => '<strong>' . __( 'Enable Module', 'e-commerce-jetpack' ) . '</strong>',
 				'desc_tip' => $this->get_desc() . $the_link,
 				'id'       => 'wcj_' . $this->id . '_enabled',
 				'default'  => 'no',

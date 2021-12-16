@@ -63,16 +63,16 @@ class WCJ_EU_Countries_VAT_Rates_Tool {
 		$the_tool_html = '';
 		$the_tool_html .= $header_html;
 
-//		$the_tool_html .= '<h4>' . __( 'Settings', 'woocommerce-jetpack' ) . '</h4>';
+//		$the_tool_html .= '<h4>' . __( 'Settings', 'e-commerce-jetpack' ) . '</h4>';
 		$data = array();
 		$the_name = ( isset( $_POST['wcj_tax_name'] ) ) ? $_POST['wcj_tax_name'] : __( 'VAT', 'woocommerce' );
 		$data[] = array(
-			__( 'Name', 'woocommerce-jetpack' ),
+			__( 'Name', 'e-commerce-jetpack' ),
 			'<input class="input-text" type="text" name="wcj_tax_name" value="' . $the_name . '">',
 		);
 		$data[] = array(
 			'',
-			'<input class="button-primary" type="submit" name="add_eu_countries_vat_rates" value="' . __( 'Add EU Countries VAT Rates', 'woocommerce-jetpack' ) . '">' . ' ' . __( 'Note: will add duplicates.', 'woocommerce-jetpack' ),
+			'<input class="button-primary" type="submit" name="add_eu_countries_vat_rates" value="' . __( 'Add EU Countries VAT Rates', 'e-commerce-jetpack' ) . '">' . ' ' . __( 'Note: will add duplicates.', 'e-commerce-jetpack' ),
 		);
 		$the_tool_html .= '<p>';
 		$the_tool_html .= '<form method="post" action="">';
@@ -80,13 +80,13 @@ class WCJ_EU_Countries_VAT_Rates_Tool {
 		$the_tool_html .= '</form>';
 		$the_tool_html .= '</p>';
 
-		$the_tool_html .= '<h4>' . __( 'List of EU VAT rates to be added', 'woocommerce-jetpack' ) . '</h4>';
+		$the_tool_html .= '<h4>' . __( 'List of EU VAT rates to be added', 'e-commerce-jetpack' ) . '</h4>';
 		$eu_vat_rates = wcj_get_european_union_countries_with_vat();
 		$data = array();
 		$data[] = array(
 			'',
-			__( 'Country', 'woocommerce-jetpack' ),
-			__( 'Rate', 'woocommerce-jetpack' ),
+			__( 'Country', 'e-commerce-jetpack' ),
+			__( 'Rate', 'e-commerce-jetpack' ),
 		);
 		$i = 1;
 		foreach ( $eu_vat_rates as $country => $rate ) {
@@ -94,14 +94,14 @@ class WCJ_EU_Countries_VAT_Rates_Tool {
 		}
 		$the_tool_html .= wcj_get_table_html( $data, array( 'table_class' => 'widefat', 'table_style' => 'width:50%;min-width:300px;', ) );
 
-		$the_tool_html .= '<h4>' . __( 'Current standard tax rates', 'woocommerce-jetpack' ) . '</h4>';
+		$the_tool_html .= '<h4>' . __( 'Current standard tax rates', 'e-commerce-jetpack' ) . '</h4>';
 		$standard_tax_rates = wcj_get_rates_for_tax_class( '' );
 		$data = array();
 		$data[] = array(
 			'',
-			__( 'Country', 'woocommerce-jetpack' ),
-			__( 'Rate', 'woocommerce-jetpack' ),
-			__( 'Name', 'woocommerce-jetpack' ),
+			__( 'Country', 'e-commerce-jetpack' ),
+			__( 'Rate', 'e-commerce-jetpack' ),
+			__( 'Name', 'e-commerce-jetpack' ),
 		);
 		$i = 1;
 		foreach ( $standard_tax_rates as $tax_rate_object ) {

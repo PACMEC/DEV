@@ -21,9 +21,9 @@ class WCJ_Product_Tabs extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_tabs';
-		$this->short_desc = __( 'Product Tabs', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add custom product tabs - globally or per product. Customize or completely remove WooCommerce default product tabs (1 custom tab allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add custom product tabs - globally or per product. Customize or completely remove WooCommerce default product tabs.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Tabs', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add custom product tabs - globally or per product. Customize or completely remove WooCommerce default product tabs (1 custom tab allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add custom product tabs - globally or per product. Customize or completely remove WooCommerce default product tabs.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-custom-product-tabs';
 		parent::__construct();
 
@@ -575,7 +575,7 @@ class WCJ_Product_Tabs extends WCJ_Module {
 	function add_custom_tabs_meta_box() {
 		add_meta_box(
 			'wc-jetpack-custom-tabs',
-			__( 'Booster: Custom Tabs', 'woocommerce-jetpack' ),
+			__( 'Booster: Custom Tabs', 'e-commerce-jetpack' ),
 			array( $this, 'create_custom_tabs_meta_box' ),
 			'product',
 			'normal',
@@ -602,13 +602,13 @@ class WCJ_Product_Tabs extends WCJ_Module {
 		$html .= '<table>';
 		$html .= '<tr>';
 		$html .= '<th>';
-		$html .= __( 'Total number of custom tabs', 'woocommerce-jetpack' );
+		$html .= __( 'Total number of custom tabs', 'e-commerce-jetpack' );
 		$html .= '</th>';
 		$html .= '<td>';
 		$html .= '<input type="number" min="0" id="' . $option_name . '" name="' . $option_name . '" value="' . $total_custom_tabs . '" ' . $is_disabled . '>';
 		$html .= '</td>';
 		$html .= '<td>';
-		$html .= __( 'Click "Update" product after you change this number.', 'woocommerce-jetpack' ) . '<br>' . $is_disabled_message;
+		$html .= __( 'Click "Update" product after you change this number.', 'e-commerce-jetpack' ) . '<br>' . $is_disabled_message;
 		$html .= '</td>';
 		$html .= '</td>';
 		$html .= '</tr>';
@@ -618,37 +618,37 @@ class WCJ_Product_Tabs extends WCJ_Module {
 		$options = array(
 			array(
 				'id'       => 'wcj_custom_product_tabs_title_local_',
-				'title'    => __( 'Title', 'woocommerce-jetpack' ),
+				'title'    => __( 'Title', 'e-commerce-jetpack' ),
 				'type'     => 'text',
 			),
 			array(
 				'id'       => 'wcj_custom_product_tabs_key_local_',
-				'title'    => __( 'Key', 'woocommerce-jetpack' ),
+				'title'    => __( 'Key', 'e-commerce-jetpack' ),
 				'type'     => 'text',
 			),
 			array(
 				'id'       => 'wcj_custom_product_tabs_priority_local_',
-				'title'    => __( 'Order', 'woocommerce-jetpack' ),
+				'title'    => __( 'Order', 'e-commerce-jetpack' ),
 				'type'     => 'number',
 			),
 			array(
 				'id'       => 'wcj_custom_product_tabs_content_local_',
-				'title'    => __( 'Content', 'woocommerce-jetpack' ),
+				'title'    => __( 'Content', 'e-commerce-jetpack' ),
 				'type'     => 'textarea',
 			),
 			array(
 				'id'       => 'wcj_custom_product_tabs_link_local_',
-				'title'    => __( 'Link', 'woocommerce-jetpack' ),
+				'title'    => __( 'Link', 'e-commerce-jetpack' ),
 				'type'     => 'text',
-				'desc_tip' => __( 'If you wish to forward tab to new link, enter it here. In this case content is ignored. Leave blank to show content.', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'If you wish to forward tab to new link, enter it here. In this case content is ignored. Leave blank to show content.', 'e-commerce-jetpack' ),
 			),
 			array(
 				'id'       => 'wcj_custom_product_tabs_link_new_tab_local_',
-				'title'    => __( 'Link - Open in New Window', 'woocommerce-jetpack' ),
+				'title'    => __( 'Link - Open in New Window', 'e-commerce-jetpack' ),
 				'type'     => 'select',
 				'options'  => array(
-					'no'  => __( 'No', 'woocommerce-jetpack' ),
-					'yes' => __( 'Yes', 'woocommerce-jetpack' ),
+					'no'  => __( 'No', 'e-commerce-jetpack' ),
+					'yes' => __( 'Yes', 'e-commerce-jetpack' ),
 				),
 			),
 		);
@@ -656,10 +656,10 @@ class WCJ_Product_Tabs extends WCJ_Module {
 		for ( $i = 1; $i <= $total_custom_tabs; $i++ ) {
 			$is_local_tab_visible = $this->is_local_tab_visible( $i, $current_post_id );
 			$readonly = ( $is_local_tab_visible ) ? '' : ' readonly'; // not really used
-			$disabled = ( $is_local_tab_visible ) ? '' : ' - ' . __( 'Disabled', 'woocommerce-jetpack' );
+			$disabled = ( $is_local_tab_visible ) ? '' : ' - ' . __( 'Disabled', 'e-commerce-jetpack' );
 			$data = array();
 			$html = '<hr>';
-			$html .= '<h4>' . __( 'Custom Product Tab', 'woocommerce-jetpack' ) . ' #' . $i . $disabled . '</h4>';
+			$html .= '<h4>' . __( 'Custom Product Tab', 'e-commerce-jetpack' ) . ' #' . $i . $disabled . '</h4>';
 			if ( $is_local_tab_visible ) {
 				foreach ( $options as $option ) {
 					$option_id = $option['id'] . $i;

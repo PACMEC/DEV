@@ -22,8 +22,8 @@ class WCJ_Payment_Gateways_By_Currency extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'payment_gateways_by_currency';
-		$this->short_desc = __( 'Gateways by Currency', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set allowed currencies for payment gateways to show up.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Gateways by Currency', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set allowed currencies for payment gateways to show up.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-payment-gateways-by-currency';
 		parent::__construct();
 

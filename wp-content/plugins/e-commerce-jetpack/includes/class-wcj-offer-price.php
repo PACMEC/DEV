@@ -18,7 +18,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 	 *
 	 * @version 5.2.0
 	 * @since   2.9.0
-	 * @todo    settings - more info about position priorities, e.g.: __( 'Standard priorities for "Inside single product summary": title - 5, rating - 10, price - 10, excerpt - 20, add to cart - 30, meta - 40, sharing - 50', 'woocommerce-jetpack' )
+	 * @todo    settings - more info about position priorities, e.g.: __( 'Standard priorities for "Inside single product summary": title - 5, rating - 10, price - 10, excerpt - 20, add to cart - 30, meta - 40, sharing - 50', 'e-commerce-jetpack' )
 	 * @todo    (maybe) css - customizable fonts etc.
 	 * @todo    (maybe) css - better default colors
 	 * @todo    (maybe) better solution for the form hook (instead of `woocommerce_before_main_content`)
@@ -33,9 +33,9 @@ class WCJ_Offer_Price extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'offer_price';
-		$this->short_desc = __( 'Offer Your Price', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Let your customers suggest their price for products (Available for all the products in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Let your customers suggest their price for products.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Offer Your Price', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Let your customers suggest their price for products (Available for all the products in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Let your customers suggest their price for products.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-offer-your-product-price';
 		parent::__construct();
 
@@ -146,7 +146,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 	function add_offer_price_history_meta_box() {
 		add_meta_box(
 			'wc-booster-offer-price-history',
-			__( 'Booster: Offer Price History', 'woocommerce-jetpack' ),
+			__( 'Booster: Offer Price History', 'e-commerce-jetpack' ),
 			array( $this, 'create_offer_price_history_meta_box' ),
 			'product',
 			'normal',
@@ -162,15 +162,15 @@ class WCJ_Offer_Price extends WCJ_Module {
 	 */
 	function get_admin_meta_box_columns() {
 		return array(
-			'date'             => __( 'Date', 'woocommerce-jetpack' ),
-			'offered_price'    => __( 'Price', 'woocommerce-jetpack' ),
-			'customer_message' => __( 'Message', 'woocommerce-jetpack' ),
-			'customer_name'    => __( 'Name', 'woocommerce-jetpack' ),
-			'customer_email'   => __( 'Email', 'woocommerce-jetpack' ),
-			'customer_id'      => __( 'Customer ID', 'woocommerce-jetpack' ),
-			'user_ip'          => __( 'User IP', 'woocommerce-jetpack' ),
-			'user_agent'       => __( 'User Agent', 'woocommerce-jetpack' ),
-			'sent_to'          => __( 'Sent to', 'woocommerce-jetpack' ),
+			'date'             => __( 'Date', 'e-commerce-jetpack' ),
+			'offered_price'    => __( 'Price', 'e-commerce-jetpack' ),
+			'customer_message' => __( 'Message', 'e-commerce-jetpack' ),
+			'customer_name'    => __( 'Name', 'e-commerce-jetpack' ),
+			'customer_email'   => __( 'Email', 'e-commerce-jetpack' ),
+			'customer_id'      => __( 'Customer ID', 'e-commerce-jetpack' ),
+			'user_ip'          => __( 'User IP', 'e-commerce-jetpack' ),
+			'user_agent'       => __( 'User Agent', 'e-commerce-jetpack' ),
+			'sent_to'          => __( 'Sent to', 'e-commerce-jetpack' ),
 		);
 	}
 
@@ -182,7 +182,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 	 */
 	function create_offer_price_history_meta_box() {
 		if ( '' == ( $price_offers = get_post_meta( get_the_ID(), '_' . 'wcj_price_offers', true ) ) ) {
-			echo '<em>' . __( 'No price offers yet.', 'woocommerce-jetpack' ) . '</em>';
+			echo '<em>' . __( 'No price offers yet.', 'e-commerce-jetpack' ) . '</em>';
 		} else {
 			$average_offers       = array();
 			$all_columns          = $this->get_admin_meta_box_columns();
@@ -238,15 +238,15 @@ class WCJ_Offer_Price extends WCJ_Module {
 			}
 			echo wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped' ) );
 			foreach ( $average_offers as $average_offer_currency_code => $average_offer_data ) {
-				echo '<p>' . sprintf( __( 'Average offer: %s (from %s offer(s))', 'woocommerce-jetpack' ),
+				echo '<p>' . sprintf( __( 'Average offer: %s (from %s offer(s))', 'e-commerce-jetpack' ),
 					wc_price( ( $average_offer_data['offers_sum'] / $average_offer_data['total_offers'] ), array( 'currency' => $average_offer_currency_code ) ),
 					$average_offer_data['total_offers']
 				) . '</p>';
 			}
 			echo '<p>' .
 				'<input type="checkbox" id="wcj_offer_price_delete_history" name="wcj_offer_price_delete_history">' .
-				'<label for="wcj_offer_price_delete_history">' . __( 'Delete history', 'woocommerce-jetpack' ) . '</label>' .
-				wc_help_tip( __( 'Update product after checking the box.', 'woocommerce-jetpack' ) ) .
+				'<label for="wcj_offer_price_delete_history">' . __( 'Delete history', 'e-commerce-jetpack' ) . '</label>' .
+				wc_help_tip( __( 'Update product after checking the box.', 'e-commerce-jetpack' ) ) .
 			'</p>';
 		}
 	}
@@ -320,13 +320,13 @@ class WCJ_Offer_Price extends WCJ_Module {
 		$price_label = str_replace(
 			'%currency_symbol%',
 			get_woocommerce_currency_symbol(),
-			get_option( 'wcj_offer_price_price_label', sprintf( __( 'Your price (%s)', 'woocommerce-jetpack' ), '%currency_symbol%' ) )
+			get_option( 'wcj_offer_price_price_label', sprintf( __( 'Your price (%s)', 'e-commerce-jetpack' ), '%currency_symbol%' ) )
 		);
 		// Offer form - header
 		$form_header = str_replace(
 			'%product_title%',
 			get_the_title(),
-			get_option( 'wcj_offer_price_form_header_template', '<h3>' . sprintf( __( 'Suggest your price for %s', 'woocommerce-jetpack' ), '%product_title%' ) . '</h3>' )
+			get_option( 'wcj_offer_price_form_header_template', '<h3>' . sprintf( __( 'Suggest your price for %s', 'e-commerce-jetpack' ), '%product_title%' ) . '</h3>' )
 		);
 		return array(
 			'price_step'    => $price_step,
@@ -381,21 +381,21 @@ class WCJ_Offer_Price extends WCJ_Module {
 			'<span id="wcj-offer-price-price-label"></span>' . $required_html . '</label>' . '<br>' .
 			'<input type="number" required id="wcj-offer-price-price" name="wcj-offer-price-price">';
 		// Content - email
-		$offer_form_content_email = '<label for="wcj-offer-price-customer-email">' . wcj_get_option( 'wcj_offer_price_customer_email', __( 'Your email', 'woocommerce-jetpack' ) ) .
+		$offer_form_content_email = '<label for="wcj-offer-price-customer-email">' . wcj_get_option( 'wcj_offer_price_customer_email', __( 'Your email', 'e-commerce-jetpack' ) ) .
 			$required_html . '</label>' . '<br>' .
 			'<input type="email" required id="wcj-offer-price-customer-email" name="wcj-offer-price-customer-email" value="' . $customer_email . '">';
 		// Content - name
-		$offer_form_content_name = '<label for="wcj-offer-price-customer-name">' . wcj_get_option( 'wcj_offer_price_customer_name', __( 'Your name', 'woocommerce-jetpack' ) ) .
+		$offer_form_content_name = '<label for="wcj-offer-price-customer-name">' . wcj_get_option( 'wcj_offer_price_customer_name', __( 'Your name', 'e-commerce-jetpack' ) ) .
 			'</label>' . '<br>' .
 			'<input type="text" id="wcj-offer-price-customer-name" name="wcj-offer-price-customer-name" value="' . $customer_name . '">';
 		// Content - message
-		$offer_form_content_message = '<label for="wcj-offer-price-message">' . wcj_get_option( 'wcj_offer_price_customer_message', __( 'Your message', 'woocommerce-jetpack' ) ) . '</label>' . '<br>' .
+		$offer_form_content_message = '<label for="wcj-offer-price-message">' . wcj_get_option( 'wcj_offer_price_customer_message', __( 'Your message', 'e-commerce-jetpack' ) ) . '</label>' . '<br>' .
 			'<textarea id="wcj-offer-price-message" name="wcj-offer-price-message"></textarea>';
 		// Content - button
 		$offer_form_content_button = '<input type="submit" id="wcj-offer-price-submit" name="wcj-offer-price-submit" value="' .
-			get_option( 'wcj_offer_price_form_button_label', __( 'Send', 'woocommerce-jetpack' ) ) . '">';
+			get_option( 'wcj_offer_price_form_button_label', __( 'Send', 'e-commerce-jetpack' ) ) . '">';
 		// Content - copy
-		$offer_form_content_copy = '<label for="wcj-offer-price-customer-copy">' . wcj_get_option( 'wcj_offer_price_customer_copy', __( 'Send a copy to your email', 'woocommerce-jetpack' ) ) .
+		$offer_form_content_copy = '<label for="wcj-offer-price-customer-copy">' . wcj_get_option( 'wcj_offer_price_customer_copy', __( 'Send a copy to your email', 'e-commerce-jetpack' ) ) .
 			'</label>' . ' ' .
 			'<input type="checkbox" id="wcj-offer-price-customer-copy" name="wcj-offer-price-customer-copy" value="yes">';
 		// Content
@@ -462,7 +462,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 				' style="' . wcj_get_option( 'wcj_offer_price_button_style', '' ) . '"' .
 				' wcj_data=\'' . json_encode( $this->get_wcj_data_array( $product_id ) ) . '\'' .
 			'>' .
-				get_option( 'wcj_offer_price_button_label', __( 'Make an offer', 'woocommerce-jetpack' ) ) .
+				get_option( 'wcj_offer_price_button_label', __( 'Make an offer', 'e-commerce-jetpack' ) ) .
 			'</button>' .
 		'</p>';
 	}
@@ -521,10 +521,10 @@ class WCJ_Offer_Price extends WCJ_Module {
 			);
 			// Email content
 			$email_template = wcj_get_option( 'wcj_offer_price_email_template',
-				sprintf( __( 'Product: %s', 'woocommerce-jetpack' ),       '<a href="%product_edit_link%">%product_title%</a>' ) . '<br>' . PHP_EOL .
-				sprintf( __( 'Offered price: %s', 'woocommerce-jetpack' ), '%offered_price%' ) . '<br>' . PHP_EOL .
-				sprintf( __( 'From: %s %s', 'woocommerce-jetpack' ),       '%customer_name%', '%customer_email%' ) . '<br>' . PHP_EOL .
-				sprintf( __( 'Message: %s', 'woocommerce-jetpack' ),       '%customer_message%' )
+				sprintf( __( 'Product: %s', 'e-commerce-jetpack' ),       '<a href="%product_edit_link%">%product_title%</a>' ) . '<br>' . PHP_EOL .
+				sprintf( __( 'Offered price: %s', 'e-commerce-jetpack' ), '%offered_price%' ) . '<br>' . PHP_EOL .
+				sprintf( __( 'From: %s %s', 'e-commerce-jetpack' ),       '%customer_name%', '%customer_email%' ) . '<br>' . PHP_EOL .
+				sprintf( __( 'Message: %s', 'e-commerce-jetpack' ),       '%customer_message%' )
 			);
 			$replaced_values = array(
 				'%product_title%'     => $price_offer['product_title'],
@@ -538,7 +538,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 			);
 			$email_content = str_replace( array_keys( $replaced_values ), array_values( $replaced_values ), $email_template );
 			// Email subject and headers
-			$email_subject = wcj_get_option( 'wcj_offer_price_email_subject', __( 'Price Offer', 'woocommerce-jetpack' ) );
+			$email_subject = wcj_get_option( 'wcj_offer_price_email_subject', __( 'Price Offer', 'e-commerce-jetpack' ) );
 			$email_headers = 'Content-Type: text/html' . "\r\n" .
 				'From: ' . $price_offer['customer_name'] . ' <' . $price_offer['customer_email'] . '>' . "\r\n" .
 				'Reply-To: ' . $price_offer['customer_email'] . "\r\n";
@@ -548,7 +548,7 @@ class WCJ_Offer_Price extends WCJ_Module {
 				wc_mail( $price_offer['customer_email'], $email_subject, $email_content, $email_headers );
 			}
 			// Notice
-			wc_add_notice( wcj_get_option( 'wcj_offer_price_customer_notice', __( 'Your price offer has been sent.', 'woocommerce-jetpack' ) ), 'notice' );
+			wc_add_notice( wcj_get_option( 'wcj_offer_price_customer_notice', __( 'Your price offer has been sent.', 'e-commerce-jetpack' ) ), 'notice' );
 			// Product meta (Offer Price History)
 			if ( '' == ( $price_offers = get_post_meta( $product_id, '_' . 'wcj_price_offers', true ) ) ) {
 				$price_offers = array();

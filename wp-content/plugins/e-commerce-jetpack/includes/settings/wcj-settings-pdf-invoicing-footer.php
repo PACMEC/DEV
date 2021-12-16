@@ -19,37 +19,37 @@ foreach ( $invoice_types as $invoice_type ) {
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_footer_options',
 		),
 		array(
-			'title'    => __( 'Enable Footer', 'woocommerce-jetpack' ),
-			'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+			'title'    => __( 'Enable Footer', 'e-commerce-jetpack' ),
+			'desc'     => __( 'Enable', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_footer_enabled',
 			'default'  => 'yes',
 			'type'     => 'checkbox',
 		),
 		array(
-			'title'    => __( 'Footer Text', 'woocommerce-jetpack' ),
+			'title'    => __( 'Footer Text', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_footer_text',
-			'default'  => __( 'Page %page_number% / %total_pages%', 'woocommerce-jetpack' ),
+			'default'  => __( 'Page %page_number% / %total_pages%', 'e-commerce-jetpack' ),
 			'type'     => 'textarea',
 			'css'      => 'width:100%;height:165px;',
-			'desc'     => __( 'You can use HTML here, as well as any WordPress shortcodes.', 'woocommerce-jetpack' ) . ' ' .
+			'desc'     => __( 'You can use HTML here, as well as any WordPress shortcodes.', 'e-commerce-jetpack' ) . ' ' .
 				wcj_message_replaced_values( array( '%page_number%', '%total_pages%' ) ),
 		),
 		array(
-			'title'    => __( 'Footer Text Color', 'woocommerce-jetpack' ),
+			'title'    => __( 'Footer Text Color', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_footer_text_color',
 			'default'  => '#cccccc',
 			'type'     => 'color',
 			'css'      => 'width:6em;',
 		),
 		array(
-			'title'    => __( 'Footer Line Color', 'woocommerce-jetpack' ),
+			'title'    => __( 'Footer Line Color', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_footer_line_color',
 			'default'  => '#cccccc',
 			'type'     => 'color',
 			'css'      => 'width:6em;',
 		),
 		array(
-			'title'    => __( 'Footer Margin', 'woocommerce-jetpack' ),
+			'title'    => __( 'Footer Margin', 'e-commerce-jetpack' ),
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_margin_footer',
 			'default'  => 10, // PDF_MARGIN_FOOTER
 			'type'     => 'number',

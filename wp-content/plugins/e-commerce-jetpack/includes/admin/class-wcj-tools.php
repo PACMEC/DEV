@@ -32,8 +32,8 @@ class WCJ_Tools {
 		if ( apply_filters( 'wcj_can_create_admin_interface', true ) ) {
 			add_submenu_page(
 				'woocommerce',
-				__( 'Booster for WooCommerce Tools', 'woocommerce-jetpack' ),
-				__( 'Booster Tools', 'woocommerce-jetpack' ),
+				__( 'Booster for WooCommerce Tools', 'e-commerce-jetpack' ),
+				__( 'Booster Tools', 'e-commerce-jetpack' ),
 				( 'yes' === wcj_get_option( 'wcj_' . 'admin_tools' . '_enabled', 'no' ) && 'yes' === wcj_get_option( 'wcj_admin_tools_show_menus_to_admin_only', 'no' ) ? 'manage_options' : 'manage_woocommerce' ),
 				'wcj-tools',
 				array( $this, 'create_tools_page' )
@@ -52,7 +52,7 @@ class WCJ_Tools {
 		$tabs = apply_filters( 'wcj_tools_tabs', array(
 			array(
 				'id'    => 'dashboard',
-				'title' => __( 'Tools Dashboard', 'woocommerce-jetpack' ),
+				'title' => __( 'Tools Dashboard', 'e-commerce-jetpack' ),
 			),
 		) );
 		$html = '<h2 class="nav-tab-wrapper woo-nav-tab-wrapper">';
@@ -66,16 +66,16 @@ class WCJ_Tools {
 
 		// Content
 		if ( 'dashboard' === $active_tab ) {
-			$title = __( 'Booster for WooCommerce Tools - Dashboard', 'woocommerce-jetpack' );
-			$desc  = __( 'This dashboard lets you check statuses and short descriptions of all available Booster for WooCommerce tools. Tools can be enabled through WooCommerce > Settings > Booster. Enabled tools will appear in the tabs menu above.', 'woocommerce-jetpack' );
+			$title = __( 'Booster for WooCommerce Tools - Dashboard', 'e-commerce-jetpack' );
+			$desc  = __( 'This dashboard lets you check statuses and short descriptions of all available Booster for WooCommerce tools. Tools can be enabled through WooCommerce > Settings > Booster. Enabled tools will appear in the tabs menu above.', 'e-commerce-jetpack' );
 			echo '<h3>' . $title . '</h3>';
 			echo '<p>' .  $desc . '</p>';
 			echo '<table class="widefat" style="width:90%;">';
 			echo '<tr>';
-			echo '<th style="width:20%;">' . __( 'Tool', 'woocommerce-jetpack' ) . '</th>';
-			echo '<th style="width:20%;">' . __( 'Module', 'woocommerce-jetpack' ) . '</th>';
-			echo '<th style="width:50%;">' . __( 'Description', 'woocommerce-jetpack' ) . '</th>';
-			echo '<th style="width:10%;">' . __( 'Status', 'woocommerce-jetpack' ) . '</th>';
+			echo '<th style="width:20%;">' . __( 'Tool', 'e-commerce-jetpack' ) . '</th>';
+			echo '<th style="width:20%;">' . __( 'Module', 'e-commerce-jetpack' ) . '</th>';
+			echo '<th style="width:50%;">' . __( 'Description', 'e-commerce-jetpack' ) . '</th>';
+			echo '<th style="width:10%;">' . __( 'Status', 'e-commerce-jetpack' ) . '</th>';
 			echo '</tr>';
 			do_action( 'wcj_tools_' . 'dashboard' );
 			echo '</table>';

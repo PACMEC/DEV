@@ -22,13 +22,13 @@ class WCJ_Product_By_User_Role extends WCJ_Module_Product_By_Condition {
 	function __construct() {
 
 		$this->id         = 'product_by_user_role';
-		$this->short_desc = __( 'Product Visibility by User Role', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Display products by customer\'s user role. Visibility method options (Plus)', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Display products by customer\'s user role.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Visibility by User Role', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Display products by customer\'s user role. Visibility method options (Plus)', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Display products by customer\'s user role.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-visibility-by-user-role';
-		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Visibility by User Role" meta box to each product\'s edit page.', 'woocommerce-jetpack' );
+		$this->extra_desc = __( 'When enabled, module will add new "Booster: Product Visibility by User Role" meta box to each product\'s edit page.', 'e-commerce-jetpack' );
 
-		$this->title      = __( 'User Roles', 'woocommerce-jetpack' );
+		$this->title      = __( 'User Roles', 'e-commerce-jetpack' );
 
 		parent::__construct();
 
@@ -45,14 +45,14 @@ class WCJ_Product_By_User_Role extends WCJ_Module_Product_By_Condition {
 	public function maybe_add_extra_settings() {
 		return array(
 			array(
-				'title' => __( 'User Options', 'woocommerce-jetpack' ),
+				'title' => __( 'User Options', 'e-commerce-jetpack' ),
 				'type'  => 'title',
 				'id'    => 'wcj_' . $this->id . '_user_options',
 			),
 			array(
-				'title'             => __( 'Skip Editable Roles Filter', 'woocommerce-jetpack' ),
-				'desc_tip'          => __( 'Ignores <code>editable_roles</code> filter on admin.', 'woocommerce-jetpack' ) . '<br />' . sprintf( __( 'Enable this option for example if the shop manager can\'t see some role but only if you\'ve already tried the <strong>Shop Manager Editable Roles</strong> on <a href="%s">Admin Tools</a> module.', 'woocommerce-jetpack' ), admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=admin_tools' ) ),
-				'desc'              => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'woocommerce-jetpack' ) : $message,
+				'title'             => __( 'Skip Editable Roles Filter', 'e-commerce-jetpack' ),
+				'desc_tip'          => __( 'Ignores <code>editable_roles</code> filter on admin.', 'e-commerce-jetpack' ) . '<br />' . sprintf( __( 'Enable this option for example if the shop manager can\'t see some role but only if you\'ve already tried the <strong>Shop Manager Editable Roles</strong> on <a href="%s">Admin Tools</a> module.', 'e-commerce-jetpack' ), admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=emails_and_misc&section=admin_tools' ) ),
+				'desc'              => empty( $message = apply_filters( 'booster_message', '', 'desc' ) ) ? __( 'Enable', 'e-commerce-jetpack' ) : $message,
 				'custom_attributes' => apply_filters( 'booster_message', '', 'disabled' ),
 				'id'                => 'wcj_' . $this->id . '_user_options_skip_editable_roles',
 				'default'           => 'no',

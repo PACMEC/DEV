@@ -23,9 +23,9 @@ class WCJ_Price_By_User_Role extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'price_by_user_role';
-		$this->short_desc = __( 'Price based on User Role', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Display products prices by user roles. Price based on User Role by Products Categories or Tags (Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Display products prices by user roles. Price based on User Role by Products Categories or Tags.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Price based on User Role', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Display products prices by user roles. Price based on User Role by Products Categories or Tags (Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Display products prices by user roles. Price based on User Role by Products Categories or Tags.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-price-by-user-role';
 		parent::__construct();
 
@@ -130,15 +130,15 @@ class WCJ_Price_By_User_Role extends WCJ_Module {
 		switch ( $action ) {
 			case 'copy_to_roles_and_variations':
 				$dashicon = 'links';
-				$title    = __( 'user roles & variations', 'woocommerce-jetpack' );
+				$title    = __( 'user roles & variations', 'e-commerce-jetpack' );
 				break;
 			case 'copy_to_variations':
 				$dashicon = 'page';
-				$title    = __( 'variations', 'woocommerce-jetpack' );
+				$title    = __( 'variations', 'e-commerce-jetpack' );
 				break;
 			default: // 'copy_to_roles'
 				$dashicon = 'users';
-				$title    = __( 'user roles', 'woocommerce-jetpack' );
+				$title    = __( 'user roles', 'e-commerce-jetpack' );
 				break;
 		}
 		$data_array = array(
@@ -151,7 +151,7 @@ class WCJ_Price_By_User_Role extends WCJ_Module {
 		);
 		return '<a href="#" class="wcj-copy-price" wcj-copy-data=\'' . json_encode( $data_array ) . '\'>' .
 			'<span class="dashicons dashicons-admin-' . $dashicon . '" style="font-size:small;float:right;" title="' .
-				sprintf( __( 'Copy price to all %s', 'woocommerce-jetpack' ), $title ) . '">' .
+				sprintf( __( 'Copy price to all %s', 'e-commerce-jetpack' ), $title ) . '">' .
 			'</span>' .
 		'</a>';
 }
@@ -231,7 +231,7 @@ class WCJ_Price_By_User_Role extends WCJ_Module {
 		}
 		?><div class="error"><p><?php
 			echo '<div class="message">'
-				. __( 'Booster: Free plugin\'s version is limited to only one price by user role per products settings product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of price by user role per product settings products.', 'woocommerce-jetpack' )
+				. __( 'Booster: Free plugin\'s version is limited to only one price by user role per products settings product enabled at a time. You will need to get <a href="https://booster.io/plus/" target="_blank">Booster Plus</a> to add unlimited number of price by user role per product settings products.', 'e-commerce-jetpack' )
 				. '</div>';
 		?></p></div><?php
 	}

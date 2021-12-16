@@ -22,16 +22,16 @@ class WCJ_Order_Numbers extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'order_numbers';
-		$this->short_desc = __( 'Order Numbers', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Sequential order numbering, custom order number prefix, suffix and number width. Prefix Options (Order Number Custom Prefix available in free version). Suffix options (Plus). ', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Sequential order numbering, custom order number prefix, suffix and number width.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Order Numbers', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Sequential order numbering, custom order number prefix, suffix and number width. Prefix Options (Order Number Custom Prefix available in free version). Suffix options (Plus). ', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Sequential order numbering, custom order number prefix, suffix and number width.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-custom-order-numbers';
 		parent::__construct();
 
 		$this->add_tools( array(
 			'renumerate_orders' => array(
-				'title'     => __( 'Orders Renumerate', 'woocommerce-jetpack' ),
-				'desc'      => __( 'Tool renumerates all orders.', 'woocommerce-jetpack' ),
+				'title'     => __( 'Orders Renumerate', 'e-commerce-jetpack' ),
+				'desc'      => __( 'Tool renumerates all orders.', 'e-commerce-jetpack' ),
 			),
 		) );
 
@@ -323,10 +323,10 @@ class WCJ_Order_Numbers extends WCJ_Module {
 		$result_message = '';
 		if ( isset( $_POST['renumerate_orders'] ) ) {
 			$this->renumerate_orders();
-			$result_message = '<p><div class="updated"><p><strong>' . __( 'Orders successfully renumerated!', 'woocommerce-jetpack' ) . '</strong></p></div></p>';
+			$result_message = '<p><div class="updated"><p><strong>' . __( 'Orders successfully renumerated!', 'e-commerce-jetpack' ) . '</strong></p></div></p>';
 		} else {
 			if ( 'yes' === wcj_get_option( 'wcj_order_number_sequential_enabled', 'yes' ) ) {
-				$result_message .= '<p>' . sprintf( __( 'Sequential number generation is enabled. Next order number will be %s.', 'woocommerce-jetpack' ),
+				$result_message .= '<p>' . sprintf( __( 'Sequential number generation is enabled. Next order number will be %s.', 'e-commerce-jetpack' ),
 					'<code>' . wcj_get_option( 'wcj_order_number_counter', 1 ) . '</code>' ) . '</p>';
 			}
 		}
@@ -336,13 +336,13 @@ class WCJ_Order_Numbers extends WCJ_Module {
 		$html .= '<p>';
 		$html .= sprintf(
 			__( 'Press the button below to renumerate all existing orders starting from order counter settings in <a href="%s">Order Numbers</a> module.',
-				'woocommerce-jetpack' ),
+				'e-commerce-jetpack' ),
 			admin_url( 'admin.php?page=wc-settings&tab=jetpack&wcj-cat=shipping_and_orders&section=order_numbers' )
 		);
 		$html .= '</p>';
 		$html .= $result_message;
 		$html .= '<form method="post" action="">';
-		$html .= '<input class="button-primary" type="submit" name="renumerate_orders" value="' . __( 'Renumerate orders', 'woocommerce-jetpack' ) . '">';
+		$html .= '<input class="button-primary" type="submit" name="renumerate_orders" value="' . __( 'Renumerate orders', 'e-commerce-jetpack' ) . '">';
 		$html .= '</form>';
 		$html .= '</div>';
 		echo $html;

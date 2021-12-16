@@ -27,10 +27,10 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'max_products_per_user';
-		$this->short_desc = __( 'Maximum Products per User', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Limit number of items your (logged) customers can buy (Free version allows to limit globally).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Limit number of items your (logged) customers can buy.', 'woocommerce-jetpack' );
-		$this->extra_desc = __( 'Please note, that there is no maximum quantity set for not-logged (i.e. guest) users. Product quantities are updated, when order status is changed to status listed in module\'s "Order Status" option.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Maximum Products per User', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Limit number of items your (logged) customers can buy (Free version allows to limit globally).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Limit number of items your (logged) customers can buy.', 'e-commerce-jetpack' );
+		$this->extra_desc = __( 'Please note, that there is no maximum quantity set for not-logged (i.e. guest) users. Product quantities are updated, when order status is changed to status listed in module\'s "Order Status" option.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-maximum-products-per-user';
 		parent::__construct();
 
@@ -111,7 +111,7 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 				'%remaining_qty%'       => max( ( $max_qty - $user_already_bought ), 0 ),
 			);
 			$message = wcj_get_option( 'wcj_max_products_per_user_message',
-				__( 'You can only buy maximum %max_qty% pcs. of %product_title% (you already bought %qty_already_bought% pcs.).', 'woocommerce-jetpack' ) );
+				__( 'You can only buy maximum %max_qty% pcs. of %product_title% (you already bought %qty_already_bought% pcs.).', 'e-commerce-jetpack' ) );
 			$message = str_replace( array_keys( $replaced_values ), $replaced_values, $message );
 			wc_add_notice( $message, 'error' );
 			return false;
@@ -129,8 +129,8 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 	function calculate_data_notice() {
 		if ( isset( $_GET['wcj_max_products_per_user_calculate_data_finished'] ) ) {
 			$class = 'notice notice-info';
-			$message = __( 'Data re-calculated.', 'woocommerce-jetpack' ) . ' ' .
-				sprintf( __( '%s order(s) processed.', 'woocommerce-jetpack' ), $_GET['wcj_max_products_per_user_calculate_data_finished'] );
+			$message = __( 'Data re-calculated.', 'e-commerce-jetpack' ) . ' ' .
+				sprintf( __( '%s order(s) processed.', 'e-commerce-jetpack' ), $_GET['wcj_max_products_per_user_calculate_data_finished'] );
 			printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 		}
 	}
@@ -182,7 +182,7 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 	function add_report_meta_box() {
 		add_meta_box(
 			'wc-jetpack-' . $this->id . '-report',
-			__( 'Booster', 'woocommerce-jetpack' ) . ': ' . __( 'Maximum Products per User: Sales Data', 'woocommerce-jetpack' ),
+			__( 'Booster', 'e-commerce-jetpack' ) . ': ' . __( 'Maximum Products per User: Sales Data', 'e-commerce-jetpack' ),
 			array( $this, 'create_report_meta_box' ),
 			'product',
 			'normal',
@@ -199,10 +199,10 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 	function create_report_meta_box() {
 		if ( $users_quantities = get_post_meta( get_the_ID(), '_' . 'wcj_max_products_per_user_report', true ) ) {
 			$table_data = array();
-			$table_data[] = array( __( 'User ID', 'woocommerce-jetpack' ), __( 'User Name', 'woocommerce-jetpack' ), __( 'Qty Bought', 'woocommerce-jetpack' ) );
+			$table_data[] = array( __( 'User ID', 'e-commerce-jetpack' ), __( 'User Name', 'e-commerce-jetpack' ), __( 'Qty Bought', 'e-commerce-jetpack' ) );
 			foreach ( $users_quantities as $user_id => $qty_bought ) {
 				if ( 0 == $user_id ) {
-					$user = __( 'Guest', 'woocommerce-jetpack' );
+					$user = __( 'Guest', 'e-commerce-jetpack' );
 				} else {
 					$user = get_user_by( 'id', $user_id );
 					$user = ( isset( $user->data->user_nicename ) ? $user->data->user_nicename : '-' );
@@ -211,7 +211,7 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 			}
 			echo wcj_get_table_html( $table_data, array( 'table_class' => 'widefat striped', 'table_heading_type' => 'horizontal' ) );
 		} else {
-			echo '<em>' . __( 'No data yet.', 'woocommerce-jetpack' ) . '</em>';
+			echo '<em>' . __( 'No data yet.', 'e-commerce-jetpack' ) . '</em>';
 		}
 	}
 
@@ -330,7 +330,7 @@ class WCJ_Max_products_Per_User extends WCJ_Module {
 						'%remaining_qty%'       => max( ( $max_qty - $user_already_bought ), 0 ),
 					);
 					$message = wcj_get_option( 'wcj_max_products_per_user_message',
-						__( 'You can only buy maximum %max_qty% pcs. of %product_title% (you already bought %qty_already_bought% pcs.).', 'woocommerce-jetpack' ) );
+						__( 'You can only buy maximum %max_qty% pcs. of %product_title% (you already bought %qty_already_bought% pcs.).', 'e-commerce-jetpack' ) );
 					$message = str_replace( array_keys( $replaced_values ), $replaced_values, $message );
 					if ( $is_cart ) {
 						wc_print_notice( $message, 'notice' );

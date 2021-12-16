@@ -21,16 +21,16 @@ class WCJ_Product_Input_Fields extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_input_fields';
-		$this->short_desc = __( 'Product Input Fields', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Add input fields to the products (1 input field allowed in free version).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Add input fields to the products.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Input Fields', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Add input fields to the products (1 input field allowed in free version).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Add input fields to the products.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-input-fields';
-		$this->extra_desc = sprintf( __( 'After setting Product Input Fields, you can use below shortcode with meta_key to display the Product Input Fields value: %s', 'woocommerce-jetpack' ),
+		$this->extra_desc = sprintf( __( 'After setting Product Input Fields, you can use below shortcode with meta_key to display the Product Input Fields value: %s', 'e-commerce-jetpack' ),
 			'<ol>' .
-				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>Shortcodes:</strong> %s', 'e-commerce-jetpack' ),
 					'<code>[wcj_order_items_meta meta_key = "_wcj_product_input_fields_global_&lt;field_id&gt;"]</code>, <code>[wcj_order_items_meta meta_key = "_wcj_product_input_fields_local_&lt;field_id&gt;"]</code><br>field_id is the Id of your Product Input Field' ) .
 				'</li>' .
-				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function,<br> e.g.: %s', 'woocommerce-jetpack' ),
+				'<li>' . sprintf( __( '<strong>PHP code:</strong> by using %s function,<br> e.g.: %s', 'e-commerce-jetpack' ),
 					'<code>do_shortcode()</code>',
 					'<code>echo&nbsp;do_shortcode(&nbsp;\'[wcj_order_items_meta meta_key = "_wcj_product_input_fields_global_1]\'&nbsp;);</code>' ) .
 				'</li>' .

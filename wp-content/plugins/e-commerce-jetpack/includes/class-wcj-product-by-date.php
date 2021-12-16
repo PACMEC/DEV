@@ -26,9 +26,9 @@ class WCJ_Product_By_Date extends WCJ_Module {
 	function __construct() {
 
 		$this->id         = 'product_by_date';
-		$this->short_desc = __( 'Product Availability by Date', 'woocommerce-jetpack' );
-		$this->desc       = __( 'Set product availability by date (Custom frontend messages available in Plus).', 'woocommerce-jetpack' );
-		$this->desc_pro   = __( 'Set product availability by date.', 'woocommerce-jetpack' );
+		$this->short_desc = __( 'Product Availability by Date', 'e-commerce-jetpack' );
+		$this->desc       = __( 'Set product availability by date (Custom frontend messages available in Plus).', 'e-commerce-jetpack' );
+		$this->desc_pro   = __( 'Set product availability by date.', 'e-commerce-jetpack' );
 		$this->link_slug  = 'woocommerce-product-availability-by-date';
 		parent::__construct();
 
@@ -111,19 +111,19 @@ class WCJ_Product_By_Date extends WCJ_Module {
 					'%direct_date%' => $direct_date,
 				);
 				$message = wcj_get_option( 'wcj_product_by_date_unavailable_message_direct_date',
-					'<p style="color:red;">' . __( '%product_title% is not available until %direct_date%.', 'woocommerce-jetpack' ) . '</p>' );
+					'<p style="color:red;">' . __( '%product_title% is not available until %direct_date%.', 'e-commerce-jetpack' ) . '</p>' );
 			} else {
 				$_date = $this->get_product_availability_this_month( $_product );
 				$replaceable_values = array(
 					'%date_this_month%' => $_date,
 				);
 				$message = ( ( '-' === $_date ) ?
-					apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is not available this month.</p>', 'woocommerce-jetpack' ),
+					apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is not available this month.</p>', 'e-commerce-jetpack' ),
 						get_option( 'wcj_product_by_date_unavailable_message_month_off',
-							__( '<p style="color:red;">%product_title% is not available this month.</p>', 'woocommerce-jetpack' ) ) ) :
-					apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is available only on %date_this_month% this month.</p>', 'woocommerce-jetpack' ),
+							__( '<p style="color:red;">%product_title% is not available this month.</p>', 'e-commerce-jetpack' ) ) ) :
+					apply_filters( 'booster_option', __( '<p style="color:red;">%product_title% is available only on %date_this_month% this month.</p>', 'e-commerce-jetpack' ),
 						get_option( 'wcj_product_by_date_unavailable_message',
-							__( '<p style="color:red;">%product_title% is available only on %date_this_month% this month.</p>', 'woocommerce-jetpack' ) ) )
+							__( '<p style="color:red;">%product_title% is available only on %date_this_month% this month.</p>', 'e-commerce-jetpack' ) ) )
 				);
 			}
 			$replaceable_values['%product_title%'] = $_product->get_title();

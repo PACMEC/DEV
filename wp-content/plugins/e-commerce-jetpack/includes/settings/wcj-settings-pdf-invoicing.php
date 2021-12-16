@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title'    => __( 'Documents Options', 'woocommerce-jetpack' ),
+		'title'    => __( 'Documents Options', 'e-commerce-jetpack' ),
 		'type'     => 'title',
 		'id'       => 'wcj_pdf_invoicing_options',
 	),
@@ -20,16 +20,16 @@ $settings = array(
 $status_change_hooks = array();
 $order_statuses      = wcj_get_order_statuses();
 foreach ( $order_statuses as $status => $desc ) {
-	$status_change_hooks[ 'woocommerce_order_status_' . $status ] = sprintf( __( 'Create on Order Status %s', 'woocommerce-jetpack' ), $desc );
+	$status_change_hooks[ 'woocommerce_order_status_' . $status ] = sprintf( __( 'Create on Order Status %s', 'e-commerce-jetpack' ), $desc );
 }
 $create_on_array = array_merge(
 	array(
-		'woocommerce_new_order'                             => __( 'Create on New Order', 'woocommerce-jetpack' ),
+		'woocommerce_new_order'                             => __( 'Create on New Order', 'e-commerce-jetpack' ),
 	),
 	$status_change_hooks,
 	array(
-		'woocommerce_order_partially_refunded_notification' => __( 'Create on Order Partially Refunded', 'woocommerce-jetpack' ),
-		'manual'                                            => __( 'Manually', 'woocommerce-jetpack' ),
+		'woocommerce_order_partially_refunded_notification' => __( 'Create on Order Partially Refunded', 'e-commerce-jetpack' ),
+		'manual'                                            => __( 'Manually', 'e-commerce-jetpack' ),
 	)
 );
 // Settings
@@ -38,8 +38,8 @@ foreach ( $invoice_types as $k => $invoice_type ) {
 	if ( 'custom_doc' === $invoice_type['id'] ) {
 		$settings = array_merge( $settings, array(
 			array(
-				'title'    => __( 'Number of Custom Documents', 'woocommerce-jetpack' ),
-				'desc_tip' => __( 'Save changes after setting this number.', 'woocommerce-jetpack' ),
+				'title'    => __( 'Number of Custom Documents', 'e-commerce-jetpack' ),
+				'desc_tip' => __( 'Save changes after setting this number.', 'e-commerce-jetpack' ),
 				'id'       => 'wcj_invoicing_custom_doc_total_number',
 				'default'  => 1,
 				'type'     => 'custom_number',
@@ -63,7 +63,7 @@ foreach ( $invoice_types as $k => $invoice_type ) {
 			'id'       => 'wcj_invoicing_' . $invoice_type['id'] . '_skip_zero_total',
 			'default'  => 'no',
 			'type'     => 'checkbox',
-			'desc'     => __( 'Do not create if order total equals zero', 'woocommerce-jetpack' ),
+			'desc'     => __( 'Do not create if order total equals zero', 'e-commerce-jetpack' ),
 			'custom_attributes' => ( 0 === $k ) ? '' : apply_filters( 'booster_message', '', 'disabled' ),
 		),
 	) );

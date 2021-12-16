@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $settings = array(
 	array(
-		'title' => __( 'Payment Gateways', 'woocommerce-jetpack' ),
+		'title' => __( 'Payment Gateways', 'e-commerce-jetpack' ),
 		'type'  => 'title',
-		'desc'  => __( 'Leave empty to disable.', 'woocommerce-jetpack' ),
+		'desc'  => __( 'Leave empty to disable.', 'e-commerce-jetpack' ),
 		'id'    => 'wcj_payment_gateways_by_currency_gateways_options',
 	),
 );
@@ -26,7 +26,7 @@ foreach ( $paypal_allowed_currencies as $paypal_allowed_currency ) {
 		$paypal_allowed_currencies_and_names[] = $currencies[ $paypal_allowed_currency ];
 	}
 }
-$paypal_tip = sprintf( __( 'PayPal allows only these currencies: %s.', 'woocommerce-jetpack' ), '<br>' . implode( '<br>', $paypal_allowed_currencies_and_names ) );
+$paypal_tip = sprintf( __( 'PayPal allows only these currencies: %s.', 'e-commerce-jetpack' ), '<br>' . implode( '<br>', $paypal_allowed_currencies_and_names ) );
 foreach ( $gateways as $key => $gateway ) {
 	$default_gateways = array( 'bacs' );
 	if ( ! empty( $default_gateways ) && ! in_array( $key, $default_gateways ) ) {
@@ -43,7 +43,7 @@ foreach ( $gateways as $key => $gateway ) {
 		array(
 			'title'     => $gateway->title,
 			'desc_tip'  => $desc_tip . ( 'paypal' == $key ? ' ' . $paypal_tip : '' ),
-			'desc'      => __( 'Allowed Currencies', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Allowed Currencies', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_by_currency_allowed_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
@@ -54,7 +54,7 @@ foreach ( $gateways as $key => $gateway ) {
 		),
 		array(
 			'desc_tip'  => $desc_tip,
-			'desc'      => __( 'Denied Currencies', 'woocommerce-jetpack' ),
+			'desc'      => __( 'Denied Currencies', 'e-commerce-jetpack' ),
 			'id'        => 'wcj_gateways_by_currency_denied_' . $key,
 			'default'   => '',
 			'type'      => 'multiselect',
