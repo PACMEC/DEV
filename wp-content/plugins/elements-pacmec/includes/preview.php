@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements preview.
+ * Elements PACMEC preview.
  *
- * Classic Elements preview handler class is responsible for initializing Classic Elements in
+ * Elements PACMEC preview handler class is responsible for initializing Elements PACMEC in
  * preview mode.
  *
  * @since 1.0.0
@@ -30,7 +30,7 @@ class Preview {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements preview mode.
+	 * Initialize Elements PACMEC preview mode.
 	 *
 	 * Fired by `template_redirect` action.
 	 *
@@ -85,7 +85,7 @@ class Preview {
 		/**
 		 * Preview init.
 		 *
-		 * Fires on Classic Elements preview init, after Classic Elements preview has finished
+		 * Fires on Elements PACMEC preview init, after Elements PACMEC preview has finished
 		 * loading but before any headers are sent.
 		 *
 		 * @since 1.0.0
@@ -209,7 +209,7 @@ class Preview {
 		/**
 		 * Preview enqueue styles.
 		 *
-		 * Fires after Classic Elements preview styles are enqueued.
+		 * Fires after Elements PACMEC preview styles are enqueued.
 		 *
 		 * @since 1.0.0
 		 */
@@ -244,7 +244,7 @@ class Preview {
 		/**
 		 * Preview enqueue scripts.
 		 *
-		 * Fires after Classic Elements preview scripts are enqueued.
+		 * Fires after Elements PACMEC preview scripts are enqueued.
 		 *
 		 * @since 1.5.4
 		 */
@@ -256,7 +256,7 @@ class Preview {
 	}
 
 	/**
-	 * Classic Elements Preview footer scripts and styles.
+	 * Elements PACMEC Preview footer scripts and styles.
 	 *
 	 * Handle styles and scripts from frontend.
 	 *
@@ -279,7 +279,7 @@ class Preview {
 	/**
 	 * Preview constructor.
 	 *
-	 * Initializing Classic Elements preview.
+	 * Initializing Elements PACMEC preview.
 	 *
 	 * @since 1.0.0
 	 * @access public

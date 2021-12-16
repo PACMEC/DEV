@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements heartbeat.
+ * Elements PACMEC heartbeat.
  *
- * Classic Elements heartbeat handler class is responsible for initializing Classic Elements
+ * Elements PACMEC heartbeat handler class is responsible for initializing Elements PACMEC
  * heartbeat. The class communicates with ClassicPress Heartbeat API while working
- * with Classic Elements.
+ * with Elements PACMEC.
  *
  * @since 1.0.0
  */
@@ -19,7 +19,7 @@ class Heartbeat {
 	/**
 	 * Heartbeat received.
 	 *
-	 * Locks the Heartbeat response received when editing with Classic Elements.
+	 * Locks the Heartbeat response received when editing with Elements PACMEC.
 	 *
 	 * Fired by `heartbeat_received` filter.
 	 *
@@ -53,9 +53,9 @@ class Heartbeat {
 	/**
 	 * Refresh nonces.
 	 *
-	 * Filter the nonces to send to the editor when editing with Classic Elements. Used
+	 * Filter the nonces to send to the editor when editing with Elements PACMEC. Used
 	 * to refresh the nonce when the nonce expires while editing. This way the
-	 * user doesn't need to log-in again as Classic Elements fetches the new nonce from
+	 * user doesn't need to log-in again as Elements PACMEC fetches the new nonce from
 	 * the server using ajax.
 	 *
 	 * Fired by `wp_refresh_nonces` filter.
@@ -85,7 +85,7 @@ class Heartbeat {
 	/**
 	 * Heartbeat constructor.
 	 *
-	 * Initializing Classic Elements heartbeat.
+	 * Initializing Elements PACMEC heartbeat.
 	 *
 	 * @since 1.0.0
 	 * @access public

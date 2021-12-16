@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements must-use plugins report.
+ * Elements PACMEC must-use plugins report.
  *
- * Classic Elements system report handler class responsible for generating a report for
+ * Elements PACMEC system report handler class responsible for generating a report for
  * must-use plugins.
  *
  * @since 1.0.0

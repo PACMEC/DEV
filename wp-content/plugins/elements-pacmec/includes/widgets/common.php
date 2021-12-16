@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements common widget.
+ * Elements PACMEC common widget.
  *
- * Classic Elements base widget that gives you all the advanced options of the basic
+ * Elements PACMEC base widget that gives you all the advanced options of the basic
  * widget.
  *
  * @since 1.0.0

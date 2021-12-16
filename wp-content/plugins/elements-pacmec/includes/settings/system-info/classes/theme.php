@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements theme report.
+ * Elements PACMEC theme report.
  *
- * Classic Elements system report handler class responsible for generating a report for
+ * Elements PACMEC system report handler class responsible for generating a report for
  * the theme.
  *
  * @since 1.0.0

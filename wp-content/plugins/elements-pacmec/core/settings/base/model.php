@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements settings base model.
+ * Elements PACMEC settings base model.
  *
- * Classic Elements settings base model handler class is responsible for registering
- * and managing Classic Elements settings base models.
+ * Elements PACMEC settings base model handler class is responsible for registering
+ * and managing Elements PACMEC settings base models.
  *
  * @since 1.6.0
  * @abstract

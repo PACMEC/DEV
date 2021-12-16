@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements spacer widget.
+ * Elements PACMEC spacer widget.
  *
- * Classic Elements widget that inserts a space that divides various elements.
+ * Elements PACMEC widget that inserts a space that divides various elements.
  *
  * @since 1.0.0
  */

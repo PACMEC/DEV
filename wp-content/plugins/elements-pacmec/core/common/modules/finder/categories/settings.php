@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Settings Category
  *
- * Provides items related to Classic Elements's settings.
+ * Provides items related to Elements PACMEC settings.
  */
 class Settings extends Base_Category {
 

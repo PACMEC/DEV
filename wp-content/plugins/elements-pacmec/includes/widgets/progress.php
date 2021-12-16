@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements progress widget.
+ * Elements PACMEC progress widget.
  *
- * Classic Elements widget that displays an escalating progress bar.
+ * Elements PACMEC widget that displays an escalating progress bar.
  *
  * @since 1.0.0
  */

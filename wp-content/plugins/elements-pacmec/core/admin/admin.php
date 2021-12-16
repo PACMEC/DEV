@@ -152,7 +152,7 @@ class Admin extends App {
 				</span>
 				<span class="elementor-switch-mode-off">
 					<i class="eicon-flow" aria-hidden="true"></i>
-					<?php echo __( 'Edit with Classic Elements', 'elementor' ); ?>
+					<?php echo __( 'Edit with Elements PACMEC', 'elementor' ); ?>
 				</span>
 			</button>
 		</div>
@@ -160,7 +160,7 @@ class Admin extends App {
 			<a id="elementor-go-to-edit-page-link" href="<?php echo $document->get_edit_url(); ?>">
 				<div id="elementor-editor-button" class="button button-primary button-hero">
 					<i class="eicon-flow" aria-hidden="true"></i>
-					<?php echo __( 'Edit with Classic Elements', 'elementor' ); ?>
+					<?php echo __( 'Edit with Elements PACMEC', 'elementor' ); ?>
 				</div>
 				<div class="elementor-loader-wrapper">
 					<div class="elementor-loader">
@@ -203,9 +203,9 @@ class Admin extends App {
 	}
 
 	/**
-	 * Add Classic Elements post state.
+	 * Add Elements PACMEC post state.
 	 *
-	 * Adds a new "Classic Elements" post state to the post table.
+	 * Adds a new "Elements PACMEC" post state to the post table.
 	 *
 	 * Fired by `display_post_states` filter.
 	 *
@@ -219,7 +219,7 @@ class Admin extends App {
 	 */
 	public function add_elementor_post_state( $post_states, $post ) {
 		if ( User::is_current_user_can_edit( $post->ID ) && Plugin::$instance->db->is_built_with_elementor( $post->ID ) ) {
-			$post_states['elementor'] = __( 'Classic Elements', 'elementor' );
+			$post_states['elementor'] = __( 'Elements PACMEC', 'elementor' );
 		}
 
 		return $post_states;
@@ -395,16 +395,16 @@ class Admin extends App {
 						<?php
 						printf(
 							/* translators: 1: Details URL, 2: Accessibility text, 3: Version number, 4: Update URL, 5: Accessibility text */
-							__( 'There is a new version of Classic Elements Page Builder available. <a href="%1$s" class="thickbox open-plugin-details-modal" aria-label="%2$s">View version %3$s details</a> or <a href="%4$s" class="update-link" aria-label="%5$s">update now</a>.', 'elementor' ),
+							__( 'There is a new version of Elements PACMEC Page Builder available. <a href="%1$s" class="thickbox open-plugin-details-modal" aria-label="%2$s">View version %3$s details</a> or <a href="%4$s" class="update-link" aria-label="%5$s">update now</a>.', 'elementor' ),
 							esc_url( $details_url ),
 							esc_attr( sprintf(
 								/* translators: %s: Elementor version */
-								__( 'View Classic Elements version %s details', 'elementor' ),
+								__( 'View Elements PACMEC version %s details', 'elementor' ),
 								$new_version
 							) ),
 							$new_version,
 							esc_url( $upgrade_url ),
-							esc_attr( __( 'Update Classic Elements Now', 'elementor' ) )
+							esc_attr( __( 'Update Elements PACMEC Now', 'elementor' ) )
 						);
 						?>
 					</p>
@@ -440,9 +440,9 @@ class Admin extends App {
 
 		if ( $is_elementor_screen ) {
 			$footer_text = sprintf(
-				/* translators: 1: Classic Elements, 2: Link to plugin review */
+				/* translators: 1: Elements PACMEC, 2: Link to plugin review */
 				__( 'Enjoyed %1$s? Please leave us a %2$s rating. We really appreciate your support!', 'elementor' ),
-				'<strong>' . __( 'Classic Elements', 'elementor' ) . '</strong>',
+				'<strong>' . __( 'Elements PACMEC', 'elementor' ) . '</strong>',
 				'<a href="https://go.elementor.com/admin-review/" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
 			);
 		}
@@ -453,7 +453,7 @@ class Admin extends App {
 	/**
 	 * Register dashboard widgets.
 	 *
-	 * Adds a new Classic Elements widgets to ClassicPress dashboard.
+	 * Adds a new Elements PACMEC widgets to ClassicPress dashboard.
 	 *
 	 * Fired by `wp_dashboard_setup` action.
 	 *
@@ -461,7 +461,7 @@ class Admin extends App {
 	 * @access public
 	 */
 	public function register_dashboard_widgets() {
-		wp_add_dashboard_widget( 'e-dashboard-overview', __( 'Classic Elements Overview', 'elementor' ), [ $this, 'elementor_dashboard_overview_widget' ] );
+		wp_add_dashboard_widget( 'e-dashboard-overview', __( 'Elements PACMEC Overview', 'elementor' ), [ $this, 'elementor_dashboard_overview_widget' ] );
 
 		// Move our widget to top.
 		global $wp_meta_boxes;
@@ -510,12 +510,12 @@ class Admin extends App {
 			<div class="e-overview__header">
 				<div class="e-overview__logo"><div class="e-logo-wrapper"><i class="eicon-elementor"></i></div></div>
 				<div class="e-overview__versions">
-					<span class="e-overview__version"><?php echo __( 'Classic Elements', 'elementor' ); ?> v<?php echo ELEMENTOR_VERSION; ?></span>
+					<span class="e-overview__version"><?php echo __( 'Elements PACMEC', 'elementor' ); ?> v<?php echo ELEMENTOR_VERSION; ?></span>
 					<?php
 					/**
-					 * Classic Elements dashboard widget after the version.
+					 * Elements PACMEC dashboard widget after the version.
 					 *
-					 * Fires after Classic Elements version display in the dashboard widget.
+					 * Fires after Elements PACMEC version display in the dashboard widget.
 					 *
 					 * @since 1.9.0
 					 */
@@ -576,9 +576,9 @@ class Admin extends App {
 	}
 
 	/**
-	 * Get Classic Elements dashboard overview widget footer actions.
+	 * Get Elements PACMEC dashboard overview widget footer actions.
 	 *
-	 * Retrieves the footer action links displayed in Classic Elements dashboard widget.
+	 * Retrieves the footer action links displayed in Elements PACMEC dashboard widget.
 	 *
 	 * @since 1.9.0
 	 * @access private
@@ -605,14 +605,14 @@ class Admin extends App {
 		/**
 		 * Dashboard widget footer actions.
 		 *
-		 * Filters the additions actions displayed in Classic Elements dashboard widget.
+		 * Filters the additions actions displayed in Elements PACMEC dashboard widget.
 		 *
-		 * Developers can add new action links to Classic Elements dashboard widget
+		 * Developers can add new action links to Elements PACMEC dashboard widget
 		 * footer using this filter.
 		 *
 		 * @since 1.9.0
 		 *
-		 * @param array $additions_actions Classic Elements dashboard widget footer actions.
+		 * @param array $additions_actions Elements PACMEC dashboard widget footer actions.
 		 */
 		$additions_actions = apply_filters( 'elementor/admin/dashboard_overview_widget/footer_actions', $additions_actions );
 

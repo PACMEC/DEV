@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements toggle widget.
+ * Elements PACMEC toggle widget.
  *
- * Classic Elements widget that displays a collapsible display of content in an toggle
+ * Elements PACMEC widget that displays a collapsible display of content in an toggle
  * style, allowing the user to open multiple items.
  *
  * @since 1.0.0

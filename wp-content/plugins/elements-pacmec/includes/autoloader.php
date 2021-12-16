@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements autoloader.
+ * Elements PACMEC autoloader.
  *
- * Classic Elements autoloader handler class is responsible for loading the different
+ * Elements PACMEC autoloader handler class is responsible for loading the different
  * classes needed to run the plugin.
  *
  * @since 1.6.0
@@ -18,7 +18,7 @@ class Autoloader {
 	/**
 	 * Classes map.
 	 *
-	 * Maps Classic Elements classes to file names.
+	 * Maps Elements PACMEC classes to file names.
 	 *
 	 * @since 1.6.0
 	 * @access private
@@ -31,7 +31,7 @@ class Autoloader {
 	/**
 	 * Classes aliases.
 	 *
-	 * Maps Classic Elements classes to aliases.
+	 * Maps Elements PACMEC classes to aliases.
 	 *
 	 * @since 1.6.0
 	 * @access private

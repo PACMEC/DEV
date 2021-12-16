@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements template library import images.
+ * Elements PACMEC template library import images.
  *
- * Classic Elements template library import images handler class is responsible for
+ * Elements PACMEC template library import images handler class is responsible for
  * importing remote images used by the template library.
  *
  * @since 1.0.0

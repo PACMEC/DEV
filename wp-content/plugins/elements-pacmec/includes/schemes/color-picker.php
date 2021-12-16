@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements color picker scheme.
+ * Elements PACMEC color picker scheme.
  *
- * Classic Elements color picker scheme class is responsible for initializing a scheme
+ * Elements PACMEC color picker scheme class is responsible for initializing a scheme
  * for color pickers.
  *
  * @since 1.0.0

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements base data tag.
+ * Elements PACMEC base data tag.
  *
- * An abstract class to register new Classic Elements data tags.
+ * An abstract class to register new Elements PACMEC data tags.
  *
  * @since 2.0.0
  * @abstract

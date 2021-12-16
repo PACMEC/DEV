@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements counter widget.
+ * Elements PACMEC counter widget.
  *
- * Classic Elements widget that displays stats and numbers in an escalating manner.
+ * Elements PACMEC widget that displays stats and numbers in an escalating manner.
  *
  * @since 1.0.0
  */

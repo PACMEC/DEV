@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements files manager.
+ * Elements PACMEC files manager.
  *
- * Classic Elements files manager handler class is responsible for creating files.
+ * Elements PACMEC files manager handler class is responsible for creating files.
  *
  * @since 2.6.0
  */
@@ -25,16 +25,16 @@ class Manager {
 	/**
 	 * Assets manager constructor.
 	 *
-	 * Initializing the Classic Elements assets manager.
+	 * Initializing the Elements PACMEC assets manager.
 	 *
 	 * @access public
 	 */
 	public function __construct() {
 		$this->register_asset_types();
 		/**
-		 * Classic Elements files assets registered.
+		 * Elements PACMEC files assets registered.
 		 *
-		 * Fires after Classic Elements registers assets types
+		 * Fires after Elements PACMEC registers assets types
 		 *
 		 * @since 2.6.0
 		 */
@@ -57,7 +57,7 @@ class Manager {
 	/**
 	 * Register Asset Types
 	 *
-	 * Registers Classic Elements Asset Types
+	 * Registers Elements PACMEC Asset Types
 	 */
 	private function register_asset_types() {
 		$this->add_asset( new Svg_Handler() );

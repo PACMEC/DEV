@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements usage report.
+ * Elements PACMEC usage report.
  *
- * Classic Elements system report handler class responsible for generating a report for
+ * Elements PACMEC system report handler class responsible for generating a report for
  * the user.
  */
 class Usage_Reporter extends Base_Reporter {

@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements settings manager.
+ * Elements PACMEC settings manager.
  *
- * Classic Elements settings manager handler class is responsible for registering and
- * managing Classic Elements settings managers.
+ * Elements PACMEC settings manager handler class is responsible for registering and
+ * managing Elements PACMEC settings managers.
  *
  * @since 1.6.0
  */
@@ -32,7 +32,7 @@ class Manager {
 	/**
 	 * Builtin settings managers names.
 	 *
-	 * Holds the names for builtin Classic Elements settings managers.
+	 * Holds the names for builtin Elements PACMEC settings managers.
 	 *
 	 * @since 1.6.0
 	 * @access private

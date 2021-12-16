@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements user.
+ * Elements PACMEC user.
  *
- * Classic Elements user handler class is responsible for checking if the user can edit
- * with Classic Elements and displaying different admin notices.
+ * Elements PACMEC user handler class is responsible for checking if the user can edit
+ * with Elements PACMEC and displaying different admin notices.
  *
  * @since 1.0.0
  */
@@ -41,7 +41,7 @@ class User {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements user.
+	 * Initialize Elements PACMEC user.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -111,9 +111,9 @@ class User {
 	}
 
 	/**
-	 * Is current user can access Classic Elements.
+	 * Is current user can access Elements PACMEC.
 	 *
-	 * Whether the current user role is not excluded by Classic Elements Settings.
+	 * Whether the current user role is not excluded by Elements PACMEC Settings.
 	 *
 	 * @since 2.1.7
 	 * @access public

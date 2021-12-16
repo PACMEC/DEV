@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements stylesheet.
+ * Elements PACMEC stylesheet.
  *
- * Classic Elements stylesheet handler class responsible for setting up CSS rules and
+ * Elements PACMEC stylesheet handler class responsible for setting up CSS rules and
  * properties, and all the CSS `@media` rule with supported viewport width.
  *
  * @since 1.0.0

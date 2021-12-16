@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements image box widget.
+ * Elements PACMEC image box widget.
  *
- * Classic Elements widget that displays an image, a headline and a text.
+ * Elements PACMEC widget that displays an image, a headline and a text.
  *
  * @since 1.0.0
  */

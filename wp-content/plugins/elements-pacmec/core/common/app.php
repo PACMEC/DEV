@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * App
  *
- * Classic Elements's common app that groups shared functionality, components and configuration
+ * Elements PACMEC common app that groups shared functionality, components and configuration
  *
  * @since 2.3.0
  */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Classic Elements Safe Mode
+ * Plugin Name: Elements PACMEC Safe Mode
  * Description: Safe Mode allows you to troubleshoot issues by only loading the editor, without loading the theme or any other plugin.
  * Plugin URI: https://elementor.com/?utm_source=safe-mode&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: Elementor.com
@@ -10,15 +10,15 @@
  *
  * Text Domain: elementor
  *
- * @package Classic Elements
+ * @package Elements PACMEC
  * @category Safe Mode
  *
- * Classic Elements is free software: you can redistribute it and/or modify
+ * Elements PACMEC is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * Classic Elements is distributed in the hope that it will be useful,
+ * Elements PACMEC is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.

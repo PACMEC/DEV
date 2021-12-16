@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements Log reporter.
+ * Elements PACMEC Log reporter.
  *
- * Classic Elements log reporter handler class is responsible for generating the
+ * Elements PACMEC log reporter handler class is responsible for generating the
  * debug reports.
  *
  * @since 2.4.0

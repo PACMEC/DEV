@@ -30,7 +30,7 @@ class Manager {
 	/**
 	 * Dynamic tags manager constructor.
 	 *
-	 * Initializing Classic Elements dynamic tags manager.
+	 * Initializing Elements PACMEC dynamic tags manager.
 	 *
 	 * @since 2.0.0
 	 * @access public
@@ -234,7 +234,7 @@ class Manager {
 			/**
 			 * Register dynamic tags.
 			 *
-			 * Fires when Classic Elements registers dynamic tags.
+			 * Fires when Elements PACMEC registers dynamic tags.
 			 *
 			 * @since 2.0.9
 			 *
@@ -354,7 +354,7 @@ class Manager {
 		/**
 		 * Before dynamic tags rendered.
 		 *
-		 * Fires before Classic Elements renders the dynamic tags.
+		 * Fires before Elements PACMEC renders the dynamic tags.
 		 *
 		 * @since 2.0.0
 		 */
@@ -377,7 +377,7 @@ class Manager {
 		/**
 		 * After dynamic tags rendered.
 		 *
-		 * Fires after Classic Elements renders the dynamic tags.
+		 * Fires after Elements PACMEC renders the dynamic tags.
 		 *
 		 * @since 2.0.0
 		 */

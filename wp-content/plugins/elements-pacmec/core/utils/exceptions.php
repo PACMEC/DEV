@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements exceptions.
+ * Elements PACMEC exceptions.
  *
- * Classic Elements exceptions handler class is responsible for handling exceptions.
+ * Elements PACMEC exceptions handler class is responsible for handling exceptions.
  *
  * @since 2.0.0
  */

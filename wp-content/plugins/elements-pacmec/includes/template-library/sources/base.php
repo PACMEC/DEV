@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements template library source base.
+ * Elements PACMEC template library source base.
  *
- * Classic Elements template library source base handler class is responsible for
- * initializing all the methods controlling the source of Classic Elements templates.
+ * Elements PACMEC template library source base handler class is responsible for
+ * initializing all the methods controlling the source of Elements PACMEC templates.
  *
  * @since 1.0.0
  * @abstract
@@ -206,7 +206,7 @@ abstract class Source_Base {
 	/**
 	 * Get current user meta.
 	 *
-	 * Retrieve Classic Elements meta data for the current user.
+	 * Retrieve Elements PACMEC meta data for the current user.
 	 *
 	 * @since 1.9.0
 	 * @access public
@@ -262,13 +262,13 @@ abstract class Source_Base {
 	/**
 	 * Replace elements IDs.
 	 *
-	 * For any given Classic Elements content/data, replace the IDs with new randomly
+	 * For any given Elements PACMEC content/data, replace the IDs with new randomly
 	 * generated IDs.
 	 *
 	 * @since 1.0.0
 	 * @access protected
 	 *
-	 * @param array $content Any type of Classic Elements data.
+	 * @param array $content Any type of Elements PACMEC data.
 	 *
 	 * @return mixed Iterated data.
 	 */
@@ -281,9 +281,9 @@ abstract class Source_Base {
 	}
 
 	/**
-	 * Get Classic Elements library user meta prefix.
+	 * Get Elements PACMEC library user meta prefix.
 	 *
-	 * Retrieve user meta prefix used to save Classic Elements data.
+	 * Retrieve user meta prefix used to save Elements PACMEC data.
 	 *
 	 * @since 1.9.0
 	 * @access protected

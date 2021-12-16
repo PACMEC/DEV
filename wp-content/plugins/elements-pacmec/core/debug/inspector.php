@@ -112,7 +112,7 @@ class Inspector {
 
 		$wp_admin_bar->add_node( [
 			'id' => 'elementor_inspector',
-			'title' => __( 'Classic Elements Debugger', 'elementor' ),
+			'title' => __( 'Elements PACMEC Debugger', 'elementor' ),
 		] );
 
 		foreach ( $this->log as $module => $log ) {

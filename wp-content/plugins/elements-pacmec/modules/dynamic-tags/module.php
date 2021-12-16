@@ -11,10 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements dynamic tags module.
+ * Elements PACMEC dynamic tags module.
  *
- * Classic Elements dynamic tags module handler class is responsible for registering
- * and managing Classic Elements dynamic tags modules.
+ * Elements PACMEC dynamic tags module handler class is responsible for registering
+ * and managing Elements PACMEC dynamic tags modules.
  *
  * @since 2.0.0
  */

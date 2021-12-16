@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements history revisions manager.
+ * Elements PACMEC history revisions manager.
  *
- * Classic Elements history revisions manager handler class is responsible for
- * registering and managing Classic Elements revisions manager.
+ * Elements PACMEC history revisions manager handler class is responsible for
+ * registering and managing Elements PACMEC revisions manager.
  *
  * @since 1.7.0
  */
@@ -41,7 +41,7 @@ class Revisions_Manager {
 	/**
 	 * History revisions manager constructor.
 	 *
-	 * Initializing Classic Elements history revisions manager.
+	 * Initializing Elements PACMEC history revisions manager.
 	 *
 	 * @since 1.7.0
 	 * @access public
@@ -73,7 +73,7 @@ class Revisions_Manager {
 		// Add a temporary string in order the $post will not be equal to the $autosave
 		// in edit-form-advanced.php:210
 		if ( $post_id && Plugin::$instance->db->is_built_with_elementor( $post_id ) ) {
-			$post_content .= '<!-- Created with Classic Elements -->';
+			$post_content .= '<!-- Created with Elements PACMEC -->';
 		}
 
 		return $post_content;
@@ -88,7 +88,7 @@ class Revisions_Manager {
 		global $post;
 
 		if ( Plugin::$instance->db->is_built_with_elementor( $post->ID ) ) {
-			$post->post_content = str_replace( '<!-- Created with Classic Elements -->', '', $post->post_content );
+			$post->post_content = str_replace( '<!-- Created with Elements PACMEC -->', '', $post->post_content );
 		}
 	}
 

@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements compatibility.
+ * Elements PACMEC compatibility.
  *
- * Classic Elements compatibility handler class is responsible for compatibility with
+ * Elements PACMEC compatibility handler class is responsible for compatibility with
  * external plugins. The class resolves different issues with non-compatible
  * plugins.
  *
@@ -22,7 +22,7 @@ class Compatibility {
 	/**
 	 * Register actions.
 	 *
-	 * Run Classic Elements compatibility with external plugins using custom filters and
+	 * Run Elements PACMEC compatibility with external plugins using custom filters and
 	 * actions.
 	 *
 	 * @since 1.0.0
@@ -90,8 +90,8 @@ class Compatibility {
 	/**
 	 * Add new button to gutenberg.
 	 *
-	 * Insert new "Classic Elements" button to the gutenberg editor to create new post
-	 * using Classic Elements page builder.
+	 * Insert new "Elements PACMEC" button to the gutenberg editor to create new post
+	 * using Elements PACMEC page builder.
 	 *
 	 * @since 1.9.0
 	 * @access public
@@ -124,7 +124,7 @@ class Compatibility {
 
 				var url = '<?php echo esc_url( Utils::get_create_new_post_url( $typenow ) ); ?>';
 
-				dropdown.insertAdjacentHTML( 'afterbegin', '<a href="' + url + '">Classic Elements</a>' );
+				dropdown.insertAdjacentHTML( 'afterbegin', '<a href="' + url + '">Elements PACMEC</a>' );
 			} );
 		</script>
 		<?php
@@ -133,7 +133,7 @@ class Compatibility {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements compatibility with external plugins.
+	 * Initialize Elements PACMEC compatibility with external plugins.
 	 *
 	 * Fired by `init` action.
 	 *
@@ -270,7 +270,7 @@ class Compatibility {
 	/**
 	 * Polylang compatibility.
 	 *
-	 * Fix Polylang compatibility with Classic Elements.
+	 * Fix Polylang compatibility with Elements PACMEC.
 	 *
 	 * @since 2.0.0
 	 * @access private

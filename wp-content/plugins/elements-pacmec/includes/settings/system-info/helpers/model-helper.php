@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements model helper.
+ * Elements PACMEC model helper.
  *
- * Classic Elements model helper handler class is responsible for filtering properties.
+ * Elements PACMEC model helper handler class is responsible for filtering properties.
  *
  * @since 1.0.0
  */

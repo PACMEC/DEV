@@ -15,22 +15,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements page templates module.
+ * Elements PACMEC page templates module.
  *
- * Classic Elements page templates module handler class is responsible for registering
- * and managing Classic Elements page templates modules.
+ * Elements PACMEC page templates module handler class is responsible for registering
+ * and managing Elements PACMEC page templates modules.
  *
  * @since 2.0.0
  */
 class Module extends BaseModule {
 
 	/**
-	 * Classic Elements Canvas template name.
+	 * Elements PACMEC Canvas template name.
 	 */
 	const TEMPLATE_CANVAS = 'elementor_canvas';
 
 	/**
-	 * Classic Elements Header & Footer template name.
+	 * Elements PACMEC Header & Footer template name.
 	 */
 	const TEMPLATE_HEADER_FOOTER = 'elementor_header_footer';
 
@@ -295,7 +295,7 @@ class Module extends BaseModule {
 			$control_id . '_canvas_description',
 			[
 				'type' => Controls_Manager::RAW_HTML,
-				'raw' => __( 'No header, no footer, just Classic Elements', 'elementor' ),
+				'raw' => __( 'No header, no footer, just Elements PACMEC', 'elementor' ),
 				'separator' => 'none',
 				'content_classes' => 'elementor-descriptor',
 				'condition' => [
@@ -325,7 +325,7 @@ class Module extends BaseModule {
 	 *
 	 * Filters whether to update metadata of a specific type.
 	 *
-	 * Classic Elements don't allow ClassicPress to update the parent page template
+	 * Elements PACMEC don't allow ClassicPress to update the parent page template
 	 * during `wp_update_post`.
 	 *
 	 * Fired by `update_{$meta_type}_metadata` filter.
@@ -375,7 +375,7 @@ class Module extends BaseModule {
 	/**
 	 * Page templates module constructor.
 	 *
-	 * Initializing Classic Elements page templates module.
+	 * Initializing Elements PACMEC page templates module.
 	 *
 	 * @since 2.0.0
 	 * @access public

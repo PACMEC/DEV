@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Scheme interface.
  *
- * An interface for Classic Elements Scheme.
+ * An interface for Elements PACMEC Scheme.
  *
  * @since 1.0.0
  */

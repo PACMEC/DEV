@@ -9,9 +9,9 @@ use Elementor\Core\Common\Modules\Ajax\Module as Ajax;
 use Elementor\TemplateLibrary\Source_Local;
 
 /**
- * Classic Elements scheme manager.
+ * Elements PACMEC scheme manager.
  *
- * Classic Elements scheme manager handler class is responsible for registering and
+ * Elements PACMEC scheme manager handler class is responsible for registering and
  * initializing all the supported schemes.
  *
  * @since 1.0.0
@@ -227,7 +227,7 @@ class Schemes_Manager {
 	/**
 	 * Ajax apply scheme.
 	 *
-	 * Ajax handler for Classic Elements apply_scheme.
+	 * Ajax handler for Elements PACMEC apply_scheme.
 	 *
 	 * Fired by `wp_ajax_elementor_apply_scheme` action.
 	 *
@@ -336,7 +336,7 @@ class Schemes_Manager {
 	/**
 	 * Schemes manager constructor.
 	 *
-	 * Initializing Classic Elements schemes manager and register default schemes.
+	 * Initializing Elements PACMEC schemes manager and register default schemes.
 	 *
 	 * @since 1.0.0
 	 * @access public

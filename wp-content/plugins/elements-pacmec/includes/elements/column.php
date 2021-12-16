@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements column element.
+ * Elements PACMEC column element.
  *
- * Classic Elements column handler class is responsible for initializing the column
+ * Elements PACMEC column handler class is responsible for initializing the column
  * element.
  *
  * @since 1.0.0

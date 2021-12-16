@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements audio widget.
+ * Elements PACMEC audio widget.
  *
- * Classic Elements widget that displays an audio player.
+ * Elements PACMEC widget that displays an audio player.
  *
  * @since 1.0.0
  */

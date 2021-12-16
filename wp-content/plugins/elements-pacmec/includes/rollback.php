@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements rollback.
+ * Elements PACMEC rollback.
  *
- * Classic Elements rollback handler class is responsible for rolling back Classic Elements to
+ * Elements PACMEC rollback handler class is responsible for rolling back Elements PACMEC to
  * previous version.
  *
  * @since 1.5.0
@@ -66,7 +66,7 @@ class Rollback {
 	/**
 	 * Rollback constructor.
 	 *
-	 * Initializing Classic Elements rollback.
+	 * Initializing Elements PACMEC rollback.
 	 *
 	 * @since 1.5.0
 	 * @access public
@@ -148,7 +148,7 @@ class Rollback {
 	/**
 	 * Upgrade.
 	 *
-	 * Run ClassicPress upgrade to rollback Classic Elements to previous version.
+	 * Run ClassicPress upgrade to rollback Elements PACMEC to previous version.
 	 *
 	 * @since 1.5.0
 	 * @access protected
@@ -162,7 +162,7 @@ class Rollback {
 			'url' => 'update.php?action=upgrade-plugin&plugin=' . rawurlencode( $this->plugin_name ),
 			'plugin' => $this->plugin_name,
 			'nonce' => 'upgrade-plugin_' . $this->plugin_name,
-			'title' => '<img src="' . $logo_url . '" alt="Classic Elements">' . __( 'Rollback to Previous Version', 'elementor' ),
+			'title' => '<img src="' . $logo_url . '" alt="Elements PACMEC">' . __( 'Rollback to Previous Version', 'elementor' ),
 		];
 
 		$this->print_inline_style();
@@ -174,7 +174,7 @@ class Rollback {
 	/**
 	 * Run.
 	 *
-	 * Rollback Classic Elements to previous versions.
+	 * Rollback Elements PACMEC to previous versions.
 	 *
 	 * @since 1.5.0
 	 * @access public

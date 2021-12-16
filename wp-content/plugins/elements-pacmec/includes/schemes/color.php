@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements color scheme.
+ * Elements PACMEC color scheme.
  *
- * Classic Elements color scheme class is responsible for initializing a scheme for
+ * Elements PACMEC color scheme class is responsible for initializing a scheme for
  * colors.
  *
  * @since 1.0.0

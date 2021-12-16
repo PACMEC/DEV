@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements sidebar widget.
+ * Elements PACMEC sidebar widget.
  *
- * Classic Elements widget that insert any sidebar into the page.
+ * Elements PACMEC widget that insert any sidebar into the page.
  *
  * @since 1.0.0
  */

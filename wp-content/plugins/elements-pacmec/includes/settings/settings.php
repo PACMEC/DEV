@@ -11,17 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements "Settings" page in ClassicPress Dashboard.
+ * Elements PACMEC "Settings" page in ClassicPress Dashboard.
  *
- * Classic Elements settings page handler class responsible for creating and displaying
- * Classic Elements "Settings" page in ClassicPress dashboard.
+ * Elements PACMEC settings page handler class responsible for creating and displaying
+ * Elements PACMEC "Settings" page in ClassicPress dashboard.
  *
  * @since 1.0.0
  */
 class Settings extends Settings_Page {
 
 	/**
-	 * Settings page ID for Classic Elements settings.
+	 * Settings page ID for Elements PACMEC settings.
 	 */
 	const PAGE_ID = 'elementor';
 
@@ -58,7 +58,7 @@ class Settings extends Settings_Page {
 	/**
 	 * Register admin menu.
 	 *
-	 * Add new Classic Elements Settings admin menu.
+	 * Add new Elements PACMEC Settings admin menu.
 	 *
 	 * Fired by `admin_menu` action.
 	 *
@@ -71,8 +71,8 @@ class Settings extends Settings_Page {
 		$menu[] = [ '', 'read', 'separator-elementor', '', 'wp-menu-separator elementor' ]; // WPCS: override ok.
 
 		add_menu_page(
-			__( 'Classic Elements', 'elementor' ),
-			__( 'Classic Elements', 'elementor' ),
+			__( 'Elements PACMEC', 'elementor' ),
+			__( 'Elements PACMEC', 'elementor' ),
 			'manage_options',
 			self::PAGE_ID,
 			[ $this, 'display_settings_page' ],
@@ -82,7 +82,7 @@ class Settings extends Settings_Page {
 	}
 
 	/**
-	 * Reorder the Classic Elements menu items in admin.
+	 * Reorder the Elements PACMEC menu items in admin.
 	 * Based on WC.
 	 *
 	 * @since 2.4.0
@@ -119,9 +119,9 @@ class Settings extends Settings_Page {
 	}
 
 	/**
-	 * Register Classic Elements Pro sub-menu.
+	 * Register Elements PACMEC Pro sub-menu.
 	 *
-	 * Add new Classic Elements Pro sub-menu under the main Elementor menu.
+	 * Add new Elements PACMEC Pro sub-menu under the main Elementor menu.
 	 *
 	 * Fired by `admin_menu` action.
 	 *
@@ -161,9 +161,9 @@ class Settings extends Settings_Page {
 	}
 
 	/**
-	 * Register Classic Elements knowledge base sub-menu.
+	 * Register Elements PACMEC knowledge base sub-menu.
 	 *
-	 * Add new Classic Elements knowledge base sub-menu under the main Elementor menu.
+	 * Add new Elements PACMEC knowledge base sub-menu under the main Elementor menu.
 	 *
 	 * Fired by `admin_menu` action.
 	 *
@@ -191,9 +191,9 @@ class Settings extends Settings_Page {
 	}
 
 	/**
-	 * Go Classic Elements Pro.
+	 * Go Elements PACMEC Pro.
 	 *
-	 * Redirect the Classic Elements Pro page the clicking the Elementor Pro menu link.
+	 * Redirect the Elements PACMEC Pro page the clicking the Elementor Pro menu link.
 	 *
 	 * Fired by `admin_init` action.
 	 *
@@ -251,7 +251,7 @@ class Settings extends Settings_Page {
 					</div>
 					<div class="e-getting-started__content">
 						<div class="e-getting-started__content--narrow">
-							<h2><?php echo __( 'Welcome to Classic Elements', 'elementor' ); ?></h2>
+							<h2><?php echo __( 'Welcome to Elements PACMEC', 'elementor' ); ?></h2>
 							<p><?php echo __( 'We recommend you watch this 2 minute getting started video, and then try the editor yourself by dragging and dropping elements to create your first page.', 'elementor' ); ?></p>
 						</div>
 
@@ -453,7 +453,7 @@ class Settings extends Settings_Page {
 								'field_args' => [
 									'type' => 'checkbox',
 									'value' => 'yes',
-									'sub_desc' => __( 'Checking this box will disable Classic Elements\'s Default Colors, and make Classic Elements inherit the colors from your theme.', 'elementor' ),
+									'sub_desc' => __( 'Checking this box will disable Elements PACMEC\'s Default Colors, and make Elements PACMEC inherit the colors from your theme.', 'elementor' ),
 								],
 							],
 							'disable_typography_schemes' => [
@@ -461,13 +461,13 @@ class Settings extends Settings_Page {
 								'field_args' => [
 									'type' => 'checkbox',
 									'value' => 'yes',
-									'sub_desc' => __( 'Checking this box will disable Classic Elements\'s Default Fonts, and make Classic Elements inherit the fonts from your theme.', 'elementor' ),
+									'sub_desc' => __( 'Checking this box will disable Elements PACMEC\'s Default Fonts, and make Elements PACMEC inherit the fonts from your theme.', 'elementor' ),
 								],
 							],
 						],
 					],
 					'usage' => [
-						'label' => __( 'Improve Classic Elements', 'elementor' ),
+						'label' => __( 'Improve Elements PACMEC', 'elementor' ),
 						'fields' => [
 							'allow_tracking' => [
 								'label' => __( 'Usage Data Tracking', 'elementor' ),
@@ -662,7 +662,7 @@ class Settings extends Settings_Page {
 	 * @return string Settings page title.
 	 */
 	protected function get_page_title() {
-		return __( 'Classic Elements', 'elementor' );
+		return __( 'Elements PACMEC', 'elementor' );
 	}
 
 	/**

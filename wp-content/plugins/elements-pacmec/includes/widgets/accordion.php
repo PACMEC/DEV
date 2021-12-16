@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements accordion widget.
+ * Elements PACMEC accordion widget.
  *
- * Classic Elements widget that displays a collapsible display of content in an
+ * Elements PACMEC widget that displays a collapsible display of content in an
  * accordion style, showing only one item at a time.
  *
  * @since 1.0.0

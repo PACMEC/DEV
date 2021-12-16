@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements shortcode widget.
+ * Elements PACMEC shortcode widget.
  *
- * Classic Elements widget that insert any shortcodes into the page.
+ * Elements PACMEC widget that insert any shortcodes into the page.
  *
  * @since 1.0.0
  */

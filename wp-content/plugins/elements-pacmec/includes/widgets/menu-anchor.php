@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements menu anchor widget.
+ * Elements PACMEC menu anchor widget.
  *
- * Classic Elements widget that allows to link and menu to a specific position on the
+ * Elements PACMEC widget that allows to link and menu to a specific position on the
  * page.
  *
  * @since 1.0.0

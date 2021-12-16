@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements text editor widget.
+ * Elements PACMEC text editor widget.
  *
- * Classic Elements widget that displays a WYSIWYG text editor, just like the WordPress
+ * Elements PACMEC widget that displays a WYSIWYG text editor, just like the WordPress
  * editor.
  *
  * @since 1.0.0

@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements responsive.
+ * Elements PACMEC responsive.
  *
- * Classic Elements responsive handler class is responsible for setting up Classic Elements
+ * Elements PACMEC responsive handler class is responsible for setting up Elements PACMEC
  * responsive breakpoints.
  *
  * @since 1.0.0
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Responsive {
 
 	/**
-	 * The Classic Elements breakpoint prefix.
+	 * The Elements PACMEC breakpoint prefix.
 	 */
 	const BREAKPOINT_OPTION_PREFIX = 'elementor_viewport_';
 

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements button widget.
+ * Elements PACMEC button widget.
  *
- * Classic Elements widget that displays a button with the ability to control every
+ * Elements PACMEC widget that displays a button with the ability to control every
  * aspect of the button design.
  *
  * @since 1.0.0

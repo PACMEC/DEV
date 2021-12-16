@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements history module.
+ * Elements PACMEC history module.
  *
- * Classic Elements history module handler class is responsible for registering and
- * managing Classic Elements history modules.
+ * Elements PACMEC history module handler class is responsible for registering and
+ * managing Elements PACMEC history modules.
  *
  * @since 1.7.0
  */

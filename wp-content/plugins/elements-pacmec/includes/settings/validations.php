@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements settings validations.
+ * Elements PACMEC settings validations.
  *
- * Classic Elements settings validations handler class is responsible for validating settings
+ * Elements PACMEC settings validations handler class is responsible for validating settings
  * fields.
  *
  * @since 1.0.0

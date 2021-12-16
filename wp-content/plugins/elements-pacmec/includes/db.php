@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements database.
+ * Elements PACMEC database.
  *
- * Classic Elements database handler class is responsible for communicating with the
- * DB, save and retrieve Classic Elements data and meta data.
+ * Elements PACMEC database handler class is responsible for communicating with the
+ * DB, save and retrieve Elements PACMEC data and meta data.
  *
  * @since 1.0.0
  */
@@ -214,7 +214,7 @@ class DB {
 	/**
 	 * Get new editor from ClassicPress editor.
 	 *
-	 * When editing the with Classic Elements the first time, the current page content
+	 * When editing the with Elements PACMEC the first time, the current page content
 	 * is parsed into Text Editor Widget that contains the original data.
 	 *
 	 * @since 2.1.0
@@ -223,7 +223,7 @@ class DB {
 	 *
 	 * @param int $post_id Post ID.
 	 *
-	 * @return array Content in Classic Elements format.
+	 * @return array Content in Elements PACMEC format.
 	 */
 	public function get_new_editor_from_wp_editor( $post_id ) {
 		 _deprecated_function( __METHOD__, '2.3.0', 'Plugin::$instance->documents->get( $post_id )->convert_to_elementor()' );
@@ -240,7 +240,7 @@ class DB {
 	/**
 	 * Get new editor from ClassicPress editor.
 	 *
-	 * When editing the with Classic Elements the first time, the current page content
+	 * When editing the with Elements PACMEC the first time, the current page content
 	 * is parsed into Text Editor Widget that contains the original data.
 	 *
 	 * @since 1.0.0
@@ -249,7 +249,7 @@ class DB {
 	 *
 	 * @param int $post_id Post ID.
 	 *
-	 * @return array Content in Classic Elements format.
+	 * @return array Content in Elements PACMEC format.
 	 */
 	public function _get_new_editor_from_wp_editor( $post_id ) {
 		_deprecated_function( __METHOD__, '2.1.0', 'Plugin::$instance->documents->get( $post_id )->convert_to_elementor()' );
@@ -258,15 +258,15 @@ class DB {
 	}
 
 	/**
-	 * Is using Classic Elements.
+	 * Is using Elements PACMEC.
 	 *
-	 * Set whether the page is using Classic Elements or not.
+	 * Set whether the page is using Elements PACMEC or not.
 	 *
 	 * @since 1.5.0
 	 * @access public
 	 *
 	 * @param int  $post_id      Post ID.
-	 * @param bool $is_elementor Optional. Whether the page is Classic Elements page.
+	 * @param bool $is_elementor Optional. Whether the page is Elements PACMEC page.
 	 *                           Default is true.
 	 */
 	public function set_is_elementor_page( $post_id, $is_elementor = true ) {
@@ -339,13 +339,13 @@ class DB {
 	/**
 	 * Iterate data.
 	 *
-	 * Accept any type of Classic Elements data and a callback function. The callback
+	 * Accept any type of Elements PACMEC data and a callback function. The callback
 	 * function runs recursively for each element and his child elements.
 	 *
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param array    $data_container Any type of Classic Elements data.
+	 * @param array    $data_container Any type of Elements PACMEC data.
 	 * @param callable $callback       A function to iterate data by.
 	 * @param array    $args           Array of args pointers for passing parameters in & out of the callback
 	 *
@@ -374,10 +374,10 @@ class DB {
 	}
 
 	/**
-	 * Safely copy Classic Elements meta.
+	 * Safely copy Elements PACMEC meta.
 	 *
-	 * Make sure the original page was built with Classic Elements and the post is not
-	 * auto-save. Only then copy Classic Elements meta from one post to another using
+	 * Make sure the original page was built with Elements PACMEC and the post is not
+	 * auto-save. Only then copy Elements PACMEC meta from one post to another using
 	 * `copy_elementor_meta()`.
 	 *
 	 * @since 1.9.2
@@ -387,14 +387,14 @@ class DB {
 	 * @param int $to_post_id   Target post ID.
 	 */
 	public function safe_copy_elementor_meta( $from_post_id, $to_post_id ) {
-		// It's from  WP-Admin & not from Classic Elements.
+		// It's from  WP-Admin & not from Elements PACMEC.
 		if ( ! did_action( 'elementor/db/before_save' ) ) {
 
 			if ( ! Plugin::$instance->db->is_built_with_elementor( $from_post_id ) ) {
 				return;
 			}
 
-			// It's an exited Classic Elements auto-save
+			// It's an exited Elements PACMEC auto-save
 			if ( get_post_meta( $to_post_id, '_elementor_data', true ) ) {
 				return;
 			}
@@ -404,7 +404,7 @@ class DB {
 	}
 
 	/**
-	 * Copy Classic Elements meta.
+	 * Copy Elements PACMEC meta.
 	 *
 	 * Duplicate the data from one post to another.
 	 *
@@ -428,7 +428,7 @@ class DB {
 			if ( 0 === strpos( $meta_key, '_elementor' ) || in_array( $meta_key, $core_meta, true ) ) {
 				$value = $values[0];
 
-				// The Classic Elements JSON needs slashes before saving
+				// The Elements PACMEC JSON needs slashes before saving
 				if ( '_elementor_data' === $meta_key ) {
 					$value = wp_slash( $value );
 				} else {
@@ -442,16 +442,16 @@ class DB {
 	}
 
 	/**
-	 * Is built with Classic Elements.
+	 * Is built with Elements PACMEC.
 	 *
-	 * Check whether the post was built with Classic Elements.
+	 * Check whether the post was built with Elements PACMEC.
 	 *
 	 * @since 1.0.10
 	 * @access public
 	 *
 	 * @param int $post_id Post ID.
 	 *
-	 * @return bool Whether the post was built with Classic Elements.
+	 * @return bool Whether the post was built with Elements PACMEC.
 	 */
 	public function is_built_with_elementor( $post_id ) {
 		return ! ! get_post_meta( $post_id, '_elementor_edit_mode', true );
@@ -621,7 +621,7 @@ class DB {
 	/**
 	 * Get plain text from data.
 	 *
-	 * Retrieve the post plain text from any given Classic Elements data.
+	 * Retrieve the post plain text from any given Elements PACMEC data.
 	 *
 	 * @since 1.9.2
 	 * @access public

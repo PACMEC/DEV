@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements library module.
+ * Elements PACMEC library module.
  *
- * Classic Elements library module handler class is responsible for registering and
- * managing Classic Elements library modules.
+ * Elements PACMEC library module handler class is responsible for registering and
+ * managing Elements PACMEC library modules.
  *
  * @since 2.0.0
  */
@@ -36,7 +36,7 @@ class Module extends BaseModule {
 	/**
 	 * Library module constructor.
 	 *
-	 * Initializing Classic Elements library module.
+	 * Initializing Elements PACMEC library module.
 	 *
 	 * @since 2.0.0
 	 * @access public

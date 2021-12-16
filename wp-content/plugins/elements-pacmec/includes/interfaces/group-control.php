@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Group control interface.
  *
- * An interface for Classic Elements group control.
+ * An interface for Elements PACMEC group control.
  *
  * @since 1.0.0
  */

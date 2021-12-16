@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements ajax manager.
+ * Elements PACMEC ajax manager.
  *
- * Classic Elements ajax manager handler class is responsible for handling Classic Elements
+ * Elements PACMEC ajax manager handler class is responsible for handling Elements PACMEC
  * ajax requests, ajax responses and registering actions applied on them.
  *
  * @since 2.0.0

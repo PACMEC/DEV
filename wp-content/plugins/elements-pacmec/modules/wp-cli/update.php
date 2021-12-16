@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements Page Builder cli tools.
+ * Elements PACMEC Page Builder cli tools.
  */
 class Update extends \WP_CLI_Command {
 

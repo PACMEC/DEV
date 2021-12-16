@@ -600,7 +600,7 @@ abstract class Base extends Base_File {
 		/**
 		 * Parse CSS file.
 		 *
-		 * Fires when CSS file is parsed on Classic Elements.
+		 * Fires when CSS file is parsed on Elements PACMEC.
 		 *
 		 * The dynamic portion of the hook name, `$name`, refers to the CSS file name.
 		 *

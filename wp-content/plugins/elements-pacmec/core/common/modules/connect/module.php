@@ -77,9 +77,9 @@ class Module extends BaseModule {
 		}
 
 		/**
-		 * Register Classic Elements apps.
+		 * Register Elements PACMEC apps.
 		 *
-		 * Fires after Classic Elements registers the default apps.
+		 * Fires after Elements PACMEC registers the default apps.
 		 *
 		 * @since 2.3.0
 		 *

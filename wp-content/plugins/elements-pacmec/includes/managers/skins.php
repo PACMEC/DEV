@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements skins manager.
+ * Elements PACMEC skins manager.
  *
- * Classic Elements skins manager handler class is responsible for registering and
+ * Elements PACMEC skins manager handler class is responsible for registering and
  * initializing all the supported skins.
  *
  * @since 1.0.0
@@ -35,8 +35,8 @@ class Skins_Manager {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param Widget_Base $widget Classic Elements widget.
-	 * @param Skin_Base   $skin   Classic Elements skin.
+	 * @param Widget_Base $widget Elements PACMEC widget.
+	 * @param Skin_Base   $skin   Elements PACMEC skin.
 	 *
 	 * @return true True if skin added.
 	 */
@@ -60,8 +60,8 @@ class Skins_Manager {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param Widget_Base $widget  Classic Elements widget.
-	 * @param string      $skin_id Classic Elements skin ID.
+	 * @param Widget_Base $widget  Elements PACMEC widget.
+	 * @param string      $skin_id Elements PACMEC skin ID.
 	 *
 	 * @return true|\WP_Error True if skin removed, `WP_Error` otherwise.
 	 */
@@ -85,7 +85,7 @@ class Skins_Manager {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param Widget_Base $widget Classic Elements widget.
+	 * @param Widget_Base $widget Elements PACMEC widget.
 	 *
 	 * @return false|array Skins if the widget has skins, False otherwise.
 	 */
@@ -102,7 +102,7 @@ class Skins_Manager {
 	/**
 	 * Skins manager constructor.
 	 *
-	 * Initializing Classic Elements skins manager by requiring the skin base class.
+	 * Initializing Elements PACMEC skins manager by requiring the skin base class.
 	 *
 	 * @since 1.0.0
 	 * @access public

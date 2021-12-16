@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements main system info page.
+ * Elements PACMEC main system info page.
  *
- * Classic Elements main system info page handler class responsible for creating system info
- * reports and displaying them on ClassicPress dashboard under Classic Elements setting.
+ * Elements PACMEC main system info page handler class responsible for creating system info
+ * reports and displaying them on ClassicPress dashboard under Elements PACMEC setting.
  *
  * @since 1.0.0
  */
@@ -21,7 +21,7 @@ class Main {
 	/**
 	 * Required user capabilities.
 	 *
-	 * Holds the user capabilities required to manage Classic Elements menus.
+	 * Holds the user capabilities required to manage Elements PACMEC menus.
 	 *
 	 * @since 1.0.0
 	 * @access private
@@ -33,7 +33,7 @@ class Main {
 	/**
 	 * System info settings.
 	 *
-	 * Holds the settings required for Classic Elements system info page.
+	 * Holds the settings required for Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access private
@@ -43,9 +43,9 @@ class Main {
 	private $settings = [];
 
 	/**
-	 * Classic Elements system info reports.
+	 * Elements PACMEC system info reports.
 	 *
-	 * Holds an array of available reports in Classic Elements system info page.
+	 * Holds an array of available reports in Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access private
@@ -65,7 +65,7 @@ class Main {
 	/**
 	 * Main system info page constructor.
 	 *
-	 * Initializing Classic Elements system info page.
+	 * Initializing Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -79,7 +79,7 @@ class Main {
 	/**
 	 * Require files.
 	 *
-	 * Require the needed files for Classic Elements system info page.
+	 * Require the needed files for Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access private
@@ -92,7 +92,7 @@ class Main {
 	/**
 	 * Create a report.
 	 *
-	 * Register a new report that will be displayed in Classic Elements system info page.
+	 * Register a new report that will be displayed in Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -308,7 +308,7 @@ class Main {
 	/**
 	 * Register admin menu.
 	 *
-	 * Add new Classic Elements system info admin menu.
+	 * Add new Elements PACMEC system info admin menu.
 	 *
 	 * Fired by `admin_menu` action.
 	 *
@@ -370,7 +370,7 @@ class Main {
 	/**
 	 * Init settings.
 	 *
-	 * Initialize Classic Elements system info page by setting default settings.
+	 * Initialize Elements PACMEC system info page by setting default settings.
 	 *
 	 * @since 1.0.0
 	 * @access private
@@ -387,7 +387,7 @@ class Main {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param array $setting   Optional. Settings required for Classic Elements system
+	 * @param array $setting   Optional. Settings required for Elements PACMEC system
 	 *                         info page. Default is null.
 	 * @param array $container Optional. Container. Default is null.
 	 *
@@ -414,13 +414,13 @@ class Main {
 	/**
 	 * Get allowed reports.
 	 *
-	 * Retrieve the available reports in Classic Elements system info page.
+	 * Retrieve the available reports in Elements PACMEC system info page.
 	 *
 	 * @since 1.0.0
 	 * @access public
 	 * @static
 	 *
-	 * @return array Available reports in Classic Elements system info page.
+	 * @return array Available reports in Elements PACMEC system info page.
 	 */
 	public static function get_allowed_reports() {
 		return self::$reports;
@@ -429,7 +429,7 @@ class Main {
 	/**
 	 * Add report.
 	 *
-	 * Register a new report to Classic Elements system info page.
+	 * Register a new report to Elements PACMEC system info page.
 	 *
 	 * @since 1.4.0
 	 * @access public

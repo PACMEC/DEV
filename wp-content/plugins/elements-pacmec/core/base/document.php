@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements document.
+ * Elements PACMEC document.
  *
  * An abstract class that provides the needed properties and methods to
  * manage and handle documents in inheriting classes.
@@ -395,7 +395,7 @@ abstract class Document extends Controls_Stack {
 			$actions['edit_with_elementor'] = sprintf(
 				'<a href="%1$s">%2$s</a>',
 				$this->get_edit_url(),
-				__( 'Edit with Classic Elements', 'elementor' )
+				__( 'Edit with Elements PACMEC', 'elementor' )
 			);
 		}
 

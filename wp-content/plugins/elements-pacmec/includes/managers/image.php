@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements images manager.
+ * Elements PACMEC images manager.
  *
- * Classic Elements images manager handler class is responsible for retrieving image
+ * Elements PACMEC images manager handler class is responsible for retrieving image
  * details.
  *
  * @since 1.0.0
@@ -93,7 +93,7 @@ class Images_Manager {
 	/**
 	 * Images manager constructor.
 	 *
-	 * Initializing Classic Elements images manager.
+	 * Initializing Elements PACMEC images manager.
 	 *
 	 * @since 1.0.0
 	 * @access public

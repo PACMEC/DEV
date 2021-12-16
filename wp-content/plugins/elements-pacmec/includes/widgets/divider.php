@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements divider widget.
+ * Elements PACMEC divider widget.
  *
- * Classic Elements widget that displays a line that divides different elements in the
+ * Elements PACMEC widget that displays a line that divides different elements in the
  * page.
  *
  * @since 1.0.0

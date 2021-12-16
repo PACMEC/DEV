@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements library document.
+ * Elements PACMEC library document.
  *
- * Classic Elements library document handler class is responsible for handling
+ * Elements PACMEC library document handler class is responsible for handling
  * a document of the library type.
  *
  * @since 2.0.0

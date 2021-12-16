@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements WordPress widget.
+ * Elements PACMEC WordPress widget.
  *
- * Classic Elements widget that displays all the WordPress widgets.
+ * Elements PACMEC widget that displays all the WordPress widgets.
  *
  * @since 1.0.0
  */

@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements beta testers.
+ * Elements PACMEC beta testers.
  *
- * Classic Elements beta testers handler class is responsible for the Beta Testers
- * feature that allows developers to test Classic Elements beta versions.
+ * Elements PACMEC beta testers handler class is responsible for the Beta Testers
+ * feature that allows developers to test Elements PACMEC beta versions.
  *
  * @since 1.5.0
  */
@@ -24,7 +24,7 @@ class Beta_Testers {
 	/**
 	 * Transient key.
 	 *
-	 * Holds the Classic Elements beta testers transient key.
+	 * Holds the Elements PACMEC beta testers transient key.
 	 *
 	 * @since 1.5.0
 	 * @access private
@@ -37,7 +37,7 @@ class Beta_Testers {
 	/**
 	 * Get beta version.
 	 *
-	 * Retrieve Classic Elements beta version from wp.org plugin repository.
+	 * Retrieve Elements PACMEC beta version from wp.org plugin repository.
 	 *
 	 * @since 1.5.0
 	 * @access private

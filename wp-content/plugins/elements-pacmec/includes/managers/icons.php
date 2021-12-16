@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements icons manager.
+ * Elements PACMEC icons manager.
  *
- * Classic Elements icons manager handler class
+ * Elements PACMEC icons manager handler class
  *
  * @since 2.4.0
  */

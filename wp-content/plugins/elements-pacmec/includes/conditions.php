@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements conditions.
+ * Elements PACMEC conditions.
  *
- * Classic Elements conditions handler class introduce the compare conditions and the
+ * Elements PACMEC conditions handler class introduce the compare conditions and the
  * check conditions methods.
  *
  * @since 1.0.0

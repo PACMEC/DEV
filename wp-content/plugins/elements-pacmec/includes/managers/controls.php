@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements controls manager.
+ * Elements PACMEC controls manager.
  *
- * Classic Elements controls manager handler class is responsible for registering and
+ * Elements PACMEC controls manager handler class is responsible for registering and
  * initializing all the supported controls, both regular controls and the group
  * controls.
  *

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * General Category
  *
- * Provides general items related to Classic Elements Admin.
+ * Provides general items related to Elements PACMEC Admin.
  */
 class General extends Base_Category {
 

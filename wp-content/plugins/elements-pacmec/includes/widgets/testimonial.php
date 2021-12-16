@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements testimonial widget.
+ * Elements PACMEC testimonial widget.
  *
- * Classic Elements widget that displays customer testimonials that show social proof.
+ * Elements PACMEC widget that displays customer testimonials that show social proof.
  *
  * @since 1.0.0
  */

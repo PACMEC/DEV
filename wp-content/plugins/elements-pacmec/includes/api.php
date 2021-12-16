@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements API.
+ * Elements PACMEC API.
  *
- * Classic Elements API handler class is responsible for communicating with Classic Elements
+ * Elements PACMEC API handler class is responsible for communicating with Elements PACMEC
  * remote servers retrieving templates data and to send uninstall feedback.
  *
  * @since 1.0.0
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Api {
 
 	/**
-	 * Classic Elements library option key.
+	 * Elements PACMEC library option key.
 	 */
 	const LIBRARY_OPTION_KEY = 'elementor_remote_info_library';
 
@@ -193,7 +193,7 @@ class Api {
 	/**
 	 * Get feed data.
 	 *
-	 * Retrieve the feed info data from remote Classic Elements server.
+	 * Retrieve the feed info data from remote Elements PACMEC server.
 	 *
 	 * @since 1.9.0
 	 * @access public
@@ -281,7 +281,7 @@ class Api {
 	/**
 	 * Send Feedback.
 	 *
-	 * Fires a request to Classic Elements server with the feedback data.
+	 * Fires a request to Elements PACMEC server with the feedback data.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -307,7 +307,7 @@ class Api {
 	/**
 	 * Ajax reset API data.
 	 *
-	 * Reset Classic Elements library API data using an ajax call.
+	 * Reset Elements PACMEC library API data using an ajax call.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -324,7 +324,7 @@ class Api {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements API.
+	 * Initialize Elements PACMEC API.
 	 *
 	 * @since 1.0.0
 	 * @access public

@@ -21,9 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements plugin.
+ * Elements PACMEC plugin.
  *
- * The main plugin handler class is responsible for initializing Classic Elements. The
+ * The main plugin handler class is responsible for initializing Elements PACMEC. The
  * class registers and all the components required to run the plugin.
  *
  * @since 1.0.0
@@ -452,9 +452,9 @@ class Plugin {
 			self::$instance = new self();
 
 			/**
-			 * Classic Elements loaded.
+			 * Elements PACMEC loaded.
 			 *
-			 * Fires when Classic Elements was fully loaded and instantiated.
+			 * Fires when Elements PACMEC was fully loaded and instantiated.
 			 *
 			 * @since 1.0.0
 			 */
@@ -467,8 +467,8 @@ class Plugin {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements Plugin. Register Classic Elements support for all the
-	 * supported post types and initialize Classic Elements components.
+	 * Initialize Elements PACMEC Plugin. Register Elements PACMEC support for all the
+	 * supported post types and initialize Elements PACMEC components.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -479,9 +479,9 @@ class Plugin {
 		$this->init_components();
 
 		/**
-		 * Classic Elements init.
+		 * Elements PACMEC init.
 		 *
-		 * Fires on Classic Elements init, after Classic Elements has finished loading but
+		 * Fires on Elements PACMEC init, after Elements PACMEC has finished loading but
 		 * before any headers are sent.
 		 *
 		 * @since 1.0.0
@@ -492,13 +492,13 @@ class Plugin {
 	/**
 	 * Get install time.
 	 *
-	 * Retrieve the time when Classic Elements was installed.
+	 * Retrieve the time when Elements PACMEC was installed.
 	 *
 	 * @since 2.6.0
 	 * @access public
 	 * @static
 	 *
-	 * @return int Unix timestamp when Classic Elements was installed.
+	 * @return int Unix timestamp when Elements PACMEC was installed.
 	 */
 	public function get_install_time() {
 		$installed_time = get_option( '_elementor_installed_time' );
@@ -526,8 +526,8 @@ class Plugin {
 	/**
 	 * Init components.
 	 *
-	 * Initialize Classic Elements components. Register actions, run setting manager,
-	 * initialize all the components that run Classic Elements, and if in admin page
+	 * Initialize Elements PACMEC components. Register actions, run setting manager,
+	 * initialize all the components that run Elements PACMEC, and if in admin page
 	 * initialize admin components.
 	 *
 	 * @since 1.0.0
@@ -599,7 +599,7 @@ class Plugin {
 	/**
 	 * Add custom post type support.
 	 *
-	 * Register Classic Elements support for all the supported post types defined by
+	 * Register Elements PACMEC support for all the supported post types defined by
 	 * the user in the admin screen and saved as `elementor_cpt_support` option
 	 * in WordPress `$wpdb->options` table.
 	 *
@@ -652,7 +652,7 @@ class Plugin {
 	}
 
 	final public static function get_title() {
-		return __( 'Classic Elements', 'elementor' );
+		return __( 'Elements PACMEC', 'elementor' );
 	}
 }
 

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements typography scheme.
+ * Elements PACMEC typography scheme.
  *
- * Classic Elements typography scheme class is responsible for initializing a scheme
+ * Elements PACMEC typography scheme class is responsible for initializing a scheme
  * for typography.
  *
  * @since 1.0.0

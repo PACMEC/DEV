@@ -6,24 +6,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements "Tools" page in ClassicPress Dashboard.
+ * Elements PACMEC "Tools" page in ClassicPress Dashboard.
  *
- * Classic Elements settings page handler class responsible for creating and displaying
- * Classic Elements "Tools" page in ClassicPress dashboard.
+ * Elements PACMEC settings page handler class responsible for creating and displaying
+ * Elements PACMEC "Tools" page in ClassicPress dashboard.
  *
  * @since 1.0.0
  */
 class Tools extends Settings_Page {
 
 	/**
-	 * Settings page ID for Classic Elements tools.
+	 * Settings page ID for Elements PACMEC tools.
 	 */
 	const PAGE_ID = 'elementor-tools';
 
 	/**
 	 * Register admin menu.
 	 *
-	 * Add new Classic Elements Tools admin menu.
+	 * Add new Elements PACMEC Tools admin menu.
 	 *
 	 * Fired by `admin_menu` action.
 	 *
@@ -64,7 +64,7 @@ class Tools extends Settings_Page {
 	 * Replace URLs.
 	 *
 	 * Sends an ajax request to replace old URLs to new URLs. This method also
-	 * updates all the Classic Elements data.
+	 * updates all the Elements PACMEC data.
 	 *
 	 * Fired by `wp_ajax_elementor_replace_url` action.
 	 *
@@ -86,9 +86,9 @@ class Tools extends Settings_Page {
 	}
 
 	/**
-	 * Classic Elements version rollback.
+	 * Elements PACMEC version rollback.
 	 *
-	 * Rollback to previous Classic Elements version.
+	 * Rollback to previous Elements PACMEC version.
 	 *
 	 * Fired by `admin_post_elementor_rollback` action.
 	 *
@@ -126,7 +126,7 @@ class Tools extends Settings_Page {
 	/**
 	 * Tools page constructor.
 	 *
-	 * Initializing Classic Elements "Tools" page.
+	 * Initializing Elements PACMEC "Tools" page.
 	 *
 	 * @since 1.0.0
 	 * @access public

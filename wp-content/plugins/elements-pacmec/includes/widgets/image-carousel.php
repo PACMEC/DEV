@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements image carousel widget.
+ * Elements PACMEC image carousel widget.
  *
- * Classic Elements widget that displays a set of images in a rotating carousel or
+ * Elements PACMEC widget that displays a set of images in a rotating carousel or
  * slider.
  *
  * @since 1.0.0

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements image gallery widget.
+ * Elements PACMEC image gallery widget.
  *
- * Classic Elements widget that displays a set of images in an aligned grid.
+ * Elements PACMEC widget that displays a set of images in an aligned grid.
  *
  * @since 1.0.0
  */

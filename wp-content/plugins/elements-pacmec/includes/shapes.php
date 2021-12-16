@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements shapes.
+ * Elements PACMEC shapes.
  *
- * Classic Elements shapes handler class is responsible for setting up the supported
+ * Elements PACMEC shapes handler class is responsible for setting up the supported
  * shape dividers.
  *
  * @since 1.3.0
@@ -232,11 +232,11 @@ class Shapes {
 		/**
 		 * Additional shapes.
 		 *
-		 * Filters the shapes used by Classic Elements to add additional shapes.
+		 * Filters the shapes used by Elements PACMEC to add additional shapes.
 		 *
 		 * @since 2.0.1
 		 *
-		 * @param array $additional_shapes Additional Classic Elements shapes.
+		 * @param array $additional_shapes Additional Elements PACMEC shapes.
 		 */
 		$additional_shapes = apply_filters( 'elementor/shapes/additional_shapes', $additional_shapes );
 		return $additional_shapes;

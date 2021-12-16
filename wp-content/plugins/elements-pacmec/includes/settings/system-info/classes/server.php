@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements server environment report.
+ * Elements PACMEC server environment report.
  *
- * Classic Elements system report handler class responsible for generating a report for
+ * Elements PACMEC system report handler class responsible for generating a report for
  * the server environment.
  *
  * @since 1.0.0

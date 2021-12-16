@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements settings page.
+ * Elements PACMEC settings page.
  *
  * An abstract class that provides the needed properties and methods to handle
  * ClassicPress dashboard settings pages in inheriting classes.
@@ -72,7 +72,7 @@ abstract class Settings_Page {
 	/**
 	 * Settings page constructor.
 	 *
-	 * Initializing Classic Elements settings page.
+	 * Initializing Elements PACMEC settings page.
 	 *
 	 * @since 1.5.0
 	 * @access public
@@ -369,7 +369,7 @@ abstract class Settings_Page {
 			/**
 			 * After create settings.
 			 *
-			 * Fires after the settings are created in Classic Elements admin page.
+			 * Fires after the settings are created in Elements PACMEC admin page.
 			 *
 			 * The dynamic portion of the hook name, `$page_id`, refers to the current page ID.
 			 *

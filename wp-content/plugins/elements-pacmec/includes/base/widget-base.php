@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements widget base.
+ * Elements PACMEC widget base.
  *
- * An abstract class to register new Classic Elements widgets. It extended the
+ * An abstract class to register new Elements PACMEC widgets. It extended the
  * `Element_Base` class to inherit its properties.
  *
  * This abstract class must be extended in order to register new widgets.
@@ -23,7 +23,7 @@ abstract class Widget_Base extends Element_Base {
 	 *
 	 * Used in cases where the widget has no content. When widgets uses only
 	 * skins to display dynamic content generated on the server. For example the
-	 * posts widget in Classic Elements Pro. Default is true, the widget has content
+	 * posts widget in Elements PACMEC Pro. Default is true, the widget has content
 	 * template.
 	 *
 	 * @access protected
@@ -120,7 +120,7 @@ abstract class Widget_Base extends Element_Base {
 			/**
 			 * Widget skin init.
 			 *
-			 * Fires when Classic Elements widget is being initialized.
+			 * Fires when Elements PACMEC widget is being initialized.
 			 *
 			 * The dynamic portion of the hook name, `$widget_name`, refers to the widget name.
 			 *
@@ -430,7 +430,7 @@ abstract class Widget_Base extends Element_Base {
 		/**
 		 * Before widget render content.
 		 *
-		 * Fires before Classic Elements widget is being rendered.
+		 * Fires before Elements PACMEC widget is being rendered.
 		 *
 		 * @since 1.0.0
 		 *
@@ -478,21 +478,21 @@ abstract class Widget_Base extends Element_Base {
 	/**
 	 * Render widget plain content.
 	 *
-	 * Classic Elements saves the page content in a unique way, but it's not the way
+	 * Elements PACMEC saves the page content in a unique way, but it's not the way
 	 * WordPress saves data. This method is used to save generated HTML to the
 	 * database as plain content the WordPress way.
 	 *
 	 * When rendering plain content, it allows other WordPress plugins to
 	 * interact with the content - to search, check SEO and other purposes. It
-	 * also allows the site to keep working even if Classic Elements is deactivated.
+	 * also allows the site to keep working even if Elements PACMEC is deactivated.
 	 *
 	 * Note that if the widget uses shortcodes to display the data, the best
 	 * practice is to return the shortcode itself.
 	 *
 	 * Also note that if the widget don't display any content it should return
-	 * an empty string. For example Classic Elements Pro Form Widget uses this method
+	 * an empty string. For example Elements PACMEC Pro Form Widget uses this method
 	 * to return an empty string because there is no content to return. This way
-	 * if Classic Elements Pro will be deactivated there won't be any form to display.
+	 * if Elements PACMEC Pro will be deactivated there won't be any form to display.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -535,7 +535,7 @@ abstract class Widget_Base extends Element_Base {
 	 * Retrieve the raw element data, including the id, type, settings, child
 	 * elements and whether it is an inner element.
 	 *
-	 * The data with the HTML used always to display the data, but the Classic Elements
+	 * The data with the HTML used always to display the data, but the Elements PACMEC
 	 * editor uses the raw data without the HTML in order not to render the data
 	 * again.
 	 *

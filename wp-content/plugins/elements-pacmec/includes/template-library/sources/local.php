@@ -15,22 +15,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements template library local source.
+ * Elements PACMEC template library local source.
  *
- * Classic Elements template library local source handler class is responsible for
- * handling local Classic Elements templates saved by the user locally on his site.
+ * Elements PACMEC template library local source handler class is responsible for
+ * handling local Elements PACMEC templates saved by the user locally on his site.
  *
  * @since 1.0.0
  */
 class Source_Local extends Source_Base {
 
 	/**
-	 * Classic Elements template-library post-type slug.
+	 * Elements PACMEC template-library post-type slug.
 	 */
 	const CPT = 'elementor_library';
 
 	/**
-	 * Classic Elements template-library taxonomy slug.
+	 * Elements PACMEC template-library taxonomy slug.
 	 */
 	const TAXONOMY_TYPE_SLUG = 'elementor_library_type';
 
@@ -40,18 +40,18 @@ class Source_Local extends Source_Base {
 	const TAXONOMY_CATEGORY_SLUG = 'elementor_library_category';
 
 	/**
-	 * Classic Elements template-library meta key.
+	 * Elements PACMEC template-library meta key.
 	 * @deprecated 2.3.0 Use \Elementor\Core\Base\Document::TYPE_META_KEY instead
 	 */
 	const TYPE_META_KEY = '_elementor_template_type';
 
 	/**
-	 * Classic Elements template-library temporary files folder.
+	 * Elements PACMEC template-library temporary files folder.
 	 */
 	const TEMP_FILES_DIR = 'elementor/tmp';
 
 	/**
-	 * Classic Elements template-library bulk export action name.
+	 * Elements PACMEC template-library bulk export action name.
 	 */
 	const BULK_EXPORT_ACTION = 'elementor_export_multiple_templates';
 
@@ -302,7 +302,7 @@ class Source_Local extends Source_Base {
 		/**
 		 * Register template library category args.
 		 *
-		 * Filters the category arguments when registering Classic Elements template library category.
+		 * Filters the category arguments when registering Elements PACMEC template library category.
 		 *
 		 * @since 2.4.0
 		 *
@@ -481,7 +481,7 @@ class Source_Local extends Source_Base {
 		/**
 		 * After template library save.
 		 *
-		 * Fires after Classic Elements template library was saved.
+		 * Fires after Elements PACMEC template library was saved.
 		 *
 		 * @since 1.0.1
 		 *
@@ -493,7 +493,7 @@ class Source_Local extends Source_Base {
 		/**
 		 * After template library update.
 		 *
-		 * Fires after Classic Elements template library was updated.
+		 * Fires after Elements PACMEC template library was updated.
 		 *
 		 * @since 1.0.1
 		 *
@@ -535,7 +535,7 @@ class Source_Local extends Source_Base {
 		/**
 		 * After template library update.
 		 *
-		 * Fires after Classic Elements template library was updated.
+		 * Fires after Elements PACMEC template library was updated.
 		 *
 		 * @since 1.0.0
 		 *
@@ -903,7 +903,7 @@ class Source_Local extends Source_Base {
 		<div id="elementor-hidden-area">
 			<a id="elementor-import-template-trigger" class="page-title-action"><?php echo __( 'Import Templates', 'elementor' ); ?></a>
 			<div id="elementor-import-template-area">
-				<div id="elementor-import-template-title"><?php echo __( 'Choose an Classic Elements template JSON file or a .zip archive of Classic Elements templates, and add them to the list of templates available in your library.', 'elementor' ); ?></div>
+				<div id="elementor-import-template-title"><?php echo __( 'Choose an Elements PACMEC template JSON file or a .zip archive of Elements PACMEC templates, and add them to the list of templates available in your library.', 'elementor' ); ?></div>
 				<form id="elementor-import-template-form" method="post" action="<?php echo admin_url( 'admin-ajax.php' ); ?>" enctype="multipart/form-data">
 					<input type="hidden" name="action" value="elementor_library_direct_actions">
 					<input type="hidden" name="library_action" value="direct_import_template">

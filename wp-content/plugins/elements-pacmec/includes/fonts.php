@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements fonts.
+ * Elements PACMEC fonts.
  *
- * Classic Elements fonts handler class is responsible for registering the supported
- * fonts used by Classic Elements.
+ * Elements PACMEC fonts handler class is responsible for registering the supported
+ * fonts used by Elements PACMEC.
  *
  * @since 1.0.0
  */
@@ -104,7 +104,7 @@ class Fonts {
 			/**
 			 * Additional fonts.
 			 *
-			 * Filters the fonts used by Classic Elements to add additional fonts.
+			 * Filters the fonts used by Elements PACMEC to add additional fonts.
 			 *
 			 * @since 1.9.4
 			 *
@@ -119,7 +119,7 @@ class Fonts {
 	}
 
 	/**
-	 * Get Classic Elements native fonts.
+	 * Get Elements PACMEC native fonts.
 	 *
 	 * Retrieve the list of supported fonts.
 	 *

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements tabs widget.
+ * Elements PACMEC tabs widget.
  *
- * Classic Elements widget that displays vertical or horizontal tabs with different
+ * Elements PACMEC widget that displays vertical or horizontal tabs with different
  * pieces of content.
  *
  * @since 1.0.0

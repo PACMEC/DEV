@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements elements manager.
+ * Elements PACMEC elements manager.
  *
- * Classic Elements elements manager handler class is responsible for registering and
+ * Elements PACMEC elements manager handler class is responsible for registering and
  * initializing all the supported elements.
  *
  * @since 1.0.0
@@ -40,7 +40,7 @@ class Elements_Manager {
 	/**
 	 * Elements constructor.
 	 *
-	 * Initializing Classic Elements elements manager.
+	 * Initializing Elements PACMEC elements manager.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -233,8 +233,8 @@ class Elements_Manager {
 	/**
 	 * Init elements.
 	 *
-	 * Initialize Classic Elements elements by registering the supported elements.
-	 * Classic Elements supports by default `section` element and `column` element.
+	 * Initialize Elements PACMEC elements by registering the supported elements.
+	 * Elements PACMEC supports by default `section` element and `column` element.
 	 *
 	 * @since 2.0.0
 	 * @access private
@@ -251,7 +251,7 @@ class Elements_Manager {
 		/**
 		 * After elements registered.
 		 *
-		 * Fires after Classic Elements elements are registered.
+		 * Fires after Elements PACMEC elements are registered.
 		 *
 		 * @since 1.0.0
 		 */
@@ -319,7 +319,7 @@ class Elements_Manager {
 	/**
 	 * Require files.
 	 *
-	 * Require Classic Elements element base class and column, section and repeater
+	 * Require Elements PACMEC element base class and column, section and repeater
 	 * elements.
 	 *
 	 * @since 1.0.0

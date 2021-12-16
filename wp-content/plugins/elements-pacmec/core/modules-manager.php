@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements modules manager.
+ * Elements PACMEC modules manager.
  *
- * Classic Elements modules manager handler class is responsible for registering and
- * managing Classic Elements modules.
+ * Elements PACMEC modules manager handler class is responsible for registering and
+ * managing Elements PACMEC modules.
  *
  * @since 1.6.0
  */
@@ -32,7 +32,7 @@ class Modules_Manager {
 	/**
 	 * Modules manager constructor.
 	 *
-	 * Initializing the Classic Elements modules manager.
+	 * Initializing the Elements PACMEC modules manager.
 	 *
 	 * @since 1.6.0
 	 * @access public

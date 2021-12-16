@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements repeater element.
+ * Elements PACMEC repeater element.
  *
- * Classic Elements repeater handler class is responsible for initializing the repeater.
+ * Elements PACMEC repeater handler class is responsible for initializing the repeater.
  *
  * @since 1.0.0
  */
@@ -30,7 +30,7 @@ class Repeater extends Element_Base {
 	/**
 	 * Repeater constructor.
 	 *
-	 * Initializing Classic Elements repeater element.
+	 * Initializing Elements PACMEC repeater element.
 	 *
 	 * @since 1.0.7
 	 * @access public

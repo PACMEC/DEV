@@ -17,10 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements page settings manager.
+ * Elements PACMEC page settings manager.
  *
- * Classic Elements page settings manager handler class is responsible for registering
- * and managing Classic Elements page settings managers.
+ * Elements PACMEC page settings manager handler class is responsible for registering
+ * and managing Elements PACMEC page settings managers.
  *
  * @since 1.6.0
  */

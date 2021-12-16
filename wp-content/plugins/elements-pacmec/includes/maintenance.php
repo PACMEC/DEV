@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements maintenance.
+ * Elements PACMEC maintenance.
  *
- * Classic Elements maintenance handler class is responsible for setting up Classic Elements
+ * Elements PACMEC maintenance handler class is responsible for setting up Elements PACMEC
  * activation and uninstallation hooks.
  *
  * @since 1.0.0
@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Maintenance {
 
 	/**
-	 * Activate Classic Elements.
+	 * Activate Elements PACMEC.
 	 *
-	 * Set Classic Elements activation hook.
+	 * Set Elements PACMEC activation hook.
 	 *
 	 * Fired by `register_activation_hook` when the plugin is activated.
 	 *
@@ -40,9 +40,9 @@ class Maintenance {
 	}
 
 	/**
-	 * Uninstall Classic Elements.
+	 * Uninstall Elements PACMEC.
 	 *
-	 * Set Classic Elements uninstallation hook.
+	 * Set Elements PACMEC uninstallation hook.
 	 *
 	 * Fired by `register_uninstall_hook` when the plugin is uninstalled.
 	 *
@@ -57,7 +57,7 @@ class Maintenance {
 	/**
 	 * Init.
 	 *
-	 * Initialize Classic Elements Maintenance.
+	 * Initialize Elements PACMEC Maintenance.
 	 *
 	 * @since 1.0.0
 	 * @access public

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements embed.
+ * Elements PACMEC embed.
  *
- * Classic Elements embed handler class is responsible for Classic Elements embed functionality.
+ * Elements PACMEC embed handler class is responsible for Elements PACMEC embed functionality.
  * The class holds the supported providers with their embed patters, and handles
  * their custom properties to create custom HTML with the embeded content.
  *

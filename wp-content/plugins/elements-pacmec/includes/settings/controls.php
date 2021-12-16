@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements settings controls.
+ * Elements PACMEC settings controls.
  *
- * Classic Elements settings controls handler class responsible for creating the final
- * HTML for various input field types used in Classic Elements settings pages.
+ * Elements PACMEC settings controls handler class responsible for creating the final
+ * HTML for various input field types used in Elements PACMEC settings pages.
  *
  * @since 1.0.0
  */

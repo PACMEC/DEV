@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements general settings manager.
+ * Elements PACMEC general settings manager.
  *
- * Classic Elements general settings manager handler class is responsible for registering
- * and managing Classic Elements general settings managers.
+ * Elements PACMEC general settings manager handler class is responsible for registering
+ * and managing Elements PACMEC general settings managers.
  *
  * @since 1.6.0
  */
@@ -34,7 +34,7 @@ class Manager extends BaseManager {
 	/**
 	 * General settings manager constructor.
 	 *
-	 * Initializing Classic Elements general settings manager.
+	 * Initializing Elements PACMEC general settings manager.
 	 *
 	 * @since 1.6.0
 	 * @access public

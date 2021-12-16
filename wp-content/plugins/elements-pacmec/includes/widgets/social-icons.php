@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements social icons widget.
+ * Elements PACMEC social icons widget.
  *
- * Classic Elements widget that displays icons to social pages like Facebook and Twitter.
+ * Elements PACMEC widget that displays icons to social pages like Facebook and Twitter.
  *
  * @since 1.0.0
  */

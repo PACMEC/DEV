@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements usage module.
+ * Elements PACMEC usage module.
  *
- * Classic Elements usage module handler class is responsible for registering and
- * managing Classic Elements usage data.
+ * Elements PACMEC usage module handler class is responsible for registering and
+ * managing Elements PACMEC usage data.
  *
  */
 class Module extends BaseModule {
@@ -528,7 +528,7 @@ class Module extends BaseModule {
 	/**
 	 * Usage module constructor.
 	 *
-	 * Initializing Classic Elements usage module.
+	 * Initializing Elements PACMEC usage module.
 	 *
 	 * @access public
 	 */

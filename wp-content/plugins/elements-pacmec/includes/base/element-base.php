@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements element base.
+ * Elements PACMEC element base.
  *
- * An abstract class to register new Classic Elements elements. It extended the
+ * An abstract class to register new Elements PACMEC elements. It extended the
  * `Controls_Stack` class to inherit its properties.
  *
  * This abstract class must be extended in order to register new elements.
@@ -567,7 +567,7 @@ abstract class Element_Base extends Controls_Stack {
 		/**
 		 * Before frontend element render.
 		 *
-		 * Fires before Classic Elements element is rendered in the frontend.
+		 * Fires before Elements PACMEC element is rendered in the frontend.
 		 *
 		 * @since 2.2.0
 		 *
@@ -578,7 +578,7 @@ abstract class Element_Base extends Controls_Stack {
 		/**
 		 * Before frontend element render.
 		 *
-		 * Fires before Classic Elements element is rendered in the frontend.
+		 * Fires before Elements PACMEC element is rendered in the frontend.
 		 *
 		 * The dynamic portion of the hook name, `$element_type`, refers to the element type.
 		 *
@@ -620,7 +620,7 @@ abstract class Element_Base extends Controls_Stack {
 		/**
 		 * After frontend element render.
 		 *
-		 * Fires after Classic Elements element is rendered in the frontend.
+		 * Fires after Elements PACMEC element is rendered in the frontend.
 		 *
 		 * The dynamic portion of the hook name, `$element_type`, refers to the element type.
 		 *
@@ -908,7 +908,7 @@ abstract class Element_Base extends Controls_Stack {
 	 * Initializing the element base class using `$data` and `$args`.
 	 *
 	 * The `$data` parameter is required for a normal instance because of the
-	 * way Classic Elements renders data when initializing elements.
+	 * way Elements PACMEC renders data when initializing elements.
 	 *
 	 * @since 1.0.0
 	 * @access public

@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements ClassicPress widgets manager.
+ * Elements PACMEC ClassicPress widgets manager.
  *
- * Classic Elements ClassicPress widgets manager handler class is responsible for
+ * Elements PACMEC ClassicPress widgets manager handler class is responsible for
  * registering and initializing all the supported controls, both regular
  * controls and the group controls.
  *
@@ -19,7 +19,7 @@ class WordPress_Widgets_Manager {
 	/**
 	 * ClassicPress widgets manager constructor.
 	 *
-	 * Initializing the ClassicPress widgets manager in Classic Elements editor.
+	 * Initializing the ClassicPress widgets manager in Elements PACMEC editor.
 	 *
 	 * @since 1.5.0
 	 * @access public
@@ -36,7 +36,7 @@ class WordPress_Widgets_Manager {
 	/**
 	 * Before enqueue scripts.
 	 *
-	 * Prints custom scripts required to run ClassicPress widgets in Classic Elements
+	 * Prints custom scripts required to run ClassicPress widgets in Elements PACMEC
 	 * editor.
 	 *
 	 * Fired by `elementor/editor/before_enqueue_scripts` action.
@@ -73,7 +73,7 @@ class WordPress_Widgets_Manager {
 	/**
 	 * ClassicPress widgets footer.
 	 *
-	 * Prints ClassicPress widgets scripts in Classic Elements editor footer.
+	 * Prints ClassicPress widgets scripts in Elements PACMEC editor footer.
 	 *
 	 * Fired by `elementor/editor/footer` action.
 	 *

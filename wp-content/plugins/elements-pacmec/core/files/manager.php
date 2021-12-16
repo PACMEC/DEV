@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements files manager.
+ * Elements PACMEC files manager.
  *
- * Classic Elements files manager handler class is responsible for creating files.
+ * Elements PACMEC files manager handler class is responsible for creating files.
  *
  * @since 1.2.0
  */
@@ -25,7 +25,7 @@ class Manager {
 	/**
 	 * Files manager constructor.
 	 *
-	 * Initializing the Classic Elements files manager.
+	 * Initializing the Elements PACMEC files manager.
 	 *
 	 * @since 1.2.0
 	 * @access public
@@ -116,9 +116,9 @@ class Manager {
 		}
 
 		/**
-		 * Classic Elements clear files.
+		 * Elements PACMEC clear files.
 		 *
-		 * Fires after Classic Elements clears files
+		 * Fires after Elements PACMEC clears files
 		 *
 		 * @since 2.1.0
 		 */

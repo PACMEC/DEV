@@ -80,7 +80,7 @@ abstract class Base {
 	 */
 	public function __construct( $file_name ) {
 		/**
-		 * Classic Elements File Name
+		 * Elements PACMEC File Name
 		 *
 		 * Filters the File name
 		 *

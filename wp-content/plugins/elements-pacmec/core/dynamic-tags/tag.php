@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements tag.
+ * Elements PACMEC tag.
  *
- * An abstract class to register new Classic Elements tag.
+ * An abstract class to register new Elements PACMEC tag.
  *
  * @since 2.0.0
  * @abstract

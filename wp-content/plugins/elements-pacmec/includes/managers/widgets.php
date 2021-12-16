@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements widgets manager.
+ * Elements PACMEC widgets manager.
  *
- * Classic Elements widgets manager handler class is responsible for registering and
- * initializing all the supported Classic Elements widgets.
+ * Elements PACMEC widgets manager handler class is responsible for registering and
+ * initializing all the supported Elements PACMEC widgets.
  *
  * @since 1.0.0
  */
@@ -33,8 +33,8 @@ class Widgets_Manager {
 	/**
 	 * Init widgets.
 	 *
-	 * Initialize Classic Elements widgets manager. Include all the the widgets files
-	 * and register each Classic Elements and WordPress widget.
+	 * Initialize Elements PACMEC widgets manager. Include all the the widgets files
+	 * and register each Elements PACMEC and WordPress widget.
 	 *
 	 * @since 2.0.0
 	 * @access private
@@ -90,7 +90,7 @@ class Widgets_Manager {
 		/**
 		 * After widgets registered.
 		 *
-		 * Fires after Classic Elements widgets are registered.
+		 * Fires after Elements PACMEC widgets are registered.
 		 *
 		 * @since 1.0.0
 		 *
@@ -104,7 +104,7 @@ class Widgets_Manager {
 	 *
 	 * Add native ClassicPress widget to the list of registered widget types.
 	 *
-	 * Exclude the widgets that are in Classic Elements widgets black list. Theme and
+	 * Exclude the widgets that are in Elements PACMEC widgets black list. Theme and
 	 * plugin authors can filter the black list.
 	 *
 	 * @since 2.0.0
@@ -132,7 +132,7 @@ class Widgets_Manager {
 		$black_list = [];
 
 		/**
-		 * Classic Elements widgets black list.
+		 * Elements PACMEC widgets black list.
 		 *
 		 * Filters the widgets black list that won't be displayed in the panel.
 		 *
@@ -165,7 +165,7 @@ class Widgets_Manager {
 	/**
 	 * Require files.
 	 *
-	 * Require Classic Elements widget base class.
+	 * Require Elements PACMEC widget base class.
 	 *
 	 * @since 2.0.0
 	 * @access private
@@ -182,7 +182,7 @@ class Widgets_Manager {
 	 * @since 1.0.0
 	 * @access public
 	 *
-	 * @param Widget_Base $widget Classic Elements widget.
+	 * @param Widget_Base $widget Elements PACMEC widget.
 	 *
 	 * @return true True if the widget was registered.
 	*/
@@ -282,7 +282,7 @@ class Widgets_Manager {
 	/**
 	 * Ajax render widget.
 	 *
-	 * Ajax handler for Classic Elements render_widget.
+	 * Ajax handler for Elements PACMEC render_widget.
 	 *
 	 * Fired by `wp_ajax_elementor_render_widget` action.
 	 *
@@ -332,7 +332,7 @@ class Widgets_Manager {
 	/**
 	 * Ajax get ClassicPress widget form.
 	 *
-	 * Ajax handler for Classic Elements editor get_wp_widget_form.
+	 * Ajax handler for Elements PACMEC editor get_wp_widget_form.
 	 *
 	 * Fired by `wp_ajax_elementor_editor_get_wp_widget_form` action.
 	 *
@@ -497,7 +497,7 @@ class Widgets_Manager {
 	/**
 	 * Widgets manager constructor.
 	 *
-	 * Initializing Classic Elements widgets manager.
+	 * Initializing Elements PACMEC widgets manager.
 	 *
 	 * @since 1.0.0
 	 * @access public

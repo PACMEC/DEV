@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements post CSS file.
+ * Elements PACMEC post CSS file.
  *
- * Classic Elements CSS file handler class is responsible for generating the single
+ * Elements PACMEC CSS file handler class is responsible for generating the single
  * post CSS file.
  *
  * @since 1.2.0
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Post extends Base {
 
 	/**
-	 * Classic Elements post CSS file prefix.
+	 * Elements PACMEC post CSS file prefix.
 	 */
 	const FILE_PREFIX = 'post-';
 

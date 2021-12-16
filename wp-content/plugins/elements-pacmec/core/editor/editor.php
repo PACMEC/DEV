@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements editor.
+ * Elements PACMEC editor.
  *
- * Classic Elements editor handler class is responsible for initializing Classic Elements
+ * Elements PACMEC editor handler class is responsible for initializing Elements PACMEC
  * editor and register all the actions needed to display the editor.
  *
  * @since 1.0.0
@@ -30,13 +30,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Editor {
 
 	/**
-	 * The nonce key for Classic Elements editor.
+	 * The nonce key for Elements PACMEC editor.
 	 * @deprecated 2.3.0
 	 */
 	const EDITING_NONCE_KEY = 'elementor-editing';
 
 	/**
-	 * User capability required to access Classic Elements editor.
+	 * User capability required to access Elements PACMEC editor.
 	 */
 	const EDITING_CAPABILITY = 'edit_posts';
 
@@ -186,7 +186,7 @@ class Editor {
 	/**
 	 * Redirect to new URL.
 	 *
-	 * Used as a fallback function for the old URL structure of Classic Elements page
+	 * Used as a fallback function for the old URL structure of Elements PACMEC page
 	 * edit URL.
 	 *
 	 * Fired by `template_redirect` action.
@@ -478,7 +478,7 @@ class Editor {
 		/**
 		 * Before editor enqueue scripts.
 		 *
-		 * Fires before Classic Elements editor scripts are enqueued.
+		 * Fires before Elements PACMEC editor scripts are enqueued.
 		 *
 		 * @since 1.0.0
 		 */
@@ -559,7 +559,7 @@ class Editor {
 			'dynamicTags' => Plugin::$instance->dynamic_tags->get_config(),
 			'editButtons' => get_option( 'elementor_edit_buttons' ),
 			'i18n' => [
-				'elementor' => __( 'Classic Elements', 'elementor' ),
+				'elementor' => __( 'Elements PACMEC', 'elementor' ),
 				'delete' => __( 'Delete', 'elementor' ),
 				'cancel' => __( 'Cancel', 'elementor' ),
 				'got_it' => __( 'Got It', 'elementor' ),
@@ -575,7 +575,7 @@ class Editor {
 				'flexbox_attention_message' => __( 'Elementor 2.5 introduces key changes to the layout using CSS Flexbox. Your existing pages might have been affected, please review your page before publishing.', 'elementor' ),
 
 				// Menu.
-				'about_elementor' => __( 'About Classic Elements', 'elementor' ),
+				'about_elementor' => __( 'About Elements PACMEC', 'elementor' ),
 				'color_picker' => __( 'Color Picker', 'elementor' ),
 				'elementor_settings' => __( 'Dashboard Settings', 'elementor' ),
 				'global_colors' => __( 'Default Colors', 'elementor' ),

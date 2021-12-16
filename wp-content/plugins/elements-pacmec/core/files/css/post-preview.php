@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements post preview CSS file.
+ * Elements PACMEC post preview CSS file.
  *
- * Classic Elements CSS file handler class is responsible for generating the post
+ * Elements PACMEC CSS file handler class is responsible for generating the post
  * preview CSS file.
  *
  * @since 1.9.0

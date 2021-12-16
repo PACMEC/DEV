@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Classic Elements icon list widget.
+ * Elements PACMEC icon list widget.
  *
- * Classic Elements widget that displays a bullet list with any chosen icons and texts.
+ * Elements PACMEC widget that displays a bullet list with any chosen icons and texts.
  *
  * @since 1.0.0
  */
