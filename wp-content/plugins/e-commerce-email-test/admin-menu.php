@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
     <div class="wrap">
 
-		<h2>WooCommerce Email Test</h2>
+		<h2>E-Commerce - Pruebas de correo electronico</h2>
 
         <h2 class="nav-tab-wrapper">
             <a href="?page=woocommerce-email-test&tab=options" class="nav-tab <?php echo $tab == 'options' ? 'nav-tab-active' : ''; ?>">Email Test</a>
-            <a href="?page=woocommerce-email-test&tab=premium" class="nav-tab <?php echo $tab == 'premium' ? 'nav-tab-active' : ''; ?>">Go Premium</a>
+            <!-- // <a href="?page=woocommerce-email-test&tab=premium" class="nav-tab <?php echo $tab == 'premium' ? 'nav-tab-active' : ''; ?>">Go Premium</a> -->
             <a href="?page=woocommerce-email-test&tab=monitor" class="nav-tab <?php echo $tab == 'monitor' ? 'nav-tab-active' : ''; ?>">Email Logger</a>
         </h2>       
 
@@ -60,9 +60,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>The below buttons will open a new tab containing a preview of the test email within your browser
 			<br/>
 			Note - test emails will not get sent to any inbox. 
-            <br/>
-            <br/>
-            <b>Want to send emails to an inbox?</b> Purchase the <a href="http://raiserweb.com/product/woocommerce-email-test-premium-plugin-license/" target="_blank" >premium plugin</a> today.
 		</p>
 		
 		<br/>

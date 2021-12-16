@@ -1,29 +1,15 @@
 <?php
 /*
- * Plugin Name: WooCommerce Email Test
- * Plugin URI: 
- * Description: Let's you send WooCommerce test emails.
- * Version:  1.2.2
- * Author: RaiserWeb
- * Author URI: http://www.raiserweb.com
- * Developer: RaiserWeb
- * Developer URI: http://www.raiserweb.com
- * Text Domain: raiserweb
- * License: GPLv2
- *
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License, version 2, as
- *  published by the Free Software Foundation.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ * Plugin Name: E-Commerce - Pruebas de correo electronico
+ * Plugin URI: #
+ * Description: Le permite enviar correos electrónicos de prueba de E-Commerce.
+ * Version:  1.0.0
+ * Author: PACMEC
+ * Author URI: #
+ * Developer: PACMEC
+ * Developer URI: #
+ * Text Domain: e-commerce-email-test
+ * Domain Path: /langs
  */
  
  
