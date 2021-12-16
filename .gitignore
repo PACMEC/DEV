@@ -6,8 +6,6 @@ wp-content/plugins/*
 
 !wp-content/plugins/admin-theme-pacmec/*
 !wp-content/plugins/admin-theme-pacmec
-!wp-content/plugins/airdrop/*
-!wp-content/plugins/airdrop
 !wp-content/plugins/contact-form-7/*
 !wp-content/plugins/contact-form-7
 !wp-content/plugins/e-commerce/*
