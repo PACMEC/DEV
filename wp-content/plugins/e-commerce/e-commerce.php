@@ -2,12 +2,12 @@
 /**
  * Plugin Name: E-Commerce
  * Plugin URI: https://github.com/PACMEC-plugins/e-commerce
- * Description: A simple, powerful and independent e-commerce platform. Sell anything with ease.
+ * Description: Una plataforma de comercio electrónico simple, potente e independiente. Vende cualquier cosa con facilidad
  * Version: 1.0.0
  * Author: PACMEC
  * Author URI: https://github.com/PACMEC-plugins/e-commerce
  * Text Domain: e-commerce
- * Domain Path: /i18n/languages/
+ * Domain Path: /i18n/woocommerce/
  *
  * @package WooCommerce
  */
