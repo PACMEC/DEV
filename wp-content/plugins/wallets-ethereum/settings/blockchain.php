@@ -3,7 +3,7 @@
 
 add_filter( 'ethereum_wallet_settings_tabs', 'ETHEREUM_WALLET_blockchain_settings_tabs_hook', 30, 1 );
 function ETHEREUM_WALLET_blockchain_settings_tabs_hook( $possible_screens ) {
-    $possible_screens['blockchain'] = esc_html(__( 'Blockchain', 'ethereum-wallet' ));
+    $possible_screens['blockchain'] = esc_html(__( 'Blockchain', 'wallets-ethereum' ));
     return $possible_screens;
 }
 
@@ -29,51 +29,51 @@ function ETHEREUM_WALLET_blockchain_print_options_hook( $options, $current_scree
 ?>
 
 <tr valign="top">
-<th scope="row"><?php _e("Blockchain", 'ethereum-wallet'); ?></th>
+<th scope="row"><?php _e("Blockchain", 'wallets-ethereum'); ?></th>
 <td><fieldset>
     <label>
         <input class="text" name="ETHEREUM_WALLET_blockchain_network" type="text" maxlength="128" placeholder="mainnet" value="<?php echo ! empty( $options['blockchain_network'] ) ? esc_attr( $options['blockchain_network'] ) : 'mainnet'; ?>">
-        <p><?php _e("The blockchain used: mainnet or ropsten. Use mainnet in production, and ropsten in test mode. See plugin documentation for the testing guide.", 'ethereum-wallet') ?></p>
+        <p><?php _e("The blockchain used: mainnet or ropsten. Use mainnet in production, and ropsten in test mode. See plugin documentation for the testing guide.", 'wallets-ethereum') ?></p>
     </label>
 </fieldset></td>
 </tr>
 
 <tr valign="top">
-    <th scope="row"><?php _e("Infura.io API Key", 'ethereum-wallet'); ?><sup>*</sup></th>
+    <th scope="row"><?php _e("Infura.io API Key", 'wallets-ethereum'); ?><sup>*</sup></th>
 <td><fieldset>
     <label>
-        <input class="text" name="ETHEREUM_WALLET_infuraApiKey" type="text" maxlength="70" placeholder="<?php _e("Put your Infura.io API Key here", 'ethereum-wallet'); ?>" value="<?php echo ! empty( $options['infuraApiKey'] ) ? esc_attr( $options['infuraApiKey'] ) : ''; ?>">
+        <input class="text" name="ETHEREUM_WALLET_infuraApiKey" type="text" maxlength="70" placeholder="<?php _e("Put your Infura.io API Key here", 'wallets-ethereum'); ?>" value="<?php echo ! empty( $options['infuraApiKey'] ) ? esc_attr( $options['infuraApiKey'] ) : ''; ?>">
         <p><?php echo sprintf(
-            __('The API key for the %1$s. You need to register on this site to obtain it. Follow the %2$sGet infura API Key%3$s guide please.', 'ethereum-wallet')
+            __('The API key for the %1$s. You need to register on this site to obtain it. Follow the %2$sGet infura API Key%3$s guide please.', 'wallets-ethereum')
             , '<a target="_blank" href="https://infura.io/register">https://infura.io/</a>'
             , '<a target="_blank" href="https://ethereumico.io/knowledge-base/infura-api-key-guide/">'
             , '</a>'
         )?></p>
         <p><strong><?php echo sprintf(
-            __('Note that this setting is ignored if the "%1$s" setting is set', 'ethereum-wallet')
-            , __("Ethereum Node JSON-RPC Endpoint", 'ethereum-wallet')
+            __('Note that this setting is ignored if the "%1$s" setting is set', 'wallets-ethereum')
+            , __("Ethereum Node JSON-RPC Endpoint", 'wallets-ethereum')
         )?></strong></p>
     </label>
 </fieldset></td>
 </tr>
 
 <tr valign="top">
-<th scope="row"><?php _e("Gas Limit", 'ethereum-wallet'); ?></th>
+<th scope="row"><?php _e("Gas Limit", 'wallets-ethereum'); ?></th>
 <td><fieldset>
     <label>
         <input class="text" name="ETHEREUM_WALLET_gas_limit" type="number" min="0" step="10000" maxlength="8" placeholder="200000" value="<?php echo ! empty( $options['gas_limit'] ) ? esc_attr( $options['gas_limit'] ) : '200000'; ?>">
-        <p><?php _e("The default gas limit to to spend on your transactions. 200000 is a reasonable default value.", 'ethereum-wallet') ?></p>
+        <p><?php _e("The default gas limit to to spend on your transactions. 200000 is a reasonable default value.", 'wallets-ethereum') ?></p>
     </label>
 </fieldset></td>
 </tr>
 
 <tr valign="top">
-<th scope="row"><?php _e("Gas price", 'ethereum-wallet'); ?></th>
+<th scope="row"><?php _e("Gas price", 'wallets-ethereum'); ?></th>
 <td><fieldset>
     <label>
         <input class="text" name="ETHEREUM_WALLET_gas_price" type="number" min="0" step="1" maxlength="8" placeholder="200" value="<?php echo ! empty( $options['gas_price'] ) ? esc_attr( $options['gas_price'] ) : '200'; ?>">
-        <p><?php _e("The gas price in Gwei. Reasonable values are in a 50-250 ratio. The default value is 200 to ensure that your tx would be sent in most of the time.", 'ethereum-wallet') ?></p>
-        <p><?php _e("The actual gas price used would be this value or less, depending on the current reasonable gas price in the blockchain.", 'ethereum-wallet') ?></p>
+        <p><?php _e("The gas price in Gwei. Reasonable values are in a 50-250 ratio. The default value is 200 to ensure that your tx would be sent in most of the time.", 'wallets-ethereum') ?></p>
+        <p><?php _e("The actual gas price used would be this value or less, depending on the current reasonable gas price in the blockchain.", 'wallets-ethereum') ?></p>
     </label>
 </fieldset></td>
 </tr>

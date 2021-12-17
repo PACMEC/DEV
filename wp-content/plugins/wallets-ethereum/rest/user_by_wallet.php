@@ -4,7 +4,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
   register_rest_route( 'ethereumwallet/v1', '/user_by_wallet' . '/(?P<wallet>[a-zA-Z0-9]+)', array(
     'args'   => array(
       'wallet' => array(
-        'description'=> esc_html__( 'Wallet address', 'ethereum-wallet' ),
+        'description'=> esc_html__( 'Wallet address', 'wallets-ethereum' ),
         'type' => 'string',
         'default' => "",
         'required' => true,
@@ -37,15 +37,15 @@ function ETHEREUM_WALLET_get_user_by_wallet_schema() {
         // In JSON Schema you can specify object properties in the properties attribute.
         'properties'           => array(
             'userName' => array(
-                'description'  => esc_html__( 'The user\'s display name or login.', 'ethereum-wallet' ),
+                'description'  => esc_html__( 'The user\'s display name or login.', 'wallets-ethereum' ),
                 'type'         => 'string',
             ),
             'userUrl' => array(
-                'description'  => esc_html__( 'The user\'s home page URL.', 'ethereum-wallet' ),
+                'description'  => esc_html__( 'The user\'s home page URL.', 'wallets-ethereum' ),
                 'type'         => 'string',
             ),
             'userAvatarUrl' => array(
-                'description'  => esc_html__( 'The user\'s avatar URL.', 'ethereum-wallet' ),
+                'description'  => esc_html__( 'The user\'s avatar URL.', 'wallets-ethereum' ),
                 'type'         => 'string',
             ),
         ),

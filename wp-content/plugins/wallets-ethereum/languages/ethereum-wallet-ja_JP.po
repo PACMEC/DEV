@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ethereum-wallet\n"
+"Project-Id-Version: wallets-ethereum\n"
 "POT-Creation-Date: 2021-07-19 23:54+0700\n"
 "PO-Revision-Date: 2021-07-19 23:54+0700\n"
 "Last-Translator: \n"
@@ -27,501 +27,501 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-7: contracts\n"
 "X-Poedit-SearchPathExcluded-8: tests\n"
 
-#: ethereum-wallet.admin.php:44
+#: wallets-ethereum.admin.php:44
 msgid "Settings saved."
 msgstr ""
 
-#: ethereum-wallet.admin.php:60 ethereum-wallet.php:4195
+#: wallets-ethereum.admin.php:60 wallets-ethereum.php:4195
 msgid "Ethereum Wallet Settings"
 msgstr ""
 
-#: ethereum-wallet.admin.php:66
+#: wallets-ethereum.admin.php:66
 msgid "Install and Configure Guide"
 msgstr ""
 
-#: ethereum-wallet.admin.php:67
+#: wallets-ethereum.admin.php:67
 #, php-format
 msgid ""
 "Use the official %1$sInstall and Configure%2$s step by step guide to "
 "configure this plugin."
 msgstr ""
 
-#: ethereum-wallet.admin.php:107
+#: wallets-ethereum.admin.php:107
 msgid "ERC20 tokens support"
 msgstr ""
 
-#: ethereum-wallet.admin.php:110
+#: wallets-ethereum.admin.php:110
 #, php-format
 msgid "Install the %1$sPRO plugin version%2$s!"
 msgstr ""
 
-#: ethereum-wallet.admin.php:122
+#: wallets-ethereum.admin.php:122
 msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:124
+#: wallets-ethereum.admin.php:124
 #, php-format
 msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
 msgstr ""
 
-#: ethereum-wallet.admin.php:129
+#: wallets-ethereum.admin.php:129
 msgid ""
 "Want to accept Ether or any ERC20/ERC223 token in your WooCommerce store?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:131
+#: wallets-ethereum.admin.php:131
 #, php-format
 msgid ""
 "Install the %1$sEther and ERC20 tokens WooCommerce Payment Gateway%2$s "
 "plugin!"
 msgstr ""
 
-#: ethereum-wallet.admin.php:136
+#: wallets-ethereum.admin.php:136
 msgid "Want to sell your ERC20/ERC223 ICO token from your ICO site?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:138
+#: wallets-ethereum.admin.php:138
 #, php-format
 msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
 msgstr ""
 
-#: ethereum-wallet.admin.php:143
+#: wallets-ethereum.admin.php:143
 msgid "Need help to configure this plugin?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:145 ethereum-wallet.admin.php:152
+#: wallets-ethereum.admin.php:145 wallets-ethereum.admin.php:152
 #, php-format
 msgid "Feel free to %1$shire me!%2$s"
 msgstr ""
 
-#: ethereum-wallet.admin.php:150
+#: wallets-ethereum.admin.php:150
 msgid "Need help to develop a ERC20 token for your ICO?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:158
+#: wallets-ethereum.admin.php:158
 msgid "Save Changes"
 msgstr ""
 
-#: ethereum-wallet.admin.php:159
+#: wallets-ethereum.admin.php:159
 msgid "Are you sure you want to delete all Ethereum Wallet options?"
 msgstr ""
 
-#: ethereum-wallet.admin.php:159
+#: wallets-ethereum.admin.php:159
 msgid "Reset"
 msgstr ""
 
-#: ethereum-wallet.admin.php:165
+#: wallets-ethereum.admin.php:165
 #, php-format
 msgid ""
 "If you like <strong>Ethereum Wallet</strong> plugin please leave us a %1$s "
 "rating. A huge thanks in advance!"
 msgstr ""
 
-#: ethereum-wallet.php:892 ethereum-wallet.php:920
+#: wallets-ethereum.php:892 wallets-ethereum.php:920
 msgid "Rank"
 msgstr ""
 
-#: ethereum-wallet.php:893
+#: wallets-ethereum.php:893
 msgid "Avatar"
 msgstr ""
 
-#: ethereum-wallet.php:894
+#: wallets-ethereum.php:894
 msgid "Username"
 msgstr ""
 
-#: ethereum-wallet.php:895 ethereum-wallet.php:921
+#: wallets-ethereum.php:895 wallets-ethereum.php:921
 msgid "Wallet"
 msgstr ""
 
-#: ethereum-wallet.php:896 ethereum-wallet.php:922 ethereum-wallet.php:3601
+#: wallets-ethereum.php:896 wallets-ethereum.php:922 wallets-ethereum.php:3601
 msgid "Balance"
 msgstr ""
 
-#: ethereum-wallet.php:897 ethereum-wallet.php:923
+#: wallets-ethereum.php:897 wallets-ethereum.php:923
 msgid "Tx Count"
 msgstr ""
 
-#: ethereum-wallet.php:1227 ethereum-wallet.php:3052 ethereum-wallet.php:3183
-#: ethereum-wallet.php:3264 ethereum-wallet.php:3292 ethereum-wallet.php:3849
+#: wallets-ethereum.php:1227 wallets-ethereum.php:3052 wallets-ethereum.php:3183
+#: wallets-ethereum.php:3264 wallets-ethereum.php:3292 wallets-ethereum.php:3849
 msgid "Default account"
 msgstr ""
 
-#: ethereum-wallet.php:1247
+#: wallets-ethereum.php:1247
 msgid "K"
 msgstr ""
 
-#: ethereum-wallet.php:1249
+#: wallets-ethereum.php:1249
 msgid "M"
 msgstr ""
 
-#: ethereum-wallet.php:1274
+#: wallets-ethereum.php:1274
 msgid "Result code is not 200"
 msgstr ""
 
-#: ethereum-wallet.php:1278
+#: wallets-ethereum.php:1278
 msgid "Empty body"
 msgstr ""
 
-#: ethereum-wallet.php:1283
+#: wallets-ethereum.php:1283
 msgid "No result field"
 msgstr ""
 
-#: ethereum-wallet.php:1538 ethereum-wallet.php:1569
+#: wallets-ethereum.php:1538 wallets-ethereum.php:1569
 msgid "Network problems detected. Last action was not completed."
 msgstr ""
 
-#: ethereum-wallet.php:1696 settings/advanced_blockchain.php:34
+#: wallets-ethereum.php:1696 settings/advanced_blockchain.php:34
 msgid "Ether"
 msgstr ""
 
-#: ethereum-wallet.php:1798
+#: wallets-ethereum.php:1798
 msgid "Failed to retrieve Ether balance"
 msgstr ""
 
-#: ethereum-wallet.php:1839 ethereum-wallet.php:1842 ethereum-wallet.php:2057
-#: ethereum-wallet.php:2060 ethereum-wallet.php:2063
+#: wallets-ethereum.php:1839 wallets-ethereum.php:1842 wallets-ethereum.php:2057
+#: wallets-ethereum.php:2060 wallets-ethereum.php:2063
 msgid "Failed to retrieve token balance"
 msgstr ""
 
-#: ethereum-wallet.php:1896 ethereum-wallet.php:1901 ethereum-wallet.php:1926
-#: ethereum-wallet.php:1927 ethereum-wallet.php:2014 ethereum-wallet.php:4154
+#: wallets-ethereum.php:1896 wallets-ethereum.php:1901 wallets-ethereum.php:1926
+#: wallets-ethereum.php:1927 wallets-ethereum.php:2014 wallets-ethereum.php:4154
 msgid "N/A"
 msgstr ""
 
-#: ethereum-wallet.php:1898 ethereum-wallet.php:2170
+#: wallets-ethereum.php:1898 wallets-ethereum.php:2170
 #, php-format
 msgid "%1$s per %2$s"
 msgstr ""
 
-#: ethereum-wallet.php:2179
+#: wallets-ethereum.php:2179
 #, php-format
 msgid "%1$s %2$s"
 msgstr ""
 
-#: ethereum-wallet.php:2211
+#: wallets-ethereum.php:2211
 msgid "Account"
 msgstr ""
 
-#: ethereum-wallet.php:2243 ethereum-wallet.php:3114
+#: wallets-ethereum.php:2243 wallets-ethereum.php:3114
 msgid "Private key"
 msgstr ""
 
-#: ethereum-wallet.php:2344 ethereum-wallet.php:4113 ethereum-wallet.php:4173
+#: wallets-ethereum.php:2344 wallets-ethereum.php:4113 wallets-ethereum.php:4173
 msgid "Unknown"
 msgstr ""
 
-#: ethereum-wallet.php:2986 ethereum-wallet.php:3103
+#: wallets-ethereum.php:2986 wallets-ethereum.php:3103
 msgid "Account name"
 msgstr ""
 
-#: ethereum-wallet.php:2990 ethereum-wallet.php:3107
+#: wallets-ethereum.php:2990 wallets-ethereum.php:3107
 msgid "Input new account name"
 msgstr ""
 
-#: ethereum-wallet.php:3007 ethereum-wallet.php:3008
+#: wallets-ethereum.php:3007 wallets-ethereum.php:3008
 msgid "Create"
 msgstr ""
 
-#: ethereum-wallet.php:3119
+#: wallets-ethereum.php:3119
 msgid "Input your private key here"
 msgstr ""
 
-#: ethereum-wallet.php:3136 ethereum-wallet.php:3137
+#: wallets-ethereum.php:3136 wallets-ethereum.php:3137
 msgid "Import"
 msgstr ""
 
-#: ethereum-wallet.php:3313 ethereum-wallet.php:3314
+#: wallets-ethereum.php:3313 wallets-ethereum.php:3314
 msgid "Select"
 msgstr ""
 
-#: ethereum-wallet.php:3319 ethereum-wallet.php:3320
+#: wallets-ethereum.php:3319 wallets-ethereum.php:3320
 msgid "Remove"
 msgstr ""
 
-#: ethereum-wallet.php:3600 ethereum-wallet.php:3707
+#: wallets-ethereum.php:3600 wallets-ethereum.php:3707
 msgid "#"
 msgstr ""
 
-#: ethereum-wallet.php:3602 ethereum-wallet.php:5000
+#: wallets-ethereum.php:3602 wallets-ethereum.php:5000
 msgid "Token"
 msgstr ""
 
-#: ethereum-wallet.php:3708 ethereum-wallet.php:4152 ethereum-wallet.php:4153
+#: wallets-ethereum.php:3708 wallets-ethereum.php:4152 wallets-ethereum.php:4153
 msgid "Amount"
 msgstr ""
 
-#: ethereum-wallet.php:3709
+#: wallets-ethereum.php:3709
 msgid "Date"
 msgstr ""
 
-#: ethereum-wallet.php:3710
+#: wallets-ethereum.php:3710
 msgid "Tx"
 msgstr ""
 
-#: ethereum-wallet.php:4111 ethereum-wallet.php:4121
+#: wallets-ethereum.php:4111 wallets-ethereum.php:4121
 msgid "Copied to clipboard"
 msgstr ""
 
-#: ethereum-wallet.php:4112 ethereum-wallet.php:4624 ethereum-wallet.php:4754
-#: ethereum-wallet.php:4896
+#: wallets-ethereum.php:4112 wallets-ethereum.php:4624 wallets-ethereum.php:4754
+#: wallets-ethereum.php:4896
 msgid "Insufficient Ether balance for tx fee payment."
 msgstr ""
 
-#: ethereum-wallet.php:4114
+#: wallets-ethereum.php:4114
 msgid "Unknown NFT"
 msgstr ""
 
-#: ethereum-wallet.php:4115
+#: wallets-ethereum.php:4115
 msgid "Pending"
 msgstr ""
 
-#: ethereum-wallet.php:4116
+#: wallets-ethereum.php:4116
 msgid "Previous transaction is still not confirmed or failed"
 msgstr ""
 
-#: ethereum-wallet.php:4117
+#: wallets-ethereum.php:4117
 msgid "recently"
 msgstr ""
 
-#: ethereum-wallet.php:4118
+#: wallets-ethereum.php:4118
 #, php-format
 msgid "%1$s days"
 msgstr ""
 
-#: ethereum-wallet.php:4119
+#: wallets-ethereum.php:4119
 #, php-format
 msgid "%1$s hours"
 msgstr ""
 
-#: ethereum-wallet.php:4120
+#: wallets-ethereum.php:4120
 #, php-format
 msgid "%1$s minutes"
 msgstr ""
 
-#: ethereum-wallet.php:4122
+#: wallets-ethereum.php:4122
 msgid "Copy to clipboard"
 msgstr ""
 
-#: ethereum-wallet.php:4123 ethereum-wallet.php:4132
+#: wallets-ethereum.php:4123 wallets-ethereum.php:4132
 msgid "QR-code"
 msgstr ""
 
-#: ethereum-wallet.php:4124
+#: wallets-ethereum.php:4124
 msgid "Error"
 msgstr ""
 
-#: ethereum-wallet.php:4125
+#: wallets-ethereum.php:4125
 msgid "Alert"
 msgstr ""
 
-#: ethereum-wallet.php:4126 ethereum-wallet.php:4139
+#: wallets-ethereum.php:4126 wallets-ethereum.php:4139
 msgid "OK"
 msgstr ""
 
-#: ethereum-wallet.php:4127
+#: wallets-ethereum.php:4127
 msgid "Scan QR-code"
 msgstr ""
 
-#: ethereum-wallet.php:4128
+#: wallets-ethereum.php:4128
 msgid "Contract Address: "
 msgstr ""
 
-#: ethereum-wallet.php:4129
+#: wallets-ethereum.php:4129
 msgid "Token ID: "
 msgstr ""
 
-#: ethereum-wallet.php:4130
+#: wallets-ethereum.php:4130
 msgid "Enter the recipient's account address please."
 msgstr ""
 
-#: ethereum-wallet.php:4131
+#: wallets-ethereum.php:4131
 msgid "Recipient"
 msgstr ""
 
-#: ethereum-wallet.php:4133
+#: wallets-ethereum.php:4133
 msgid "Enter recipient address"
 msgstr ""
 
-#: ethereum-wallet.php:4134
+#: wallets-ethereum.php:4134
 msgid "Incorrect address"
 msgstr ""
 
-#: ethereum-wallet.php:4135
+#: wallets-ethereum.php:4135
 msgid "Send"
 msgstr ""
 
-#: ethereum-wallet.php:4136 ethereum-wallet.php:4140
+#: wallets-ethereum.php:4136 wallets-ethereum.php:4140
 msgid "Cancel"
 msgstr ""
 
-#: ethereum-wallet.php:4137 ethereum-wallet.php:4138
+#: wallets-ethereum.php:4137 wallets-ethereum.php:4138
 msgid "Confirm"
 msgstr ""
 
-#: ethereum-wallet.php:4141
+#: wallets-ethereum.php:4141
 #, php-format
 msgid ""
 "You are about to send the %1$s NFT token to the %2$s account address. This "
 "action is irreversible. Are you sure?"
 msgstr ""
 
-#: ethereum-wallet.php:4142
+#: wallets-ethereum.php:4142
 msgid "Confirmations"
 msgstr ""
 
-#: ethereum-wallet.php:4143
+#: wallets-ethereum.php:4143
 #, php-format
 msgid "Tx confirmations %s"
 msgstr ""
 
-#: ethereum-wallet.php:4144
+#: wallets-ethereum.php:4144
 msgid "Failed to send token"
 msgstr ""
 
-#: ethereum-wallet.php:4145
+#: wallets-ethereum.php:4145
 msgid "No NFT found. Yet?"
 msgstr ""
 
-#: ethereum-wallet.php:4146 ethereum-wallet.php:4148
+#: wallets-ethereum.php:4146 wallets-ethereum.php:4148
 #, php-format
 msgid "Input the recipient %s address"
 msgstr ""
 
-#: ethereum-wallet.php:4147
+#: wallets-ethereum.php:4147
 msgid "Send To"
 msgstr ""
 
-#: ethereum-wallet.php:4149
+#: wallets-ethereum.php:4149
 msgid "Input amount to send"
 msgstr ""
 
-#: ethereum-wallet.php:4150
+#: wallets-ethereum.php:4150
 msgid "Select token"
 msgstr ""
 
-#: ethereum-wallet.php:4151
+#: wallets-ethereum.php:4151
 msgid "Max"
 msgstr ""
 
-#: ethereum-wallet.php:4155
+#: wallets-ethereum.php:4155
 msgid "Cheap"
 msgstr ""
 
-#: ethereum-wallet.php:4156
+#: wallets-ethereum.php:4156
 msgid "Safe"
 msgstr ""
 
-#: ethereum-wallet.php:4157
+#: wallets-ethereum.php:4157
 msgid "Fast"
 msgstr ""
 
-#: ethereum-wallet.php:4158
+#: wallets-ethereum.php:4158
 msgid "Chain"
 msgstr ""
 
-#: ethereum-wallet.php:4159
+#: wallets-ethereum.php:4159
 msgid "Transaction Fee"
 msgstr ""
 
-#: ethereum-wallet.php:4160
+#: wallets-ethereum.php:4160
 msgid "Nonce"
 msgstr ""
 
-#: ethereum-wallet.php:4161 settings/blockchain.php:61
+#: wallets-ethereum.php:4161 settings/blockchain.php:61
 msgid "Gas Limit"
 msgstr ""
 
-#: ethereum-wallet.php:4162
+#: wallets-ethereum.php:4162
 msgid "Gwei"
 msgstr ""
 
-#: ethereum-wallet.php:4163
+#: wallets-ethereum.php:4163
 msgid "Data"
 msgstr ""
 
-#: ethereum-wallet.php:4164
+#: wallets-ethereum.php:4164
 msgid "Revert"
 msgstr ""
 
-#: ethereum-wallet.php:4165
+#: wallets-ethereum.php:4165
 msgid "Advanced"
 msgstr ""
 
-#: ethereum-wallet.php:4166
+#: wallets-ethereum.php:4166
 msgid "Danger area! Use with care!"
 msgstr ""
 
-#: ethereum-wallet.php:4167
+#: wallets-ethereum.php:4167
 #, php-format
 msgid "Send %s"
 msgstr ""
 
-#: ethereum-wallet.php:4168
+#: wallets-ethereum.php:4168
 #, php-format
 msgid ""
 "You are about to send %1$s %2$s to %3$s. This action is irreversible. Are "
 "you sure?"
 msgstr ""
 
-#: ethereum-wallet.php:4169
+#: wallets-ethereum.php:4169
 msgid "Sent"
 msgstr ""
 
-#: ethereum-wallet.php:4170
+#: wallets-ethereum.php:4170
 msgid "Received"
 msgstr ""
 
-#: ethereum-wallet.php:4171
+#: wallets-ethereum.php:4171
 msgid "Self"
 msgstr ""
 
-#: ethereum-wallet.php:4172
+#: wallets-ethereum.php:4172
 msgid "Mint"
 msgstr ""
 
-#: ethereum-wallet.php:4196 ethereum-wallet.php:4938
+#: wallets-ethereum.php:4196 wallets-ethereum.php:4938
 msgid "Ethereum Wallet"
 msgstr ""
 
-#: ethereum-wallet.php:4215
+#: wallets-ethereum.php:4215
 msgid "Settings"
 msgstr ""
 
-#: ethereum-wallet.php:4557 ethereum-wallet.php:4663 ethereum-wallet.php:4798
+#: wallets-ethereum.php:4557 wallets-ethereum.php:4663 wallets-ethereum.php:4798
 #, php-format
 msgid "Bad \"%s\" setting"
 msgstr ""
 
-#: ethereum-wallet.php:4557 ethereum-wallet.php:4663 ethereum-wallet.php:4798
+#: wallets-ethereum.php:4557 wallets-ethereum.php:4663 wallets-ethereum.php:4798
 #: settings/blockchain.php:6 settings/blockchain.php:32
 msgid "Blockchain"
 msgstr ""
 
-#: ethereum-wallet.php:4605 ethereum-wallet.php:4734 ethereum-wallet.php:4878
+#: wallets-ethereum.php:4605 wallets-ethereum.php:4734 wallets-ethereum.php:4878
 msgid "Failed to estimate gas"
 msgstr ""
 
-#: ethereum-wallet.php:4617 ethereum-wallet.php:4747 ethereum-wallet.php:4890
+#: wallets-ethereum.php:4617 wallets-ethereum.php:4747 wallets-ethereum.php:4890
 msgid "Failed to obtain account balance"
 msgstr ""
 
-#: ethereum-wallet.php:4828
+#: wallets-ethereum.php:4828
 msgid "Insufficient funds"
 msgstr ""
 
-#: ethereum-wallet.php:4937
+#: wallets-ethereum.php:4937
 msgid "Ethereum Wallet Tools"
 msgstr ""
 
-#: ethereum-wallet.php:5001
+#: wallets-ethereum.php:5001
 msgid "Calculated"
 msgstr ""
 
-#: ethereum-wallet.php:5002
+#: wallets-ethereum.php:5002
 msgid "%"
 msgstr ""
 
-#: ethereum-wallet.php:5373
+#: wallets-ethereum.php:5373
 msgid "Ethereum wallet"
 msgstr ""
 

@@ -11,7 +11,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
           },
           'args' => array(
               'from' => array(
-                  'description'=> esc_html__( 'The From ethereum address', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The From ethereum address', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -20,7 +20,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'to' => array(
-                  'description'=> esc_html__( 'The To ethereum address', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The To ethereum address', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -29,7 +29,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'value' => array(
-                  'description'=> esc_html__( 'The Value field in hex format', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The Value field in hex format', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -38,7 +38,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'gas' => array(
-                  'description'=> esc_html__( 'The Gas Limit value in hex format', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The Gas Limit value in hex format', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -47,7 +47,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'gasPrice' => array(
-                  'description'=> esc_html__( 'The Gas Price value in hex format', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The Gas Price value in hex format', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -56,7 +56,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'data' => array(
-                  'description'=> esc_html__( 'The Data value in hex format', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The Data value in hex format', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,
@@ -69,7 +69,7 @@ add_action('ethereum_wallet_rest_api_endpoint', function() {
                   }
               ),
               'nonce' => array(
-                  'description'=> esc_html__( 'The Nonce value in hex format', 'ethereum-wallet' ),
+                  'description'=> esc_html__( 'The Nonce value in hex format', 'wallets-ethereum' ),
                   'type' => 'string',
                   'default' => "",
                   'required' => true,

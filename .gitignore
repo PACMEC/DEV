@@ -68,8 +68,8 @@ wp-content/languages/*
 !wp-content/plugins/seo-tools
 !wp-content/plugins/subscribering/*
 !wp-content/plugins/subscribering
-!wp-content/plugins/wallets/*
-!wp-content/plugins/wallets
+!wp-content/plugins/wallets-ethereum/*
+!wp-content/plugins/wallets-ethereum
 !wp-content/plugins/woocommerce/*
 !wp-content/plugins/woocommerce
 !wp-content/plugins/hello.php

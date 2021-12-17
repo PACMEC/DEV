@@ -1,14 +1,12 @@
 <?php
 
 /*
-Plugin Name: Ethereum Wallet
-Plugin URI: https://wordpress.org/plugins/ethereum-wallet/
-Description: Wallet for Ether and ERC20 tokens for WordPress
-Version: 4.0.8
-WC requires at least: 5.5.0
-WC tested up to: 5.8.0
-Author: ethereumicoio
-Text Domain: ethereum-wallet
+Plugin Name: Wallet - Ethereum
+Plugin URI: #
+Description: Monedero para tokens Ether y ERC20 para PACMEC
+Version: 1.0.0
+Author: PACMEC
+Text Domain: wallets-ethereum
 Domain Path: /languages
 */
 
@@ -131,7 +129,7 @@ if ( PHP_INT_SIZE != 8 ) {
                                     require_once dirname( __FILE__ ) . '/vendor/freemius/wordpress-sdk/start.php';
                                     $ethereum_wallet_freemius_init = fs_dynamic_init( array(
                                         'id'              => '4542',
-                                        'slug'            => 'ethereum-wallet',
+                                        'slug'            => 'wallets-ethereum',
                                         'type'            => 'plugin',
                                         'public_key'      => 'pk_912bef5e630149f746bec10d0a6d2',
                                         'is_premium'      => false,
@@ -144,7 +142,7 @@ if ( PHP_INT_SIZE != 8 ) {
                                     ),
                                         'has_affiliation' => 'all',
                                         'menu'            => array(
-                                        'slug'   => 'ethereum-wallet',
+                                        'slug'   => 'wallets-ethereum',
                                         'parent' => array(
                                         'slug' => 'options-general.php',
                                     ),
@@ -170,14 +168,14 @@ if ( PHP_INT_SIZE != 8 ) {
                     // HTTPS?
                     $ETHEREUM_WALLET_plugin_url_path = ( is_ssl() ? str_replace( 'http:', 'https:', $ETHEREUM_WALLET_plugin_url_path ) : $ETHEREUM_WALLET_plugin_url_path );
                     // Set plugin options
-                    $ETHEREUM_WALLET_options = get_option( 'ethereum-wallet_options', array() );
+                    $ETHEREUM_WALLET_options = get_option( 'wallets-ethereum_options', array() );
                     require $ETHEREUM_WALLET_plugin_dir . '/vendor/autoload.php';
                     require $ETHEREUM_WALLET_plugin_dir . '/currencyconvertor.php';
                     function ETHEREUM_WALLET_init()
                     {
                         global  $ETHEREUM_WALLET_plugin_dir, $ETHEREUM_WALLET_plugin_basename, $ETHEREUM_WALLET_options ;
                         // Load the textdomain for translations
-                        load_plugin_textdomain( 'ethereum-wallet', false, $ETHEREUM_WALLET_plugin_basename . '/languages/' );
+                        load_plugin_textdomain( 'wallets-ethereum', false, $ETHEREUM_WALLET_plugin_basename . '/languages/' );
                     }
                     
                     add_filter( 'init', 'ETHEREUM_WALLET_init' );
@@ -291,7 +289,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         list( $ethAddressChkSum, $privateKeyHex ) = ETHEREUM_WALLET_create_account();
                         $accounts = [ [
-                            "name"    => __( 'Default account', 'ethereum-wallet' ),
+                            "name"    => __( 'Default account', 'wallets-ethereum' ),
                             "address" => $ethAddressChkSum,
                             "key"     => $privateKeyHex,
                         ] ];
@@ -305,15 +303,15 @@ if ( PHP_INT_SIZE != 8 ) {
                     function ETHEREUM_WALLET_calc_display_value( $value )
                     {
                         if ( $value < 1 ) {
-                            return [ 0.01 * floor( 100 * $value ), __( ETHEREUM_WALLET_getCurrencyTicker(), 'ethereum-wallet' ) ];
+                            return [ 0.01 * floor( 100 * $value ), __( ETHEREUM_WALLET_getCurrencyTicker(), 'wallets-ethereum' ) ];
                         }
                         if ( $value < 1000 ) {
-                            return [ 0.1 * floor( 10 * $value ), __( ETHEREUM_WALLET_getCurrencyTicker(), 'ethereum-wallet' ) ];
+                            return [ 0.1 * floor( 10 * $value ), __( ETHEREUM_WALLET_getCurrencyTicker(), 'wallets-ethereum' ) ];
                         }
                         if ( $value < 1000000 ) {
-                            return [ 0.1 * floor( 10 * 0.001 * $value ), __( 'K', 'ethereum-wallet' ) ];
+                            return [ 0.1 * floor( 10 * 0.001 * $value ), __( 'K', 'wallets-ethereum' ) ];
                         }
-                        return [ 0.1 * floor( 10 * 1.0E-6 * $value ), __( 'M', 'ethereum-wallet' ) ];
+                        return [ 0.1 * floor( 10 * 1.0E-6 * $value ), __( 'M', 'wallets-ethereum' ) ];
                     }
                     
                     // if ( ethereum_wallet_freemius_init()->is__premium_only() ) {
@@ -405,7 +403,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             }
                         
                         }
-                        $logger->add( 'ethereum-wallet', $error );
+                        $logger->add( 'wallets-ethereum', $error );
                     }
                     
                     // if ( ethereum_wallet_freemius_init()->is__premium_only() ) {
@@ -520,7 +518,7 @@ if ( PHP_INT_SIZE != 8 ) {
                     function ETHEREUM_WALLET_getCurrencyName()
                     {
                         global  $ETHEREUM_WALLET_options ;
-                        $currency_name = __( 'Ether', 'ethereum-wallet' );
+                        $currency_name = __( 'Ether', 'wallets-ethereum' );
                         return $currency_name;
                     }
                     
@@ -545,7 +543,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             'tokeniconheight'  => '54px',
                             'displayfiat'      => '0',
                             'updatetimeout'    => '60',
-                        ), $attributes, 'ethereum-wallet-balance' );
+                        ), $attributes, 'wallets-ethereum-balance' );
                         $strPaper = ( !empty($attributes['paper']) ? esc_attr( $attributes['paper'] ) : '' );
                         $tokenName = ( !empty($attributes['tokenname']) ? esc_attr( $attributes['tokenname'] ) : '' );
                         $tokenSymbol = ( !empty($attributes['tokensymbol']) ? esc_attr( $attributes['tokensymbol'] ) : $tokenName );
@@ -614,7 +612,7 @@ if ( PHP_INT_SIZE != 8 ) {
                                     }
                                 
                                 } else {
-                                    $strBalance = __( 'Failed to retrieve Ether balance', 'ethereum-wallet' );
+                                    $strBalance = __( 'Failed to retrieve Ether balance', 'wallets-ethereum' );
                                 }
                             
                             } else {
@@ -656,11 +654,11 @@ if ( PHP_INT_SIZE != 8 ) {
                             }
                         }
                         
-                        $exchangeRateDisplay = __( 'N/A', 'ethereum-wallet' );
+                        $exchangeRateDisplay = __( 'N/A', 'wallets-ethereum' );
                         if ( !is_null( $exchangeRate ) ) {
-                            $exchangeRateDisplay = sprintf( __( '%1$s per %2$s', 'ethereum-wallet' ), $exchangeRateWC, $strCurrencySymbol );
+                            $exchangeRateDisplay = sprintf( __( '%1$s per %2$s', 'wallets-ethereum' ), $exchangeRateWC, $strCurrencySymbol );
                         }
-                        $fiatCurrencySymbol = __( 'N/A', 'ethereum-wallet' );
+                        $fiatCurrencySymbol = __( 'N/A', 'wallets-ethereum' );
                         $fiatIconURL = $ETHEREUM_WALLET_plugin_url_path . '/images/cryptocurrency-icons/svg/color/generic.svg';
                         
                         if ( function_exists( 'get_woocommerce_currency_symbol' ) ) {
@@ -685,8 +683,8 @@ if ( PHP_INT_SIZE != 8 ) {
                             'fiaticonpath'        => $fiatIconURL,
                             'iconheight'          => $tokenIconHeight,
                             'balance'             => $strBalance,
-                            'fiatbalance'         => ( is_null( $fiatBalance ) ? __( 'N/A', 'ethereum-wallet' ) : $fiatBalance ),
-                            'exchangerate'        => ( is_null( $exchangeRate ) ? __( 'N/A', 'ethereum-wallet' ) : $exchangeRate ),
+                            'fiatbalance'         => ( is_null( $fiatBalance ) ? __( 'N/A', 'wallets-ethereum' ) : $fiatBalance ),
+                            'exchangerate'        => ( is_null( $exchangeRate ) ? __( 'N/A', 'wallets-ethereum' ) : $exchangeRate ),
                             'exchangeratedisplay' => $exchangeRateDisplay,
                             'displayfiat'         => $displayFiat,
                             'fiatCurrencySymbol'  => $fiatCurrencySymbol,
@@ -712,18 +710,18 @@ if ( PHP_INT_SIZE != 8 ) {
                         //     'tokeniconheight' => '54px',
                         //     'displayfiat' => '0',
                         //     'updatetimeout' => '60', // seconds
-                        // ), $attributes, 'ethereum-wallet-balance' );
+                        // ), $attributes, 'wallets-ethereum-balance' );
                         $data = _ETHEREUM_WALLET_balance_shortcode_data( $attributes );
                         if ( is_null( $data ) ) {
                             return;
                         }
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-balance-shortcode" ' . 'data-paper="' . esc_attr( $data['paper'] ) . '" ' . 'data-symbol="' . esc_attr( $data['symbol'] ) . '" ' . 'data-name="' . esc_attr( $data['name'] ) . '" ' . 'data-address="' . esc_attr( $data['address'] ) . '" ' . 'data-decimals="' . esc_attr( $data['decimals'] ) . '" ' . 'data-decimalchar="' . esc_attr( $data['decimalchar'] ) . '" ' . 'data-wooproduct="' . esc_attr( $data['wooproduct'] ) . '" ' . 'data-iconpath="' . esc_attr( $data['iconpath'] ) . '" ' . 'data-iconheight="' . esc_attr( $data['iconheight'] ) . '" ' . 'data-balance="' . esc_attr( $data['balance'] ) . '" ' . 'data-fiatbalance="' . esc_attr( $data['fiatbalance'] ) . '" ' . 'data-exchangerate="' . esc_attr( $data['exchangerate'] ) . '" ' . 'data-exchangeratedisplay="' . esc_attr( $data['exchangeratedisplay'] ) . '" ' . 'data-displayfiat="' . esc_attr( $data['displayfiat'] ) . '"></div>';
+                        $ret = '<div class="wallets-ethereum-balance-shortcode" ' . 'data-paper="' . esc_attr( $data['paper'] ) . '" ' . 'data-symbol="' . esc_attr( $data['symbol'] ) . '" ' . 'data-name="' . esc_attr( $data['name'] ) . '" ' . 'data-address="' . esc_attr( $data['address'] ) . '" ' . 'data-decimals="' . esc_attr( $data['decimals'] ) . '" ' . 'data-decimalchar="' . esc_attr( $data['decimalchar'] ) . '" ' . 'data-wooproduct="' . esc_attr( $data['wooproduct'] ) . '" ' . 'data-iconpath="' . esc_attr( $data['iconpath'] ) . '" ' . 'data-iconheight="' . esc_attr( $data['iconheight'] ) . '" ' . 'data-balance="' . esc_attr( $data['balance'] ) . '" ' . 'data-fiatbalance="' . esc_attr( $data['fiatbalance'] ) . '" ' . 'data-exchangerate="' . esc_attr( $data['exchangerate'] ) . '" ' . 'data-exchangeratedisplay="' . esc_attr( $data['exchangeratedisplay'] ) . '" ' . 'data-displayfiat="' . esc_attr( $data['displayfiat'] ) . '"></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-balance', 'ETHEREUM_WALLET_balance_shortcode' );
+                    add_shortcode( 'wallets-ethereum-balance', 'ETHEREUM_WALLET_balance_shortcode' );
                     function ETHEREUM_WALLET_account_shortcode( $attributes )
                     {
                         $user_id = get_current_user_id();
@@ -734,16 +732,16 @@ if ( PHP_INT_SIZE != 8 ) {
                         $attributes = shortcode_atts( array(
                             'label'   => '',
                             'nolabel' => '',
-                        ), $attributes, 'ethereum-wallet-account' );
-                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account', 'ethereum-wallet' ) );
+                        ), $attributes, 'wallets-ethereum-account' );
+                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account', 'wallets-ethereum' ) );
                         $nolabel = ( !empty($attributes['nolabel']) ? esc_attr( $attributes['nolabel'] ) : '' );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-account-shortcode" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-account="' . $accountAddress . '"></div>';
+                        $ret = '<div class="wallets-ethereum-account-shortcode" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-account="' . $accountAddress . '"></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-account', 'ETHEREUM_WALLET_account_shortcode' );
+                    add_shortcode( 'wallets-ethereum-account', 'ETHEREUM_WALLET_account_shortcode' );
                     function ETHEREUM_WALLET_account_management_export_shortcode( $attributes )
                     {
                         $user_id = get_current_user_id();
@@ -760,18 +758,18 @@ if ( PHP_INT_SIZE != 8 ) {
                         $attributes = shortcode_atts( array(
                             'label'   => '',
                             'nolabel' => '',
-                        ), $attributes, 'ethereum-wallet-account-management-export' );
-                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Private key', 'ethereum-wallet' ) );
+                        ), $attributes, 'wallets-ethereum-account-management-export' );
+                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Private key', 'wallets-ethereum' ) );
                         $nolabel = ( !empty($attributes['nolabel']) ? esc_attr( $attributes['nolabel'] ) : '' );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-account-management-export-shortcode" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-account="' . $privateKey . '"></div>';
+                        $ret = '<div class="wallets-ethereum-account-management-export-shortcode" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-account="' . $privateKey . '"></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         //    wp_enqueue_script( 'jquery.qrcode' );
                         //    wp_enqueue_script( 'clipboard' );
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-account-management-export', 'ETHEREUM_WALLET_account_management_export_shortcode' );
+                    add_shortcode( 'wallets-ethereum-account-management-export', 'ETHEREUM_WALLET_account_management_export_shortcode' );
                     // if ( ethereum_wallet_freemius_init()->is__premium_only() ) {
                     add_filter(
                         'woocommerce_product_data_store_cpt_get_products_query',
@@ -926,7 +924,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         $attributes = shortcode_atts( array(
                             'updatetimeout' => '60',
-                        ), $attributes, 'ethereum-wallet-sendform' );
+                        ), $attributes, 'wallets-ethereum-sendform' );
                         $onlytokens = $attributes['onlytokens'];
                         $tokenslist = $attributes['tokenslist'];
                         $updatetimeout = intval( ( isset( $attributes['updatetimeout'] ) ? esc_attr( $attributes['updatetimeout'] ) : '60' ) );
@@ -934,12 +932,12 @@ if ( PHP_INT_SIZE != 8 ) {
                         // ETHEREUM_WALLET_log('$tokensDataFinal=' . print_r($tokensDataFinal, true));
                         // $gas_price_api_url = ETHEREUM_WALLET_get_gas_price_api_url();
                         $js = '';
-                        $ret = '<span class="ethereum-wallet-sendform-shortcode" ' . 'data-nonce="' . wp_create_nonce( 'ethereum-wallet-send_form' ) . '" ' . 'data-tokens="' . esc_attr( json_encode( $tokensDataFinal ) ) . '" ' . 'data-onlytokens="' . esc_attr( $onlytokens ) . '" ' . 'data-updatetimeout="' . esc_attr( $updatetimeout ) . '" ' . '></span>';
+                        $ret = '<span class="wallets-ethereum-sendform-shortcode" ' . 'data-nonce="' . wp_create_nonce( 'wallets-ethereum-send_form' ) . '" ' . 'data-tokens="' . esc_attr( json_encode( $tokensDataFinal ) ) . '" ' . 'data-onlytokens="' . esc_attr( $onlytokens ) . '" ' . 'data-updatetimeout="' . esc_attr( $updatetimeout ) . '" ' . '></span>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-sendform', 'ETHEREUM_WALLET_sendform_shortcode' );
+                    add_shortcode( 'wallets-ethereum-sendform', 'ETHEREUM_WALLET_sendform_shortcode' );
                     function ETHEREUM_WALLET_sendform_action()
                     {
                         global  $wp ;
@@ -961,8 +959,8 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         $nonce_value = '';
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-send-form-nonce'] ) ) {
-                            $nonce_value = $_REQUEST['ethereum-wallet-send-form-nonce'];
+                        if ( isset( $_REQUEST['wallets-ethereum-send-form-nonce'] ) ) {
+                            $nonce_value = $_REQUEST['wallets-ethereum-send-form-nonce'];
                         } else {
                             if ( isset( $_REQUEST['_wpnonce'] ) ) {
                                 $nonce_value = $_REQUEST['_wpnonce'];
@@ -970,7 +968,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         
-                        if ( !wp_verify_nonce( $nonce_value, 'ethereum-wallet-send_form' ) ) {
+                        if ( !wp_verify_nonce( $nonce_value, 'wallets-ethereum-send_form' ) ) {
                             ETHEREUM_WALLET_log( "ETHEREUM_WALLET_sendform_action: bad nonce detected: " . $nonce_value );
                             return;
                         }
@@ -993,73 +991,73 @@ if ( PHP_INT_SIZE != 8 ) {
                         $privateKey = get_user_meta( $user_id, 'user_ethereum_wallet_key', true );
                         // To address
                         
-                        if ( !isset( $_REQUEST['ethereum-wallet-sendform-to'] ) ) {
-                            ETHEREUM_WALLET_log( "ethereum-wallet-sendform-to not set" );
+                        if ( !isset( $_REQUEST['wallets-ethereum-sendform-to'] ) ) {
+                            ETHEREUM_WALLET_log( "wallets-ethereum-sendform-to not set" );
                             return;
                         }
                         
-                        $to = sanitize_text_field( $_REQUEST['ethereum-wallet-sendform-to'] );
+                        $to = sanitize_text_field( $_REQUEST['wallets-ethereum-sendform-to'] );
                         
                         if ( empty($to) ) {
-                            ETHEREUM_WALLET_log( "empty ethereum-wallet-sendform-to" );
+                            ETHEREUM_WALLET_log( "empty wallets-ethereum-sendform-to" );
                             return;
                         }
                         
                         
                         if ( 42 != strlen( $to ) ) {
-                            ETHEREUM_WALLET_log( "strlen ethereum-wallet-sendform-to != 42: " . $to );
+                            ETHEREUM_WALLET_log( "strlen wallets-ethereum-sendform-to != 42: " . $to );
                             return;
                         }
                         
                         
                         if ( '0x' != substr( $to, 0, 2 ) ) {
-                            ETHEREUM_WALLET_log( "startsWith ethereum-wallet-sendform-to != 0x: " . $to );
+                            ETHEREUM_WALLET_log( "startsWith wallets-ethereum-sendform-to != 0x: " . $to );
                             return;
                         }
                         
                         // Amount
                         
-                        if ( !isset( $_REQUEST['ethereum-wallet-sendform-amount'] ) ) {
-                            ETHEREUM_WALLET_log( "ethereum-wallet-sendform-amount not set" );
+                        if ( !isset( $_REQUEST['wallets-ethereum-sendform-amount'] ) ) {
+                            ETHEREUM_WALLET_log( "wallets-ethereum-sendform-amount not set" );
                             return;
                         }
                         
-                        $amount = sanitize_text_field( $_REQUEST['ethereum-wallet-sendform-amount'] );
+                        $amount = sanitize_text_field( $_REQUEST['wallets-ethereum-sendform-amount'] );
                         
                         if ( empty($amount) ) {
-                            ETHEREUM_WALLET_log( "empty ethereum-wallet-sendform-amount" );
+                            ETHEREUM_WALLET_log( "empty wallets-ethereum-sendform-amount" );
                             return;
                         }
                         
                         
                         if ( !is_numeric( $amount ) ) {
-                            ETHEREUM_WALLET_log( "non-numeric ethereum-wallet-sendform-amount: " . $amount );
+                            ETHEREUM_WALLET_log( "non-numeric wallets-ethereum-sendform-amount: " . $amount );
                             return;
                         }
                         
                         // Currency address
                         
-                        if ( !isset( $_REQUEST['ethereum-wallet-sendform-currency'] ) ) {
-                            ETHEREUM_WALLET_log( "ethereum-wallet-sendform-currency not set" );
+                        if ( !isset( $_REQUEST['wallets-ethereum-sendform-currency'] ) ) {
+                            ETHEREUM_WALLET_log( "wallets-ethereum-sendform-currency not set" );
                             return;
                         }
                         
-                        $currency = sanitize_text_field( $_REQUEST['ethereum-wallet-sendform-currency'] );
+                        $currency = sanitize_text_field( $_REQUEST['wallets-ethereum-sendform-currency'] );
                         
                         if ( empty($currency) ) {
-                            ETHEREUM_WALLET_log( "empty ethereum-wallet-sendform-currency" );
+                            ETHEREUM_WALLET_log( "empty wallets-ethereum-sendform-currency" );
                             return;
                         }
                         
                         
                         if ( 42 != strlen( $currency ) ) {
-                            ETHEREUM_WALLET_log( "strlen ethereum-wallet-sendform-currency != 42: " . $to );
+                            ETHEREUM_WALLET_log( "strlen wallets-ethereum-sendform-currency != 42: " . $to );
                             return;
                         }
                         
                         
                         if ( '0x' != substr( $currency, 0, 2 ) ) {
-                            ETHEREUM_WALLET_log( "startsWith ethereum-wallet-sendform-currency != 0x: " . $to );
+                            ETHEREUM_WALLET_log( "startsWith wallets-ethereum-sendform-currency != 0x: " . $to );
                             return;
                         }
                         
@@ -1145,19 +1143,19 @@ if ( PHP_INT_SIZE != 8 ) {
                             'nolabel'     => '',
                             'placeholder' => '',
                             'buttonlabel' => '',
-                        ), $attributes, 'ethereum-wallet-account-management-create' );
-                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account name', 'ethereum-wallet' ) );
-                        $placeholder = ( !empty($attributes['placeholder']) ? esc_attr( $attributes['placeholder'] ) : __( 'Input new account name', 'ethereum-wallet' ) );
-                        $buttonlabel = ( !empty($attributes['buttonlabel']) ? esc_attr( $attributes['buttonlabel'] ) : __( 'Add', 'ethereum-wallet' ) );
+                        ), $attributes, 'wallets-ethereum-account-management-create' );
+                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account name', 'wallets-ethereum' ) );
+                        $placeholder = ( !empty($attributes['placeholder']) ? esc_attr( $attributes['placeholder'] ) : __( 'Input new account name', 'wallets-ethereum' ) );
+                        $buttonlabel = ( !empty($attributes['buttonlabel']) ? esc_attr( $attributes['buttonlabel'] ) : __( 'Add', 'wallets-ethereum' ) );
                         $nolabel = ( !empty($attributes['nolabel']) ? esc_attr( $attributes['nolabel'] ) : '' );
-                        $nonce = wp_create_nonce( 'ethereum-wallet-account-management-create-send_form' );
+                        $nonce = wp_create_nonce( 'wallets-ethereum-account-management-create-send_form' );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-account-management-create-shortcode" ' . 'data-nonce="' . $nonce . '" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-buttonlabel="' . $buttonlabel . '" ' . 'data-placeholder="' . $placeholder . '"></div>';
+                        $ret = '<div class="wallets-ethereum-account-management-create-shortcode" ' . 'data-nonce="' . $nonce . '" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-buttonlabel="' . $buttonlabel . '" ' . 'data-placeholder="' . $placeholder . '"></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-account-management-create', 'ETHEREUM_WALLET_account_management_create_shortcode' );
+                    add_shortcode( 'wallets-ethereum-account-management-create', 'ETHEREUM_WALLET_account_management_create_shortcode' );
                     function ETHEREUM_WALLET_account_management_create_action()
                     {
                         global  $wp ;
@@ -1176,8 +1174,8 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         $nonce_value = '';
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-create-send-form-nonce'] ) ) {
-                            $nonce_value = $_REQUEST['ethereum-wallet-account-management-create-send-form-nonce'];
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-create-send-form-nonce'] ) ) {
+                            $nonce_value = $_REQUEST['wallets-ethereum-account-management-create-send-form-nonce'];
                         } else {
                             if ( isset( $_REQUEST['_wpnonce'] ) ) {
                                 $nonce_value = $_REQUEST['_wpnonce'];
@@ -1185,7 +1183,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         
-                        if ( !wp_verify_nonce( $nonce_value, 'ethereum-wallet-account-management-create-send_form' ) ) {
+                        if ( !wp_verify_nonce( $nonce_value, 'wallets-ethereum-account-management-create-send_form' ) ) {
                             ETHEREUM_WALLET_log( "ETHEREUM_WALLET_account_management_create_action: bad nonce detected: " . $nonce_value );
                             return;
                         }
@@ -1195,16 +1193,16 @@ if ( PHP_INT_SIZE != 8 ) {
                             return;
                         }
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-create-name'] ) ) {
-                            $name = sanitize_text_field( $_REQUEST['ethereum-wallet-account-management-create-name'] );
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-create-name'] ) ) {
+                            $name = sanitize_text_field( $_REQUEST['wallets-ethereum-account-management-create-name'] );
                             
-                            if ( __( 'Default account', 'ethereum-wallet' ) == $name ) {
-                                ETHEREUM_WALLET_log( "ethereum-wallet-account-management-create-name an attempt to replace the default account is blocked: " . $name );
+                            if ( __( 'Default account', 'wallets-ethereum' ) == $name ) {
+                                ETHEREUM_WALLET_log( "wallets-ethereum-account-management-create-name an attempt to replace the default account is blocked: " . $name );
                             } else {
                                 
                                 if ( !empty($name) ) {
                                     // create new account request
-                                    ETHEREUM_WALLET_log( "ethereum-wallet-account-management-create-name is set: " . $name );
+                                    ETHEREUM_WALLET_log( "wallets-ethereum-account-management-create-name is set: " . $name );
                                     $accountsJSON = get_user_meta( $user_id, 'user_ethereum_wallet_accounts', true );
                                     if ( empty($accountsJSON) ) {
                                         $accountsJSON = '[]';
@@ -1251,22 +1249,22 @@ if ( PHP_INT_SIZE != 8 ) {
                             'nolabelkey'     => '',
                             'placeholderkey' => '',
                             'buttonlabel'    => '',
-                        ), $attributes, 'ethereum-wallet-account-management-import' );
-                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account name', 'ethereum-wallet' ) );
+                        ), $attributes, 'wallets-ethereum-account-management-import' );
+                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Account name', 'wallets-ethereum' ) );
                         $nolabel = ( !empty($attributes['nolabel']) ? esc_attr( $attributes['nolabel'] ) : '' );
-                        $placeholder = ( !empty($attributes['placeholder']) ? esc_attr( $attributes['placeholder'] ) : __( 'Input new account name', 'ethereum-wallet' ) );
-                        $labelkey = ( !empty($attributes['labelkey']) ? esc_attr( $attributes['labelkey'] ) : __( 'Private key', 'ethereum-wallet' ) );
+                        $placeholder = ( !empty($attributes['placeholder']) ? esc_attr( $attributes['placeholder'] ) : __( 'Input new account name', 'wallets-ethereum' ) );
+                        $labelkey = ( !empty($attributes['labelkey']) ? esc_attr( $attributes['labelkey'] ) : __( 'Private key', 'wallets-ethereum' ) );
                         $nolabelkey = ( !empty($attributes['nolabelkey']) ? esc_attr( $attributes['nolabelkey'] ) : '' );
-                        $placeholderkey = ( !empty($attributes['placeholderkey']) ? esc_attr( $attributes['placeholderkey'] ) : __( 'Input your private key here', 'ethereum-wallet' ) );
-                        $buttonlabel = ( !empty($attributes['buttonlabel']) ? esc_attr( $attributes['buttonlabel'] ) : __( 'Import', 'ethereum-wallet' ) );
-                        $nonce = wp_create_nonce( 'ethereum-wallet-account-management-import-send_form' );
+                        $placeholderkey = ( !empty($attributes['placeholderkey']) ? esc_attr( $attributes['placeholderkey'] ) : __( 'Input your private key here', 'wallets-ethereum' ) );
+                        $buttonlabel = ( !empty($attributes['buttonlabel']) ? esc_attr( $attributes['buttonlabel'] ) : __( 'Import', 'wallets-ethereum' ) );
+                        $nonce = wp_create_nonce( 'wallets-ethereum-account-management-import-send_form' );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-account-management-import-shortcode" ' . 'data-nonce="' . $nonce . '" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-labelkey="' . $labelkey . '" ' . 'data-nolabelkey="' . $nolabelkey . '" ' . 'data-buttonlabel="' . $buttonlabel . '" ' . 'data-placeholderkey="' . $placeholderkey . '" ' . 'data-placeholder="' . $placeholder . '"></div>';
+                        $ret = '<div class="wallets-ethereum-account-management-import-shortcode" ' . 'data-nonce="' . $nonce . '" ' . 'data-label="' . $label . '" ' . 'data-nolabel="' . $nolabel . '" ' . 'data-labelkey="' . $labelkey . '" ' . 'data-nolabelkey="' . $nolabelkey . '" ' . 'data-buttonlabel="' . $buttonlabel . '" ' . 'data-placeholderkey="' . $placeholderkey . '" ' . 'data-placeholder="' . $placeholder . '"></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-account-management-import', 'ETHEREUM_WALLET_account_management_import_shortcode' );
+                    add_shortcode( 'wallets-ethereum-account-management-import', 'ETHEREUM_WALLET_account_management_import_shortcode' );
                     function ETHEREUM_WALLET_account_management_import_action()
                     {
                         global  $wp ;
@@ -1285,8 +1283,8 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         $nonce_value = '';
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-import-send-form-nonce'] ) ) {
-                            $nonce_value = $_REQUEST['ethereum-wallet-account-management-import-send-form-nonce'];
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-import-send-form-nonce'] ) ) {
+                            $nonce_value = $_REQUEST['wallets-ethereum-account-management-import-send-form-nonce'];
                         } else {
                             if ( isset( $_REQUEST['_wpnonce'] ) ) {
                                 $nonce_value = $_REQUEST['_wpnonce'];
@@ -1294,7 +1292,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         
-                        if ( !wp_verify_nonce( $nonce_value, 'ethereum-wallet-account-management-import-send_form' ) ) {
+                        if ( !wp_verify_nonce( $nonce_value, 'wallets-ethereum-account-management-import-send_form' ) ) {
                             ETHEREUM_WALLET_log( "ETHEREUM_WALLET_account_management_import_action: bad nonce detected: " . $nonce_value );
                             return;
                         }
@@ -1304,17 +1302,17 @@ if ( PHP_INT_SIZE != 8 ) {
                             return;
                         }
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-import-name'] ) && isset( $_REQUEST['ethereum-wallet-account-management-import-key'] ) ) {
-                            $name = sanitize_text_field( $_REQUEST['ethereum-wallet-account-management-import-name'] );
-                            $privateKeyHex = sanitize_text_field( $_REQUEST['ethereum-wallet-account-management-import-key'] );
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-import-name'] ) && isset( $_REQUEST['wallets-ethereum-account-management-import-key'] ) ) {
+                            $name = sanitize_text_field( $_REQUEST['wallets-ethereum-account-management-import-name'] );
+                            $privateKeyHex = sanitize_text_field( $_REQUEST['wallets-ethereum-account-management-import-key'] );
                             
-                            if ( __( 'Default account', 'ethereum-wallet' ) == $name ) {
-                                ETHEREUM_WALLET_log( "ethereum-wallet-account-management-import-name an attempt to replace the default account is blocked: " . $name );
+                            if ( __( 'Default account', 'wallets-ethereum' ) == $name ) {
+                                ETHEREUM_WALLET_log( "wallets-ethereum-account-management-import-name an attempt to replace the default account is blocked: " . $name );
                             } else {
                                 
                                 if ( !empty($name) && !empty($privateKeyHex) ) {
                                     // import new account request
-                                    ETHEREUM_WALLET_log( "ethereum-wallet-account-management-import-name is set: " . $name );
+                                    ETHEREUM_WALLET_log( "wallets-ethereum-account-management-import-name is set: " . $name );
                                     $blnIsValid = false;
                                     try {
                                         $ecAdapter = \Ethereumico\EthereumWallet\Dependencies\BitWasp\Bitcoin\Bitcoin::getEcAdapter();
@@ -1399,11 +1397,11 @@ if ( PHP_INT_SIZE != 8 ) {
                             'nolabel'           => '',
                             'buttonremovelabel' => '',
                             'buttonselectlabel' => '',
-                        ), $attributes, 'ethereum-wallet-account-management-select' );
-                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Default account', 'ethereum-wallet' ) );
+                        ), $attributes, 'wallets-ethereum-account-management-select' );
+                        $label = ( !empty($attributes['label']) ? esc_attr( $attributes['label'] ) : __( 'Default account', 'wallets-ethereum' ) );
                         $nolabel = ( !empty($attributes['nolabel']) ? esc_attr( $attributes['nolabel'] ) : '' );
-                        $buttonremovelabel = ( !empty($attributes['buttonremovelabel']) ? esc_attr( $attributes['buttonremovelabel'] ) : __( 'Remove', 'ethereum-wallet' ) );
-                        $buttonselectlabel = ( !empty($attributes['buttonselectlabel']) ? esc_attr( $attributes['buttonselectlabel'] ) : __( 'Select', 'ethereum-wallet' ) );
+                        $buttonremovelabel = ( !empty($attributes['buttonremovelabel']) ? esc_attr( $attributes['buttonremovelabel'] ) : __( 'Remove', 'wallets-ethereum' ) );
+                        $buttonselectlabel = ( !empty($attributes['buttonselectlabel']) ? esc_attr( $attributes['buttonselectlabel'] ) : __( 'Select', 'wallets-ethereum' ) );
                         // $ops = '';
                         $accountsJSON = get_user_meta( $user_id, 'user_ethereum_wallet_accounts', true );
                         if ( empty($accountsJSON) ) {
@@ -1411,7 +1409,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         $accounts = json_decode( $accountsJSON, true );
                         $defaultAddress = ETHEREUM_WALLET_get_wallet_address();
-                        $defaultAddressName = __( 'Default account', 'ethereum-wallet' );
+                        $defaultAddressName = __( 'Default account', 'wallets-ethereum' );
                         
                         if ( !$accounts ) {
                             $name = $defaultAddressName;
@@ -1436,46 +1434,46 @@ if ( PHP_INT_SIZE != 8 ) {
                         // }
                         // 	$js = '';
                         // 	$ret =
-                        // '<form method="post" action="" onsubmit="return window.ethereumWallet.validate_account_management_select_form()"><div class="twbs"><div class="container-fluid ethereum-wallet-account-management-select-shortcode">
-                        //     <div class="row ethereum-wallet-account-management-select-content">
+                        // '<form method="post" action="" onsubmit="return window.ethereumWallet.validate_account_management_select_form()"><div class="twbs"><div class="container-fluid wallets-ethereum-account-management-select-shortcode">
+                        //     <div class="row wallets-ethereum-account-management-select-content">
                         //         <div class="col-12">
                         //             <div class="form-group">
-                        //                 <label class="control-label" for="ethereum-wallet-account-management-select-default">'. __('Default account', 'ethereum-wallet') . '</label>
+                        //                 <label class="control-label" for="wallets-ethereum-account-management-select-default">'. __('Default account', 'wallets-ethereum') . '</label>
                         //                 <div class="input-group" style="margin-top: 8px">
                         //                     <select
                         //                         class="custom-select form-control"
-                        //                         id="ethereum-wallet-account-management-select-default"
-                        //                         name="ethereum-wallet-account-management-select-default" >
+                        //                         id="wallets-ethereum-account-management-select-default"
+                        //                         name="wallets-ethereum-account-management-select-default" >
                         //                         '.$ops.'
                         //                     </select>
                         //                 </div>
                         //             </div>
                         //         </div>
                         //     </div>
-                        //     <div class="row ethereum-wallet-account-management-select-content">
+                        //     <div class="row wallets-ethereum-account-management-select-content">
                         //         <div class="col-12">
                         //             <div class="form-group">
-                        //                 '.wp_nonce_field( 'ethereum-wallet-account-management-select-send_form', 'ethereum-wallet-account-management-select-send-form-nonce', true, false ).'
+                        //                 '.wp_nonce_field( 'wallets-ethereum-account-management-select-send_form', 'wallets-ethereum-account-management-select-send-form-nonce', true, false ).'
                         //                 <input type="hidden" name="action" value="ethereum_wallet_account_management_select_send" />
                         //                 <button
-                        //                     id="ethereum-wallet-account-management-select-send-button"
-                        //                     name="ethereum-wallet-account-management-select-send-button"
+                        //                     id="wallets-ethereum-account-management-select-send-button"
+                        //                     name="wallets-ethereum-account-management-select-send-button"
                         //                     type="submit"
-                        //                     value="'. __('Select', 'ethereum-wallet') . '"
-                        //                     class="button btn btn-default float-right col-12 col-md-4">'. __('Select', 'ethereum-wallet') . '</button>
+                        //                     value="'. __('Select', 'wallets-ethereum') . '"
+                        //                     class="button btn btn-default float-right col-12 col-md-4">'. __('Select', 'wallets-ethereum') . '</button>
                         //                 <button
-                        //                     id="ethereum-wallet-account-management-delete-send-button"
-                        //                     name="ethereum-wallet-account-management-delete-send-button"
+                        //                     id="wallets-ethereum-account-management-delete-send-button"
+                        //                     name="wallets-ethereum-account-management-delete-send-button"
                         //                     type="submit"
-                        //                     value="'. __('Remove', 'ethereum-wallet') . '"
-                        //                     class="button btn btn-default float-right col-12 col-md-4">'. __('Remove', 'ethereum-wallet') . '</button>
+                        //                     value="'. __('Remove', 'wallets-ethereum') . '"
+                        //                     class="button btn btn-default float-right col-12 col-md-4">'. __('Remove', 'wallets-ethereum') . '</button>
                         //             </div>
                         //         </div>
                         //     </div>
                         // </div></div></form>';
-                        $nonce = wp_create_nonce( 'ethereum-wallet-account-management-select-send_form' );
+                        $nonce = wp_create_nonce( 'wallets-ethereum-account-management-select-send_form' );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-account-management-select-shortcode" ' . 'data-accounts="' . esc_attr( json_encode( array_map( function ( $a ) use( $defaultAddress ) {
+                        $ret = '<div class="wallets-ethereum-account-management-select-shortcode" ' . 'data-accounts="' . esc_attr( json_encode( array_map( function ( $a ) use( $defaultAddress ) {
                             return [
                                 "name"     => $a['name'],
                                 "address"  => $a['address'],
@@ -1487,7 +1485,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-account-management-select', 'ETHEREUM_WALLET_account_management_select_shortcode' );
+                    add_shortcode( 'wallets-ethereum-account-management-select', 'ETHEREUM_WALLET_account_management_select_shortcode' );
                     function ETHEREUM_WALLET_account_management_select_action()
                     {
                         global  $wp ;
@@ -1506,8 +1504,8 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         $nonce_value = '';
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-select-send-form-nonce'] ) ) {
-                            $nonce_value = $_REQUEST['ethereum-wallet-account-management-select-send-form-nonce'];
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-select-send-form-nonce'] ) ) {
+                            $nonce_value = $_REQUEST['wallets-ethereum-account-management-select-send-form-nonce'];
                         } else {
                             if ( isset( $_REQUEST['_wpnonce'] ) ) {
                                 $nonce_value = $_REQUEST['_wpnonce'];
@@ -1515,7 +1513,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         
-                        if ( !wp_verify_nonce( $nonce_value, 'ethereum-wallet-account-management-select-send_form' ) ) {
+                        if ( !wp_verify_nonce( $nonce_value, 'wallets-ethereum-account-management-select-send_form' ) ) {
                             ETHEREUM_WALLET_log( "ETHEREUM_WALLET_account_management_select_action: bad nonce detected: " . $nonce_value );
                             return;
                         }
@@ -1525,27 +1523,27 @@ if ( PHP_INT_SIZE != 8 ) {
                             return;
                         }
                         
-                        if ( isset( $_REQUEST['ethereum-wallet-account-management-select-send-button'] ) ) {
+                        if ( isset( $_REQUEST['wallets-ethereum-account-management-select-send-button'] ) ) {
                             do {
-                                if ( !isset( $_REQUEST['ethereum-wallet-account-management-select-default'] ) ) {
+                                if ( !isset( $_REQUEST['wallets-ethereum-account-management-select-default'] ) ) {
                                     break;
                                 }
-                                $newDefaultAddress = sanitize_text_field( $_REQUEST['ethereum-wallet-account-management-select-default'] );
+                                $newDefaultAddress = sanitize_text_field( $_REQUEST['wallets-ethereum-account-management-select-default'] );
                                 
                                 if ( empty($newDefaultAddress) ) {
-                                    ETHEREUM_WALLET_log( "empty ethereum-wallet-account-management-select-default" );
+                                    ETHEREUM_WALLET_log( "empty wallets-ethereum-account-management-select-default" );
                                     break;
                                 }
                                 
                                 
                                 if ( 42 != strlen( $newDefaultAddress ) ) {
-                                    ETHEREUM_WALLET_log( "strlen ethereum-wallet-account-management-select-default != 42: " . $to );
+                                    ETHEREUM_WALLET_log( "strlen wallets-ethereum-account-management-select-default != 42: " . $to );
                                     break;
                                 }
                                 
                                 
                                 if ( '0x' != substr( $newDefaultAddress, 0, 2 ) ) {
-                                    ETHEREUM_WALLET_log( "startsWith ethereum-wallet-account-management-select-default != 0x: " . $to );
+                                    ETHEREUM_WALLET_log( "startsWith wallets-ethereum-account-management-select-default != 0x: " . $to );
                                     break;
                                 }
                                 
@@ -1578,28 +1576,28 @@ if ( PHP_INT_SIZE != 8 ) {
                                 }
                             } while (false);
                         } else {
-                            if ( isset( $_REQUEST['ethereum-wallet-account-management-delete-send-button'] ) ) {
+                            if ( isset( $_REQUEST['wallets-ethereum-account-management-delete-send-button'] ) ) {
                                 do {
-                                    if ( !isset( $_REQUEST['ethereum-wallet-account-management-select-default'] ) ) {
+                                    if ( !isset( $_REQUEST['wallets-ethereum-account-management-select-default'] ) ) {
                                         break;
                                     }
-                                    $deleteAddress = sanitize_text_field( $_REQUEST['ethereum-wallet-account-management-select-default'] );
+                                    $deleteAddress = sanitize_text_field( $_REQUEST['wallets-ethereum-account-management-select-default'] );
                                     ETHEREUM_WALLET_log( "ETHEREUM_WALLET_account_management_select_action: try to delete: " . $deleteAddress );
                                     
                                     if ( empty($deleteAddress) ) {
-                                        ETHEREUM_WALLET_log( "empty ethereum-wallet-account-management-select-default" );
+                                        ETHEREUM_WALLET_log( "empty wallets-ethereum-account-management-select-default" );
                                         break;
                                     }
                                     
                                     
                                     if ( 42 != strlen( $deleteAddress ) ) {
-                                        ETHEREUM_WALLET_log( "strlen ethereum-wallet-account-management-select-default != 42: " . $to );
+                                        ETHEREUM_WALLET_log( "strlen wallets-ethereum-account-management-select-default != 42: " . $to );
                                         break;
                                     }
                                     
                                     
                                     if ( '0x' != substr( $deleteAddress, 0, 2 ) ) {
-                                        ETHEREUM_WALLET_log( "startsWith ethereum-wallet-account-management-select-default != 0x: " . $to );
+                                        ETHEREUM_WALLET_log( "startsWith wallets-ethereum-account-management-select-default != 0x: " . $to );
                                         break;
                                     }
                                     
@@ -1814,7 +1812,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             'rows'          => '10',
                             'iconheight'    => '54px',
                             'updatetimeout' => '60',
-                        ), $attributes, 'ethereum-wallet-history' );
+                        ), $attributes, 'wallets-ethereum-history' );
                         // The displayed tx direction: in/out/inout
                         $direction = ( !empty($attributes['direction']) ? $attributes['direction'] : 'inout' );
                         if ( !in_array( $direction, array( 'in', 'out', 'inout' ) ) ) {
@@ -1829,21 +1827,21 @@ if ( PHP_INT_SIZE != 8 ) {
                         $tokensDataFinal = [];
                         $tokensDataFinal = _ETHEREUM_WALLET_get_tokens_data( $onlytokens, $tokenslist, $attributes );
                         $js = '';
-                        $ret = '<div class="ethereum-wallet-history-shortcode" ' . 'data-tokens="' . esc_attr( json_encode( $tokensDataFinal ) ) . '" ' . 'data-direction="' . esc_attr( $direction ) . '" ' . 'data-rows="' . esc_attr( $rows ) . '" ' . 'data-iconheight="' . esc_attr( $iconheight ) . '" ' . 'data-updatetimeout="' . esc_attr( $updatetimeout ) . '" ' . '></div>';
+                        $ret = '<div class="wallets-ethereum-history-shortcode" ' . 'data-tokens="' . esc_attr( json_encode( $tokensDataFinal ) ) . '" ' . 'data-direction="' . esc_attr( $direction ) . '" ' . 'data-rows="' . esc_attr( $rows ) . '" ' . 'data-iconheight="' . esc_attr( $iconheight ) . '" ' . 'data-updatetimeout="' . esc_attr( $updatetimeout ) . '" ' . '></div>';
                         ETHEREUM_WALLET_enqueue_scripts_();
                         // wp_enqueue_script( 'data-tables' );
                         return $js . str_replace( "\n", " ", str_replace( "\r", " ", str_replace( "\t", " ", $js . $ret ) ) );
                     }
                     
-                    add_shortcode( 'ethereum-wallet-history', 'ETHEREUM_WALLET_history_shortcode' );
+                    add_shortcode( 'wallets-ethereum-history', 'ETHEREUM_WALLET_history_shortcode' );
                     function ETHEREUM_WALLET_enqueue_scripts_()
                     {
-                        wp_enqueue_style( 'ethereum-wallet' );
-                        wp_enqueue_script( 'ethereum-wallet-main' );
+                        wp_enqueue_style( 'wallets-ethereum' );
+                        wp_enqueue_script( 'wallets-ethereum-main' );
                         //    if ( ethereum_wallet_freemius_init()->is__premium_only() ) {
                         //        if ( ethereum_wallet_freemius_init()->is_plan( 'pro', true ) ) {
                         //
-                        //            wp_enqueue_script( 'ethereum-wallet-premium' );
+                        //            wp_enqueue_script( 'wallets-ethereum-premium' );
                         //
                         //        }
                         //    }
@@ -1852,13 +1850,13 @@ if ( PHP_INT_SIZE != 8 ) {
                     function ETHEREUM_WALLET_stylesheet()
                     {
                         // global $ETHEREUM_WALLET_plugin_url_path;
-                        // $deps = array('font-awesome', 'bootstrap-ethereum-wallet', 'bootstrap-affix-ethereum-wallet', 'data-tables');
-                        // if( ( ! wp_style_is( 'ethereum-wallet', 'queue' ) ) && ( ! wp_style_is( 'ethereum-wallet', 'done' ) ) ) {
-                        //     wp_dequeue_style('ethereum-wallet');
-                        //     wp_deregister_style('ethereum-wallet');
+                        // $deps = array('font-awesome', 'bootstrap-wallets-ethereum', 'bootstrap-affix-wallets-ethereum', 'data-tables');
+                        // if( ( ! wp_style_is( 'wallets-ethereum', 'queue' ) ) && ( ! wp_style_is( 'wallets-ethereum', 'done' ) ) ) {
+                        //     wp_dequeue_style('wallets-ethereum');
+                        //     wp_deregister_style('wallets-ethereum');
                         //     wp_register_style(
-                        //         'ethereum-wallet',
-                        //         $ETHEREUM_WALLET_plugin_url_path . '/ethereum-wallet.css',
+                        //         'wallets-ethereum',
+                        //         $ETHEREUM_WALLET_plugin_url_path . '/wallets-ethereum.css',
                         //         $deps,
                         //         '4.0.8'
                         //     );
@@ -1916,7 +1914,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             }
                         }
                         if ( empty($accountName) ) {
-                            $accountName = __( 'Default account', 'ethereum-wallet' );
+                            $accountName = __( 'Default account', 'wallets-ethereum' );
                         }
                         return $accountName;
                     }
@@ -2007,11 +2005,11 @@ if ( PHP_INT_SIZE != 8 ) {
                             }
                         }
                         
-                        if ( !wp_script_is( 'ethereum-wallet-runtime-main', 'queue' ) && !wp_script_is( 'ethereum-wallet-runtime-main', 'done' ) ) {
-                            wp_dequeue_script( 'ethereum-wallet-runtime-main' );
-                            wp_deregister_script( 'ethereum-wallet-runtime-main' );
+                        if ( !wp_script_is( 'wallets-ethereum-runtime-main', 'queue' ) && !wp_script_is( 'wallets-ethereum-runtime-main', 'done' ) ) {
+                            wp_dequeue_script( 'wallets-ethereum-runtime-main' );
+                            wp_deregister_script( 'wallets-ethereum-runtime-main' );
                             wp_register_script(
-                                'ethereum-wallet-runtime-main',
+                                'wallets-ethereum-runtime-main',
                                 $ETHEREUM_WALLET_plugin_url_path . $js_dir . $runtimeMain[0],
                                 array(),
                                 $runtimeMain[1]
@@ -2019,32 +2017,32 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         
-                        if ( !wp_script_is( 'ethereum-wallet-vendors', 'queue' ) && !wp_script_is( 'ethereum-wallet-vendors', 'done' ) ) {
-                            wp_dequeue_script( 'ethereum-wallet-vendors' );
-                            wp_deregister_script( 'ethereum-wallet-vendors' );
+                        if ( !wp_script_is( 'wallets-ethereum-vendors', 'queue' ) && !wp_script_is( 'wallets-ethereum-vendors', 'done' ) ) {
+                            wp_dequeue_script( 'wallets-ethereum-vendors' );
+                            wp_deregister_script( 'wallets-ethereum-vendors' );
                             wp_register_script(
-                                'ethereum-wallet-vendors',
+                                'wallets-ethereum-vendors',
                                 $ETHEREUM_WALLET_plugin_url_path . $js_dir . $vendors[0],
-                                array( 'ethereum-wallet-runtime-main' ),
+                                array( 'wallets-ethereum-runtime-main' ),
                                 $vendors[1]
                             );
                         }
                         
                         
-                        if ( !wp_script_is( 'ethereum-wallet-main', 'queue' ) && !wp_script_is( 'ethereum-wallet-main', 'done' ) ) {
-                            wp_dequeue_script( 'ethereum-wallet-main' );
-                            wp_deregister_script( 'ethereum-wallet-main' );
+                        if ( !wp_script_is( 'wallets-ethereum-main', 'queue' ) && !wp_script_is( 'wallets-ethereum-main', 'done' ) ) {
+                            wp_dequeue_script( 'wallets-ethereum-main' );
+                            wp_deregister_script( 'wallets-ethereum-main' );
                             wp_register_script(
-                                'ethereum-wallet-main',
+                                'wallets-ethereum-main',
                                 $ETHEREUM_WALLET_plugin_url_path . $js_dir . $main[0],
-                                array( 'ethereum-wallet-vendors', 'wp-i18n' ),
+                                array( 'wallets-ethereum-vendors', 'wp-i18n' ),
                                 $main[1]
                             );
                         }
                         
-                        //    wp_enqueue_script('ethereum-wallet-main');
+                        //    wp_enqueue_script('wallets-ethereum-main');
                         if ( function_exists( 'wp_set_script_translations' ) ) {
-                            wp_set_script_translations( 'ethereum-wallet-main', 'ethereum-wallet', $ETHEREUM_WALLET_plugin_dir . 'languages' );
+                            wp_set_script_translations( 'wallets-ethereum-main', 'wallets-ethereum', $ETHEREUM_WALLET_plugin_dir . 'languages' );
                         }
                         $options = stripslashes_deep( $ETHEREUM_WALLET_options );
                         $etherscanApiKey = ( !empty($options['etherscanApiKey']) ? esc_attr( $options['etherscanApiKey'] ) : '' );
@@ -2130,7 +2128,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         }
                         
-                        wp_localize_script( 'ethereum-wallet-main', 'ethereumWallet', [
+                        wp_localize_script( 'wallets-ethereum-main', 'ethereumWallet', [
                             'erc20_abi'                                                       => $ETHEREUM_WALLET_erc20ContractABI,
                             'erc721_abi'                                                      => $ETHEREUM_WALLET_erc721ContractABI,
                             'erc1404_abi'                                                     => $ETHEREUM_WALLET_erc1404ContractABI,
@@ -2167,94 +2165,94 @@ if ( PHP_INT_SIZE != 8 ) {
                             'isNFTPluginActive'                                               => esc_html( $isNFTPluginActive ),
                             'canListProducts'                                                 => esc_html( $canListProducts ),
                             'vendorDashboardPageUrl'                                          => esc_html( $vendorDashboardPageUrl ),
-                            'str_copied_msg'                                                  => __( 'Copied to clipboard', 'ethereum-wallet' ),
-                            'str_insufficient_eth_balance_msg'                                => __( 'Insufficient Ether balance for tx fee payment.', 'ethereum-wallet' ),
-                            'str_unknown_token_symbol_msg'                                    => __( 'Unknown', 'ethereum-wallet' ),
-                            'str_unknown_nft_token_symbol_msg'                                => __( 'Unknown NFT', 'ethereum-wallet' ),
-                            'str_tx_pending_msg'                                              => __( 'Pending', 'ethereum-wallet' ),
-                            'str_prev_tx_pending_msg'                                         => __( 'Previous transaction is still not confirmed or failed', 'ethereum-wallet' ),
-                            'str_date_recently_msg'                                           => __( 'recently', 'ethereum-wallet' ),
-                            'str_date_days_fmt_msg'                                           => __( '%1$s days', 'ethereum-wallet' ),
-                            'str_date_hours_fmt_msg'                                          => __( '%1$s hours', 'ethereum-wallet' ),
-                            'str_date_minutes_fmt_msg'                                        => __( '%1$s minutes', 'ethereum-wallet' ),
-                            'str_copied_to_clipboard'                                         => __( 'Copied to clipboard', 'ethereum-wallet' ),
-                            'str_copy_to_clipboard'                                           => __( 'Copy to clipboard', 'ethereum-wallet' ),
-                            'str_qrcode_button_label'                                         => __( 'QR-code', 'ethereum-wallet' ),
-                            'str_alert_dlg_title'                                             => __( 'Error', 'ethereum-wallet' ),
-                            'str_alert_dlg_title_default'                                     => __( 'Alert', 'ethereum-wallet' ),
-                            'str_alert_dlg_ok_button_label'                                   => __( 'OK', 'ethereum-wallet' ),
-                            'str_qrcode_dlg_title'                                            => __( 'Scan QR-code', 'ethereum-wallet' ),
-                            'str_contract_address_template'                                   => __( 'Contract Address', 'ethereum-wallet' ),
-                            'str_token_id_template'                                           => __( 'Token ID', 'ethereum-wallet' ),
-                            'str_account_dlg_content'                                         => __( 'Enter the recipient\'s account address please.', 'ethereum-wallet' ),
-                            'str_account_dlg_address_field_label'                             => __( 'Recipient', 'ethereum-wallet' ),
-                            'str_account_dlg_qrcode_button_label'                             => __( 'QR-code', 'ethereum-wallet' ),
-                            'str_account_dlg_title'                                           => __( 'Enter recipient address', 'ethereum-wallet' ),
-                            'str_account_dlg_incorrect_address_msg'                           => __( 'Incorrect address', 'ethereum-wallet' ),
-                            'str_account_dlg_ok_button_label'                                 => __( 'Send', 'ethereum-wallet' ),
-                            'str_account_dlg_cancel_button_label'                             => __( 'Cancel', 'ethereum-wallet' ),
-                            'str_confirm_dlg_title'                                           => __( 'Confirm', 'ethereum-wallet' ),
-                            'str_confirm_dlg_title_default'                                   => __( 'Confirm', 'ethereum-wallet' ),
-                            'str_confirm_dlg_ok_button_label'                                 => __( 'OK', 'ethereum-wallet' ),
-                            'str_confirm_dlg_cancel_button_label'                             => __( 'Cancel', 'ethereum-wallet' ),
-                            'str_nft_token_send_confirm_msg'                                  => __( 'You are about to send the %1$s NFT token to the %2$s account address. This action is irreversible. Are you sure?', 'ethereum-wallet' ),
-                            'str_tx_progress_dlg_title'                                       => __( 'Confirmations', 'ethereum-wallet' ),
-                            'str_tx_progress_dlg_content'                                     => __( 'Tx confirmations %s', 'ethereum-wallet' ),
-                            'str_token_send_failed_msg'                                       => __( 'Failed to send token', 'ethereum-wallet' ),
-                            'str_empty_nft_wallet_msg'                                        => __( 'No NFT found. Yet?', 'ethereum-wallet' ),
-                            'str_sendform_to_field_placeholder'                               => sprintf( __( 'Input the recipient %s address', 'ethereum-wallet' ), $strCurrencyName ),
-                            'str_sendform_to_field_label'                                     => __( 'Send To', 'ethereum-wallet' ),
-                            'str_sendform_input_dialog_title'                                 => sprintf( __( 'Input the recipient %s address', 'ethereum-wallet' ), $strCurrencyName ),
-                            'str_sendform_input_amount_dialog_title'                          => __( 'Input amount to send', 'ethereum-wallet' ),
-                            'str_token_selector_label'                                        => __( 'Select token', 'ethereum-wallet' ),
-                            'str_max_value_button_label'                                      => __( 'Max', 'ethereum-wallet' ),
-                            'str_amount_field_label'                                          => __( 'Amount', 'ethereum-wallet' ),
-                            'str_sendform_amount_field_placeholder'                           => __( 'Amount', 'ethereum-wallet' ),
-                            'str_na_label'                                                    => __( 'N/A', 'ethereum-wallet' ),
-                            'str_gas_price_slow_label'                                        => __( 'Cheap', 'ethereum-wallet' ),
-                            'str_gas_price_safe_label'                                        => __( 'Safe', 'ethereum-wallet' ),
-                            'str_gas_price_fast_label'                                        => __( 'Fast', 'ethereum-wallet' ),
-                            'str_gas_price_chain_label'                                       => __( 'Chain', 'ethereum-wallet' ),
-                            'str_gas_price_label'                                             => __( 'Transaction Fee', 'ethereum-wallet' ),
-                            'str_nonce_field_label'                                           => __( 'Nonce', 'ethereum-wallet' ),
-                            'str_gas_limit_field_label'                                       => __( 'Gas Limit', 'ethereum-wallet' ),
-                            'str_gas_gwei_label'                                              => __( 'Gwei', 'ethereum-wallet' ),
-                            'str_data_field_label'                                            => __( 'Data', 'ethereum-wallet' ),
-                            'str_undo_button_label'                                           => __( 'Revert', 'ethereum-wallet' ),
-                            'str_advanced_panel_title'                                        => __( 'Advanced', 'ethereum-wallet' ),
-                            'str_advanced_panel_desc'                                         => __( 'Danger area! Use with care!', 'ethereum-wallet' ),
-                            'str_send_tx_button_label'                                        => __( 'Send %s', 'ethereum-wallet' ),
-                            'str_token_send_confirm_msg'                                      => __( 'You are about to send %1$s %2$s to %3$s. This action is irreversible. Are you sure?', 'ethereum-wallet' ),
-                            'str_tx_sent_label'                                               => __( 'Sent', 'ethereum-wallet' ),
-                            'str_tx_received_label'                                           => __( 'Received', 'ethereum-wallet' ),
-                            'str_tx_self_label'                                               => __( 'Self', 'ethereum-wallet' ),
-                            'str_tx_mint_label'                                               => __( 'Mint', 'ethereum-wallet' ),
-                            'str_tx_call_label'                                               => __( 'Call', 'ethereum-wallet' ),
-                            'str_tx_unknown_label'                                            => __( 'Unknown', 'ethereum-wallet' ),
-                            'str_nft_token_sell_not_capable_msg'                              => __( 'You need to be a vendor to sell tokens on this store. Open vendor registration page?', 'ethereum-wallet' ),
-                            'str_rank_column_label'                                           => __( 'Rank', 'ethereum-wallet' ),
-                            'str_avatar_column_label'                                         => __( 'Avatar', 'ethereum-wallet' ),
-                            'str_username_column_label'                                       => __( 'Username', 'ethereum-wallet' ),
-                            'str_wallet_column_label'                                         => __( 'Wallet', 'ethereum-wallet' ),
-                            'str_balance_column_label'                                        => __( 'Balance, %s', 'ethereum-wallet' ),
-                            'str_tx_count_column_label'                                       => __( 'Tx Count', 'ethereum-wallet' ),
-                            'str_table_search_field_label'                                    => __( 'Search…', 'ethereum-wallet' ),
-                            'str_table_clear_search_button_tooltip'                           => __( 'Clear', 'ethereum-wallet' ),
-                            'str_empty_table_label'                                           => __( 'No records', 'ethereum-wallet' ),
-                            'str_empty_table_search_result_label'                             => __( 'No matching records found', 'ethereum-wallet' ),
-                            'str_account_management_default_account_name'                     => __( 'Default account', 'ethereum-wallet' ),
-                            'str_account_management_empty_account_error_msg'                  => __( 'Can not create unnamed account', 'ethereum-wallet' ),
-                            'str_account_management_empty_key_error_msg'                      => __( 'Empty private key specified', 'ethereum-wallet' ),
-                            'str_account_management_default_account_replacement_error_msg'    => __( 'Can not replace the Default account', 'ethereum-wallet' ),
-                            'str_account_management_account_create_error_msg'                 => __( 'Can not create account', 'ethereum-wallet' ),
-                            'str_account_management_account_select_error_msg'                 => __( 'Can not select account', 'ethereum-wallet' ),
-                            'str_account_management_account_select_selected_error_msg'        => __( 'Can not select already selected account', 'ethereum-wallet' ),
-                            'str_account_management_account_delete_selected_error_msg'        => __( 'Can not delete selected account', 'ethereum-wallet' ),
-                            'str_account_management_account_select_delete_internal_error_msg' => __( 'Can not delete non-imported account', 'ethereum-wallet' ),
-                            'str_modal_wait_dlg_title'                                        => __( 'Processing…', 'ethereum-wallet' ),
-                            'str_input_not_a_number_error_msg'                                => __( 'Incorrect number', 'ethereum-wallet' ),
-                            'str_nft_token_resell_redirect_waiting_msg'                       => __( 'Redirecting to the product edit page. Wait please...', 'ethereum-wallet' ),
-                            'str_nft_token_resell_redirect_error_msg'                         => __( 'Failed to resell token', 'ethereum-wallet' ),
+                            'str_copied_msg'                                                  => __( 'Copied to clipboard', 'wallets-ethereum' ),
+                            'str_insufficient_eth_balance_msg'                                => __( 'Insufficient Ether balance for tx fee payment.', 'wallets-ethereum' ),
+                            'str_unknown_token_symbol_msg'                                    => __( 'Unknown', 'wallets-ethereum' ),
+                            'str_unknown_nft_token_symbol_msg'                                => __( 'Unknown NFT', 'wallets-ethereum' ),
+                            'str_tx_pending_msg'                                              => __( 'Pending', 'wallets-ethereum' ),
+                            'str_prev_tx_pending_msg'                                         => __( 'Previous transaction is still not confirmed or failed', 'wallets-ethereum' ),
+                            'str_date_recently_msg'                                           => __( 'recently', 'wallets-ethereum' ),
+                            'str_date_days_fmt_msg'                                           => __( '%1$s days', 'wallets-ethereum' ),
+                            'str_date_hours_fmt_msg'                                          => __( '%1$s hours', 'wallets-ethereum' ),
+                            'str_date_minutes_fmt_msg'                                        => __( '%1$s minutes', 'wallets-ethereum' ),
+                            'str_copied_to_clipboard'                                         => __( 'Copied to clipboard', 'wallets-ethereum' ),
+                            'str_copy_to_clipboard'                                           => __( 'Copy to clipboard', 'wallets-ethereum' ),
+                            'str_qrcode_button_label'                                         => __( 'QR-code', 'wallets-ethereum' ),
+                            'str_alert_dlg_title'                                             => __( 'Error', 'wallets-ethereum' ),
+                            'str_alert_dlg_title_default'                                     => __( 'Alert', 'wallets-ethereum' ),
+                            'str_alert_dlg_ok_button_label'                                   => __( 'OK', 'wallets-ethereum' ),
+                            'str_qrcode_dlg_title'                                            => __( 'Scan QR-code', 'wallets-ethereum' ),
+                            'str_contract_address_template'                                   => __( 'Contract Address', 'wallets-ethereum' ),
+                            'str_token_id_template'                                           => __( 'Token ID', 'wallets-ethereum' ),
+                            'str_account_dlg_content'                                         => __( 'Enter the recipient\'s account address please.', 'wallets-ethereum' ),
+                            'str_account_dlg_address_field_label'                             => __( 'Recipient', 'wallets-ethereum' ),
+                            'str_account_dlg_qrcode_button_label'                             => __( 'QR-code', 'wallets-ethereum' ),
+                            'str_account_dlg_title'                                           => __( 'Enter recipient address', 'wallets-ethereum' ),
+                            'str_account_dlg_incorrect_address_msg'                           => __( 'Incorrect address', 'wallets-ethereum' ),
+                            'str_account_dlg_ok_button_label'                                 => __( 'Send', 'wallets-ethereum' ),
+                            'str_account_dlg_cancel_button_label'                             => __( 'Cancel', 'wallets-ethereum' ),
+                            'str_confirm_dlg_title'                                           => __( 'Confirm', 'wallets-ethereum' ),
+                            'str_confirm_dlg_title_default'                                   => __( 'Confirm', 'wallets-ethereum' ),
+                            'str_confirm_dlg_ok_button_label'                                 => __( 'OK', 'wallets-ethereum' ),
+                            'str_confirm_dlg_cancel_button_label'                             => __( 'Cancel', 'wallets-ethereum' ),
+                            'str_nft_token_send_confirm_msg'                                  => __( 'You are about to send the %1$s NFT token to the %2$s account address. This action is irreversible. Are you sure?', 'wallets-ethereum' ),
+                            'str_tx_progress_dlg_title'                                       => __( 'Confirmations', 'wallets-ethereum' ),
+                            'str_tx_progress_dlg_content'                                     => __( 'Tx confirmations %s', 'wallets-ethereum' ),
+                            'str_token_send_failed_msg'                                       => __( 'Failed to send token', 'wallets-ethereum' ),
+                            'str_empty_nft_wallet_msg'                                        => __( 'No NFT found. Yet?', 'wallets-ethereum' ),
+                            'str_sendform_to_field_placeholder'                               => sprintf( __( 'Input the recipient %s address', 'wallets-ethereum' ), $strCurrencyName ),
+                            'str_sendform_to_field_label'                                     => __( 'Send To', 'wallets-ethereum' ),
+                            'str_sendform_input_dialog_title'                                 => sprintf( __( 'Input the recipient %s address', 'wallets-ethereum' ), $strCurrencyName ),
+                            'str_sendform_input_amount_dialog_title'                          => __( 'Input amount to send', 'wallets-ethereum' ),
+                            'str_token_selector_label'                                        => __( 'Select token', 'wallets-ethereum' ),
+                            'str_max_value_button_label'                                      => __( 'Max', 'wallets-ethereum' ),
+                            'str_amount_field_label'                                          => __( 'Amount', 'wallets-ethereum' ),
+                            'str_sendform_amount_field_placeholder'                           => __( 'Amount', 'wallets-ethereum' ),
+                            'str_na_label'                                                    => __( 'N/A', 'wallets-ethereum' ),
+                            'str_gas_price_slow_label'                                        => __( 'Cheap', 'wallets-ethereum' ),
+                            'str_gas_price_safe_label'                                        => __( 'Safe', 'wallets-ethereum' ),
+                            'str_gas_price_fast_label'                                        => __( 'Fast', 'wallets-ethereum' ),
+                            'str_gas_price_chain_label'                                       => __( 'Chain', 'wallets-ethereum' ),
+                            'str_gas_price_label'                                             => __( 'Transaction Fee', 'wallets-ethereum' ),
+                            'str_nonce_field_label'                                           => __( 'Nonce', 'wallets-ethereum' ),
+                            'str_gas_limit_field_label'                                       => __( 'Gas Limit', 'wallets-ethereum' ),
+                            'str_gas_gwei_label'                                              => __( 'Gwei', 'wallets-ethereum' ),
+                            'str_data_field_label'                                            => __( 'Data', 'wallets-ethereum' ),
+                            'str_undo_button_label'                                           => __( 'Revert', 'wallets-ethereum' ),
+                            'str_advanced_panel_title'                                        => __( 'Advanced', 'wallets-ethereum' ),
+                            'str_advanced_panel_desc'                                         => __( 'Danger area! Use with care!', 'wallets-ethereum' ),
+                            'str_send_tx_button_label'                                        => __( 'Send %s', 'wallets-ethereum' ),
+                            'str_token_send_confirm_msg'                                      => __( 'You are about to send %1$s %2$s to %3$s. This action is irreversible. Are you sure?', 'wallets-ethereum' ),
+                            'str_tx_sent_label'                                               => __( 'Sent', 'wallets-ethereum' ),
+                            'str_tx_received_label'                                           => __( 'Received', 'wallets-ethereum' ),
+                            'str_tx_self_label'                                               => __( 'Self', 'wallets-ethereum' ),
+                            'str_tx_mint_label'                                               => __( 'Mint', 'wallets-ethereum' ),
+                            'str_tx_call_label'                                               => __( 'Call', 'wallets-ethereum' ),
+                            'str_tx_unknown_label'                                            => __( 'Unknown', 'wallets-ethereum' ),
+                            'str_nft_token_sell_not_capable_msg'                              => __( 'You need to be a vendor to sell tokens on this store. Open vendor registration page?', 'wallets-ethereum' ),
+                            'str_rank_column_label'                                           => __( 'Rank', 'wallets-ethereum' ),
+                            'str_avatar_column_label'                                         => __( 'Avatar', 'wallets-ethereum' ),
+                            'str_username_column_label'                                       => __( 'Username', 'wallets-ethereum' ),
+                            'str_wallet_column_label'                                         => __( 'Wallet', 'wallets-ethereum' ),
+                            'str_balance_column_label'                                        => __( 'Balance, %s', 'wallets-ethereum' ),
+                            'str_tx_count_column_label'                                       => __( 'Tx Count', 'wallets-ethereum' ),
+                            'str_table_search_field_label'                                    => __( 'Search…', 'wallets-ethereum' ),
+                            'str_table_clear_search_button_tooltip'                           => __( 'Clear', 'wallets-ethereum' ),
+                            'str_empty_table_label'                                           => __( 'No records', 'wallets-ethereum' ),
+                            'str_empty_table_search_result_label'                             => __( 'No matching records found', 'wallets-ethereum' ),
+                            'str_account_management_default_account_name'                     => __( 'Default account', 'wallets-ethereum' ),
+                            'str_account_management_empty_account_error_msg'                  => __( 'Can not create unnamed account', 'wallets-ethereum' ),
+                            'str_account_management_empty_key_error_msg'                      => __( 'Empty private key specified', 'wallets-ethereum' ),
+                            'str_account_management_default_account_replacement_error_msg'    => __( 'Can not replace the Default account', 'wallets-ethereum' ),
+                            'str_account_management_account_create_error_msg'                 => __( 'Can not create account', 'wallets-ethereum' ),
+                            'str_account_management_account_select_error_msg'                 => __( 'Can not select account', 'wallets-ethereum' ),
+                            'str_account_management_account_select_selected_error_msg'        => __( 'Can not select already selected account', 'wallets-ethereum' ),
+                            'str_account_management_account_delete_selected_error_msg'        => __( 'Can not delete selected account', 'wallets-ethereum' ),
+                            'str_account_management_account_select_delete_internal_error_msg' => __( 'Can not delete non-imported account', 'wallets-ethereum' ),
+                            'str_modal_wait_dlg_title'                                        => __( 'Processing…', 'wallets-ethereum' ),
+                            'str_input_not_a_number_error_msg'                                => __( 'Incorrect number', 'wallets-ethereum' ),
+                            'str_nft_token_resell_redirect_waiting_msg'                       => __( 'Redirecting to the product edit page. Wait please...', 'wallets-ethereum' ),
+                            'str_nft_token_resell_redirect_error_msg'                         => __( 'Failed to resell token', 'wallets-ethereum' ),
                         ] );
                     }
                     
@@ -2269,16 +2267,16 @@ if ( PHP_INT_SIZE != 8 ) {
                         include_once $ETHEREUM_WALLET_plugin_dir . '/settings/admin_fee.php';
                         include_once $ETHEREUM_WALLET_plugin_dir . '/settings/advanced_blockchain.php';
                         include_once $ETHEREUM_WALLET_plugin_dir . '/settings/ipfs.php';
-                        include_once $ETHEREUM_WALLET_plugin_dir . '/ethereum-wallet.admin.php';
+                        include_once $ETHEREUM_WALLET_plugin_dir . '/wallets-ethereum.admin.php';
                     }
                     
                     function ETHEREUM_WALLET_add_menu_link()
                     {
                         $page = add_options_page(
-                            __( 'Ethereum Wallet Settings', 'ethereum-wallet' ),
-                            __( 'Ethereum Wallet', 'ethereum-wallet' ),
+                            __( 'Ethereum Wallet Settings', 'wallets-ethereum' ),
+                            __( 'Ethereum Wallet', 'wallets-ethereum' ),
                             'manage_options',
-                            'ethereum-wallet',
+                            'wallets-ethereum',
                             'ETHEREUM_WALLET_options_page'
                         );
                     }
@@ -2294,7 +2292,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         }
                         
                         if ( $file == $this_plugin ) {
-                            $settings_link = '<a href="options-general.php?page=ethereum-wallet">' . __( 'Settings' ) . '</a>';
+                            $settings_link = '<a href="options-general.php?page=wallets-ethereum">' . __( 'Settings' ) . '</a>';
                             array_unshift( $links, $settings_link );
                             // before other links
                         }
@@ -2423,7 +2421,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         $chainId = ETHEREUM_WALLET_getChainId();
                         
                         if ( null === $chainId ) {
-                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'ethereum-wallet' ), __( "Blockchain", 'ethereum-wallet' ) ) );
+                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'wallets-ethereum' ), __( "Blockchain", 'wallets-ethereum' ) ) );
                             return ETHEREUM_WALLET_get_default_gas_price_wei();
                         }
                         
@@ -2450,7 +2448,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         $chainId = ETHEREUM_WALLET_getChainId();
                         
                         if ( null === $chainId ) {
-                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'ethereum-wallet' ), __( "Blockchain", 'ethereum-wallet' ) ) );
+                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'wallets-ethereum' ), __( "Blockchain", 'wallets-ethereum' ) ) );
                             return null;
                         }
                         
@@ -2484,7 +2482,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         $chainId = ETHEREUM_WALLET_getChainId();
                         
                         if ( null === $chainId ) {
-                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'ethereum-wallet' ), __( "Blockchain", 'ethereum-wallet' ) ) );
+                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'wallets-ethereum' ), __( "Blockchain", 'wallets-ethereum' ) ) );
                             return null;
                         }
                         
@@ -2529,7 +2527,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         $chainId = ETHEREUM_WALLET_getChainId();
                         
                         if ( null === $chainId ) {
-                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'ethereum-wallet' ), __( "Blockchain", 'ethereum-wallet' ) ) );
+                            ETHEREUM_WALLET_log( sprintf( __( 'Configuration error! The "%s" setting is not set.', 'wallets-ethereum' ), __( "Blockchain", 'wallets-ethereum' ) ) );
                             return null;
                         }
                         
@@ -2889,7 +2887,7 @@ if ( PHP_INT_SIZE != 8 ) {
                         
                         if ( null === $chainId ) {
                             ETHEREUM_WALLET_log( "chainId is null" );
-                            return [ sprintf( __( 'Bad "%s" setting', 'ethereum-wallet' ), __( 'Blockchain', 'ethereum-wallet' ) ), false ];
+                            return [ sprintf( __( 'Bad "%s" setting', 'wallets-ethereum' ), __( 'Blockchain', 'wallets-ethereum' ) ), false ];
                         }
                         
                         $error = null;
@@ -2935,7 +2933,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             
                             if ( null === $gasEstimate ) {
                                 ETHEREUM_WALLET_log( "gasEstimate is null: " . $error );
-                                return [ ( !is_null( $error ) ? $error : __( 'Failed to estimate gas', 'ethereum-wallet' ) ), false ];
+                                return [ ( !is_null( $error ) ? $error : __( 'Failed to estimate gas', 'wallets-ethereum' ) ), false ];
                             }
                             
                             ETHEREUM_WALLET_log( "gasEstimate: " . $gasEstimate->toString() );
@@ -2959,7 +2957,7 @@ if ( PHP_INT_SIZE != 8 ) {
                             
                             if ( null === $eth_balance ) {
                                 ETHEREUM_WALLET_log( "eth_balance is null" );
-                                return [ ( !is_null( $error ) ? $error : __( 'Failed to obtain account balance', 'ethereum-wallet' ) ), false ];
+                                return [ ( !is_null( $error ) ? $error : __( 'Failed to obtain account balance', 'wallets-ethereum' ) ), false ];
                             }
                             
                             
@@ -2968,7 +2966,7 @@ if ( PHP_INT_SIZE != 8 ) {
                                 $eth_balance_str = $eth_balance->toString();
                                 $eth_value_with_fee_wei_str = $eth_value_with_fee_wei->toString();
                                 ETHEREUM_WALLET_log( "Insufficient funds: eth_balance_wei({$eth_balance_str}) < eth_value_with_fee_wei({$eth_value_with_fee_wei_str}); eth_value = {$eth_value_str}" );
-                                return [ __( 'Insufficient Ether balance for tx fee payment.', 'ethereum-wallet' ), false ];
+                                return [ __( 'Insufficient Ether balance for tx fee payment.', 'wallets-ethereum' ), false ];
                             }
                             
                             $transaction = new Transaction( $transactionParamsArray );
@@ -3024,36 +3022,16 @@ if ( PHP_INT_SIZE != 8 ) {
                     {
                         global  $ETHEREUM_WALLET_options ;
                         $blockchainNetwork = ETHEREUM_WALLET_getBlockchainNetwork();
-                        if ( empty($blockchainNetwork) ) {
-                            $blockchainNetwork = 'mainnet';
-                        }
-                        if ( $blockchainNetwork === 'mainnet' ) {
-                            return 1;
-                        }
-                        if ( $blockchainNetwork === 'ropsten' ) {
-                            return 3;
-                        }
-                        if ( $blockchainNetwork === 'rinkeby' ) {
-                            return 4;
-                        }
-                        if ( $blockchainNetwork === 'goerli' ) {
-                            return 5;
-                        }
-                        if ( $blockchainNetwork === 'kovan' ) {
-                            return 42;
-                        }
-                        if ( $blockchainNetwork === 'bsc' ) {
-                            return 56;
-                        }
-                        if ( $blockchainNetwork === 'bsctest' ) {
-                            return 97;
-                        }
-                        if ( $blockchainNetwork === 'polygon' ) {
-                            return 137;
-                        }
-                        if ( $blockchainNetwork === 'mumbai' ) {
-                            return 80001;
-                        }
+                        if ( empty($blockchainNetwork) ) $blockchainNetwork = 'mainnet';
+                        if ( $blockchainNetwork === 'mainnet' ) return 1;
+                        if ( $blockchainNetwork === 'ropsten' ) return 3;
+                        if ( $blockchainNetwork === 'rinkeby' ) return 4;
+                        if ( $blockchainNetwork === 'goerli' ) return 5;
+                        if ( $blockchainNetwork === 'kovan' ) return 42;
+                        if ( $blockchainNetwork === 'bsc' ) return 56;
+                        if ( $blockchainNetwork === 'bsctest' ) return 97;
+                        if ( $blockchainNetwork === 'polygon' ) return 137;
+                        if ( $blockchainNetwork === 'mumbai' ) return 80001;
                         ETHEREUM_WALLET_log( "Bad blockchain_network setting:" . $blockchainNetwork );
                         return null;
                     }
@@ -3234,7 +3212,7 @@ if ( PHP_INT_SIZE != 8 ) {
                     add_action( 'manage_users_columns', 'ETHEREUM_WALLET_modify_user_columns' );
                     function ETHEREUM_WALLET_modify_user_columns( $column_headers )
                     {
-                        $column_headers['ethereum_wallet'] = __( 'Ethereum wallet', 'ethereum-wallet' );
+                        $column_headers['ethereum_wallet'] = __( 'Ethereum wallet', 'wallets-ethereum' );
                         return $column_headers;
                     }
                     
