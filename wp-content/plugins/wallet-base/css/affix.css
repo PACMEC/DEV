@@ -1,0 +1,8 @@
+.affix {
+  position: fixed;
+  top: 1rem;
+}
+ 
+.affix-bottom {
+  position: absolute;
+}

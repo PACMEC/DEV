@@ -1,0 +1,388 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pacmec-wallet\n"
+"POT-Creation-Date: 2020-10-09 10:02+0700\n"
+"PO-Revision-Date: 2018-03-13 09:23+0700\n"
+"Last-Translator: \n"
+"Language-Team: ethereumicoio\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: nbproject\n"
+
+#: pacmec-wallet.admin.php:52
+msgid "Settings saved."
+msgstr ""
+
+#: pacmec-wallet.admin.php:68 pacmec-wallet.php:3598
+msgid "Ethereum Wallet Settings"
+msgstr ""
+
+#: pacmec-wallet.admin.php:74
+msgid "Install and Configure Guide"
+msgstr ""
+
+#: pacmec-wallet.admin.php:75
+#, php-format
+msgid "Use the official %1$sInstall and Configure%2$s step by step guide to configure this plugin."
+msgstr ""
+
+#: pacmec-wallet.admin.php:103
+msgid "Cryptocompare API Key"
+msgstr ""
+
+#: pacmec-wallet.admin.php:106
+msgid "Put your Cryptocompare API Key here"
+msgstr ""
+
+#: pacmec-wallet.admin.php:107
+#, php-format
+msgid "<p>The API key for the <a target=\"_blank\" href=\"%s\">%s</a>. You need to register on this site to obtain it.</p>"
+msgstr ""
+
+#: pacmec-wallet.admin.php:116
+msgid "Infura.io API Key"
+msgstr ""
+
+#: pacmec-wallet.admin.php:119
+msgid "Put your Infura.io API Key here"
+msgstr ""
+
+#: pacmec-wallet.admin.php:121
+#, php-format
+msgid "The API key for the %1$s. You need to register on this site to obtain it. Follow the %2$sGet infura API Key%3$s guide please."
+msgstr ""
+
+#: pacmec-wallet.admin.php:131
+msgid "Etherscan Api Key"
+msgstr ""
+
+#: pacmec-wallet.admin.php:134
+msgid "Put your Etherscan Api Key here"
+msgstr ""
+
+#: pacmec-wallet.admin.php:135
+#, php-format
+msgid "The API key for the %1$s. You need to %2$sregister%3$s on this site to obtain it."
+msgstr ""
+
+#: pacmec-wallet.admin.php:144
+msgid "Blockchain"
+msgstr ""
+
+#: pacmec-wallet.admin.php:148
+msgid "The blockchain used: mainnet or ropsten. Use mainnet in production, and ropsten in test mode. See plugin documentation for the testing guide."
+msgstr ""
+
+#: pacmec-wallet.admin.php:154
+msgid "Gas Limit"
+msgstr ""
+
+#: pacmec-wallet.admin.php:158
+msgid "The default gas limit to to spend on your transactions. 200000 is a reasonable default value."
+msgstr ""
+
+#: pacmec-wallet.admin.php:164
+msgid "Gas price"
+msgstr ""
+
+#: pacmec-wallet.admin.php:168
+msgid "The gas price in Gwei. Reasonable values are in a 2-40 ratio. The default value is 2 that is cheap but not very fast. Increase if you want transactions to be mined faster, decrease if you want pay less fee per transaction."
+msgstr ""
+
+#: pacmec-wallet.admin.php:177
+msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:179
+#, php-format
+msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
+msgstr ""
+
+#: pacmec-wallet.admin.php:184
+msgid "Want to accept Ether or any ERC20/ERC223 token in your WooCommerce store?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:186
+#, php-format
+msgid "Install the %1$sEther and ERC20 tokens WooCommerce Payment Gateway%2$s plugin!"
+msgstr ""
+
+#: pacmec-wallet.admin.php:191
+msgid "Want to sell your ERC20/ERC223 ICO token from your ICO site?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:193
+#, php-format
+msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
+msgstr ""
+
+#: pacmec-wallet.admin.php:198
+msgid "Need help to configure this plugin?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:200 pacmec-wallet.admin.php:207
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr ""
+
+#: pacmec-wallet.admin.php:205
+msgid "Need help to develop a ERC20 token for your ICO?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:215
+msgid "ERC20 tokens support"
+msgstr ""
+
+#: pacmec-wallet.admin.php:217
+#, php-format
+msgid "Install the %1$sPRO plugin version%2$s!"
+msgstr ""
+
+#: pacmec-wallet.admin.php:227
+msgid "Save Changes"
+msgstr ""
+
+#: pacmec-wallet.admin.php:228
+msgid "Are you sure you want to delete all Ethereum Wallet options?"
+msgstr ""
+
+#: pacmec-wallet.admin.php:228
+msgid "Reset"
+msgstr ""
+
+#: pacmec-wallet.php:837 pacmec-wallet.php:865
+msgid "Rank"
+msgstr ""
+
+#: pacmec-wallet.php:838
+msgid "Avatar"
+msgstr ""
+
+#: pacmec-wallet.php:839
+msgid "Username"
+msgstr ""
+
+#: pacmec-wallet.php:840 pacmec-wallet.php:866
+msgid "Wallet"
+msgstr ""
+
+#: pacmec-wallet.php:841 pacmec-wallet.php:867 pacmec-wallet.php:3113
+msgid "Balance"
+msgstr ""
+
+#: pacmec-wallet.php:842 pacmec-wallet.php:868
+msgid "Tx Count"
+msgstr ""
+
+#: pacmec-wallet.php:1043 pacmec-wallet.php:2565 pacmec-wallet.php:2696
+#: pacmec-wallet.php:2777 pacmec-wallet.php:2805 pacmec-wallet.php:3355
+msgid "Default account"
+msgstr ""
+
+#: pacmec-wallet.php:1057 pacmec-wallet.php:1060 pacmec-wallet.php:2219
+msgid "ETH"
+msgstr ""
+
+#: pacmec-wallet.php:1063
+msgid "K"
+msgstr ""
+
+#: pacmec-wallet.php:1065
+msgid "M"
+msgstr ""
+
+#: pacmec-wallet.php:1087
+msgid "Result code is not 200"
+msgstr ""
+
+#: pacmec-wallet.php:1091
+msgid "Empty body"
+msgstr ""
+
+#: pacmec-wallet.php:1096
+msgid "No result field"
+msgstr ""
+
+#: pacmec-wallet.php:1265 pacmec-wallet.php:1292
+msgid "Network problems detected. Last action was not completed."
+msgstr ""
+
+#: pacmec-wallet.php:1392
+msgid "Ethereum"
+msgstr ""
+
+#: pacmec-wallet.php:1424
+msgid "Failed to retrieve Ether balance"
+msgstr ""
+
+#: pacmec-wallet.php:1464 pacmec-wallet.php:1467 pacmec-wallet.php:1687
+#: pacmec-wallet.php:1690 pacmec-wallet.php:1693
+msgid "Failed to retrieve token balance"
+msgstr ""
+
+#: pacmec-wallet.php:1577 pacmec-wallet.php:1800
+#, php-format
+msgid "%1$s per %2$s"
+msgstr ""
+
+#: pacmec-wallet.php:1586 pacmec-wallet.php:1809
+#, php-format
+msgid "%1$s %2$s"
+msgstr ""
+
+#: pacmec-wallet.php:1644
+msgid "N/A"
+msgstr ""
+
+#: pacmec-wallet.php:1843
+msgid "Account"
+msgstr ""
+
+#: pacmec-wallet.php:1873 pacmec-wallet.php:1952 pacmec-wallet.php:2184
+msgid "QR"
+msgstr ""
+
+#: pacmec-wallet.php:1880 pacmec-wallet.php:1958
+msgid "Copy"
+msgstr ""
+
+#: pacmec-wallet.php:1924 pacmec-wallet.php:2627
+msgid "Private key"
+msgstr ""
+
+#: pacmec-wallet.php:2029 pacmec-wallet.php:3576
+msgid "Unknown"
+msgstr ""
+
+#: pacmec-wallet.php:2123 pacmec-wallet.php:2132
+#, php-format
+msgid "Last transaction %1$s%2$s%3$s%4$s%5$s is still in progress. Wait please."
+msgstr ""
+
+#: pacmec-wallet.php:2169
+msgid "To"
+msgstr ""
+
+#: pacmec-wallet.php:2173
+msgid "Input the recipient ethereum address"
+msgstr ""
+
+#: pacmec-wallet.php:2193
+msgid "Unable to access video stream (please make sure you have a webcam enabled)"
+msgstr ""
+
+#: pacmec-wallet.php:2204 pacmec-wallet.php:3160 pacmec-wallet.php:3214
+msgid "Amount"
+msgstr ""
+
+#: pacmec-wallet.php:2235 pacmec-wallet.php:2236
+msgid "Send"
+msgstr ""
+
+#: pacmec-wallet.php:2380
+msgid "Failed to get token decimals"
+msgstr ""
+
+#: pacmec-wallet.php:2499 pacmec-wallet.php:2616
+msgid "Account name"
+msgstr ""
+
+#: pacmec-wallet.php:2503 pacmec-wallet.php:2620
+msgid "Input new account name"
+msgstr ""
+
+#: pacmec-wallet.php:2520 pacmec-wallet.php:2521
+msgid "Create"
+msgstr ""
+
+#: pacmec-wallet.php:2632
+msgid "Input your private key here"
+msgstr ""
+
+#: pacmec-wallet.php:2649 pacmec-wallet.php:2650
+msgid "Import"
+msgstr ""
+
+#: pacmec-wallet.php:2826 pacmec-wallet.php:2827
+msgid "Select"
+msgstr ""
+
+#: pacmec-wallet.php:2832 pacmec-wallet.php:2833
+msgid "Remove"
+msgstr ""
+
+#: pacmec-wallet.php:3112 pacmec-wallet.php:3159 pacmec-wallet.php:3213
+msgid "#"
+msgstr ""
+
+#: pacmec-wallet.php:3114
+msgid "Token"
+msgstr ""
+
+#: pacmec-wallet.php:3161 pacmec-wallet.php:3215
+msgid "Date"
+msgstr ""
+
+#: pacmec-wallet.php:3162 pacmec-wallet.php:3216
+msgid "Tx"
+msgstr ""
+
+#: pacmec-wallet.php:3574
+msgid "Copied to clipboard"
+msgstr ""
+
+#: pacmec-wallet.php:3575
+msgid "Insufficient Ether balance for tx fee payment."
+msgstr ""
+
+#: pacmec-wallet.php:3577
+msgid "Pending"
+msgstr ""
+
+#: pacmec-wallet.php:3578
+msgid "recently"
+msgstr ""
+
+#: pacmec-wallet.php:3579
+#, php-format
+msgid "%1$s days"
+msgstr ""
+
+#: pacmec-wallet.php:3580
+#, php-format
+msgid "%1$s hours"
+msgstr ""
+
+#: pacmec-wallet.php:3581
+#, php-format
+msgid "%1$s minutes"
+msgstr ""
+
+#: pacmec-wallet.php:3599 pacmec-wallet.php:4081
+msgid "Ethereum Wallet"
+msgstr ""
+
+#: pacmec-wallet.php:3618
+msgid "Settings"
+msgstr ""
+
+#: pacmec-wallet.php:4080
+msgid "Ethereum Wallet Tools"
+msgstr ""
+
+#: pacmec-wallet.php:4153
+#, php-format
+msgid "Calculated %1$s/%2$s."
+msgstr ""
